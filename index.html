@@ -19,75 +19,9 @@
     </style>
 </head>
 <script>
-    function isSafari() {
-        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    }
+    
 
-    if (isSafari()) {
-    var video = document.getElementById("backgroundvid");
-    var container = document.getElementById("video-container");
-
-    if (video) {
-        video.play();
-        video.style.display = "none"; 
-    }
-
-    if (container) {
-        container.style.display = "none";
-    }
-    if (isSafari()) {
-    var video = document.getElementById("backgroundvid2");
-    var container = document.getElementById("video-container");
-
-    if (video) {
-        video.play();
-        video.style.display = "none"; 
-    }
-
-    if (container) {
-        container.style.display = "none";
-    }
-    if (isSafari()) {
-    var video = document.getElementById("backgroundvid3");
-    var container = document.getElementById("video-container");
-
-    if (video) {
-        video.play();
-        video.style.display = "none"; 
-    }
-
-    if (container) {
-        container.style.display = "none";
-    }
-}
-if (isSafari()) {
-    var video = document.getElementById("backgroundvid4");
-    var container = document.getElementById("video-container");
-
-    if (video) {
-        video.play();
-        video.style.display = "none"; 
-    }
-
-    if (container) {
-        container.style.display = "none";
-    }
-    if (isSafari()) {
-    var video = document.getElementById("backgroundvid5");
-    var container = document.getElementById("video-container");
-
-    if (video) {
-        video.play();
-        video.style.display = "none"; 
-    }
-
-    if (container) {
-        container.style.display = "none";
-    }
-}
-}
-}
-}
+    
 </script>
 
 <body>
@@ -107,7 +41,7 @@ if (isSafari()) {
                     <img src="Linkedinlogo.png" alt="LinkedIn">
                 </a>
                 <a href="https://www.instagram.com" class="instagram-button" target="_blank">
-                    <img src="INSTAGRAMLOGO.jpg" alt="Instagram">
+                    <img src="instagramlogo.jpg" alt="Instagram">
                 </a>
             </div>
             <ul class="desktop-menu">
@@ -129,7 +63,7 @@ if (isSafari()) {
         </nav>
         <header>
             <div class="video-container">
-                <video autoplay muted loop id="background-video">
+                <video autoplay muted loop playsinline id="background-video">
                     <source src="backgroundvid.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -150,7 +84,7 @@ if (isSafari()) {
         </header>
         <section id="inicio" class="section">
             <div class="video-container">
-                <video autoplay muted loop id="background-video2">
+                <video autoplay muted loop playsinline id="background-video2">
                     <source src="backgroundvid2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -170,7 +104,7 @@ if (isSafari()) {
         <div class="separator"></div>
         <section id="servicios" class="section">
             <div class="video-container">
-                <video autoplay muted loop id="background-video5">
+                <video autoplay muted loop playsinline id="background-video5">
                     <source src="backgroundvid5.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -230,7 +164,7 @@ if (isSafari()) {
         <div class="separator"></div>
         <section id="problema" class="section">
             <div class="video-container">
-                <video autoplay muted loop id="background-video3">
+                <video autoplay muted loop playsinline id="background-video3">
                     <source src="backgroundvid3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -290,7 +224,7 @@ if (isSafari()) {
         
         <section id="inicio" class="section">
             <div class="video-container">
-                <video autoplay muted loop id="background-video2">
+                <video autoplay muted loop playsinline id="background-video2">
                     <source src="backgroundvid2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -313,7 +247,7 @@ if (isSafari()) {
         <div class="separator"></div>
         <section id="acerca" class="section">
             <div class="video-container">
-                <video autoplay muted loop id="background-video4">
+                <video autoplay muted loop playsinline id="background-video4">
                     <source src="backgroundvid4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -372,7 +306,7 @@ if (isSafari()) {
     </a>
     <!-- Botón flotante de Email -->
     <a href="mailto:matiasgottler@gmail.com" class="email-button" target="_blank">
-        <img src="EMAIL.jpg" alt="Email">
+        <img src="email.jpg" alt="Email">
     </a>
     <script src="script.js"></script>
     <script>
@@ -399,6 +333,7 @@ if (isSafari()) {
                 });
             });
         });
+        
     </script>
 </body>
 </html>
