@@ -441,7 +441,7 @@ nav {
     background-color: transparent; /* Fondo transparente */
 }
 
-//* Estilos para los botones de redes sociales */
+/* Estilos para los botones de redes sociales */
 .social-buttons {
     display: flex;
     align-items: center;
@@ -574,7 +574,13 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: none; /* Evita la interacción con el video */
+    user-select: none; /* Impide la selección del video */
+    -webkit-user-select: none; /* Compatibilidad con Safari */
+    -webkit-touch-callout: none; /* Evita que aparezca el menú contextual en iOS */
 }
+
+
 
 .overlay {
     position: absolute;
