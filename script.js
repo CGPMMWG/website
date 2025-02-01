@@ -328,6 +328,11 @@ document.addEventListener('DOMContentLoaded', function() {
             popup.style.display = 'none';
         }
     });
+    // Detectar si el navegador es Safari
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isSafari && video) {
+        video.style.pointerEvents = 'none'; // Deshabilita la interacción solo en Safari
 
     // Preloader
     const preloader = document.getElementById('preloader');
