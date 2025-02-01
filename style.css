@@ -1484,7 +1484,6 @@ nav ul li a:hover::after {
 /* Deshabilitar la interacción con los videos en Safari */
 @supports (-webkit-overflow-scrolling: touch) {
     video {
-        pointer-events: none; /* Deshabilita la interacción con los videos */
+        pointer-events: none !important; /* Deshabilita la interacción con los videos */
     }
 }
-
