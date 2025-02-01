@@ -556,14 +556,31 @@ header {
     padding-top: 60px; /* Ajusta el espacio superior para evitar que el contenido se superponga con la barra de navegación */
 }
 
-.video-container {
-    position: absolute;
+video-container {
+    position: absolute; /* o fixed si es full-screen */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Place behind other content */
+    z-index: -1; /* Capa detrás de todo */
     overflow: hidden;
+    -webkit-transform: translateZ(0); /* Acelera renderizado en Safari */
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none !important; /* Bloquea clics */
+    user-select: none !important; /* Evita selección de texto */
+    -webkit-user-select: none !important; /* Para Safari */
+    -webkit-touch-callout: none !important; /* Menú contextual en iOS */
+}
+
+.overlay {
+    position: relative;
+    z-index: 1; /* Asegura que esté sobre el video */
+    pointer-events: auto; /* Permite interacción con el contenido */
 }
 
 #background-video,
@@ -1478,5 +1495,7 @@ nav ul li a:hover::after {
 .team-card:nth-child(10), .service-card:nth-child(10) {
     transition-delay: 2.2s;
 }
+
+
 
 
