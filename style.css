@@ -562,6 +562,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: -1; /* Place behind other content */
     overflow: hidden;
 }
 
@@ -571,13 +572,10 @@ header {
 #background-video4,
 #background-video5,
 #background-video6 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none; /* Evita la interacción con el video */
-    user-select: none; /* Impide la selección del video */
-    -webkit-user-select: none; /* Compatibilidad con Safari */
-    -webkit-touch-callout: none; /* Evita que aparezca el menú contextual en iOS */
+    pointer-events: none; /* Disable interaction */
+    user-select: none; /* Prevent text selection */
+    -webkit-user-select: none; /* Safari compatibility */
+    -webkit-touch-callout: none; /* Disable touch callout on iOS */
 }
 
 
@@ -1481,9 +1479,4 @@ nav ul li a:hover::after {
     transition-delay: 2.2s;
 }
 
-/* Deshabilitar la interacción con los videos en Safari */
-@supports (-webkit-overflow-scrolling: touch) {
-    video {
-        pointer-events: none !important; /* Deshabilita la interacción con los videos */
-    }
-}
+
