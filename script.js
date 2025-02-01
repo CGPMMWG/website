@@ -286,7 +286,6 @@ function setLanguage(language) {
     document.getElementById('nav-problema').innerHTML = translations[language].problemaButton; // Actualizar el botón "Contanos tu Proyecto"
 }
 
-
 // Animaciones de entrada
 document.addEventListener('DOMContentLoaded', function() {
     const observerOptions = {
@@ -328,11 +327,6 @@ document.addEventListener('DOMContentLoaded', function() {
             popup.style.display = 'none';
         }
     });
-    // Detectar si el navegador es Safari
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-    if (isSafari && video) {
-        video.style.pointerEvents = 'none'; // Deshabilita la interacción solo en Safari
 
     // Preloader
     const preloader = document.getElementById('preloader');
@@ -345,4 +339,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     body.classList.add('loading');
+
+    // Manejo del video de fondo
+    const videos = document.querySelectorAll('video');
+
+    // Detectar si el navegador es Safari
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (isSafari) {
+        videos.forEach(video => {
+            video.style.pointerEvents = 'none'; // Deshabilita la interacción solo en Safari
+        });
+    }
 });
