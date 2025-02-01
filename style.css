@@ -1,0 +1,1478 @@
+/* Preloader */
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #ffffff; /* Fondo blanco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #6a0dad; /* Purple */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Ocultar contenido hasta que todo esté cargado */
+body.loading {
+    overflow: hidden;
+}
+
+body.loading .content {
+    display: none;
+}
+
+body.loaded .content {
+    display: block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    color: #333333; /* Cambiar el color del texto a un tono oscuro para mejorar la legibilidad */
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+nav {
+    background-color: rgba(75, 0, 130, 0.8);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0 auto; /* Centrar el contenedor del menú */
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Asegurar que los elementos estén centrados */
+}
+
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+/* Estilos para la barra de navegación */
+nav {
+    background-color: rgba(73, 2, 124, 0.8);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para los enlaces de navegación */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex: 1; /* Permitir que los enlaces ocupen el espacio disponible */
+    justify-content: center; /* Centrar los enlaces */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el menú hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para el menú desplegable */
+nav ul.mobile-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(75, 0, 130, 0.8);
+    position: absolute;
+    top: 60px; /* Ajustar según la altura de la barra de navegación */
+    left: 0;
+    z-index: 999;
+}
+
+nav ul.mobile-menu li {
+    margin: 10px 0;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    nav ul.desktop-menu {
+        display: none; /* Ocultar los enlaces de navegación en dispositivos móviles */
+    }
+    .hamburger {
+        display: flex; /* Mostrar el menú hamburguesa en dispositivos móviles */
+    }
+    nav ul.mobile-menu {
+        display: none; /* Asegurarse de que el menú móvil esté oculto por defecto */
+    }
+    nav ul.mobile-menu.active {
+        display: flex; /* Mostrar el menú desplegable en dispositivos móviles cuando está activo */
+    }
+}
+
+/* Estilos para animar el menú hamburguesa */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#servicios {
+    height: auto; /* Ajustar la altura automáticamente */
+    position: relative;
+    background: url('backgroundvid3.mp4') repeat; /* Repetir el fondo */
+    background-size: cover;
+}
+
+#servicios .overlay {
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 20px;
+}
+
+.service-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Reducir el espacio entre las tarjetas */
+    padding: 10px; /* Reducir el padding para evitar que el contenido toque los bordes */
+}
+
+.service-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px; /* Reducir el padding para hacer las tarjetas más compactas */
+    width: 80px; /* Ajusta el ancho para que las tarjetas sean más pequeñas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    text-align: left;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 255, 255, 0.5); /* Cambiar el color de fondo a cian medio translúcido */
+}
+
+.service-card img {
+    width: 20px; /* Ajustar el tamaño de la imagen */
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.service-card h3 {
+    font-size: 0.6em; /* Ajustar el tamaño del título */
+    color: #6a0dad;
+    margin-bottom: 5px;
+}
+
+.service-card p {
+    font-size: 0.4em; /* Ajustar el tamaño del texto */
+    color: #333;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 1200px) {
+    .service-card {
+        width: calc(25% - 20px); /* Ajusta el ancho para que quepan cuatro tarjetas en una fila con espacio entre ellas */
+    }
+}
+
+@media (max-width: 992px) {
+    .service-card {
+        width: calc(33.333% - 20px); /* Ajusta el ancho para que quepan tres tarjetas en una fila con espacio entre ellas */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        width: calc(50% - 20px); /* Ajusta el ancho para que quepan dos tarjetas en una fila con espacio entre ellas */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        width: calc(100% - 20px); /* Ajusta el ancho para que quepa una tarjeta en una fila con espacio entre ellas */
+    }
+    .service-card img,
+    .service-card p {
+        display: none; /* Ocultar la imagen y el texto en dispositivos móviles */
+    }
+    .service-card h3 {
+        font-size: 1em; /* Ajustar el tamaño del título para que sea más visible */
+        text-align: center; /* Centrar el título */
+    }
+}
+
+/* Estilos específicos para la sección "Nuestro Equipo" */
+#equipo {
+    min-height: 80vh; /* Reducir la altura mínima */
+    padding: 20px 20px; /* Reducir el padding superior */
+    background-color: #8a2be2; /* Fondo violeta */
+    color: #333; /* Color del texto */
+    text-align: center;
+    background: url('tu-imagen.jpg') repeat; /* Repetir el fondo */
+    background-size: cover;
+}
+
+#equipo .overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#team-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: white; /* Color del título */
+}
+
+.team-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 5px; /* Reducir el espacio entre los elementos */
+    list-style-type: none; /* Eliminar puntos de viñeta predeterminados */
+    padding-left: 0; /* Eliminar padding izquierdo */
+}
+
+.team-card {
+    background-color: transparent; /* Fondo transparente */
+    padding: 5px;
+    text-align: left;
+    position: relative;
+    color: white; /* Color del texto */
+}
+
+.team-card h3 {
+    font-size: 0.8em; /* Reducir el tamaño del título */
+    color: white;
+    margin-bottom: 5px; /* Reducir el espacio inferior */
+}
+
+.team-card p {
+    font-size: 0.6em; /* Reducir el tamaño del texto */
+    color: white;
+    margin: 0; /* Eliminar el margen inferior */
+}
+
+.team-card .tilde {
+    content: "✓"; /* Añadir la tilde */
+    color: white; /* Color de la tilde */
+    font-size: 1em; /* Reducir el tamaño de la tilde */
+    margin-right: 5px; /* Espacio entre la tilde y el texto */
+    display: inline-block;
+    vertical-align: middle; /* Alinear verticalmente con el texto */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 1200px) {
+    #team-title {
+        font-size: 2em; /* Reducir el tamaño del título */
+    }
+    .team-details {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 15px; /* Reducir el espacio entre los elementos */
+    }
+    .team-card {
+        padding: 8px; /* Reducir el padding */
+    }
+    .team-card h3 {
+        font-size: 1em; /* Reducir el tamaño del título */
+    }
+    .team-card p {
+        font-size: 0.9em; /* Reducir el tamaño del texto */
+    }
+    .team-card .tilde {
+        font-size: 1.2em; /* Reducir el tamaño de la tilde */
+    }
+}
+
+@media (max-width: 992px) {
+    #team-title {
+        font-size: 1.8em; /* Reducir el tamaño del título */
+    }
+    .team-details {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 10px; /* Reducir el espacio entre los elementos */
+    }
+    .team-card {
+        padding: 6px; /* Reducir el padding */
+    }
+    .team-card h3 {
+        font-size: 0.9em; /* Reducir el tamaño del título */
+    }
+    .team-card p {
+        font-size: 0.8em; /* Reducir el tamaño del texto */
+    }
+    .team-card .tilde {
+        font-size: 1em; /* Reducir el tamaño de la tilde */
+    }
+}
+
+@media (max-width: 768px) {
+    #team-title {
+        font-size: 1.5em; /* Reducir el tamaño del título */
+    }
+    .team-details {
+        grid-template-columns: 1fr; /* Una columna */
+        gap: 10px; /* Reducir el espacio entre los elementos */
+    }
+    .team-card {
+        padding: 5px; /* Reducir el padding */
+    }
+    .team-card h3 {
+        font-size: 0.8em; /* Reducir el tamaño del título */
+    }
+    .team-card p {
+        font-size: 0.7em; /* Reducir el tamaño del texto */
+    }
+    .team-card .tilde {
+        font-size: 0.9em; /* Reducir el tamaño de la tilde */
+    }
+}
+
+@media (max-width: 480px) {
+    #team-title {
+        font-size: 1.2em; /* Reducir el tamaño del título */
+    }
+    .team-details {
+        grid-template-columns: 1fr; /* Una columna */
+        gap: 5px; /* Reducir el espacio entre los elementos */
+    }
+    .team-card {
+        padding: 4px; /* Reducir el padding */
+    }
+    .team-card h3 {
+        font-size: 0.7em; /* Reducir el tamaño del título */
+    }
+    .team-card p {
+        font-size: 0.6em; /* Reducir el tamaño del texto */
+    }
+    .team-card .tilde {
+        font-size: 0.8em; /* Reducir el tamaño de la tilde */
+    }
+}
+
+/* Estilos para el contenedor de navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px; /* Añadir padding para asegurar espacio suficiente */
+    background-color: rgb(75, 0, 130, 0.8); /* Mantener el color original violeta */
+}
+
+/* Estilos para el menú hamburguesa */
+.hamburger {
+    background-color: transparent; /* Fondo transparente */
+}
+
+//* Estilos para los botones de redes sociales */
+.social-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Alinear los botones a la derecha */
+    background-color: transparent; /* Fondo transparente */
+}
+
+.social-buttons a {
+    margin-left: 5px; /* Reducir el espacio entre los botones */
+}
+
+.social-buttons img {
+    width: 24px; /* Tamaño pequeño para los iconos */
+    height: 24px;
+    border-radius: 50%; /* Asegurar que la imagen sea circular */
+    background-color: transparent; /* Fondo transparente */
+    padding: 0; /* Eliminar padding adicional */
+    border: none; /* Eliminar cualquier borde */
+    transition: transform 0.3s ease; /* Añadir transición suave */
+}
+
+.social-buttons img:hover {
+    transform: scale(1.2); /* Agrandar el icono al pasar el mouse */
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 5px; /* Reducir padding para asegurar espacio suficiente */
+    }
+
+    .hamburger {
+        order: 1; /* Asegurar que el menú hamburguesa aparezca primero */
+    }
+
+    .social-buttons {
+        order: 2; /* Asegurar que los botones de redes sociales aparezcan después */
+        margin-left: 0; /* Alinear los botones a la izquierda */
+    }
+
+    .mobile-menu {
+        order: 3; /* Asegurar que el menú móvil aparezca después del menú hamburguesa */
+    }
+}
+
+
+
+.social-buttons img {
+    width: 24px; /* Tamaño pequeño para los iconos */
+    height: 24px;
+    border-radius: 50%; /* Asegurar que la imagen sea circular */
+    background-color: transparent; /* Fondo transparente */
+    padding: 0; /* Eliminar padding adicional */
+    transition: transform 0.3s ease; /* Añadir transición suave */
+    border: 1px solid rgb(86, 1, 108); /* Borde temporal para verificar visibilidad */
+}
+
+
+
+/* Botón flotante de Email */
+.email-button {
+    position: fixed;
+    bottom: 70px; /* Ajusta la posición para que esté encima del botón de WhatsApp */
+    right: 10px; /* Posición en la esquina inferior derecha */
+    z-index: 1001;
+    padding: 0; /* Eliminar padding adicional */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Eliminar cualquier borde */
+}
+
+.email-button img {
+    width: 40px; /* Ajusta el tamaño del botón según sea necesario */
+    height: auto; /* Mantener la proporción de la imagen */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
+}
+
+.email-button img:hover {
+    transform: scale(1.2); /* Aumentar el tamaño al 120% al pasar el mouse */
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 10px; /* Posición en la esquina inferior derecha */
+    right: 10px;
+    z-index: 1001;
+    border-radius: 50%; /* Mantener el botón redondo */
+    padding: 0; /* Eliminar padding adicional */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Eliminar cualquier borde */
+}
+
+.whatsapp-button img {
+    width: 40px; /* Ajusta el tamaño del botón según sea necesario */
+    height: 40px;
+    border-radius: 50%; /* Asegurar que la imagen sea circular */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
+}
+
+.whatsapp-button img:hover {
+    transform: scale(1.2); /* Aumentar el tamaño al 120% al pasar el mouse */
+}
+
+
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 60px; /* Ajusta el espacio superior para evitar que el contenido se superponga con la barra de navegación */
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background-video,
+#background-video2,
+#background-video3,
+#background-video4,
+#background-video5,
+#background-video6 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white;
+    text-align: center;
+    z-index: 1; /* Asegurarse de que la superposición esté por encima del video */
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre el texto y el logo */
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.logo {
+    width: 150px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto;
+    margin-bottom: 20px; /* Espacio entre el logo y la selección de idioma */
+    animation: slideInFromRight 1s ease-out;
+}
+
+#title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5em; /* Tamaño del título */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid rgb(0, 195, 255);
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+#subtitle {
+    font-size: 1.5em; /* Tamaño del eslogan */
+}
+
+.language-selector {
+    margin-top: 20px;
+}
+
+.language-selector button {
+    background-color: #4b0082;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.language-selector button:hover {
+    background-color: #3a0066;
+}
+
+.section {
+    padding: 0; /* Eliminar el padding para evitar márgenes adicionales */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo ligeramente transparente para el texto */
+    position: relative; /* Asegurarse de que las secciones no se superpongan */
+    z-index: 0; /* Asegurarse de que las secciones no se superpongan */
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #6a0dad;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: #6a0dad;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+.intro p,
+#about-us-text {
+    font-size: 1.2em;
+    color: white; /* Cambiar el color del texto a blanco */
+}
+
+.graphics {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.graphics img {
+    margin: 0 10px;
+    width: 200px;
+    height: auto;
+    border: 2px solid #6a0dad;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: rgba(75, 0, 130, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Cambiar a relativo para que no se superponga */
+    width: 100%;
+    z-index: 1; /* Asegurarse de que el pie de página esté por encima de otros elementos */
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Espacio entre las imágenes y el texto de copyright */
+}
+
+.footer-logos img {
+    margin: 0 10px;
+    width: 75px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    height: auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6a0dad;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* Añadir margen superior para separar los botones */
+    font-size: 1.2em; /* Asegurarse de que el tamaño de la fuente sea consistente */
+}
+
+.button:hover {
+    background-color: orange; /* Cambiar el color de fondo a naranja al pasar el mouse */
+}
+
+/* Estilos para el Pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#problema-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#problema-form label {
+    margin-top: 10px;
+}
+
+#problema-form input,
+#problema-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Estilos para el botón */
+#problema-form button {
+    margin-top: 20px;
+    padding: 15px 20px; /* Hacer el botón más grande */
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5em; /* Hacer el texto más grande */
+    opacity: 0; /* Inicialmente invisible para la animación de entrada */
+    transform: translateX(100%); /* Posición inicial para la animación de entrada desde la derecha */
+    animation: slideInFromRight 1s forwards 0.5s; /* Añadir animación de entrada con retraso */
+}
+
+/* Estilos para el botón al pasar el mouse */
+#problema-form button:hover {
+    background-color: rgb(237, 82, 59); /* Cambiar el color de fondo a naranja al pasar el mouse */
+}
+
+/* Definición de la animación de entrada desde la derecha */
+@keyframes slideInFromRight {
+    to {
+        opacity: 1; /* Hacer visible */
+        transform: translateX(0); /* Mover a la posición final */
+    }
+}
+
+
+/* Estilos para los separadores */
+.separator {
+    height: 0; /* Eliminar la altura del separador */
+    background-color: transparent; /* Hacer el separador transparente */
+    margin: 0; /* Eliminar el margen del separador */
+}
+
+/* Ajustar el video de fondo */
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background-video,
+#background-video2,
+#background-video3,
+#background-video4,
+#background-video5,
+#background-video6 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Estilos para la sección de servicios */
+.service-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Añadir más espacio entre las tarjetas */
+    padding: 10px; /* Reducir el padding para evitar que el contenido toque los bordes */
+}
+
+.service-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px; /* Reducir el padding para hacer las tarjetas más compactas */
+    width: calc(25% - 20px); /* Ajusta el ancho para que quepan cuatro tarjetas en una fila con espacio entre ellas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, height 0.3s;
+    text-align: center; /* Centrar el título */
+    position: relative; /* Necesario para el contenido interactivo */
+    transform-style: preserve-3d; /* Necesario para el giro 3D */
+    perspective: 1000px; /* Añadir perspectiva para el giro 3D */
+}
+
+.service-card:hover {
+    transform: translateY(-10px) !important; /* Levantar la tarjeta al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+    background-color: rgba(11, 227, 227, 0.685) !important; /* Cambiar el color de fondo a cian medio translúcido */
+}
+
+.service-card img {
+    width: 50px; /* Ajustar el tamaño de la imagen */
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.service-card h3 {
+    font-size: 0.8em; /* Ajustar el tamaño del título */
+    color: #6a0dad;
+    margin-bottom: 5px;
+}
+
+.service-card p {
+    font-size: 0.7em; /* Ajustar el tamaño del texto */
+    color: #333;
+    display: none; /* Ocultar el texto por defecto */
+    backface-visibility: hidden; /* Ocultar el texto cuando la tarjeta no está girada */
+}
+
+.service-card:hover p {
+    display: block !important; /* Mostrar el texto al pasar el mouse */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 1200px) {
+    .service-card {
+        width: calc(33.333% - 20px) !important; /* Ajusta el ancho para que quepan tres tarjetas en una fila con espacio entre ellas */
+    }
+}
+
+@media (max-width: 992px) {
+    .service-card {
+        width: calc(50% - 20px) !important; /* Ajusta el ancho para que quepan dos tarjetas en una fila con espacio entre ellas */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-details {
+        gap: 0px !important; /* Eliminar el espacio entre las tarjetas en dispositivos móviles */
+    }
+    .service-card {
+        width: calc(50% - 10px) !important; /* Ajusta el ancho para que quepan dos tarjetas en una fila con espacio entre ellas */
+        font-size: 0.7em !important; /* Ajustar el tamaño del texto */
+        transition: box-shadow 0.3s, background-color 0.3s, height 0.3s !important; /* Quitar la animación de subir */
+    }
+    .service-card:hover {
+        transform: none !important; /* Quitar la animación de subir */
+        height: auto !important; /* Expandir la tarjeta para mostrar el texto */
+    }
+    .service-card img {
+        width: 40px !important; /* Ajustar el tamaño de la imagen */
+        height: 40px !important;
+    }
+    .service-card h3 {
+        font-size: 0.9em !important; /* Ajustar el tamaño del título */
+    }
+    .service-card p {
+        font-size: 0.6em !important; /* Ajustar el tamaño del texto */
+        display: block !important; /* Mostrar el texto al pasar el mouse */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-details {
+        gap: 0px !important; /* Eliminar el espacio entre las tarjetas en dispositivos móviles */
+    }
+    .service-card {
+        width: calc(50% - 10px) !important; /* Ajusta el ancho para que quepan dos tarjetas en una fila con espacio entre ellas */
+        font-size: 0.6em !important; /* Ajustar el tamaño del texto */
+        transition: box-shadow 0.3s, background-color 0.3s, height 0.3s !important; /* Quitar la animación de subir */
+    }
+    .service-card:hover {
+        transform: none !important; /* Quitar la animación de subir */
+        height: auto !important; /* Expandir la tarjeta para mostrar el texto */
+    }
+    .service-card img {
+        display: none !important; /* Ocultar la imagen en dispositivos móviles */
+    }
+    .service-card h3 {
+        font-size: 0.8em !important; /* Ajustar el tamaño del título para que sea más visible */
+        text-align: center !important; /* Centrar el título */
+    }
+    .service-card p {
+        display: block !important; /* Mostrar el texto al pasar el mouse */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        width: calc(100% - 20px) !important; /* Ajusta el ancho para que quepa una tarjeta en una fila con espacio entre ellas */
+    }
+    .service-card img {
+        width: 40px !important; /* Ajustar el tamaño de la imagen */
+        height: 40px !important;
+    }
+    .service-card h3 {
+        font-size: 0.9em !important; /* Ajustar el tamaño del título */
+    }
+    .service-card p {
+        font-size: 0.8em !important; /* Ajustar el tamaño del texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        width: calc(100% - 20px) !important; /* Ajusta el ancho para que quepa una tarjeta en una fila con espacio entre ellas */
+    }
+    .service-card img,
+    .service-card p {
+        display: none !important; /* Ocultar la imagen y el texto en dispositivos móviles */
+    }
+    .service-card h3 {
+        font-size: 1em !important; /* Ajustar el tamaño del título para que sea más visible */
+        text-align: center !important; /* Centrar el título */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .service-card {
+        width: calc(100% - 20px); /* Ajusta el ancho para que quepa una tarjeta en una fila con espacio entre ellas */
+    }
+    .service-card img {
+        width: 40px; /* Ajustar el tamaño de la imagen */
+        height: 40px;
+    }
+    .service-card h3 {
+        font-size: 0.9em; /* Ajustar el tamaño del título */
+    }
+    .service-card p {
+        font-size: 0.8em; /* Ajustar el tamaño del texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card {
+        width: calc(100% - 20px); /* Ajusta el ancho para que quepa una tarjeta en una fila con espacio entre ellas */
+    }
+    .service-card img,
+    .service-card p {
+        display: none; /* Ocultar la imagen y el texto en dispositivos móviles */
+    }
+    .service-card h3 {
+        font-size: 1em; /* Ajustar el tamaño del título para que sea más visible */
+        text-align: center; /* Centrar el título */
+    }
+}
+
+
+
+/* Ajustar la altura de las secciones */
+.section {
+    min-height: 100vh; /* Asegurar que las secciones ocupen al menos toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box; /* Incluir padding en el cálculo del tamaño */
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Incluir padding en el cálculo del tamaño */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white;
+    text-align: center;
+    z-index: 1; /* Asegurarse de que la superposición esté por encima del video */
+}
+
+/* Ajustar la altura de las secciones */
+.section {
+    min-height: 100vh; /* Asegurar que las secciones ocupen al menos toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box; /* Incluir padding en el cálculo del tamaño */
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Incluir padding en el cálculo del tamaño */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white;
+    text-align: center;
+    z-index: 1; /* Asegurarse de que la superposición esté por encima del video */
+}
+
+/* Ajustar la altura de las secciones */
+.section {
+    min-height: 100vh; /* Asegurar que las secciones ocupen al menos toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box; /* Incluir padding en el cálculo del tamaño */
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Incluir padding en el cálculo del tamaño */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white;
+    text-align: center;
+    z-index: 1; /* Asegurarse de que la superposición esté por encima del video */
+}
+
+
+
+.service-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    color: #6a0dad;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Estilos específicos para la sección "Bienvenidos a TrendMakers" */
+#inicio {
+    height: 100vh; /* Ocupa toda la pantalla */
+    position: relative;
+}
+
+#inicio .overlay {
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 20px;
+}
+
+/* Estilos específicos para la sección "Contanos tu Problema" */
+#problema {
+    height: 100vh; /* Ocupa toda la pantalla */
+    position: relative;
+}
+
+#problema .overlay {
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 20px;
+}
+
+#problema .button {
+    align-self: center; /* Centra el botón horizontalmente */
+}
+
+/* Estilos específicos para la sección "Acerca de Nosotros" */
+#acerca {
+    height: 100vh; /* Ocupa toda la pantalla */
+    position: relative;
+}
+
+
+
+#acerca .overlay {
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 20px;
+}
+
+/* Estilos específicos para la sección "Nuestros Servicios" */
+#servicios {
+    height: 100vh; /* Ocupa toda la pantalla */
+    position: relative;
+}
+
+#servicios .overlay {
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 20px;
+}
+/* Estilos específicos para la sección "Nuestro Equipo" */
+#equipo {
+    min-height: 80vh; /* Reducir la altura mínima */
+    padding: 20px 20px; /* Reducir el padding superior */
+    background-color: #8a2be2; /* Fondo violeta */
+    color: #333; /* Color del texto */
+    text-align: center;
+}
+
+#equipo .overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#team-title {
+    font-size: 2.5m;
+    margin-bottom: 20px;
+    color: white; /* Color del título */
+}
+
+.team-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px; /* Espacio entre los elementos */
+    list-style-type: none; /* Eliminar puntos de viñeta predeterminados */
+    padding-left: 0; /* Eliminar padding izquierdo */
+}
+
+.team-card {
+    background-color: transparent; /* Fondo transparente */
+    padding: 10px;
+    text-align: left;
+    position: relative;
+    color: white; /* Color del texto */
+}
+
+.team-card h3 {
+    font-size: 1.2em; /* Reducir el tamaño del título */
+    color: white;
+    margin-bottom: 5px; /* Reducir el espacio inferior */
+}
+
+.team-card p {
+    font-size: 1em;
+    color: white;
+    margin: 0; /* Eliminar el margen inferior */
+}
+
+.team-card .tilde {
+    content: "✓"; /* Añadir la tilde */
+    color: white; /* Color de la tilde */
+    font-size: 1.5em; /* Tamaño de la tilde */
+    margin-right: 10px; /* Espacio entre la tilde y el texto */
+    display: inline-block;
+    vertical-align: middle; /* Alinear verticalmente con el texto */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 1200px) {
+    #team-title {
+        font-size: 1em; /* Reducir el tamaño del título */
+    }
+    .team-details {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 15px; /* Reducir el espacio entre los elementos */
+    }
+    .team-card {
+        padding: 8px; /* Reducir el padding */
+    }
+    .team-card h3 {
+        font-size: 1em; /* Reducir el tamaño del título */
+    }
+    .team-card p {
+        font-size: 0.9em; /* Reducir el tamaño del texto */
+    }
+    .team-card .tilde {
+        font-size: 1.2em; /* Reducir el tamaño de la tilde */
+    }
+}
+
+@media (max-width: 992px) {
+    #team-title {
+        font-size: 1.8em; /* Reducir el tamaño del título */
+    }
+    .team-details {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 10px; /* Reducir el espacio entre los elementos */
+    }
+    .team-card {
+        padding: 6px; /* Reducir el padding */
+    }
+    .team-card h3 {
+        font-size: 0.9em; /* Reducir el tamaño del título */
+    }
+    .team-card p {
+        font-size: 0.8em; /* Reducir el tamaño del texto */
+    }
+    .team-card .tilde {
+        font-size: 1em; /* Reducir el tamaño de la tilde */
+    }
+}
+
+@media (max-width: 768px) {
+    #team-title {
+        font-size: 1.5em; /* Reducir el tamaño del título */
+    }
+    .team-details {
+        grid-template-columns: 1fr; /* Una columna */
+        gap: 10px; /* Reducir el espacio entre los elementos */
+    }
+    .team-card {
+        padding: 5px; /* Reducir el padding */
+    }
+    .team-card h3 {
+        font-size: 0.8em; /* Reducir el tamaño del título */
+    }
+    .team-card p {
+        font-size: 0.7em; /* Reducir el tamaño del texto */
+    }
+    .team-card .tilde {
+        font-size: 0.9em; /* Reducir el tamaño de la tilde */
+    }
+}
+
+@media (max-width: 480px) {
+    #team-title {
+        font-size: 1.2em; /* Reducir el tamaño del título */
+    }
+    .team-details {
+        grid-template-columns: 1fr; /* Una columna */
+        gap: 5px; /* Reducir el espacio entre los elementos */
+    }
+    .team-card {
+        padding: 4px; /* Reducir el padding */
+    }
+    .team-card h3 {
+        font-size: 0.7em; /* Reducir el tamaño del título */
+    }
+    .team-card p {
+        font-size: 0.6em; /* Reducir el tamaño del texto */
+    }
+    .team-card .tilde {
+        font-size: 0.8em; /* Reducir el tamaño de la tilde */
+    }
+}
+
+
+
+/* Asegurarse de que el contenedor del enlace tenga una posición relativa */
+nav ul li {
+    position: relative;
+}
+
+/* Animación de línea debajo de los enlaces de navegación */
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0; /* Ajusta la posición vertical de la línea justo debajo del texto */
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Estilos para la sección de contacto */
+.contact-form-section {
+    background-color: #8a2be2; /* Fondo violeta */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-form-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form-section button {
+    background-color: #4b0082;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.contact-form-section button:hover {
+    background-color: #3a0066;
+}
+
+/* Animaciones para la sección "Nuestro Equipo" */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate__animated {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Inicialmente desplazado hacia abajo */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.animate__animated.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Añadir un pequeño retraso para cada tarjeta para un efecto de cascada */
+.team-card:nth-child(1), .service-card:nth-child(1) {
+    transition-delay: 0.4s;
+}
+
+.team-card:nth-child(2), .service-card:nth-child(2) {
+    transition-delay: 0.6s;
+}
+
+.team-card:nth-child(3), .service-card:nth-child(3) {
+    transition-delay: 0.8s;
+}
+
+.team-card:nth-child(4), .service-card:nth-child(4) {
+    transition-delay: 1s;
+}
+
+.team-card:nth-child(5), .service-card:nth-child(5) {
+    transition-delay: 1.2s;
+}
+
+.team-card:nth-child(6), .service-card:nth-child(6) {
+    transition-delay: 1.4s;
+}
+
+.team-card:nth-child(7), .service-card:nth-child(7) {
+    transition-delay: 1.6s;
+}
+
+.team-card:nth-child(8), .service-card:nth-child(8) {
+    transition-delay: 1.8s;
+}
+
+.team-card:nth-child(9), .service-card:nth-child(9) {
+    transition-delay: 2s;
+}
+
+.team-card:nth-child(10), .service-card:nth-child(10) {
+    transition-delay: 2.2s;
+}
+
+
