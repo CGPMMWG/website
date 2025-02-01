@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendMakers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Enlace de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        .menu-item {
+            font-weight: normal !important;
+        }
+
+        .highlight-bold {
+            font-weight: bold !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <div class="content">
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <!-- Botones de redes sociales -->
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com" class="linkedin-button" target="_blank">
+                    <img src="Linkedinlogo.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com" class="instagram-button" target="_blank">
+                    <img src="instagramlogo.jpg" alt="Instagram">
+                </a>
+            </div>
+            <ul class="desktop-menu">
+                <li><a href="#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
+                <li><a href="#servicios" id="nav-servicios" class="menu-item">Nuestros Servicios</a></li>
+                <li><a href="#problema" id="nav-problema" class="menu-item">Contanos tu Proyecto</a></li>
+                <li><a href="#equipo" id="nav-equipo" class="menu-item">Nuestro Equipo</a></li>
+                <li><a href="#acerca" id="nav-acerca" class="menu-item">¿Por qué elegirnos?</a></li>
+                <li><a href="#contact-form" id="nav-contacto" class="menu-item">Agenda una Llamada</a></li>
+            </ul>
+            <ul class="mobile-menu">
+                <li><a href="#inicio" id="nav-inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="#servicios" id="nav-servicios" class="menu-item" onclick="closeMenu()">Nuestros Servicios</a></li>
+                <li><a href="#problema" id="nav-problema" class="menu-item" onclick="closeMenu()">Contanos tu Proyecto</a></li>
+                <li><a href="#equipo" id="nav-equipo" class="menu-item" onclick="closeMenu()">Nuestro Equipo</a></li>
+                <li><a href="#acerca" id="nav-acerca" class="menu-item" onclick="closeMenu()">¿Por qué elegirnos como tu socio digital?</a></li>
+                <li><a href="#contact-form" id="nav-contacto" class="menu-item" onclick="closeMenu()">Agenda una Llamada</a></li>
+            </ul>
+        </nav>
+        <header>
+            <div class="video-container">
+                <video autoplay muted loop id="background-video">
+                    <source src="backgroundvid.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="title-container">
+                        <img src="logo1.png" alt="TrendMakers Logo" class="logo">
+                        <div class="text-container">
+                            <h1 id="title" class="animate__animated">TrendMakers</h1>
+                            <p id="subtitle" class="animate__animated">Your digital Partner</p>
+                        </div>
+                    </div>
+                    <div class="language-selector">
+                        <button onclick="setLanguage('es')">Español</button>
+                        <button onclick="setLanguage('en')">English</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="inicio" class="section">
+            <div class="video-container">
+                <video autoplay muted loop id="background-video2">
+                    <source src="backgroundvid2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="intro">
+                        <h2 id="intro-title" class="section-title animate__animated">Bienvenidos a TrendMakers</h2>
+                        <p id="intro-text" class="animate__animated">Ofrecemos soluciones personalizadas para tu negocio.</p>
+                        <p id="about-us-text" class="animate__animated">
+                            Somos una agencia de marketing global que ofrece servicios de excelencia a clientes de todo el mundo. Nuestro equipo de expertos crea estrategias personalizadas para cada negocio, impulsando su crecimiento y éxito con soluciones innovadoras y efectivas. Desde la gestión de redes sociales hasta campañas publicitarias integrales, nos comprometemos con la excelencia y la satisfacción del cliente en cada proyecto.
+                        </p>
+                        <a href="https://calendly.com/matiasgottler/30min" class="button animate__animated" id="schedule-call" target="_blank">Agenda una Llamada</a>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+        <div class="separator"></div>
+        <section id="servicios" class="section">
+            <div class="video-container">
+                <video autoplay muted loop id="background-video5">
+                    <source src="backgroundvid5.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <h2 id="services-title" class="section-title animate__animated">Nuestros Servicios</h2>
+                    <p id="services-text" class="animate__animated">Ofrecemos una amplia gama de servicios de marketing digital...</p>
+                    <div class="service-details">
+                        <div class="service-card animate__animated">
+                            <img src="logo1.png" alt="Marketing & Tecnología">
+                            <h3>Marketing & Tecnología</h3>
+                            <p>Usamos plataformas tecnológicas y desarrollos a medida para optimizar los procesos de Marketing y Ventas, implementando automatización en los ciclos comerciales.</p>
+                        </div>
+                        <div class="service-card animate__animated">
+                            <img src="logo1.png" alt="Leads">
+                            <h3>Leads</h3>
+                            <p>Generación de Prospectos/Leads para plataformas SaaS y empresas de servicios. Implementación e Integración con CRM.</p>
+                        </div>
+                        <div class="service-card animate__animated">
+                            <img src="IA.jpg" alt="CHATGPT - IA">
+                            <h3>CHATGPT - IA</h3>
+                            <p>Potenciamos tu empresa capacitando en ChatGPT y otras herramientas de Inteligencia Artificial en el día a día a todos los sectores y empleados.</p>
+                        </div>
+                        <div class="service-card animate__animated">
+                            <img src="logo1.png" alt="Diseño/Comunicación">
+                            <h3>Diseño/Comunicación</h3>
+                            <p>Diseño y maquetado de Webs, Landing Pages, WordPress y Newsletters. Diseño de piezas gráficas para redes sociales, publicidad, eventos. Community Management.</p>
+                        </div>
+                        <div class="service-card animate__animated">
+                            <img src="logo1.png" alt="E-Commerce">
+                            <h3>E-Commerce</h3>
+                            <p>Operamos nuestros propios e-commerce. Sabemos cómo hacerlo. Te acompañamos desde la idea hasta la puesta en marcha en todas las etapas del proyecto.</p>
+                        </div>
+                        <div class="service-card animate__animated">
+                            <img src="logo1.png" alt="Consultoría">
+                            <h3>Consultoría</h3>
+                            <p>Brindamos consultoría en Marketing & Tecnología (infraestructura o software) para tus proyectos.</p>
+                        </div>
+                        <div class="service-card animate__animated">
+                            <img src="logo1.png" alt="Datos y Analítica">
+                            <h3>Datos y Analítica</h3>
+                            <p>Convertimos datos en información valiosa y accionable. Utilizamos herramientas avanzadas para interpretar métricas y generar insights que impulsen decisiones estratégicas.</p>
+                        </div>
+                        <div class="service-card animate__animated">
+                            <img src="logo1.png" alt="Estudios de Mercado">
+                            <h3>Estudios de Mercado</h3>
+                            <p>Realizamos estudios de mercado exhaustivos para entender tendencias y necesidades de tu público objetivo. Proveemos análisis detallados para identificar oportunidades y desarrollar estrategias efectivas.</p>
+                        </div>
+                        <div class="service-card animate__animated">
+                            <img src="logo1.png" alt="Desarrollo WEB">
+                            <h3>Desarrollo WEB</h3>
+                            <p>Desarrollamos sitios y plataformas digitales de alto rendimiento, adaptados a tus necesidades. Desde el diseño inicial hasta la implementación final, garantizamos una experiencia de usuario excepcional y un rendimiento óptimo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="separator"></div>
+        <section id="problema" class="section">
+            <div class="video-container">
+                <video autoplay muted loop id="background-video3">
+                    <source src="backgroundvid3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <p id="contact-soon" class="animate__animated">Nuestro equipo se pondrá en contacto con usted a la brevedad para discutir los detalles de su proyecto.</p>
+                    <button class="button animate__animated" id="show-popup">Contanos tu Proyecto</button>
+                </div>
+            </div>
+        </section>
+        <div class="separator"></div>
+        <section id="equipo" class="section">
+            <div class="video-container">
+                <video autoplay muted loop id="background-video6">
+                    <source src="backgroundvid6.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <h2 id="team-title" class="section-title animate__animated">Nuestro equipo está conformado por:</h2>
+                    <div class="team-details">
+                        <div class="team-card animate__animated">
+                            <h3>Consultores en Marketing</h3>
+                            <p>Brindan asesoramiento estratégico para hacer crecer tu negocio.</p>
+                        </div>
+                        <div class="team-card animate__animated">
+                            <h3>Diseñadores UX/UI, Gráficos y Multimedia</h3>
+                            <p>Encargados de crear experiencias digitales innovadoras y amigables.</p>
+                        </div>
+                        <div class="team-card animate__animated">
+                            <h3>Analistas de Datos</h3>
+                            <p>Expertos en interpretar métricas para impulsar la toma de decisiones informadas.</p>
+                        </div>
+                        <div class="team-card animate__animated">
+                            <h3>Especialistas en Campañas Digitales</h3>
+                            <p>Optimizan campañas publicitarias para obtener los mejores resultados.</p>
+                        </div>
+                        <div class="team-card animate__animated">
+                            <h3>Desarrolladores Web</h3>
+                            <p>Capaces de crear sitios y plataformas digitales de alto rendimiento.</p>
+                        </div>
+                        <div class="team-card animate__animated">
+                            <h3>Especialistas en SEO</h3>
+                            <p>Mejoran el posicionamiento orgánico y aumentan la visibilidad online de tu negocio.</p>
+                        </div>
+                        <div class="team-card animate__animated">
+                            <h3>Especialistas en Business Intelligence</h3>
+                            <p>Ayudan a transformar datos en información valiosa y accionable.</p>
+                        </div>
+                        <div class="team-card animate__animated">
+                            <h3>Community Managers</h3>
+                            <p>Expertos en la gestión de redes para aumentar la presencia y el compromiso de tu marca.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                </header>
+        
+        <section id="inicio" class="section">
+            <div class="video-container">
+                <video autoplay muted loop id="background-video2">
+                    <source src="backgroundvid2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="intro">
+                        <h2 id="intro-title" class="section-title animate__animated">Casos de exíto</h2>
+                        <p id="intro-text" class="animate__animated">Algunos de nuestros casos de exíto:</p>
+                        <p id="about-us-text" class="animate__animated">
+                                         Prontoled: Afectamos directamente la facturación con la implementacion de automatizaciones de IA, gestion de anuncios y la realzación de un plan exhaustivo de mercado que derivo en un plan de acción.
+                                         
+                                        </p>
+                        <p id="intro-text" class="animate__animated">Letratec: Aumentamos la facturación en un 37% con la implementación de un plan de marketing digital, la creación de una pagina web y gestion de leads.
+                        </p>
+                        <img src="PRONTO.png" alt="PRONTO Logo" class="logo">
+                        <img src="LETRA.png" alt="PRONTO Logo" class="logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="separator"></div>
+        <section id="acerca" class="section">
+            <div class="video-container">
+                <video autoplay muted loop id="background-video4">
+                    <source src="backgroundvid4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <h2 id="about-title" class="section-title animate__animated">¿Por qué elegirnos como tu socio digital?</h2>
+                    <p id="about-text" class="animate__animated">
+                        <span class="highlight-bold">Transformamos tu visión en realidad.</span><br><br>
+                        Comenzamos escuchando y comprendiendo tus necesidades. Nos sumergimos en tu problemática para ofrecerte soluciones y estrategias que te lleven al éxito.<br><br>
+                        Con un enfoque ágil y orientado a resultados, no solo cumplimos objetivos, sino que también buscamos nuevos desafíos para impulsar tu crecimiento.<br><br>
+                        Desde el primer contacto hasta la implementación final, combinamos marketing digital, diseño, programación, IA y consultoría para asegurarnos de que tu proyecto no solo funcione, sino que prospere.
+                    </p>
+                </div>
+            </div>
+        
+        </section>
+        <div class="separator"></div>
+        <section id="contact-form" class="contact-form-section">
+            <h2 id="contact-title">¿Necesitas ayuda con marketing digital? TrendMakers es tu solución</h2>
+            <form id="contact-form">
+                <label for="name" id="label-name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="company" id="label-company">Empresa:</label>
+                <input type="text" id="company" name="company" required>
+                <label for="project" id="label-project">Proyecto:</label>
+                <textarea id="project" name="project" required></textarea>
+                <button type="submit" class="button" id="submit-contact-form">Enviar</button>
+            </form>
+        </section>
+        <footer>
+            <div class="footer-logos">
+                <img src="google-ads.svg" alt="Google Ads">
+                <img src="google-partner.svg" alt="Google Partner">
+                <img src="logofacebookads.png" alt="Facebook Ads">
+                <img src="cace.svg" alt="CACE">
+            </div>
+            <p id="footer-text" class="animate__animated">&copy; 2023 TrendMakers. Todos los derechos reservados.</p>
+        </footer>
+        <!-- Pop-up Modal -->
+        <div id="popup" class="popup">
+            <div class="popup-content animate__animated">
+                <span class="close-button" id="close-popup">&times;</span>
+                <h2 id="popup-title">Contanos tu Proyecto</h2>
+                <form id="problema-form">
+                    <label for="email" id="label-email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="problema" id="label-problema">Proyecto:</label>
+                    <textarea id="problema" name="problema" required></textarea>
+                    <button type="submit" class="button" id="submit-button">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/541122705173" class="whatsapp-button" target="_blank">
+        <img src="wpp.jpg" alt="WhatsApp">
+    </a>
+    <!-- Botón flotante de Email -->
+    <a href="mailto:matiasgottler@gmail.com" class="email-button" target="_blank">
+        <img src="email.jpg" alt="Email">
+    </a>
+    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('nav ul.mobile-menu');
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+        function closeMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('nav ul.mobile-menu');
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Remover la clase 'active' de todas las tarjetas
+                    serviceCards.forEach(c => c.classList.remove('active'));
+                    // Agregar la clase 'active' a la tarjeta tocada
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
