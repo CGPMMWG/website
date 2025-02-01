@@ -1505,6 +1505,24 @@ nav ul li a:hover::after {
     transition-delay: 2.2s;
 }
 
+#backgroundvid, 
+#backgroundvid2, 
+#backgroundvid3, 
+#backgroundvid4, 
+#backgroundvid5 {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Asegura que el video cubra toda el área */
+    z-index: -1 !important; /* Mantiene los videos en segundo plano */
+    pointer-events: none !important; /* Evita que el usuario interactúe */
+    user-select: none !important; /* Impide que se seleccione */
+    -webkit-user-drag: none !important; /* Evita arrastre en Safari */
+    -webkit-touch-callout: none !important; /* Previene menú contextual en iOS */
+    transform: translateZ(0) !important; /* Mejora compatibilidad con Safari */
+}
 
 
 
