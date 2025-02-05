@@ -376,7 +376,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Manejo del video de fondo
     const videos = document.querySelectorAll('video');
 
-    
+    // Detectar si el navegador es Safari
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  
+    if (isSafari) {
+        videos.forEach(video => {
+            video.style.pointerEvents = 'none'; // Deshabilita la interacción solo en Safari
         });
     }
 });
