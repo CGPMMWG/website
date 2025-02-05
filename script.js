@@ -7,13 +7,27 @@ const translations = {
         navServicios: "Nuestros Servicios",
         navContacto: "Agenda una Llamada",
         navEquipo: "Nuestro Equipo",
+        navcasosexito: "Casos de éxito",
         introTitle: "Bienvenidos a TrendMakers",
         introText: "Ofrecemos soluciones de marketing digital personalizadas para tu negocio.",
         aboutTitle: "Acerca de Nosotros",
         aboutText: "Tomamos tu proyecto como si fuera nuestro.<br><br>Para eso empezamos por aprender y escuchar. Entendemos tu problemática y te presentamos recursos y acciones para llegar a donde quieres.<br><br>Somos ágiles y nos enfocamos en los resultados. Buscamos cumplir objetivos e ir por nuevos desafíos.<br><br>Lo hacemos combinando marketing digital, diseño, programación, IA y consultoría, de principio a fin. Desde que nos contactas hasta que funciona.",
         servicesTitle: "Nuestros Servicios",
+        successtitle: "Casos de éxito",
+        successIntro: "Algunos de nuestros casos de éxito:",
+        successCase1: "Prontoled: Afectamos directamente la facturación con la implementación de automatizaciones de IA, gestión de anuncios y la realización de un plan exhaustivo de mercado que derivó en un plan de acción.",
+        successCase2: "Letratec: Aumentamos la facturación en un 37% con la implementación de un plan de marketing digital, la creación de una página web y gestión de leads.",
         servicesText: "Ofrecemos una amplia gama de servicios de marketing digital...",
         teamTitle: "Nuestro equipo está conformado por:",
+        contactTitle: "Agenda una Llamada 1 a 1",
+        scheduleCall: "Agenda una Llamada",
+        problemaButton: "Contanos tu Proyecto",
+        popupTitle: "Contanos tu Proyecto",
+        labelEmail: "Correo Electrónico:",
+        labelProblema: "Proyecto:",
+        submitButton: "Enviar",
+        footerText: "&copy; 2023 TrendMakers. Todos los derechos reservados.",
+    
         teamDetails: `
             <div class="team-card">
                 <h3>Consultores en Marketing</h3>
@@ -119,14 +133,27 @@ const translations = {
         navServicios: "Our Services",
         navContacto: "Schedule a Call",
         navEquipo: "Our Team",
+        navcasosexito: "Success Stories",
         introTitle: "Welcome to TrendMakers",
         introText: "We offer personalized digital marketing solutions for your business.",
         aboutTitle: "About Us",
         aboutText: "We transform your vision into reality.<br><br>We start by listening and understanding your needs. We dive into your challenges to offer solutions and strategies that lead you to success.<br><br>With an agile and results-oriented approach, we not only meet objectives but also seek new challenges to drive your growth.<br><br>From the first contact to the final implementation, we combine digital marketing, design, programming, AI, and consulting to ensure your project not only works but thrives.",
         servicesTitle: "Our Services",
+        successtitle: "Success Stories",
+        successIntro: "Some of our success stories:",
+        successCase1: "Prontoled: We directly impacted revenue with the implementation of AI automations, ad management, and the execution of a comprehensive market plan that led to an action plan.",
+        successCase2: "Letratec: We increased revenue by 37% with the implementation of a digital marketing plan, the creation of a website, and lead management.",
         servicesText: "We offer a wide range of digital marketing services...",
         teamTitle: "Our team consists of:",
-        teamDetails: `
+        contactTitle: "Schedule a 1-on-1 Call",
+        scheduleCall: "Schedule a Call",
+        problemaButton: "Tell us about your Project",
+        popupTitle: "Tell us about your Project",
+        labelEmail: "Email:",
+        labelProblema: "Project:",
+        submitButton: "Send",
+    footerText: "&copy; 2023 TrendMakers. All rights reserved.",    
+    teamDetails: `
             <div class="team-card">
                 <h3>Marketing Consultants</h3>
                 <p>They provide strategic advice to grow your business.</p>
@@ -234,6 +261,7 @@ function setLanguage(language) {
         'nav-servicios': 'navServicios',
         'nav-contacto': 'navContacto',
         'nav-equipo': 'navEquipo',
+        'navcasosexito': 'navcasosxito',
         'nav-problema': 'problemaButton', // Asegurarnos de incluir el botón "Contanos tu Proyecto"
         'intro-title': 'introTitle',
         'intro-text': 'introText',
@@ -256,7 +284,11 @@ function setLanguage(language) {
         'label-company': 'labelCompany',
         'label-project': 'labelProject',
         'submit-contact-form': 'submitContactForm',
-        'contact-soon': 'contactSoon'
+        'contact-soon': 'contactSoon',
+        'success-intro': 'successIntro',
+        'success-title': 'successtitle',
+        'success-case1': 'successCase1',
+        'success-case2': 'successCase2'
     };
 
     for (const id in elementsToUpdate) {
@@ -283,6 +315,7 @@ function setLanguage(language) {
     document.getElementById('nav-servicios').innerHTML = translations[language].navServicios;
     document.getElementById('nav-contacto').innerHTML = translations[language].navContacto;
     document.getElementById('nav-equipo').innerHTML = translations[language].navEquipo;
+    document.getElementById('nav-casos-exito').innerHTML = translations[language].navcasosexito;
     document.getElementById('nav-problema').innerHTML = translations[language].problemaButton; // Actualizar el botón "Contanos tu Proyecto"
 }
 
@@ -343,12 +376,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Manejo del video de fondo
     const videos = document.querySelectorAll('video');
 
-    // Detectar si el navegador es Safari
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-    if (isSafari) {
-        videos.forEach(video => {
-            video.style.pointerEvents = 'none'; // Deshabilita la interacción solo en Safari
+    
         });
     }
 });
