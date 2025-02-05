@@ -283,7 +283,18 @@ function setLanguage(language) {
     document.getElementById('nav-servicios').innerHTML = translations[language].navServicios;
     document.getElementById('nav-contacto').innerHTML = translations[language].navContacto;
     document.getElementById('nav-equipo').innerHTML = translations[language].navEquipo;
+    document.getElementById('nav-casos-exito').innerHTML = translations[language].navcasosexito;
     document.getElementById('nav-problema').innerHTML = translations[language].problemaButton; // Actualizar el botón "Contanos tu Proyecto"
+
+    
+    // Actualizar los elementos del menú hamburguesa
+    document.querySelector('.mobile-menu #nav-inicio').innerHTML = translations[language].navInicio;
+    document.querySelector('.mobile-menu #nav-acerca').innerHTML = translations[language].navAcerca;
+    document.querySelector('.mobile-menu #nav-servicios').innerHTML = translations[language].navServicios;
+    document.querySelector('.mobile-menu #nav-contacto').innerHTML = translations[language].navContacto;
+    document.querySelector('.mobile-menu #nav-equipo').innerHTML = translations[language].navEquipo;
+    document.querySelector('.mobile-menu #nav-casos-exito').innerHTML = translations[language].navcasosexito;
+    document.querySelector('.mobile-menu #nav-problema').innerHTML = translations[language].problemaButton;
 }
 
 // Animaciones de entrada
