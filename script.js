@@ -272,7 +272,6 @@ function setLanguage(language) {
         'team-title': 'teamTitle',
         'contact-title': 'contactTitle',
         'schedule-call': 'scheduleCall',
-        'show-popup': 'problemaButton',
         'popup-title': 'popupTitle',
         'label-email': 'labelEmail',
         'label-problema': 'labelProblema',
@@ -351,14 +350,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
-    // Pop-up
-    const popup = document.getElementById('popup');
-    const showPopupButton = document.getElementById('show-popup');
-    const closePopupButton = document.getElementById('close-popup');
-
-    showPopupButton.addEventListener('click', function() {
-        popup.style.display = 'block';
-    });
 
     closePopupButton.addEventListener('click', function() {
         popup.style.display = 'none';
