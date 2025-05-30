@@ -352,24 +352,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
-    // Pop-up
-    const popup = document.getElementById('popup');
-    const showPopupButton = document.getElementById('show-popup');
-    const closePopupButton = document.getElementById('close-popup');
 
-    showPopupButton.addEventListener('click', function() {
-        popup.style.display = 'block';
-    });
-
-    closePopupButton.addEventListener('click', function() {
-        popup.style.display = 'none';
-    });
-
-    window.addEventListener('click', function(event) {
-        if (event.target == popup) {
-            popup.style.display = 'none';
-        }
-    });
 
     // Preloader
     const preloader = document.getElementById('preloader');
