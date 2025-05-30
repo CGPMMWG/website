@@ -1,3 +1,4 @@
+
 const translations = {
     es: {
         title: "TrendMakers",
@@ -351,15 +352,14 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
-     // Pop-upAdd commentMore actions
+    // Pop-up
     const popup = document.getElementById('popup');
     const showPopupButton = document.getElementById('show-popup');
     const closePopupButton = document.getElementById('close-popup');
 
-    showPopupButton.addEventListener('click', function() {Add commentMore actions
+    showPopupButton.addEventListener('click', function() {
         popup.style.display = 'block';
     });
-
 
     closePopupButton.addEventListener('click', function() {
         popup.style.display = 'none';
