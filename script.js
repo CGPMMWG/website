@@ -2,7 +2,7 @@
 const translations = {
     es: {
         title: "TrendMakers",
-        subtitle: "Your digital Partner",
+        subtitle: "Tu socio digital",
         navInicio: "Inicio",
         navAcerca: "¿Por qué elegirnos?",
         navServicios: "Nuestros Servicios",
@@ -370,3 +370,4 @@ document.addEventListener('DOMContentLoaded', function() {
     const videos = document.querySelectorAll('video');
 
 });
+
