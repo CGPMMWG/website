@@ -70,8 +70,8 @@ const translations = {
         labelEmail: "Correo Electrónico:",
         labelProblema: "Proyecto:",
         submitButton: "Enviar",
-        footerText: "&copy; 2023 TrendMakers. Todos los derechos reservados.",
-        aboutUsText: "Somos una agencia de marketing a nivel global que se dedica a brindar servicios de excelencia a clientes de todas partes del mundo. Con un equipo de expertos en diversas áreas del marketing digital, nos especializamos en crear estrategias personalizadas que se adaptan a las necesidades específicas de cada negocio. Nuestra misión es impulsar el crecimiento y éxito de nuestros clientes a través de soluciones innovadoras y efectivas. Desde la gestión de redes sociales hasta el desarrollo de campañas publicitarias integrales, estamos comprometidos con la excelencia y la satisfacción del cliente en cada proyecto que emprendemos.",
+        footerText: "&copy; 2025 TrendMakers. Todos los derechos reservados.",
+        aboutUsText: "Somos una agencia global especializada en estrategias digitales adaptadas a cada cliente. Nuestro equipo de expertos trabaja para impulsar el crecimiento de tu marca con campañas efectivas, gestión de redes sociales y un enfoque centrado en la excelencia.",
         serviceDetails: `
             <div class="service-card">
                 <img src="logo1.png" alt="Marketing & Tecnología">
@@ -124,7 +124,7 @@ const translations = {
         labelCompany: "Empresa:",
         labelProject: "Proyecto:",
         submitContactForm: "Enviar",
-        contactSoon: "Nuestro equipo se pondrá en contacto con usted a la brevedad para discutir los detalles de su proyecto."
+        contactSoon: "Nuestro equipo se pondrá en contacto con usted a la brevedad para discutir los detalles de tu proyecto."
     },
     en: {
         title: "TrendMakers",
@@ -370,4 +370,5 @@ document.addEventListener('DOMContentLoaded', function() {
     const videos = document.querySelectorAll('video');
 
 });
+
 
