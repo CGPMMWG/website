@@ -196,7 +196,7 @@ const translations = {
         labelProblema: "Project:",
         submitButton: "Submit",
         footerText: "&copy; 2023 TrendMakers. All rights reserved.",
-        aboutUsText: "We are a global marketing agency dedicated to providing excellent services to clients all over the world. With a team of experts in various areas of digital marketing, we specialize in creating personalized strategies that cater to the specific needs of each business. Our mission is to drive growth and success for our clients through innovative and effective solutions. From social media management to the development of comprehensive advertising campaigns, we are committed to excellence and customer satisfaction in every project we undertake.",
+        aboutUsText: "As a global agency, we specialize in creating tailored digital strategies for each client. Our team of experts is dedicated to driving your brand’s growth through effective campaigns, social media management, and a commitment to excellence.",
         serviceDetails: `
             <div class="service-card">
                 <img src="logo1.png" alt="Marketing & Technology">
@@ -370,5 +370,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const videos = document.querySelectorAll('video');
 
 });
+
 
 
