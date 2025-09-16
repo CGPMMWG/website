@@ -124,7 +124,7 @@ const translations = {
         labelCompany: "Empresa:",
         labelProject: "Proyecto:",
         submitContactForm: "Enviar",
-        contactSoon: "Nuestro equipo se pondrá en contacto con usted a la brevedad para discutir los detalles de tu proyecto."
+        contactSoon: "Nuestro equipo se pondrá en contacto a la brevedad para discutir los detalles de tu proyecto."
     },
     en: {
         title: "TrendMakers",
@@ -370,6 +370,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const videos = document.querySelectorAll('video');
 
 });
+
 
 
 
