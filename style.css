@@ -210,8 +210,8 @@ nav ul.mobile-menu li {
 }
 
 .service-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: rgba(17, 25, 40, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 10px;
     padding: 5px; /* Reducir el padding para hacer las tarjetas más compactas */
     width: 80px; /* Ajusta el ancho para que las tarjetas sean más pequeñas */
@@ -499,7 +499,7 @@ nav {
     background-color: transparent; /* Fondo transparente */
     padding: 0; /* Eliminar padding adicional */
     transition: transform 0.3s ease; /* Añadir transición suave */
-    border: 1px solid rgb(86, 1, 108); /* Borde temporal para verificar visibilidad */
+    border: none; /* quitar borde morado de test */
 }
 
 
@@ -649,7 +649,6 @@ video-container {
     width: 150px; /* Ajusta el tamaño del logo según sea necesario */
     height: auto;
     margin-bottom: 20px; /* Espacio entre el logo y la selección de idioma */
-    animation: slideInFromRight 1s ease-out;
 }
 
 #title {
@@ -761,19 +760,83 @@ footer {
 }
 
 .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #6a0dad;
-    color: white;
+    /* Layout */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    /* Spacing & shape */
+    padding: 14px 26px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+
+    /* Typography */
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
     text-decoration: none;
-    border-radius: 5px;
+
+    /* Visuals */
+    background: linear-gradient(135deg, #7b2ff7 0%, #6a0dad 45%, #00c3ff 100%);
+    background-size: 200% 200%;
+    background-position: 0% 50%;
+    box-shadow:
+        0 10px 20px rgba(106, 13, 173, 0.25),
+        0 3px 6px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+    /* Interaction */
     cursor: pointer;
-    margin-top: 10px; /* Añadir margen superior para separar los botones */
-    font-size: 1.2em; /* Asegurarse de que el tamaño de la fuente sea consistente */
+    transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease, background-position 400ms ease;
+    will-change: transform, box-shadow, filter;
+    position: relative;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.button::after {
+    /* Subtle gloss highlight */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(120% 60% at 10% 0%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.05) 55%, transparent 70%);
+    pointer-events: none;
+    opacity: 0.75;
+    mix-blend-mode: screen;
 }
 
 .button:hover {
-    background-color: orange; /* Cambiar el color de fondo a naranja al pasar el mouse */
+    transform: translateY(-2px);
+    background-position: 100% 50%;
+    filter: brightness(1.03);
+    box-shadow:
+        0 14px 28px rgba(106, 13, 173, 0.32),
+        0 6px 12px rgba(0, 0, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.button:active {
+    transform: translateY(0) scale(0.985);
+    filter: brightness(0.98);
+    box-shadow:
+        0 6px 14px rgba(106, 13, 173, 0.22),
+        0 2px 6px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.button:focus { outline: none; }
+.button:focus-visible {
+    box-shadow:
+        0 0 0 4px rgba(0, 195, 255, 0.3),
+        0 10px 20px rgba(106, 13, 173, 0.25),
+        0 3px 6px rgba(0, 0, 0, 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .button { transition: none; }
+    .button:hover { transform: none; }
 }
 
 /* Estilos para el Pop-up */
@@ -885,6 +948,59 @@ footer {
     height: 100%;
     object-fit: cover;
 }
+/* ===== Overrides: Floating email/WhatsApp icons (bigger, no contour) ===== */
+.email-button img,
+.whatsapp-button img {
+    height: 56px !important;
+    width: auto !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+.whatsapp-button { border-radius: 0 !important; }
+
+/* WhatsApp: show full logo without cropping; use transparent PNG */
+.whatsapp-button {
+    display: inline-block;
+    overflow: visible !important;     /* no masking */
+    border-radius: 0 !important;      /* keep natural shape */
+    width: auto !important;
+    height: auto !important;
+}
+
+.whatsapp-button img {
+    height: 56px !important;          /* larger but uncropped */
+    width: auto !important;
+    object-fit: contain !important;    /* keep full logo visible */
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* ===== Custom Scrollbar (global) ===== */
+:root {
+    /* Pulgar más púrpura y pista casi negra */
+    --scroll-thumb: rgba(106, 13, 173, 0.85);       /* púrpura fuerte */
+    --scroll-thumb-hover: rgba(106, 13, 173, 1.0);  /* aún más intenso al hover */
+    --scroll-track: rgba(5, 5, 8, 0.9);             /* casi negro translúcido */
+}
+
+/* Firefox */
+html { scrollbar-width: thin; scrollbar-color: var(--scroll-thumb) var(--scroll-track); }
+
+/* WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--scroll-track); }
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+    border-radius: 8px;
+    border: 2px solid transparent; /* crea espacio para que se vea el track */
+    background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover { background-color: var(--scroll-thumb-hover); }
 /* Estilos para la sección de servicios */
 .service-details {
     display: flex;
@@ -895,12 +1011,14 @@ footer {
 }
 
 .service-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: rgba(17, 25, 40, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 10px;
     padding: 5px; /* Reducir el padding para hacer las tarjetas más compactas */
     width: calc(25% - 20px); /* Ajusta el ancho para que quepan cuatro tarjetas en una fila con espacio entre ellas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, height 0.3s;
     text-align: center; /* Centrar el título */
     position: relative; /* Necesario para el contenido interactivo */
@@ -929,12 +1047,16 @@ footer {
 .service-card p {
     font-size: 0.7em; /* Ajustar el tamaño del texto */
     color: #333;
-    display: none; /* Ocultar el texto por defecto */
+    display: block; /* Mantener en el flujo para evitar salto de altura */
+    opacity: 0; /* Oculto sin afectar layout */
+    visibility: hidden;
+    transition: opacity 200ms ease;
     backface-visibility: hidden; /* Ocultar el texto cuando la tarjeta no está girada */
 }
 
 .service-card:hover p {
-    display: block !important; /* Mostrar el texto al pasar el mouse */
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Media Queries para dispositivos móviles */
@@ -1158,7 +1280,12 @@ footer {
 
 .service-card p {
     font-size: 1em;
-    color: #333;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Ajuste final de legibilidad para textos dentro de tarjetas polarizadas */
+.service-card p {
+    color: rgba(255, 255, 255, 0.85) !important;
 }
 
 /* Estilos específicos para la sección "Bienvenidos a TrendMakers" */
@@ -1501,7 +1628,7 @@ body, html {
   padding: 0;
   height: 100%;
   overflow-x: hidden; /* Evita el scroll horizontal */
-  overflow-y: scroll; /* Asegura que siempre haya un scroll vertical */
+  overflow-y: auto; /* Mostrar scroll vertical solo cuando sea necesario */
 }
 
 #video-container {
@@ -1555,3 +1682,25 @@ h1 {
 
 
 
+
+/* ============================
+   Servicios: tarjetas translúcidas oscuras
+   ============================ */
+#servicios .service-card {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+#servicios .service-card h3,
+#servicios .service-card p {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+#servicios .service-card:hover {
+  background: rgba(0, 0, 0, 0.60);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.32);
+}
