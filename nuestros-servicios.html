@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Servicios | TrendMakers</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header_overrides.css">
+    <link rel="stylesheet" href="casos_overrides.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        body.service-detail-page {
+            background: radial-gradient(circle at top, #8a2be2 0%, #4b0082 40%, #230046 100%);
+            color: #f4f2ff;
+        }
+        body.service-detail-page .content {
+            padding-top: 170px; /* deja espacio suficiente bajo el header fijo */
+        }
+        .detail-hero {
+            max-width: 1100px;
+            margin: 0 auto 40px;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .detail-hero h1 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .detail-hero p {
+            font-size: 1.1rem;
+            color: #e8d9ff;
+        }
+        .detail-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            padding: 0 20px 60px;
+        }
+        .detail-card {
+            background: rgba(12, 6, 34, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 20px 45px rgba(8, 0, 26, 0.4);
+            transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+            scroll-margin-top: 220px; /* asegure que los anclajes de tarjetas muestren el encabezado */
+        }
+        .detail-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(187, 134, 252, 0.9);
+            box-shadow: 0 25px 60px rgba(10, 0, 30, 0.55);
+        }
+        .detail-card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #e3c5ff;
+        }
+        .detail-card p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #d9c2ff;
+        }
+        .detail-card ul {
+            margin: 16px 0 0 18px;
+            padding: 0;
+            color: #fdf7ff;
+            font-size: 0.95rem;
+        }
+        .detail-card ul li {
+            margin-bottom: 6px;
+        }
+        .detail-actions {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .detail-actions a {
+            display: inline-block;
+            padding: 14px 26px;
+            border-radius: 30px;
+            background: #ff6ff2;
+            color: #1b012d;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255, 111, 242, 0.45);
+            transition: transform 200ms ease, box-shadow 200ms ease;
+        }
+        .detail-actions a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 32px rgba(255, 111, 242, 0.6);
+        }
+        .detail-back {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 10px 20px 0;
+        }
+        .detail-back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 999px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            box-shadow: 0 12px 25px rgba(7, 0, 28, 0.45);
+            transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+        }
+        .detail-back-button:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.22);
+            border-color: rgba(255, 255, 255, 0.75);
+        }
+        @media (max-width: 768px) {
+            body.service-detail-page .content {
+                padding-top: 130px;
+            }
+            .detail-card {
+                padding: 20px;
+                scroll-margin-top: 140px;
+            }
+        }
+    </style>
+</head>
+<body class="service-detail-page">
+    <div class="content">
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/company/trendmakersagency" class="linkedin-button" target="_blank">
+                    <img src="Linkedinlogo.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" class="instagram-button" target="_blank">
+                    <img src="INSTAGRAMLOGO.PNG" alt="Instagram">
+                </a>
+            </div>
+            <ul class="desktop-menu">
+                <li><a href="index.html#inicio" class="menu-item">Inicio</a></li>
+                <li><a href="index.html#servicios" class="menu-item">Nuestros Servicios</a></li>
+                <li><a href="index.html#problema" class="menu-item">Contanos tu Proyecto</a></li>
+                <li><a href="index.html#equipo" class="menu-item">Nuestro Equipo</a></li>
+                <li><a href="index.html#acerca" class="menu-item">¿Por qué elegirnos?</a></li>
+                <li><a href="index.html#casos-exito" class="menu-item">Casos de éxito</a></li>
+                <li><a href="index.html#contact-form" class="menu-item">Agenda una Llamada</a></li>
+            </ul>
+            <div class="nav-lang">
+                <div class="language-selector" aria-label="Selector de idioma">
+                    <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
+                        <img src="IDIOMA.PNG" alt="Idioma">
+                    </button>
+                    <div class="lang-menu" role="menu" aria-label="Idiomas">
+                        <button class="lang-option" role="menuitem" data-lang="es">Español</button>
+                        <button class="lang-option" role="menuitem" data-lang="en">English</button>
+                    </div>
+                </div>
+            </div>
+            <ul class="mobile-menu">
+                <li><a href="index.html#inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="index.html#servicios" class="menu-item" onclick="closeMenu()">Nuestros Servicios</a></li>
+                <li><a href="index.html#problema" class="menu-item" onclick="closeMenu()">Contanos tu Proyecto</a></li>
+                <li><a href="index.html#equipo" class="menu-item" onclick="closeMenu()">Nuestro Equipo</a></li>
+                <li><a href="index.html#acerca" class="menu-item" onclick="closeMenu()">¿Por qué elegirnos?</a></li>
+                <li><a href="index.html#casos-exito" class="menu-item" onclick="closeMenu()">Casos de éxito</a></li>
+                <li><a href="index.html#contact-form" class="menu-item" onclick="closeMenu()">Agenda una Llamada</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="detail-back">
+                <a class="detail-back-button" href="index.html#problema">&larr; Volver</a>
+            </div>
+            <section class="detail-hero">
+                <h1 id="detail-hero-title">Nuestros Servicios en Detalle</h1>
+                <p id="detail-hero-text">Explorá cada solución con la que ayudamos a acelerar los resultados de tu negocio. Esta página solo se abre desde las tarjetas para que te concentres en la propuesta que más te interese.</p>
+            </section>
+
+            <section class="detail-grid">
+                <article id="marketing-tecnologia" class="detail-card">
+                    <h2>Marketing & Tecnología</h2>
+                    <p>Alineamos tus objetivos comerciales con arquitecturas tecnológicas que permiten automatizar campañas, nutrir leads y medir resultados en tiempo real.</p>
+                    <ul>
+                        <li>Implementación de stacks MarTech y automatizaciones.</li>
+                        <li>Integraciones con CRM y orquestadores de journeys.</li>
+                        <li>Dashboards personalizados para dirección y operación.</li>
+                    </ul>
+                </article>
+                <article id="leads" class="detail-card">
+                    <h2>Generación de Leads</h2>
+                    <p>Diseñamos funnels que atraen prospectos calificados para SaaS y empresas de servicios, desde la segmentación hasta la conexión con tu equipo de ventas.</p>
+                    <ul>
+                        <li>Campañas full-funnel en redes, buscadores y outbound.</li>
+                        <li>Lead scoring y ruteo inteligente.</li>
+                        <li>Optimización semanal con foco en CPL y LTV.</li>
+                    </ul>
+                </article>
+                <article id="ia" class="detail-card">
+                    <h2>ChatGPT & IA Aplicada</h2>
+                    <p>Formamos a tus equipos para incorporar IA generativa en marketing, ventas y operaciones, creando asistentes y flujos que escalan la productividad.</p>
+                    <ul>
+                        <li>Talleres y playbooks a medida.</li>
+                        <li>Automatización de respuestas y contenido.</li>
+                        <li>Diseño de copilotos internos según rol.</li>
+                    </ul>
+                </article>
+                <article id="diseno" class="detail-card">
+                    <h2>Diseño & Comunicación</h2>
+                    <p>Construimos identidades visuales y experiencias digitales coherentes en cada punto de contacto para reforzar la percepción de tu marca.</p>
+                    <ul>
+                        <li>Branding, guidelines y kits para redes sociales.</li>
+                        <li>Maquetado de landing pages y newsletters.</li>
+                        <li>Gestión integral de comunidades.</li>
+                    </ul>
+                </article>
+                <article id="ecommerce" class="detail-card">
+                    <h2>E-Commerce</h2>
+                    <p>Operamos tiendas propias y acompañamos la tuya end-to-end, desde la plataforma y catálogo hasta la logística y el growth.</p>
+                    <ul>
+                        <li>Selección e implementación de plataformas (Shopify, VTEX, WooCommerce).</li>
+                        <li>Optimización de conversiones y retención.</li>
+                        <li>Automatización de fulfillment y reporting.</li>
+                    </ul>
+                </article>
+                <article id="consultoria" class="detail-card">
+                    <h2>Consultoría</h2>
+                    <p>Te ayudamos a priorizar proyectos digitales y tecnológicos, definiendo roadmaps ejecutables y acompañando la implementación.</p>
+                    <ul>
+                        <li>Auditorías de marketing y tecnología.</li>
+                        <li>Definición de KPIs y modelos de gobernanza.</li>
+                        <li>Soporte de PMO para despliegues críticos.</li>
+                    </ul>
+                </article>
+                <article id="datos" class="detail-card">
+                    <h2>Datos & Analítica</h2>
+                    <p>Convertimos datos dispersos en tableros accionables que habilitan decisiones rápidas y detectan oportunidades antes que la competencia.</p>
+                    <ul>
+                        <li>Modelos de atribución y medición avanzada.</li>
+                        <li>Automatización de ETL y monitoreo.</li>
+                        <li>Insights accionables para marketing y ventas.</li>
+                    </ul>
+                </article>
+                <article id="estudios" class="detail-card">
+                    <h2>Estudios de Mercado</h2>
+                    <p>Investigamos audiencias, hábitos y categorías para que puedas lanzar productos con menor riesgo y mensajes más relevantes.</p>
+                    <ul>
+                        <li>Research cuantitativo y cualitativo.</li>
+                        <li>Mapeo de competencia y oportunidades.</li>
+                        <li>Perfiles accionables para campañas.</li>
+                    </ul>
+                </article>
+                <article id="desarrollo" class="detail-card">
+                    <h2>Desarrollo Web</h2>
+                    <p>Diseñamos y desarrollamos sitios de alto rendimiento, seguros y escalables, listos para integrarse a tu ecosistema digital.</p>
+                    <ul>
+                        <li>Websites corporativos y landing pages.</li>
+                        <li>Portales y herramientas internas.</li>
+                        <li>Testing, performance y accesibilidad continua.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <div class="detail-actions">
+                <a href="index.html#problema" id="detail-back-link">Volver a las tarjetas</a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Botones flotantes visibles también en esta sección -->
+    <a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20más%20información." class="whatsapp-button" target="_blank" aria-label="Escribinos por WhatsApp">
+        <img src="WPP.PNG" alt="WhatsApp">
+    </a>
+    <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank" aria-label="Escribinos por mail">
+        <img src="EMAIL.jpg" alt="Email">
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('nav ul.mobile-menu');
+            if (!hamburger || !mobileMenu) return;
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+        function closeMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('nav ul.mobile-menu');
+            if (!hamburger || !mobileMenu) return;
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
