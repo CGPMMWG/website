@@ -4,6 +4,7 @@ function updateSuccessCards() {
   try {
     var c1 = document.getElementById('success-case1');
     var c2 = document.getElementById('success-case2');
+    var c3 = document.getElementById('success-case3');
     if (c1) {
       var t1 = document.querySelectorAll('.success-content[data-key="success-case1"]');
       t1.forEach(function(n){ n.innerHTML = c1.innerHTML; });
@@ -11,6 +12,10 @@ function updateSuccessCards() {
     if (c2) {
       var t2 = document.querySelectorAll('.success-content[data-key="success-case2"]');
       t2.forEach(function(n){ n.innerHTML = c2.innerHTML; });
+    }
+    if (c3) {
+      var t3 = document.querySelectorAll('.success-content[data-key="success-case3"]');
+      t3.forEach(function(n){ n.innerHTML = c3.innerHTML; });
     }
   } catch (e) {}
 }
@@ -29,10 +34,12 @@ function applySuccessTranslations(lang) {
       var si = document.getElementById('success-intro');
       var sc1 = document.getElementById('success-case1');
       var sc2 = document.getElementById('success-case2');
+      var sc3 = document.getElementById('success-case3');
       if (st && t.successtitle) st.innerHTML = t.successtitle;
       if (si && t.successIntro) si.innerHTML = t.successIntro;
       if (sc1 && t.successCase1) sc1.innerHTML = t.successCase1;
       if (sc2 && t.successCase2) sc2.innerHTML = t.successCase2;
+      if (sc3 && t.successCase3) sc3.innerHTML = t.successCase3;
     } else {
       if (lang === 'en') {
         var stE = document.getElementById('success-title');
@@ -50,17 +57,15 @@ function applySuccessTranslations(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-  // Flip interaction (click and keyboard)
-  var cards = document.querySelectorAll('.flip-card');
+  var cards = document.querySelectorAll('.flip-card[href]');
   cards.forEach(function(card){
-    var toggle = function(){ card.classList.toggle('is-flipped'); };
-    card.addEventListener('click', toggle);
     card.addEventListener('keydown', function(e){
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      if (e.key === ' ') {
+        e.preventDefault();
+        card.click();
+      }
     });
   });
-
-  // Inicializar contenido y hint (ES por defecto)
   applySuccessTranslations('es');
 });
 
