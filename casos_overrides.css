@@ -1,0 +1,327 @@
+/* Casos de Éxito: usar fondo degradado violeta oscuro y quitar video */
+#casos-exito .video-container { position: static !important; width: 100% !important; height: auto !important; min-height: 0 !important; overflow: visible !important; inset: auto !important; }
+#casos-exito .video-container video { display: none !important; }
+
+/* Fondo en la sección (como Servicios) para que no se corte en pantallas chicas */
+#casos-exito {
+  background:
+    radial-gradient(900px 900px at 10% 10%, rgba(236,72,153,0.10), transparent 40%),
+    radial-gradient(900px 900px at 90% 20%, rgba(59,130,246,0.08), transparent 45%),
+    linear-gradient(135deg, #1b0b2e 0%, #34105a 50%, #4c1d95 100%) !important;
+}
+
+/* Overlay transparente y en flujo normal para que crezca con el contenido */
+#casos-exito .overlay {
+  position: relative !important;
+  background: transparent !important;
+  height: auto !important;
+  min-height: 0 !important;
+  width: 100% !important;
+  display: block !important;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: clamp(32px, 6vw, 72px) clamp(14px, 3.2vw, 24px) clamp(64px, 6vw, 96px);
+}
+
+/* Contenido con ancho máximo cómodo */
+#casos-exito .intro {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  padding: 0 clamp(12px, 3vw, 28px);
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  backdrop-filter: none !important;
+}
+
+/* Centrado real de grid y títulos, con relleno simétrico */
+#casos-exito .intro,
+#casos-exito .flip-grid {
+  width: 100% !important;
+  max-width: 1100px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(12px, 2.4vw, 24px) !important;
+  padding-right: clamp(12px, 2.4vw, 24px) !important;
+  box-sizing: border-box;
+}
+
+/* Asegurar que cada tarjeta se estire al ancho disponible del grid */
+#casos-exito .flip-card { width: 100% !important; justify-self: stretch; }
+#casos-exito .flip-cta { display: block !important; }
+
+@media (max-width: 768px) {
+  #casos-exito { scroll-margin-top: 80px; }
+  /* Un poco más de padding derecho para no chocar con íconos flotantes */
+  #casos-exito .overlay { padding-right: clamp(18px, 4vw, 28px); }
+}
+
+/* --- Detalle extendido de casos --- */
+.case-detail-stage {
+  margin-top: clamp(32px, 5vw, 72px);
+  padding: clamp(28px, 4vw, 56px) clamp(24px, 5vw, 72px) clamp(40px, 5vw, 88px);
+  background: #030303;
+  color: #f7f8ff;
+  border-radius: 36px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 30px 80px rgba(2,1,12,0.65);
+  position: relative;
+  overflow: hidden;
+}
+.case-detail-stage[data-state="idle"] {
+  display: none;
+}
+
+.case-detail-stage::before,
+.case-detail-stage::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 60% 40% 65% 35%;
+  opacity: 0.22;
+  pointer-events: none;
+}
+.case-detail-stage::before {
+  top: -140px;
+  right: -90px;
+  transform: rotate(18deg);
+}
+.case-detail-stage::after {
+  bottom: -160px;
+  left: -110px;
+  transform: rotate(-12deg);
+}
+
+.case-detail-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto clamp(32px, 4vw, 48px);
+}
+.case-eyebrow {
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: #bfbfff;
+  margin-bottom: 12px;
+}
+.case-detail-header h3 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+.case-detail-header p {
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+}
+
+.case-detail-grid {
+  position: relative;
+}
+
+.case-detail-card {
+  display: none;
+  gap: clamp(20px, 3vw, 36px);
+  padding: clamp(24px, 3vw, 40px);
+  border-radius: 28px;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.08), rgba(0,0,0,0.2)) #020202;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+}
+
+.case-detail-card.is-active {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  animation: caseDetailIn 0.7s ease forwards;
+}
+
+.case-detail-hero {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.case-detail-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  padding: 8px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.case-hook {
+  font-size: 0.95rem;
+  color: #9faefd;
+  margin-bottom: 6px;
+}
+.case-detail-card h4 {
+  font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+  margin: 0;
+}
+.case-detail-copy {
+  color: rgba(255,255,255,0.92);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.case-detail-stats {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+.case-detail-stats li {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 14px 18px;
+  font-size: 0.95rem;
+}
+.case-detail-stats span {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+.case-detail-stats p {
+  margin: 6px 0 0;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.78);
+}
+.case-detail-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: rgba(255,255,255,0.72);
+}
+.case-detail-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.8);
+  color: #0b0b0b;
+  background: linear-gradient(120deg, #ffffff, #b1b8ff);
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(177,184,255,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.case-detail-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(177,184,255,0.35);
+}
+
+@keyframes caseDetailIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1024px) {
+  .case-detail-card.is-active {
+    grid-template-columns: 1fr;
+  }
+  .case-detail-stats {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .case-detail-stage {
+    padding: 24px 18px 38px;
+    border-radius: 24px;
+  }
+  .case-detail-header {
+    text-align: left;
+  }
+  .case-detail-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .case-detail-logo {
+    width: 56px;
+    height: 56px;
+  }
+  .case-detail-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Standalone case detail page */
+body.case-detail-page {
+  background: #020202;
+  color: #f9f8ff;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.case-detail-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(32px, 5vw, 64px) clamp(18px, 4vw, 48px) 96px;
+}
+
+.case-detail-top {
+  text-align: center;
+  margin-bottom: clamp(32px, 4vw, 56px);
+}
+
+.case-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 6px 0 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  margin-top: clamp(28px, 6vh, 60px);
+  margin-bottom: 24px;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+.case-back-link::before {
+  content: '←';
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+.case-back-link:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.case-detail-top h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 12px 0;
+}
+.case-detail-top p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.6;
+}
+
+.case-detail-stage.single .case-detail-grid {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.case-detail-stage.single .case-detail-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+}
+
+@media (max-width: 960px) {
+  .case-detail-stage.single .case-detail-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Acelerar animaci�n de aparici�n en las cards de Casos de �xito */
+#casos-exito .animate__animated {
+  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
+  animation-duration: 0.45s !important;
+}
