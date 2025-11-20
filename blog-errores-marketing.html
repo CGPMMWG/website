@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 errores de marketing que bloquean el crecimiento | TrendMakers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header_overrides.css">
+    <style>
+        body.blog-article {
+            margin: 0;
+            background:
+              radial-gradient(900px 900px at 10% 10%, rgba(236,72,153,0.10), transparent 40%),
+              radial-gradient(900px 900px at 90% 20%, rgba(59,130,246,0.08), transparent 45%),
+              linear-gradient(135deg, #100720 0%, #1b0b2e 45%, #2c0f52 100%);
+            color: #f7f7ff;
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+        .article-shell {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: clamp(110px, 12vw, 140px) clamp(18px, 4vw, 36px) 96px;
+        }
+        .article-hero {
+            display: grid;
+            gap: 18px;
+            text-align: left;
+            margin-bottom: clamp(24px, 5vw, 40px);
+        }
+        .back-link {
+            color: rgba(255,255,255,0.82);
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .back-link::before { content: "←"; font-size: 1rem; }
+        .article-meta {
+            color: rgba(255,255,255,0.72);
+            font-size: 0.98rem;
+        }
+        .article-hero h1 {
+            margin: 6px 0 10px;
+            font-size: clamp(1.9rem, 1.4rem + 1.2vw, 2.6rem);
+            line-height: 1.2;
+        }
+        .article-image {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 22px 60px rgba(0,0,0,0.35);
+            margin: 10px 0 26px;
+        }
+        .article-image img { width: 100%; display: block; object-fit: cover; }
+        .lead {
+            font-size: 1.08rem;
+            line-height: 1.65;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 12px;
+        }
+        .article-section {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 18px;
+            padding: clamp(16px, 4vw, 22px);
+            margin-bottom: 16px;
+            box-shadow: 0 14px 40px rgba(0,0,0,0.25);
+        }
+        .article-section h2 {
+            margin: 0 0 10px;
+            font-size: clamp(1.15rem, 1rem + 0.4vw, 1.5rem);
+            color: #ffffff;
+        }
+        .article-section p {
+            margin: 0 0 10px;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.88);
+        }
+        .article-section ul {
+            padding-left: 18px;
+            margin: 0 0 6px;
+            color: rgba(255,255,255,0.88);
+        }
+        .article-section li { margin-bottom: 6px; }
+        .article-cta {
+            margin-top: 28px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            background: linear-gradient(120deg, #7b2ff7 0%, #6a0dad 45%, #00c3ff 100%);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 18px 36px rgba(0,0,0,0.3);
+        }
+        .article-cta:hover { transform: translateY(-1px); }
+        @media (max-width: 640px) {
+            .article-shell { padding: 110px 14px 72px; }
+            .article-hero h1 { font-size: 1.8rem; }
+            .article-section { padding: 14px; }
+        }
+    </style>
+</head>
+<body class="blog-article">
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="social-buttons">
+            <a href="https://www.linkedin.com/company/trendmakersagency" class="linkedin-button" target="_blank">
+                <img src="Linkedinlogo.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" class="instagram-button" target="_blank">
+                <img src="INSTAGRAMLOGO.PNG" alt="Instagram">
+            </a>
+        </div>
+        <ul class="desktop-menu">
+            <li><a href="index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
+            <li><a href="index.html#servicios" id="nav-servicios" class="menu-item">Nuestros Servicios</a></li>
+            <li><a href="index.html#acerca" id="nav-acerca" class="menu-item">¿Por qué elegirnos?</a></li>
+            <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de éxito</a></li>
+            <li><a href="index.html#blog" class="menu-item">Blog</a></li>
+            <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item">Agenda una Llamada</a></li>
+        </ul>
+        <div class="nav-lang">
+            <div class="language-selector" aria-label="Selector de idioma">
+                <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
+                    <img src="IDIOMA.PNG" alt="Idioma">
+                </button>
+                <div class="lang-menu" role="menu" aria-label="Idiomas">
+                    <button class="lang-option" role="menuitem" data-lang="es">Español</button>
+                    <button class="lang-option" role="menuitem" data-lang="en">English</button>
+                </div>
+            </div>
+        </div>
+        <ul class="mobile-menu">
+            <li><a href="index.html#inicio" id="nav-inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
+            <li><a href="index.html#servicios" id="nav-servicios" class="menu-item" onclick="closeMenu()">Nuestros Servicios</a></li>
+            <li><a href="index.html#acerca" id="nav-acerca" class="menu-item" onclick="closeMenu()">¿Por qué elegirnos?</a></li>
+            <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de éxito</a></li>
+            <li><a href="index.html#blog" class="menu-item" onclick="closeMenu()">Blog</a></li>
+            <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item" onclick="closeMenu()">Agenda una Llamada</a></li>
+        </ul>
+    </nav>
+
+    <main class="article-shell">
+        <div class="article-hero">
+            <a class="back-link" id="blog-back" href="index.html#blog">Volver al blog</a>
+            <h1 id="article-title">9 errores de marketing que bloquean el crecimiento de cualquier negocio (y cómo evitarlos)</h1>
+            <p class="article-meta" id="article-meta">Por TrendMakers — Marketing, Datos &amp; Automatización · 19/11/2025</p>
+            <p class="lead" id="lead-1">En un mercado donde todas las marcas publican, diseñan, suben historias y hacen ads, la diferencia real no está en hacer más, sino en hacer mejor.</p>
+            <p class="lead" id="lead-2">La mayoría de las PYMES no crece por falta de esfuerzo, sino por decisiones de marketing que las frenan sin que se den cuenta.</p>
+            <p class="lead" id="lead-3">En TrendMakers recopilamos los nueve errores más comunes que vemos en negocios de todos los tamaños —desde pequeñas marcas hasta empresas establecidas— y te mostramos cómo evitarlos para acelerar tu crecimiento.</p>
+        </div>
+
+        <div class="article-image">
+            <img src="BLOG1.jpg" alt="9 errores de marketing que frenan a cualquier negocio">
+        </div>
+
+        <section class="article-section" id="section-1">
+            <h2 id="s1-title">1. No tener una identidad visual clara y consistente</h2>
+            <p id="s1-desc">Un problema clásico: cada post parece diseñado por una persona diferente. Colores diferentes, tipografías aleatorias, estilos que cambian. Esto genera falta de profesionalismo y dificulta que el usuario recuerde tu marca.</p>
+            <p id="s1-how"><strong>Cómo evitarlo:</strong></p>
+            <ul id="s1-list">
+                <li>Definí tu paleta de colores.</li>
+                <li>Usá 1 tipografía para títulos y 1 para textos.</li>
+                <li>Creá un sistema de diseño repetible.</li>
+            </ul>
+        </section>
+
+        <section class="article-section" id="section-2">
+            <h2 id="s2-title">2. Publicar sin una estrategia</h2>
+            <p id="s2-desc">Mucha gente sube contenido “porque toca”, pero sin objetivo. El resultado: nada crece.</p>
+            <p id="s2-how"><strong>Cómo evitarlo:</strong></p>
+            <ul id="s2-list">
+                <li>Publicá con una intención clara: vender, educar o generar autoridad.</li>
+                <li>Usá un calendario de contenido estratégico.</li>
+                <li>Medí lo que funciona y descartá lo que no.</li>
+            </ul>
+        </section>
+
+        <section class="article-section" id="section-3">
+            <h2 id="s3-title">3. No optimizar el sitio web para convertir</h2>
+            <p id="s3-desc">Un sitio lindo no sirve si no vende. El error más común es tener una web estética pero sin CTA claros, sin estructura ni mensajes que comuniquen valor.</p>
+            <p id="s3-how"><strong>Cómo evitarlo:</strong></p>
+            <ul id="s3-list">
+                <li>Hero con propuesta de valor.</li>
+                <li>CTA visibles (WhatsApp, contacto, reservar).</li>
+                <li>Secciones claras: servicios, casos de éxito, por qué elegirte, blog.</li>
+            </ul>
+        </section>
+
+        <section class="article-section" id="section-4">
+            <h2 id="s4-title">4. No invertir en anuncios (o invertir mal)</h2>
+            <p id="s4-desc">Muchas marcas esperan crecer orgánicamente… pero la realidad es que el orgánico tiene límites. Otras invierten, pero sin segmentación, sin estrategia y sin analítica.</p>
+            <p id="s4-how"><strong>Cómo evitarlo:</strong></p>
+            <ul id="s4-list">
+                <li>Usá campañas simples pero efectivas.</li>
+                <li>Verificá los datos antes de duplicar presupuesto.</li>
+                <li>No hagas 10 audiencias; hacé 2 buenas.</li>
+            </ul>
+        </section>
+
+        <section class="article-section" id="section-5">
+            <h2 id="s5-title">5. Falta de seguimiento de leads</h2>
+            <p id="s5-desc">El 80% de los leads se pierden por no responder rápido o no tener un sistema automatizado.</p>
+            <p id="s5-how"><strong>Cómo evitarlo:</strong></p>
+            <ul id="s5-list">
+                <li>Automatizá respuestas (bots + email).</li>
+                <li>Centralizá todos los mensajes.</li>
+                <li>Respuesta en menos de 5 minutos = 3× más ventas.</li>
+            </ul>
+        </section>
+
+        <section class="article-section" id="section-6">
+            <h2 id="s6-title">6. No usar datos para decidir</h2>
+            <p id="s6-desc">Muchos negocios “adivinan” su estrategia. Pero sin métricas, no hay crecimiento real.</p>
+            <p id="s6-how"><strong>Cómo evitarlo:</strong></p>
+            <ul id="s6-list">
+                <li>Medí alcance, CTR, leads, costo por adquisición.</li>
+                <li>Hacé reportes mensuales.</li>
+                <li>Identificá qué canal te genera más ventas reales.</li>
+            </ul>
+        </section>
+
+        <section class="article-section" id="section-7">
+            <h2 id="s7-title">7. No mostrar pruebas reales</h2>
+            <p id="s7-desc">Si no mostrás resultados, reviews, testimonios o casos de éxito, la gente no confía.</p>
+            <p id="s7-how"><strong>Cómo evitarlo:</strong></p>
+            <ul id="s7-list">
+                <li>Agregá screenshots de resultados.</li>
+                <li>Mostrá casos reales (como los tuyos: Letratec, ProntoLED, etc.).</li>
+                <li>Usá frases de clientes satisfechos.</li>
+            </ul>
+        </section>
+
+        <section class="article-section" id="section-8">
+            <h2 id="s8-title">8. No tener diferenciadores claros</h2>
+            <p id="s8-desc">Si tu agencia, tu marca o tu negocio suena igual que todos, te volvés reemplazable.</p>
+            <p id="s8-how"><strong>Cómo evitarlo:</strong></p>
+            <ul id="s8-list">
+                <li>Definí 3 pilares diferenciales.</li>
+                <li>Mostralos siempre en tu web y contenido.</li>
+                <li>Especializate en algo (datos, automatización, branding, etc.).</li>
+            </ul>
+        </section>
+
+        <section class="article-section" id="section-9">
+            <h2 id="s9-title">9. Pensar en marketing como un gasto y no como una inversión</h2>
+            <p id="s9-desc">Las marcas que más crecen son las que entienden esto: cuando invertís en marketing, crece tu negocio.</p>
+            <p id="s9-how"><strong>Cómo evitarlo:</strong></p>
+            <ul id="s9-list">
+                <li>Plan anual.</li>
+                <li>Presupuesto mensual.</li>
+                <li>Objetivos claros trimestrales.</li>
+            </ul>
+        </section>
+
+        <section class="article-section" id="section-conclusion">
+            <h2 id="conclusion-title">Conclusión</h2>
+            <p id="conclusion-desc1">El marketing dejó de ser “subir fotos” y se convirtió en una combinación de estrategia, datos, automatización y diseño.</p>
+            <p id="conclusion-desc2">Evitar estos nueve errores puede significar la diferencia entre estancarte o crecer 2× más rápido.</p>
+        </section>
+
+        <a class="article-cta" id="article-cta" href="index.html#contact-form">Hablemos de tu estrategia</a>
+    </main>
+    <script>
+      (function(){
+        const copy = {
+          es: {
+            nav: {
+              inicio: "Inicio",
+              servicios: "Nuestros Servicios",
+              acerca: "¿Por qué elegirnos?",
+              casos: "Casos de éxito",
+              contacto: "Agenda una Llamada",
+              blog: "Blog"
+            },
+            back: "Volver al blog",
+            title: "9 errores de marketing que bloquean el crecimiento de cualquier negocio (y cómo evitarlos)",
+            meta: "Por TrendMakers — Marketing, Datos & Automatización · 19/11/2025",
+            lead1: "En un mercado donde todas las marcas publican, diseñan, suben historias y hacen ads, la diferencia real no está en hacer más, sino en hacer mejor.",
+            lead2: "La mayoría de las PYMES no crece por falta de esfuerzo, sino por decisiones de marketing que las frenan sin que se den cuenta.",
+            lead3: "En TrendMakers recopilamos los nueve errores más comunes que vemos en negocios de todos los tamaños —desde pequeñas marcas hasta empresas establecidas— y te mostramos cómo evitarlos para acelerar tu crecimiento.",
+            sections: [
+              { title: "1. No tener una identidad visual clara y consistente", desc: "Un problema clásico: cada post parece diseñado por una persona diferente. Colores diferentes, tipografías aleatorias, estilos que cambian. Esto genera falta de profesionalismo y dificulta que el usuario recuerde tu marca.", how: "<strong>Cómo evitarlo:</strong>", list: ["Definí tu paleta de colores.", "Usá 1 tipografía para títulos y 1 para textos.", "Creá un sistema de diseño repetible."] },
+              { title: "2. Publicar sin una estrategia", desc: "Mucha gente sube contenido “porque toca”, pero sin objetivo. El resultado: nada crece.", how: "<strong>Cómo evitarlo:</strong>", list: ["Publicá con una intención clara: vender, educar o generar autoridad.", "Usá un calendario de contenido estratégico.", "Medí lo que funciona y descartá lo que no."] },
+              { title: "3. No optimizar el sitio web para convertir", desc: "Un sitio lindo no sirve si no vende. El error más común es tener una web estética pero sin CTA claros, sin estructura ni mensajes que comuniquen valor.", how: "<strong>Cómo evitarlo:</strong>", list: ["Hero con propuesta de valor.", "CTA visibles (WhatsApp, contacto, reservar).", "Secciones claras: servicios, casos de éxito, por qué elegirte, blog."] },
+              { title: "4. No invertir en anuncios (o invertir mal)", desc: "Muchas marcas esperan crecer orgánicamente… pero la realidad es que el orgánico tiene límites. Otras invierten, pero sin segmentación, sin estrategia y sin analítica.", how: "<strong>Cómo evitarlo:</strong>", list: ["Usá campañas simples pero efectivas.", "Verificá los datos antes de duplicar presupuesto.", "No hagas 10 audiencias; hacé 2 buenas."] },
+              { title: "5. Falta de seguimiento de leads", desc: "El 80% de los leads se pierden por no responder rápido o no tener un sistema automatizado.", how: "<strong>Cómo evitarlo:</strong>", list: ["Automatizá respuestas (bots + email).", "Centralizá todos los mensajes.", "Respuesta en menos de 5 minutos = 3× más ventas."] },
+              { title: "6. No usar datos para decidir", desc: "Muchos negocios “adivinan” su estrategia. Pero sin métricas, no hay crecimiento real.", how: "<strong>Cómo evitarlo:</strong>", list: ["Medí alcance, CTR, leads, costo por adquisición.", "Hacé reportes mensuales.", "Identificá qué canal te genera más ventas reales."] },
+              { title: "7. No mostrar pruebas reales", desc: "Si no mostrás resultados, reviews, testimonios o casos de éxito, la gente no confía.", how: "<strong>Cómo evitarlo:</strong>", list: ["Agregá screenshots de resultados.", "Mostrá casos reales (como los tuyos: Letratec, ProntoLED, etc.).", "Usá frases de clientes satisfechos."] },
+              { title: "8. No tener diferenciadores claros", desc: "Si tu agencia, tu marca o tu negocio suena igual que todos, te volvés reemplazable.", how: "<strong>Cómo evitarlo:</strong>", list: ["Definí 3 pilares diferenciales.", "Mostralos siempre en tu web y contenido.", "Especializate en algo (datos, automatización, branding, etc.)."] },
+              { title: "9. Pensar en marketing como un gasto y no como una inversión", desc: "Las marcas que más crecen son las que entienden esto: cuando invertís en marketing, crece tu negocio.", how: "<strong>Cómo evitarlo:</strong>", list: ["Plan anual.", "Presupuesto mensual.", "Objetivos claros trimestrales."] }
+            ],
+            conclusionTitle: "Conclusión",
+            conclusion1: "El marketing dejó de ser “subir fotos” y se convirtió en una combinación de estrategia, datos, automatización y diseño.",
+            conclusion2: "Evitar estos nueve errores puede significar la diferencia entre estancarte o crecer 2× más rápido.",
+            cta: "Hablemos de tu estrategia"
+          },
+          en: {
+            nav: {
+              inicio: "Home",
+              servicios: "Our Services",
+              acerca: "Why choose us?",
+              casos: "Success Stories",
+              contacto: "Schedule a Call",
+              blog: "Blog"
+            },
+            back: "Back to blog",
+            title: "9 Marketing Mistakes That Block Business Growth (and How to Avoid Them)",
+            meta: "By TrendMakers — Marketing, Data & Automation · 11/19/2025",
+            lead1: "In a market where every brand posts, designs, uploads stories, and runs ads, the real difference isn’t doing more — it’s doing better.",
+            lead2: "Most small businesses don’t fail because of a lack of effort, but because of marketing decisions that unknowingly slow them down.",
+            lead3: "At TrendMakers, we’ve gathered the nine most common mistakes we see across businesses of all sizes — from small brands to established companies — and how to avoid them to accelerate growth.",
+            sections: [
+              { title: "1. Not Having a Clear and Consistent Visual Identity", desc: "A classic problem: every post looks like it was designed by a different person. Different colors, random fonts, shifting styles. This creates a lack of professionalism and makes it harder for users to remember your brand.", how: "<strong>How to avoid it:</strong>", list: ["Define your color palette.", "Use one font for titles and one for body text.", "Create a repeatable design system."] },
+              { title: "2. Posting Without a Strategy", desc: "Many businesses publish content “because it’s time to post,” but with no specific goal. The result: nothing grows.", how: "<strong>How to avoid it:</strong>", list: ["Publish with a clear intention: sell, educate, or build authority.", "Use a strategic content calendar.", "Measure what works and eliminate what doesn’t."] },
+              { title: "3. Not Optimizing the Website for Conversions", desc: "A pretty website is useless if it doesn’t sell. The most common mistake is having a visually appealing site with no clear CTAs, no structure, and no messaging that communicates real value.", how: "<strong>How to avoid it:</strong>", list: ["A hero section with a strong value proposition.", "Visible CTAs (WhatsApp, booking, contact).", "Clear sections: services, case studies, why choose you, blog."] },
+              { title: "4. Not Investing in Ads (or Investing Poorly)", desc: "Many brands expect to grow organically… but organic reach has limits. Others invest in ads, but with poor segmentation, no strategy, and no analytics.", how: "<strong>How to avoid it:</strong>", list: ["Run simple but effective campaigns.", "Look at real data before scaling budgets.", "Instead of 10 audiences, create 2 strong ones."] },
+              { title: "5. Poor Lead Follow-Up", desc: "80% of leads are lost due to slow responses or the absence of an automated system.", how: "<strong>How to avoid it:</strong>", list: ["Automate replies (chatbots + email).", "Centralize all messages.", "Responding within 5 minutes = 3× more sales."] },
+              { title: "6. Not Using Data to Make Decisions", desc: "Many businesses rely on guesswork. But without metrics, real growth is impossible.", how: "<strong>How to avoid it:</strong>", list: ["Track reach, CTR, leads, and cost per acquisition.", "Create monthly reports.", "Identify which channel brings real revenue."] },
+              { title: "7. Not Showing Real Proof", desc: "If you don’t show results, reviews, testimonials, or case studies, people simply don’t trust you.", how: "<strong>How to avoid it:</strong>", list: ["Add screenshot proof.", "Show real case studies (like yours: Letratec, ProntoLED, etc.).", "Use quotes from satisfied clients."] },
+              { title: "8. Not Having Clear Differentiators", desc: "If your agency, brand, or business sounds like everyone else, you become replaceable.", how: "<strong>How to avoid it:</strong>", list: ["Define three core differentiators.", "Showcase them on your website and in your content.", "Specialize in something (data, automation, branding, etc.)."] },
+              { title: "9. Treating Marketing as an Expense Instead of an Investment", desc: "The businesses that grow the most understand this: when you invest in marketing, your business grows.", how: "<strong>How to avoid it:</strong>", list: ["Build an annual plan.", "Set a monthly budget.", "Define quarterly goals."] }
+            ],
+            conclusionTitle: "Conclusion",
+            conclusion1: "Marketing stopped being “posting photos” and evolved into a combination of strategy, data, automation, and great design.",
+            conclusion2: "Avoiding these nine mistakes can be the difference between staying stuck or growing 2× faster.",
+            cta: "Let’s talk about your strategy"
+          }
+        };
+        const set = (id,val)=>{ const el=document.getElementById(id); if(el&&val!==undefined) el.innerHTML=val; };
+        function apply(lang){
+          const t = copy[lang] || copy.es;
+          set('blog-back', t.back);
+          set('article-title', t.title);
+          set('article-meta', t.meta);
+          set('lead-1', t.lead1);
+          set('lead-2', t.lead2);
+          set('lead-3', t.lead3);
+          t.sections.forEach((s, idx)=>{
+            const n = idx+1;
+            set('s'+n+'-title', s.title);
+            set('s'+n+'-desc', s.desc);
+            set('s'+n+'-how', s.how);
+            const ul = document.getElementById('s'+n+'-list');
+            if (ul && s.list) ul.innerHTML = s.list.map(li=>`<li>${li}</li>`).join('');
+          });
+          set('conclusion-title', t.conclusionTitle);
+          set('conclusion-desc1', t.conclusion1);
+          set('conclusion-desc2', t.conclusion2);
+          set('article-cta', t.cta);
+          // Nav for this page (desktop + mobile)
+          const navText = t.nav || copy.es.nav;
+          const map = [
+            { href: '#inicio', key: 'inicio' },
+            { href: '#servicios', key: 'servicios' },
+            { href: '#acerca', key: 'acerca' },
+            { href: '#casos-exito', key: 'casos' },
+            { href: '#contact-form', key: 'contacto' },
+            { href: '#blog', key: 'blog' }
+          ];
+          map.forEach(({href, key})=>{
+            document.querySelectorAll(`a[href="index.html${href}"], a[href="${href}"]`).forEach(a=>{
+              a.textContent = navText[key] || a.textContent;
+            });
+          });
+        }
+        document.addEventListener('DOMContentLoaded', function(){
+          let lang = 'es';
+          try {
+            const params = new URLSearchParams(window.location.search);
+            const q = params.get('lang');
+            lang = q ? q.toLowerCase() : lang;
+            if (!q && typeof getLanguagePreference === 'function') {
+              lang = (getLanguagePreference() || lang).toLowerCase();
+            }
+          } catch(e){}
+          apply(lang);
+          if (typeof window.setLanguage === 'function' && !window.__blogArticleLangWrapped){
+            const _orig = window.setLanguage;
+            window.setLanguage = function(l){
+              _orig(l);
+              apply((l || 'es').toLowerCase());
+            };
+            window.__blogArticleLangWrapped = true;
+          }
+        });
+      })();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
