@@ -1,0 +1,711 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulting, Data &amp; Strategy | TrendMakers</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header_overrides.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root { --tm-gradient: linear-gradient(135deg, #1b0b2e 0%, #34105a 50%, #4c1d95 100%); }
+        body {
+            margin: 0;
+            font-family: "Inter", system-ui, -apple-system, sans-serif;
+            background: var(--tm-gradient);
+            color: #f5f2ff;
+            overflow-x: hidden;
+        }
+        .shell {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: clamp(18px, 4vw, 42px) clamp(16px, 4vw, 32px) 72px;
+        }
+        section {
+            margin: clamp(42px, 6vw, 78px) 0;
+        }
+        h1, h2, h3 { margin: 0 0 10px; color: #fff; line-height: 1.2; }
+        h1 { font-size: clamp(1.9rem, 1.2rem + 2vw, 3rem); }
+        h2 { font-size: clamp(1.4rem, 1rem + 1.4vw, 2.1rem); }
+        h3 { font-size: 1.1rem; }
+        p { margin: 0 0 10px; color: #e7e1ff; line-height: 1.6; }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 22px;
+            border-radius: 999px;
+            background: linear-gradient(120deg, #7b2ff7, #6a0dad 40%, #00c3ff);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+            transition: transform 160ms ease, box-shadow 160ms ease;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(0,0,0,0.45); }
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            align-items: center;
+        }
+        .hero-visual {
+            position: relative;
+            min-height: 260px;
+            border-radius: 18px;
+            background:
+                radial-gradient(500px 500px at 20% 20%, rgba(236,72,153,0.12), transparent 40%),
+                radial-gradient(500px 500px at 80% 10%, rgba(59,130,246,0.12), transparent 40%),
+                linear-gradient(145deg, #120a24, #1e1036 50%, #2b0f4b);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+        }
+        .hero-visual img { max-width: 100%; height: auto; display: block; }
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+            color: #dcd4ff;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+        .card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: clamp(18px, 3vw, 26px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+        }
+        .list { margin: 12px 0 0; padding: 0; list-style: none; }
+        .list li {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            align-items: start;
+            margin-bottom: 10px;
+            color: #eae6ff;
+        }
+        .list li::before {
+            content: "✔";
+            color: #7bffb2;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+        .step {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 12px;
+            align-items: start;
+        }
+        .step-number {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7b2ff7, #00c3ff);
+            color: #0b0620;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+        }
+        .mini-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+        .mini-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 14px;
+            text-decoration: none;
+            color: #f7f4ff;
+            display: grid;
+            gap: 8px;
+            transition: transform 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+        }
+        .mini-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(123,191,255,0.8);
+            box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+        }
+        .section-title-center {
+            text-align: center;
+            margin-bottom: clamp(16px, 3vw, 24px);
+        }
+        .section-lead {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto clamp(20px, 3vw, 28px);
+            color: #e7e1ff;
+        }
+        :root { --header-height: 72px; }
+        @media (max-width: 640px){ :root { --header-height: 110px; } }
+        .back-btn {
+            position: fixed;
+            top: calc(var(--header-height) + 8px);
+            left: 12px;
+            z-index: 80;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(0,0,0,0.35);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #f4f2ff;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+            backdrop-filter: blur(10px);
+            transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 26px rgba(0,0,0,0.45);
+            border-color: rgba(123,191,255,0.7);
+        }
+        @media (max-width: 640px) {
+            .back-btn { top: calc(var(--header-height) + 6px); left: 10px; padding: 9px 12px; }
+            .shell { padding-top: calc(var(--header-height) + 40px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <a class="back-btn" href="index.html#problema" aria-label="Volver a la sección de servicios">← Volver</a>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/company/trendmakersagency" class="linkedin-button" target="_blank">
+                    <img src="./img/Linkedinlogo.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/trendmakers.agency_igsh=cTN1Z3N0ejk1YmJu" class="instagram-button" target="_blank">
+                    <img src="./img/INSTAGRAMLOGO.PNG" alt="Instagram">
+                </a>
+            </div>
+            <ul class="desktop-menu">
+                <li><a href="index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
+                <li><a href="index.html#servicios" id="nav-servicios" class="menu-item">Nuestros Servicios</a></li>
+                <li><a href="index.html#problema" id="nav-problema" class="menu-item">Contanos tu Proyecto</a></li>
+                <li><a href="index.html#equipo" id="nav-equipo" class="menu-item">Nuestro Equipo</a></li>
+                <li><a href="index.html#acerca" id="nav-acerca" class="menu-item">Por qué elegirnos</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de éxito</a></li>
+                <li><a href="index.html#blog" id="nav-blog" class="menu-item">Blog</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item">Agendá una Llamada</a></li>
+            </ul>
+            <div class="nav-lang">
+              <div class="language-selector" aria-label="Selector de idioma">
+                <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
+                  <img src="./img/IDIOMA.PNG" alt="Idioma">
+                </button>
+                <div class="lang-menu" role="menu" aria-label="Idiomas">
+                  <button class="lang-option" role="menuitem" data-lang="es">Español</button>
+                  <button class="lang-option" role="menuitem" data-lang="en">English</button>
+                </div>
+              </div>
+            </div>
+            <ul class="mobile-menu">
+                <li><a href="index.html#inicio" id="nav-inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="index.html#servicios" id="nav-servicios" class="menu-item" onclick="closeMenu()">Nuestros Servicios</a></li>
+                <li><a href="index.html#problema" id="nav-problema" class="menu-item" onclick="closeMenu()">Contanos tu Proyecto</a></li>
+                <li><a href="index.html#equipo" id="nav-equipo" class="menu-item" onclick="closeMenu()">Nuestro Equipo</a></li>
+                <li><a href="index.html#acerca" id="nav-acerca" class="menu-item" onclick="closeMenu()">Por qué elegirnos</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de éxito</a></li>
+                <li><a href="index.html#blog" id="nav-blog-mobile" class="menu-item" onclick="closeMenu()">Blog</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item" onclick="closeMenu()">Agendá una Llamada</a></li>
+            </ul>
+        </nav>
+        <div class="shell">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div>
+                <div class="pill" id="cds-badge">Consulting, Data &amp; Strategy</div>
+                <h1 id="cds-h1">Consulting, Data &amp; Strategy</h1>
+                <h2 id="cds-h2">Decisiones claras basadas en datos, no en intuición.</h2>
+                <p id="cds-hero-text">
+                    En TrendMakers analizamos tu negocio, tus métricas y tus procesos para identificar qué está funcionando,
+                    qué no y cuál es el camino de crecimiento más eficiente. Transformamos información dispersa en estrategias concretas.
+                </p>
+                <a class="btn-primary" id="cds-cta" href="https://calendly.com/mgottler1999/30min" target="_blank" rel="noopener">Agendar una llamada</a>
+            </div>
+            <div class="hero-visual">
+                <img src="./img/logo1.png" alt="Consulting, datos y estrategia">
+            </div>
+        </section>
+
+        <!-- ¿QUÉ HACEMOS? -->
+        <section>
+            <div class="card">
+                <h2 id="cds-que-title">¿Qué hacemos en Consulting, Data &amp; Strategy?</h2>
+                <p id="cds-que-text">
+                    Diseñamos una hoja de ruta basada en datos reales. Auditamos tu embudo, tus campañas y tu rendimiento
+                    general para construir claridad y foco.
+                </p>
+                <ul class="list">
+                    <li id="cds-que-li1">Auditoría de datos, embudos, campañas y rendimiento.</li>
+                    <li id="cds-que-li2">Definición de KPIs estratégicos adaptados a tu negocio.</li>
+                    <li id="cds-que-li3">Dashboards claros y accionables (Looker/Power BI).</li>
+                    <li id="cds-que-li4">Insights convertidos en prioridades, acciones y recomendaciones.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PROBLEMAS / PARA QUIÉN ES -->
+        <section>
+            <div class="card">
+                <h2 id="cds-prob-title">De decisiones intuitivas a decisiones estratégicas</h2>
+                <p id="cds-prob-text">Este servicio es para vos si:</p>
+                <ul class="list">
+                    <li id="cds-prob-li1">Invertís en marketing, pero no sabés exactamente qué está funcionando.</li>
+                    <li id="cds-prob-li2">Tenés datos dispersos en varias herramientas sin unificar.</li>
+                    <li id="cds-prob-li3">Tus decisiones dependen de intuición en lugar de métricas claras.</li>
+                    <li id="cds-prob-li4">No podés ver fácilmente CAC, LTV, ROAS, churn o rentabilidad por canal.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- BLOQUES / QUÉ INCLUYE -->
+        <section>
+            <div class="card">
+                <h2 id="cds-incl-title">¿Qué incluye Consulting, Data &amp; Strategy?</h2>
+                <p id="cds-incl-text">Trabajamos en cuatro bloques clave:</p>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3 id="cds-b1-title">Bloque 1 – Diagnóstico del negocio y embudo</h3>
+                        <ul class="list">
+                            <li id="cds-b1-li1">Análisis de adquisición, conversión y retención.</li>
+                            <li id="cds-b1-li2">Revisión de campañas, canales y puntos críticos.</li>
+                            <li id="cds-b1-li3">Detección de pérdidas, fricciones y oportunidades.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 id="cds-b2-title">Bloque 2 – KPIs y Sistema de Medición</h3>
+                        <ul class="list">
+                            <li id="cds-b2-li1">Definición de métricas clave (CAC, LTV, ROAS, etc.).</li>
+                            <li id="cds-b2-li2">Mapeo de eventos y conversiones.</li>
+                            <li id="cds-b2-li3">Plan de medición alineado a tus objetivos.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 id="cds-b3-title">Bloque 3 – Dashboards &amp; Analytics</h3>
+                        <ul class="list">
+                            <li id="cds-b3-li1">Implementación u optimización de dashboards.</li>
+                            <li id="cds-b3-li2">Integración de datos de marketing, ventas y web.</li>
+                            <li id="cds-b3-li3">Vistas para founders, marketing y ventas.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 id="cds-b4-title">Bloque 4 – Roadmap Estratégico</h3>
+                        <ul class="list">
+                            <li id="cds-b4-li1">Priorización de acciones e iniciativas.</li>
+                            <li id="cds-b4-li2">Recomendaciones basadas en impacto y datos.</li>
+                            <li id="cds-b4-li3">Siguientes pasos concretos para ejecutar.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CÓMO TRABAJAMOS -->
+        <section>
+            <div class="card">
+                <h2 id="cds-how-title">¿Cómo trabajamos?</h2>
+                <div class="grid-2">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h3 id="cds-step1-title">Paso 1 – Diagnóstico &amp; mapeo de datos</h3>
+                            <p id="cds-step1-text">
+                                Entendemos tu negocio, tus objetivos y tu stack. Auditamos dónde vive la información y cómo
+                                se está midiendo todo hoy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h3 id="cds-step2-title">Paso 2 – Framework &amp; dashboards</h3>
+                            <p id="cds-step2-text">
+                                Definimos KPIs, diseñamos la estructura de medición y creamos los dashboards con insights claros.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h3 id="cds-step3-title">Paso 3 – Estrategia &amp; roadmap</h3>
+                            <p id="cds-step3-text">
+                                Convertimos los datos en acciones: qué mejorar, qué priorizar, qué ajustar y cómo escalar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESULTADOS -->
+        <section>
+            <div class="card">
+                <h2 id="cds-res-title">Resultados esperados</h2>
+                <ul class="list">
+                    <li id="cds-res-li1">Visión clara de qué impulsa o frena tu crecimiento.</li>
+                    <li id="cds-res-li2">Métricas simples y entendibles para todo el equipo.</li>
+                    <li id="cds-res-li3">Mejores decisiones sobre inversión y prioridades.</li>
+                    <li id="cds-res-li4">Menos suposiciones, más precisión.</li>
+                    <li id="cds-res-li5">Un plan claro para los próximos meses.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- POR QUÉ TM -->
+        <section>
+            <div class="card">
+                <h2 id="cds-why-title">¿Por qué TrendMakers?</h2>
+                <ul class="list">
+                    <li id="cds-why-li1">Conectamos datos con negocio, marketing y ventas.</li>
+                    <li id="cds-why-li2">Hacemos dashboards que se usan, no que quedan olvidados.</li>
+                    <li id="cds-why-li3">Nos enfocamos en simplicidad, claridad y acción real.</li>
+                    <li id="cds-why-li4">Construimos sistemas que escalás sin depender de terceros.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="card section-title-center">
+            <h2 id="cds-cta2-title">¿Tus datos realmente te están ayudando a crecer?</h2>
+            <p class="section-lead" id="cds-cta2-text">
+                Hablemos y analicemos dónde estás y qué podés optimizar.
+            </p>
+            <a class="btn-primary" id="cds-cta2-btn" href="https://calendly.com/mgottler1999/30min" target="_blank" rel="noopener">
+                Agendar una llamada
+            </a>
+        </section>
+
+        <!-- OTROS SERVICIOS -->
+        <section>
+            <h2 class="section-title-center" id="cds-other-title">Otros servicios</h2>
+            <div class="mini-cards">
+                <a class="mini-card" href="marketing-automation.html">
+                    <h3 id="cds-os1-title">Marketing &amp; Automation</h3>
+                    <p id="cds-os1-text">Sistemas que generan y gestionan leads en piloto automático.</p>
+                </a>
+                <a class="mini-card" href="branding-communication.html">
+                    <h3 id="cds-os2-title">Branding &amp; Communication</h3>
+                    <p id="cds-os2-text">Identidades profesionales y comunicación coherente.</p>
+                </a>
+                <a class="mini-card" href="web-ecommerce.html">
+                    <h3 id="cds-os3-title">Web &amp; E-Commerce Development</h3>
+                    <p id="cds-os3-text">Sitios y tiendas rápidas, modernas e integradas a tus funnels.</p>
+                </a>
+                <a class="mini-card" href="ia-hub.html">
+                    <h3 id="cds-os4-title">AI &amp; Innovation Hub</h3>
+                    <p id="cds-os4-text">IA aplicada para mejorar procesos y escalar tu operación.</p>
+                </a>
+            </div>
+        </section>
+
+        </div>
+    </div>
+
+    <!-- Botones flotantes -->
+    <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20más%20información." class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+        <img src="./img/WPP.PNG" alt="WhatsApp">
+    </a>
+    <a href="mailto:info@trendmakers.agencysubject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank" aria-label="Email">
+        <img src="./img/EMAIL.jpg" alt="Email">
+    </a>
+
+    <script src="./js/script.js"></script>
+    <script>
+      const cdsCopy = {
+        es: {
+          badge: "Consulting, Data & Strategy",
+          h1: "Consulting, Data & Strategy",
+          h2: "Decisiones claras basadas en datos, no en intuición.",
+          hero: "En TrendMakers analizamos tu negocio, tus métricas y tus procesos para identificar qué está funcionando, qué no y cuál es el camino de crecimiento más eficiente. Transformamos información dispersa en estrategias concretas.",
+          cta: "Agendar una llamada",
+          queTitle: "¿Qué hacemos en Consulting, Data & Strategy?",
+          queText: "Diseñamos una hoja de ruta basada en datos reales. Auditamos tu embudo, tus campañas y tu rendimiento general para construir claridad y foco.",
+          queList: [
+            "Auditoría de datos, embudos, campañas y rendimiento.",
+            "Definición de KPIs estratégicos adaptados a tu negocio.",
+            "Dashboards claros y accionables (Looker/Power BI).",
+            "Insights convertidos en prioridades, acciones y recomendaciones."
+          ],
+          probTitle: "De decisiones intuitivas a decisiones estratégicas",
+          probText: "Este servicio es para vos si:",
+          probList: [
+            "Invertís en marketing, pero no sabés exactamente qué está funcionando.",
+            "Tenés datos dispersos en varias herramientas sin unificar.",
+            "Tus decisiones dependen de intuición en lugar de métricas claras.",
+            "No podés ver fácilmente CAC, LTV, ROAS, churn o rentabilidad por canal."
+          ],
+          inclTitle: "¿Qué incluye Consulting, Data & Strategy?",
+          inclText: "Trabajamos en cuatro bloques clave:",
+          b1Title: "Bloque 1 – Diagnóstico del negocio y embudo",
+          b1List: [
+            "Análisis de adquisición, conversión y retención.",
+            "Revisión de campañas, canales y puntos críticos.",
+            "Detección de pérdidas, fricciones y oportunidades."
+          ],
+          b2Title: "Bloque 2 – KPIs y Sistema de Medición",
+          b2List: [
+            "Definición de métricas clave (CAC, LTV, ROAS, etc.).",
+            "Mapeo de eventos y conversiones.",
+            "Plan de medición alineado a tus objetivos."
+          ],
+          b3Title: "Bloque 3 – Dashboards & Analytics",
+          b3List: [
+            "Implementación u optimización de dashboards.",
+            "Integración de datos de marketing, ventas y web.",
+            "Vistas para founders, marketing y ventas."
+          ],
+          b4Title: "Bloque 4 – Roadmap Estratégico",
+          b4List: [
+            "Priorización de acciones e iniciativas.",
+            "Recomendaciones basadas en impacto y datos.",
+            "Siguientes pasos concretos para ejecutar."
+          ],
+          howTitle: "¿Cómo trabajamos?",
+          steps: [
+            {
+              title: "Paso 1 – Diagnóstico & mapeo de datos",
+              text: "Entendemos tu negocio, tus objetivos y tu stack. Auditamos dónde vive la información y cómo se está midiendo todo hoy."
+            },
+            {
+              title: "Paso 2 – Framework & dashboards",
+              text: "Definimos KPIs, diseñamos la estructura de medición y creamos los dashboards con insights claros."
+            },
+            {
+              title: "Paso 3 – Estrategia & roadmap",
+              text: "Convertimos los datos en acciones: qué mejorar, qué priorizar, qué ajustar y cómo escalar."
+            }
+          ],
+          resTitle: "Resultados esperados",
+          resList: [
+            "Visión clara de qué impulsa o frena tu crecimiento.",
+            "Métricas simples y entendibles para todo el equipo.",
+            "Mejores decisiones sobre inversión y prioridades.",
+            "Menos suposiciones, más precisión.",
+            "Un plan claro para los próximos meses."
+          ],
+          whyTitle: "¿Por qué TrendMakers?",
+          whyList: [
+            "Conectamos datos con negocio, marketing y ventas.",
+            "Hacemos dashboards que se usan, no que quedan olvidados.",
+            "Nos enfocamos en simplicidad, claridad y acción real.",
+            "Construimos sistemas que escalás sin depender de terceros."
+          ],
+          cta2Title: "¿Tus datos realmente te están ayudando a crecer?",
+          cta2Text: "Hablemos y analicemos dónde estás y qué podés optimizar.",
+          cta2Btn: "Agendar una llamada",
+          otherTitle: "Otros servicios",
+          os1: { title: "Marketing & Automation", text: "Sistemas que generan y gestionan leads en piloto automático." },
+          os2: { title: "Branding & Communication", text: "Identidades profesionales y comunicación coherente." },
+          os3: { title: "Web & E-Commerce Development", text: "Sitios y tiendas rápidas, modernas e integradas a tus funnels." },
+          os4: { title: "AI & Innovation Hub", text: "IA aplicada para mejorar procesos y escalar tu operación." },
+          back: "← Volver"
+        },
+        en: {
+          badge: "Consulting, Data & Strategy",
+          h1: "Consulting, Data & Strategy",
+          h2: "Clear decisions based on data — not guesswork.",
+          hero: "At TrendMakers, we analyze your business, metrics and funnels to understand what’s working, what isn’t, and what to prioritize next. We turn scattered information into structured insights and strategic action.",
+          cta: "Book a call",
+          queTitle: "What do we do in Consulting, Data & Strategy?",
+          queText: "We design a data-driven roadmap for growth. That means auditing your funnel, campaigns and performance to build clarity, structure and direction.",
+          queList: [
+            "Audit of data, funnels, campaigns and performance.",
+            "Definition of strategic KPIs tailored to your model.",
+            "Actionable dashboards (Looker/Power BI).",
+            "Insights translated into priorities, actions and recommendations."
+          ],
+          probTitle: "From intuition-based decisions to clarity and focus",
+          probText: "This service is for you if:",
+          probList: [
+            "You invest in marketing but can’t clearly see what’s working.",
+            "Your data is spread across tools without consistency.",
+            "Decisions depend on intuition instead of shared metrics.",
+            "You can't easily track CAC, LTV, ROAS, churn or profitability."
+          ],
+          inclTitle: "What’s included in Consulting, Data & Strategy?",
+          inclText: "We work across four key blocks:",
+          b1Title: "Block 1 – Business & Funnel Diagnosis",
+          b1List: [
+            "Acquisition, conversion and retention analysis.",
+            "Review of channels, campaigns and key touchpoints.",
+            "Identification of leaks, friction points and opportunities."
+          ],
+          b2Title: "Block 2 – KPI & Measurement Framework",
+          b2List: [
+            "Definition of key metrics (CAC, LTV, ROAS, etc.).",
+            "Event and conversion mapping.",
+            "Measurement plan aligned with your goals."
+          ],
+          b3Title: "Block 3 – Dashboards & Analytics",
+          b3List: [
+            "Setup or optimization of dashboards.",
+            "Integration of marketing, sales and website data.",
+            "Views for founders, marketing and sales teams."
+          ],
+          b4Title: "Block 4 – Strategic Roadmap",
+          b4List: [
+            "Prioritization of initiatives.",
+            "Data-backed recommendations.",
+            "Clear next steps for execution."
+          ],
+          howTitle: "How we work",
+          steps: [
+            {
+              title: "Step 1 – Discovery & data mapping",
+              text: "We understand your model, objectives and current data environment."
+            },
+            {
+              title: "Step 2 – Framework & dashboards",
+              text: "We define KPIs, build the measurement structure and create clear dashboards with strategic insights."
+            },
+            {
+              title: "Step 3 – Strategy & roadmap",
+              text: "We convert insights into concrete actions and priorities to guide your growth."
+            }
+          ],
+          resTitle: "Expected outcomes",
+          resList: [
+            "A clear view of what drives or blocks growth.",
+            "KPIs the whole team understands.",
+            "Better decisions on budget and priorities.",
+            "Less guesswork, more clarity.",
+            "A structured plan for the next 3–12 months."
+          ],
+          whyTitle: "Why TrendMakers?",
+          whyList: [
+            "We connect data with business, marketing and sales — not isolated.",
+            "We build dashboards that teams actually use.",
+            "We focus on clarity, simplicity and execution.",
+            "We create systems that scale smoothly."
+          ],
+          cta2Title: "Is your data truly helping you grow?",
+          cta2Text: "Let’s review your current landscape and build a data-backed plan.",
+          cta2Btn: "Book a call",
+          otherTitle: "Other services",
+          os1: { title: "Marketing & Automation", text: "Systems that generate and manage leads on autopilot." },
+          os2: { title: "Branding & Communication", text: "Professional identities and strategic communication." },
+          os3: { title: "Web & E-Commerce Development", text: "Fast, modern sites and stores integrated with your funnels." },
+          os4: { title: "AI & Innovation Hub", text: "AI-powered solutions to scale your operations." },
+          back: "← Back"
+        }
+      };
+
+      const cdsSet = (id, val) => {
+        const el = document.getElementById(id);
+        if (el && val !== undefined) el.innerHTML = val;
+      };
+
+      function applyCDSLang(lang){
+        const t = cdsCopy[lang] || cdsCopy.es;
+        document.documentElement.lang = lang === 'en' ? 'en' : 'es';
+
+        cdsSet('cds-badge', t.badge);
+        cdsSet('cds-h1', t.h1);
+        cdsSet('cds-h2', t.h2);
+        cdsSet('cds-hero-text', t.hero);
+        cdsSet('cds-cta', t.cta);
+
+        cdsSet('cds-que-title', t.queTitle);
+        cdsSet('cds-que-text', t.queText);
+        ['cds-que-li1','cds-que-li2','cds-que-li3','cds-que-li4'].forEach((id,i)=>cdsSet(id, t.queList[i]));
+
+        cdsSet('cds-prob-title', t.probTitle);
+        cdsSet('cds-prob-text', t.probText);
+        ['cds-prob-li1','cds-prob-li2','cds-prob-li3','cds-prob-li4'].forEach((id,i)=>cdsSet(id, t.probList[i]));
+
+        cdsSet('cds-incl-title', t.inclTitle);
+        cdsSet('cds-incl-text', t.inclText);
+        cdsSet('cds-b1-title', t.b1Title);
+        ['cds-b1-li1','cds-b1-li2','cds-b1-li3'].forEach((id,i)=>cdsSet(id, t.b1List[i]));
+        cdsSet('cds-b2-title', t.b2Title);
+        ['cds-b2-li1','cds-b2-li2','cds-b2-li3'].forEach((id,i)=>cdsSet(id, t.b2List[i]));
+        cdsSet('cds-b3-title', t.b3Title);
+        ['cds-b3-li1','cds-b3-li2','cds-b3-li3'].forEach((id,i)=>cdsSet(id, t.b3List[i]));
+        cdsSet('cds-b4-title', t.b4Title);
+        ['cds-b4-li1','cds-b4-li2','cds-b4-li3'].forEach((id,i)=>cdsSet(id, t.b4List[i]));
+
+        cdsSet('cds-how-title', t.howTitle);
+        ['cds-step1','cds-step2','cds-step3'].forEach((key, idx)=>{
+          const data = t.steps[idx];
+          if (!data) return;
+          cdsSet(`${key}-title`, data.title);
+          cdsSet(`${key}-text`, data.text);
+        });
+
+        cdsSet('cds-res-title', t.resTitle);
+        ['cds-res-li1','cds-res-li2','cds-res-li3','cds-res-li4','cds-res-li5'].forEach((id,i)=>cdsSet(id, t.resList[i]));
+
+        cdsSet('cds-why-title', t.whyTitle);
+        ['cds-why-li1','cds-why-li2','cds-why-li3','cds-why-li4'].forEach((id,i)=>cdsSet(id, t.whyList[i]));
+
+        cdsSet('cds-cta2-title', t.cta2Title);
+        cdsSet('cds-cta2-text', t.cta2Text);
+        cdsSet('cds-cta2-btn', t.cta2Btn);
+
+        cdsSet('cds-other-title', t.otherTitle);
+        cdsSet('cds-os1-title', t.os1.title); cdsSet('cds-os1-text', t.os1.text);
+        cdsSet('cds-os2-title', t.os2.title); cdsSet('cds-os2-text', t.os2.text);
+        cdsSet('cds-os3-title', t.os3.title); cdsSet('cds-os3-text', t.os3.text);
+        cdsSet('cds-os4-title', t.os4.title); cdsSet('cds-os4-text', t.os4.text);
+
+        const back = document.querySelector('.back-btn');
+        if (back) back.innerHTML = t.back;
+      }
+
+      (function(){
+        let lang = 'es';
+        try {
+          const params = new URLSearchParams(window.location.search);
+          const q = params.get('lang');
+          lang = q ? q.toLowerCase() : lang;
+          if (!q && typeof getLanguagePreference === 'function') {
+            lang = (getLanguagePreference() || lang).toLowerCase();
+          }
+        } catch(e){}
+        applyCDSLang(lang);
+
+        if (typeof window.setLanguage === 'function' && !window.__cdsLangWrapped){
+          const _orig = window.setLanguage;
+          window.setLanguage = function(l){
+            _orig(l);
+            applyCDSLang((l || 'es').toLowerCase());
+          };
+          window.__cdsLangWrapped = true;
+        }
+      })();
+
+      function toggleMenu() {
+          const hamburger = document.querySelector('.hamburger');
+          const mobileMenu = document.querySelector('nav ul.mobile-menu');
+          if (!hamburger || !mobileMenu) return;
+          hamburger.classList.toggle('active');
+          mobileMenu.classList.toggle('active');
+      }
+      function closeMenu() {
+          const hamburger = document.querySelector('.hamburger');
+          const mobileMenu = document.querySelector('nav ul.mobile-menu');
+          if (!hamburger || !mobileMenu) return;
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+      }
+    </script>
+</body>
+</html>

@@ -1,22 +1,22 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestros Servicios | TrendMakers</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header_overrides.css">
-    <link rel="stylesheet" href="casos_overrides.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header_overrides.css">
+    <link rel="stylesheet" href="./css/casos_overrides.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
         body.service-detail-page {
             background: radial-gradient(circle at top, #8a2be2 0%, #4b0082 40%, #230046 100%);
             color: #f4f2ff;
         }
         body.service-detail-page .content {
-            padding-top: 170px; /* deja espacio suficiente bajo el header fijo */
+            padding-top: 170px;
         }
         .detail-hero {
             max-width: 1100px;
@@ -49,7 +49,7 @@
             backdrop-filter: blur(12px);
             box-shadow: 0 20px 45px rgba(8, 0, 26, 0.4);
             transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
-            scroll-margin-top: 220px; /* asegure que los anclajes de tarjetas muestren el encabezado */
+            scroll-margin-top: 220px;
         }
         .detail-card:hover {
             transform: translateY(-6px);
@@ -139,25 +139,26 @@
             </div>
             <div class="social-buttons">
                 <a href="https://www.linkedin.com/company/trendmakersagency" class="linkedin-button" target="_blank">
-                    <img src="Linkedinlogo.png" alt="LinkedIn">
+                    <img src="./img/Linkedinlogo.png" alt="LinkedIn">
                 </a>
                 <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" class="instagram-button" target="_blank">
-                    <img src="INSTAGRAMLOGO.PNG" alt="Instagram">
+                    <img src="./img/INSTAGRAMLOGO.PNG" alt="Instagram">
                 </a>
             </div>
             <ul class="desktop-menu">
-                <li><a href="index.html#inicio" class="menu-item">Inicio</a></li>
-                <li><a href="index.html#servicios" class="menu-item">Nuestros Servicios</a></li>
-                <li><a href="index.html#problema" class="menu-item">Contanos tu Proyecto</a></li>
-                <li><a href="index.html#equipo" class="menu-item">Nuestro Equipo</a></li>
-                <li><a href="index.html#acerca" class="menu-item">¿Por qué elegirnos?</a></li>
-                <li><a href="index.html#casos-exito" class="menu-item">Casos de éxito</a></li>
-                <li><a href="index.html#contact-form" class="menu-item">Agenda una Llamada</a></li>
+                <li><a href="index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
+                <li><a href="index.html#servicios" id="nav-servicios" class="menu-item">Nuestros Servicios</a></li>
+                <li><a href="index.html#problema" id="nav-problema" class="menu-item">Contanos tu Proyecto</a></li>
+                <li><a href="index.html#equipo" id="nav-equipo" class="menu-item">Nuestro Equipo</a></li>
+                <li><a href="index.html#acerca" id="nav-acerca" class="menu-item">¿Por qué elegirnos?</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de éxito</a></li>
+                <li><a href="index.html#blog" id="nav-blog" class="menu-item">Blog</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item">Agenda una Llamada</a></li>
             </ul>
             <div class="nav-lang">
                 <div class="language-selector" aria-label="Selector de idioma">
                     <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
-                        <img src="IDIOMA.PNG" alt="Idioma">
+                        <img src="./img/IDIOMA.PNG" alt="Idioma">
                     </button>
                     <div class="lang-menu" role="menu" aria-label="Idiomas">
                         <button class="lang-option" role="menuitem" data-lang="es">Español</button>
@@ -165,6 +166,7 @@
                     </div>
                 </div>
             </div>
+
             <ul class="mobile-menu">
                 <li><a href="index.html#inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
                 <li><a href="index.html#servicios" class="menu-item" onclick="closeMenu()">Nuestros Servicios</a></li>
@@ -172,13 +174,14 @@
                 <li><a href="index.html#equipo" class="menu-item" onclick="closeMenu()">Nuestro Equipo</a></li>
                 <li><a href="index.html#acerca" class="menu-item" onclick="closeMenu()">¿Por qué elegirnos?</a></li>
                 <li><a href="index.html#casos-exito" class="menu-item" onclick="closeMenu()">Casos de éxito</a></li>
+                <li><a href="index.html#blog" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
                 <li><a href="index.html#contact-form" class="menu-item" onclick="closeMenu()">Agenda una Llamada</a></li>
             </ul>
         </nav>
 
         <main>
             <div class="detail-back">
-                <a class="detail-back-button" href="index.html#problema">&larr; Volver</a>
+                <a class="detail-back-button" href="index.html#problema" id="detail-back-button">&larr; Volver</a>
             </div>
             <section class="detail-hero">
                 <h1 id="detail-hero-title">Nuestros Servicios en Detalle</h1>
@@ -275,15 +278,14 @@
         </main>
     </div>
 
-    <!-- Botones flotantes visibles también en esta sección -->
-    <a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20más%20información." class="whatsapp-button" target="_blank" aria-label="Escribinos por WhatsApp">
-        <img src="WPP.PNG" alt="WhatsApp">
+    <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20más%20información." class="whatsapp-button" target="_blank" aria-label="Escribinos por WhatsApp">
+        <img src="./img/WPP.PNG" alt="WhatsApp">
     </a>
-    <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank" aria-label="Escribinos por mail">
-        <img src="EMAIL.jpg" alt="Email">
+    <a href="mailto:info@trendmakers.agencysubject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank" aria-label="Escribinos por mail">
+        <img src="./img/EMAIL.jpg" alt="Email">
     </a>
 
-    <script src="script.js"></script>
+    <script src="./js/script.js"></script>
     <script>
         function toggleMenu() {
             const hamburger = document.querySelector('.hamburger');

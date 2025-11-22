@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrendMakers</title>
-    <meta name="description" content="TrendMakers: marketing digital, datos y automatización para hacer crecer tu negocio con servicios, casos de éxito y equipo especializado.">
+    <title>TrendMakers - Marketing digital, automatizacion y datos para acelerar tu crecimiento</title>
+    <meta name="description" content="Agencia TrendMakers: servicios de marketing digital, automatizacion, SEO, analitica de datos y casos de exito para escalar tu marca con resultados medibles.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://trendmakers.agency/">
     
@@ -17,14 +17,14 @@
     <link rel="icon" sizes="32x32" href="favicon-32x32.png">
 
     <!-- Meta etiquetas para Open Graph -->
-    <meta property="og:title" content="TrendMakers - Soluciones de Marketing, Datos y Automatización">
-    <meta property="og:description" content="Creamos estrategias digitales personalizadas, impulsadas por datos y automatización, para acelerar el crecimiento de tu marca.">
+    <meta property="og:title" content="TrendMakers - Soluciones de Marketing, Datos y Automatizacion">
+    <meta property="og:description" content="Creamos estrategias digitales personalizadas, impulsadas por datos y automatizacion, para acelerar el crecimiento de tu marca.">
     <meta property="og:image" content="https://trendmakers.agency/logo1.png">
     <meta property="og:url" content="https://trendmakers.agency/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TrendMakers - Marketing, Datos & Automatización">
-    <meta name="twitter:description" content="Servicios de marketing digital, casos de éxito y un equipo listo para llevar tu marca al próximo nivel.">
+    <meta name="twitter:title" content="TrendMakers - Marketing, Datos & Automatizacion">
+    <meta name="twitter:description" content="Servicios de marketing digital, casos de exito y un equipo listo para llevar tu marca al proximo nivel.">
     <meta name="twitter:image" content="https://trendmakers.agency/logo1.png">
     <script type="application/ld+json">
     {
@@ -35,7 +35,7 @@
       "logo": "https://trendmakers.agency/logo1.png",
       "sameAs": [
         "https://www.linkedin.com/company/trendmakersagency",
-        "https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu"
+        "https://www.instagram.com/trendmakers.agency_igsh=cTN1Z3N0ejk1YmJu"
       ],
       "contactPoint": [{
         "@type": "ContactPoint",
@@ -45,11 +45,25 @@
       }]
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://trendmakers.agency/"
+        }
+      ]
+    }
+    </script>
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header_overrides.css">
-    <link rel="stylesheet" href="casos_overrides.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header_overrides.css">
+    <link rel="stylesheet" href="./css/casos_overrides.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Enlace de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -63,6 +77,100 @@
         .highlight-bold {
             font-weight: bold !important;
         }
+
+        /* Por qué elegirnos */
+        .why-subtitle {
+            font-size: 1.1rem;
+            color: #e8defa;
+            margin: 8px auto 32px;
+            max-width: 760px;
+        }
+        .why-grid {
+            display: grid;
+            gap: 18px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+        .why-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 16px;
+            padding: 18px 18px 20px;
+            backdrop-filter: blur(12px);
+            transition: transform 180ms ease, border-color 180ms ease;
+            background-size: 180% 180%;
+            animation: why-shift 8s ease-in-out infinite alternate;
+        }
+        .why-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(123, 191, 255, 0.7);
+        }
+        @keyframes why-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 50% 0%; }
+            100% { background-position: 100% 50%; }
+        }
+        .why-icon {
+            width: 38px;
+            height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #7bffb2, #5af0ff, #7b2ff7);
+            color: #0a0720;
+            font-weight: 900;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            box-shadow: 0 0 0 6px rgba(255,255,255,0.08);
+        }
+        .why-card h3 {
+            margin: 0 0 8px;
+            color: #f8f5ff;
+            font-size: 1.1rem;
+        }
+        .why-card p {
+            margin: 0;
+            color: #d8d2f0;
+            line-height: 1.55;
+            font-size: 0.98rem;
+        }
+        @media (max-width: 768px) {
+            /* Fondo fijo sin video en mobile y cards apiladas */
+            #acerca .video-container video {
+                display: none;
+            }
+            #acerca .video-container {
+                background:
+                  radial-gradient(900px 900px at 10% 10%, rgba(236,72,153,0.10), transparent 40%),
+                  radial-gradient(900px 900px at 90% 20%, rgba(59,130,246,0.08), transparent 45%),
+                  linear-gradient(135deg, #1b0b2e 0%, #34105a 50%, #4c1d95 100%);
+            }
+            .why-grid {
+                display: block;
+                padding: 0 16px;
+                width: 100%;
+                max-width: 540px;
+                margin: 0 auto;
+            }
+            .why-card {
+                box-sizing: border-box;
+                width: 100%;
+                margin: 0 auto 10px;
+            }
+            .why-card p { display: none; }
+            .why-card {
+                background: transparent;
+                border: none;
+                padding: 8px 0;
+            }
+            .why-card h3 {
+                text-align: center;
+                font-size: 1.05rem;
+            }
+        }
+
     </style>
 </head>
 
@@ -81,52 +189,53 @@
             <!-- Botones de redes sociales -->
             <div class="social-buttons">
                 <a href="https://www.linkedin.com/company/trendmakersagency" class="linkedin-button" target="_blank">
-                    <img src="Linkedinlogo.png" alt="LinkedIn">
+                    <img src="./img/Linkedinlogo.png" alt="LinkedIn">
                 </a>
-                <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" class="instagram-button" target="_blank">
-                    <img src="INSTAGRAMLOGO.PNG" alt="Instagram">
+                <a href="https://www.instagram.com/trendmakers.agency_igsh=cTN1Z3N0ejk1YmJu" class="instagram-button" target="_blank">
+                    <img src="./img/INSTAGRAMLOGO.PNG" alt="Instagram">
                 </a>
             </div>
-            <ul class="desktop-menu">
+                                    <ul class="desktop-menu">
                 <li><a href="#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
                 <li><a href="#servicios" id="nav-servicios" class="menu-item">Nuestros Servicios</a></li>
                 <li><a href="#problema" id="nav-problema" class="menu-item">Contanos tu Proyecto</a></li>
                 <li><a href="#equipo" id="nav-equipo" class="menu-item">Nuestro Equipo</a></li>
-                <li><a href="#acerca" id="nav-acerca" class="menu-item">¿Por qué elegirnos?</a></li>
-                <li><a href="#casos-exito" id="nav-casos-exito" class="menu-item">Casos de Éxito</a></li> <!-- Nuevo enlace -->
+                <li><a href="#acerca" id="nav-acerca" class="menu-item">Por que elegirnos</a></li>
+                <li><a href="#casos-exito" id="nav-casos-exito" class="menu-item">Casos de exito</a></li>
+                <li><a href="#blog" id="nav-blog" class="menu-item">Blog</a></li>
                 <li><a href="#contact-form" id="nav-contacto" class="menu-item">Agenda una Llamada</a></li>
             </ul>
             <div class="nav-lang">
               <div class="language-selector" aria-label="Selector de idioma">
                 <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
-                  <img src="IDIOMA.PNG" alt="Idioma">
+                  <img src="./img/IDIOMA.PNG" alt="Idioma">
                 </button>
                 <div class="lang-menu" role="menu" aria-label="Idiomas">
-                  <button class="lang-option" role="menuitem" data-lang="es">Español</button>
+                  <button class="lang-option" role="menuitem" data-lang="es">Espa&ntilde;ol</button>
                   <button class="lang-option" role="menuitem" data-lang="en">English</button>
                 </div>
               </div>
             </div>
-            <ul class="mobile-menu">
+                                    <ul class="mobile-menu">
                 <li><a href="#inicio" id="nav-inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
                 <li><a href="#servicios" id="nav-servicios" class="menu-item" onclick="closeMenu()">Nuestros Servicios</a></li>
                 <li><a href="#problema" id="nav-problema" class="menu-item" onclick="closeMenu()">Contanos tu Proyecto</a></li>
                 <li><a href="#equipo" id="nav-equipo" class="menu-item" onclick="closeMenu()">Nuestro Equipo</a></li>
-                <li><a href="#acerca" id="nav-acerca" class="menu-item" onclick="closeMenu()">¿Por qué elegirnos como tu socio digital?</a></li>
-                <li><a href="#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de Éxito</a></li>
+                <li><a href="#acerca" id="nav-acerca" class="menu-item" onclick="closeMenu()">Por que elegirnos</a></li>
+                <li><a href="#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de exito</a></li>
+                <li><a href="#blog" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
                 <li><a href="#contact-form" id="nav-contacto" class="menu-item" onclick="closeMenu()">Agenda una Llamada</a></li>
-                
             </ul>
         </nav>
         <header>
             <div class="video-container">
                 <video autoplay muted loop playsinline id="background-video">
-                    <source src="backgroundvid.mp4" type="video/mp4">
+                    <source src="./video/backgroundvid.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="overlay">
                     <div class="title-container">
-                        <img src="logo1.png" alt="TrendMakers Logo" class="logo animate__animated">
+                        <img src="./img/logo1.png" alt="TrendMakers Logo" class="logo animate__animated">
                         <div class="text-container">
                             <h1 id="title" class="animate__animated">TrendMakers</h1>
                             <p id="subtitle" class="animate__animated">Your digital Partner</p>
@@ -141,18 +250,18 @@
         <section id="inicio" class="section">
             <div class="video-container">
                 <video autoplay muted loop playsinline id="background-video2">
-                    <source src="backgroundvid2.mp4" type="video/mp4">
+                    <source src="./video/backgroundvid2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="overlay">
                     <div class="intro">
                         <div class="hero-logo-ghost" aria-hidden="true">
-                            <img src="logo1.png" alt="" loading="lazy">
+                            <img src="./img/logo1.png" alt="" loading="lazy">
                         </div>
 
                         <h2 id="intro-title" class="section-title animate__animated">Bienvenidos a TrendMakers</h2>
-                        <p class="intro-tagline animate__animated">Ofrecemos soluciones personalizadas para tu negocio.</p>
-                        <p id="intro-text" class="intro-subtitle animate__animated">Somos una agencia global especializada en estrategias digitales adaptadas a cada cliente. Nuestro equipo de expertos trabaja para impulsar el crecimiento de tu marca con campañas efectivas, gestión de redes sociales y un enfoque centrado en la excelencia.</p>
+                        <p class="intro-tagline animate__animated">Impulsamos el crecimiento de tu negocio con marketing, análisis de datos, automatización e inteligencia artificial.</p>
+                        <p id="intro-text" class="intro-subtitle animate__animated">Diseñamos y ejecutamos estrategias digitales personalizadas, basadas en datos, para atraer mejores clientes y escalar tus resultados.</p>
                         <a href="https://calendly.com/mgottler1999/30min" class="button animate__animated" id="schedule-call" target="_blank">Agenda una Llamada</a>
                         <p id="about-us-text" class="sr-only" aria-hidden="true"></p>
                     </div>
@@ -163,57 +272,37 @@
         <section id="servicios" class="section">
             <div class="video-container">
                 <video autoplay muted loop playsinline id="background-video5">
-                    <source src="backgroundvid5.mp4" type="video/mp4">
+                    <source src="./video/backgroundvid5.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="overlay">
                     <h2 id="services-title" class="section-title animate__animated">Nuestros Servicios</h2>
-                    <p id="services-text" class="animate__animated">Ofrecemos una amplia gama de servicios de marketing digital...</p>
-                    <div class="service-details">
-                        <a class="service-card animate__animated" href="nuestros-servicios.html" data-service-id="marketing-tecnologia">
-                            <img src="logo1.png" alt="Marketing & Tecnología">
-                            <h3>Marketing & Tecnología</h3>
-                            <p>Usamos plataformas tecnológicas y desarrollos a medida para optimizar los procesos de Marketing y Ventas, implementando automatización en los ciclos comerciales.</p>
+                    <p id="services-text" class="animate__animated">Hace clic en las tarjetas para conocer más detalles sobre nuestros servicios y descubrir cómo podemos contribuir al crecimiento de tu empresa.</p>
+                                        <div class="service-details">
+                        <a class="service-card animate__animated" href="marketing-automation.html" data-service-id="marketing-automation">
+                            <img src="./img/logo1.png" alt="Marketing &amp; Automation">
+                            <h3>Marketing &amp; Automation</h3>
+                            <p>Automatizamos tus procesos y funnels para generar m&aacute;s leads y conversiones con menos esfuerzo.</p>
                         </a>
-                        <a class="service-card animate__animated" href="nuestros-servicios.html" data-service-id="leads">
-                            <img src="logo1.png" alt="Leads">
-                            <h3>Leads</h3>
-                            <p>Generación de Prospectos/Leads para plataformas SaaS y empresas de servicios. Implementación e Integración con CRM.</p>
+                        <a class="service-card animate__animated" href="branding-communication.html" data-service-id="branding-communication">
+                            <img src="./img/logo1.png" alt="Branding &amp; Communication">
+                            <h3>Branding &amp; Communication</h3>
+                            <p>Creamos marcas coherentes y comunicaci&oacute;n clara que conecta con tu audiencia.</p>
                         </a>
-                        <a class="service-card animate__animated" href="nuestros-servicios.html" data-service-id="ia">
-                            <img src="IA.jpg" alt="IA">
-                            <h3>CHATGPT - IA</h3>
-                            <p>Potenciamos tu empresa capacitando en ChatGPT y otras herramientas de Inteligencia Artificial en el día a día a todos los sectores y empleados.</p>
+                        <a class="service-card animate__animated" href="web-ecommerce.html" data-service-id="web-ecommerce">
+                            <img src="./img/logo1.png" alt="Web &amp; E-Commerce Development">
+                            <h3>Web &amp; E-Commerce Development</h3>
+                            <p>Desarrollamos sitios y tiendas r&aacute;pidas, seguras y optimizadas para convertir.</p>
                         </a>
-                        <a class="service-card animate__animated" href="nuestros-servicios.html" data-service-id="diseno">
-                            <img src="logo1.png" alt="Diseño/Comunicación">
-                            <h3>Diseño/Comunicación</h3>
-                            <p>Diseño y maquetado de Webs, Landing Pages, WordPress y Newsletters. Diseño de piezas gráficas para redes sociales, publicidad, eventos. Community Management.</p>
+                        <a class="service-card animate__animated" href="data-analitics.html" data-service-id="consulting-data-strategy">
+                            <img src="./img/logo1.png" alt="Consulting, Data &amp; Strategy">
+                            <h3>Consulting, Data &amp; Strategy</h3>
+                            <p>Definimos tu rumbo con an&aacute;lisis, datos y estrategia para escalar tu negocio.</p>
                         </a>
-                        <a class="service-card animate__animated" href="nuestros-servicios.html" data-service-id="ecommerce">
-                            <img src="logo1.png" alt="E-Commerce">
-                            <h3>E-Commerce</h3>
-                            <p>Operamos nuestros propios e-commerce. Sabemos cómo hacerlo. Te acompañamos desde la idea hasta la puesta en marcha en todas las etapas del proyecto.</p>
-                        </a>
-                        <a class="service-card animate__animated" href="nuestros-servicios.html" data-service-id="consultoria">
-                            <img src="logo1.png" alt="Consultoría">
-                            <h3>Consultoría</h3>
-                            <p>Brindamos consultoría en Marketing & Tecnología (infraestructura o software) para tus proyectos.</p>
-                        </a>
-                        <a class="service-card animate__animated" href="nuestros-servicios.html" data-service-id="datos">
-                            <img src="logo1.png" alt="Datos y Analítica">
-                            <h3>Datos y Analítica</h3>
-                            <p>Decisiones más inteligentes, resultados más rápidos. Convertimos tus datos en información accionable que potencia tu estrategia.</p>
-                        </a>
-                        <a class="service-card animate__animated" href="nuestros-servicios.html" data-service-id="estudios">
-                            <img src="logo1.png" alt="Estudios de Mercado">
-                            <h3>Estudios de Mercado</h3>
-                            <p>Conocé a tu audiencia como nunca antes. Descubrimos lo que mueve a tu público y te ayudamos a conectar con ellos desde el lugar correcto, en el momento justo.</p>
-                        </a>
-                        <a class="service-card animate__animated" href="nuestros-servicios.html" data-service-id="desarrollo">
-                            <img src="logo1.png" alt="Desarrollo WEB">
-                            <h3>Desarrollo WEB</h3>
-                            <p>Desarrollamos sitios y plataformas digitales de alto rendimiento, adaptados a tus necesidades.</p>
+                        <a class="service-card animate__animated" href="ia-hub.html" data-service-id="ai-innovation">
+                            <img src="./img/logo1.png" alt="AI &amp; Innovation Hub">
+                            <h3>AI &amp; Innovation Hub</h3>
+                            <p>Implementamos IA y automatizaciones que mejoran procesos y crean ventaja competitiva.</p>
                         </a>
                     </div>
                 </div>
@@ -223,18 +312,16 @@
         <section id="problema" class="section">
             <div class="video-container">
                 <video autoplay muted loop playsinline id="background-video3">
-                    <source src="backgroundvid3.mp4" type="video/mp4">
+                    <source src="./video/backgroundvid3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="overlay">
                     <div class="closing-cta animate__animated">
                         <div class="closing-cta__content">
-                            <h2 class="closing-cta__title" id="closing-cta-title">¿Listo para llevar tu marca al próximo nivel?</h2>
-                            <p id="contact-soon" class="closing-cta__subtitle">
-                                Contanos tu proyecto y en menos de 24 horas un especialista de TrendMakers se pondrá en contacto con vos para planificar los próximos pasos.
-                            </p>
+                            <h2 class="closing-cta__title" id="closing-cta-title">&#191;Listo para llevar tu marca al próximo nivel</h2>
+                            <p id="contact-soon" class="closing-cta__subtitle">Contanos tu proyecto y en menos de 24 horas un especialista de TrendMakers se pondrá en contacto con vos para planificar los próximos pasos.</p>
                             <a role="button"
-                               href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services."
+                               href="mailto:info@trendmakers.agencysubject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services."
                                class="button closing-cta__btn"
                                id="show-popup">
                                 Contanos tu Proyecto
@@ -247,7 +334,7 @@
         <section id="equipo" class="section">
             <div class="video-container">
                 <video autoplay muted loop id="background-video6">
-                    <source src="backgroundvid6.mp4" type="video/mp4">
+                    <source src="./video/backgroundvid4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="overlay">
@@ -292,7 +379,7 @@
         <section id="casos-exito" class="section">
             <div class="video-container">
                 <video autoplay muted loop playsinline id="background-video2">
-                    <source src="backgroundvid2.mp4" type="video/mp4">
+                    <source src="./video/backgroundvid2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="overlay">
@@ -310,17 +397,17 @@
                         <p id="success-case3" class="animate__animated success-hidden-copy">
                             VcG Imagen potenció su generación de demanda con campañas de performance y automatizaciones de nurturing. En solo 60 días duplicamos la tasa de conversión en leads calificados.
                         </p>
-                        <img src="PRONTO.png" alt="PRONTO Logo" class="logo">
-                        <img src="LETRA.png" alt="LETRA Logo" class="logo">
-                        <img src="VCG IMAGEN.png" alt="VcG Imagen Logo" class="logo">
+                        <img src="./img/PRONTO.png" alt="PRONTO Logo" class="logo">
+                        <img src="./img/LETRA.png" alt="LETRA Logo" class="logo">
+                        <img src="./img/VCG IMAGEN.png" alt="VcG Imagen Logo" class="logo">
 
-                        <!-- Tarjetas de Casos de Éxito -->
+                        <!-- Tarjetas de Casos de éxito -->
                         <div class="flip-grid">
                             <!-- Card Prontoled -->
                             <a class="flip-card animate__animated animate__fadeInUp" style="animation-delay: 0.15s;" aria-label="Ver caso de éxito Prontoled" href="caso-prontoled.html" target="_self" data-case="prontoled">
                                 <div class="flip-inner">
                                     <div class="flip-face flip-front">
-                                        <img src="PRONTO.png" alt="Prontoled" class="flip-logo">
+                                        <img src="./img/PRONTO.png" alt="Prontoled" class="flip-logo">
                                         <h3 class="flip-title">Prontoled</h3>
                                         <span class="flip-hint">Click para ver detalles / Click to see more</span>
                                         <span class="flip-cta">Ver más</span>
@@ -332,7 +419,7 @@
                             <a class="flip-card animate__animated animate__fadeInUp" style="animation-delay: 0.3s;" aria-label="Ver caso de éxito Letratec" href="caso-letratec.html" target="_self" data-case="letratec">
                                 <div class="flip-inner">
                                     <div class="flip-face flip-front">
-                                        <img src="LETRA.png" alt="Letratec" class="flip-logo">
+                                        <img src="./img/LETRA.png" alt="Letratec" class="flip-logo">
                                         <h3 class="flip-title">Letratec</h3>
                                         <span class="flip-hint">Click para ver detalles / Click to see more</span>
                                         <span class="flip-cta">Ver más</span>
@@ -344,7 +431,7 @@
                             <a class="flip-card animate__animated animate__fadeInUp" style="animation-delay: 0.45s;" aria-label="Ver caso de éxito VcG Imagen" href="caso-vcg-imagen.html" target="_self" data-case="vcg">
                                 <div class="flip-inner">
                                     <div class="flip-face flip-front">
-                                        <img src="VCG IMAGEN.png" alt="VcG Imagen" class="flip-logo">
+                                        <img src="./img/VCG IMAGEN.png" alt="VcG Imagen" class="flip-logo">
                                         <h3 class="flip-title">VcG Imagen</h3>
                                         <span class="flip-hint">Click para ver detalles / Click to see more</span>
                                         <span class="flip-cta">Ver más</span>
@@ -361,54 +448,66 @@
         <section id="acerca" class="section">
             <div class="video-container">
                 <video autoplay muted loop playsinline id="background-video4">
-                    <source src="backgroundvid4.mp4" type="video/mp4">
+                    <source src="./video/backgroundvid4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="overlay">
                     <h2 id="about-title" class="section-title animate__animated">¿Por qué elegirnos como tu socio digital?</h2>
-                    <p id="about-text" class="animate__animated">
-                        <span class="highlight-bold">Transformamos tu visión en realidad.</span><br><br>
-                        Comenzamos escuchando y comprendiendo tus necesidades. Nos sumergimos en tu problemática para ofrecerte soluciones y estrategias que te lleven al éxito.<br><br>
-                        Con un enfoque ágil y orientado a resultados, no solo cumplimos objetivos, sino que también buscamos nuevos desafíos para impulsar tu crecimiento.<br><br>
-                        Desde el primer contacto hasta la implementación final, combinamos marketing digital, diseño, programación, IA y consultoría para asegurarnos de que tu proyecto no solo funcione, sino que prospere.
-                    </p>
+                    <p id="about-subtitle" class="why-subtitle animate__animated">Transformamos tu visión en realidad.</p>
+                    <div class="why-grid">
+                        <div class="why-card animate__animated animate__fadeInUp" style="animation-delay:0.05s;">
+                            <div class="why-icon">✔</div>
+                            <h3 id="why1-title">Estrategia &amp; Visión</h3>
+                            <p id="why1-text">Comprendemos profundamente tus necesidades y diseñamos una hoja de ruta alineada con tus objetivos.</p>
+                        </div>
+                        <div class="why-card animate__animated animate__fadeInUp" style="animation-delay:0.12s;">
+                            <div class="why-icon">✔</div>
+                            <h3 id="why2-title">Ejecución &amp; Tecnología</h3>
+                            <p id="why2-text">Integramos marketing, diseño, IA y automatización para ofrecer resultados reales.</p>
+                        </div>
+                        <div class="why-card animate__animated animate__fadeInUp" style="animation-delay:0.18s;">
+                            <div class="why-icon">✔</div>
+                            <h3 id="why3-title">Crecimiento &amp; Optimización</h3>
+                            <p id="why3-text">Medimos, refinamos y escalamos tu proyecto para maximizar el impacto a largo plazo.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section id="blog" class="section blog-section">
             <div class="overlay">
                 <div class="blog-header animate__animated">
-                    <p class="blog-kicker" id="blog-kicker">Marketing · Datos · Automatización</p>
-                    <h2 class="section-title" id="blog-title">Conocé nuestro blog</h2>
-                    <p class="blog-subtitle" id="blog-subtitle">Aprendé con nuestros especialistas los errores más comunes y cómo evitarlos con datos y automatización.</p>
+                    <p class="blog-kicker" id="blog-kicker">Marketing &middot; Datos &middot; automatizaci&oacute;n</p>
+                    <h2 class="section-title" id="blog-title">Conoc&eacute; nuestro blog</h2>
+                    <p class="blog-subtitle" id="blog-subtitle">Aprend&eacute; con nuestros especialistas los errores m&aacute;s comunes y c&oacute;mo evitarlos con datos y automatizaci&oacute;n.</p>
                 </div>
                 <a class="blog-card animate__animated" href="blog-errores-marketing.html">
                     <div class="blog-card__media">
-                        <img src="BLOG1.jpg" alt="9 errores de marketing que frenan a cualquier negocio" loading="lazy">
+                        <img src="./img/BLOG1.jpg" alt="9 errores de marketing que frenan a cualquier negocio" loading="lazy">
                     </div>
                     <div class="blog-card__content">
-                        <p class="blog-card__meta" id="blog-meta">Por TrendMakers · 19/11/2025</p>
-                        <p class="blog-card__eyebrow" id="blog-eyebrow">Artículo destacado</p>
-                        <h3 class="blog-card__title" id="blog-article-title">9 errores de marketing que frenan a cualquier negocio (y cómo evitarlos)</h3>
+                        <p class="blog-card__meta" id="blog-meta">Por TrendMakers &middot; 19/11/2025</p>
+                        <p class="blog-card__eyebrow" id="blog-eyebrow">Art&iacute;culo destacado</p>
+                        <h3 class="blog-card__title" id="blog-article-title">9 errores de marketing que frenan a cualquier negocio (y c&oacute;mo evitarlos)</h3>
                         <p class="blog-card__excerpt" id="blog-excerpt">
-                            En un mercado saturado, la diferencia no está en publicar más sino en hacerlo estratégicamente. Conocé los 9 fallos que vemos en negocios reales y cómo evitarlos.
+                            En un mercado saturado, la diferencia no est&aacute; en publicar m&aacute;s sino en hacerlo estrat&eacute;gicamente. Conoc&eacute; los 9 fallos que vemos en negocios reales y c&oacute;mo evitarlos.
                         </p>
                         <div class="blog-stats">
                             <div class="blog-stat animate__animated">
                                 <p class="blog-stat__number" data-count-prefix="" data-count-target="75" data-count-suffix="%">0%</p>
-                                <p class="blog-stat__label" id="blog-stat1">De los usuarios juzga la credibilidad por el diseño visual</p>
+                                <p class="blog-stat__label" id="blog-stat1">De los usuarios juzga la credibilidad por el dise&ntilde;o visual</p>
                             </div>
                             <div class="blog-stat animate__animated">
                                 <p class="blog-stat__number" data-count-prefix="+" data-count-target="23" data-count-suffix="%">0%</p>
                                 <p class="blog-stat__label" id="blog-stat2">De ingresos al mantener identidad consistente</p>
                             </div>
                             <div class="blog-stat animate__animated">
-                                <p class="blog-stat__number" data-count-prefix="–" data-count-target="65" data-count-suffix="%">0%</p>
-                                <p class="blog-stat__label" id="blog-stat3">De interacción al publicar sin objetivo</p>
+                                <p class="blog-stat__number" data-count-prefix="" data-count-target="65" data-count-suffix="%">0%</p>
+                                <p class="blog-stat__label" id="blog-stat3">De interacci&oacute;n al publicar sin objetivo</p>
                             </div>
                             <div class="blog-stat animate__animated">
                                 <p class="blog-stat__number" data-count-prefix="x" data-count-target="3" data-count-suffix="">0</p>
-                                <p class="blog-stat__label" id="blog-stat4">Más leads con un calendario estratégico</p>
+                                <p class="blog-stat__label" id="blog-stat4">M&aacute;s leads con un calendario estrat&eacute;gico</p>
                             </div>
                             <div class="blog-stat animate__animated">
                                 <p class="blog-stat__number" data-count-prefix="" data-count-target="88" data-count-suffix="%">0%</p>
@@ -420,14 +519,14 @@
                             </div>
                             <div class="blog-stat animate__animated">
                                 <p class="blog-stat__number" data-count-prefix="+" data-count-target="70" data-count-suffix="%">0%</p>
-                                <p class="blog-stat__label" id="blog-stat7">Crecimiento con inversión constante en anuncios</p>
+                                <p class="blog-stat__label" id="blog-stat7">Crecimiento con inversi&oacute;n constante en anuncios</p>
                             </div>
                             <div class="blog-stat animate__animated">
                                 <p class="blog-stat__number" data-count-prefix="" data-count-target="42" data-count-suffix="%">0%</p>
-                                <p class="blog-stat__label" id="blog-stat8">Del presupuesto se desperdicia por mala segmentación</p>
+                                <p class="blog-stat__label" id="blog-stat8">Del presupuesto se desperdicia por mala segmentaci&oacute;n</p>
                             </div>
                         </div>
-                        <span class="blog-card__cta" id="blog-cta">Leer artículo</span>
+                        <span class="blog-card__cta" id="blog-cta">Leer art&iacute;culo</span>
                     </div>
                 </a>
             </div>
@@ -457,26 +556,27 @@
      
         <footer>
             <div class="footer-logos">
-                <img src="google-ads.svg" alt="Google Ads">
-                <img src="google-partner.svg" alt="Google Partner">
-                <img src="logofacebookads.png" alt="Facebook Ads">
-                <img src="cace.svg" alt="CACE">
+                <img src="./img/google-ads.svg" alt="Google Ads">
+                <img src="./img/google-partner.svg" alt="Google Partner">
+                <img src="./img/logofacebookads.png" alt="Facebook Ads">
+                <img src="./img/cace.svg" alt="CACE">
             </div>
             <p id="footer-text" class="animate__animated">&copy; 2023 TrendMakers. Todos los derechos reservados.</p>
         </footer>
         <!-- Pop-up Modal eliminado: usamos enlace mailto directo -->
     </div>
 <!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20más%20información." class="whatsapp-button" target="_blank">
-  <img src="WPP.PNG" alt="WhatsApp"">
+<a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20más%20información." class="whatsapp-button" target="_blank">
+  <img src="./img/WPP.PNG" alt="WhatsApp"">
 </a>
 
     <!-- Botón flotante de Email -->
-    <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank">
-        <img src="EMAIL.jpg" alt="Email">
+    <a href="mailto:info@trendmakers.agencysubject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank">
+        <img src="./img/EMAIL.jpg" alt="Email">
     </a>
-    <script src="script.js"></script>
-    <script src="blog_i18n.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/success_cards.js"></script>
+    <script src="./js/blog_i18n.js"></script>
     <script>
         function toggleMenu() {
             const hamburger = document.querySelector('.hamburger');
@@ -494,6 +594,9 @@
     </script>
 </body>
 </html>
+
+
+
 
 
 

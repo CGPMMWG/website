@@ -1,0 +1,639 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding &amp; Communication | TrendMakers</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header_overrides.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root { --tm-gradient: linear-gradient(135deg, #1b0b2e 0%, #34105a 50%, #4c1d95 100%); }
+        body {
+            margin: 0;
+            font-family: "Inter", system-ui, -apple-system, sans-serif;
+            background: var(--tm-gradient);
+            color: #f5f2ff;
+            overflow-x: hidden;
+        }
+        .shell {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: clamp(18px, 4vw, 42px) clamp(16px, 4vw, 32px) 72px;
+        }
+        section {
+            margin: clamp(42px, 6vw, 78px) 0;
+        }
+        h1, h2, h3 { margin: 0 0 10px; color: #fff; line-height: 1.2; }
+        h1 { font-size: clamp(1.9rem, 1.2rem + 2vw, 3rem); }
+        h2 { font-size: clamp(1.4rem, 1rem + 1.4vw, 2.1rem); }
+        h3 { font-size: 1.1rem; }
+        p { margin: 0 0 10px; color: #e7e1ff; line-height: 1.6; }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 22px;
+            border-radius: 999px;
+            background: linear-gradient(120deg, #7b2ff7, #6a0dad 40%, #00c3ff);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+            transition: transform 160ms ease, box-shadow 160ms ease;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(0,0,0,0.45); }
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            align-items: center;
+        }
+        .hero-visual {
+            position: relative;
+            min-height: 260px;
+            border-radius: 18px;
+            background:
+                radial-gradient(500px 500px at 20% 20%, rgba(236,72,153,0.12), transparent 40%),
+                radial-gradient(500px 500px at 80% 10%, rgba(59,130,246,0.12), transparent 40%),
+                linear-gradient(145deg, #120a24, #1e1036 50%, #2b0f4b);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+        }
+        .hero-visual img { max-width: 100%; height: auto; display: block; }
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+            color: #dcd4ff;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+        .card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: clamp(18px, 3vw, 26px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+        }
+        .list { margin: 12px 0 0; padding: 0; list-style: none; }
+        .list li {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            align-items: start;
+            margin-bottom: 10px;
+            color: #eae6ff;
+        }
+        .list li::before {
+            content: "✔";
+            color: #7bffb2;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+        .step {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 12px;
+            align-items: start;
+        }
+        .step-number {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7b2ff7, #00c3ff);
+            color: #0b0620;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+        }
+        .mini-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+        .mini-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 14px;
+            text-decoration: none;
+            color: #f7f4ff;
+            display: grid;
+            gap: 8px;
+            transition: transform 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+        }
+        .mini-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(123,191,255,0.8);
+            box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+        }
+        .section-title-center {
+            text-align: center;
+            margin-bottom: clamp(16px, 3vw, 24px);
+        }
+        .section-lead {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto clamp(20px, 3vw, 28px);
+            color: #e7e1ff;
+        }
+        :root { --header-height: 72px; }
+        @media (max-width: 640px){ :root { --header-height: 110px; } }
+        .back-btn {
+            position: fixed;
+            top: calc(var(--header-height) + 8px);
+            left: 12px;
+            z-index: 80;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(0,0,0,0.35);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #f4f2ff;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+            backdrop-filter: blur(10px);
+            transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 26px rgba(0,0,0,0.45);
+            border-color: rgba(123,191,255,0.7);
+        }
+        @media (max-width: 640px) {
+            .back-btn { top: calc(var(--header-height) + 6px); left: 10px; padding: 9px 12px; }
+            .shell { padding-top: calc(var(--header-height) + 40px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <a class="back-btn" href="index.html#problema" aria-label="Volver a la secciÃ³n Â¿Listo para llevar tu marca al prÃ³ximo nivel?">&#8592; Volver</a>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="social-buttons">
+                <a href="https://www.linkedin.com/company/trendmakersagency" class="linkedin-button" target="_blank">
+                    <img src="./img/Linkedinlogo.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/trendmakers.agency_igsh=cTN1Z3N0ejk1YmJu" class="instagram-button" target="_blank">
+                    <img src="./img/INSTAGRAMLOGO.PNG" alt="Instagram">
+                </a>
+            </div>
+            <ul class="desktop-menu">
+                <li><a href="index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
+                <li><a href="index.html#servicios" id="nav-servicios" class="menu-item">Nuestros Servicios</a></li>
+                <li><a href="index.html#problema" id="nav-problema" class="menu-item">Contanos tu Proyecto</a></li>
+                <li><a href="index.html#equipo" id="nav-equipo" class="menu-item">Nuestro Equipo</a></li>
+                <li><a href="index.html#acerca" id="nav-acerca" class="menu-item">Por que elegirnos</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de exito</a></li>
+                <li><a href="index.html#blog" id="nav-blog" class="menu-item">Blog</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item">Agenda una Llamada</a></li>
+            </ul>
+            <div class="nav-lang">
+              <div class="language-selector" aria-label="Selector de idioma">
+                <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
+                  <img src="./img/IDIOMA.PNG" alt="Idioma">
+                </button>
+                <div class="lang-menu" role="menu" aria-label="Idiomas">
+                  <button class="lang-option" role="menuitem" data-lang="es">EspaÃ±ol</button>
+                  <button class="lang-option" role="menuitem" data-lang="en">English</button>
+                </div>
+              </div>
+            </div>
+            <ul class="mobile-menu">
+                <li><a href="index.html#inicio" id="nav-inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="index.html#servicios" id="nav-servicios" class="menu-item" onclick="closeMenu()">Nuestros Servicios</a></li>
+                <li><a href="index.html#problema" id="nav-problema" class="menu-item" onclick="closeMenu()">Contanos tu Proyecto</a></li>
+                <li><a href="index.html#equipo" id="nav-equipo" class="menu-item" onclick="closeMenu()">Nuestro Equipo</a></li>
+                <li><a href="index.html#acerca" id="nav-acerca" class="menu-item" onclick="closeMenu()">Por que elegirnos</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de exito</a></li>
+                <li><a href="index.html#blog" id="nav-blog-mobile" class="menu-item" onclick="closeMenu()">Blog</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item" onclick="closeMenu()">Agenda una Llamada</a></li>
+            </ul>
+        </nav>
+        <div class="shell">
+        <section class="hero">
+            <div>
+                <div class="pill" id="bc-badge">Branding &amp; Communication</div>
+                <h1 id="bc-h1">Branding &amp; Communication</h1>
+                <h2 id="bc-h2">Marcas claras, memorables y coherentes.</h2>
+                <p id="bc-hero-text">En TrendMakers dise&ntilde;amos identidades visuales y sistemas de comunicaci&oacute;n que reflejan el valor real de tu negocio. Creamos marcas s&oacute;lidas, modernas y consistentes que conectan con tu audiencia y elevan tu presencia digital y profesional.</p>
+                <a class="btn-primary" id="bc-cta" href="https://calendly.com/mgottler1999/30min" target="_blank" rel="noopener">Agendar una llamada</a>
+            </div>
+            <div class="hero-visual">
+                <img src="./img/logo1.png" alt="Automatizaci&oacute;n y dashboards">
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h2 id="bc-que-title">&iquest;Qu&eacute; hacemos en Branding &amp; Communication?</h2>
+                <p id="bc-que-text">Construimos marcas y sistemas de comunicaci&oacute;n dise&ntilde;ados para escalar. Nuestro enfoque combina claridad est&eacute;tica, estrategia y coherencia para que tu marca transmita profesionalismo en cada punto de contacto.</p>
+                <ul class="list">
+                    <li id="bc-que-li1">Dise&ntilde;amos embudos de captaci&oacute;n y nurturing de leads.</li>
+                    <li id="bc-que-li2">Automatizamos correos, mensajes y seguimientos clave.</li>
+                    <li id="bc-que-li3">Organizamos tu CRM y tus pipelines comerciales.</li>
+                    <li id="bc-que-li4">Te damos visibilidad en tiempo real de qu&eacute; est&aacute; funcionando.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h2 id="bc-prob-title">De marcas improvisadas a identidades profesionales</h2>
+                <p id="bc-prob-text">Si te pasa alguna de estas cosas, este servicio es para vos:</p>
+                <ul class="list">
+                    <li id="bc-prob-li1">Tu marca actual se ve poco profesional o “casera”.</li>
+                    <li id="bc-prob-li2">Cada canal tiene un estilo distinto, sin coherencia visual ni de mensaje.</li>
+                    <li id="bc-prob-li3">Te cuesta explicar qu&eacute; hac&eacute;s o por qu&eacute; sos diferente.</li>
+                    <li id="bc-prob-li4">Tu identidad no refleja la calidad de tus servicios o productos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h2 id="bc-incl-title">&iquest;Qu&eacute; incluye Branding &amp; Communication?</h2>
+                <p id="bc-incl-text">Adaptamos cada proyecto seg&uacute;n tus objetivos, pero trabajamos siempre sobre tres pilares:</p>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3 id="bc-b1-title">Bloque 1 &ndash; Identidad Visual</h3>
+                        <ul class="list">
+                            <li id="bc-b1-li1">Dise&ntilde;o o redise&ntilde;o de logo.</li>
+                            <li id="bc-b1-li2">Paleta crom&aacute;tica y tipograf&iacute;as.</li>
+                            <li id="bc-b1-li3">Sistema visual y elementos gr&aacute;ficos.</li>
+                            <li id="bc-b1-li4">Aplicaciones b&aacute;sicas (banners, mockups, presentaciones).</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 id="bc-b2-title">Bloque 2 &ndash; Estrategia y Comunicaci&oacute;n</h3>
+                        <ul class="list">
+                            <li id="bc-b2-li1">Definici&oacute;n de tono de voz.</li>
+                            <li id="bc-b2-li2">Mensajes clave de marca.</li>
+                            <li id="bc-b2-li3">Storytelling y elevator pitch.</li>
+                            <li id="bc-b2-li4">Gu&iacute;a breve de estilo y comunicaci&oacute;n.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 id="bc-b3-title">Bloque 3 &ndash; Kits de Material de Marca</h3>
+                        <ul class="list">
+                            <li id="bc-b3-li1">Paquete de plantillas listas para usar.</li>
+                            <li id="bc-b3-li2">Material base para redes sociales.</li>
+                            <li id="bc-b3-li3">Presentaci&oacute;n institucional / pitch deck.</li>
+                            <li id="bc-b3-li4">Recursos editables para tu equipo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h2 id="bc-how-title">&iquest;C&oacute;mo trabajamos este servicio?</h2>
+                <div class="grid-2">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h3 id="bc-step1-title">Paso 1 &ndash; Exploraci&oacute;n y posicionamiento</h3>
+                            <p id="bc-step1-text">Analizamos tu negocio, tu audiencia y tus objetivos para definir una identidad con sentido estrat&eacute;gico.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h3 id="bc-step2-title">Paso 2 &ndash; Dise&ntilde;o del sistema de marca</h3>
+                            <p id="bc-step2-text">Creamos la identidad visual, los lineamientos de comunicaci&oacute;n y las piezas base que usar&aacute;s en tu d&iacute;a a d&iacute;a.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h3 id="bc-step3-title">Paso 3 &ndash; Implementaci&oacute;n y entrega</h3>
+                            <p id="bc-step3-text">Armamos el Brand Kit completo y te damos todos los archivos listos para usar, con sus versiones editables.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h2 id="bc-res-title">&iquest;Qu&eacute; resultados pod&eacute;s esperar?</h2>
+                <ul class="list">
+                    <li id="bc-res-li1">Una marca profesional, clara y coherente.</li>
+                    <li id="bc-res-li2">Comunicaci&oacute;n alineada a la estrategia del negocio.</li>
+                    <li id="bc-res-li3">Presencia digital unificada en todos tus canales.</li>
+                    <li id="bc-res-li4">Material listo para marketing, ventas y presentaciones.</li>
+                    <li id="bc-res-li5">Mejor percepci&oacute;n de valor y mayor confianza del cliente.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="card">
+                <h2 id="bc-why-title">&iquest;Por qu&eacute; hacer Branding &amp; Communication con TrendMakers?</h2>
+                <ul class="list">
+                    <li id="bc-why-li1">Dise&ntilde;amos con enfoque estrat&eacute;gico, no solo est&eacute;tico.</li>
+                    <li id="bc-why-li2">Conectamos branding con marketing, ventas y automatizaci&oacute;n.</li>
+                    <li id="bc-why-li3">Creamos sistemas simples que tu equipo puede mantener.</li>
+                    <li id="bc-why-li4">Tu marca se construye sobre fundamentos claros, no sobre gustos subjetivos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card section-title-center">
+            <h2 id="bc-cta2-title">&iquest;Tu marca refleja realmente el valor que ofrec&eacute;s?</h2>
+            <p class="section-lead" id="bc-cta2-text">Trabajemos juntos para crear una identidad profesional, coherente y alineada con tu estrategia de crecimiento.</p>
+            <a class="btn-primary" id="bc-cta2-btn" href="https://calendly.com/mgottler1999/30min" target="_blank" rel="noopener">Agendar una llamada</a>
+        </section>
+
+        <section>
+            <h2 class="section-title-center" id="bc-other-title">Otros servicios</h2>
+            <div class="mini-cards">
+                <a class="mini-card" href="branding-communication.html">
+                    <h3 id="bc-os1-title">Branding &amp; Communication</h3>
+                    <p id="bc-os1-text">Hacemos que tu marca y comunicaci&oacute;n est&eacute;n a la altura del sistema que estamos construyendo detr&aacute;s.</p>
+                </a>
+                <a class="mini-card" href="web-ecommerce.html">
+                    <h3 id="bc-os2-title">Web &amp; E-Commerce Development</h3>
+                    <p id="bc-os2-text">Dise&ntilde;amos webs y tiendas integradas con tus funnels, CRM y automatizaciones.</p>
+                </a>
+                <a class="mini-card" href="data-analitics.html">
+                    <h3 id="bc-os3-title">Consulting, Data &amp; Strategy</h3>
+                    <p id="bc-os3-text">Definimos el rumbo, prioridades y KPIs que van a guiar tu crecimiento.</p>
+                </a>
+                <a class="mini-card" href="ia-hub.html">
+                    <h3 id="bc-os4-title">AI &amp; Innovation Hub</h3>
+                    <p id="bc-os4-text">Sumamos IA y automatizaciones avanzadas para escalar tu operaci&oacute;n.</p>
+                </a>
+            </div>
+        </section>
+    </div>
+    <!-- Botones flotantes -->
+    <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m%C3%A1s%20informaci%C3%B3n." class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+        <img src="./img/WPP.PNG" alt="WhatsApp">
+    </a>
+    <a href="mailto:info@trendmakers.agencysubject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank" aria-label="Email">
+        <img src="./img/EMAIL.jpg" alt="Email">
+    </a>
+    <script src="./js/script.js"></script>
+        <script>
+      const bcCopy = {
+        es: {
+          badge: "Branding & Communication",
+          h1: "Branding & Communication",
+          h2: "Marcas claras, memorables y coherentes.",
+          hero: "En TrendMakers diseñamos identidades visuales y sistemas de comunicación que reflejan el valor real de tu negocio. Creamos marcas sólidas, modernas y consistentes que conectan con tu audiencia y elevan tu presencia digital y profesional.",
+          cta: "Agendar una llamada",
+          queTitle: "¿Qué hacemos en Branding & Communication?",
+          queText: "Construimos marcas y sistemas de comunicación diseñados para escalar. Nuestro enfoque combina claridad estética, estrategia y coherencia para que tu marca transmita profesionalismo en cada punto de contacto.",
+          queList: [
+            "Diseñamos identidades visuales modernas y profesionales.",
+            "Creamos lineamientos de comunicación con tono y mensajes clave.",
+            "Preparamos kits de piezas base para redes, presentaciones y anuncios.",
+            "Alineamos imagen y comunicación con objetivos de negocio."
+          ],
+          probTitle: "De marcas improvisadas a identidades profesionales",
+          probText: "Si te pasa alguna de estas cosas, este servicio es para vos:",
+          probList: [
+            "Tu marca actual se ve poco profesional o “casera”.",
+            "Cada canal tiene un estilo distinto, sin coherencia visual ni de mensaje.",
+            "Te cuesta explicar qué hacés o por qué sos diferente.",
+            "Tu identidad no refleja la calidad de tus servicios o productos."
+          ],
+          inclTitle: "¿Qué incluye Branding & Communication?",
+          inclText: "Adaptamos cada proyecto según tus objetivos, pero trabajamos siempre sobre tres pilares:",
+          b1Title: "Bloque 1 – Identidad Visual",
+          b1List: [
+            "Diseño o rediseño de logo.",
+            "Paleta cromática y tipografías.",
+            "Sistema visual y elementos gráficos.",
+            "Aplicaciones básicas (banners, mockups, presentaciones)."
+          ],
+          b2Title: "Bloque 2 – Estrategia y Comunicación",
+          b2List: [
+            "Definición de tono de voz.",
+            "Mensajes clave de marca.",
+            "Storytelling y elevator pitch.",
+            "Guía breve de estilo y comunicación."
+          ],
+          b3Title: "Bloque 3 – Kits de Material de Marca",
+          b3List: [
+            "Paquete de plantillas listas para usar.",
+            "Material base para redes sociales.",
+            "Presentación institucional / pitch deck.",
+            "Recursos editables para tu equipo."
+          ],
+          howTitle: "¿Cómo trabajamos este servicio?",
+          steps: [
+            { title: "Paso 1 – Exploración y posicionamiento", text: "Analizamos tu negocio, tu audiencia y tus objetivos para definir una identidad con sentido estratégico." },
+            { title: "Paso 2 – Diseño del sistema de marca", text: "Creamos la identidad visual, los lineamientos de comunicación y las piezas base que usarás en tu día a día." },
+            { title: "Paso 3 – Implementación y entrega", text: "Armamos el Brand Kit completo y te damos todos los archivos listos para usar, con sus versiones editables." }
+          ],
+          resTitle: "¿Qué resultados podés esperar?",
+          resList: [
+            "Una marca profesional, clara y coherente.",
+            "Comunicación alineada a la estrategia del negocio.",
+            "Presencia digital unificada en todos tus canales.",
+            "Material listo para marketing, ventas y presentaciones.",
+            "Mejor percepción de valor y mayor confianza del cliente."
+          ],
+          whyTitle: "¿Por qué hacer Branding & Communication con TrendMakers?",
+          whyList: [
+            "Diseñamos con enfoque estratégico, no solo estético.",
+            "Conectamos branding con marketing, ventas y automatización.",
+            "Creamos sistemas simples que tu equipo puede mantener.",
+            "Tu marca se construye sobre fundamentos claros, no sobre gustos subjetivos."
+          ],
+          cta2Title: "¿Tu marca refleja realmente el valor que ofrecés?",
+          cta2Text: "Trabajemos juntos para crear una identidad profesional, coherente y alineada con tu estrategia de crecimiento.",
+          cta2Btn: "Agendar una llamada",
+          otherTitle: "Otros servicios",
+          os1: { title: "Marketing & Automation", text: "Sistemas que generan y gestionan leads en piloto automático." },
+          os2: { title: "Web & E-Commerce Development", text: "Sitios y tiendas rápidas, modernas e integradas a tus funnels." },
+          os3: { title: "Consulting, Data & Strategy", text: "Dirección estratégica basada en análisis y datos reales." },
+          os4: { title: "AI & Innovation Hub", text: "IA y automatizaciones inteligentes para escalar tu operación." },
+          back: "← Volver"
+        },
+        en: {
+          badge: "Branding & Communication",
+          h1: "Branding & Communication",
+          h2: "Clear, memorable, and consistent brands.",
+          hero: "At TrendMakers, we design visual identities and communication systems that reflect the true value of your business. We create strong, modern, and consistent brands that connect with your audience and elevate your digital and professional presence.",
+          cta: "Book a call",
+          queTitle: "What do we do in Branding & Communication?",
+          queText: "We build brands and communication systems designed to scale. Our approach blends aesthetic clarity, strategy, and consistency so your brand conveys professionalism at every touchpoint.",
+          queList: [
+            "We design modern, professional visual identities.",
+            "We create communication guidelines with tone and key messages.",
+            "We prepare starter kits for social, presentations, and ads.",
+            "We align image and communication with business goals."
+          ],
+          probTitle: "From improvised brands to professional identities",
+          probText: "If any of this sounds familiar, this service is for you:",
+          probList: [
+            "Your brand looks unpolished or “homemade.”",
+            "Each channel has a different style with no visual or message consistency.",
+            "It’s hard to explain what you do or why you’re different.",
+            "Your identity doesn’t reflect the quality of your services or products."
+          ],
+          inclTitle: "What’s included in Branding & Communication?",
+          inclText: "We tailor every project to your goals, but we always work across three pillars:",
+          b1Title: "Block 1 – Visual Identity",
+          b1List: [
+            "Logo design or redesign.",
+            "Color palette and typography.",
+            "Visual system and graphic elements.",
+            "Basic applications (banners, mockups, presentations)."
+          ],
+          b2Title: "Block 2 – Strategy and Communication",
+          b2List: [
+            "Tone of voice definition.",
+            "Brand key messages.",
+            "Storytelling and elevator pitch.",
+            "Brief style and communication guide."
+          ],
+          b3Title: "Block 3 – Brand Material Kits",
+          b3List: [
+            "Template pack ready to use.",
+            "Base material for social media.",
+            "Company presentation / pitch deck.",
+            "Editable resources for your team."
+          ],
+          howTitle: "How do we deliver this service?",
+          steps: [
+            { title: "Step 1 – Exploration and positioning", text: "We analyze your business, audience, and goals to define a strategically sound identity." },
+            { title: "Step 2 – Brand system design", text: "We create the visual identity, communication guidelines, and core assets you’ll use every day." },
+            { title: "Step 3 – Implementation and handoff", text: "We build the complete Brand Kit and deliver every file ready to use, with editable versions." }
+          ],
+          resTitle: "What results can you expect?",
+          resList: [
+            "A professional, clear, and coherent brand.",
+            "Communication aligned to business strategy.",
+            "Unified digital presence across all channels.",
+            "Ready-to-use material for marketing, sales, and presentations.",
+            "Better perceived value and greater customer trust."
+          ],
+          whyTitle: "Why choose TrendMakers for Branding & Communication?",
+          whyList: [
+            "We design with a strategic focus, not just aesthetics.",
+            "We connect branding with marketing, sales, and automation.",
+            "We build simple systems your team can maintain.",
+            "Your brand is built on clear fundamentals, not subjective tastes."
+          ],
+          cta2Title: "Does your brand truly reflect the value you offer?",
+          cta2Text: "Let’s build a professional, coherent identity aligned with your growth strategy.",
+          cta2Btn: "Book a call",
+          otherTitle: "Other Services",
+          os1: { title: "Marketing & Automation", text: "Systems that generate and manage leads on autopilot." },
+          os2: { title: "Web & E-Commerce Development", text: "Fast, modern sites and stores integrated with your funnels." },
+          os3: { title: "Consulting, Data & Strategy", text: "Strategic direction guided by analysis and real data." },
+          os4: { title: "AI & Innovation Hub", text: "Smart AI and automations to scale your operation." },
+          back: "← Back"
+        }
+      };
+      const bcSet = (id, val) => { const el = document.getElementById(id); if (el && val !== undefined) el.innerHTML = val; };
+      function applyBCLang(lang){
+        const t = bcCopy[lang] || bcCopy.es;
+        document.documentElement.lang = lang === 'en' ? 'en' : 'es';
+        bcSet('bc-badge', t.badge);
+        bcSet('bc-h1', t.h1);
+        bcSet('bc-h2', t.h2);
+        bcSet('bc-hero-text', t.hero);
+        bcSet('bc-cta', t.cta);
+        bcSet('bc-que-title', t.queTitle);
+        bcSet('bc-que-text', t.queText);
+        ['bc-que-li1','bc-que-li2','bc-que-li3','bc-que-li4'].forEach((id,i)=>bcSet(id, t.queList[i]));
+        bcSet('bc-prob-title', t.probTitle);
+        bcSet('bc-prob-text', t.probText);
+        ['bc-prob-li1','bc-prob-li2','bc-prob-li3','bc-prob-li4'].forEach((id,i)=>bcSet(id, t.probList[i]));
+        bcSet('bc-incl-title', t.inclTitle);
+        bcSet('bc-incl-text', t.inclText);
+        bcSet('bc-b1-title', t.b1Title);
+        ['bc-b1-li1','bc-b1-li2','bc-b1-li3','bc-b1-li4'].forEach((id,i)=>bcSet(id, t.b1List[i]));
+        bcSet('bc-b2-title', t.b2Title);
+        ['bc-b2-li1','bc-b2-li2','bc-b2-li3','bc-b2-li4'].forEach((id,i)=>bcSet(id, t.b2List[i]));
+        bcSet('bc-b3-title', t.b3Title);
+        ['bc-b3-li1','bc-b3-li2','bc-b3-li3','bc-b3-li4'].forEach((id,i)=>bcSet(id, t.b3List[i]));
+        bcSet('bc-how-title', t.howTitle);
+        ['bc-step1','bc-step2','bc-step3'].forEach((key, idx)=>{
+          const data = t.steps[idx];
+          if (!data) return;
+          bcSet(`${key}-title`, data.title);
+          bcSet(`${key}-text`, data.text);
+        });
+        bcSet('bc-res-title', t.resTitle);
+        ['bc-res-li1','bc-res-li2','bc-res-li3','bc-res-li4','bc-res-li5'].forEach((id,i)=>bcSet(id, t.resList[i]));
+        bcSet('bc-why-title', t.whyTitle);
+        ['bc-why-li1','bc-why-li2','bc-why-li3','bc-why-li4'].forEach((id,i)=>bcSet(id, t.whyList[i]));
+        bcSet('bc-cta2-title', t.cta2Title);
+        bcSet('bc-cta2-text', t.cta2Text);
+        bcSet('bc-cta2-btn', t.cta2Btn);
+        bcSet('bc-other-title', t.otherTitle);
+        bcSet('bc-os1-title', t.os1.title); bcSet('bc-os1-text', t.os1.text);
+        bcSet('bc-os2-title', t.os2.title); bcSet('bc-os2-text', t.os2.text);
+        bcSet('bc-os3-title', t.os3.title); bcSet('bc-os3-text', t.os3.text);
+        bcSet('bc-os4-title', t.os4.title); bcSet('bc-os4-text', t.os4.text);
+        const back = document.querySelector('.back-btn');
+        if (back) back.innerHTML = t.back;
+      }
+      (function(){
+        let lang = 'es';
+        try {
+          const params = new URLSearchParams(window.location.search);
+          const q = params.get('lang');
+          lang = q ? q.toLowerCase() : lang;
+          if (!q && typeof getLanguagePreference === 'function') {
+            lang = (getLanguagePreference() || lang).toLowerCase();
+          }
+        } catch(e){}
+        applyBCLang(lang);
+        if (typeof window.setLanguage === 'function' && !window.__bcLangWrapped){
+          const _orig = window.setLanguage;
+          window.setLanguage = function(l){
+            _orig(l);
+            applyBCLang((l || 'es').toLowerCase());
+          };
+          window.__bcLangWrapped = true;
+        }
+      })();
+      function toggleMenu() {
+          const hamburger = document.querySelector('.hamburger');
+          const mobileMenu = document.querySelector('nav ul.mobile-menu');
+          if (!hamburger || !mobileMenu) return;
+          hamburger.classList.toggle('active');
+          mobileMenu.classList.toggle('active');
+      }
+      function closeMenu() {
+          const hamburger = document.querySelector('.hamburger');
+          const mobileMenu = document.querySelector('nav ul.mobile-menu');
+          if (!hamburger || !mobileMenu) return;
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+      }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
