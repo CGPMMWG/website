@@ -1,8 +1,8 @@
-/* Casos de Éxito: usar fondo degradado violeta oscuro y quitar video */
+﻿/* Casos de exito: usar fondo degradado violeta oscuro y quitar video */
 #casos-exito .video-container { position: static !important; width: 100% !important; height: auto !important; min-height: 0 !important; overflow: visible !important; inset: auto !important; }
 #casos-exito .video-container video { display: none !important; }
 
-/* Fondo en la sección (como Servicios) para que no se corte en pantallas chicas */
+/* Fondo en la seccion (como Servicios) para que no se corte en pantallas chicas */
 #casos-exito {
   background:
     radial-gradient(900px 900px at 10% 10%, rgba(236,72,153,0.10), transparent 40%),
@@ -23,7 +23,7 @@
   padding: clamp(32px, 6vw, 72px) clamp(14px, 3.2vw, 24px) clamp(64px, 6vw, 96px);
 }
 
-/* Contenido con ancho máximo cómodo */
+/* Contenido con ancho maximo comodo */
 #casos-exito .intro {
   max-width: 1100px;
   margin: 0 auto 30px;
@@ -34,7 +34,7 @@
   backdrop-filter: none !important;
 }
 
-/* Centrado real de grid y títulos, con relleno simétrico */
+/* Centrado real de grid y titulos, con relleno simetrico */
 #casos-exito .intro,
 #casos-exito .flip-grid {
   width: 100% !important;
@@ -52,7 +52,7 @@
 
 @media (max-width: 768px) {
   #casos-exito { scroll-margin-top: 80px; }
-  /* Un poco más de padding derecho para no chocar con íconos flotantes */
+  /* Un poco mas de padding derecho para no chocar con iconos flotantes */
   #casos-exito .overlay { padding-right: clamp(18px, 4vw, 28px); }
 }
 
@@ -263,7 +263,8 @@ body.case-detail-page {
 .case-detail-shell {
   max-width: 1200px;
   margin: 0 auto;
-  padding: clamp(32px, 5vw, 64px) clamp(18px, 4vw, 48px) 96px;
+  /* Extra padding top so the back button and headline don't get hidden by the fixed header */
+  padding: clamp(96px, 14vh, 140px) clamp(18px, 4vw, 48px) 96px;
 }
 
 .case-detail-top {
@@ -286,7 +287,7 @@ body.case-detail-page {
   transition: color 160ms ease, border-color 160ms ease;
 }
 .case-back-link::before {
-  content: '←';
+  content: '';
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -320,8 +321,9 @@ body.case-detail-page {
   }
 }
 
-/* Acelerar animaci�n de aparici�n en las cards de Casos de �xito */
+/* Acelerar animacin de aparicin en las cards de Casos de xito */
 #casos-exito .animate__animated {
   transition: opacity 0.45s ease-out, transform 0.45s ease-out;
   animation-duration: 0.45s !important;
 }
+
