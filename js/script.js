@@ -44,8 +44,8 @@ function takeI18nSnapshot(){
   if (__orig.snapTaken) return;
     try {
         const ids = [
-            'nav-inicio','nav-acerca','nav-servicios','nav-contacto','nav-equipo','nav-casos-exito','nav-problema',
-            'intro-title','intro-text','about-title','about-text','services-title','services-text','team-title',
+            'nav-inicio','nav-acerca','nav-servicios','nav-contacto','nav-equipo','nav-equipo-mobile','nav-nosotros','nav-nosotros-mobile','nav-casos-exito','nav-problema',
+            'intro-title','intro-text','about-title','about-text','services-title','services-text','services-portfolio-cta','team-title',
             'contact-title','schedule-call','show-popup','popup-title','label-email','label-problema','submit-button',
             'footer-text','about-us-text','label-name','label-company','label-project','submit-contact-form','contact-soon',
             'closing-cta-title',
@@ -73,10 +73,11 @@ const translations = {
         title: "TrendMakers",
         subtitle: "Your digital Partner",
         navInicio: "Inicio",
-        navAcerca: "&iquest;Por qu&eacute; elegirnos",
-        navServicios: "Nuestros Servicios",
-        navContacto: "Agenda una Llamada",
-        navEquipo: "Nuestro Equipo",
+        navAcerca: "Nosotros",
+        navServicios: "Servicios",
+        navContacto: "Contacto",
+        navEquipo: "Equipo",
+        navNosotros: "Nosotros",
         navcasosexito: "Casos de &eacute;xito",
         blogNav: "Blog",
         introTitle: "Bienvenidos a TrendMakers",
@@ -92,6 +93,7 @@ const translations = {
         why3Title: "Crecimiento &amp; Optimizaci&oacute;n",
         why3Text: "Medimos, refinamos y escalamos tu proyecto para maximizar el impacto a largo plazo.",
         servicesTitle: "Nuestros Servicios",
+        servicesPortfolio: "PORTFOLIO DE SOLUCIONES",
         successtitle: "Casos de &eacute;xito",
         successIntro: "Algunos de nuestros casos de &eacute;xito:",
         successCase1: "Prontoled: Afectamos directamente la facturaci&oacute;n con la implementaci&oacute;n de automatizaciones de IA, gesti&oacute;n de anuncios y la realizaci&oacute;n de un plan exhaustivo de mercado que deriv&oacute; en un plan de acci&oacute;n.",
@@ -118,8 +120,8 @@ const translations = {
         teamTitle: "Nuestro equipo est&aacute; conformado por:",
         contactTitle: "Agenda una Llamada 1 a 1",
         scheduleCall: "Agenda una Llamada",
-        problemaButton: "Contanos tu Proyecto",
-        popupTitle: "Contanos tu Proyecto",
+        problemaButton: "¡Estoy listo!",
+        popupTitle: "¡Estoy listo!",
         labelEmail: "Correo Electr&oacute;nico:",
         labelProblema: "Proyecto:",
         submitButton: "Enviar",
@@ -161,8 +163,8 @@ const translations = {
         `,
         contactTitle: "Agenda una Llamada 1 a 1",
         scheduleCall: "Agenda una Llamada",
-        problemaButton: "Contanos tu Proyecto",
-        popupTitle: "Contanos tu Proyecto",
+        problemaButton: "¡Estoy listo!",
+        popupTitle: "¡Estoy listo!",
         labelEmail: "Correo Electr&oacute;nico:",
         labelProblema: "Proyecto:",
         submitButton: "Enviar",
@@ -170,27 +172,27 @@ const translations = {
         aboutUsText: "Somos una agencia de marketing a nivel global que se dedica a brindar servicios de excelencia a clientes de todas partes del mundo. Con un equipo de expertos en diversas &aacute;reas del marketing digital, nos especializamos en crear estrategias personalizadas que se adaptan a las necesidades espec&iacute;ficas de cada negocio. Nuestra misi&oacute;n es impulsar el crecimiento y &eacute;xito de nuestros clientes a trav&eacute;s de soluciones innovadoras y efectivas. Desde la gesti&oacute;n de redes sociales hasta el desarrollo de campa&ntilde;as publicitarias integrales, estamos comprometidos con la excelencia y la satisfacci&oacute;n del cliente en cada proyecto que emprendemos.",
         serviceDetails: `
             <a class="service-card animate__animated" href="marketing-automation.html" data-service-id="marketing-automation">
-                <img src="./img/logo1.png" alt="Marketing &amp; Automation">
+                <img src="./img/MATION.png" alt="Marketing &amp; Automation">
                 <h3>Marketing &amp; Automation</h3>
                 <p>Automatizamos tus procesos y funnels para generar m&aacute;s leads y conversiones con menos esfuerzo.</p>
             </a>
             <a class="service-card animate__animated" href="branding-communication.html" data-service-id="branding-communication">
-                <img src="./img/logo1.png" alt="Branding &amp; Communication">
+                <img src="./img/BRANDING.png" alt="Branding &amp; Communication">
                 <h3>Branding &amp; Communication</h3>
                 <p>Creamos marcas coherentes y comunicaci&oacute;n clara que conecta con tu audiencia.</p>
             </a>
             <a class="service-card animate__animated" href="web-ecommerce.html" data-service-id="web-ecommerce">
-                <img src="./img/logo1.png" alt="Web &amp; E-Commerce Development">
+                <img src="./img/WEB-ECOMM.png" alt="Web &amp; E-Commerce Development">
                 <h3>Web &amp; E-Commerce Development</h3>
                 <p>Desarrollamos sitios y tiendas r&aacute;pidas, seguras y optimizadas para convertir.</p>
             </a>
             <a class="service-card animate__animated" href="data-analitics.html" data-service-id="consulting-data-strategy">
-                <img src="./img/logo1.png" alt="Consulting, Data &amp; Strategy">
+                <img src="./img/DATA-STRAT.png" alt="Consulting, Data &amp; Strategy">
                 <h3>Consulting, Data &amp; Strategy</h3>
                 <p>Definimos tu rumbo con an&aacute;lisis, datos y estrategia para escalar tu negocio.</p>
             </a>
             <a class="service-card animate__animated" href="ia-hub.html" data-service-id="ai-innovation">
-                <img src="./img/logo1.png" alt="AI &amp; Innovation Hub">
+                <img src="./img/IA-HUB.png" alt="AI &amp; Innovation Hub">
                 <h3>AI &amp; Innovation Hub</h3>
                 <p>Implementamos IA y automatizaciones que mejoran procesos y crean ventaja competitiva.</p>
             </a>
@@ -207,10 +209,11 @@ const translations = {
         title: "TrendMakers",
         subtitle: "Your digital Partner",
         navInicio: "Home",
-        navAcerca: "Why choose us",
-        navServicios: "Our Services",
-        navContacto: "Schedule a Call",
-        navEquipo: "Our Team",
+        navAcerca: "About us",
+        navServicios: "Services",
+        navContacto: "Contact",
+        navEquipo: "Team",
+        navNosotros: "About us",
         navcasosexito: "Success Stories",
         blogNav: "Blog",
         introTitle: "Welcome to TrendMakers",
@@ -226,6 +229,7 @@ const translations = {
         why3Title: "Growth &amp; Optimization",
         why3Text: "We measure, refine, and scale your project to maximize long-term impact.",
         servicesTitle: "Our Services",
+        servicesPortfolio: "SOLUTIONS PORTFOLIO",
         successtitle: "Success Stories",
         successIntro: "Some of our success stories:",
         successCase1: "Prontoled: We directly impacted revenue with the implementation of AI automations, ad management, and the execution of a comprehensive market plan that led to an action plan.",
@@ -252,8 +256,8 @@ const translations = {
         teamTitle: "Our team consists of:",
         contactTitle: "Schedule a 1-on-1 Call",
         scheduleCall: "Schedule a Call",
-        problemaButton: "Tell us about your Project",
-        popupTitle: "Tell us about your Project",
+        problemaButton: "I'm ready!",
+        popupTitle: "I'm ready!",
         labelEmail: "Email:",
         labelProblema: "Project:",
         submitButton: "Send",
@@ -294,8 +298,8 @@ const translations = {
         `,
         contactTitle: "Schedule a 1-on-1 Call",
         scheduleCall: "Schedule a Call",
-        problemaButton: "Tell Us Your Project",
-        popupTitle: "Tell Us Your Project",
+        problemaButton: "I'm ready!",
+        popupTitle: "I'm ready!",
         labelEmail: "Email:",
         labelProblema: "Project:",
         submitButton: "Submit",
@@ -303,7 +307,7 @@ const translations = {
         aboutUsText: "We are a global marketing agency dedicated to providing excellent services to clients all over the world. With a team of experts in various areas of digital marketing, we specialize in creating personalized strategies that cater to the specific needs of each business. Our mission is to drive growth and success for our clients through innovative and effective solutions. From social media management to the development of comprehensive advertising campaigns, we are committed to excellence and customer satisfaction in every project we undertake.",
         serviceDetails: `
             <a class="service-card animate__animated" href="marketing-automation.html?lang=en" data-service-id="marketing-automation">
-                <img src="./img/logo1.png" alt="Marketing &amp; Automation">
+                <img src="./img/MATION.png" alt="Marketing &amp; Automation">
                 <h3>Marketing &amp; Automation</h3>
                 <p>We automate your funnels and processes to generate more qualified leads with less effort.</p>
             </a>
@@ -423,6 +427,37 @@ const translations = {
         `
     }
 };
+
+// Dynamic mailto builder by language
+const MAILTO_ES = `mailto:info@trendmakers.agency?subject=${encodeURIComponent('Solicitud de información sobre sus servicios')}&body=${encodeURIComponent('Hola, ¿cómo están? Me gustaría recibir información adicional sobre los servicios que ofrecen. Muchas gracias.')}`;
+const MAILTO_EN = `mailto:info@trendmakers.agency?subject=${encodeURIComponent('Request for Information About Your Services')}&body=${encodeURIComponent("Hi, hope you're doing well. I’d like to receive additional information about the services you offer. Thank you.")}`;
+
+function applyMailtoLinks(lang){
+  const href = (lang === 'en') ? MAILTO_EN : MAILTO_ES;
+  document.querySelectorAll('.mailto-dynamic').forEach((a)=>{
+    a.setAttribute('href', href);
+  });
+}
+
+// Normalize service logos regardless of language/template swaps
+function setServiceCardLogos(){
+  try {
+    const logos = {
+      'marketing-automation': { src: './img/MATION.png', alt: 'Marketing & Automation' },
+      'branding-communication': { src: './img/BRANDING.png', alt: 'Branding & Communication' },
+      'web-ecommerce': { src: './img/WEB-ECOMM.png', alt: 'Web & E-Commerce Development' },
+      'consulting-data-strategy': { src: './img/DATA-STRAT.png', alt: 'Consulting, Data & Strategy' },
+      'ai-innovation': { src: './img/IA-HUB.png', alt: 'AI & Innovation Hub' }
+    };
+    Object.keys(logos).forEach(function(key){
+      const img = document.querySelector(`.service-card[data-service-id="${key}"] img`);
+      if (img) {
+        img.src = logos[key].src;
+        img.alt = logos[key].alt;
+      }
+    });
+  } catch(e){ /* noop */ }
+}
 
 const LANG_STORAGE_KEY = 'trendLang';
 function saveLanguagePreference(lang) {
@@ -568,6 +603,7 @@ function setLanguage(language) {
                 if (mobile) mobile.innerHTML = val;
               }
             });
+            setServiceCardLogos();
             // Ensure restored ES service/team cards are visible
             try {
               document.querySelectorAll('#servicios .service-card, #equipo .team-card, .animate__animated').forEach(function(el){
@@ -591,6 +627,9 @@ function setLanguage(language) {
         'nav-servicios': 'navServicios',
         'nav-contacto': 'navContacto',
         'nav-equipo': 'navEquipo',
+        'nav-equipo-mobile': 'navEquipo',
+        'nav-nosotros': 'navNosotros',
+        'nav-nosotros-mobile': 'navNosotros',
         'nav-casos-exito': 'navcasosexito',
         'nav-problema': 'problemaButton',
         'nav-blog': 'blogNav',
@@ -625,6 +664,7 @@ function setLanguage(language) {
         'why3-text': 'why3Text',
         'services-title': 'servicesTitle',
         'services-text': 'servicesText',
+        'services-portfolio-cta': 'servicesPortfolio',
         'team-title': 'teamTitle',
         'contact-title': 'contactTitle',
         'schedule-call': 'scheduleCall',
@@ -672,6 +712,7 @@ function setLanguage(language) {
             newCards.forEach(el => el.classList.add('visible'));
         } catch (e) { /* noop */ }
         try { initMobileServiceCards(); } catch (e) { /* noop */ }
+        setServiceCardLogos();
     }
 
     const teamDetailsElement = document.querySelector('.team-details');
@@ -687,7 +728,9 @@ function setLanguage(language) {
     // Update nav (desktop and mobile duplicates)
     const navMap = [
       ['#nav-inicio','navInicio'],['#nav-acerca','navAcerca'],['#nav-servicios','navServicios'],
-      ['#nav-contacto','navContacto'],['#nav-equipo','navEquipo'],['#nav-casos-exito','navcasosexito'],
+      ['#nav-contacto','navContacto'],['#nav-equipo','navEquipo'],['#nav-equipo-mobile','navEquipo'],
+      ['#nav-nosotros','navNosotros'],['#nav-nosotros-mobile','navNosotros'],
+      ['#nav-casos-exito','navcasosexito'],
       ['#nav-problema','problemaButton'],['#nav-blog','blogNav'],['#nav-blog-mobile','blogNav']
     ];
     navMap.forEach(function([sel,key]){
@@ -698,9 +741,11 @@ function setLanguage(language) {
         if (mobile && translations[language]) mobile.innerHTML = translations[language][key] || mobile.innerHTML;
       } catch(e){ /* noop */ }
     });
+    setServiceCardLogos();
     setupScrollAnimations(true);
     saveLanguagePreference(language);
     updateDocumentLanguageAttr(language);
+    applyMailtoLinks(language);
 }
 
 document.addEventListener('DOMContentLoaded', function(){
@@ -710,7 +755,9 @@ document.addEventListener('DOMContentLoaded', function(){
     } else {
         saveLanguagePreference('es');
         updateDocumentLanguageAttr('es');
+        setServiceCardLogos();
     }
+    applyMailtoLinks(initialLang || 'es');
     initCountUps();
 });
 
@@ -764,6 +811,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let current = 0;
   const INTERVAL = 5000;
   const mq = window.matchMedia('(max-width: 768px)');
+  let carouselPlayed = false;
 
   function goTo(grid, cards, index, instant){
     if (!grid || !cards.length) return;
@@ -777,13 +825,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function start(grid, cards){
     clear();
-    if (!grid || cards.length <= 1) return;
-    // En mobile centramos el primer slide
+    if (!grid || cards.length <= 1 || carouselPlayed) return;
     goTo(grid, cards, 0, true);
-    timer = setInterval(() => {
-      current = (current + 1) % cards.length;
-      goTo(grid, cards, current);
-    }, INTERVAL);
+    carouselPlayed = true; // solo una pasada al cargar
   }
 
   function clear(){ if (timer) { clearInterval(timer); timer = null; } }

@@ -128,17 +128,17 @@
       acerca: "Por que elegirnos",
       casos: "Casos de exito",
       blog: "Blog",
-      contacto: "Agenda una Llamada",
+      contacto: "Contacto",
     },
     en: {
       inicio: "Home",
       servicios: "Our Services",
       problema: "Tell Us Your Project",
       equipo: "Our Team",
-      acerca: "Why choose us",
+      acerca: "About us",
       casos: "Success Stories",
       blog: "Blog",
-      contacto: "Schedule a Call",
+      contacto: "Contact",
     },
   };
 
