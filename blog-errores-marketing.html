@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>9 errores de marketing que bloquean el crecimiento | TrendMakers</title>
-    <meta name="description" content="Errores comunes de marketing digital y cómo evitarlos con datos, automatización y foco en conversión.">
-    <link rel="canonical" href="https://trendmakers.agency/blog-errores-marketing.html">
+    <title>Marketing & Automation: cuando tu empresa deja de perder leads y empieza a crecer con sistema | TrendMakers</title>
+    <meta name="description" content="Cómo las empresas convierten su marketing en un sistema de Marketing & Automation con funnels, CRM, automatización y datos. Historias reales de pain points y el enfoque de TrendMakers.">
+    <link rel="canonical" href="https://trendmakers.agency/blog-marketing-automation.html">
     <meta name="robots" content="index,follow">
+
+    <!-- Favicon principal -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- CSS global -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header_overrides.css">
+
+    <!-- Schema org Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -22,6 +29,8 @@
       ]
     }
     </script>
+
+    <!-- Schema org Breadcrumb -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -29,363 +38,697 @@
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://trendmakers.agency/" },
         { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://trendmakers.agency/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "9 errores de marketing", "item": "https://trendmakers.agency/blog-errores-marketing.html" }
+        { "@type": "ListItem", "position": 3, "name": "Marketing & Automation", "item": "https://trendmakers.agency/blog-marketing-automation.html" }
       ]
     }
     </script>
+
+    <!-- ====== ESTILO "CARO" / PREMIUM DEL ARTÍCULO ====== -->
     <style>
+        :root {
+            --tm-bg-dark: #050313;
+            --tm-bg-deep: #0b061f;
+            --tm-accent-1: #7b2ff7;
+            --tm-accent-2: #00c3ff;
+            --tm-accent-3: #ec4899;
+            --tm-text-main: #f9f9ff;
+            --tm-text-soft: rgba(243, 244, 255, 0.82);
+            --tm-border-soft: rgba(148, 163, 255, 0.25);
+            --tm-card-bg: rgba(11, 6, 31, 0.86);
+            --header-height: 72px;
+        }
+
+        @media (max-width: 640px){
+            :root { --header-height: 110px; }
+        }
+
         body.blog-article {
             margin: 0;
+            min-height: 100vh;
             background:
-              radial-gradient(900px 900px at 10% 10%, rgba(236,72,153,0.10), transparent 40%),
-              radial-gradient(900px 900px at 90% 20%, rgba(59,130,246,0.08), transparent 45%),
-              linear-gradient(135deg, #100720 0%, #1b0b2e 45%, #2c0f52 100%);
-            color: #f7f7ff;
+              radial-gradient(1100px 900px at 5% 0%, rgba(236,72,153,0.26), transparent 55%),
+              radial-gradient(900px 900px at 90% 10%, rgba(56,189,248,0.24), transparent 50%),
+              radial-gradient(1200px 1000px at 50% 120%, rgba(88,28,135,0.65), transparent 60%),
+              linear-gradient(145deg, var(--tm-bg-dark) 0%, var(--tm-bg-deep) 48%, #1b1039 100%);
+            color: var(--tm-text-main);
             font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
         }
+
+        body.blog-article::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background:
+              radial-gradient(circle at 20% 0%, rgba(255,255,255,0.06), transparent 55%),
+              radial-gradient(circle at 80% 100%, rgba(0,0,0,0.45), transparent 55%);
+            mix-blend-mode: soft-light;
+            z-index: 0;
+        }
+
+        /* NAV fijo premium (se apoya en header_overrides.css para layout base) */
+        body.blog-article nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 40;
+            background: radial-gradient(circle at 0% 0%, rgba(124,58,237,0.20), transparent 55%),
+                        rgba(5,3,19,0.84);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(148,163,255,0.35);
+        }
+
+        .content {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 clamp(16px, 4vw, 32px);
+        }
+
         .article-shell {
+            position: relative;
+            z-index: 1;
             max-width: 960px;
             margin: 0 auto;
-            padding: clamp(110px, 12vw, 140px) clamp(18px, 4vw, 36px) 96px;
+            padding: clamp(120px, 13vw, 150px) 0 96px;
         }
+
         .article-hero {
             display: grid;
             gap: 18px;
             text-align: left;
-            margin-bottom: clamp(24px, 5vw, 40px);
+            margin-bottom: clamp(26px, 5vw, 42px);
         }
+
+        .article-hero::before {
+            content: "Marketing & Automation · CRM · Datos · 2025";
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: rgba(209, 213, 255, 0.78);
+            padding: 6px 12px;
+            border-radius: 999px;
+            align-self: flex-start;
+            background:
+                linear-gradient(120deg, rgba(123,47,247,0.45), rgba(0,195,255,0.5));
+            box-shadow: 0 0 0 1px rgba(148,163,255,0.4),
+                        0 10px 30px rgba(15,23,42,0.9);
+        }
+
         .back-link {
-            color: rgba(255,255,255,0.82);
+            color: rgba(226,232,255,0.90);
             text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 0.02em;
+            font-weight: 500;
+            letter-spacing: 0.04em;
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            opacity: 0.8;
+            transition: opacity 0.2s ease, transform 0.18s ease;
         }
         .back-link::before { content: "\2190"; font-size: 1rem; }
+        .back-link:hover {
+            opacity: 1;
+            transform: translateX(-2px);
+        }
+
         .article-meta {
-            color: rgba(255,255,255,0.72);
-            font-size: 0.98rem;
+            color: rgba(199,210,254,0.82);
+            font-size: 0.95rem;
         }
+
         .article-hero h1 {
-            margin: 6px 0 10px;
-            font-size: clamp(1.9rem, 1.4rem + 1.2vw, 2.6rem);
-            line-height: 1.2;
+            margin: 8px 0 6px;
+            font-size: clamp(2rem, 1.6rem + 1.2vw, 2.7rem);
+            line-height: 1.16;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            background: linear-gradient(135deg, #ffffff 0%, #e5e7ff 40%, #a5b4fc 75%, #f472b6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
-        .article-image {
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 22px 60px rgba(0,0,0,0.35);
-            margin: 10px 0 26px;
-        }
-        .article-image img { width: 100%; display: block; object-fit: cover; }
+
         .lead {
-            font-size: 1.08rem;
-            line-height: 1.65;
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 12px;
+            font-size: 1.03rem;
+            line-height: 1.7;
+            color: var(--tm-text-soft);
+            max-width: 780px;
         }
+        .lead + .lead {
+            margin-top: 2px;
+        }
+
+        .article-image {
+            border-radius: 22px;
+            overflow: hidden;
+            margin: 6px 0 28px;
+            position: relative;
+            background: radial-gradient(circle at 0% 0%, rgba(236,72,153,0.25), transparent 55%);
+            padding: 1px;
+        }
+        .article-image::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 22px;
+            background: radial-gradient(circle at 0% 0%, rgba(236,72,153,0.35), transparent 60%),
+                        radial-gradient(circle at 100% 0%, rgba(59,130,246,0.35), transparent 60%);
+            mix-blend-mode: soft-light;
+            opacity: 0.55;
+            pointer-events: none;
+        }
+        .article-image img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 22px 65px rgba(0,0,0,0.65);
+        }
+
         .article-section {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 18px;
-            padding: clamp(16px, 4vw, 22px);
-            margin-bottom: 16px;
-            box-shadow: 0 14px 40px rgba(0,0,0,0.25);
+            position: relative;
+            background: radial-gradient(circle at 0% 0%, rgba(148,163,255,0.10), transparent 55%),
+                        radial-gradient(circle at 100% 100%, rgba(244,114,182,0.08), transparent 55%),
+                        var(--tm-card-bg);
+            border-radius: 22px;
+            padding: clamp(18px, 4vw, 24px);
+            margin-bottom: 18px;
+            box-shadow:
+                0 18px 48px rgba(15,23,42,0.85),
+                0 0 0 1px rgba(148,163,255,0.22);
+            border: 1px solid rgba(148,163,255,0.18);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            overflow: hidden;
+            transition: transform 0.22s ease-out,
+                        box-shadow 0.22s ease-out,
+                        border-color 0.22s ease-out,
+                        background 0.22s ease-out;
         }
+
+        .article-section:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 24px 60px rgba(15,23,42,0.95),
+                0 0 0 1px rgba(191,219,254,0.45);
+            border-color: rgba(191,219,254,0.55);
+            background:
+                radial-gradient(circle at 0% 0%, rgba(148,163,255,0.16), transparent 55%),
+                radial-gradient(circle at 100% 100%, rgba(244,114,182,0.14), transparent 55%),
+                rgba(11, 6, 31, 0.96);
+        }
+
+        .article-section::after {
+            content: "";
+            position: absolute;
+            top: -40px;
+            right: -80px;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(244,114,182,0.45), transparent 60%);
+            opacity: 0.32;
+            pointer-events: none;
+        }
+
         .article-section h2 {
             margin: 0 0 10px;
-            font-size: clamp(1.15rem, 1rem + 0.4vw, 1.5rem);
-            color: #ffffff;
+            font-size: clamp(1.12rem, 1rem + 0.45vw, 1.55rem);
+            color: #eef2ff;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
         }
+
         .article-section p {
             margin: 0 0 10px;
-            line-height: 1.6;
-            color: rgba(255,255,255,0.88);
+            line-height: 1.65;
+            color: rgba(226,232,255,0.9);
+            font-size: 0.97rem;
         }
+
         .article-section ul {
-            padding-left: 18px;
+            padding-left: 1.1rem;
             margin: 0 0 6px;
-            color: rgba(255,255,255,0.88);
+            color: rgba(226,232,255,0.9);
+            font-size: 0.96rem;
+            max-width: 72ch;
         }
-        .article-section li { margin-bottom: 6px; }
+        .article-section li {
+            margin-bottom: 6px;
+            position: relative;
+        }
+        .article-section li::marker {
+            color: rgba(129,140,248,0.95);
+        }
+
+        #section-conclusion {
+            border-image: linear-gradient(120deg, var(--tm-accent-3), var(--tm-accent-2)) 1;
+            border-width: 1px;
+            border-style: solid;
+        }
+
         .article-cta {
-            margin-top: 28px;
+            margin-top: 30px;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            padding: 12px 18px;
-            border-radius: 12px;
-            background: linear-gradient(120deg, #7b2ff7 0%, #6a0dad 45%, #00c3ff 100%);
-            color: #fff;
+            padding: 13px 22px;
+            border-radius: 999px;
+            background:
+                linear-gradient(135deg, rgba(15,23,42,1) 0%, rgba(15,23,42,0.98) 40%, rgba(30,64,175,0.96) 100%);
+            color: #f9fafb;
             text-decoration: none;
             font-weight: 700;
-            box-shadow: 0 18px 36px rgba(0,0,0,0.3);
+            font-size: 0.95rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            box-shadow:
+                0 18px 40px rgba(15,23,42,0.95),
+                0 0 0 1px rgba(129,140,248,0.9);
+            border: 1px solid rgba(191,219,254,0.22);
+            position: relative;
+            overflow: hidden;
         }
-        .article-cta:hover { transform: translateY(-1px); }
+        .article-cta::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, transparent 0%, rgba(249,250,251,0.16) 40%, transparent 80%);
+            transform: translateX(-120%);
+            transition: transform 0.45s ease-out;
+        }
+        .article-cta:hover::after {
+            transform: translateX(40%);
+        }
+        .article-cta:hover {
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 840px) {
+            .article-shell {
+                padding-top: 120px;
+            }
+            .article-hero::before {
+                font-size: 0.68rem;
+            }
+        }
+
         @media (max-width: 640px) {
-            .article-shell { padding: 110px 14px 72px; }
-            .article-hero h1 { font-size: 1.8rem; }
-            .article-section { padding: 14px; }
+            .article-shell {
+                padding: 112px 0 76px;
+            }
+            .article-hero h1 {
+                font-size: 1.85rem;
+            }
+            .article-section {
+                padding: 15px 14px 16px;
+                border-radius: 18px;
+            }
+            .article-image {
+                border-radius: 18px;
+            }
         }
     </style>
 </head>
 <body class="blog-article">
-    <nav>
-      <div class="hamburger" onclick="toggleMenu()">
-        <div></div><div></div><div></div>
-      </div>
-      <div class="social-buttons">
-        <a href="https://www.linkedin.com/company/trendmakersagency" class="linkedin-button" target="_blank">
-          <img src="./img/Linkedinlogo.png" alt="LinkedIn">
-        </a>
-        <a href="https://www.instagram.com/trendmakers.agency_igsh=cTN1Z3N0ejk1YmJu" class="instagram-button" target="_blank">
-          <img src="./img/INSTAGRAMLOGO.PNG" alt="Instagram">
-        </a>
-      </div>
-      <ul class="desktop-menu" id="desktop-menu">
-        <li><a href="index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
-        <li><a href="index.html#servicios" id="nav-servicios" class="menu-item">Nuestros Servicios</a></li>
-        <li><a href="index.html#problema" id="nav-problema" class="menu-item">Contanos tu Proyecto</a></li>
-        <li><a href="index.html#equipo" id="nav-equipo" class="menu-item">Nuestro Equipo</a></li>
-        <li><a href="index.html#acerca" id="nav-acerca" class="menu-item">Por que elegirnos</a></li>
-        <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de exito</a></li>
-        <li><a href="index.html#blog" id="nav-blog" class="menu-item">Blog</a></li>
-        <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item">Agenda una Llamada</a></li>
-      </ul>
-      <div class="nav-lang">
-        <div class="language-selector" aria-label="Selector de idioma">
-          <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
-            <img src="./img/IDIOMA.PNG" alt="Idioma">
-          </button>
-          <div class="lang-menu" role="menu" aria-label="Idiomas">
-            <button class="lang-option" role="menuitem" data-lang="es">Español</button>
-            <button class="lang-option" role="menuitem" data-lang="en">English</button>
-          </div>
-        </div>
-      </div>
-      <ul class="mobile-menu" id="mobile-menu">
-        <li><a href="index.html#inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
-        <li><a href="index.html#servicios" class="menu-item" onclick="closeMenu()">Nuestros Servicios</a></li>
-        <li><a href="index.html#problema" class="menu-item" onclick="closeMenu()">Contanos tu Proyecto</a></li>
-        <li><a href="index.html#equipo" class="menu-item" onclick="closeMenu()">Nuestro Equipo</a></li>
-        <li><a href="index.html#acerca" class="menu-item" onclick="closeMenu()">Por que elegirnos</a></li>
-        <li><a href="index.html#casos-exito" class="menu-item" onclick="closeMenu()">Casos de exito</a></li>
-        <li><a href="index.html#blog" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
-        <li><a href="index.html#contact-form" class="menu-item" onclick="closeMenu()">Agenda una Llamada</a></li>
-      </ul>
-    </nav>
+    <div class="content">
+        <!-- ===== HEADER IGUAL A OTRAS PÁGINAS (LOGO + MENÚ REDES) ===== -->
+        <nav>
+            <a class="tm-header-badge" href="index.html#inicio" aria-label="TrendMakers home" id="tm-badge">
+                <img src="img/TrendMakers-Header.png" alt="TrendMakers">
+            </a>
 
-    <main class="article-shell">
-        <div class="article-hero">
-            <a class="back-link" id="blog-back" href="index.html#blog">Volver al blog</a>
-            <h1 id="article-title">9 errores de marketing que bloquean el crecimiento de cualquier negocio (y cómo evitarlos)</h1>
-            <p class="article-meta" id="article-meta">Por TrendMakers — Marketing, Datos &amp; Automatización · 19/11/2025</p>
-            <p class="lead" id="lead-1">En un mercado donde todas las marcas publican, diseñan, suben historias y hacen ads, la diferencia real no está en hacer más, sino en hacer mejor.</p>
-            <p class="lead" id="lead-2">La mayoría de las PYMES no crece por falta de esfuerzo, sino por decisiones de marketing que las frenan sin que se den cuenta.</p>
-            <p class="lead" id="lead-3">En TrendMakers recopilamos los nueve errores más comunes que vemos en negocios de todos los tamaños —desde pequeñas marcas hasta empresas establecidas— y te mostramos cómo evitarlos para acelerar tu crecimiento.</p>
-        </div>
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos rápidos">
+                <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu"
+                   target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                <a href="https://www.linkedin.com/company/trendmakersagency"
+                   target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services."
+                   target="_blank" aria-label="Email">Email</a>
+                <a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m%C3%A1s%20informaci%C3%B3n."
+                   target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+            </div>
 
-        <div class="article-image">
-            <img src="./img/BLOG1.jpg" alt="9 errores de marketing que frenan a cualquier negocio">
-        </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div><div></div><div></div>
+            </div>
 
-        <section class="article-section" id="section-1">
-            <h2 id="s1-title">1. No tener una identidad visual clara y consistente</h2>
-            <p id="s1-desc">Un problema clásico: cada post parece diseñado por una persona diferente. Colores diferentes, tipografías aleatorias, estilos que cambian. Esto genera falta de profesionalismo y dificulta que el usuario recuerde tu marca.</p>
-            <p id="s1-how"><strong>Cómo evitarlo:</strong></p>
-            <ul id="s1-list">
-                <li>Definí tu paleta de colores.</li>
-                <li>Usá 1 tipografía para títulos y 1 para textos.</li>
-                <li>Creá un sistema de diseño repetible.</li>
+            <ul class="desktop-menu top-agency-menu" id="desktop-menu">
+                <li><a href="index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
+                <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item">Servicios</a></li>
+                <li class="dropdown about-dropdown">
+                    <button id="nav-acerca" class="menu-item dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Nosotros <span class="caret">v</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#equipo" id="nav-equipo" class="menu-item">Equipo</a></li>
+                        <li><a href="index.html#acerca" id="nav-nosotros" class="menu-item">Nosotros</a></li>
+                        <li><a href="blog/index.html" id="nav-blog" class="menu-item">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de &eacute;xito</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
             </ul>
-        </section>
 
-        <section class="article-section" id="section-2">
-            <h2 id="s2-title">2. Publicar sin una estrategia</h2>
-            <p id="s2-desc">Mucha gente sube contenido "porque toca", pero sin objetivo. El resultado: nada crece.</p>
-            <p id="s2-how"><strong>Cómo evitarlo:</strong></p>
-            <ul id="s2-list">
-                <li>Publicá con una intención clara: vender, educar o generar autoridad.</li>
-                <li>Usá un calendario de contenido estratégico.</li>
-                <li>Medí lo que funciona y descartá lo que no.</li>
+            <div class="nav-lang">
+                <div class="language-selector" aria-label="Selector de idioma">
+                    <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
+                        <img src="./img/IDIOMA.PNG" alt="Idioma">
+                    </button>
+                    <div class="lang-menu" role="menu" aria-label="Idiomas">
+                        <button class="lang-option" role="menuitem" data-lang="es">Español</button>
+                        <button class="lang-option" role="menuitem" data-lang="en">English</button>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="mobile-menu" id="mobile-menu">
+                <li><a href="index.html#inicio" id="nav-inicio-mobile" class="menu-item" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="nuestros-servicios.html" id="nav-servicios-mobile" class="menu-item" onclick="closeMenu()">Servicios</a></li>
+                <li class="mobile-heading">Nosotros</li>
+                <li><a href="index.html#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
+                <li><a href="index.html#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
+                <li><a href="blog/index.html" id="nav-blog-mobile" class="menu-item" onclick="closeMenu()">Blog</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito-mobile" class="menu-item" onclick="closeMenu()">Casos de &eacute;xito</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto-mobile" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
             </ul>
-        </section>
+        </nav>
 
-        <section class="article-section" id="section-3">
-            <h2 id="s3-title">3. No optimizar el sitio web para convertir</h2>
-            <p id="s3-desc">Un sitio lindo no sirve si no vende. El error más común es tener una web estética pero sin CTA claros, sin estructura ni mensajes que comuniquen valor.</p>
-            <p id="s3-how"><strong>Cómo evitarlo:</strong></p>
-            <ul id="s3-list">
-                <li>Hero con propuesta de valor.</li>
-                <li>CTA visibles (WhatsApp, contacto, reservar).</li>
-                <li>Secciones claras: servicios, casos de éxito, por qué elegirte, blog.</li>
-            </ul>
-        </section>
+        <!-- ===== CONTENIDO DEL ARTÍCULO ===== -->
+        <main class="article-shell">
+            <div class="article-hero">
+                <a class="back-link" id="blog-back" href="index.html#blog">Volver</a>
+                <h1 id="article-title">Marketing & Automation: cuando tu empresa deja de perder leads y empieza a crecer con sistema</h1>
+                <p class="article-meta" id="article-meta">Por TrendMakers · Marketing & Automation · 2025</p>
+                <p class="lead" id="lead-1">Hay empresas que hacen marketing todos los días, pero sienten que siempre falta algo: llegan consultas por formularios, WhatsApp, LinkedIn, campañas pagas… y aun así, el crecimiento no se ve reflejado en ventas. El problema no es la falta de interés, sino la falta de sistema.</p>
+                <p class="lead" id="lead-2">Cuando el seguimiento depende de hojas de cálculo, chats sueltos y memoria del equipo, los leads se enfrían, las oportunidades se pierden y nadie puede decir con precisión qué está funcionando. Esa es la situación que vemos una y otra vez en empresas de servicios, B2B, educación, tecnología o consultoría, en cualquier mercado.</p>
+                <p class="lead" id="lead-3">En TrendMakers llegamos justo ahí: ordenamos el embudo, conectamos las piezas y construimos un sistema de Marketing & Automation que convierte tráfico en oportunidades, y oportunidades en clientes, con menos trabajo manual y más control sobre el crecimiento.</p>
+            </div>
 
-        <section class="article-section" id="section-4">
-            <h2 id="s4-title">4. No invertir en anuncios (o invertir mal)</h2>
-            <p id="s4-desc">Muchas marcas esperan crecer orgánicamente, pero la realidad es que el orgánico tiene límites. Otras invierten, pero sin segmentación, sin estrategia y sin analítica.</p>
-            <p id="s4-how"><strong>Cómo evitarlo:</strong></p>
-            <ul id="s4-list">
-                <li>Usá campañas simples pero efectivas.</li>
-                <li>Verificá los datos antes de duplicar presupuesto.</li>
-                <li>No hagas 10 audiencias; hacé 2 buenas.</li>
-            </ul>
-        </section>
+            <div class="article-image">
+                <!-- IMAGEN -->
+                <img src="./img/BLOG1.jpg"
+                     alt="Sistema de Marketing & Automation con funnels, CRM y automatización">
+            </div>
 
-        <section class="article-section" id="section-5">
-            <h2 id="s5-title">5. Falta de seguimiento de leads</h2>
-            <p id="s5-desc">El 80% de los leads se pierden por no responder rápido o no tener un sistema automatizado.</p>
-            <p id="s5-how"><strong>Cómo evitarlo:</strong></p>
-            <ul id="s5-list">
-                <li>Automatizá respuestas (bots + email).</li>
-                <li>Centralizá todos los mensajes.</li>
-                <li>Respuesta en menos de 5 minutos = 3x más ventas.</li>
-            </ul>
-        </section>
+            <section class="article-section" id="section-1">
+                <h2 id="s1-title">1. Cuando el marketing trae leads, pero el sistema no acompaña</h2>
+                <p id="s1-desc">En casi todas las implementaciones que hacemos hay una historia parecida: una empresa invierte en anuncios, contenido, eventos o redes, los formularios reciben contactos todos los días… pero nadie tiene claridad de qué pasó con cada uno. A simple vista parece un problema de más leads, pero en realidad es un problema de proceso.</p>
+                <p id="s1-how"><strong>Así se ve este problema en el día a día:</strong></p>
+                <ul id="s1-list">
+                    <li>Consultas que entran por distintos canales y no quedan registradas en un solo lugar.</li>
+                    <li>Respuestas que dependen de quién ve primero la notificación en el teléfono o la casilla de mail.</li>
+                    <li>Leads que muestran interés, pero reciben un seguimiento tardío o inconsistente.</li>
+                    <li>Falta de visibilidad: nadie puede ver cuántas oportunidades hay por etapa del embudo.</li>
+                    <li>Reuniones comerciales donde se habla a ojo y no con datos concretos.</li>
+                </ul>
+                <p id="s1-note">Cuando esto pasa, el marketing parece no rendir y el equipo siente que está trabajando mucho para ver poco resultado. No es falta de esfuerzo: es falta de un sistema que sostenga ese esfuerzo.</p>
+            </section>
 
-        <section class="article-section" id="section-6">
-            <h2 id="s6-title">6. No usar datos para decidir</h2>
-            <p id="s6-desc">Muchos negocios "adivinan" su estrategia. Pero sin métricas, no hay crecimiento real.</p>
-            <p id="s6-how"><strong>Cómo evitarlo:</strong></p>
-            <ul id="s6-list">
-                <li>Medí alcance, CTR, leads, costo por adquisición.</li>
-                <li>Hacé reportes mensuales.</li>
-                <li>Identificá qué canal te genera más ventas reales.</li>
-            </ul>
-        </section>
+            <section class="article-section" id="section-2">
+                <h2 id="s2-title">2. Lo que aparece cuando mirás el embudo completo</h2>
+                <p id="s2-desc">El primer paso que hacemos en TrendMakers es simple pero potente: mapear todo el recorrido del lead, desde que deja sus datos hasta que se convierte (o no) en cliente. En ese mapeo siempre aparecen puntos ciegos que explican por qué el crecimiento está frenado.</p>
+                <p id="s2-how"><strong>Patrones que encontramos al analizar embudos reales:</strong></p>
+                <ul id="s2-list">
+                    <li>Formularios conectados solo a un email, sin integración real con el CRM.</li>
+                    <li>Leads que pasan días sin ser contactados o se responden una sola vez y nunca más.</li>
+                    <li>Falta de segmentación: todos los contactos reciben el mismo mensaje, estén listos o no para comprar.</li>
+                    <li>Canales que traen buenos leads, pero nadie lo sabe porque no hay trazabilidad.</li>
+                    <li>Reportes comerciales que tardan semanas en armarse y llegan cuando las decisiones ya son tarde.</li>
+                </ul>
+                <p id="s2-note">Sin un diagnóstico honesto del embudo, es imposible saber si el problema está en la cantidad de leads, en la calidad o en la forma en que los estás gestionando.</p>
+            </section>
 
-        <section class="article-section" id="section-7">
-            <h2 id="s7-title">7. No mostrar pruebas reales</h2>
-            <p id="s7-desc">Si no mostrás resultados, reviews, testimonios o casos de éxito, la gente no confía.</p>
-            <p id="s7-how"><strong>Cómo evitarlo:</strong></p>
-            <ul id="s7-list">
-                <li>Agregá screenshots de resultados.</li>
-                <li>Mostrá casos reales (como los tuyos: Letratec, ProntoLED, etc.).</li>
-                <li>Usá frases de clientes satisfechos.</li>
-            </ul>
-        </section>
+            <section class="article-section" id="section-3">
+                <h2 id="s3-title">3. Diseñar el sistema: del caos disperso a un flujo claro</h2>
+                <p id="s3-desc">Una vez que entendemos cómo se están moviendo los leads, diseñamos el sistema ideal de Marketing & Automation para ese negocio. No se trata de llenar de herramientas, sino de definir un flujo claro que todo el equipo pueda entender y sostener.</p>
+                <p id="s3-how"><strong>Qué incluye ese diseño de sistema:</strong></p>
+                <ul id="s3-list">
+                    <li>Un embudo claro: tráfico → captación → clasificación → nurturing → seguimiento → cierre.</li>
+                    <li>Definición de etapas en el CRM, con criterios concretos para mover cada lead.</li>
+                    <li>Reglas de asignación: quién toma qué tipo de oportunidad y en qué plazos.</li>
+                    <li>Integraciones entre Web, Ads, formularios, CRM y canales de contacto.</li>
+                    <li>Una base para que las automatizaciones no sean parches, sino parte del sistema.</li>
+                </ul>
+                <p id="s3-note">El objetivo es que cualquier persona del equipo pueda ver en qué punto está cada lead y qué debería pasar después, sin depender de memoria ni de héroes individuales.</p>
+            </section>
 
-        <section class="article-section" id="section-8">
-            <h2 id="s8-title">8. No tener diferenciadores claros</h2>
-            <p id="s8-desc">Si tu agencia, tu marca o tu negocio suena igual que todos, te volvés reemplazable.</p>
-            <p id="s8-how"><strong>Cómo evitarlo:</strong></p>
-            <ul id="s8-list">
-                <li>Definí 3 pilares diferenciales.</li>
-                <li>Mostralos siempre en tu web y contenido.</li>
-                <li>Especializate en algo (datos, automatización, branding, etc.).</li>
-            </ul>
-        </section>
+            <section class="article-section" id="section-4">
+                <h2 id="s4-title">4. Cuando la automatización empieza a trabajar por vos</h2>
+                <p id="s4-desc">Con el sistema diseñado, llega el momento de automatizar. Acá es donde las cosas cambian en serio: tareas que antes dependían de recordar a mano pasan a ejecutarse solas, con lógica y en el momento correcto.</p>
+                <p id="s4-how"><strong>Ejemplos de automatizaciones que cambian el juego:</strong></p>
+                <ul id="s4-list">
+                    <li>Mensajes de bienvenida y follow-up automático apenas un lead deja sus datos.</li>
+                    <li>Secuencias de email o WhatsApp que educan, responden objeciones y preparan la reunión comercial.</li>
+                    <li>Recordatorios internos para que el equipo no pierda oportunidades clave por falta de seguimiento.</li>
+                    <li>Actualización automática de etapas en el CRM según el comportamiento del lead.</li>
+                    <li>Alertas cuando un lead se recalienta: abre varios correos, visita la web o responde un mensaje.</li>
+                </ul>
+                <p id="s4-note">La automatización no reemplaza al equipo comercial: le quita de encima las tareas repetitivas para que pueda enfocarse en lo importante, que es hablar con las mejores oportunidades y cerrar negocio.</p>
+            </section>
 
-        <section class="article-section" id="section-9">
-            <h2 id="s9-title">9. Pensar en marketing como un gasto y no como una inversión</h2>
-            <p id="s9-desc">Las marcas que más crecen son las que entienden esto: cuando invertís en marketing, crece tu negocio.</p>
-            <p id="s9-how"><strong>Cómo evitarlo:</strong></p>
-            <ul id="s9-list">
-                <li>Plan anual.</li>
-                <li>Presupuesto mensual.</li>
-                <li>Objetivos claros trimestrales.</li>
-            </ul>
-        </section>
+            <section class="article-section" id="section-5">
+                <h2 id="s5-title">5. Qué cambia en el negocio cuando hay un sistema de Marketing & Automation</h2>
+                <p id="s5-desc">Después de implementar este tipo de sistema, las reuniones de dirección ya no se basan en sensaciones, sino en datos. Y el equipo deja de trabajar a los golpes para empezar a operar con previsibilidad.</p>
+                <p id="s5-how"><strong>Resultados que empiezan a verse en empresas que ordenan su embudo:</strong></p>
+                <ul id="s5-list">
+                    <li>Menos leads perdidos y más oportunidades reales en el pipeline.</li>
+                    <li>Mejores tiempos de respuesta y experiencias más consistentes para los clientes.</li>
+                    <li>Claridad sobre qué canales y campañas generan mejor negocio, no solo más volumen.</li>
+                    <li>Un equipo comercial más enfocado, con menos fricción interna y menos tareas manuales.</li>
+                    <li>Capacidad de escalar la inversión en marketing sin que el sistema se rompa.</li>
+                </ul>
+                <p id="s5-note">Cuando el marketing deja de depender de a ver quién lo agarra y empieza a apoyarse en un sistema, el crecimiento deja de ser un momento aislado y pasa a ser algo que se puede repetir.</p>
+            </section>
 
-        <section class="article-section" id="section-conclusion">
-            <h2 id="conclusion-title">Conclusión</h2>
-            <p id="conclusion-desc1">El marketing dejó de ser "subir fotos" y se convirtió en una combinación de estrategia, datos, automatización y diseño.</p>
-            <p id="conclusion-desc2">Evitar estos nueve errores puede significar la diferencia entre estancarte o crecer 2x más rápido.</p>
-        </section>
+            <section class="article-section" id="section-conclusion">
+                <h2 id="conclusion-title">Conclusión: ordenar el embudo antes de pisar el acelerador</h2>
+                <p id="conclusion-desc1">Antes de sumar más campañas, más canales o más herramientas, la pregunta clave es otra: ¿tu empresa tiene un sistema preparado para sostener todos esos leads? Si la respuesta es no del todo, tu techo de crecimiento no está en el presupuesto, sino en cómo gestionás las oportunidades que ya estás generando.</p>
+                <p id="conclusion-desc2">Marketing & Automation no es un concepto de moda: es la diferencia entre seguir apagando incendios o construir un crecimiento que se pueda escalar y explicar con datos.</p>
+            </section>
 
-        <a class="article-cta" id="article-cta" href="index.html#contact-form">Hablemos de tu estrategia</a>
-    </main>
+            <a class="article-cta" id="article-cta" href="index.html#contact-form">Quiero hablar de mi embudo y mis automatizaciones</a>
+        </main>
+    </div>
+
+    <!-- ===== SCRIPT MULTI-IDIOMA DEL ARTÍCULO + NAV ===== -->
     <script>
       (function(){
         const copy = {
           es: {
             nav: {
-              inicio: "Inicio",
-              servicios: "Nuestros Servicios",
-              acerca: "¿Por qué elegirnos?",
-              casos: "Casos de éxito",
-              contacto: "Agenda una Llamada",
-              blog: "Blog"
+              inicio:"Inicio",
+              servicios:"Nuestros Servicios",
+              acerca:"¿Por qué elegirnos?",
+              casos:"Casos de éxito",
+              contacto:"Agenda una Llamada",
+              blog:"Blog"
             },
-            back: "Volver al blog",
-            title: "9 errores de marketing que bloquean el crecimiento de cualquier negocio (y cómo evitarlos)",
-            meta: "Por TrendMakers — Marketing, Datos & Automatización · 19/11/2025",
-            lead1: "En un mercado donde todas las marcas publican, diseñan, suben historias y hacen ads, la diferencia real no está en hacer más, sino en hacer mejor.",
-            lead2: "La mayoría de las PYMES no crece por falta de esfuerzo, sino por decisiones de marketing que las frenan sin que se den cuenta.",
-            lead3: "En TrendMakers recopilamos los nueve errores más comunes que vemos en negocios de todos los tamaños —desde pequeñas marcas hasta empresas establecidas— y te mostramos cómo evitarlos para acelerar tu crecimiento.",
-            sections: [
-              { title: "1. No tener una identidad visual clara y consistente", desc: "Un problema clásico: cada post parece diseñado por una persona diferente. Colores diferentes, tipografías aleatorias, estilos que cambian. Esto genera falta de profesionalismo y dificulta que el usuario recuerde tu marca.", how: "<strong>Cómo evitarlo:</strong>", list: ["Definí tu paleta de colores.", "Usá 1 tipografía para títulos y 1 para textos.", "Creá un sistema de diseño repetible."] },
-              { title: "2. Publicar sin una estrategia", desc: "Mucha gente sube contenido \"porque toca\", pero sin objetivo. El resultado: nada crece.", how: "<strong>Cómo evitarlo:</strong>", list: ["Publicá con una intención clara: vender, educar o generar autoridad.", "Usá un calendario de contenido estratégico.", "Medí lo que funciona y descartá lo que no."] },
-              { title: "3. No optimizar el sitio web para convertir", desc: "Un sitio lindo no sirve si no vende. El error más común es tener una web estética pero sin CTA claros, sin estructura ni mensajes que comuniquen valor.", how: "<strong>Cómo evitarlo:</strong>", list: ["Hero con propuesta de valor.", "CTA visibles (WhatsApp, contacto, reservar).", "Secciones claras: servicios, casos de éxito, por qué elegirte, blog."] },
-              { title: "4. No invertir en anuncios (o invertir mal)", desc: "Muchas marcas esperan crecer orgánicamente, pero la realidad es que el orgánico tiene límites. Otras invierten, pero sin segmentación, sin estrategia y sin analítica.", how: "<strong>Cómo evitarlo:</strong>", list: ["Usá campañas simples pero efectivas.", "Verificá los datos antes de duplicar presupuesto.", "No hagas 10 audiencias; hacé 2 buenas."] },
-              { title: "5. Falta de seguimiento de leads", desc: "El 80% de los leads se pierden por no responder rápido o no tener un sistema automatizado.", how: "<strong>Cómo evitarlo:</strong>", list: ["Automatizá respuestas (bots + email).", "Centralizá todos los mensajes.", "Respuesta en menos de 5 minutos = 3x más ventas."] },
-              { title: "6. No usar datos para decidir", desc: "Muchos negocios \"adivinan\" su estrategia. Pero sin métricas, no hay crecimiento real.", how: "<strong>Cómo evitarlo:</strong>", list: ["Medí alcance, CTR, leads, costo por adquisición.", "Hacé reportes mensuales.", "Identificá qué canal te genera más ventas reales."] },
-              { title: "7. No mostrar pruebas reales", desc: "Si no mostrás resultados, reviews, testimonios o casos de éxito, la gente no confía.", how: "<strong>Cómo evitarlo:</strong>", list: ["Agregá screenshots de resultados.", "Mostrá casos reales (como los tuyos: Letratec, ProntoLED, etc.).", "Usá frases de clientes satisfechos."] },
-              { title: "8. No tener diferenciadores claros", desc: "Si tu agencia, tu marca o tu negocio suena igual que todos, te volvés reemplazable.", how: "<strong>Cómo evitarlo:</strong>", list: ["Definí 3 pilares diferenciales.", "Mostralos siempre en tu web y contenido.", "Especializate en algo (datos, automatización, branding, etc.)."] },
-              { title: "9. Pensar en marketing como un gasto y no como una inversión", desc: "Las marcas que más crecen son las que entienden esto: cuando invertís en marketing, crece tu negocio.", how: "<strong>Cómo evitarlo:</strong>", list: ["Plan anual.", "Presupuesto mensual.", "Objetivos claros trimestrales."] }
+            back: "Volver",
+            title: "Marketing & Automation: cuando tu empresa deja de perder leads y empieza a crecer con sistema",
+            meta: "Por TrendMakers · Marketing & Automation · 2025",
+            leads: [
+              "Hay empresas que hacen marketing todos los días, pero sienten que siempre falta algo: llegan consultas por formularios, WhatsApp, LinkedIn, campañas pagas… y aun así, el crecimiento no se ve reflejado en ventas. El problema no es la falta de interés, sino la falta de sistema.",
+              "Cuando el seguimiento depende de hojas de cálculo, chats sueltos y memoria del equipo, los leads se enfrían, las oportunidades se pierden y nadie puede decir con precisión qué está funcionando. Esa es la situación que vemos una y otra vez en empresas de servicios, B2B, educación, tecnología o consultoría, en cualquier mercado.",
+              "En TrendMakers llegamos justo ahí: ordenamos el embudo, conectamos las piezas y construimos un sistema de Marketing & Automation que convierte tráfico en oportunidades, y oportunidades en clientes, con menos trabajo manual y más control sobre el crecimiento."
             ],
-            conclusionTitle: "Conclusión",
-            conclusion1: "El marketing dejó de ser \"subir fotos\" y se convirtió en una combinación de estrategia, datos, automatización y diseño.",
-            conclusion2: "Evitar estos nueve errores puede significar la diferencia entre estancarte o crecer 2x más rápido.",
-            cta: "Hablemos de tu estrategia"
+            sections: [
+              {
+                title: "1. Cuando el marketing trae leads, pero el sistema no acompaña",
+                desc: "En casi todas las implementaciones que hacemos hay una historia parecida: una empresa invierte en anuncios, contenido, eventos o redes, los formularios reciben contactos todos los días… pero nadie tiene claridad de qué pasó con cada uno. A simple vista parece un problema de más leads, pero en realidad es un problema de proceso.",
+                how: "<strong>Así se ve este problema en el día a día:</strong>",
+                list: [
+                  "Consultas que entran por distintos canales y no quedan registradas en un solo lugar.",
+                  "Respuestas que dependen de quién ve primero la notificación en el teléfono o la casilla de mail.",
+                  "Leads que muestran interés, pero reciben un seguimiento tardío o inconsistente.",
+                  "Falta de visibilidad: nadie puede ver cuántas oportunidades hay por etapa del embudo.",
+                  "Reuniones comerciales donde se habla a ojo y no con datos concretos."
+                ],
+                note: "Cuando esto pasa, el marketing parece no rendir y el equipo siente que está trabajando mucho para ver poco resultado. No es falta de esfuerzo: es falta de un sistema que sostenga ese esfuerzo."
+              },
+              {
+                title: "2. Lo que aparece cuando mirás el embudo completo",
+                desc: "El primer paso que hacemos en TrendMakers es simple pero potente: mapear todo el recorrido del lead, desde que deja sus datos hasta que se convierte (o no) en cliente. En ese mapeo siempre aparecen puntos ciegos que explican por qué el crecimiento está frenado.",
+                how: "<strong>Patrones que encontramos al analizar embudos reales:</strong>",
+                list: [
+                  "Formularios conectados solo a un email, sin integración real con el CRM.",
+                  "Leads que pasan días sin ser contactados o se responden una sola vez y nunca más.",
+                  "Falta de segmentación: todos los contactos reciben el mismo mensaje, estén listos o no para comprar.",
+                  "Canales que traen buenos leads, pero nadie lo sabe porque no hay trazabilidad.",
+                  "Reportes comerciales que tardan semanas en armarse y llegan cuando las decisiones ya son tarde."
+                ],
+                note: "Sin un diagnóstico honesto del embudo, es imposible saber si el problema está en la cantidad de leads, en la calidad o en la forma en que los estás gestionando."
+              },
+              {
+                title: "3. Diseñar el sistema: del caos disperso a un flujo claro",
+                desc: "Una vez que entendemos cómo se están moviendo los leads, diseñamos el sistema ideal de Marketing & Automation para ese negocio. No se trata de llenar de herramientas, sino de definir un flujo claro que todo el equipo pueda entender y sostener.",
+                how: "<strong>Qué incluye ese diseño de sistema:</strong>",
+                list: [
+                  "Un embudo claro: tráfico → captación → clasificación → nurturing → seguimiento → cierre.",
+                  "Definición de etapas en el CRM, con criterios concretos para mover cada lead.",
+                  "Reglas de asignación: quién toma qué tipo de oportunidad y en qué plazos.",
+                  "Integraciones entre Web, Ads, formularios, CRM y canales de contacto.",
+                  "Una base para que las automatizaciones no sean parches, sino parte del sistema."
+                ],
+                note: "El objetivo es que cualquier persona del equipo pueda ver en qué punto está cada lead y qué debería pasar después, sin depender de memoria ni de héroes individuales."
+              },
+              {
+                title: "4. Cuando la automatización empieza a trabajar por vos",
+                desc: "Con el sistema diseñado, llega el momento de automatizar. Acá es donde las cosas cambian en serio: tareas que antes dependían de recordar a mano pasan a ejecutarse solas, con lógica y en el momento correcto.",
+                how: "<strong>Ejemplos de automatizaciones que cambian el juego:</strong>",
+                list: [
+                  "Mensajes de bienvenida y follow-up automático apenas un lead deja sus datos.",
+                  "Secuencias de email o WhatsApp que educan, responden objeciones y preparan la reunión comercial.",
+                  "Recordatorios internos para que el equipo no pierda oportunidades clave por falta de seguimiento.",
+                  "Actualización automática de etapas en el CRM según el comportamiento del lead.",
+                  "Alertas cuando un lead se recalienta: abre varios correos, visita la web o responde un mensaje."
+                ],
+                note: "La automatización no reemplaza al equipo comercial: le quita de encima las tareas repetitivas para que pueda enfocarse en lo importante, que es hablar con las mejores oportunidades y cerrar negocio."
+              },
+              {
+                title: "5. Qué cambia en el negocio cuando hay un sistema de Marketing & Automation",
+                desc: "Después de implementar este tipo de sistema, las reuniones de dirección ya no se basan en sensaciones, sino en datos. Y el equipo deja de trabajar a los golpes para empezar a operar con previsibilidad.",
+                how: "<strong>Resultados que empiezan a verse en empresas que ordenan su embudo:</strong>",
+                list: [
+                  "Menos leads perdidos y más oportunidades reales en el pipeline.",
+                  "Mejores tiempos de respuesta y experiencias más consistentes para los clientes.",
+                  "Claridad sobre qué canales y campañas generan mejor negocio, no solo más volumen.",
+                  "Un equipo comercial más enfocado, con menos fricción interna y menos tareas manuales.",
+                  "Capacidad de escalar la inversión en marketing sin que el sistema se rompa."
+                ],
+                note: "Cuando el marketing deja de depender de a ver quién lo agarra y empieza a apoyarse en un sistema, el crecimiento deja de ser un momento aislado y pasa a ser algo que se puede repetir."
+              }
+            ],
+            conclusionTitle: "Conclusión: ordenar el embudo antes de pisar el acelerador",
+            conclusion1: "Antes de sumar más campañas, más canales o más herramientas, la pregunta clave es otra: ¿tu empresa tiene un sistema preparado para sostener todos esos leads? Si la respuesta es no del todo, tu techo de crecimiento no está en el presupuesto, sino en cómo gestionás las oportunidades que ya estás generando.",
+            conclusion2: "Marketing & Automation no es un concepto de moda: es la diferencia entre seguir apagando incendios o construir un crecimiento que se pueda escalar y explicar con datos.",
+            cta: "Quiero hablar de mi embudo y mis automatizaciones"
           },
           en: {
             nav: {
-              inicio: "Home",
-              servicios: "Our Services",
-              acerca: "Why choose us",
-              casos: "Success Stories",
-              contacto: "Schedule a Call",
-              blog: "Blog"
+              inicio:"Home",
+              servicios:"Our Services",
+              acerca:"Why choose us",
+              casos:"Success Stories",
+              contacto:"Schedule a Call",
+              blog:"Blog"
             },
-            back: "Back to blog",
-            title: "9 Marketing Mistakes That Block Business Growth (and How to Avoid Them)",
-            meta: "By TrendMakers — Marketing, Data & Automation · 11/19/2025",
-            lead1: "In a market where every brand posts, designs, uploads stories, and runs ads, the real difference isn't doing more — it's doing better.",
-            lead2: "Most small businesses don't fail because of a lack of effort, but because of marketing decisions that unknowingly slow them down.",
-            lead3: "At TrendMakers, we've gathered the nine most common mistakes we see across businesses of all sizes — from small brands to established companies — and how to avoid them to accelerate growth.",
-            sections: [
-              { title: "1. Not Having a Clear and Consistent Visual Identity", desc: "A classic problem: every post looks like it was designed by a different person. Different colors, random fonts, shifting styles. This creates a lack of professionalism and makes it harder for users to remember your brand.", how: "<strong>How to avoid it:</strong>", list: ["Define your color palette.", "Use one font for titles and one for body text.", "Create a repeatable design system."] },
-              { title: "2. Posting Without a Strategy", desc: "Many businesses publish content \"because it's time to post,\" but with no specific goal. The result: nothing grows.", how: "<strong>How to avoid it:</strong>", list: ["Publish with a clear intention: sell, educate, or build authority.", "Use a strategic content calendar.", "Measure what works and eliminate what doesn't."] },
-              { title: "3. Not Optimizing the Website for Conversions", desc: "A pretty website is useless if it doesn't sell. The most common mistake is having a visually appealing site with no clear CTAs, no structure, and no messaging that communicates real value.", how: "<strong>How to avoid it:</strong>", list: ["A hero section with a strong value proposition.", "Visible CTAs (WhatsApp, booking, contact).", "Clear sections: services, case studies, why choose you, blog."] },
-              { title: "4. Not Investing in Ads (or Investing Poorly)", desc: "Many brands expect to grow organically, but organic reach has limits. Others invest in ads, but with poor segmentation, no strategy, and no analytics.", how: "<strong>How to avoid it:</strong>", list: ["Run simple but effective campaigns.", "Look at real data before scaling budgets.", "Instead of 10 audiences, create 2 strong ones."] },
-              { title: "5. Poor Lead Follow-Up", desc: "80% of leads are lost due to slow responses or the absence of an automated system.", how: "<strong>How to avoid it:</strong>", list: ["Automate replies (chatbots + email).", "Centralize all messages.", "Responding within 5 minutes = 3x more sales."] },
-              { title: "6. Not Using Data to Make Decisions", desc: "Many businesses rely on guesswork. But without metrics, real growth is impossible.", how: "<strong>How to avoid it:</strong>", list: ["Track reach, CTR, leads, and cost per acquisition.", "Create monthly reports.", "Identify which channel brings real revenue."] },
-              { title: "7. Not Showing Real Proof", desc: "If you don't show results, reviews, testimonials, or case studies, people simply don't trust you.", how: "<strong>How to avoid it:</strong>", list: ["Add screenshot proof.", "Show real case studies (like yours: Letratec, ProntoLED, etc.).", "Use quotes from satisfied clients."] },
-              { title: "8. Not Having Clear Differentiators", desc: "If your agency, brand, or business sounds like everyone else, you become replaceable.", how: "<strong>How to avoid it:</strong>", list: ["Define three core differentiators.", "Showcase them on your website and in your content.", "Specialize in something (data, automation, branding, etc.)."] },
-              { title: "9. Treating Marketing as an Expense Instead of an Investment", desc: "The businesses that grow the most understand this: when you invest in marketing, your business grows.", how: "<strong>How to avoid it:</strong>", list: ["Build an annual plan.", "Set a monthly budget.", "Define quarterly goals."] }
+            back: "Back",
+            title: "Marketing & Automation: when your company stops losing leads and starts growing with a system",
+            meta: "By TrendMakers · Marketing & Automation · 2025",
+            leads: [
+              "Many companies do marketing every day but still feel something is missing: inquiries come in through forms, WhatsApp, LinkedIn, paid campaigns… and yet growth doesn’t show up in closed deals. The problem is not lack of interest — it’s lack of a system.",
+              "When follow-up depends on spreadsheets, scattered chats, and people’s memory, leads cool down, opportunities get lost, and nobody can clearly say what’s working. We see this again and again in service businesses, B2B companies, education, tech and consulting, in every market.",
+              "That’s where TrendMakers comes in: we organize the funnel, connect the pieces, and build a Marketing & Automation system that turns traffic into opportunities and opportunities into clients, with less manual work and more control over growth."
             ],
-            conclusionTitle: "Conclusion",
-            conclusion1: "Marketing stopped being \"posting photos\" and evolved into a combination of strategy, data, automation, and great design.",
-            conclusion2: "Avoiding these nine mistakes can be the difference between staying stuck or growing 2x faster.",
-            cta: "Let's talk about your strategy"
+            sections: [
+              {
+                title: "1. When marketing brings leads, but the system can’t keep up",
+                desc: "In almost every implementation we run, there’s a familiar story: a company invests in ads, content, events or social media, forms receive new contacts every day… but no one has a clear picture of what happened with each lead. On the surface it looks like a “we need more leads” problem, but in reality it’s a process problem.",
+                how: "<strong>This is how that problem looks in everyday operations:</strong>",
+                list: [
+                  "Inquiries coming from different channels and not being stored in a single place.",
+                  "Responses depending on whoever sees the notification first in their inbox or phone.",
+                  "Interested leads receiving late or inconsistent follow-up.",
+                  "No visibility over how many opportunities are in each stage of the funnel.",
+                  "Commercial meetings based on gut feeling instead of concrete numbers."
+                ],
+                note: "When this happens, marketing seems not to perform and the team feels they’re working hard with little to show for it. It’s not a lack of effort — it’s a lack of a system to support that effort."
+              },
+              {
+                title: "2. What appears when you look at the full funnel",
+                desc: "The first step we take at TrendMakers is simple but powerful: mapping the entire lead journey, from the first touchpoint to the moment they become (or don’t become) a client. In that mapping, blind spots appear that explain why growth is stuck.",
+                how: "<strong>Patterns we find when we analyze real funnels:</strong>",
+                list: [
+                  "Forms connected only to an email inbox, with no real CRM integration.",
+                  "Leads waiting days before anyone reaches out, or receiving a single reply and then silence.",
+                  "No segmentation: every contact receives the same message, regardless of intent or stage.",
+                  "Channels that bring great leads, but nobody knows because there’s no traceability.",
+                  "Commercial reports that take weeks to build and arrive when decisions are already late."
+                ],
+                note: "Without an honest funnel diagnostic, it’s impossible to know whether the problem lies in volume, quality, or the way you’re managing the leads you already have."
+              },
+              {
+                title: "3. Designing the system: from scattered chaos to a clear flow",
+                desc: "Once we understand how leads are moving today, we design the ideal Marketing & Automation system for that business. It’s not about adding more tools, but defining a clear flow that the entire team can understand and follow.",
+                how: "<strong>What that system design usually includes:</strong>",
+                list: [
+                  "A clear funnel: traffic → capture → score → nurture → follow-up → close.",
+                  "Defined CRM stages, with concrete criteria to move each lead forward.",
+                  "Assignment rules: who handles which type of opportunity and within what timeframe.",
+                  "Integrations between Web, Ads, forms, CRM and contact channels.",
+                  "A foundation so automations are not isolated hacks but part of the core system."
+                ],
+                note: "The goal is that anyone on the team can see where each lead is and what should happen next — without relying on memory or individual heroics."
+              },
+              {
+                title: "4. When automation starts working on your behalf",
+                desc: "With the system designed, it’s time to automate. This is where things truly change: tasks that used to depend on someone remembering now run on their own, with logic and at the right time.",
+                how: "<strong>Examples of automations that move the needle:</strong>",
+                list: [
+                  "Welcome and follow-up messages triggered the moment a lead shares their data.",
+                  "Email or WhatsApp nurture sequences that educate, handle objections, and prepare the sales call.",
+                  "Internal reminders so the team doesn’t miss critical opportunities due to lack of follow-up.",
+                  "Automatic stage updates in the CRM based on lead behavior.",
+                  "Alerts when a lead heats up: opens multiple emails, visits the site again, or replies to a message."
+                ],
+                note: "Automation doesn’t replace the sales team — it removes repetitive tasks so they can focus on what matters: talking to the right opportunities and closing business."
+              },
+              {
+                title: "5. What changes in the business when a Marketing & Automation system is in place",
+                desc: "After implementing this type of system, leadership meetings stop being about feelings and start being about facts. And the team moves from reactive mode into predictable execution.",
+                how: "<strong>Results we start to see once the funnel is organized:</strong>",
+                list: [
+                  "Fewer lost leads and more real opportunities in the pipeline.",
+                  "Faster response times and more consistent experiences for prospects and clients.",
+                  "Clarity on which channels and campaigns generate better business, not just more volume.",
+                  "A sales team that is more focused, with less internal friction and less manual work.",
+                  "The ability to scale marketing investment without breaking the system."
+                ],
+                note: "When marketing stops depending on whoever happens to catch each lead and starts relying on a system, growth stops being a lucky streak and becomes something you can repeat."
+              }
+            ],
+            conclusionTitle: "Conclusion: fix the funnel before hitting the accelerator",
+            conclusion1: "Before adding more campaigns, channels or tools, the key question is different: is your company’s system ready to handle all those leads? If the honest answer is not really, then your growth ceiling is not in the budget — it’s in how you manage the opportunities you already generate.",
+            conclusion2: "Marketing & Automation is not a buzzword: it’s the line that separates companies that are constantly putting out fires from those that build scalable, explainable growth backed by data.",
+            cta: "I want to talk about my funnel and automations"
           }
         };
-        const set = (id,val)=>{ const el=document.getElementById(id); if(el&&val!==undefined) el.innerHTML=val; };
+
+        const set = (id,val)=>{
+          const el=document.getElementById(id);
+          if(el&&val!==undefined) el.innerHTML=val;
+        };
+
         function apply(lang){
           const t = copy[lang] || copy.es;
           set('blog-back', t.back);
           set('article-title', t.title);
           set('article-meta', t.meta);
-          set('lead-1', t.lead1);
-          set('lead-2', t.lead2);
-          set('lead-3', t.lead3);
-          t.sections.forEach((s, idx)=>{
-            const n = idx+1;
+          if (t.leads) {
+            set('lead-1', t.leads[0]);
+            set('lead-2', t.leads[1]);
+            set('lead-3', t.leads[2]);
+          }
+          (t.sections || []).forEach((s, idx)=>{
+            const n = idx + 1;
             set('s'+n+'-title', s.title);
             set('s'+n+'-desc', s.desc);
             set('s'+n+'-how', s.how);
             const ul = document.getElementById('s'+n+'-list');
             if (ul && s.list) ul.innerHTML = s.list.map(li=>`<li>${li}</li>`).join('');
+            set('s'+n+'-note', s.note);
           });
           set('conclusion-title', t.conclusionTitle);
           set('conclusion-desc1', t.conclusion1);
           set('conclusion-desc2', t.conclusion2);
           set('article-cta', t.cta);
-          // Nav for this page (desktop + mobile)
+
           const navText = t.nav || copy.es.nav;
           const map = [
             { href: '#inicio', key: 'inicio' },
@@ -397,10 +740,12 @@
           ];
           map.forEach(({href, key})=>{
             document.querySelectorAll(`a[href="index.html${href}"], a[href="${href}"]`).forEach(a=>{
+              if (a.classList && a.classList.contains('tm-header-badge')) return;
               a.textContent = navText[key] || a.textContent;
             });
           });
         }
+
         document.addEventListener('DOMContentLoaded', function(){
           let lang = 'es';
           try {
@@ -423,14 +768,38 @@
         });
       })();
     </script>
+
+    <!-- JS global (toggleMenu, idioma general, etc.) -->
     <script src="./js/script.js"></script>
+
+    <!-- Toggle del menú rápido de redes al hacer click en el logo -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const badge = document.getElementById('tm-badge');
+            const menu = document.getElementById('tm-quick-menu');
+            if (!badge || !menu) return;
+            const closeQuickMenu = () => menu.classList.remove('open');
+            badge.addEventListener('click', (e) => {
+                e.preventDefault();
+                menu.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (menu.contains(e.target) || badge.contains(e.target)) return;
+                closeQuickMenu();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeQuickMenu();
+            });
+        });
+    </script>
+    <!-- Botones flotantes de contacto -->
+    <a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m%C3%A1s%20informaci%C3%B3n."
+       class="whatsapp-button" target="_blank">
+        <img src="./img/WPP.PNG" alt="WhatsApp">
+    </a>
+    <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services."
+       class="email-button" target="_blank">
+        <img src="./img/EMAIL.jpg" alt="Email">
+    </a>
 </body>
 </html>
-
-
-
-
-
-
-
-

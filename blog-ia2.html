@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo las empresas argentinas escalan con IA, automatización y datos | TrendMakers</title>
+    <meta name="description" content="Guía 2025: cómo las empresas argentinas escalan con IA operativa, automatización y marketing basado en datos. Acciones reales, resultados y el enfoque de TrendMakers.">
+    <link rel="canonical" href="https://trendmakers.agency/blog-ia-automatizacion.html">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header_overrides.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TrendMakers",
+      "url": "https://trendmakers.agency/",
+      "logo": "https://trendmakers.agency/img/logo1.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/trendmakersagency",
+        "https://www.instagram.com/trendmakers.agency_igsh=cTN1Z3N0ejk1YmJu"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://trendmakers.agency/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://trendmakers.agency/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "IA, automatización y datos", "item": "https://trendmakers.agency/blog-ia-automatizacion.html" }
+      ]
+    }
+    </script>
+
+    <!-- ====== ESTILO "CARO" / PREMIUM ====== -->
+    <style>
+        :root {
+            --tm-bg-dark: #050313;
+            --tm-bg-deep: #0b061f;
+            --tm-accent-1: #7b2ff7;
+            --tm-accent-2: #00c3ff;
+            --tm-accent-3: #ec4899;
+            --tm-text-main: #f9f9ff;
+            --tm-text-soft: rgba(243, 244, 255, 0.82);
+            --tm-border-soft: rgba(148, 163, 255, 0.25);
+            --tm-card-bg: rgba(11, 6, 31, 0.86);
+        }
+
+        body.blog-article {
+            margin: 0;
+            min-height: 100vh;
+            background:
+              radial-gradient(1100px 900px at 5% 0%, rgba(236,72,153,0.26), transparent 55%),
+              radial-gradient(900px 900px at 90% 10%, rgba(56,189,248,0.24), transparent 50%),
+              radial-gradient(1200px 1000px at 50% 120%, rgba(88,28,135,0.65), transparent 60%),
+              linear-gradient(145deg, var(--tm-bg-dark) 0%, var(--tm-bg-deep) 48%, #1b1039 100%);
+            color: var(--tm-text-main);
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+
+        /* Sutil velo de profundidad */
+        body.blog-article::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background:
+              radial-gradient(circle at 20% 0%, rgba(255,255,255,0.06), transparent 55%),
+              radial-gradient(circle at 80% 100%, rgba(0,0,0,0.45), transparent 55%);
+            mix-blend-mode: soft-light;
+            z-index: 0;
+        }
+
+        /* Nav estilo más caro sin romper el resto de la web */
+        body.blog-article nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 40;
+            background: radial-gradient(circle at 0% 0%, rgba(124,58,237,0.20), transparent 55%)
+                        ,rgba(5,3,19,0.84);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(148,163,255,0.35);
+        }
+
+        .article-shell {
+            position: relative;
+            z-index: 1;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: clamp(120px, 13vw, 150px) clamp(18px, 4vw, 40px) 96px;
+        }
+
+        .article-hero {
+            display: grid;
+            gap: 18px;
+            text-align: left;
+            margin-bottom: clamp(26px, 5vw, 42px);
+        }
+
+        /* Etiqueta sutil arriba del título, sin cambiar tu HTML */
+        .article-hero::before {
+            content: "IA · Marketing · Datos · 2025";
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: rgba(209, 213, 255, 0.78);
+            padding: 6px 12px;
+            border-radius: 999px;
+            align-self: flex-start;
+            background:
+                linear-gradient(120deg, rgba(123,47,247,0.45), rgba(0,195,255,0.5));
+            box-shadow: 0 0 0 1px rgba(148,163,255,0.4),
+                        0 10px 30px rgba(15,23,42,0.9);
+        }
+
+        .back-link {
+            color: rgba(226,232,255,0.90);
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            opacity: 0.8;
+            transition: opacity 0.2s ease, transform 0.18s ease;
+        }
+        .back-link::before { content: "\2190"; font-size: 1rem; }
+        .back-link:hover {
+            opacity: 1;
+            transform: translateX(-2px);
+        }
+
+        .article-meta {
+            color: rgba(199,210,254,0.82);
+            font-size: 0.95rem;
+        }
+
+        .article-hero h1 {
+            margin: 8px 0 6px;
+            font-size: clamp(2rem, 1.6rem + 1.2vw, 2.7rem);
+            line-height: 1.16;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            background: linear-gradient(135deg, #ffffff 0%, #e5e7ff 40%, #a5b4fc 75%, #f472b6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .lead {
+            font-size: 1.03rem;
+            line-height: 1.7;
+            color: var(--tm-text-soft);
+            max-width: 780px;
+        }
+        .lead + .lead {
+            margin-top: 2px;
+        }
+
+        .article-image {
+            border-radius: 22px;
+            overflow: hidden;
+            margin: 6px 0 28px;
+            position: relative;
+            background: radial-gradient(circle at 0% 0%, rgba(236,72,153,0.25), transparent 55%);
+            padding: 1px; /* pseudo-borde de luz */
+        }
+        .article-image::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 22px;
+            background: radial-gradient(circle at 0% 0%, rgba(236,72,153,0.35), transparent 60%)
+                        ,radial-gradient(circle at 100% 0%, rgba(59,130,246,0.35), transparent 60%);
+            mix-blend-mode: soft-light;
+            opacity: 0.55;
+            pointer-events: none;
+        }
+        .article-image img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 22px 65px rgba(0,0,0,0.65);
+        }
+
+        .article-section {
+            position: relative;
+            background: radial-gradient(circle at 0% 0%, rgba(148,163,255,0.10), transparent 55%),
+                        radial-gradient(circle at 100% 100%, rgba(244,114,182,0.08), transparent 55%),
+                        var(--tm-card-bg);
+            border-radius: 22px;
+            padding: clamp(18px, 4vw, 24px);
+            margin-bottom: 18px;
+            box-shadow:
+                0 18px 48px rgba(15,23,42,0.85),
+                0 0 0 1px rgba(148,163,255,0.22);
+            border: 1px solid rgba(148,163,255,0.18);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            overflow: hidden;
+        }
+        .article-section::after {
+            /* Línea de brillo muy sutil arriba a la derecha */
+            content: "";
+            position: absolute;
+            top: -40px;
+            right: -80px;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(244,114,182,0.45), transparent 60%);
+            opacity: 0.32;
+            pointer-events: none;
+        }
+
+        .article-section h2 {
+            margin: 0 0 10px;
+            font-size: clamp(1.12rem, 1rem + 0.45vw, 1.55rem);
+            color: #eef2ff;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        .article-section p {
+            margin: 0 0 10px;
+            line-height: 1.65;
+            color: rgba(226,232,255,0.9);
+            font-size: 0.97rem;
+        }
+
+        .article-section ul {
+            padding-left: 1.1rem;
+            margin: 0 0 6px;
+            color: rgba(226,232,255,0.9);
+            font-size: 0.96rem;
+        }
+        .article-section li {
+            margin-bottom: 6px;
+            position: relative;
+        }
+        .article-section li::marker {
+            color: rgba(129,140,248,0.95);
+        }
+
+        /* Conclusión un poco más destacada */
+        #section-conclusion {
+            border-image: linear-gradient(120deg, var(--tm-accent-3), var(--tm-accent-2)) 1;
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .article-cta {
+            margin-top: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 22px;
+            border-radius: 999px;
+            background:
+                linear-gradient(135deg, rgba(15,23,42,1) 0%, rgba(15,23,42,0.98) 40%, rgba(30,64,175,0.96) 100%);
+            color: #f9fafb;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            box-shadow:
+                0 18px 40px rgba(15,23,42,0.95),
+                0 0 0 1px rgba(129,140,248,0.9);
+            border: 1px solid rgba(191,219,254,0.22);
+            position: relative;
+            overflow: hidden;
+        }
+        .article-cta::after {
+            /* shine */
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, transparent 0%, rgba(249,250,251,0.16) 40%, transparent 80%);
+            transform: translateX(-120%);
+            transition: transform 0.45s ease-out;
+        }
+        .article-cta:hover::after {
+            transform: translateX(40%);
+        }
+        .article-cta:hover {
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 840px) {
+            .article-shell {
+                padding-top: 120px;
+            }
+            .article-hero::before {
+                font-size: 0.68rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .article-shell {
+                padding: 112px 14px 76px;
+            }
+            .article-hero h1 {
+                font-size: 1.85rem;
+            }
+            .article-section {
+                padding: 15px 14px 16px;
+                border-radius: 18px;
+            }
+            .article-image {
+                border-radius: 18px;
+            }
+        }
+    </style>
+</head>
+<body class="blog-article">
+    <nav>
+      <a class="tm-header-badge" href="index.html#inicio" aria-label="TrendMakers home" id="tm-badge">
+        <img src="./img/TrendMakers-Header.png" alt="TrendMakers">
+      </a>
+      <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos r?pidos">
+        <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." target="_blank" aria-label="Email">Email</a>
+        <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m?s%20informaci?n." target="_blank" aria-label="WhatsApp">WhatsApp</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+      </div>
+      <ul class="desktop-menu top-agency-menu" id="desktop-menu">
+        <li><a href="index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
+        <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item">Servicios</a></li>
+        <li class="dropdown about-dropdown">
+          <button id="nav-acerca" class="menu-item dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Nosotros <span class="caret">v</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="index.html#equipo" id="nav-equipo" class="menu-item">Equipo</a></li>
+            <li><a href="index.html#acerca" id="nav-nosotros" class="menu-item">Nosotros</a></li>
+            <li><a href="index.html#blog" id="nav-blog" class="menu-item active-link">Blog</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de ?xito</a></li>
+        <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
+      </ul>
+      <div class="nav-lang">
+        <div class="language-selector" aria-label="Selector de idioma">
+          <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
+            <img src="./img/IDIOMA.PNG" alt="Idioma">
+          </button>
+          <div class="lang-menu" role="menu" aria-label="Idiomas">
+            <button class="lang-option" role="menuitem" data-lang="es">Espa?ol</button>
+            <button class="lang-option" role="menuitem" data-lang="en">English</button>
+          </div>
+        </div>
+      </div>
+      <ul class="mobile-menu" id="mobile-menu">
+        <li><a href="index.html#inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
+        <li><a href="nuestros-servicios.html" class="menu-item" onclick="closeMenu()">Servicios</a></li>
+        <li class="mobile-heading">Nosotros</li>
+        <li><a href="index.html#equipo" class="menu-item" onclick="closeMenu()">Equipo</a></li>
+        <li><a href="index.html#acerca" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
+        <li><a href="index.html#blog" class="menu-item active-link" onclick="closeMenu()">Blog</a></li>
+        <li><a href="index.html#casos-exito" class="menu-item" onclick="closeMenu()">Casos de ?xito</a></li>
+        <li><a href="index.html#contact-form" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <main class="article-shell">
+        <div class="article-hero">
+            <a class="back-link" id="blog-back" href="index.html#blog">Volver</a>
+            <h1 id="article-title">IA en Marketing: la inversión que separa a las marcas que crecen de las que se quedan atrás</h1>
+            <p class="article-meta" id="article-meta">Por TrendMakers - IA, Marketing &amp; Automatización · 2025</p>
+            <p class="lead" id="lead-1">El marketing cambió para siempre. Hoy, las marcas que crecen más rápido no son las que publican más, sino las que usan IA para entender, anticipar y ejecutar antes que la competencia.</p>
+            <p class="lead" id="lead-2">En 2025, la Inteligencia Artificial dejó de ser algo “futurista” y se convirtió en el motor real del crecimiento digital.</p>
+            <p class="lead" id="lead-3">En TrendMakers ayudamos a marcas a integrar IA, automatización y datos en su marketing para reducir costos, aumentar resultados y tomar decisiones basadas en información real.</p>
+        </div>
+
+        <div class="article-image">
+            <img src="./img/ROBOT-IA.png" alt="Empresas argentinas escalando con IA y automatización">
+        </div>
+
+        <section class="article-section" id="section-1">
+            <h2 id="s1-title">1. La IA reduce costos y acelera resultados</h2>
+            <p id="s1-desc">Invertir en IA no es sumar una herramienta más: es eliminar ineficiencias que hoy le están costando tiempo y dinero a tu negocio.</p>
+            <p id="s1-how"><strong>Cómo impacta en tu día a día:</strong></p>
+            <ul id="s1-list">
+                <li>Automatiza tareas repetitivas y operativas.</li>
+                <li>Optimiza presupuestos publicitarios en tiempo real.</li>
+                <li>Genera contenido más rápido sin perder calidad.</li>
+                <li>Reduce errores humanos en procesos clave.</li>
+                <li>Aumenta la velocidad de respuesta de tu equipo.</li>
+            </ul>
+            <p id="s1-note">La IA no reemplaza a tu equipo: lo potencia para que use su tiempo en decisiones de negocio y no en tareas mecánicas.</p>
+        </section>
+
+        <section class="article-section" id="section-2">
+            <h2 id="s2-title">2. Entender mejor a tus clientes con datos</h2>
+            <p id="s2-desc">La IA analiza patrones que el ojo humano no ve: comportamiento, intención, fricción y oportunidades ocultas en tus datos.</p>
+            <p id="s2-how"><strong>Lo que podés empezar a ver:</strong></p>
+            <ul id="s2-list">
+                <li>Qué mensajes, creatividades y ofertas generan más ventas reales.</li>
+                <li>En qué punto exacto del embudo se cae un potencial cliente.</li>
+                <li>Qué audiencias tienen mayor probabilidad de conversión.</li>
+                <li>Qué campañas conviene escalar y cuáles ajustar o pausar.</li>
+            </ul>
+            <p id="s2-note">Mientras otros “intuyen” qué funciona, vos empezás a decidir con evidencia.</p>
+        </section>
+
+        <section class="article-section" id="section-3">
+            <h2 id="s3-title">3. Marketing personalizado a escala</h2>
+            <p id="s3-desc">La personalización ya no es escribir un saludo con nombre. Es adaptar mensajes, ofertas y contenidos a cada etapa del recorrido del usuario.</p>
+            <p id="s3-how"><strong>Ejemplos de personalización con IA:</strong></p>
+            <ul id="s3-list">
+                <li>Emails que cambian según el comportamiento real del usuario.</li>
+                <li>Anuncios dinámicos que se ajustan a intereses y contexto.</li>
+                <li>Landing pages que muestran argumentos diferentes según la fuente de tráfico.</li>
+                <li>Secuencias automatizadas que acompañan al cliente hasta la compra.</li>
+            </ul>
+            <p id="s3-note">Más relevancia → más conversiones → mejor retorno sobre la inversión publicitaria.</p>
+        </section>
+
+        <section class="article-section" id="section-4">
+            <h2 id="s4-title">4. Más tiempo para estrategia, menos carga operativa</h2>
+            <p id="s4-desc">El verdadero valor de la IA y la automatización no es solo “hacer más cosas”, sino liberar a tu equipo para enfocarse en lo que mueve la aguja.</p>
+            <ul id="s4-list">
+                <li>Menos horas armando reportes manuales.</li>
+                <li>Menos seguimiento uno a uno por WhatsApp o mail.</li>
+                <li>Menos tareas repetitivas en CRM y planillas.</li>
+                <li>Más foco en estrategia, creatividad y decisiones comerciales.</li>
+            </ul>
+            <p id="s4-note">Cuando la operación está automatizada, la dirección del negocio deja de estar tapada por el día a día.</p>
+        </section>
+
+        <section class="article-section" id="section-5">
+            <h2 id="s5-title">5. TrendMakers: integrar IA donde genera impacto real</h2>
+            <p id="s5-desc">En TrendMakers no implementamos IA “porque sí”: la usamos donde realmente mejora resultados.</p>
+            <p id="s5-how"><strong>Qué hacemos con nuestros clientes:</strong></p>
+            <ul id="s5-list">
+                <li>Automatizaciones inteligentes de marketing y ventas.</li>
+                <li>Implementación de IA generativa para contenido y comunicación.</li>
+                <li>Modelos y sistemas que priorizan leads y oportunidades con más probabilidad de cierre.</li>
+                <li>Dashboards y analítica avanzada para decidir con datos en tiempo real.</li>
+                <li>Estrategias de crecimiento integrando paid media, SEO y contenidos impulsados por IA.</li>
+            </ul>
+            <p id="s5-note">Nuestro enfoque es simple: menos trabajo manual, más crecimiento medible y sostenido.</p>
+        </section>
+
+        <section class="article-section" id="section-conclusion">
+            <h2 id="conclusion-title">Conclusión</h2>
+            <p id="conclusion-desc1">La IA dejó de ser opcional. Es la ventaja competitiva más grande de esta década para las marcas que deciden adoptarla primero.</p>
+            <p id="conclusion-desc2">La pregunta ya no es si tu empresa debería usar IA en marketing, sino cuándo va a empezar a hacerlo de forma estratégica.</p>
+        </section>
+
+        <a class="article-cta" id="article-cta" href="index.html#contact-form">Quiero escalar con IA y datos</a>
+    </main>
+
+    <script>
+      (function(){
+        const copy = {
+          es: {
+            nav: {
+              inicio:"Inicio",
+              servicios:"Nuestros Servicios",
+              acerca:"¿Por qué elegirnos?",
+              casos:"Casos de éxito",
+              contacto:"Agenda una Llamada",
+              blog:"Blog"
+            },
+            back: "Volver",
+            title: "IA en Marketing: la inversión que separa a las marcas que crecen de las que se quedan atrás",
+            meta: "Por TrendMakers - IA, Marketing & Automatización · 2025",
+            leads: [
+              "El marketing cambió para siempre. Hoy, las marcas que crecen más rápido no son las que publican más, sino las que usan IA para entender, anticipar y ejecutar antes que la competencia.",
+              "En 2025, la Inteligencia Artificial dejó de ser algo “futurista” y se convirtió en el motor real del crecimiento digital.",
+              "En TrendMakers ayudamos a marcas a integrar IA, automatización y datos en su marketing para reducir costos, aumentar resultados y tomar decisiones basadas en información real."
+            ],
+            sections: [
+              {
+                title: "1. La IA reduce costos y acelera resultados",
+                desc: "Invertir en IA no es sumar una herramienta más: es eliminar ineficiencias que hoy le están costando tiempo y dinero a tu negocio.",
+                how: "<strong>Cómo impacta en tu día a día:</strong>",
+                list: [
+                  "Automatiza tareas repetitivas y operativas.",
+                  "Optimiza presupuestos publicitarios en tiempo real.",
+                  "Genera contenido más rápido sin perder calidad.",
+                  "Reduce errores humanos en procesos clave.",
+                  "Aumenta la velocidad de respuesta de tu equipo."
+                ],
+                note: "La IA no reemplaza a tu equipo: lo potencia para que use su tiempo en decisiones de negocio y no en tareas mecánicas."
+              },
+              {
+                title: "2. Entender mejor a tus clientes con datos",
+                desc: "La IA analiza patrones que el ojo humano no ve: comportamiento, intención, fricción y oportunidades ocultas en tus datos.",
+                how: "<strong>Lo que podés empezar a ver:</strong>",
+                list: [
+                  "Qué mensajes, creatividades y ofertas generan más ventas reales.",
+                  "En qué punto exacto del embudo se cae un potencial cliente.",
+                  "Qué audiencias tienen mayor probabilidad de conversión.",
+                  "Qué campañas conviene escalar y cuáles ajustar o pausar."
+                ],
+                note: "Mientras otros “intuyen” qué funciona, vos empezás a decidir con evidencia."
+              },
+              {
+                title: "3. Marketing personalizado a escala",
+                desc: "La personalización ya no es solo poner el nombre en un mail: es adaptar mensajes, ofertas y contenidos al contexto de cada usuario.",
+                how: "<strong>Ejemplos de personalización con IA:</strong>",
+                list: [
+                  "Emails que cambian según el comportamiento real del usuario.",
+                  "Anuncios dinámicos que se ajustan a intereses y contexto.",
+                  "Landing pages que muestran argumentos diferentes según la fuente de tráfico.",
+                  "Secuencias automatizadas que acompañan al cliente hasta la compra."
+                ],
+                note: "Más relevancia → más conversiones → mejor retorno sobre la inversión publicitaria."
+              },
+              {
+                title: "4. Más tiempo para estrategia, menos carga operativa",
+                desc: "El verdadero valor de la IA y la automatización no es solo “hacer más cosas”, sino liberar a tu equipo para enfocarse en lo que mueve la aguja.",
+                how: "",
+                list: [
+                  "Menos horas armando reportes manuales.",
+                  "Menos seguimiento uno a uno por WhatsApp o mail.",
+                  "Menos tareas repetitivas en CRM y planillas.",
+                  "Más foco en estrategia, creatividad y decisiones comerciales."
+                ],
+                note: "Cuando la operación está automatizada, la dirección del negocio deja de estar tapada por el día a día."
+              },
+              {
+                title: "5. TrendMakers: integrar IA donde genera impacto real",
+                desc: "En TrendMakers no implementamos IA “porque sí”: la usamos donde realmente mejora resultados.",
+                how: "<strong>Qué hacemos con nuestros clientes:</strong>",
+                list: [
+                  "Automatizaciones inteligentes de marketing y ventas.",
+                  "Implementación de IA generativa para contenido y comunicación.",
+                  "Modelos y sistemas que priorizan leads y oportunidades con más probabilidad de cierre.",
+                  "Dashboards y analítica avanzada para decidir con datos en tiempo real.",
+                  "Estrategias de crecimiento integrando paid media, SEO y contenidos impulsados por IA."
+                ],
+                note: "Nuestro enfoque es simple: menos trabajo manual, más crecimiento medible y sostenido."
+              }
+            ],
+            conclusionTitle: "Conclusión",
+            conclusion1: "La IA dejó de ser opcional. Es la ventaja competitiva más grande de esta década para las marcas que deciden adoptarla primero.",
+            conclusion2: "La pregunta ya no es si tu empresa debería usar IA en marketing, sino cuándo va a empezar a hacerlo de forma estratégica.",
+            cta: "Quiero escalar con IA y datos"
+          },
+          en: {
+            nav: {
+              inicio:"Home",
+              servicios:"Our Services",
+              acerca:"Why choose us",
+              casos:"Success Stories",
+              contacto:"Schedule a Call",
+              blog:"Blog"
+            },
+            back: "Back",
+            title: "AI in Marketing: the investment that separates fast-growing brands from the rest",
+            meta: "By TrendMakers - AI, Marketing & Data · 2025",
+            leads: [
+              "Marketing has changed forever. The brands growing the fastest today aren’t the ones posting more, but the ones using AI to understand, anticipate, and execute before everyone else.",
+              "In 2025, Artificial Intelligence stopped being a futuristic buzzword and became the real engine of digital growth.",
+              "At TrendMakers, we help brands integrate AI, automation, and data into their marketing so they can reduce costs, increase results, and make decisions based on real information."
+            ],
+            sections: [
+              {
+                title: "1. AI reduces costs and accelerates performance",
+                desc: "Investing in AI is not about adding yet another tool — it’s about removing inefficiencies that are currently slowing your business down.",
+                how: "<strong>How it impacts your day-to-day:</strong>",
+                list: [
+                  "Automates repetitive, operational tasks.",
+                  "Optimizes ad budgets in real time.",
+                  "Creates content faster without sacrificing quality.",
+                  "Reduces human error in key processes.",
+                  "Increases your team’s response speed."
+                ],
+                note: "AI doesn’t replace your team — it amplifies it so they can spend time on business decisions instead of mechanical tasks."
+              },
+              {
+                title: "2. Understanding your customers through data",
+                desc: "AI detects patterns the human eye can’t see: behavior, intent, friction points, and hidden opportunities in your data.",
+                how: "<strong>What you can start seeing:</strong>",
+                list: [
+                  "Which messages, creatives, and offers drive real sales.",
+                  "The exact stage in the funnel where potential customers drop off.",
+                  "Which audiences have higher conversion probability.",
+                  "Which campaigns to scale and which ones to adjust or pause."
+                ],
+                note: "While others are guessing what works, you start deciding based on evidence."
+              },
+              {
+                title: "3. Personalized marketing at scale",
+                desc: "Personalization is no longer just adding a name to an email — it’s adapting messages, offers, and content to each user’s context.",
+                how: "<strong>Examples of AI-powered personalization:</strong>",
+                list: [
+                  "Emails that adapt based on real user behavior.",
+                  "Dynamic ads that adjust to interests and context.",
+                  "Landing pages that show different angles depending on the traffic source.",
+                  "Automated sequences that guide the customer all the way to purchase."
+                ],
+                note: "More relevance → more conversions → better return on ad spend."
+              },
+              {
+                title: "4. More time for strategy, less operational overload",
+                desc: "The true value of AI and automation is not just “doing more things,” but freeing your team to focus on what really moves the needle.",
+                how: "",
+                list: [
+                  "Fewer hours spent building manual reports.",
+                  "Less one-by-one follow-up over WhatsApp or email.",
+                  "Fewer repetitive tasks in CRM and spreadsheets.",
+                  "More focus on strategy, creativity, and commercial decisions."
+                ],
+                note: "When operations are automated, leadership stops being buried under daily tasks."
+              },
+              {
+                title: "5. TrendMakers: implementing AI where it truly matters",
+                desc: "At TrendMakers, we don’t implement AI just because it’s trendy — we use it where it actually improves performance.",
+                how: "<strong>What we do for our clients:</strong>",
+                list: [
+                  "Smart marketing and sales automations.",
+                  "Generative AI implementation for content and communication.",
+                  "Models and systems that prioritize leads and opportunities with higher closing probability.",
+                  "Advanced real-time dashboards and analytics.",
+                  "Growth strategies integrating paid media, SEO, and AI-driven content."
+                ],
+                note: "Our approach is simple: less manual work, more measurable and sustainable growth."
+              }
+            ],
+            conclusionTitle: "Conclusion",
+            conclusion1: "AI is no longer optional. It’s the biggest competitive advantage of this decade for the brands that decide to adopt it first.",
+            conclusion2: "The question is no longer whether your business should use AI in marketing, but when you’ll start doing it strategically.",
+            cta: "Let's scale with AI and data"
+          }
+        };
+        const set = (id,val)=>{
+          const el=document.getElementById(id);
+          if(el&&val!==undefined) el.innerHTML=val;
+        };
+        function apply(lang){
+          const t = copy[lang] || copy.es;
+          set('blog-back', t.back);
+          set('article-title', t.title);
+          set('article-meta', t.meta);
+          if (t.leads) {
+            set('lead-1', t.leads[0]);
+            set('lead-2', t.leads[1]);
+            set('lead-3', t.leads[2]);
+          }
+          (t.sections || []).forEach((s, idx)=>{
+            const n = idx + 1;
+            set('s'+n+'-title', s.title);
+            set('s'+n+'-desc', s.desc);
+            set('s'+n+'-how', s.how);
+            const ul = document.getElementById('s'+n+'-list');
+            if (ul && s.list) ul.innerHTML = s.list.map(li=>`<li>${li}</li>`).join('');
+            set('s'+n+'-note', s.note);
+          });
+          set('conclusion-title', t.conclusionTitle);
+          set('conclusion-desc1', t.conclusion1);
+          set('conclusion-desc2', t.conclusion2);
+          set('article-cta', t.cta);
+          const navText = t.nav || copy.es.nav;
+          const map = [
+            { href: '#inicio', key: 'inicio' },
+            { href: '#servicios', key: 'servicios' },
+            { href: '#acerca', key: 'acerca' },
+            { href: '#casos-exito', key: 'casos' },
+            { href: '#contact-form', key: 'contacto' },
+            { href: '#blog', key: 'blog' }
+          ];
+          map.forEach(({href, key})=>{
+            document.querySelectorAll(`a[href="index.html${href}"], a[href="${href}"]`).forEach(a=>{
+              a.textContent = navText[key] || a.textContent;
+            });
+          });
+        }
+        document.addEventListener('DOMContentLoaded', function(){
+          let lang = 'es';
+          try {
+            const params = new URLSearchParams(window.location.search);
+            const q = params.get('lang');
+            lang = q ? q.toLowerCase() : lang;
+            if (!q && typeof getLanguagePreference === 'function') {
+              lang = (getLanguagePreference() || lang).toLowerCase();
+            }
+          } catch(e){}
+          apply(lang);
+          if (typeof window.setLanguage === 'function' && !window.__blogArticleLangWrapped){
+            const _orig = window.setLanguage;
+            window.setLanguage = function(l){
+              _orig(l);
+              apply((l || 'es').toLowerCase());
+            };
+            window.__blogArticleLangWrapped = true;
+          }
+        });
+      })();
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

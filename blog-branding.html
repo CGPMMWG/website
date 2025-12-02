@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding & Communication: cómo las marcas dejan de perder oportunidades | TrendMakers</title>
+    <meta name="description" content="Cómo las empresas construyen marcas claras, modernas y coherentes con Branding & Communication. Identidad visual, mensaje y sistemas de comunicación por TrendMakers.">
+    <link rel="canonical" href="https://trendmakers.agency/blog-branding-communication.html">
+    <meta name="robots" content="index,follow">
+
+    <!-- Favicon principal -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- CSS global -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header_overrides.css">
+
+    <!-- Schema org Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "TrendMakers",
+      "url": "https://trendmakers.agency/",
+      "logo": "https://trendmakers.agency/img/logo1.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/trendmakersagency",
+        "https://www.instagram.com/trendmakers.agency_igsh=cTN1Z3N0ejk1YmJu"
+      ]
+    }
+    </script>
+
+    <!-- Schema org Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://trendmakers.agency/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://trendmakers.agency/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Branding & Communication", "item": "https://trendmakers.agency/blog-branding-communication.html" }
+      ]
+    }
+    </script>
+
+    <!-- ====== ESTILO "CARO" / PREMIUM DEL ARTÍCULO ====== -->
+    <style>
+        :root {
+            --tm-bg-dark: #050313;
+            --tm-bg-deep: #0b061f;
+            --tm-accent-1: #7b2ff7;
+            --tm-accent-2: #00c3ff;
+            --tm-accent-3: #ec4899;
+            --tm-text-main: #f9f9ff;
+            --tm-text-soft: rgba(243, 244, 255, 0.82);
+            --tm-border-soft: rgba(148, 163, 255, 0.25);
+            --tm-card-bg: rgba(11, 6, 31, 0.86);
+            --header-height: 72px;
+        }
+
+        @media (max-width: 640px){
+            :root { --header-height: 110px; }
+        }
+
+        body.blog-article {
+            margin: 0;
+            min-height: 100vh;
+            background:
+              radial-gradient(1100px 900px at 5% 0%, rgba(236,72,153,0.26), transparent 55%),
+              radial-gradient(900px 900px at 90% 10%, rgba(56,189,248,0.24), transparent 50%),
+              radial-gradient(1200px 1000px at 50% 120%, rgba(88,28,135,0.65), transparent 60%),
+              linear-gradient(145deg, var(--tm-bg-dark) 0%, var(--tm-bg-deep) 48%, #1b1039 100%);
+            color: var(--tm-text-main);
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+
+        body.blog-article::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background:
+              radial-gradient(circle at 20% 0%, rgba(255,255,255,0.06), transparent 55%),
+              radial-gradient(circle at 80% 100%, rgba(0,0,0,0.45), transparent 55%);
+            mix-blend-mode: soft-light;
+            z-index: 0;
+        }
+
+        /* NAV fijo premium (se apoya en header_overrides.css para layout base) */
+        body.blog-article nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 40;
+            background: radial-gradient(circle at 0% 0%, rgba(124,58,237,0.20), transparent 55%),
+                        rgba(5,3,19,0.84);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(148,163,255,0.35);
+        }
+
+        .content {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 clamp(16px, 4vw, 32px);
+        }
+
+        .article-shell {
+            position: relative;
+            z-index: 1;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: clamp(120px, 13vw, 150px) 0 96px;
+        }
+
+        .article-hero {
+            display: grid;
+            gap: 18px;
+            text-align: left;
+            margin-bottom: clamp(26px, 5vw, 42px);
+        }
+
+        .article-hero::before {
+            content: "Branding & Communication · Identidad · Comunicación · 2025";
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.22em;
+            color: rgba(209, 213, 255, 0.78);
+            padding: 6px 12px;
+            border-radius: 999px;
+            align-self: flex-start;
+            background:
+                linear-gradient(120deg, rgba(123,47,247,0.45), rgba(0,195,255,0.5));
+            box-shadow: 0 0 0 1px rgba(148,163,255,0.4),
+                        0 10px 30px rgba(15,23,42,0.9);
+        }
+
+        .back-link {
+            color: rgba(226,232,255,0.90);
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            opacity: 0.8;
+            transition: opacity 0.2s ease, transform 0.18s ease;
+        }
+        .back-link::before { content: "\2190"; font-size: 1rem; }
+        .back-link:hover {
+            opacity: 1;
+            transform: translateX(-2px);
+        }
+
+        .article-meta {
+            color: rgba(199,210,254,0.82);
+            font-size: 0.95rem;
+        }
+
+        .article-hero h1 {
+            margin: 8px 0 6px;
+            font-size: clamp(2rem, 1.6rem + 1.2vw, 2.7rem);
+            line-height: 1.16;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            background: linear-gradient(135deg, #ffffff 0%, #e5e7ff 40%, #a5b4fc 75%, #f472b6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .lead {
+            font-size: 1.03rem;
+            line-height: 1.7;
+            color: var(--tm-text-soft);
+            max-width: 780px;
+        }
+        .lead + .lead {
+            margin-top: 2px;
+        }
+
+        .article-image {
+            border-radius: 22px;
+            overflow: hidden;
+            margin: 6px 0 28px;
+            position: relative;
+            background: radial-gradient(circle at 0% 0%, rgba(236,72,153,0.25), transparent 55%);
+            padding: 1px;
+        }
+        .article-image::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 22px;
+            background: radial-gradient(circle at 0% 0%, rgba(236,72,153,0.35), transparent 60%),
+                        radial-gradient(circle at 100% 0%, rgba(59,130,246,0.35), transparent 60%);
+            mix-blend-mode: soft-light;
+            opacity: 0.55;
+            pointer-events: none;
+        }
+        .article-image img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 22px 65px rgba(0,0,0,0.65);
+        }
+
+        .article-section {
+            position: relative;
+            background: radial-gradient(circle at 0% 0%, rgba(148,163,255,0.10), transparent 55%),
+                        radial-gradient(circle at 100% 100%, rgba(244,114,182,0.08), transparent 55%),
+                        var(--tm-card-bg);
+            border-radius: 22px;
+            padding: clamp(18px, 4vw, 24px);
+            margin-bottom: 18px;
+            box-shadow:
+                0 18px 48px rgba(15,23,42,0.85),
+                0 0 0 1px rgba(148,163,255,0.22);
+            border: 1px solid rgba(148,163,255,0.18);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            overflow: hidden;
+            transition: transform 0.22s ease-out,
+                        box-shadow 0.22s ease-out,
+                        border-color 0.22s ease-out,
+                        background 0.22s ease-out;
+        }
+
+        .article-section:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 24px 60px rgba(15,23,42,0.95),
+                0 0 0 1px rgba(191,219,254,0.45);
+            border-color: rgba(191,219,254,0.55);
+            background:
+                radial-gradient(circle at 0% 0%, rgba(148,163,255,0.16), transparent 55%),
+                radial-gradient(circle at 100% 100%, rgba(244,114,182,0.14), transparent 55%),
+                rgba(11, 6, 31, 0.96);
+        }
+
+        .article-section::after {
+            content: "";
+            position: absolute;
+            top: -40px;
+            right: -80px;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(244,114,182,0.45), transparent 60%);
+            opacity: 0.32;
+            pointer-events: none;
+        }
+
+        .article-section h2 {
+            margin: 0 0 10px;
+            font-size: clamp(1.12rem, 1rem + 0.45vw, 1.55rem);
+            color: #eef2ff;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        .article-section p {
+            margin: 0 0 10px;
+            line-height: 1.65;
+            color: rgba(226,232,255,0.9);
+            font-size: 0.97rem;
+        }
+
+        .article-section ul {
+            padding-left: 1.1rem;
+            margin: 0 0 6px;
+            color: rgba(226,232,255,0.9);
+            font-size: 0.96rem;
+            max-width: 72ch;
+        }
+        .article-section li {
+            margin-bottom: 6px;
+            position: relative;
+        }
+        .article-section li::marker {
+            color: rgba(129,140,248,0.95);
+        }
+
+        #section-conclusion {
+            border-image: linear-gradient(120deg, var(--tm-accent-3), var(--tm-accent-2)) 1;
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .article-cta {
+            margin-top: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 22px;
+            border-radius: 999px;
+            background:
+                linear-gradient(135deg, rgba(15,23,42,1) 0%, rgba(15,23,42,0.98) 40%, rgba(30,64,175,0.96) 100%);
+            color: #f9fafb;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            box-shadow:
+                0 18px 40px rgba(15,23,42,0.95),
+                0 0 0 1px rgba(129,140,248,0.9);
+            border: 1px solid rgba(191,219,254,0.22);
+            position: relative;
+            overflow: hidden;
+        }
+        .article-cta::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, transparent 0%, rgba(249,250,251,0.16) 40%, transparent 80%);
+            transform: translateX(-120%);
+            transition: transform 0.45s ease-out;
+        }
+        .article-cta:hover::after {
+            transform: translateX(40%);
+        }
+        .article-cta:hover {
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 840px) {
+            .article-shell {
+                padding-top: 120px;
+            }
+            .article-hero::before {
+                font-size: 0.68rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .article-shell {
+                padding: 112px 0 76px;
+            }
+            .article-hero h1 {
+                font-size: 1.85rem;
+            }
+            .article-section {
+                padding: 15px 14px 16px;
+                border-radius: 18px;
+            }
+            .article-image {
+                border-radius: 18px;
+            }
+        }
+    </style>
+</head>
+<body class="blog-article">
+    <div class="content">
+        <!-- ===== HEADER IGUAL A OTRAS PÁGINAS (LOGO + MENÚ REDES) ===== -->
+        <nav>
+            <a class="tm-header-badge" href="index.html#inicio" aria-label="TrendMakers home" id="tm-badge">
+                <img src="img/TrendMakers-Header.png" alt="TrendMakers">
+            </a>
+
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos rápidos">
+                <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu"
+                   target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                <a href="https://www.linkedin.com/company/trendmakersagency"
+                   target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services."
+                   target="_blank" aria-label="Email">Email</a>
+                <a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m%C3%A1s%20informaci%C3%B3n."
+                   target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+            </div>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div><div></div><div></div>
+            </div>
+
+            <ul class="desktop-menu top-agency-menu" id="desktop-menu">
+                <li><a href="index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
+                <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item">Servicios</a></li>
+                <li class="dropdown about-dropdown">
+                    <button id="nav-acerca" class="menu-item dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Nosotros <span class="caret">v</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#equipo" id="nav-equipo" class="menu-item">Equipo</a></li>
+                        <li><a href="index.html#acerca" id="nav-nosotros" class="menu-item">Nosotros</a></li>
+                        <li><a href="blog/index.html" id="nav-blog" class="menu-item">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de &eacute;xito</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
+            </ul>
+
+            <div class="nav-lang">
+                <div class="language-selector" aria-label="Selector de idioma">
+                    <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
+                        <img src="./img/IDIOMA.PNG" alt="Idioma">
+                    </button>
+                    <div class="lang-menu" role="menu" aria-label="Idiomas">
+                        <button class="lang-option" role="menuitem" data-lang="es">Español</button>
+                        <button class="lang-option" role="menuitem" data-lang="en">English</button>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="mobile-menu" id="mobile-menu">
+                <li><a href="index.html#inicio" id="nav-inicio-mobile" class="menu-item" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="nuestros-servicios.html" id="nav-servicios-mobile" class="menu-item" onclick="closeMenu()">Servicios</a></li>
+                <li class="mobile-heading">Nosotros</li>
+                <li><a href="index.html#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
+                <li><a href="index.html#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
+                <li><a href="blog/index.html" id="nav-blog-mobile" class="menu-item" onclick="closeMenu()">Blog</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito-mobile" class="menu-item" onclick="closeMenu()">Casos de &eacute;xito</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto-mobile" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- ===== CONTENIDO DEL ARTÍCULO ===== -->
+        <main class="article-shell">
+            <div class="article-hero">
+                <a class="back-link" id="blog-back" href="index.html#blog">Volver</a>
+                <h1 id="article-title">Cómo las marcas dejan de perder oportunidades con un Branding & Communication profesional</h1>
+                <p class="article-meta" id="article-meta">Por TrendMakers · Branding & Communication · 2025</p>
+                <p class="lead" id="lead-1">En todo tipo de industrias se repite la misma historia: equipos sólidos, buenos productos y servicios competitivos… pero marcas que no transmiten ese nivel.</p>
+                <p class="lead" id="lead-2">En un mercado cada vez más visual y digital, la identidad de marca dejó de ser un detalle estético para convertirse en un factor clave de crecimiento.</p>
+                <p class="lead" id="lead-3">En TrendMakers trabajamos todos los días con empresas que sienten que su marca no refleja realmente el valor que ofrecen. Esto es lo que vemos cuando ordenamos branding y comunicación de manera estratégica.</p>
+            </div>
+
+            <div class="article-image">
+                <!-- IMAGEN -->
+                <img src="./img/branding.jpg"
+                     alt="Empresas construyendo marcas claras y coherentes con TrendMakers">
+            </div>
+
+            <section class="article-section" id="section-1">
+                <h2 id="s1-title">1. El problema silencioso: una marca que no acompaña el negocio</h2>
+                <p id="s1-desc">Muchas empresas tienen buenos productos y equipos profesionales, pero una marca que no está a la altura.</p>
+                <p id="s1-how"><strong>Señales típicas:</strong></p>
+                <ul id="s1-list">
+                    <li>El logo y la estética se sienten “caseros” o improvisados.</li>
+                    <li>Cada canal (web, redes, presentaciones) tiene un estilo distinto.</li>
+                    <li>No hay un mensaje claro y repetible sobre qué hace la empresa.</li>
+                    <li>Los materiales no reflejan la calidad real del servicio.</li>
+                    <li>Los clientes sienten algo “poco profesional” aunque no sepan explicarlo.</li>
+                </ul>
+                <p id="s1-note">Cuando la identidad no dice lo mismo que el negocio, se pierde percepción de valor.</p>
+            </section>
+
+            <section class="article-section" id="section-2">
+                <h2 id="s2-title">2. El punto de inflexión: cuando la marca empieza a frenar el crecimiento</h2>
+                <p id="s2-desc">Llega un momento donde la estética, el mensaje y la experiencia de marca dejan de estar alineados con el nivel real del servicio.</p>
+                <p id="s2-how"><strong>Lo que suele pasar:</strong></p>
+                <ul id="s2-list">
+                    <li>Cuesta explicar qué hace la empresa en menos de 10 segundos.</li>
+                    <li>Las propuestas comerciales no transmiten el valor que se entrega.</li>
+                    <li>Competidores con peor servicio se ven más profesionales.</li>
+                    <li>El equipo adapta el mensaje “a ojo”, sin una guía clara.</li>
+                    <li>La marca no genera la confianza que el negocio sí podría generar.</li>
+                </ul>
+                <p id="s2-note">La percepción visual impacta directo en la confianza y la decisión de compra.</p>
+            </section>
+
+            <section class="article-section" id="section-3">
+                <h2 id="s3-title">3. La oportunidad: construir una identidad clara, moderna y coherente</h2>
+                <p id="s3-desc">Branding & Communication ordena cómo se ve y cómo habla tu marca para que todo cuente la misma historia.</p>
+                <p id="s3-how"><strong>Trabajamos sobre tres pilares:</strong></p>
+                <ul id="s3-list">
+                    <li><strong>Identidad visual:</strong> logo, paleta cromática, tipografías y sistema visual consistente.</li>
+                    <li><strong>Estrategia y comunicación:</strong> tono de voz, mensajes clave, storytelling y elevator pitch.</li>
+                    <li><strong>Kits de marca:</strong> plantillas, piezas base para redes, presentaciones y materiales editables.</li>
+                </ul>
+                <p id="s3-note">El objetivo no es solo verse bien, sino comunicar con claridad por qué tu marca es la elección correcta.</p>
+            </section>
+
+            <section class="article-section" id="section-4">
+                <h2 id="s4-title">4. Cómo trabajamos Branding & Communication en TrendMakers</h2>
+                <p id="s4-desc">Nuestro proceso está pensado para ser estratégico, pero simple de implementar en el día a día.</p>
+                <p id="s4-how"><strong>Los tres pasos:</strong></p>
+                <ul id="s4-list">
+                    <li><strong>Paso 1 – Exploración y posicionamiento:</strong> entendemos tu negocio, audiencia y diferencial.</li>
+                    <li><strong>Paso 2 – Diseño del sistema de marca:</strong> definimos identidad visual y lineamientos de comunicación.</li>
+                    <li><strong>Paso 3 – Implementación y Brand Kit:</strong> entregamos un sistema listo para usar, documentado y editable.</li>
+                </ul>
+                <p id="s4-note">Terminás con una identidad usable, clara y preparada para acompañar tu crecimiento.</p>
+            </section>
+
+            <section class="article-section" id="section-5">
+                <h2 id="s5-title">5. Lo que cambia cuando tu marca tiene una identidad profesional</h2>
+                <p id="s5-desc">Las empresas que ordenan su branding empiezan a notar cambios concretos en cómo las perciben clientes, equipos y socios.</p>
+                <p id="s5-how"><strong>Impactos habituales:</strong></p>
+                <ul id="s5-list">
+                    <li>Mayor percepción de profesionalismo y confianza desde el primer contacto.</li>
+                    <li>Un mensaje más claro y fácil de repetir por todo el equipo.</li>
+                    <li>Canales alineados: web, redes, presentaciones y anuncios hablan el mismo idioma.</li>
+                    <li>Material listo para marketing, ventas y reuniones clave.</li>
+                    <li>Mejor posición frente a competidores que todavía tienen marcas improvisadas.</li>
+                </ul>
+                <p id="s5-note">Mientras tanto, otras empresas ya están actualizando su marca y ocupando ese espacio en la mente de tus clientes.</p>
+            </section>
+
+            <section class="article-section" id="section-conclusion">
+                <h2 id="conclusion-title">¿Tu marca comunica realmente el valor que ofrecés?</h2>
+                <p id="conclusion-desc1">Si sentís que tu identidad se quedó atrás respecto a la calidad de tu negocio, este es el momento de revisarla.</p>
+                <p id="conclusion-desc2">No se trata solo de un logo nuevo, sino de construir una marca clara, coherente y alineada con tu estrategia de crecimiento.</p>
+            </section>
+
+            <a class="article-cta" id="article-cta" href="index.html#contact-form">Quiero trabajar mi branding</a>
+        </main>
+    </div>
+
+    <!-- ===== SCRIPT MULTI-IDIOMA DEL ARTÍCULO + NAV ===== -->
+    <script>
+      (function(){
+        const copy = {
+          es: {
+            nav: {
+              inicio:"Inicio",
+              servicios:"Nuestros Servicios",
+              acerca:"¿Por qué elegirnos?",
+              casos:"Casos de éxito",
+              contacto:"Agenda una Llamada",
+              blog:"Blog"
+            },
+            back: "Volver",
+            title: "Cómo las marcas dejan de perder oportunidades con un Branding & Communication profesional",
+            meta: "Por TrendMakers · Branding & Communication · 2025",
+            leads: [
+              "En todo tipo de industrias se repite la misma historia: equipos sólidos, buenos productos y servicios competitivos… pero marcas que no transmiten ese nivel.",
+              "En un mercado cada vez más visual y digital, la identidad de marca dejó de ser un detalle estético para convertirse en un factor clave de crecimiento.",
+              "En TrendMakers trabajamos todos los días con empresas que sienten que su marca no refleja realmente el valor que ofrecen. Esto es lo que vemos cuando ordenamos branding y comunicación de manera estratégica."
+            ],
+            sections: [
+              {
+                title: "1. El problema silencioso: una marca que no acompaña el negocio",
+                desc: "Muchas empresas tienen buenos productos y equipos profesionales, pero una marca que no está a la altura.",
+                how: "<strong>Señales típicas:</strong>",
+                list: [
+                  "El logo y la estética se sienten “caseros” o improvisados.",
+                  "Cada canal (web, redes, presentaciones) tiene un estilo distinto.",
+                  "No hay un mensaje claro y repetible sobre qué hace la empresa.",
+                  "Los materiales no reflejan la calidad real del servicio.",
+                  "Los clientes perciben algo poco profesional aunque no sepan explicarlo."
+                ],
+                note: "Cuando la identidad no dice lo mismo que el negocio, se pierde percepción de valor."
+              },
+              {
+                title: "2. El punto de inflexión: cuando la marca empieza a frenar el crecimiento",
+                desc: "Llega un momento donde la estética, el mensaje y la experiencia de marca dejan de estar alineados con el nivel real del servicio.",
+                how: "<strong>Lo que suele pasar:</strong>",
+                list: [
+                  "Cuesta explicar qué hace la empresa en menos de 10 segundos.",
+                  "Las propuestas comerciales no transmiten el valor que se entrega.",
+                  "Competidores con peor servicio se ven más profesionales.",
+                  "El equipo adapta el mensaje a ojo, sin una guía clara.",
+                  "La marca no genera la confianza que el negocio sí podría generar."
+                ],
+                note: "La percepción visual impacta directo en la confianza y la decisión de compra."
+              },
+              {
+                title: "3. La oportunidad: construir una identidad clara, moderna y coherente",
+                desc: "Branding & Communication ordena cómo se ve y cómo habla tu marca para que todo cuente la misma historia.",
+                how: "<strong>Trabajamos sobre tres pilares:</strong>",
+                list: [
+                  "<strong>Identidad visual:</strong> logo, paleta cromática, tipografías y sistema visual consistente.",
+                  "<strong>Estrategia y comunicación:</strong> tono de voz, mensajes clave, storytelling y elevator pitch.",
+                  "<strong>Kits de marca:</strong> plantillas, piezas base para redes, presentaciones y materiales editables."
+                ],
+                note: "El objetivo no es solo verse bien, sino comunicar con claridad por qué tu marca es la elección correcta."
+              },
+              {
+                title: "4. Cómo trabajamos Branding & Communication en TrendMakers",
+                desc: "Nuestro proceso está pensado para ser estratégico, pero simple de implementar en el día a día.",
+                how: "<strong>Los tres pasos:</strong>",
+                list: [
+                  "<strong>Paso 1 – Exploración y posicionamiento:</strong> entendemos tu negocio, audiencia y diferencial.",
+                  "<strong>Paso 2 – Diseño del sistema de marca:</strong> definimos identidad visual y lineamientos de comunicación.",
+                  "<strong>Paso 3 – Implementación y Brand Kit:</strong> entregamos un sistema listo para usar, documentado y editable."
+                ],
+                note: "Terminás con una identidad usable, clara y preparada para acompañar tu crecimiento."
+              },
+              {
+                title: "5. Lo que cambia cuando tu marca tiene una identidad profesional",
+                desc: "Las empresas que ordenan su branding empiezan a notar cambios concretos en cómo las perciben clientes, equipos y socios.",
+                how: "<strong>Impactos habituales:</strong>",
+                list: [
+                  "Mayor percepción de profesionalismo y confianza desde el primer contacto.",
+                  "Un mensaje más claro y fácil de repetir por todo el equipo.",
+                  "Canales alineados: web, redes, presentaciones y anuncios hablan el mismo idioma.",
+                  "Material listo para marketing, ventas y reuniones clave.",
+                  "Mejor posición frente a competidores que todavía tienen marcas improvisadas."
+                ],
+                note: "Mientras tanto, otras empresas ya están actualizando su marca y ocupando ese espacio en la mente de tus clientes."
+              }
+            ],
+            conclusionTitle: "¿Tu marca comunica realmente el valor que ofrecés?",
+            conclusion1: "Si sentís que tu identidad se quedó atrás respecto a la calidad de tu negocio, este es el momento de revisarla.",
+            conclusion2: "No se trata solo de un logo nuevo, sino de construir una marca clara, coherente y alineada con tu estrategia de crecimiento.",
+            cta: "Quiero trabajar mi branding"
+          },
+          en: {
+            nav: {
+              inicio:"Home",
+              servicios:"Our Services",
+              acerca:"Why choose us",
+              casos:"Success Stories",
+              contacto:"Schedule a Call",
+              blog:"Blog"
+            },
+            back: "Back",
+            title: "How brands stop losing opportunities with professional Branding & Communication",
+            meta: "By TrendMakers · Branding & Communication · 2025",
+            leads: [
+              "Across industries, the same pattern repeats: strong teams, good products and competitive services… but brands that don’t reflect that level.",
+              "In an increasingly visual and digital market, brand identity is no longer a cosmetic detail — it’s a key growth driver.",
+              "At TrendMakers, we work every day with companies that feel their brand is not communicating the real value they deliver. This is what we see when we redesign branding and communication strategically."
+            ],
+            sections: [
+              {
+                title: "1. The silent problem: a brand that doesn’t match the business",
+                desc: "Many companies have strong products and professional teams, but a brand that doesn’t keep up.",
+                how: "<strong>Typical warning signs:</strong>",
+                list: [
+                  "The logo and visual language feel improvised or outdated.",
+                  "Each channel (website, social, presentations) has a different style.",
+                  "There is no clear, repeatable way to explain what the company does.",
+                  "Materials don’t reflect the actual quality of the service.",
+                  "Clients sense something “unprofessional”, even if they can’t explain why."
+                ],
+                note: "When the brand doesn’t tell the same story as the business, perceived value drops."
+              },
+              {
+                title: "2. The turning point: when branding starts holding growth back",
+                desc: "There comes a moment when aesthetics, messaging and experience are no longer aligned with the real level of the service.",
+                how: "<strong>What usually happens:</strong>",
+                list: [
+                  "It’s hard to explain what the company does in under 10 seconds.",
+                  "Sales decks and proposals don’t reflect the value delivered.",
+                  "Weaker competitors look more professional from the outside.",
+                  "The team adjusts the message on the fly, without a clear guideline.",
+                  "The brand doesn’t generate the level of trust the business could actually create."
+                ],
+                note: "Visual perception directly influences trust and buying decisions."
+              },
+              {
+                title: "3. The opportunity: build a clear, modern and coherent identity",
+                desc: "Branding & Communication aligns how your brand looks and how it speaks, so everything tells the same story.",
+                how: "<strong>We build around three pillars:</strong>",
+                list: [
+                  "<strong>Visual identity:</strong> logo, color palette, typography and a consistent visual system.",
+                  "<strong>Strategy & communication:</strong> tone of voice, key messages, storytelling and elevator pitch.",
+                  "<strong>Brand kits:</strong> templates, social media assets, presentations and editable materials."
+                ],
+                note: "The goal is not just to look good, but to clearly communicate why your brand is the right choice."
+              },
+              {
+                title: "4. How we run Branding & Communication at TrendMakers",
+                desc: "Our process is designed to be strategic, but simple to apply in day-to-day operations.",
+                how: "<strong>The three steps:</strong>",
+                list: [
+                  "<strong>Step 1 – Exploration & positioning:</strong> we understand your business, audience and real differentiator.",
+                  "<strong>Step 2 – Brand system design:</strong> we define visual identity and communication guidelines.",
+                  "<strong>Step 3 – Implementation & Brand Kit:</strong> we deliver a documented, ready-to-use brand system."
+                ],
+                note: "You end up with an identity that is usable, clear and ready to support your growth."
+              },
+              {
+                title: "5. What changes when your brand has a real identity",
+                desc: "Companies that organize their branding see clear shifts in how they are perceived by clients, teams and partners.",
+                how: "<strong>Typical impacts:</strong>",
+                list: [
+                  "Higher perceived professionalism and trust from the very first touchpoint.",
+                  "A clearer message that the whole team can repeat easily.",
+                  "Aligned channels: website, social, decks and ads speak the same language.",
+                  "Ready-to-use materials for marketing, sales and key meetings.",
+                  "A stronger position against competitors still relying on improvised brands."
+                ],
+                note: "Meanwhile, other companies are already upgrading their brand and taking that space in your customer’s mind."
+              }
+            ],
+            conclusionTitle: "Does your brand really communicate the value you deliver?",
+            conclusion1: "If you feel your identity has fallen behind the real quality of your business, this is the moment to revisit it.",
+            conclusion2: "It’s not just about a new logo — it’s about building a clear, coherent brand aligned with your growth strategy.",
+            cta: "I want to upgrade my brand"
+          }
+        };
+
+        const set = (id,val)=>{
+          const el=document.getElementById(id);
+          if(el&&val!==undefined) el.innerHTML=val;
+        };
+
+        function apply(lang){
+          const t = copy[lang] || copy.es;
+          set('blog-back', t.back);
+          set('article-title', t.title);
+          set('article-meta', t.meta);
+          if (t.leads) {
+            set('lead-1', t.leads[0]);
+            set('lead-2', t.leads[1]);
+            set('lead-3', t.leads[2]);
+          }
+          (t.sections || []).forEach((s, idx)=>{
+            const n = idx + 1;
+            set('s'+n+'-title', s.title);
+            set('s'+n+'-desc', s.desc);
+            set('s'+n+'-how', s.how);
+            const ul = document.getElementById('s'+n+'-list');
+            if (ul && s.list) ul.innerHTML = s.list.map(li=>`<li>${li}</li>`).join('');
+            set('s'+n+'-note', s.note);
+          });
+          set('conclusion-title', t.conclusionTitle);
+          set('conclusion-desc1', t.conclusion1);
+          set('conclusion-desc2', t.conclusion2);
+          set('article-cta', t.cta);
+
+          const navText = t.nav || copy.es.nav;
+          const map = [
+            { href: '#inicio', key: 'inicio' },
+            { href: '#servicios', key: 'servicios' },
+            { href: '#acerca', key: 'acerca' },
+            { href: '#casos-exito', key: 'casos' },
+            { href: '#contact-form', key: 'contacto' },
+            { href: '#blog', key: 'blog' }
+          ];
+          map.forEach(({href, key})=>{
+            document.querySelectorAll(`a[href="index.html${href}"], a[href="${href}"]`).forEach(a=>{
+              if (a.classList && a.classList.contains('tm-header-badge')) return;
+              a.textContent = navText[key] || a.textContent;
+            });
+          });
+        }
+
+        document.addEventListener('DOMContentLoaded', function(){
+          let lang = 'es';
+          try {
+            const params = new URLSearchParams(window.location.search);
+            const q = params.get('lang');
+            lang = q ? q.toLowerCase() : lang;
+            if (!q && typeof getLanguagePreference === 'function') {
+              lang = (getLanguagePreference() || lang).toLowerCase();
+            }
+          } catch(e){}
+          apply(lang);
+          if (typeof window.setLanguage === 'function' && !window.__blogArticleLangWrapped){
+            const _orig = window.setLanguage;
+            window.setLanguage = function(l){
+              _orig(l);
+              apply((l || 'es').toLowerCase());
+            };
+            window.__blogArticleLangWrapped = true;
+          }
+        });
+      })();
+    </script>
+
+    <!-- JS global (toggleMenu, idioma general, etc.) -->
+    <script src="./js/script.js"></script>
+
+    <!-- Toggle del menú rápido de redes al hacer click en el logo -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const badge = document.getElementById('tm-badge');
+            const menu = document.getElementById('tm-quick-menu');
+            if (!badge || !menu) return;
+            const closeQuickMenu = () => menu.classList.remove('open');
+            badge.addEventListener('click', (e) => {
+                e.preventDefault();
+                menu.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (menu.contains(e.target) || badge.contains(e.target)) return;
+                closeQuickMenu();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeQuickMenu();
+            });
+        });
+    </script>
+    <!-- Botones flotantes de contacto -->
+    <a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m%C3%A1s%20informaci%C3%B3n."
+       class="whatsapp-button" target="_blank">
+        <img src="./img/WPP.PNG" alt="WhatsApp">
+    </a>
+    <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services."
+       class="email-button" target="_blank">
+        <img src="./img/EMAIL.jpg" alt="Email">
+    </a>
+</body>
+</html>

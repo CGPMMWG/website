@@ -35,7 +35,7 @@
       "logo": "https://trendmakers.agency/logo1.png",
       "sameAs": [
         "https://www.linkedin.com/company/trendmakersagency",
-        "https://www.instagram.com/trendmakers.agency_igsh=cTN1Z3N0ejk1YmJu"
+        "https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu"
       ],
       "contactPoint": [{
         "@type": "ContactPoint",
@@ -67,7 +67,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Enlace de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
     <style>
         .menu-item {
@@ -100,16 +100,10 @@
             backdrop-filter: blur(12px);
             transition: transform 180ms ease, border-color 180ms ease;
             background-size: 180% 180%;
-            animation: why-shift 8s ease-in-out infinite alternate;
         }
         .why-card:hover {
             transform: translateY(-4px);
             border-color: rgba(123, 191, 255, 0.7);
-        }
-        @keyframes why-shift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 50% 0%; }
-            100% { background-position: 100% 50%; }
         }
         .why-icon {
             width: 38px;
@@ -165,12 +159,317 @@
                 border: none;
                 padding: 8px 0;
             }
-            .why-card h3 {
-                text-align: center;
-                font-size: 1.05rem;
+                .why-card h3 {
+                    text-align: center;
+                    font-size: 1.05rem;
+                }
             }
+            /* CTA del hero de blog mejorado */
+            #blog .blog-header .button {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 14px 26px;
+                border-radius: 14px;
+                background: linear-gradient(120deg, #8c3dff 0%, #6a0dad 45%, #0bd3ff 100%);
+                color: #fff;
+                font-weight: 800;
+                font-size: 1rem;
+                text-decoration: none;
+                box-shadow: 0 16px 38px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255,255,255,0.08);
+                transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+            }
+            #blog .blog-header .button::after {
+                content: "";
+                position: absolute;
+                inset: 2px;
+                border-radius: 12px;
+                background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.18), transparent 55%);
+                pointer-events: none;
+                opacity: 0.9;
+            }
+            #blog .blog-header .button:hover {
+                transform: translateY(-3px) scale(1.01);
+                box-shadow: 0 22px 46px rgba(0,0,0,0.45), 0 0 0 1px rgba(123,191,255,0.45);
+                filter: saturate(1.05);
+            }
+            #blog .blog-header .button:active {
+                transform: translateY(-1px);
+                box-shadow: 0 12px 28px rgba(0,0,0,0.4);
         }
 
+            /* CTA del hero de blog - oval transparente */
+            #blog .blog-header .button {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 14px 30px;
+                border-radius: 999px;
+                background: transparent;
+                color: #fff;
+                font-weight: 800;
+                font-size: 1rem;
+                text-decoration: none;
+                border: 2px solid rgba(255,255,255,0.9);
+                box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255,255,255,0.12);
+                backdrop-filter: blur(6px);
+                transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease, border-color 160ms ease, background-color 160ms ease;
+            }
+            #blog .blog-header .button::after {
+                display: none;
+            }
+            #blog .blog-header .button:hover {
+                transform: translateY(-3px) scale(1.01);
+                background: rgba(255,255,255,0.08);
+                border-color: rgba(255,255,255,0.95);
+                box-shadow: 0 18px 38px rgba(0,0,0,0.45), 0 0 0 1px rgba(123,191,255,0.4);
+                filter: saturate(1.05);
+            }
+            #blog .blog-header .button:active {
+                transform: translateY(-1px);
+                box-shadow: 0 10px 24px rgba(0,0,0,0.4);
+            }
+
+        /* Hero Bienvenidos redesign */
+        #inicio .overlay {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(18px, 5vw, 40px);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            align-items: center;
+            gap: clamp(20px, 4vw, 36px);
+            width: 100%;
+            max-width: 1200px;
+        }
+        .hero-copy {
+            text-align: left;
+            display: grid;
+            gap: 14px;
+        }
+        .hero-copy h2 {
+            font-size: clamp(2rem, 1.4rem + 2vw, 3rem);
+            line-height: 1.1;
+            margin: 0;
+        }
+        .hero-copy p {
+            margin: 0;
+            color: #e8e3ff;
+            line-height: 1.6;
+        }
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 24px;
+            border-radius: 999px;
+            background: linear-gradient(120deg, #00d1ff 0%, #7b2ff7 100%);
+            color: #0b0620;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 16px 34px rgba(0,0,0,0.35);
+            transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+        }
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 22px 44px rgba(0,0,0,0.45);
+            filter: saturate(1.05);
+        }
+        .hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-brain {
+            width: 100%;
+            max-width: 920px;
+            border-radius: 0;
+            box-shadow: none;
+            opacity: 0;
+            animation: heroBrainIn 1.6s ease-out 0.2s forwards;
+            animation-play-state: paused;
+        }
+        .hero-brain.is-visible { animation-play-state: running; }
+        @keyframes heroBrainIn {
+            from { opacity: 0; transform: translateY(18px) scale(0.98); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @media (max-width: 768px) {
+            #inicio .overlay { padding: 20px 14px; }
+            .hero-copy { text-align: left; }
+            .hero-copy h2 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
+        }
+        /* Servicios premium */
+        #servicios .service-details {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            max-width: 1240px;
+            margin: 28px auto 0;
+            padding: 6px;
+        }
+        #servicios .service-card {
+            position: relative;
+            background:
+                radial-gradient(120% 120% at 15% 15%, rgba(123, 47, 247, 0.22), transparent 42%),
+                radial-gradient(120% 120% at 85% 10%, rgba(0, 195, 255, 0.16), transparent 45%),
+                linear-gradient(150deg, rgba(12,14,36,0.95), rgba(25,18,52,0.94));
+            border: 1px solid rgba(255,255,255,0.16);
+            border-radius: 20px;
+            padding: 26px 20px 22px;
+            text-decoration: none;
+            color: #f5f2ff;
+            box-shadow: 0 26px 58px rgba(0,0,0,0.52);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform 200ms ease, box-shadow 220ms ease, border-color 200ms ease;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        #servicios .service-card::before {
+            content: "";
+            position: absolute;
+            inset: 8px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.08);
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        #servicios .service-card::after {
+            content: "";
+            position: absolute;
+            inset: -35%;
+            background:
+                radial-gradient(80% 80% at 50% 50%, rgba(123, 47, 247, 0.28), transparent 55%),
+                radial-gradient(70% 70% at 60% 40%, rgba(0, 195, 255, 0.18), transparent 60%);
+            opacity: 0.55;
+            filter: blur(28px);
+            transition: opacity 200ms ease, transform 200ms ease;
+            pointer-events: none;
+            z-index: -1;
+        }
+        #servicios .service-card:hover {
+            transform: translateY(-8px) scale(1.015);
+            box-shadow: 0 32px 70px rgba(0,0,0,0.6);
+            border-color: rgba(123,191,255,0.6);
+        }
+        #servicios .service-card:hover::after {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+        #servicios .service-card img {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 12px;
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
+        }
+        #servicios .service-card h3 {
+            text-align: center;
+            color: #f8f9ff !important;
+            font-family: 'Inter', 'Space Grotesk', system-ui, -apple-system, sans-serif;
+            font-weight: 800;
+            font-size: 1.08rem;
+            margin: 6px 0 8px;
+            letter-spacing: 0.005em;
+        }
+        #servicios .service-card p {
+            text-align: center;
+            color: #cfd4f1;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin: 0 auto;
+            max-width: 240px;
+        }
+        /* Halo suave detras de las cards para destacar la seccion */
+        #servicios .overlay {
+            position: relative;
+            overflow: visible;
+        }
+        #servicios .overlay::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 78px;
+            width: min(1180px, 94vw);
+            height: 520px;
+            background:
+                radial-gradient(60% 55% at 20% 30%, rgba(123, 47, 247, 0.22), transparent 60%),
+                radial-gradient(58% 60% at 80% 25%, rgba(0, 195, 255, 0.18), transparent 62%),
+                radial-gradient(80% 60% at 50% 72%, rgba(255, 255, 255, 0.07), transparent 74%);
+            filter: blur(42px);
+            opacity: 0.9;
+            pointer-events: none;
+            z-index: 0;
+        }
+        #servicios .overlay > * {
+            position: relative;
+            z-index: 1;
+        }
+        #servicios .services-cta-wrap {
+            text-align: center;
+            margin: 18px 0 16px;
+        }
+        #servicios .services-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 13px 22px;
+            border-radius: 999px;
+            border: 2px solid rgba(255,255,255,0.85);
+            background: rgba(255,255,255,0.04);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+            box-shadow: 0 12px 26px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.08);
+            backdrop-filter: blur(8px);
+            transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease, border-color 150ms ease;
+        }
+        #servicios .services-cta:hover {
+            transform: translateY(-2px);
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(123,191,255,0.85);
+            box-shadow: 0 18px 38px rgba(0,0,0,0.45);
+        }
+        /* Oculta la línea fina por defecto en el título de servicios */
+        #servicios .section-title::after { display: none; content: none; }
+        @media (max-width: 768px) {
+            #servicios .overlay::before {
+                top: 120px;
+                width: 105%;
+                height: 740px;
+            }
+            #servicios .service-details {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                max-width: 680px;
+            }
+            #servicios .service-card {
+                padding: 20px 14px 18px;
+            }
+            #servicios .service-card h3 {
+                font-size: 1.02rem;
+            }
+            #servicios .service-card p {
+                font-size: 0.93rem;
+            }
+            #servicios .service-card:nth-child(5) {
+                grid-column: 1 / 3;
+                justify-self: center;
+                max-width: 320px;
+            }
+        }
     </style>
 </head>
 
@@ -181,29 +480,35 @@
     </div>
     <div class="content">
         <nav>
+            <a class="tm-header-badge" href="#inicio" aria-label="TrendMakers home" id="tm-badge">
+                <img src="./img/TrendMakers-Header.png" alt="TrendMakers">
+            </a>
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos rápidos">
+                <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                <a class="mailto-dynamic" href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias." target="_blank" aria-label="Email">Email</a>
+                <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" aria-label="WhatsApp">WhatsApp</a>
+            </div>
             <div class="hamburger" onclick="toggleMenu()">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
-            <!-- Botones de redes sociales -->
-            <div class="social-buttons">
-                <a href="https://www.linkedin.com/company/trendmakersagency" class="linkedin-button" target="_blank">
-                    <img src="./img/Linkedinlogo.png" alt="LinkedIn">
-                </a>
-                <a href="https://www.instagram.com/trendmakers.agency_igsh=cTN1Z3N0ejk1YmJu" class="instagram-button" target="_blank">
-                    <img src="./img/INSTAGRAMLOGO.PNG" alt="Instagram">
-                </a>
-            </div>
-                                    <ul class="desktop-menu">
+            <ul class="desktop-menu top-agency-menu">
                 <li><a href="#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
-                <li><a href="#servicios" id="nav-servicios" class="menu-item">Nuestros Servicios</a></li>
-                <li><a href="#problema" id="nav-problema" class="menu-item">Contanos tu Proyecto</a></li>
-                <li><a href="#equipo" id="nav-equipo" class="menu-item">Nuestro Equipo</a></li>
-                <li><a href="#acerca" id="nav-acerca" class="menu-item">Por que elegirnos</a></li>
-                <li><a href="#casos-exito" id="nav-casos-exito" class="menu-item">Casos de exito</a></li>
-                <li><a href="#blog" id="nav-blog" class="menu-item">Blog</a></li>
-                <li><a href="#contact-form" id="nav-contacto" class="menu-item">Agenda una Llamada</a></li>
+                <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item">Servicios</a></li>
+                <li class="dropdown about-dropdown">
+                    <button id="nav-acerca" class="menu-item dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Nosotros <span class="caret">v</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#equipo" id="nav-equipo" class="menu-item">Equipo</a></li>
+                        <li><a href="#acerca" id="nav-nosotros" class="menu-item">Nosotros</a></li>
+                        <li><a href="blog/index.html" id="nav-blog" class="menu-item">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="#casos-exito" id="nav-casos-exito" class="menu-item">Casos de éxito</a></li>
+                <li><a href="#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
             </ul>
             <div class="nav-lang">
               <div class="language-selector" aria-label="Selector de idioma">
@@ -216,15 +521,15 @@
                 </div>
               </div>
             </div>
-                                    <ul class="mobile-menu">
+            <ul class="mobile-menu">
                 <li><a href="#inicio" id="nav-inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
-                <li><a href="#servicios" id="nav-servicios" class="menu-item" onclick="closeMenu()">Nuestros Servicios</a></li>
-                <li><a href="#problema" id="nav-problema" class="menu-item" onclick="closeMenu()">Contanos tu Proyecto</a></li>
-                <li><a href="#equipo" id="nav-equipo" class="menu-item" onclick="closeMenu()">Nuestro Equipo</a></li>
-                <li><a href="#acerca" id="nav-acerca" class="menu-item" onclick="closeMenu()">Por que elegirnos</a></li>
-                <li><a href="#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de exito</a></li>
-                <li><a href="#blog" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
-                <li><a href="#contact-form" id="nav-contacto" class="menu-item" onclick="closeMenu()">Agenda una Llamada</a></li>
+                <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item">Servicios</a></li>
+                <li class="mobile-heading">Nosotros</li>
+                <li><a href="#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
+                <li><a href="#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
+                <li><a href="blog/index.html" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
+                <li><a href="#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de éxito</a></li>
+                <li><a href="#contact-form" id="nav-contacto" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
             </ul>
         </nav>
         <header>
@@ -254,17 +559,17 @@
                     Your browser does not support the video tag.
                 </video>
                 <div class="overlay">
-                    <div class="intro">
-                        <div class="hero-logo-ghost" aria-hidden="true">
-                            <img src="./img/logo1.png" alt="" loading="lazy">
+                                        <div class="hero-grid">
+                        <div class="hero-copy">
+                            <h2 id="intro-title" class="section-title animate__animated">Bienvenidos a TrendMakers</h2>
+                            <p class="intro-tagline animate__animated">Impulsamos el crecimiento de tu negocio con marketing, an&aacute;lisis de datos, automatizaci&oacute;n e inteligencia artificial.</p>
+                            <p id="intro-text" class="intro-subtitle animate__animated">Dise&ntilde;amos y ejecutamos estrategias digitales personalizadas, basadas en datos, para atraer mejores clientes y escalar tus resultados.</p>
+                            <a href="https://calendly.com/mgottler1999/30min" class="hero-cta animate__animated" id="schedule-call" target="_blank">Agenda una Llamada</a>
+                            <p id="about-us-text" class="sr-only" aria-hidden="true"></p>
                         </div>
-
-                        <h2 id="intro-title" class="section-title animate__animated">Bienvenidos a TrendMakers</h2>
-                        <p class="intro-tagline animate__animated">Impulsamos el crecimiento de tu negocio con marketing, análisis de datos, automatización e inteligencia artificial.</p>
-                        <p id="intro-text" class="intro-subtitle animate__animated">Diseñamos y ejecutamos estrategias digitales personalizadas, basadas en datos, para atraer mejores clientes y escalar tus resultados.</p>
-                        <a href="https://calendly.com/mgottler1999/30min" class="button animate__animated" id="schedule-call" target="_blank">Agenda una Llamada</a>
-                        <p id="about-us-text" class="sr-only" aria-hidden="true"></p>
-                    </div>
+                        <div class="hero-visual">
+                            <img src="./img/BRAIN-BIENVENIDOS.png" alt="Inteligencia artificial aplicada al crecimiento" class="hero-brain" loading="lazy">
+                        </div>
                 </div>
             </div>
         </section>
@@ -278,24 +583,27 @@
                 <div class="overlay">
                     <h2 id="services-title" class="section-title animate__animated">Nuestros Servicios</h2>
                     <p id="services-text" class="animate__animated">Hace clic en las tarjetas para conocer más detalles sobre nuestros servicios y descubrir cómo podemos contribuir al crecimiento de tu empresa.</p>
+                    <div class="services-cta-wrap">
+                        <a class="services-cta" id="services-portfolio-cta" href="nuestros-servicios.html">PORTFOLIO DE SOLUCIONES</a>
+                    </div>
                                         <div class="service-details">
                         <a class="service-card animate__animated" href="marketing-automation.html" data-service-id="marketing-automation">
-                            <img src="./img/logo1.png" alt="Marketing &amp; Automation">
+                            <img src="./img/MATION.png" alt="Marketing &amp; Automation">
                             <h3>Marketing &amp; Automation</h3>
                             <p>Automatizamos tus procesos y funnels para generar m&aacute;s leads y conversiones con menos esfuerzo.</p>
                         </a>
                         <a class="service-card animate__animated" href="branding-communication.html" data-service-id="branding-communication">
-                            <img src="./img/logo1.png" alt="Branding &amp; Communication">
+                            <img src="./img/BRANDING.png" alt="Branding &amp; Communication">
                             <h3>Branding &amp; Communication</h3>
                             <p>Creamos marcas coherentes y comunicaci&oacute;n clara que conecta con tu audiencia.</p>
                         </a>
                         <a class="service-card animate__animated" href="web-ecommerce.html" data-service-id="web-ecommerce">
-                            <img src="./img/logo1.png" alt="Web &amp; E-Commerce Development">
+                            <img src="./img/WEB-ECOMM.png" alt="Web &amp; E-Commerce Development">
                             <h3>Web &amp; E-Commerce Development</h3>
                             <p>Desarrollamos sitios y tiendas r&aacute;pidas, seguras y optimizadas para convertir.</p>
                         </a>
                         <a class="service-card animate__animated" href="data-analitics.html" data-service-id="consulting-data-strategy">
-                            <img src="./img/logo1.png" alt="Consulting, Data &amp; Strategy">
+                            <img src="./img/DATA-STRAT.png" alt="Consulting, Data &amp; Strategy">
                             <h3>Consulting, Data &amp; Strategy</h3>
                             <p>Definimos tu rumbo con an&aacute;lisis, datos y estrategia para escalar tu negocio.</p>
                         </a>
@@ -321,10 +629,10 @@
                             <h2 class="closing-cta__title" id="closing-cta-title">&#191;Listo para llevar tu marca al próximo nivel</h2>
                             <p id="contact-soon" class="closing-cta__subtitle">Contanos tu proyecto y en menos de 24 horas un especialista de TrendMakers se pondrá en contacto con vos para planificar los próximos pasos.</p>
                             <a role="button"
-                               href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&amp;body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services."
-                               class="button closing-cta__btn"
+                               href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias."
+                               class="button closing-cta__btn mailto-dynamic"
                                id="show-popup">
-                                Contanos tu Proyecto
+                                ¡Estoy listo!
                             </a>
                         </div>
                     </div>
@@ -372,7 +680,6 @@
                             <h3>Community Managers</h3>
                             <p>Expertos en la gestión de redes para aumentar la presencia y el compromiso de tu marca.</p>
                         </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -409,8 +716,7 @@
                                     <div class="flip-face flip-front">
                                         <img src="./img/PRONTO.png" alt="Prontoled" class="flip-logo">
                                         <h3 class="flip-title">Prontoled</h3>
-                                        <span class="flip-hint">Click para ver detalles / Click to see more</span>
-                                        <span class="flip-cta">Ver más</span>
+                                        <span class="flip-hint">Click para ver m&aacute;s</span>
                                     </div>
                                 </div>
                             </a>
@@ -421,8 +727,7 @@
                                     <div class="flip-face flip-front">
                                         <img src="./img/LETRA.png" alt="Letratec" class="flip-logo">
                                         <h3 class="flip-title">Letratec</h3>
-                                        <span class="flip-hint">Click para ver detalles / Click to see more</span>
-                                        <span class="flip-cta">Ver más</span>
+                                        <span class="flip-hint">Click para ver m&aacute;s</span>
                                     </div>
                                 </div>
                             </a>
@@ -433,14 +738,11 @@
                                     <div class="flip-face flip-front">
                                         <img src="./img/VCG IMAGEN.png" alt="VcG Imagen" class="flip-logo">
                                         <h3 class="flip-title">VcG Imagen</h3>
-                                        <span class="flip-hint">Click para ver detalles / Click to see more</span>
-                                        <span class="flip-cta">Ver más</span>
+                                        <span class="flip-hint">Click para ver m&aacute;s</span>
                                     </div>
                                 </div>
                             </a>
                         </div>
-
-                    </div>
                 </div>
             </div>
         </section>
@@ -470,7 +772,6 @@
                             <h3 id="why3-title">Crecimiento &amp; Optimización</h3>
                             <p id="why3-text">Medimos, refinamos y escalamos tu proyecto para maximizar el impacto a largo plazo.</p>
                         </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -480,10 +781,11 @@
                     <p class="blog-kicker" id="blog-kicker">Marketing &middot; Datos &middot; automatizaci&oacute;n</p>
                     <h2 class="section-title" id="blog-title">Conoc&eacute; nuestro blog</h2>
                     <p class="blog-subtitle" id="blog-subtitle">Aprend&eacute; con nuestros especialistas los errores m&aacute;s comunes y c&oacute;mo evitarlos con datos y automatizaci&oacute;n.</p>
+                    <a class="button" href="blog/index.html">Ver todos los art&iacute;culos</a>
                 </div>
                 <a class="blog-card animate__animated" href="blog-errores-marketing.html">
                     <div class="blog-card__media">
-                        <img src="./img/BLOG1.jpg" alt="9 errores de marketing que frenan a cualquier negocio" loading="lazy">
+                        <img src="./img/ROBOT-IA.png" alt="9 errores de marketing que frenan a cualquier negocio" loading="lazy">
                     </div>
                     <div class="blog-card__content">
                         <p class="blog-card__meta" id="blog-meta">Por TrendMakers &middot; 19/11/2025</p>
@@ -532,52 +834,141 @@
             </div>
         </section>
         <div class="separator"></div>
-        <section id="contact-form" class="contact-form-section">
-  <h2 id="contact-title">¿Necesitas ayuda digital? TrendMakers es tu solución</h2>
-  
-  <form action="https://formspree.io/f/xyzwvwop" method="POST">
-    <label for="name" id="label-name">Nombre:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="company" id="label-company">Empresa:</label>
-    <input type="text" id="company" name="company" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-      
-    <label for="project" id="label-project">Proyecto:</label>
-    <textarea id="project" name="project" required></textarea>
-
-
-    <button type="submit" class="button" id="submit-contact-form">Enviar</button>
-  </form>
+                <section id="contact-form" class="contact-form-section">
+  <div class="contact-glow"></div>
+  <div class="contact-shell">
+    <h2 id="contact-title">&iquest;Necesitas ayuda digital? TrendMakers es tu soluci&oacute;n</h2>
+    <div class="contact-layout">
+      <div class="contact-card">
+          <form action="https://formspree.io/f/xyzwvwop" method="POST">
+              <div class="form-grid">
+                  <div class="form-field">
+                      <label for="name" id="label-name">Nombre</label>
+                      <input type="text" id="name" name="name" required>
+                  </div>
+                  <div class="form-field">
+                      <label for="company" id="label-company">Empresa</label>
+                      <input type="text" id="company" name="company" required>
+                  </div>
+                  <div class="form-field full">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="form-field full">
+                      <label for="project" id="label-project">Proyecto</label>
+                      <textarea id="project" name="project" required></textarea>
+                  </div>
+              </div>
+              <button type="submit" class="button contact-button" id="submit-contact-form">Enviar</button>
+          </form>
+      </div>
+    </div>
+  </div>
 </section>
+
 
      
         <footer>
-            <div class="footer-logos">
-                <img src="./img/google-ads.svg" alt="Google Ads">
-                <img src="./img/google-partner.svg" alt="Google Partner">
-                <img src="./img/logofacebookads.png" alt="Facebook Ads">
-                <img src="./img/cace.svg" alt="CACE">
+            <div class="footer-inner">
+                <div class="footer-logos">
+                    <img src="./img/google-ads.svg" alt="Google Ads">
+                    <img src="./img/google-partner.svg" alt="Google Partner">
+                    <img src="./img/logofacebookads.png" alt="Facebook Ads">
+                    <img src="./img/cace.svg" alt="CACE">
+                </div>
+                <div class="footer-social-row">
+                    <a href="https://www.linkedin.com/company/trendmakersagency" class="linkedin-button" target="_blank" aria-label="LinkedIn">
+                        <img src="./img/Linkedinlogo.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" class="instagram-button" target="_blank" aria-label="Instagram">
+                        <img src="./img/INSTAGRAMLOGO.PNG" alt="Instagram">
+                    </a>
+                </div>
             </div>
             <p id="footer-text" class="animate__animated">&copy; 2023 TrendMakers. Todos los derechos reservados.</p>
         </footer>
         <!-- Pop-up Modal eliminado: usamos enlace mailto directo -->
     </div>
 <!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m%C3%A1s%20informaci%C3%B3n." class="whatsapp-button" target="_blank">
+<a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20más%20información." class="whatsapp-button" target="_blank">
   <img src="./img/WPP.PNG" alt="WhatsApp">
 </a>
 
     <!-- Botón flotante de Email -->
-    <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&amp;body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank">
+    <a href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias." class="email-button mailto-dynamic" target="_blank">
         <img src="./img/EMAIL.jpg" alt="Email">
     </a>
     <script src="./js/script.js"></script>
     <script src="./js/success_cards.js"></script>
     <script src="./js/blog_i18n.js"></script>
     <script>
+        // Toggle quick links from header badge
+        document.addEventListener('DOMContentLoaded', function(){
+            const badge = document.getElementById('tm-badge');
+            const menu = document.getElementById('tm-quick-menu');
+            if (!badge || !menu) return;
+            const closeMenu = () => menu.classList.remove('open');
+            badge.addEventListener('click', (e) => {
+                e.preventDefault();
+                menu.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (menu.contains(e.target) || badge.contains(e.target)) return;
+                closeMenu();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeMenu();
+            });
+        });
+    </script>
+    <script>
+        // Forzar logos correctos en services cards al cargar
+        document.addEventListener('DOMContentLoaded', function() {
+            const marketingLogo = document.querySelector('.service-card[data-service-id="marketing-automation"] img');
+            if (marketingLogo) {
+                marketingLogo.src = './img/MATION.png';
+                marketingLogo.alt = 'Marketing & Automation';
+            }
+            const brandingLogo = document.querySelector('.service-card[data-service-id="branding-communication"] img');
+            if (brandingLogo) {
+                brandingLogo.src = './img/BRANDING.png';
+                brandingLogo.alt = 'Branding & Communication';
+            }
+            const webLogo = document.querySelector('.service-card[data-service-id="web-ecommerce"] img');
+            if (webLogo) {
+                webLogo.src = './img/WEB-ECOMM.png';
+                webLogo.alt = 'Web & E-Commerce Development';
+            }
+            const dataLogo = document.querySelector('.service-card[data-service-id="consulting-data-strategy"] img');
+            if (dataLogo) {
+                dataLogo.src = './img/DATA-STRAT.png';
+                dataLogo.alt = 'Consulting, Data & Strategy';
+            }
+            const aiLogo = document.querySelector('.service-card[data-service-id="ai-innovation"] img');
+            if (aiLogo) {
+                aiLogo.src = './img/IA-HUB.png';
+                aiLogo.alt = 'AI & Innovation Hub';
+            }
+        });
+    </script>
+    <script>
+        // Disparar animación del hero cuando sea visible
+        document.addEventListener('DOMContentLoaded', function(){
+            try {
+                const heroImg = document.querySelector('.hero-brain');
+                if (!heroImg || !('IntersectionObserver' in window)) return;
+                const obs = new IntersectionObserver((entries)=>{
+                    entries.forEach(entry=>{
+                        if (entry.isIntersecting) {
+                            heroImg.classList.add('is-visible');
+                            obs.disconnect();
+                        }
+                    });
+                }, { threshold: 0.35, rootMargin: '0px 0px -10% 0px' });
+                obs.observe(heroImg);
+            } catch(e){}
+        });
+
         function toggleMenu() {
             const hamburger = document.querySelector('.hamburger');
             const mobileMenu = document.querySelector('nav ul.mobile-menu');
@@ -594,25 +985,6 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

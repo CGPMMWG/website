@@ -13,7 +13,10 @@
         body {
             margin: 0;
             font-family: "Inter", system-ui, -apple-system, sans-serif;
-            background: var(--tm-gradient);
+            background:
+                radial-gradient(900px 900px at 10% 15%, rgba(123, 47, 247, 0.16), transparent 45%),
+                radial-gradient(820px 820px at 85% 8%, rgba(0, 195, 255, 0.14), transparent 48%),
+                linear-gradient(135deg, #0a0616 0%, #120b27 50%, #0b0f1f 100%);
             color: #f5f2ff;
             overflow-x: hidden;
         }
@@ -147,6 +150,27 @@
         }
         :root { --header-height: 72px; }
         @media (max-width: 640px){ :root { --header-height: 110px; } }
+        /* CTA estilo panel gradiente */
+        .cta-panel {
+            max-width: 900px;
+            margin: 10px auto 0;
+            text-align: center;
+            padding: 20px 22px 26px;
+            border-radius: 18px;
+            background: linear-gradient(120deg, rgba(123, 47, 247, 0.14), rgba(0, 195, 255, 0.14));
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+        }
+        .cta-panel .btn-primary {
+            padding: 14px 28px;
+            background: linear-gradient(120deg, #8c3dff 0%, #6a0dad 45%, #0bd3ff 100%);
+            box-shadow: 0 18px 38px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.08);
+            font-weight: 800;
+        }
+        .cta-panel .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 24px 50px rgba(0,0,0,0.45), 0 0 0 1px rgba(123,191,255,0.45);
+        }
         .back-btn {
             position: fixed;
             top: calc(var(--header-height) + 8px);
@@ -181,28 +205,35 @@
     <div class="content">
         <a class="back-btn" href="index.html#problema" aria-label="Volver a la sección Ready to take your brand to the next level">← Volver</a>
         <nav>
+            <a class="tm-header-badge" href="index.html#inicio" aria-label="TrendMakers home" id="tm-badge">
+                <img src="./img/TrendMakers-Header.png" alt="TrendMakers">
+            </a>
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos r?pidos">
+                <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." target="_blank" aria-label="Email">Email</a>
+                <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m?s%20informaci?n." target="_blank" aria-label="WhatsApp">WhatsApp</a>
+            </div>
             <div class="hamburger" onclick="toggleMenu()">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
-            <div class="social-buttons">
-                <a href="https://www.linkedin.com/company/trendmakersagency" class="linkedin-button" target="_blank">
-                    <img src="./img/Linkedinlogo.png" alt="LinkedIn">
-                </a>
-                <a href="https://www.instagram.com/trendmakers.agency_igsh=cTN1Z3N0ejk1YmJu" class="instagram-button" target="_blank">
-                    <img src="./img/INSTAGRAMLOGO.PNG" alt="Instagram">
-                </a>
-            </div>
-            <ul class="desktop-menu">
+            <ul class="desktop-menu top-agency-menu">
                 <li><a href="index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
-                <li><a href="index.html#servicios" id="nav-servicios" class="menu-item">Nuestros Servicios</a></li>
-                <li><a href="index.html#problema" id="nav-problema" class="menu-item">Contanos tu Proyecto</a></li>
-                <li><a href="index.html#equipo" id="nav-equipo" class="menu-item">Nuestro Equipo</a></li>
-                <li><a href="index.html#acerca" id="nav-acerca" class="menu-item">Por qué elegirnos</a></li>
-                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de éxito</a></li>
-                <li><a href="index.html#blog" id="nav-blog" class="menu-item">Blog</a></li>
-                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item">Agendá una Llamada</a></li>
+                <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item">Servicios</a></li>
+                <li class="dropdown about-dropdown">
+                    <button id="nav-acerca" class="menu-item dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Nosotros <span class="caret">v</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#equipo" id="nav-equipo" class="menu-item">Equipo</a></li>
+                        <li><a href="index.html#acerca" id="nav-nosotros" class="menu-item">Nosotros</a></li>
+                        <li><a href="blog/index.html" id="nav-blog" class="menu-item">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de ?xito</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
             </ul>
             <div class="nav-lang">
               <div class="language-selector" aria-label="Selector de idioma">
@@ -217,13 +248,13 @@
             </div>
             <ul class="mobile-menu">
                 <li><a href="index.html#inicio" id="nav-inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
-                <li><a href="index.html#servicios" id="nav-servicios" class="menu-item" onclick="closeMenu()">Nuestros Servicios</a></li>
-                <li><a href="index.html#problema" id="nav-problema" class="menu-item" onclick="closeMenu()">Contanos tu Proyecto</a></li>
-                <li><a href="index.html#equipo" id="nav-equipo" class="menu-item" onclick="closeMenu()">Nuestro Equipo</a></li>
-                <li><a href="index.html#acerca" id="nav-acerca" class="menu-item" onclick="closeMenu()">Por qué elegirnos</a></li>
-                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de éxito</a></li>
-                <li><a href="index.html#blog" id="nav-blog-mobile" class="menu-item" onclick="closeMenu()">Blog</a></li>
-                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item" onclick="closeMenu()">Agendá una Llamada</a></li>
+                <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item" onclick="closeMenu()">Servicios</a></li>
+                <li class="mobile-heading">Nosotros</li>
+                <li><a href="index.html#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
+                <li><a href="index.html#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
+                <li><a href="blog/index.html" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de ?xito</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
             </ul>
         </nav>
 
@@ -245,7 +276,7 @@
                 </a>
             </div>
             <div class="hero-visual">
-                <img src="./img/logo1.png" alt="AI &amp; Innovation Hub, automatización e inteligencia artificial">
+                <img src="./img/IA-HUB.png" alt="AI &amp; Innovation Hub, automatización e inteligencia artificial">
             </div>
         </section>
 
@@ -386,7 +417,7 @@
         </section>
 
         <!-- CTA FINAL -->
-        <section class="card section-title-center">
+        <section class="cta-panel">
             <h2 id="ai-cta2-title">¿Estás listo para automatizar y escalar tu operación?</h2>
             <p class="section-lead" id="ai-cta2-text">
                 Trabajemos juntos para llevar tu negocio al siguiente nivel con IA aplicada de forma inteligente y estratégica.
@@ -422,14 +453,16 @@
         </div>
     </div>
 
-   <!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m%C3%A1s%20informaci%C3%B3n" class="whatsapp-button" target="_blank">
-  <img src="./img/WPP.PNG" alt="WhatsApp">
-</a>
-
-    <!-- Botón flotante de Email -->
-    <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&amp;body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank">
+    <!-- Botones flotantes -->
+    <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20más%20información." class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+        <img src="./img/WPP.PNG" alt="WhatsApp">
+    </a>
+    <a href="mailto:info@trendmakers.agencysubject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank" aria-label="Email">
         <img src="./img/EMAIL.jpg" alt="Email">
+    </a>
+
+    <script src="./js/script.js"></script>
+    <script>
       const aiCopy = {
         es: {
           badge: "AI & Innovation Hub",
@@ -690,6 +723,24 @@
           window.__aiLangWrapped = true;
         }
       })();
+      // Toggle quick links from header badge
+      document.addEventListener('DOMContentLoaded', function(){
+          const badge = document.getElementById('tm-badge');
+          const menu = document.getElementById('tm-quick-menu');
+          if (!badge || !menu) return;
+          const closeQuickMenu = () => menu.classList.remove('open');
+          badge.addEventListener('click', (e) => {
+              e.preventDefault();
+              menu.classList.toggle('open');
+          });
+          document.addEventListener('click', (e) => {
+              if (menu.contains(e.target) || badge.contains(e.target)) return;
+              closeQuickMenu();
+          });
+          document.addEventListener('keydown', (e) => {
+              if (e.key === 'Escape') closeQuickMenu();
+          });
+      });
 
       function toggleMenu() {
           const hamburger = document.querySelector('.hamburger');
@@ -708,5 +759,3 @@
     </script>
 </body>
 </html>
-
-

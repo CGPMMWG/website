@@ -4,100 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestros Servicios | TrendMakers</title>
+    <meta name="description" content="Descubr&iacute; las soluciones de TrendMakers: marketing, automatizaci&oacute;n, datos, desarrollo web y AI para crecer con resultados medibles.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://trendmakers.agency/nuestros-servicios.html">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header_overrides.css">
     <link rel="stylesheet" href="./css/casos_overrides.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link href="https://fonts.googleapis.com/css2family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        body.service-detail-page {
-            background: radial-gradient(circle at top, #8a2be2 0%, #4b0082 40%, #230046 100%);
+        body.service-page {
+            background:
+                radial-gradient(900px 900px at 10% 15%, rgba(123, 47, 247, 0.16), transparent 45%),
+                radial-gradient(820px 820px at 85% 8%, rgba(0, 195, 255, 0.14), transparent 48%),
+                linear-gradient(135deg, #0a0616 0%, #120b27 50%, #0b0f1f 100%);
             color: #f4f2ff;
+            min-height: 100vh;
+            font-family: "Inter", system-ui, -apple-system, sans-serif;
+            overflow-x: hidden;
         }
-        body.service-detail-page .content {
-            padding-top: 170px;
+        body.service-page .content {
+            padding-top: 160px;
+            position: relative;
         }
-        .detail-hero {
-            max-width: 1100px;
-            margin: 0 auto 40px;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .detail-hero h1 {
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            margin-bottom: 10px;
-            color: #fff;
-        }
-        .detail-hero p {
-            font-size: 1.1rem;
-            color: #e8d9ff;
-        }
-        .detail-grid {
-            max-width: 1200px;
+        .service-shell {
+            max-width: 1180px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-            padding: 0 20px 60px;
-        }
-        .detail-card {
-            background: rgba(12, 6, 34, 0.75);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 16px;
-            padding: 24px;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 20px 45px rgba(8, 0, 26, 0.4);
-            transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
-            scroll-margin-top: 220px;
-        }
-        .detail-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(187, 134, 252, 0.9);
-            box-shadow: 0 25px 60px rgba(10, 0, 30, 0.55);
-        }
-        .detail-card h2 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: #e3c5ff;
-        }
-        .detail-card p {
-            font-size: 0.95rem;
-            line-height: 1.5;
-            color: #d9c2ff;
-        }
-        .detail-card ul {
-            margin: 16px 0 0 18px;
-            padding: 0;
-            color: #fdf7ff;
-            font-size: 0.95rem;
-        }
-        .detail-card ul li {
-            margin-bottom: 6px;
-        }
-        .detail-actions {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        .detail-actions a {
-            display: inline-block;
-            padding: 14px 26px;
-            border-radius: 30px;
-            background: #ff6ff2;
-            color: #1b012d;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 10px 30px rgba(255, 111, 242, 0.45);
-            transition: transform 200ms ease, box-shadow 200ms ease;
-        }
-        .detail-actions a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 18px 32px rgba(255, 111, 242, 0.6);
+            padding: 0 20px 90px;
         }
         .detail-back {
-            max-width: 1100px;
+            max-width: 1180px;
             margin: 0 auto;
-            padding: 10px 20px 0;
+            padding: 0 20px 6px;
         }
         .detail-back-button {
             display: inline-flex;
@@ -118,174 +58,567 @@
             background: rgba(255, 255, 255, 0.22);
             border-color: rgba(255, 255, 255, 0.75);
         }
+        .service-hero {
+            text-align: center;
+            margin: 0 auto 28px;
+            padding: 18px 0 10px;
+            max-width: 1050px;
+        }
+        .service-kicker {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #cfd7ff;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+        .service-hero h1 {
+            font-size: clamp(2rem, 4vw, 3.1rem);
+            margin: 8px 0 10px;
+            color: #fff;
+        }
+        .service-hero p {
+            font-size: 1.05rem;
+            color: #e7ddff;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .services-grid {
+            max-width: 1180px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            padding: 10px 0 40px;
+        }
+        .service-tile {
+            position: relative;
+            display: grid;
+            grid-template-columns: 140px 1fr 70px;
+            align-items: center;
+            gap: 18px;
+            min-height: 180px;
+            background:
+                radial-gradient(160% 140% at 10% 20%, rgba(123, 47, 247, 0.18), transparent 45%),
+                radial-gradient(140% 130% at 90% 0%, rgba(0, 195, 255, 0.18), transparent 48%),
+                linear-gradient(135deg, rgba(12, 16, 32, 0.92), rgba(20, 16, 38, 0.9));
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 20px;
+            padding: 20px 24px;
+            text-decoration: none;
+            color: #f7f3ff;
+            box-shadow: 0 22px 52px rgba(0, 0, 0, 0.48);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform 200ms ease, box-shadow 220ms ease, border-color 200ms ease;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        .service-tile::after {
+            content: "";
+            position: absolute;
+            inset: -20%;
+            background:
+                radial-gradient(80% 70% at 50% 50%, rgba(123, 47, 247, 0.22), transparent 60%),
+                radial-gradient(60% 70% at 70% 40%, rgba(0, 195, 255, 0.18), transparent 58%);
+            opacity: 0.45;
+            filter: blur(24px);
+            pointer-events: none;
+            z-index: -1;
+            transition: opacity 200ms ease, transform 200ms ease;
+        }
+        .service-tile:hover {
+            transform: translateY(-6px);
+            border-color: rgba(123, 191, 255, 0.8);
+            box-shadow: 0 28px 64px rgba(0, 0, 0, 0.55);
+        }
+        .service-tile:hover::after {
+            opacity: 0.8;
+            transform: scale(1.03);
+        }
+        .tile-logo {
+            width: 118px;
+            height: 118px;
+            border-radius: 22px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.14);
+            display: grid;
+            place-items: center;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.16), 0 14px 28px rgba(0,0,0,0.36);
+        }
+        .tile-logo img {
+            width: 96px;
+            height: 96px;
+            object-fit: contain;
+            filter: drop-shadow(0 7px 14px rgba(0,0,0,0.35));
+        }
+        .tile-content h3 {
+            margin: 0 0 8px;
+            font-size: 1.22rem;
+            color: #f5f3ff;
+        }
+        .tile-content p {
+            margin: 0 0 10px;
+            color: #d8d1ff;
+            line-height: 1.5;
+            font-size: 0.98rem;
+        }
+        .tile-list {
+            list-style: none;
+            padding: 0;
+            margin: 6px 0 0;
+            display: grid;
+            gap: 6px;
+        }
+        .tile-list li {
+            position: relative;
+            padding-left: 16px;
+            color: #ede9ff;
+            font-size: 0.95rem;
+            line-height: 1.45;
+        }
+        .tile-list li::before {
+            content: "›";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #7bffb2;
+            font-weight: 900;
+        }
+        .tile-number {
+            justify-self: end;
+            width: 46px;
+            height: 46px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #7b2ff7, #00c3ff);
+            color: #0b0720;
+            font-weight: 800;
+            font-size: 1rem;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.38);
+            display: inline-flex;
+        }
+        @media (max-width: 820px) {
+            .service-tile {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                text-align: left;
+            }
+            .tile-logo { justify-self: flex-start; }
+            .tile-number { justify-self: flex-start; }
+        }
+        .cta-panel {
+            max-width: 900px;
+            margin: 10px auto 0;
+            text-align: center;
+            padding: 20px 22px 26px;
+            border-radius: 18px;
+            background: linear-gradient(120deg, rgba(123, 47, 247, 0.14), rgba(0, 195, 255, 0.14));
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+        }
+        .cta-panel h2 {
+            margin: 0 0 10px;
+            font-size: clamp(1.5rem, 1rem + 1.6vw, 2.2rem);
+            color: #fff;
+        }
+        .cta-panel p {
+            margin: 0 0 16px;
+            color: #e8e3ff;
+            line-height: 1.55;
+        }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 26px;
+            border-radius: 999px;
+            background: linear-gradient(120deg, #7b2ff7 0%, #6a0dad 45%, #00c3ff 100%);
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+            transition: transform 160ms ease, box-shadow 160ms ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 42px rgba(0, 0, 0, 0.5);
+        }
+        .active-link {
+            font-weight: 700 !important;
+        }
+        @media (max-width: 900px) {
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 14px;
+            }
+        }
         @media (max-width: 768px) {
-            body.service-detail-page .content {
+            body.service-page .content {
                 padding-top: 130px;
             }
-            .detail-card {
-                padding: 20px;
-                scroll-margin-top: 140px;
+            .service-shell {
+                padding: 0 16px 70px;
+            }
+            .service-hero {
+                padding: 10px 0 4px;
+            }
+            .service-hero p {
+                font-size: 1rem;
             }
         }
     </style>
 </head>
-<body class="service-detail-page">
+<body class="service-page">
     <div class="content">
         <nav>
+            <a class="tm-header-badge" href="index.html#inicio" aria-label="TrendMakers home" id="tm-badge">
+                <img src="./img/TrendMakers-Header.png" alt="TrendMakers">
+            </a>
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos r?pidos">
+                <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." target="_blank" aria-label="Email">Email</a>
+                <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m?s%20informaci?n." target="_blank" aria-label="WhatsApp">WhatsApp</a>
+            </div>
             <div class="hamburger" onclick="toggleMenu()">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
-            <div class="social-buttons">
-                <a href="https://www.linkedin.com/company/trendmakersagency" class="linkedin-button" target="_blank">
-                    <img src="./img/Linkedinlogo.png" alt="LinkedIn">
-                </a>
-                <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" class="instagram-button" target="_blank">
-                    <img src="./img/INSTAGRAMLOGO.PNG" alt="Instagram">
-                </a>
-            </div>
-            <ul class="desktop-menu">
+            <ul class="desktop-menu top-agency-menu">
                 <li><a href="index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
-                <li><a href="index.html#servicios" id="nav-servicios" class="menu-item">Nuestros Servicios</a></li>
-                <li><a href="index.html#problema" id="nav-problema" class="menu-item">Contanos tu Proyecto</a></li>
-                <li><a href="index.html#equipo" id="nav-equipo" class="menu-item">Nuestro Equipo</a></li>
-                <li><a href="index.html#acerca" id="nav-acerca" class="menu-item">¿Por qué elegirnos?</a></li>
-                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de éxito</a></li>
-                <li><a href="index.html#blog" id="nav-blog" class="menu-item">Blog</a></li>
-                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item">Agenda una Llamada</a></li>
+                <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item">Servicios</a></li>
+                <li class="dropdown about-dropdown">
+                    <button id="nav-acerca" class="menu-item dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Nosotros <span class="caret">v</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#equipo" id="nav-equipo" class="menu-item">Equipo</a></li>
+                        <li><a href="index.html#acerca" id="nav-nosotros" class="menu-item">Nosotros</a></li>
+                        <li><a href="blog/index.html" id="nav-blog" class="menu-item">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de Éxito</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
             </ul>
             <div class="nav-lang">
-                <div class="language-selector" aria-label="Selector de idioma">
-                    <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
-                        <img src="./img/IDIOMA.PNG" alt="Idioma">
-                    </button>
-                    <div class="lang-menu" role="menu" aria-label="Idiomas">
-                        <button class="lang-option" role="menuitem" data-lang="es">Español</button>
-                        <button class="lang-option" role="menuitem" data-lang="en">English</button>
-                    </div>
+              <div class="language-selector" aria-label="Selector de idioma">
+                <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
+                  <img src="./img/IDIOMA.PNG" alt="Idioma">
+                </button>
+                <div class="lang-menu" role="menu" aria-label="Idiomas">
+                  <button class="lang-option" role="menuitem" data-lang="es">EspaÑol</button>
+                  <button class="lang-option" role="menuitem" data-lang="en">English</button>
                 </div>
+              </div>
             </div>
-
             <ul class="mobile-menu">
-                <li><a href="index.html#inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
-                <li><a href="index.html#servicios" class="menu-item" onclick="closeMenu()">Nuestros Servicios</a></li>
-                <li><a href="index.html#problema" class="menu-item" onclick="closeMenu()">Contanos tu Proyecto</a></li>
-                <li><a href="index.html#equipo" class="menu-item" onclick="closeMenu()">Nuestro Equipo</a></li>
-                <li><a href="index.html#acerca" class="menu-item" onclick="closeMenu()">¿Por qué elegirnos?</a></li>
-                <li><a href="index.html#casos-exito" class="menu-item" onclick="closeMenu()">Casos de éxito</a></li>
-                <li><a href="index.html#blog" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
-                <li><a href="index.html#contact-form" class="menu-item" onclick="closeMenu()">Agenda una Llamada</a></li>
+                <li><a href="index.html#inicio" id="nav-inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item" onclick="closeMenu()">Servicios</a></li>
+                <li class="mobile-heading">Nosotros</li>
+                <li><a href="index.html#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
+                <li><a href="index.html#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
+                <li><a href="blog/index.html" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de éxito</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
             </ul>
         </nav>
 
-        <main>
-            <div class="detail-back">
-                <a class="detail-back-button" href="index.html#problema" id="detail-back-button">&larr; Volver</a>
+        <div class="detail-back">
+                <a class="detail-back-button" id="detail-back-button" href="index.html#inicio" aria-label="Volver al inicio">&larr; Volver al inicio</a>
             </div>
-            <section class="detail-hero">
-                <h1 id="detail-hero-title">Nuestros Servicios en Detalle</h1>
-                <p id="detail-hero-text">Explorá cada solución con la que ayudamos a acelerar los resultados de tu negocio. Esta página solo se abre desde las tarjetas para que te concentres en la propuesta que más te interese.</p>
+
+        <main class="service-shell">
+            <section class="service-hero">
+                <span class="service-kicker" id="svc-kicker">Portafolio de soluciones</span>
+                <h1 id="svc-title">Nuestros servicios para escalar tu negocio</h1>
+                <p id="svc-intro">Combinamos marketing, datos, automatizaci&oacute;n, desarrollo web y AI para acelerar resultados. Eleg&iacute; el frente que quer&eacute;s potenciar y abr&iacute; cada servicio para conocerlo en detalle.</p>
             </section>
 
-            <section class="detail-grid">
-                <article id="marketing-tecnologia" class="detail-card">
-                    <h2>Marketing & Tecnología</h2>
-                    <p>Alineamos tus objetivos comerciales con arquitecturas tecnológicas que permiten automatizar campañas, nutrir leads y medir resultados en tiempo real.</p>
-                    <ul>
-                        <li>Implementación de stacks MarTech y automatizaciones.</li>
-                        <li>Integraciones con CRM y orquestadores de journeys.</li>
-                        <li>Dashboards personalizados para dirección y operación.</li>
+            <section class="services-grid">
+                <a class="service-tile" href="marketing-automation.html">
+                    <div class="tile-logo"><img src="./img/MATION.png" alt="Marketing & Automation"></div>
+                    <div class="tile-content">
+<h3 id="svc1-title">Marketing &amp; Automation</h3>
+                    <p id="svc1-desc">Funnels y CRM conectados para que cada lead reciba la respuesta correcta.</p>
+                    <ul class="tile-list">
+                        <li id="svc1-li1">Workflows y nurtures multicanal.</li>
+                        <li id="svc1-li2">Scoring, alertas y follow-up automatizado.</li>
+                        <li id="svc1-li3">Dashboards con KPIs accionables.</li>
                     </ul>
-                </article>
-                <article id="leads" class="detail-card">
-                    <h2>Generación de Leads</h2>
-                    <p>Diseñamos funnels que atraen prospectos calificados para SaaS y empresas de servicios, desde la segmentación hasta la conexión con tu equipo de ventas.</p>
-                    <ul>
-                        <li>Campañas full-funnel en redes, buscadores y outbound.</li>
-                        <li>Lead scoring y ruteo inteligente.</li>
-                        <li>Optimización semanal con foco en CPL y LTV.</li>
+                    </div>
+                    <span class="tile-number">01</span>
+                </a>
+
+                <a class="service-tile" href="branding-communication.html">
+                    <div class="tile-logo"><img src="./img/BRANDING.png" alt="Branding & Communication"></div>
+                    <div class="tile-content">
+<h3 id="svc2-title">Branding &amp; Communication</h3>
+                    <p id="svc2-desc">Mensajes claros y visuales consistentes para posicionar tu marca.</p>
+                    <ul class="tile-list">
+                        <li id="svc2-li1">Brand kit y lineamientos de tono.</li>
+                        <li id="svc2-li2">Piezas para campa&ntilde;as y social.</li>
+                        <li id="svc2-li3">Arquitectura de marca alineada a negocio.</li>
                     </ul>
-                </article>
-                <article id="ia" class="detail-card">
-                    <h2>ChatGPT & IA Aplicada</h2>
-                    <p>Formamos a tus equipos para incorporar IA generativa en marketing, ventas y operaciones, creando asistentes y flujos que escalan la productividad.</p>
-                    <ul>
-                        <li>Talleres y playbooks a medida.</li>
-                        <li>Automatización de respuestas y contenido.</li>
-                        <li>Diseño de copilotos internos según rol.</li>
+                    </div>
+                    <span class="tile-number">02</span>
+                </a>
+
+                <a class="service-tile" href="web-ecommerce.html">
+                    <div class="tile-logo"><img src="./img/WEB-ECOMM.png" alt="Web & E-Commerce Development"></div>
+                    <div class="tile-content">
+<h3 id="svc3-title">Web &amp; E-Commerce Development</h3>
+                    <p id="svc3-desc">Sitios y tiendas r&aacute;pidas pensadas para convertir desde el d&iacute;a uno.</p>
+                    <ul class="tile-list">
+                        <li id="svc3-li1">UX/UI orientado a conversi&oacute;n.</li>
+                        <li id="svc3-li2">Checkout, pagos e integraciones.</li>
+                        <li id="svc3-li3">SEO t&eacute;cnico y anal&iacute;tica lista.</li>
                     </ul>
-                </article>
-                <article id="diseno" class="detail-card">
-                    <h2>Diseño & Comunicación</h2>
-                    <p>Construimos identidades visuales y experiencias digitales coherentes en cada punto de contacto para reforzar la percepción de tu marca.</p>
-                    <ul>
-                        <li>Branding, guidelines y kits para redes sociales.</li>
-                        <li>Maquetado de landing pages y newsletters.</li>
-                        <li>Gestión integral de comunidades.</li>
+                    </div>
+                    <span class="tile-number">03</span>
+                </a>
+
+                <a class="service-tile" href="data-analitics.html">
+                    <div class="tile-logo"><img src="./img/DATA-STRAT.png" alt="Consulting, Data & Strategy"></div>
+                    <div class="tile-content">
+<h3 id="svc4-title">Consulting, Data &amp; Strategy</h3>
+                    <p id="svc4-desc">Roadmaps claros respaldados con datos y ejecuci&oacute;n medible.</p>
+                    <ul class="tile-list">
+                        <li id="svc4-li1">Diagn&oacute;sticos y prioridades de crecimiento.</li>
+                        <li id="svc4-li2">KPI, tableros y gobierno de datos.</li>
+                        <li id="svc4-li3">Plan t&aacute;ctico con foco en ROI.</li>
                     </ul>
-                </article>
-                <article id="ecommerce" class="detail-card">
-                    <h2>E-Commerce</h2>
-                    <p>Operamos tiendas propias y acompañamos la tuya end-to-end, desde la plataforma y catálogo hasta la logística y el growth.</p>
-                    <ul>
-                        <li>Selección e implementación de plataformas (Shopify, VTEX, WooCommerce).</li>
-                        <li>Optimización de conversiones y retención.</li>
-                        <li>Automatización de fulfillment y reporting.</li>
+                    </div>
+                    <span class="tile-number">04</span>
+                </a>
+
+                <a class="service-tile" href="ia-hub.html">
+                    <div class="tile-logo"><img src="./img/IA-HUB.png" alt="AI & Innovation Hub"></div>
+                    <div class="tile-content">
+<h3 id="svc5-title">AI &amp; Innovation Hub</h3>
+                    <p id="svc5-desc">IA aplicada para productividad, servicio y nuevas eficiencias.</p>
+                    <ul class="tile-list">
+                        <li id="svc5-li1">Copilotos y asistentes a medida.</li>
+                        <li id="svc5-li2">Automatizaciones con IA generativa.</li>
+                        <li id="svc5-li3">Pruebas controladas y despliegue seguro.</li>
                     </ul>
-                </article>
-                <article id="consultoria" class="detail-card">
-                    <h2>Consultoría</h2>
-                    <p>Te ayudamos a priorizar proyectos digitales y tecnológicos, definiendo roadmaps ejecutables y acompañando la implementación.</p>
-                    <ul>
-                        <li>Auditorías de marketing y tecnología.</li>
-                        <li>Definición de KPIs y modelos de gobernanza.</li>
-                        <li>Soporte de PMO para despliegues críticos.</li>
-                    </ul>
-                </article>
-                <article id="datos" class="detail-card">
-                    <h2>Datos & Analítica</h2>
-                    <p>Convertimos datos dispersos en tableros accionables que habilitan decisiones rápidas y detectan oportunidades antes que la competencia.</p>
-                    <ul>
-                        <li>Modelos de atribución y medición avanzada.</li>
-                        <li>Automatización de ETL y monitoreo.</li>
-                        <li>Insights accionables para marketing y ventas.</li>
-                    </ul>
-                </article>
-                <article id="estudios" class="detail-card">
-                    <h2>Estudios de Mercado</h2>
-                    <p>Investigamos audiencias, hábitos y categorías para que puedas lanzar productos con menor riesgo y mensajes más relevantes.</p>
-                    <ul>
-                        <li>Research cuantitativo y cualitativo.</li>
-                        <li>Mapeo de competencia y oportunidades.</li>
-                        <li>Perfiles accionables para campañas.</li>
-                    </ul>
-                </article>
-                <article id="desarrollo" class="detail-card">
-                    <h2>Desarrollo Web</h2>
-                    <p>Diseñamos y desarrollamos sitios de alto rendimiento, seguros y escalables, listos para integrarse a tu ecosistema digital.</p>
-                    <ul>
-                        <li>Websites corporativos y landing pages.</li>
-                        <li>Portales y herramientas internas.</li>
-                        <li>Testing, performance y accesibilidad continua.</li>
-                    </ul>
-                </article>
+                    </div>
+                    <span class="tile-number">05</span>
+                </a>
             </section>
 
-            <div class="detail-actions">
-                <a href="index.html#problema" id="detail-back-link">Volver a las tarjetas</a>
-            </div>
+            <section class="cta-panel">
+                <h2 id="svc-cta-title">&iquest;Listo para priorizar el pr&oacute;ximo sprint?</h2>
+                <p id="svc-cta-text">Agend&aacute; una llamada de 30 minutos. Te devolvemos un roadmap simple con quick wins y siguientes pasos.</p>
+                <a class="cta-button" id="svc-cta-btn" href="https://calendly.com/mgottler1999/30min" target="_blank" rel="noopener">Agenda una llamada</a>
+            </section>
         </main>
     </div>
 
-    <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20más%20información." class="whatsapp-button" target="_blank" aria-label="Escribinos por WhatsApp">
+    <a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m%C3%A1s%20informaci%C3%B3n." class="whatsapp-button" target="_blank" aria-label="Escribinos por WhatsApp">
         <img src="./img/WPP.PNG" alt="WhatsApp">
     </a>
-    <a href="mailto:info@trendmakers.agencysubject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank" aria-label="Escribinos por mail">
+    <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank" aria-label="Escribinos por email">
         <img src="./img/EMAIL.jpg" alt="Email">
     </a>
 
     <script src="./js/script.js"></script>
+    <script>
+        (function(){
+            const copy = {
+                es: {
+                    kicker: "Portafolio de soluciones",
+                    title: "Nuestros servicios para escalar tu negocio",
+                    intro: "Combinamos marketing, datos, automatizaci&oacute;n, desarrollo web y AI para acelerar resultados. Eleg&iacute; el frente que quer&eacute;s potenciar y abr&iacute; cada servicio para conocerlo en detalle.",
+                    back: "&larr; Volver al inicio",
+                    cards: [
+                        {
+                            title: "Marketing &amp; Automation",
+                            desc: "Funnels y CRM conectados para que cada lead reciba la respuesta correcta.",
+                            bullets: [
+                                "Workflows y nurtures multicanal.",
+                                "Scoring, alertas y follow-up automatizado.",
+                                "Dashboards con KPIs accionables."
+                            ]
+                        },
+                        {
+                            title: "Branding &amp; Communication",
+                            desc: "Mensajes claros y visuales consistentes para posicionar tu marca.",
+                            bullets: [
+                                "Brand kit y lineamientos de tono.",
+                                "Piezas para campa&ntilde;as y social.",
+                                "Arquitectura de marca alineada a negocio."
+                            ]
+                        },
+                        {
+                            title: "Web &amp; E-Commerce Development",
+                            desc: "Sitios y tiendas r&aacute;pidas pensadas para convertir desde el d&iacute;a uno.",
+                            bullets: [
+                                "UX/UI orientado a conversi&oacute;n.",
+                                "Checkout, pagos e integraciones.",
+                                "SEO t&eacute;cnico y anal&iacute;tica lista."
+                            ]
+                        },
+                        {
+                            title: "Consulting, Data &amp; Strategy",
+                            desc: "Roadmaps claros respaldados con datos y ejecuci&oacute;n medible.",
+                            bullets: [
+                                "Diagn&oacute;sticos y prioridades de crecimiento.",
+                                "KPI, tableros y gobierno de datos.",
+                                "Plan t&aacute;ctico con foco en ROI."
+                            ]
+                        },
+                        {
+                            title: "AI &amp; Innovation Hub",
+                            desc: "IA aplicada para productividad, servicio y nuevas eficiencias.",
+                            bullets: [
+                                "Copilotos y asistentes a medida.",
+                                "Automatizaciones con IA generativa.",
+                                "Pruebas controladas y despliegue seguro."
+                            ]
+                        }
+                    ],
+                    ctaTitle: "&iquest;Listo para priorizar el pr&oacute;ximo sprint?",
+                    ctaText: "Agend&aacute; una llamada de 30 minutos. Te devolvemos un roadmap simple con quick wins y siguientes pasos.",
+                    ctaBtn: "Agenda una llamada"
+                },
+                en: {
+                    kicker: "Solutions portfolio",
+                    title: "Our services to scale your business",
+                    intro: "We combine marketing, data, automation, web development and AI to accelerate results. Pick the area you want to boost and open each service to see the details.",
+                    back: "&larr; Back to home",
+                    cards: [
+                        {
+                            title: "Marketing &amp; Automation",
+                            desc: "Funnels and CRM working together so every lead gets the right response.",
+                            bullets: [
+                                "Multichannel workflows and nurtures.",
+                                "Scoring, alerts and automated follow-ups.",
+                                "Dashboards with actionable KPIs."
+                            ]
+                        },
+                        {
+                            title: "Branding &amp; Communication",
+                            desc: "Clear messaging and consistent visuals to position your brand.",
+                            bullets: [
+                                "Brand kit and tone guidelines.",
+                                "Assets for campaigns and social.",
+                                "Brand architecture aligned to business."
+                            ]
+                        },
+                        {
+                            title: "Web &amp; E-Commerce Development",
+                            desc: "Fast sites and stores designed to convert from day one.",
+                            bullets: [
+                                "Conversion-focused UX/UI.",
+                                "Checkout, payments and integrations.",
+                                "Technical SEO and analytics ready."
+                            ]
+                        },
+                        {
+                            title: "Consulting, Data &amp; Strategy",
+                            desc: "Clear roadmaps backed by data and measurable execution.",
+                            bullets: [
+                                "Diagnostics and growth priorities.",
+                                "KPIs, dashboards and data governance.",
+                                "Tactical plans focused on ROI."
+                            ]
+                        },
+                        {
+                            title: "AI &amp; Innovation Hub",
+                            desc: "Applied AI for productivity, service and efficiency gains.",
+                            bullets: [
+                                "Custom copilots and assistants.",
+                                "Generative AI automations.",
+                                "Controlled tests and safe rollout."
+                            ]
+                        }
+                    ],
+                    ctaTitle: "Ready to prioritize the next sprint?",
+                    ctaText: "Book a 30-minute call. We will return a simple roadmap with quick wins and next steps.",
+                    ctaBtn: "Book a call"
+                }
+            };
+
+            const setText = (id, val) => {
+                const el = document.getElementById(id);
+                if (el && val !== undefined) el.innerHTML = val;
+            };
+
+            function applyServicesLang(lang){
+                const t = copy[lang] || copy.es;
+                setText('svc-kicker', t.kicker);
+                setText('svc-title', t.title);
+                setText('svc-intro', t.intro);
+                setText('detail-back-button', t.back);
+
+                t.cards.forEach((card, idx) => {
+                    const n = idx + 1;
+                    setText(`svc${n}-title`, card.title);
+                    setText(`svc${n}-desc`, card.desc);
+                    card.bullets.forEach((b, i) => setText(`svc${n}-li${i + 1}`, b));
+                });
+
+                setText('svc-cta-title', t.ctaTitle);
+                setText('svc-cta-text', t.ctaText);
+                setText('svc-cta-btn', t.ctaBtn);
+            }
+
+            function initServicesLang(){
+                let lang = 'es';
+                try {
+                    if (typeof getRequestedLanguage === 'function') {
+                        lang = getRequestedLanguage() || lang;
+                    } else if (typeof getLanguagePreference === 'function' && getLanguagePreference()) {
+                        lang = getLanguagePreference();
+                    }
+                } catch(e) { /* noop */ }
+                applyServicesLang((lang || 'es').toLowerCase());
+                if (typeof window.setLanguage === 'function' && !window.__svcLangWrapped) {
+                    const _orig = window.setLanguage;
+                    window.setLanguage = function(l){
+                        _orig(l);
+                        applyServicesLang((l || 'es').toLowerCase());
+                    };
+                    window.__svcLangWrapped = true;
+                }
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initServicesLang);
+            } else {
+                initServicesLang();
+            }
+        })();
+    </script>
+    <script>
+        // Toggle quick links from header badge
+        document.addEventListener('DOMContentLoaded', function(){
+            const badge = document.getElementById('tm-badge');
+            const menu = document.getElementById('tm-quick-menu');
+            if (!badge || !menu) return;
+            const closeQuickMenu = () => menu.classList.remove('open');
+            badge.addEventListener('click', (e) => {
+                e.preventDefault();
+                menu.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (menu.contains(e.target) || badge.contains(e.target)) return;
+                closeQuickMenu();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeQuickMenu();
+            });
+        });
+    </script>
     <script>
         function toggleMenu() {
             const hamburger = document.querySelector('.hamburger');
