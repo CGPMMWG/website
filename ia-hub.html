@@ -208,11 +208,20 @@
             <a class="tm-header-badge" href="index.html#inicio" aria-label="TrendMakers home" id="tm-badge">
                 <img src="./img/TrendMakers-Header.png" alt="TrendMakers">
             </a>
-            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos r?pidos">
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos rápidos">
                 <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
                 <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-                <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." target="_blank" aria-label="Email">Email</a>
-                <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m?s%20informaci?n." target="_blank" aria-label="WhatsApp">WhatsApp</a>
+                <a class="mailto-dynamic"
+                   href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services."
+                   target="_blank"
+                   aria-label="Email">
+                   Email
+                </a>
+                <a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20más%20información."
+                   target="_blank"
+                   aria-label="WhatsApp">
+                   WhatsApp
+                </a>
             </div>
             <div class="hamburger" onclick="toggleMenu()">
                 <div></div>
@@ -232,7 +241,7 @@
                         <li><a href="blog/index.html" id="nav-blog" class="menu-item">Blog</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de ?xito</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de Éxito</a></li>
                 <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
             </ul>
             <div class="nav-lang">
@@ -253,7 +262,7 @@
                 <li><a href="index.html#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
                 <li><a href="index.html#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
                 <li><a href="blog/index.html" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
-                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de ?xito</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de Éxito</a></li>
                 <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
             </ul>
         </nav>
@@ -454,10 +463,16 @@
     </div>
 
     <!-- Botones flotantes -->
-    <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20más%20información." class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20más%20información."
+       class="whatsapp-button"
+       target="_blank"
+       aria-label="WhatsApp">
         <img src="./img/WPP.PNG" alt="WhatsApp">
     </a>
-    <a href="mailto:info@trendmakers.agencysubject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank" aria-label="Email">
+    <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services."
+       class="email-button mailto-dynamic"
+       target="_blank"
+       aria-label="Email">
         <img src="./img/EMAIL.jpg" alt="Email">
     </a>
 
@@ -581,181 +596,4 @@
           inclText: "We tailor each project to your goals, but we always work around three pillars:",
           b1Title: "Block 1 – Automation & Workflows",
           b1List: [
-            "Automated workflow design.",
-            "System and API integrations.",
-            "Elimination of repetitive tasks.",
-            "Smart triggers and rule-based systems."
-          ],
-          b2Title: "Block 2 – Applied AI for Your Business",
-          b2List: [
-            "Personalized chatbots and assistants.",
-            "Predictive models and advanced analytics.",
-            "Generative AI for content, insights, and operations.",
-            "Conversational systems implementation."
-          ],
-          b3Title: "Block 3 – Dashboards & Data Intelligence",
-          b3List: [
-            "Real-time metric dashboards.",
-            "Automated reporting.",
-            "Data extraction and cleaning models.",
-            "Clear visualization for strategic decisions."
-          ],
-          howTitle: "How do we work this service?",
-          steps: [
-            {
-              title: "Step 1 – Diagnosis & Exploration",
-              text: "We analyze your processes, data, systems, and bottlenecks to identify real opportunities for AI and automation."
-            },
-            {
-              title: "Step 2 – Design & Implementation",
-              text: "We build workflows, dashboards, models, and tools that make your operation faster and more efficient."
-            },
-            {
-              title: "Step 3 – Documentation & Delivery",
-              text: "We deliver everything ready to use: dashboards, flows, systems, and clear guides for your team."
-            }
-          ],
-          resTitle: "What results can you expect?",
-          resList: [
-            "Real reduction in operational time.",
-            "Faster, more accurate, and standardized processes.",
-            "Clear data for smarter decision-making.",
-            "Integrated systems with smoother communication.",
-            "Higher efficiency without increasing resources."
-          ],
-          whyTitle: "Why work AI & Innovation Hub with TrendMakers?",
-          whyList: [
-            "We design systems with scalability in mind.",
-            "We combine AI, data, automation, and strategy.",
-            "We build user-friendly solutions even for non-technical teams.",
-            "Your operation is built on stable, clear, and maintainable technology."
-          ],
-          cta2Title: "Are you ready to automate and scale your operation?",
-          cta2Text: "Let’s work together to take your business to the next level with intelligent, strategic AI.",
-          cta2Btn: "Book a call",
-          otherTitle: "Other services",
-          os1: { title: "Marketing & Automation", text: "Systems that generate and manage leads on autopilot." },
-          os2: { title: "Branding & Communication", text: "Professional identities and strategic communication." },
-          os3: { title: "Web & E-Commerce Development", text: "Fast, modern sites and stores integrated with your funnels." },
-          os4: { title: "Consulting, Data & Strategy", text: "Strategic direction built on real analysis and KPIs." },
-          back: "← Back"
-        }
-      };
-
-      const aiSet = (id, val) => {
-        const el = document.getElementById(id);
-        if (el && val !== undefined) el.innerHTML = val;
-      };
-
-      function applyAILang(lang){
-        const t = aiCopy[lang] || aiCopy.es;
-        document.documentElement.lang = lang === 'en' ? 'en' : 'es';
-
-        aiSet('ai-badge', t.badge);
-        aiSet('ai-h1', t.h1);
-        aiSet('ai-h2', t.h2);
-        aiSet('ai-hero-text', t.hero);
-        aiSet('ai-cta', t.cta);
-
-        aiSet('ai-que-title', t.queTitle);
-        aiSet('ai-que-text', t.queText);
-        ['ai-que-li1','ai-que-li2','ai-que-li3','ai-que-li4','ai-que-li5','ai-que-li6'].forEach((id,i)=>aiSet(id, t.queList[i]));
-
-        aiSet('ai-prob-title', t.probTitle);
-        aiSet('ai-prob-text', t.probText);
-        ['ai-prob-li1','ai-prob-li2','ai-prob-li3','ai-prob-li4','ai-prob-li5'].forEach((id,i)=>aiSet(id, t.probList[i]));
-
-        aiSet('ai-incl-title', t.inclTitle);
-        aiSet('ai-incl-text', t.inclText);
-        aiSet('ai-b1-title', t.b1Title);
-        ['ai-b1-li1','ai-b1-li2','ai-b1-li3','ai-b1-li4'].forEach((id,i)=>aiSet(id, t.b1List[i]));
-        aiSet('ai-b2-title', t.b2Title);
-        ['ai-b2-li1','ai-b2-li2','ai-b2-li3','ai-b2-li4'].forEach((id,i)=>aiSet(id, t.b2List[i]));
-        aiSet('ai-b3-title', t.b3Title);
-        ['ai-b3-li1','ai-b3-li2','ai-b3-li3','ai-b3-li4'].forEach((id,i)=>aiSet(id, t.b3List[i]));
-
-        aiSet('ai-how-title', t.howTitle);
-        ['ai-step1','ai-step2','ai-step3'].forEach((key, idx)=>{
-          const data = t.steps[idx];
-          if (!data) return;
-          aiSet(`${key}-title`, data.title);
-          aiSet(`${key}-text`, data.text);
-        });
-
-        aiSet('ai-res-title', t.resTitle);
-        ['ai-res-li1','ai-res-li2','ai-res-li3','ai-res-li4','ai-res-li5'].forEach((id,i)=>aiSet(id, t.resList[i]));
-
-        aiSet('ai-why-title', t.whyTitle);
-        ['ai-why-li1','ai-why-li2','ai-why-li3','ai-why-li4'].forEach((id,i)=>aiSet(id, t.whyList[i]));
-
-        aiSet('ai-cta2-title', t.cta2Title);
-        aiSet('ai-cta2-text', t.cta2Text);
-        aiSet('ai-cta2-btn', t.cta2Btn);
-
-        aiSet('ai-other-title', t.otherTitle);
-        aiSet('ai-os1-title', t.os1.title); aiSet('ai-os1-text', t.os1.text);
-        aiSet('ai-os2-title', t.os2.title); aiSet('ai-os2-text', t.os2.text);
-        aiSet('ai-os3-title', t.os3.title); aiSet('ai-os3-text', t.os3.text);
-        aiSet('ai-os4-title', t.os4.title); aiSet('ai-os4-text', t.os4.text);
-
-        const back = document.querySelector('.back-btn');
-        if (back) back.innerHTML = t.back;
-      }
-
-      (function(){
-        let lang = 'es';
-        try {
-          const params = new URLSearchParams(window.location.search);
-          const q = params.get('lang');
-          lang = q ? q.toLowerCase() : lang;
-          if (!q && typeof getLanguagePreference === 'function') {
-            lang = (getLanguagePreference() || lang).toLowerCase();
-          }
-        } catch(e){}
-        applyAILang(lang);
-
-        if (typeof window.setLanguage === 'function' && !window.__aiLangWrapped){
-          const _orig = window.setLanguage;
-          window.setLanguage = function(l){
-            _orig(l);
-            applyAILang((l || 'es').toLowerCase());
-          };
-          window.__aiLangWrapped = true;
-        }
-      })();
-      // Toggle quick links from header badge
-      document.addEventListener('DOMContentLoaded', function(){
-          const badge = document.getElementById('tm-badge');
-          const menu = document.getElementById('tm-quick-menu');
-          if (!badge || !menu) return;
-          const closeQuickMenu = () => menu.classList.remove('open');
-          badge.addEventListener('click', (e) => {
-              e.preventDefault();
-              menu.classList.toggle('open');
-          });
-          document.addEventListener('click', (e) => {
-              if (menu.contains(e.target) || badge.contains(e.target)) return;
-              closeQuickMenu();
-          });
-          document.addEventListener('keydown', (e) => {
-              if (e.key === 'Escape') closeQuickMenu();
-          });
-      });
-
-      function toggleMenu() {
-          const hamburger = document.querySelector('.hamburger');
-          const mobileMenu = document.querySelector('nav ul.mobile-menu');
-          if (!hamburger || !mobileMenu) return;
-          hamburger.classList.toggle('active');
-          mobileMenu.classList.toggle('active');
-      }
-      function closeMenu() {
-          const hamburger = document.querySelector('.hamburger');
-          const mobileMenu = document.querySelector('nav ul.mobile-menu');
-          if (!hamburger || !mobileMenu) return;
-          hamburger.classList.remove('active');
-          mobileMenu.classList.remove('active');
-      }
-    </script>
-</body>
-</html>
+            "Automated workflow design

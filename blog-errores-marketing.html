@@ -792,6 +792,26 @@
             });
         });
     </script>
+
+    <!-- ===== MENÚ HAMBURGUESA (MISMO COMPORTAMIENTO QUE EN LA OTRA PÁGINA) ===== -->
+    <script>
+      function toggleMenu() {
+          const hamburger = document.querySelector('.hamburger');
+          const mobileMenu = document.querySelector('nav ul.mobile-menu');
+          if (!hamburger || !mobileMenu) return;
+          hamburger.classList.toggle('active');
+          mobileMenu.classList.toggle('active');
+      }
+
+      function closeMenu() {
+          const hamburger = document.querySelector('.hamburger');
+          const mobileMenu = document.querySelector('nav ul.mobile-menu');
+          if (!hamburger || !mobileMenu) return;
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+      }
+    </script>
+
     <!-- Botones flotantes de contacto -->
     <a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m%C3%A1s%20informaci%C3%B3n."
        class="whatsapp-button" target="_blank">

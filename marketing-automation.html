@@ -252,10 +252,11 @@
             <a class="tm-header-badge" href="index.html#inicio" aria-label="TrendMakers home" id="tm-badge">
                 <img src="./img/TrendMakers-Header.png" alt="TrendMakers">
             </a>
-            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos r?pidos">
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos rápidos">
                 <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
                 <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-                <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." target="_blank" aria-label="Email">Email</a>
+                <!-- Email dinámico ES/EN -->
+                <a class="mailto-dynamic" href="mailto:info@trendmakers.agency" target="_blank" aria-label="Email">Email</a>
                 <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m?s%20informaci?n." target="_blank" aria-label="WhatsApp">WhatsApp</a>
             </div>
             <div class="hamburger" onclick="toggleMenu()">
@@ -472,11 +473,13 @@
     <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m%C3%A1s%20informaci%C3%B3n." class="whatsapp-button" target="_blank" aria-label="WhatsApp">
         <img src="./img/WPP.PNG" alt="WhatsApp">
     </a>
-    <a href="mailto:info@trendmakers.agencysubject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank" aria-label="Email">
+    <!-- Email flotante dinámico ES/EN -->
+    <a href="mailto:info@trendmakers.agency" class="email-button mailto-dynamic" target="_blank" aria-label="Email">
         <img src="./img/EMAIL.jpg" alt="Email">
     </a>
     <script src="./js/script.js"></script>
     <script>
+      /* === Copy i18n de la página === */
       const maCopy = {
         es: {
           badge: "Marketing & Automation",
@@ -625,7 +628,42 @@
           back: "← Back"
         }
       };
+
       const maSet = (id, val) => { const el = document.getElementById(id); if (el && val !== undefined) el.innerHTML = val; };
+
+      /* === Config del mail dinámico ES/EN para esta página === */
+      const EMAIL_TEMPLATES = {
+        es: {
+          subject: "Solicitud de información sobre sus servicios",
+          body: "Hola, ¿cómo están? Me gustaría recibir información adicional sobre los servicios que ofrecen. Muchas gracias."
+        },
+        en: {
+          subject: "Project Inquiry",
+          body: "Hi, I would like more information about your services."
+        }
+      };
+
+      const DESTINATION_EMAIL = "info@trendmakers.agency";
+
+      function buildMailto(lang) {
+        const l = (lang || "es").toLowerCase();
+        const tpl = EMAIL_TEMPLATES[l] || EMAIL_TEMPLATES.es;
+
+        const subject = encodeURIComponent(tpl.subject);
+        const body = encodeURIComponent(tpl.body);
+
+        return "mailto:" + DESTINATION_EMAIL +
+               "?subject=" + subject +
+               "&body=" + body;
+      }
+
+      function applyMailto(lang) {
+        const href = buildMailto(lang);
+        document.querySelectorAll(".mailto-dynamic").forEach(function (a) {
+          a.setAttribute("href", href);
+        });
+      }
+
       function applyMALang(lang){
         const t = maCopy[lang] || maCopy.es;
         document.documentElement.lang = lang === 'en' ? 'en' : 'es';
@@ -674,6 +712,7 @@
         const back = document.querySelector('.back-btn');
         if (back) back.innerHTML = t.back;
       }
+
       (function(){
         let lang = 'es';
         try {
@@ -684,16 +723,24 @@
             lang = (getLanguagePreference() || lang).toLowerCase();
           }
         } catch(e){}
+
+        // Aplicar texto + mailto según idioma inicial
         applyMALang(lang);
+        applyMailto(lang);
+
+        // Enganchar setLanguage global para actualizar texto + mailto
         if (typeof window.setLanguage === 'function' && !window.__maLangWrapped){
           const _orig = window.setLanguage;
           window.setLanguage = function(l){
             _orig(l);
-            applyMALang((l || 'es').toLowerCase());
+            const normalized = (l || 'es').toLowerCase();
+            applyMALang(normalized);
+            applyMailto(normalized);
           };
           window.__maLangWrapped = true;
         }
       })();
+
       // Toggle quick links from header badge
       document.addEventListener('DOMContentLoaded', function(){
           const badge = document.getElementById('tm-badge');
@@ -712,6 +759,7 @@
               if (e.key === 'Escape') closeQuickMenu();
           });
       });
+
       function toggleMenu() {
           const hamburger = document.querySelector('.hamburger');
           const mobileMenu = document.querySelector('nav ul.mobile-menu');
@@ -719,6 +767,7 @@
           hamburger.classList.toggle('active');
           mobileMenu.classList.toggle('active');
       }
+
       function closeMenu() {
           const hamburger = document.querySelector('.hamburger');
           const mobileMenu = document.querySelector('nav ul.mobile-menu');
@@ -729,5 +778,3 @@
     </script>
 </body>
 </html>
-
-
