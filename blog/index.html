@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -26,7 +26,7 @@
             overflow-x: hidden;
         }
         body.blog-page .content { padding-top: 150px; }
-        .blog-shell { max-width: 1180px; margin: 0 auto; padding: 0 20px 90px; }
+        .blog-shell { width: min(96vw, 1500px); max-width: 1500px; margin: 0 auto; padding: 0 20px 90px; }
         .blog-hero { text-align: center; margin: 0 auto 30px; max-width: 960px; }
         .blog-hero__top { display: flex; justify-content: flex-start; margin-bottom: 8px; }
         .blog-back-btn {
@@ -68,6 +68,11 @@
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 18px;
             margin: 26px 0 34px;
+        }
+        @media (min-width: 1200px) {
+            .blog-grid {
+                grid-template-columns: repeat(5, minmax(240px, 1fr));
+            }
         }
         .blog-card {
             position: relative;
@@ -223,37 +228,61 @@
             <section class="blog-grid" id="blog-list">
                 <article class="blog-card">
                     <div class="blog-card__media">
-                        <img src="../img/BLOG1.jpg" alt="9 errores de marketing" loading="lazy">
+                        <img src="../img/BLOG1.jpg" alt="Sistema de marketing y automatizaci&oacute;n" loading="lazy">
                     </div>
                     <div class="blog-card__content">
-                        <p class="blog-card__meta" id="card1-meta">Marketing &middot; Estrategia</p>
-                        <h2 class="blog-card__title" id="card1-title">9 errores de marketing que frenan a cualquier negocio</h2>
-                        <p class="blog-card__excerpt" id="card1-excerpt">C&oacute;mo dejar de desperdiciar presupuesto con t&aacute;cticas sin objetivo y medir lo que realmente mueve ingresos.</p>
+                        <p class="blog-card__meta" id="card1-meta">Marketing &middot; Automatizaci&oacute;n</p>
+                        <h2 class="blog-card__title" id="card1-title">Marketing &amp; Automation: cuando tu empresa deja de perder leads</h2>
+                        <p class="blog-card__excerpt" id="card1-excerpt">C&oacute;mo convertir tu marketing en un sistema con funnels, CRM, automatizaciones y datos que no deja escapar oportunidades.</p>
                         <a class="blog-card__cta" id="card1-cta" href="../blog-errores-marketing.html">Leer art&iacute;culo</a>
                     </div>
                 </article>
 
                 <article class="blog-card">
                     <div class="blog-card__media">
-                        <img src="../img/IA.jpg" alt="IA y datos" loading="lazy">
+                        <img src="../img/BLOG-IA-MARKETING.png" alt="IA aplicada a la operaci&oacute;n y marketing" loading="lazy">
                     </div>
                     <div class="blog-card__content">
-                        <p class="blog-card__meta" id="card2-meta">Data &middot; Automatizaci&oacute;n</p>
-                        <h2 class="blog-card__title" id="card2-title">C&oacute;mo las empresas argentinas escalan con IA y datos (Gu&iacute;a 2025)</h2>
-                        <p class="blog-card__excerpt" id="card2-excerpt">Flujos autom&aacute;ticos, modelos de atribuci&oacute;n y copilotos para crecer sin sumar estructura.</p>
+                        <p class="blog-card__meta" id="card2-meta">IA &middot; Automatizaci&oacute;n</p>
+                        <h2 class="blog-card__title" id="card2-title">C&oacute;mo la inteligencia artificial transforma empresas de cualquier tama&ntilde;o</h2>
+                        <p class="blog-card__excerpt" id="card2-excerpt">Gu&iacute;a 2025 para integrar IA en pymes y grandes compa&ntilde;&iacute;as y ganar ventaja competitiva real.</p>
                         <a class="blog-card__cta" id="card2-cta" href="../blog-ia-automatizacion.html">Leer art&iacute;culo</a>
                     </div>
                 </article>
 
                 <article class="blog-card">
                     <div class="blog-card__media">
-                        <img src="../img/OPTIMIZATION.png" alt="Optimizar performance" loading="lazy">
+                        <img src="../img/Blog-ia-personas.png" alt="IA aplicada a marketing y datos" loading="lazy">
                     </div>
                     <div class="blog-card__content">
-                        <p class="blog-card__meta" id="card3-meta">Performance &middot; CRO</p>
-                        <h2 class="blog-card__title" id="card3-title">Checklist de performance: velocidad, UX y conversiones</h2>
-                        <p class="blog-card__excerpt" id="card3-excerpt">Un checklist pr&aacute;ctico para auditar tu sitio, mejorar Core Web Vitals y convertir m&aacute;s.</p>
-                        <a class="blog-card__cta" id="card3-cta" href="../web-ecommerce.html">Ver checklist</a>
+                        <p class="blog-card__meta" id="card3-meta">Data &middot; IA</p>
+                        <h2 class="blog-card__title" id="card3-title">IA en marketing: la inversi&oacute;n que separa a las marcas que crecen</h2>
+                        <p class="blog-card__excerpt" id="card3-excerpt">IA operativa, automatizaci&oacute;n y datos para escalar con menos costo y m&aacute;s resultados.</p>
+                        <a class="blog-card__cta" id="card3-cta" href="../blog-ia2.html">Leer art&iacute;culo</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card__media">
+                        <img src="../img/blogbrand.png" alt="Identidad de marca y comunicaci&oacute;n" loading="lazy">
+                    </div>
+                    <div class="blog-card__content">
+                        <p class="blog-card__meta" id="card4-meta">Branding &middot; Comunicaci&oacute;n</p>
+                        <h2 class="blog-card__title" id="card4-title">Branding &amp; Communication: una marca que no pierda oportunidades</h2>
+                        <p class="blog-card__excerpt" id="card4-excerpt">Identidad visual, mensaje y comunicaci&oacute;n para que la marca refleje el valor real del negocio.</p>
+                        <a class="blog-card__cta" id="card4-cta" href="../blog-branding.html">Leer art&iacute;culo</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card__media">
+                        <img src="../img/web-ecommerce.png" alt="Sitios web y e-commerce centrados en conversi&oacute;n" loading="lazy">
+                    </div>
+                    <div class="blog-card__content">
+                        <p class="blog-card__meta" id="card5-meta">Web &middot; E-Commerce</p>
+                        <h2 class="blog-card__title" id="card5-title">Sitios y tiendas online dise&ntilde;ados para convertir</h2>
+                        <p class="blog-card__excerpt" id="card5-excerpt">Por qu&eacute; tu web tiene que guiar a la acci&oacute;n: UX, velocidad, SEO y e-commerce conectados a tu sistema.</p>
+                        <a class="blog-card__cta" id="card5-cta" href="../blog-websites1.html">Leer art&iacute;culo</a>
                     </div>
                 </article>
             </section>
@@ -285,9 +314,11 @@
                     title: "Ideas accionables de marketing, datos e IA",
                     subtitle: "Gu&iacute;as, casos y playbooks para ejecutar mejor: SEO t&eacute;cnico, performance, automatizaciones y decisiones basadas en datos.",
                     cards: [
-                        { meta: "Marketing &middot; Estrategia", title: "9 errores de marketing que frenan a cualquier negocio", excerpt: "C&oacute;mo dejar de desperdiciar presupuesto con t&aacute;cticas sin objetivo y medir lo que realmente mueve ingresos.", cta: "Leer art&iacute;culo" },
-                        { meta: "Data &middot; Automatizaci&oacute;n", title: "C&oacute;mo las empresas argentinas escalan con IA y datos (Gu&iacute;a 2025)", excerpt: "Flujos autom&aacute;ticos, modelos de atribuci&oacute;n y copilotos para crecer sin sumar estructura.", cta: "Leer art&iacute;culo" },
-                        { meta: "Performance &middot; CRO", title: "Checklist de performance: velocidad, UX y conversiones", excerpt: "Un checklist pr&aacute;ctico para auditar tu sitio, mejorar Core Web Vitals y convertir m&aacute;s.", cta: "Ver checklist" }
+                        { meta: "Marketing &middot; Automatizaci&oacute;n", title: "Marketing &amp; Automation: cuando tu empresa deja de perder leads", excerpt: "C&oacute;mo convertir tu marketing en un sistema con funnels, CRM, automatizaciones y datos que no deja escapar oportunidades.", cta: "Leer art&iacute;culo" },
+                        { meta: "IA &middot; Automatizaci&oacute;n", title: "C&oacute;mo la inteligencia artificial transforma empresas de cualquier tama&ntilde;o", excerpt: "Gu&iacute;a 2025 para integrar IA en pymes y grandes compa&ntilde;&iacute;as y ganar ventaja competitiva real.", cta: "Leer art&iacute;culo" },
+                        { meta: "Data &middot; IA", title: "IA en marketing: la inversi&oacute;n que separa a las marcas que crecen", excerpt: "IA operativa, automatizaci&oacute;n y datos para escalar con menos costo y m&aacute;s resultados.", cta: "Leer art&iacute;culo" },
+                        { meta: "Branding &middot; Comunicaci&oacute;n", title: "Branding &amp; Communication: una marca que no pierda oportunidades", excerpt: "Identidad visual, mensaje y comunicaci&oacute;n para que la marca refleje el valor real del negocio.", cta: "Leer art&iacute;culo" },
+                        { meta: "Web &middot; E-Commerce", title: "Sitios y tiendas online dise&ntilde;ados para convertir", excerpt: "Por qu&eacute; tu web tiene que guiar a la acci&oacute;n: UX, velocidad, SEO y e-commerce conectados a tu sistema.", cta: "Leer art&iacute;culo" }
                     ],
                     ctaTitle: "&iquest;Te sentiste identificado con alguno de estos art&iacute;culos?",
                     ctaText: "Si alguno refleja lo que pasa en tu negocio, podemos ayudarte a resolverlo con un sistema real.",
@@ -302,13 +333,15 @@
                     title: "Actionable ideas on marketing, data and AI",
                     subtitle: "Guides, cases and playbooks to execute better: technical SEO, performance, automations and data-driven decisions.",
                     cards: [
-                        { meta: "Marketing &middot; Strategy", title: "9 marketing mistakes that slow any business", excerpt: "How to stop wasting budget on tactics without a goal and measure what really drives revenue.", cta: "Read article" },
-                        { meta: "Data &middot; Automation", title: "How Argentine companies scale with AI and data (2025 Guide)", excerpt: "Automated flows, attribution models and copilots to grow without extra headcount.", cta: "Read article" },
-                        { meta: "Performance &middot; CRO", title: "Performance checklist: speed, UX and conversions", excerpt: "A practical checklist to audit your site, improve Core Web Vitals and convert more.", cta: "See checklist" }
+                        { meta: "Marketing &middot; Automation", title: "Marketing &amp; Automation: stop losing leads, scale with a system", excerpt: "Funnels, CRM, automation and data so every lead is tracked and turns into pipeline.", cta: "Read article" },
+                        { meta: "AI &middot; Automation", title: "How AI transforms companies of every size", excerpt: "2025 guide to integrate AI in small, mid and large teams to win real competitive advantage.", cta: "Read article" },
+                        { meta: "Data &middot; AI", title: "AI in marketing: the investment that separates growing brands", excerpt: "Operational AI, automation and data to scale results without extra headcount.", cta: "Read article" },
+                        { meta: "Branding &middot; Communication", title: "Branding &amp; Communication that stops leaving opportunities on the table", excerpt: "Identity, messaging and communication systems that reflect the real value of your business.", cta: "Read article" },
+                        { meta: "Web &middot; E-Commerce", title: "Websites and e-commerce built to convert", excerpt: "UX, speed, SEO and connected systems so your site guides every visit to action.", cta: "Read article" }
                     ],
                     ctaTitle: "Did any of these articles resonate with you?",
-                    ctaText: "If they reflect what’s happening in your business, we can help you fix it with a real scalable system.",
-                    ctaBtn: "Let’s talk"
+                    ctaText: "If they reflect what's happening in your business, we can help you fix it with a real scalable system.",
+                    ctaBtn: "Let's talk"
                 }
             };
 
@@ -412,3 +445,4 @@
 
 </body>
 </html>
+
