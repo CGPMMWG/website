@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrendMakers | Nuestro equipo</title>
+  <meta name="description" content="Conocé al equipo de TrendMakers: estrategia, creatividad, datos, tecnología y ejecución trabajando en conjunto para escalar marcas.">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/header_overrides.css">
+  <link rel="stylesheet" href="./css/casos_overrides.css">
+  <link rel="stylesheet" href="./css/team.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="content">
+    <a id="team-back-btn" class="back-btn" href="index.html#equipo" aria-label="Volver a la sección de equipo">&#8592; Volver</a>
+
+    <!-- Header reutilizado -->
+    <nav>
+      <a class="tm-header-badge" href="index.html#inicio" aria-label="TrendMakers home" id="tm-badge">
+        <img src="./img/TrendMakers-Header.png" alt="TrendMakers">
+      </a>
+
+      <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos rápidos">
+        <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <a class="mailto-dynamic" href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias." target="_blank" aria-label="Email">Email</a>
+
+        <a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m%C3%A1s%20informaci%C3%B3n."
+           target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+      </div>
+
+      <ul class="desktop-menu top-agency-menu">
+        <li><a href="index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
+        <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item">Servicios</a></li>
+        <li class="dropdown about-dropdown">
+          <button id="nav-acerca" class="menu-item dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            Nosotros <span class="caret">v</span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#equipo" id="nav-equipo" class="menu-item">Equipo</a></li>
+            <li><a href="index.html#acerca" id="nav-nosotros" class="menu-item">Nosotros</a></li>
+            <li><a href="blog/index.html" id="nav-blog" class="menu-item">Blog</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de &eacute;xito</a></li>
+        <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
+      </ul>
+
+      <div class="nav-lang">
+        <div class="language-selector" aria-label="Selector de idioma">
+          <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
+            <img src="./img/IDIOMA.PNG" alt="Idioma">
+          </button>
+          <div class="lang-menu" role="menu" aria-label="Idiomas">
+            <button class="lang-option" role="menuitem" data-lang="es">Espa&ntilde;ol</button>
+            <button class="lang-option" role="menuitem" data-lang="en">English</button>
+          </div>
+        </div>
+      </div>
+
+      <ul class="mobile-menu">
+        <li><a href="index.html#inicio" id="nav-inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
+        <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item">Servicios</a></li>
+        <li class="mobile-heading">Nosotros</li>
+        <li><a href="#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
+        <li><a href="index.html#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
+        <li><a href="blog/index.html" id="nav-blog-mobile" class="menu-item" onclick="closeMenu()">Blog</a></li>
+        <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de &eacute;xito</a></li>
+        <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO se mantiene aparte -->
+    <header class="team-hero">
+      <div class="video-container">
+        <video autoplay muted loop playsinline id="team-video">
+          <source src="./video/teamvideo.mp4" type="video/mp4">
+          Tu navegador no soporta video.
+        </video>
+        <div class="overlay">
+          <div class="intro team-intro">
+            <h1 id="team-hero-title" class="section-title">Personas que hacen que todo funcione</h1>
+            <p id="team-hero-tagline" class="intro-tagline">Estrategas, creativos, científicos de datos, tecnólogos y ejecutores trabajando como un solo equipo para escalar tu marca.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ✅ SHELL ÚNICA (todo corrido) -->
+    <main class="team-shell" id="equipo">
+      <div class="team-shell-inner">
+
+        <!-- BLOQUE: Equipo -->
+        <div class="team-block team-block--grid">
+          <h2 id="team-heading" class="section-title">Nuestro equipo</h2>
+          <p id="team-subtitle" class="why-subtitle">Talento multidisciplinario para estrategia, datos, tecnología y ejecución.</p>
+
+          <div class="team-grid">
+            <article class="team-card animate__animated">
+              <h3 id="team-card1-title">Consultores en Marketing</h3>
+              <p id="team-card1-text">Diseñan roadmaps y definen objetivos de negocio medibles.</p>
+            </article>
+            <article class="team-card animate__animated">
+              <h3 id="team-card2-title">Diseñadores UX/UI, Gráficos y Multimedia</h3>
+              <p id="team-card2-text">Construyen experiencias visuales consistentes y orientadas a conversión.</p>
+            </article>
+            <article class="team-card animate__animated">
+              <h3 id="team-card3-title">Analistas de Datos</h3>
+              <p id="team-card3-text">Transforman métricas en decisiones accionables y dashboards en tiempo real.</p>
+            </article>
+            <article class="team-card animate__animated">
+              <h3 id="team-card4-title">Especialistas en Campañas Digitales</h3>
+              <p id="team-card4-text">Operan y optimizan medios para maximizar ROAS y volumen de leads.</p>
+            </article>
+            <article class="team-card animate__animated">
+              <h3 id="team-card5-title">Desarrolladores Web</h3>
+              <p id="team-card5-text">Implementan sitios y productos digitales de alto rendimiento y seguridad.</p>
+            </article>
+            <article class="team-card animate__animated">
+              <h3 id="team-card6-title">Especialistas en SEO</h3>
+              <p id="team-card6-text">Escalan visibilidad orgánica con contenido, técnica y autoridad.</p>
+            </article>
+            <article class="team-card animate__animated">
+              <h3 id="team-card7-title">Especialistas en Business Intelligence</h3>
+              <p id="team-card7-text">Modelan datos para detectar oportunidades y priorizar decisiones.</p>
+            </article>
+            <article class="team-card animate__animated">
+              <h3 id="team-card8-title">Community Managers</h3>
+              <p id="team-card8-text">Gestionan comunidades y reputación para impulsar engagement.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- BLOQUE: CTA -->
+        <div class="team-block team-block--cta">
+          <div class="team-cta-panel">
+            <h2 id="team-cta-title" class="section-title">¿Listo para sumar a este equipo a tu crecimiento?</h2>
+            <p id="team-cta-text" class="why-subtitle">Contanos tu proyecto y te proponemos un plan con especialistas dedicados.</p>
+            <a id="team-cta-button" class="cta-button" href="mailto:info@trendmakers.agency?subject=Quiero%20hablar%20con%20el%20equipo&body=Hola%20TrendMakers%2C%20quiero%20saber%20c%C3%B3mo%20podemos%20trabajar%20juntos.">Hablemos</a>
+          </div>
+        </div>
+
+        <!-- BLOQUE: Credibilidad / Talento -->
+        <div class="team-block team-block--cred">
+          <div class="team-credibility-card">
+            <div class="cred-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="6" width="18" height="12" rx="3" stroke="#1c1f33" stroke-width="1.25" fill="none"/>
+                <path d="M4.5 7.75L11.4 12.4c.37.25.86.25 1.23 0L19.5 7.75" stroke="#1c1f33" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="cred-copy">
+              <h3 id="team-cred-title">¿Te interesa trabajar con nosotros?</h3>
+              <p id="team-cred-text">Contactanos y conversemos cómo nuestro equipo puede acompañar el crecimiento de tu negocio.</p>
+              <a id="team-cred-email" class="cred-email" href="mailto:info@trendmakers.agency">info@trendmakers.agency</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logos">
+          <img src="./img/google-ads.svg" alt="Google Ads">
+          <img src="./img/google-partner.svg" alt="Google Partner">
+          <img src="./img/logofacebookads.png" alt="Facebook Ads">
+          <img src="./img/cace.svg" alt="CACE">
+        </div>
+        <div class="footer-social-row">
+          <a href="https://www.linkedin.com/company/trendmakersagency" class="linkedin-button" target="_blank" aria-label="LinkedIn">
+            <img src="./img/Linkedinlogo.png" alt="LinkedIn">
+          </a>
+          <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" class="instagram-button" target="_blank" aria-label="Instagram">
+            <img src="./img/INSTAGRAMLOGO.PNG" alt="Instagram">
+          </a>
+        </div>
+      </div>
+      <p id="footer-text" class="animate__animated">&copy; 2023 TrendMakers. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m%C3%A1s%20informaci%C3%B3n."
+     class="whatsapp-button" target="_blank" rel="noopener">
+    <img src="./img/WPP.PNG" alt="WhatsApp">
+  </a>
+
+  <a href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias."
+     class="email-button mailto-dynamic" target="_blank">
+    <img src="./img/EMAIL.jpg" alt="Email">
+  </a>
+
+  <script src="./js/script.js"></script>
+  <script src="./js/team-i18n.js"></script>
+</body>
+</html>
