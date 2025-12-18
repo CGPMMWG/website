@@ -1,4 +1,4 @@
-﻿// Flip cards setup and success content sync
+// Flip cards setup and success content sync
 
 function updateSuccessCards() {
   try {
@@ -20,11 +20,7 @@ function updateSuccessCards() {
   } catch (e) {}
 }
 
-function getHint(lang) {
-  var isTouch = (('ontouchstart' in window) || navigator.maxTouchPoints > 0);
-  if (lang === 'en') return isTouch  'Tap to see details' : 'Click to see details';
-  return isTouch  'Toca para ver detalles' : 'Click para ver detalles';
-}
+
 
 function applySuccessTranslations(lang) {
   try {
@@ -80,3 +76,4 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 })();
 
+﻿
