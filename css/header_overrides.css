@@ -1,4 +1,4 @@
-﻿/* Header and language selector overrides */
+/* Header and language selector overrides */
 
 /* Glassy, modern nav */
 nav {
@@ -475,6 +475,35 @@ nav ul.desktop-menu { flex: 1 !important; justify-content: center !important; }
   }
   .flip-cta { display: none !important; }
   .flip-cta::after { content: ''; font-size: 0.9em; }
+
+/* Casos de éxito (index): texto más claro + CTA sobrio */
+#casos-exito .flip-face { gap: 10px; }
+#casos-exito .flip-logo { max-width: 58%; margin-bottom: 6px; }
+#casos-exito .flip-title { display: block; font-size: 1.15rem; margin: 0; line-height: 1.15; }
+#casos-exito .flip-desc {
+  margin: 0;
+  text-align: center;
+  font-size: 0.98rem;
+  line-height: 1.35;
+  color: rgba(233,238,255,0.88);
+  max-width: 34ch;
+}
+#casos-exito .flip-hint { font-weight: 700; color: rgba(255,255,255,0.9); margin-top: 10px; }
+@media (hover: hover) and (pointer: fine) {
+  #casos-exito .flip-desc,
+  #casos-exito .flip-hint {
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 180ms ease, transform 200ms ease;
+  }
+  #casos-exito .flip-card:hover .flip-desc,
+  #casos-exito .flip-card:hover .flip-hint,
+  #casos-exito .flip-card:focus-visible .flip-desc,
+  #casos-exito .flip-card:focus-visible .flip-hint {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .flip-back p { font-size: clamp(0.95rem, 1.1vw, 1.05rem); line-height: 1.5; margin: 0; max-height: none; overflow: visible; color: #e8e3ff; }
 
 @media (max-width: 1200px) { .flip-grid { width: min(1000px, 94vw); gap: 18px; } }
@@ -834,7 +863,7 @@ body.no-scroll { overflow: hidden; }
 
 /* ===== Equipo: grid responsive y auto-altura ===== */
 /* Dejar que la seccion crezca y que el grid se adapte */
-#equipo { height: auto !important; min-height: auto !important; background-color: #1b0b2e; }
+#equipo { height: auto !important; min-height: auto !important; background-color: #250b2e; }
 #equipo .video-container { position: static !important; width: 100% !important; height: auto !important; overflow: visible !important; }
 #equipo .video-container video { display: none !important; }
 #equipo .overlay { position: relative !important; height: auto !important; min-height: 0 !important; display: block !important; background: transparent !important; padding-bottom: 48px; z-index: 1; }
@@ -862,4 +891,3 @@ body.no-scroll { overflow: hidden; }
 @media (max-width: 520px) {
   #equipo .team-details { grid-template-columns: 1fr; }
 }
-
