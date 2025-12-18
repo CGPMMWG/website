@@ -289,6 +289,7 @@ nav ul.mobile-menu li {
     padding: 20px;
 }
 
+
 .service-details {
     display: flex;
     flex-wrap: wrap;
@@ -652,7 +653,7 @@ video-container {
     height: 100%;
     z-index: -1; /* Capa detr?s de todo */
     overflow: hidden;
-    -webkit-transform: translateZ(0); /* Acelera renderizado en Safari */
+    webkit-transform: translateZ(0); /* Acelera renderizado en Safari */
 }
 
 .video-container video {
@@ -1553,7 +1554,7 @@ body.no-scroll { overflow: hidden !important; }
 #inicio {
     position: relative;
     min-height: auto;
-    background: #1b0b2e;
+    background: #322343;
     overflow: hidden;
     padding: 40px 0;
 }
@@ -1576,6 +1577,11 @@ body.no-scroll { overflow: hidden !important; }
     justify-content: center;
     padding: 0 clamp(24px, 6vw, 70px);
     background: transparent;
+}
+
+#inicio .section-title::after {
+    display: none !important;
+    content: none !important;
 }
 
 #inicio .intro {
@@ -1606,9 +1612,8 @@ body.no-scroll { overflow: hidden !important; }
 }
 
 #inicio .intro .section-title::after {
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 12px auto 0;
+    display: none;
+    content: none;
 }
 
 #inicio .intro p {
@@ -1708,25 +1713,27 @@ body.no-scroll { overflow: hidden !important; }
     margin: 0 auto;
     padding: 16px 42px;
     border-radius: 999px;
-    background: linear-gradient(135deg, #0d3a70 0%, #0e568f 50%, #00c3ff 100%);
-    color: #fff;
+    background: linear-gradient(120deg, #00d1ff 0%, #7b2ff7 100%);
+    color: #0b0620;
     font-weight: 800;
     letter-spacing: 0.2px;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.12);
-    background-size: 200% 200%;
-    background-position: 0% 50%;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.12);
     transition: transform 160ms ease, box-shadow 180ms ease, filter 180ms ease, background-position 220ms ease;
 }
 
 .closing-cta__btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(123, 191, 255, 0.4);
-    filter: brightness(1.08);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(123, 191, 255, 0.4);
+    filter: saturate(1.05);
     background-position: 100% 50%;
+}
+
+#equipo .team-page-btn {
+    margin-top: 24px;
 }
 
 @media (max-width: 768px) {
@@ -1776,6 +1783,10 @@ body.no-scroll { overflow: hidden !important; }
 #servicios {
     height: 100vh; /* Ocupa toda la pantalla */
     position: relative;
+}
+
+#servicios .video-container video {
+    filter: brightness(1.1);
 }
 
 #servicios .overlay {
@@ -2056,10 +2067,22 @@ nav ul li a:hover::after {
     border-radius: 12px;
     font-size: 1rem;
     color: #f6f7ff;
+    caret-color: #f6f7ff;
     background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
     transition: border-color 140ms ease, box-shadow 140ms ease, background 140ms ease;
     box-sizing: border-box;
+}
+.contact-form-section input::placeholder,
+.contact-form-section textarea::placeholder {
+    color: #cfd4f1;
+    opacity: 0.92;
+}
+.contact-form-section input:-webkit-autofill,
+.contact-form-section textarea:-webkit-autofill {
+    -webkit-text-fill-color: #f6f7ff;
+    caret-color: #f6f7ff;
+    -webkit-box-shadow: 0 0 0 1000px rgba(255,255,255,0.02) inset, inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
 .contact-form-section textarea { min-height: 140px; resize: vertical; }
@@ -2076,8 +2099,9 @@ nav ul li a:hover::after {
     margin-top: 10px;
     width: 100%;
     justify-content: center;
-    background: linear-gradient(135deg, #0d3a70 0%, #0e568f 45%, #0aa6e8 100%);
-    border: 1px solid rgba(255,255,255,0.25);
+    background: linear-gradient(120deg, #00d1ff 0%, #7b2ff7 100%);
+    color: #0b0620;
+    border: 1px solid rgba(255,255,255,0.12);
     border-radius: 999px;
     height: 54px;
     font-size: 1.05rem;
@@ -2090,10 +2114,10 @@ nav ul li a:hover::after {
 }
 
 .contact-button:hover {
-    filter: brightness(1.05);
+    filter: saturate(1.05);
     transform: translateY(-2px);
     box-shadow: 0 20px 42px rgba(0,0,0,0.45), 0 0 0 1px rgba(123,191,255,0.45);
-    background: linear-gradient(135deg, #7b2ff7 0%, #6a0dad 50%, #b347ff 100%);
+    background: linear-gradient(120deg, #7b2ff7 0%, #00d1ff 100%);
 }
 
 /* Evitar solapado con botones flotantes en m?viles */
