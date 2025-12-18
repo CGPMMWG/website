@@ -81,13 +81,13 @@
     },
     vcg: {
       es: {
-        pageTitle: "TrendMakers · Caso VcG Imagen",
-        eyebrow: "Caso de éxito · VcG Imagen",
-        title: "Performance creativo 360° para VcG Imagen",
+        pageTitle: "TrendMakers · Caso GP Consultora",
+        eyebrow: "Caso de éxito · GP Consultora",
+        title: "Performance creativo 360° para GP Consultora",
         summary:
           "Activamos demanda constante con cápsulas motion, inteligencia de audiencias y workflows que nutrían a ventas con prioridad real en segundos.",
         hook: "Activamos demanda constante con contenido motion e inteligencia de audiencias.",
-        subtitle: "VcG Imagen · Performance creativo 360°",
+        subtitle: "GP Consultora · Performance creativo 360°",
         body: "Creamos cápsulas audiovisuales pensadas para el scroll, testeamos creativos con modelos MMM livianos y automatizamos nurturing en etapas para no saturar. El equipo de ventas recibía alertas con scoring en tiempo real para priorizar oportunidades calientes.",
         stats: [
           "tasa de conversión en leads calificados",
@@ -99,13 +99,13 @@
         back: "Volver a Casos de Éxito",
       },
       en: {
-        pageTitle: "TrendMakers · VcG Imagen Case Study",
-        eyebrow: "Success Story · VcG Imagen",
-        title: "360° creative performance for VcG Imagen",
+        pageTitle: "TrendMakers · GP Consultora Case Study",
+        eyebrow: "Success Story · GP Consultats",
+        title: "360° creative performance for GP Consultants",
         summary:
           "We activated constant demand with motion capsules, audience intelligence, and workflows that kept sales focused on the hottest opportunities.",
         hook: "Scroll-stopping creative plus automation to prioritize hot leads.",
-        subtitle: "VcG Imagen · 360° creative performance",
+        subtitle: "GP Consultants · 360° creative performance",
         body: "We produced motion content made for the feed, tested creatives with lightweight MMM models, and automated staged nurturing so audiences never felt saturated. Sales got real-time alerts with lead scoring to jump on the hottest deals.",
         stats: [
           "conversion rate on qualified leads",
