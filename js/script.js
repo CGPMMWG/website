@@ -47,7 +47,9 @@ function takeI18nSnapshot(){
     const ids = [
       'nav-inicio','nav-acerca','nav-servicios','nav-contacto','nav-equipo','nav-equipo-mobile','nav-nosotros','nav-nosotros-mobile','nav-casos-exito','nav-problema',
       'intro-title','intro-text','about-title','about-text','services-title','services-text','services-portfolio-cta','team-title','team-subtitle','team-cta-text',
-      'contact-title','schedule-call','show-popup','popup-title','label-email','label-problema','submit-button',
+      'hero-contact-cta',
+      'blog-view-all',
+      'contact-title','contact-microcopy','schedule-call','show-popup','popup-title','label-email','label-problema','submit-button',
       'footer-text','about-us-text','label-name','label-company','label-project','submit-contact-form','contact-soon',
       'closing-cta-title',
       'success-intro','success-title','success-case1','success-case2','success-case3',
@@ -77,7 +79,8 @@ function takeI18nSnapshot(){
 const translations = {
   es: {
     title: "TrendMakers",
-    subtitle: "Your digital Partner",
+    subtitle: "Your Growth Partner",
+    heroContactCta: "Contactate ahora",
     navInicio: "Inicio",
     navAcerca: "Nosotros",
     navServicios: "Servicios",
@@ -117,9 +120,10 @@ const translations = {
     blogSubtitle: "Aprend&eacute; con nuestros especialistas los errores m&aacute;s comunes y c&oacute;mo evitarlos con datos y automatizaci&oacute;n.",
     blogMeta: "Por TrendMakers &middot; 19/11/2025",
     blogEyebrow: "Art&iacute;culo destacado",
-    blogArticleTitle: "9 errores de marketing que frenan a cualquier negocio (y c&oacute;mo evitarlos)",
+    blogArticleTitle: "Errores de marketing que frenan a cualquier negocio (y c&oacute;mo evitarlos)",
     blogExcerpt: "En un mercado saturado, la diferencia no est&aacute; en publicar m&aacute;s sino en hacerlo estrat&eacute;gicamente. Conoc&eacute; los 9 fallos que vemos en negocios reales y c&oacute;mo evitarlos.",
     blogCta: "Leer art&iacute;culo",
+    blogViewAll: "Ver todos los art&iacute;culos",
     blogStat1: "De los usuarios juzga la credibilidad por el dise&ntilde;o visual",
     blogStat2: "De ingresos al mantener identidad consistente",
     blogStat3: "De interacci&oacute;n al publicar sin objetivo",
@@ -131,12 +135,13 @@ const translations = {
     teamTitle: "Talento multidisciplinario. Ejecuci&oacute;n integrada.",
     teamSubtitle: "Un equipo especializado que integra estrategia, datos, creatividad y tecnolog&iacute;a para escalar negocios con estructura y precisi&oacute;n.",
     teamCtaText: "Conoc&eacute; c&oacute;mo trabaja nuestro equipo",
-    teamPageButton: "Ver equipo &#8594;",
-    contactTitle: "Agenda una Llamada 1 a 1",
+    teamPageButton: "Conoce nuestro equipo &#8594;",
+    contactTitle: "Inici&aacute; tu proceso de crecimiento",
+    contactMicrocopy: "Te respondemos a la brevedad &middot; Comunicaci&oacute;n confidencial",
     scheduleCall: "Agenda una Llamada",
     problemaButton: "Solicitar diagn&oacute;stico",
     popupTitle: "Solicitar diagn&oacute;stico",
-    labelEmail: "Correo Electr&oacute;nico:",
+    labelEmail: "Email de contacto",
     labelProblema: "Proyecto:",
     submitButton: "Enviar",
     footerText: "&copy; 2023 TrendMakers. Todos los derechos reservados.",
@@ -190,11 +195,11 @@ const translations = {
       </a>
     `,
 
-    contactFormTitle: "&iquest;Necesitas ayuda digital? TrendMakers es tu soluci&oacute;n",
-    labelName: "Nombre:",
-    labelCompany: "Empresa:",
-    labelProject: "Proyecto:",
-    submitContactForm: "Enviar",
+    contactFormTitle: "Inici&aacute; tu proceso de crecimiento",
+    labelName: "Tu nombre",
+    labelCompany: "Empresa o marca",
+    labelProject: "&iquest;En qu&eacute; podemos ayudarte?",
+    submitContactForm: "Empezar el proceso",
 
     // ✅ FIX: coma faltante acá
     contactSoon: "Si tu negocio ya factura y necesit&aacute;s escalar con orden, datos y tecnolog&iacute;a, este es el pr&oacute;ximo paso.",
@@ -209,6 +214,7 @@ const translations = {
   en: {
     title: "TrendMakers",
     subtitle: "Your digital Partner",
+    heroContactCta: "Contact",
     navInicio: "Home",
     navAcerca: "About us",
     navServicios: "Services",
@@ -242,15 +248,16 @@ const translations = {
     successCase2: "Letratec: We increased revenue by 37% with the implementation of a digital marketing plan, the creation of a website, and lead management.",
     successCase3: "GP Consultants: We automated lead nurturing and optimized performance media to double the qualified lead conversion rate in just 60 days.",
     servicesText: "We integrate strategy, data, technology and execution into a system designed to drive sustainable growth.",
-    closingCtaTitle: "We don’t work on intuition. We work with systems.",
+    closingCtaTitle: "We don't work on intuition. We work with systems.",
     blogKicker: "Marketing &middot; Data &middot; Automation",
     blogTitle: "Explore our blog",
     blogSubtitle: "Learn the most common mistakes from our specialists and how to avoid them with data and automation.",
     blogMeta: "By TrendMakers &middot; Nov 19, 2025",
     blogEyebrow: "Featured article",
-    blogArticleTitle: "9 marketing mistakes that slow any business (and how to avoid them)",
+    blogArticleTitle: "Marketing mistakes that slow any business (and how to avoid them)",
     blogExcerpt: "In a saturated market, the difference isn't publishing more but doing it strategically. See the 9 mistakes we find in real businesses and how to avoid them.",
     blogCta: "Read article",
+    blogViewAll: "View all articles",
     blogStat1: "Of users judge credibility by visual design",
     blogStat2: "Revenue uplift from a consistent identity",
     blogStat3: "Drop in engagement when posting without a goal",
@@ -262,12 +269,13 @@ const translations = {
     teamTitle: "Multidisciplinary talent. Integrated execution.",
     teamSubtitle: "A specialized team that brings together strategy, data, creativity and technology to scale businesses with structure and precision.",
     teamCtaText: "See how our team works",
-    teamPageButton: "Meet the team &#8594;",
-    contactTitle: "Schedule a 1-on-1 Call",
+    teamPageButton: "Team &#8594;",
+    contactTitle: "Start your growth process",
+    contactMicrocopy: "We’ll get back to you shortly &middot; Confidential",
     scheduleCall: "Schedule a Call",
     problemaButton: "Request a diagnostic",
     popupTitle: "Request a diagnostic",
-    labelEmail: "Email:",
+    labelEmail: "Contact email",
     labelProblema: "Project:",
     submitButton: "Submit",
     footerText: "&copy; 2023 TrendMakers. All rights reserved.",
@@ -321,11 +329,11 @@ const translations = {
       </a>
     `,
 
-    contactFormTitle: "Need help with digital marketing? TrendMakers is your solution",
-    labelName: "Name:",
-    labelCompany: "Company:",
-    labelProject: "Project:",
-    submitContactForm: "Submit",
+    contactFormTitle: "Start your growth process",
+    labelName: "Your name",
+    labelCompany: "Company or brand",
+    labelProject: "How can we help you?",
+    submitContactForm: "Start the process",
 
     // ✅ FIX: coma faltante acá
     contactSoon: "If your business is already generating revenue and you need to scale with structure, data, and technology, this is the next step.",
@@ -422,8 +430,8 @@ const translations = {
 };
 
 // Dynamic mailto builder by language
-const MAILTO_ES = `mailto:info@trendmakers.agency?subject=${encodeURIComponent('Solicitud de información sobre sus servicios')}&body=${encodeURIComponent('Hola, ¿cómo están? Me gustaría recibir información adicional sobre los servicios que ofrecen. Muchas gracias.')}`;
-const MAILTO_EN = `mailto:info@trendmakers.agency?subject=${encodeURIComponent('Request for Information About Your Services')}&body=${encodeURIComponent("Hi, hope you're doing well. I’d like to receive additional information about the services you offer. Thank you.")}`;
+const MAILTO_ES = "mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola%2C%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias.";
+const MAILTO_EN = "mailto:info@trendmakers.agency?subject=Request%20for%20Information%20About%20Your%20Services&body=Hi%2C%20hope%20you're%20doing%20well.%20I'd%20like%20to%20receive%20additional%20information%20about%20the%20services%20you%20offer.%20Thank%20you.";
 
 function applyMailtoLinks(lang){
   const href = (lang === 'en') ? MAILTO_EN : MAILTO_ES;
@@ -649,6 +657,7 @@ function setLanguage(language) {
     'blog-article-title': 'blogArticleTitle',
     'blog-excerpt': 'blogExcerpt',
     'blog-cta': 'blogCta',
+    'blog-view-all': 'blogViewAll',
     'blog-stat1': 'blogStat1',
     'blog-stat2': 'blogStat2',
     'blog-stat3': 'blogStat3',
@@ -661,6 +670,7 @@ function setLanguage(language) {
     'closing-cta-title': 'closingCtaTitle',
     'intro-title': 'introTitle',
     'intro-text': 'introText',
+    'hero-contact-cta': 'heroContactCta',
     'about-title': 'aboutTitle',
     'about-text': 'aboutText',
     'about-subtitle': 'aboutSubtitle',
@@ -679,6 +689,7 @@ function setLanguage(language) {
     'team-page-button': 'teamPageButton',
 
     'contact-title': 'contactTitle',
+    'contact-microcopy': 'contactMicrocopy',
     'schedule-call': 'scheduleCall',
     'show-popup': 'problemaButton',
 
