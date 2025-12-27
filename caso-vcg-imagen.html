@@ -19,8 +19,8 @@
             <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos r?pidos">
                 <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
                 <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-                <a class="mailto-dynamic" href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios" target="_blank" aria-label="Email">Email</a>
-                <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m?s%20informaci?n." target="_blank" aria-label="WhatsApp">WhatsApp</a>
+                <a class="mailto-dynamic" href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias." target="_blank" aria-label="Email">Email</a>
+                <a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" aria-label="WhatsApp">WhatsApp</a>
             </div>
             <div class="hamburger" onclick="toggleMenu()">
                 <div></div>
@@ -102,37 +102,14 @@
             </div>
         </section>
     </div>
-    <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20mÃ¡s%20informaciÃ³n." class="whatsapp-button" target="_blank">
+    <a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." class="whatsapp-button" target="_blank">
         <img src="./img/WPP.PNG" alt="WhatsApp">
     </a>
-    <a href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios" class="email-button mailto-dynamic" target="_blank">
+    <a href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias." class="email-button mailto-dynamic" target="_blank">
         <img src="./img/EMAIL.jpg" alt="Email">
     </a>
     <script src="./js/case_detail.js"></script>
     <script src="./js/script.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function(){
-        try {
-          const lang = (typeof getRequestedLanguage === 'function' && getRequestedLanguage()) || 'es';
-          const setCaseMailto = function(l){
-            const subject = (l === 'en')
-              ? 'Request for Information About Your Services'
-              : 'Solicitud de información sobre sus servicios';
-            const href = `mailto:info@trendmakers.agency?subject=${encodeURIComponent(subject)}`;
-            document.querySelectorAll('.mailto-dynamic').forEach(a => a.setAttribute('href', href));
-          };
-          setCaseMailto(lang);
-          if (typeof window.setLanguage === 'function' && !window.__caseMailtoWrapped){
-            const _orig = window.setLanguage;
-            window.setLanguage = function(l){
-              _orig(l);
-              setCaseMailto((l||'es').toLowerCase());
-            };
-            window.__caseMailtoWrapped = true;
-          }
-        } catch(e){}
-      });
-    </script>
     <script>
         function toggleMenu() {
             const hamburger = document.querySelector('.hamburger');
@@ -171,6 +148,9 @@
 
 </body>
 </html>
+
+
+
 
 
 

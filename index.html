@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -273,23 +272,66 @@
             gap: 8px;
             padding: 14px 24px;
             border-radius: 999px;
-            background: linear-gradient(120deg, #00d1ff 0%, #7b2ff7 100%);
-            color: #0b0620;
+            border: 1px solid transparent;
+            background:
+              linear-gradient(120deg, rgba(255,255,255,0.04), rgba(255,255,255,0.04)) padding-box,
+              linear-gradient(120deg, rgba(0,209,255,0.55), rgba(123,47,247,0.65)) border-box;
+            color: #fff;
             font-weight: 800;
             text-decoration: none;
-            box-shadow: 0 16px 34px rgba(0,0,0,0.35);
-            transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.16), 0 0 16px rgba(0,209,255,0.08);
+            backdrop-filter: blur(10px) saturate(140%);
+            -webkit-backdrop-filter: blur(10px) saturate(140%);
+            transition: transform 160ms ease, box-shadow 180ms ease, filter 160ms ease, background 180ms ease;
         }
         .hero-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 22px 44px rgba(0,0,0,0.45);
-            filter: saturate(1.05);
+            transform: translateY(-2px) scale(1.01);
+            background:
+              linear-gradient(120deg, rgba(0,209,255,0.24), rgba(123,47,247,0.26)) padding-box,
+              linear-gradient(120deg, rgba(0,209,255,0.78), rgba(123,47,247,0.88)) border-box;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.28), 0 0 24px rgba(123,47,247,0.22);
+            filter: saturate(1.1);
         }
         .hero-visual {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        .tm-scroll-indicator {
+            position: relative;
+            margin: 23px auto 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            z-index: 5;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+        .tm-scroll-indicator span {
+            width: 22px;
+            height: 22px;
+            border-right: 3px solid rgba(56, 189, 248, 0.85);
+            border-bottom: 3px solid rgba(168, 85, 247, 0.85);
+            transform: rotate(45deg);
+            animation: tmScrollPulse 2.6s forwards;
+            animation-iteration-count: 1;
+            opacity: 0;
+        }
+        .tm-scroll-indicator span:nth-child(1) { animation-delay: 0s; }
+        .tm-scroll-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .tm-scroll-indicator span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes tmScrollPulse {
+            0% {
+                opacity: 0;
+                transform: rotate(45deg) translate(0, 0);
+            }
+            40% { opacity: 1; }
+            100% {
+                opacity: 1;
+                transform: rotate(45deg) translate(0, 6px);
+            }
         }
         .hero-brain {
             width: 100%;
@@ -309,6 +351,8 @@
             #inicio .overlay { padding: 20px 14px; }
             .hero-copy { text-align: left; }
             .hero-copy h2 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
+            .tm-scroll-indicator { margin-top: 17px; }
+            .tm-scroll-indicator span { width: 16px; height: 16px; border-width: 2px; }
         }
         /* Servicios premium */
         #servicios .service-details {
@@ -546,6 +590,13 @@
                         <div class="text-container">
                             <h1 id="title" class="animate__animated">TrendMakers</h1>
                             <p id="subtitle" class="animate__animated">Your growth Partner</p>
+                            <a id="hero-contact-cta" class="hero-cta hero-contact-cta animate__animated" href="#contact-form">Contactate ahora</a>
+                            <div class="tm-scroll-indicator" onclick="(function(){const target=document.getElementById('inicio');if(!target)return;const isMobile=window.matchMedia('(max-width: 768px)').matches;if(!isMobile){target.scrollIntoView({behavior:'smooth'});return;}const header=document.querySelector('nav');const offset=(header?header.offsetHeight:0)+10;const y=target.getBoundingClientRect().top+window.scrollY-offset;window.scrollTo({top: Math.max(0,y), behavior:'smooth'});})();" role="button" aria-label="Desplazar hacia contenido">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
                         </div>
 
                         
@@ -672,7 +723,7 @@
                         </div>
 
                         <p id="team-cta-text" class="closing-cta__subtitle animate__animated">Conoc&eacute; c&oacute;mo trabaja nuestro equipo</p>
-                        <a id="team-page-button" class="button closing-cta__btn team-page-btn" href="equipo.html">Ver equipo &#8594;</a>
+                        <a id="team-page-button" class="button closing-cta__btn team-page-btn" href="equipo.html">Conoce nuestro equipo &#8594;</a>
                     </div>
                 </div>
             </div>
@@ -781,16 +832,16 @@
                     <p class="blog-kicker" id="blog-kicker">Marketing &middot; Datos &middot; automatizaci&oacute;n</p>
                     <h2 class="section-title" id="blog-title">Conoc&eacute; nuestro blog</h2>
                     <p class="blog-subtitle" id="blog-subtitle">Aprend&eacute; con nuestros especialistas los errores m&aacute;s comunes y c&oacute;mo evitarlos con datos y automatizaci&oacute;n.</p>
-                    <a class="button" href="blog/index.html">Ver todos los art&iacute;culos</a>
+                    <a class="button" id="blog-view-all" href="blog/index.html">Ver todos los art&iacute;culos</a>
                 </div>
                 <a class="blog-card animate__animated" href="blog-errores-marketing.html">
                     <div class="blog-card__media">
-                        <img src="./img/ROBOT-IA.png" alt="9 errores de marketing que frenan a cualquier negocio" loading="lazy">
+                        <img src="./img/ROBOT-IA.png" alt="Errores de marketing que frenan a cualquier negocio" loading="lazy">
                     </div>
                     <div class="blog-card__content">
                         <p class="blog-card__meta" id="blog-meta">Por TrendMakers &middot; 19/11/2025</p>
                         <p class="blog-card__eyebrow" id="blog-eyebrow">Art&iacute;culo destacado</p>
-                        <h3 class="blog-card__title" id="blog-article-title">9 errores de marketing que frenan a cualquier negocio (y c&oacute;mo evitarlos)</h3>
+                        <h3 class="blog-card__title" id="blog-article-title">Errores de marketing que frenan a cualquier negocio (y c&oacute;mo evitarlos)</h3>
                         <p class="blog-card__excerpt" id="blog-excerpt">
                             En un mercado saturado, la diferencia no est&aacute; en publicar m&aacute;s sino en hacerlo estrat&eacute;gicamente. Conoc&eacute; los 9 fallos que vemos en negocios reales y c&oacute;mo evitarlos.
                         </p>
@@ -837,29 +888,30 @@
                 <section id="contact-form" class="contact-form-section">
   <div class="contact-glow"></div>
   <div class="contact-shell">
-    <h2 id="contact-title">&iquest;Necesitas ayuda digital? TrendMakers es tu soluci&oacute;n</h2>
+    <h2 id="contact-title">Inici&aacute; tu proceso de crecimiento</h2>
+    <p id="contact-microcopy" class="contact-microcopy">Te respondemos a la brevedad &middot; Comunicaci&oacute;n confidencial</p>
     <div class="contact-layout">
       <div class="contact-card">
           <form action="https://formspree.io/f/xyzwvwop" method="POST">
               <div class="form-grid">
                   <div class="form-field">
-                      <label for="name" id="label-name">Nombre</label>
+                      <label for="name" id="label-name">Tu nombre</label>
                       <input type="text" id="name" name="name" required>
                   </div>
                   <div class="form-field">
-                      <label for="company" id="label-company">Empresa</label>
+                      <label for="company" id="label-company">Empresa o marca</label>
                       <input type="text" id="company" name="company" required>
                   </div>
                   <div class="form-field full">
-                      <label for="email">Email</label>
+                      <label for="email" id="label-email">Email de contacto</label>
                       <input type="email" id="email" name="email" required>
                   </div>
                   <div class="form-field full">
-                      <label for="project" id="label-project">Proyecto</label>
+                      <label for="project" id="label-project">&iquest;En qu&eacute; podemos ayudarte?</label>
                       <textarea id="project" name="project" required></textarea>
                   </div>
               </div>
-              <button type="submit" class="button contact-button" id="submit-contact-form">Enviar</button>
+              <button type="submit" class="button contact-button" id="submit-contact-form">Empezar el proceso</button>
           </form>
       </div>
     </div>
@@ -890,7 +942,7 @@
         <!-- Pop-up Modal eliminado: usamos enlace mailto directo -->
     </div>
 <!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20más%20información." class="whatsapp-button" target="_blank">
+<a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." class="whatsapp-button" target="_blank">
   <img src="./img/WPP.PNG" alt="WhatsApp">
 </a>
 
@@ -984,7 +1036,6 @@
     </script>
 </body>
 </html>
-
 
 
 
