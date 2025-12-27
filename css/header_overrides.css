@@ -316,6 +316,14 @@ nav ul.desktop-menu { flex: 1 !important; justify-content: center !important; }
   nav .language-selector button { padding: 5px 10px; font-size: 12px; }
 }
 
+/* Center hero content lower on the viewport for better balance */
+header .overlay {
+  justify-content: center;
+  align-items: center;
+  padding-top: 14vh;
+  padding-bottom: 10vh;
+}
+
 /* Ensure vertical centering on wide screens too */
 @media (min-width: 769px) {
   nav { display: flex; align-items: center; }
