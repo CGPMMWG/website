@@ -34,7 +34,7 @@
             align-items: center;
             gap: 6px;
             padding: 10px 14px;
-            border-radius: 12px;
+            border-radius: 999px;
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid rgba(255, 255, 255, 0.18);
             color: #f4f2ff;
@@ -151,9 +151,21 @@
         }
         @media (max-width: 768px) {
             body.blog-page .content { padding-top: 120px; }
-            .blog-shell { padding: 0 16px 70px; }
+            .blog-shell {
+                width: 100%;
+                max-width: 1100px;
+                padding: 0 14px 70px;
+                margin: 0 auto;
+                box-sizing: border-box;
+            }
             .blog-hero p { font-size: 1rem; }
-            .blog-hero__top { justify-content: flex-start; }
+            .blog-hero { text-align: center; display: grid; justify-items: center; }
+            .blog-hero__top { justify-content: center; width: 100%; }
+            .blog-grid {
+                grid-template-columns: minmax(0, 1fr);
+                justify-items: center;
+            }
+            .blog-card { width: 100%; max-width: 420px; }
             .back-btn { top: 10px; left: 10px; padding: 9px 12px; }
         }
     </style>
@@ -168,8 +180,8 @@
             <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos r?pidos">
                 <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
                 <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-                <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." target="_blank" aria-label="Email">Email</a>
-                <a href="https://wa.me/541122549351text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m?s%20informaci?n." target="_blank" aria-label="WhatsApp">WhatsApp</a>
+                <a class="mailto-dynamic" href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias." target="_blank" aria-label="Email">Email</a>
+                <a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" aria-label="WhatsApp">WhatsApp</a>
             </div>
             <div class="hamburger" onclick="toggleMenu()">
                 <div></div>
@@ -198,7 +210,7 @@
                   <img src="../img/IDIOMA.PNG" alt="Idioma">
                 </button>
                 <div class="lang-menu" role="menu" aria-label="Idiomas">
-                  <button class="lang-option" role="menuitem" data-lang="es">Espa?ol</button>
+                  <button class="lang-option" role="menuitem" data-lang="es">Español</button>
                   <button class="lang-option" role="menuitem" data-lang="en">English</button>
                 </div>
               </div>
@@ -295,13 +307,14 @@
         </main>
     </div>
 
-    <a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20m%C3%A1s%20informaci%C3%B3n." class="whatsapp-button" target="_blank" aria-label="Escribinos por WhatsApp">
+    <a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." class="whatsapp-button" target="_blank" aria-label="Escribinos por WhatsApp">
         <img src="../img/WPP.PNG" alt="WhatsApp">
     </a>
-    <a href="mailto:info@trendmakers.agency?subject=Project%20Inquiry&body=Hi,%20I%20would%20like%20more%20information%20about%20your%20services." class="email-button" target="_blank" aria-label="Escribinos por email">
+    <a href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias." class="email-button mailto-dynamic" target="_blank" aria-label="Escribinos por email">
         <img src="../img/EMAIL.jpg" alt="Email">
     </a>
 
+    <script src="../js/script.js"></script>
     <script>
         (function(){
             const copy = {
@@ -445,4 +458,7 @@
 
 </body>
 </html>
+
+
+
 
