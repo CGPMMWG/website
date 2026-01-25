@@ -213,7 +213,7 @@ const translations = {
 
   en: {
     title: "TrendMakers",
-    subtitle: "Your digital Partner",
+    subtitle: "Tu Socio de Crecimiento",
     heroContactCta: "Contact",
     navInicio: "Home",
     navAcerca: "About us",
@@ -987,3 +987,4 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bindLangDropdown); else bindLangDropdown();
 })();
+
