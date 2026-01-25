@@ -1199,7 +1199,11 @@ html { scrollbar-width: thin; scrollbar-color: var(--scroll-thumb) var(--scroll-
 /* Scroll offset so sections aren't hidden under header */
 #inicio { scroll-margin-top: 90px; }
 @media (max-width: 768px) {
-    #inicio { scroll-margin-top: 120px; }
+    html { scroll-behavior: smooth; }
+    #inicio,
+    #intro-title {
+        scroll-margin-top: 110px;
+    }
 }
 
 /* Hero CTA glass style */
