@@ -308,6 +308,10 @@
             z-index: 5;
             cursor: pointer;
             pointer-events: auto;
+            background: transparent;
+            border: 0;
+            padding: 0;
+            text-decoration: none;
         }
         .tm-scroll-indicator span {
             width: 22px;
@@ -353,6 +357,7 @@
             .hero-copy h2 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
             .tm-scroll-indicator { margin-top: 17px; }
             .tm-scroll-indicator span { width: 16px; height: 16px; border-width: 2px; }
+            .tm-scroll-indicator { display: none; }
         }
         /* Servicios premium */
         #servicios .service-details {
@@ -591,11 +596,11 @@
                             <h1 id="title" class="animate__animated">TrendMakers</h1>
                             <p id="subtitle" class="animate__animated">Your growth Partner</p>
                             <a id="hero-contact-cta" class="hero-cta hero-contact-cta animate__animated" href="#contact-form">Contactate ahora</a>
-                            <div class="tm-scroll-indicator" onclick="(function(){const target=document.getElementById('inicio');if(!target)return;const isMobile=window.matchMedia('(max-width: 768px)').matches;if(!isMobile){target.scrollIntoView({behavior:'smooth'});return;}const header=document.querySelector('nav');const offset=(header?header.offsetHeight:0)+10;const y=target.getBoundingClientRect().top+window.scrollY-offset;window.scrollTo({top: Math.max(0,y), behavior:'smooth'});})();" role="button" aria-label="Desplazar hacia contenido">
+                            <a class="tm-scroll-indicator" href="#inicio" role="button" aria-label="Desplazar hacia contenido">
                                 <span></span>
                                 <span></span>
                                 <span></span>
-                            </div>
+                            </a>
 
                         </div>
 
