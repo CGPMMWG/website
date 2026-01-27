@@ -2,8 +2,8 @@
 (function(){
   const copy = {
     es: {
-      heroTitle: "Personas que hacen que todo funcione",
-      heroTagline: "Estrategas, creativos, científicos de datos, tecnólogos y ejecutores trabajando como un solo equipo para escalar tu marca.",
+      heroTitle: "Mentes estratégicas que convierten visión en crecimiento.",
+      heroTagline: "Estrategia, creatividad, datos y tecnología alineados para escalar tu marca con foco en resultados.",
       heading: "Nuestro equipo",
       subtitle: "Talento multidisciplinario para estrategia, datos, tecnología y ejecución.",
       back: "&#8592; Volver",
@@ -26,8 +26,8 @@
       ctaButton: "Hablemos"
     },
     en: {
-      heroTitle: "The people who make everything work",
-      heroTagline: "We drive your business growth through marketing, data analysis, automation, and artificial intelligence.",
+      heroTitle: "Strategic minds that turn vision into growth.",
+      heroTagline: "Strategy, creativity, data, and technology aligned to scale your brand with a focus on results.",
       heading: "Our Team",
       subtitle: "Multidisciplinary talent across strategy, data, technology, and execution.",
       back: "&#8592; Back",
