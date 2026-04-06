@@ -7,12 +7,12 @@
       es: {
         pageTitle: "TrendMakers · Caso Prontoled",
         eyebrow: "Caso de éxito · Prontoled",
-        title: "Retargeting dinámico y nurturing con IA",
+        title: "Email Marketing & Automation",
         summary:
           "Encendimos la demanda directa con un mix creativo + performance sin fricción. Diagnosticamos el funnel B2B y conectamos automatizaciones para responder, priorizar y nutrir cada lead en segundos.",
         hook: "Creatividad, automatización y media para ventas directas.",
         subtitle: "Prontoled · Retargeting dinámico y nurturing con IA",
-        body: "Diagnosticamos su funnel B2B, reescribimos cada pauta clave y conectamos campañas full-funnel con flujos de WhatsApp y CRM. Mientras el media mix traía tráfico caliente, un set de automatizaciones contestaba en segundos, priorizaba leads y nutría hasta la venta.",
+        body: "Activamos su base de clientes con una estrategia de email marketing enfocada en conversión. Segmentamos audiencias, diseñamos campañas promocionales y automatizamos flujos de reactivación y recompra.Mientras el canal captaba demanda, un sistema de emails nutría leads, impulsaba pedidos recurrentes y mantenía activa la relación comercial.",
         stats: [
           "ventas online en 90 días",
           "leads calificados vs. trimestre anterior",
@@ -25,12 +25,12 @@
       en: {
         pageTitle: "TrendMakers · Prontoled Case Study",
         eyebrow: "Success Story · Prontoled",
-        title: "Dynamic retargeting and AI-powered nurturing",
+        title: "Email Marketing & Automation",
         summary:
           "We ignited direct demand with a frictionless creative + performance mix. We diagnosed their B2B funnel and connected automation to answer, prioritize, and nurture every lead in seconds.",
         hook: "Creativity, automation, and media aligned to drive direct sales.",
         subtitle: "Prontoled · Dynamic retargeting & AI nurturing",
-        body: "We rewrote every key campaign, linked full-funnel media with WhatsApp and CRM flows, and let an automation layer respond in seconds, score leads, and keep nurturing until the sale closed.",
+        body: "We activated their customer database through a conversion-focused email marketing strategy. We segmented audiences, designed promotional campaigns, and built automated flows for reactivation and repeat purchases. While the channel captured demand, a structured email system nurtured leads, increased recurring orders, and kept the commercial pipeline active.",
         stats: [
           "online sales in 90 days",
           "qualified leads vs. prior quarter",
@@ -50,7 +50,7 @@
           "Reconstruimos la presencia digital desde cero con una arquitectura SEO sólida, un sitio ligero en Jamstack y sprints de growth que empujaron cada cotización sin inflar el presupuesto.",
         hook: "Reconstruimos la presencia digital de cero con foco en autoridad y conversión.",
         subtitle: "Letratec · Website modular + growth sprints",
-        body: "Diseñamos una arquitectura de contenidos orientada a SEO técnico, lanzamos una web liviana en Jamstack y activamos campañas always-on conectadas al pipeline comercial. Cada sprint cerraba con experimentos CRO para empujar cotizaciones sin inflar el presupuesto.",
+        body: "Estructuramos una arquitectura de contenidos basada en SEO técnico y desarrollamos un sitio web de alto rendimiento, optimizado para posicionamiento orgánico y conversión. Las campañas always-on se integraron directamente con el pipeline comercial. Cada sprint se enfocó en experimentación CRO, logrando aumentos sostenidos en cotizaciones calificadas y mejoras en eficiencia sin incrementar el gasto en medios.",
         stats: [
           "facturación intermensual",
           "sesiones orgánicas en 60 días",
@@ -68,7 +68,7 @@
           "We rebuilt their digital presence from scratch with a solid SEO architecture, a lightweight Jamstack site, and growth sprints that pushed every quote without inflating spend.",
         hook: "Authority, performance, and operations connected in one playbook.",
         subtitle: "Letratec · Modular website + growth sprints",
-        body: "We engineered SEO-first content, shipped a blazing-fast Jamstack site, and ran always-on campaigns tied to their commercial pipeline. Each sprint ended with CRO experiments to keep quotes scaling efficiently.",
+        body: "We structured a content architecture based on technical SEO and developed a high-performance website optimized for organic visibility and conversion. Always-on campaigns were directly integrated into the commercial pipeline. Each sprint focused on CRO experimentation, achieving sustained increases in qualified quotes and improvements in efficiency without increasing media spend.",
         stats: [
           "month-over-month revenue",
           "organic sessions in 60 days",
