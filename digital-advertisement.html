@@ -1,0 +1,560 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GP Consultora Pol&iacute;tica | Publicidad digital y performance</title>
+    <meta name="description" content="Servicios de publicidad digital para proyectos pol&iacute;ticos: segmentaci&oacute;n, performance, contenidos y medici&oacute;n en tiempo real.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <link rel="canonical" href="https://gottlerpentke.com/digital-advertisement.html">
+    <meta property="og:title" content="GP Consultora Pol&iacute;tica | Publicidad digital y performance">
+    <meta property="og:description" content="Servicios de publicidad digital para proyectos pol&iacute;ticos: segmentaci&oacute;n, performance, contenidos y medici&oacute;n en tiempo real.">
+    <meta property="og:image" content="https://gottlerpentke.com/img/Transformacion%20Digital.webp">
+    <meta property="og:url" content="https://gottlerpentke.com/digital-advertisement.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Gottler Pentke">
+    <meta property="og:locale" content="es_AR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GP Consultora Pol&iacute;tica | Publicidad digital y performance">
+    <meta name="twitter:description" content="Servicios de publicidad digital para proyectos pol&iacute;ticos: segmentaci&oacute;n, performance, contenidos y medici&oacute;n en tiempo real.">
+    <meta name="twitter:image" content="https://gottlerpentke.com/img/Transformacion%20Digital.webp">
+
+    <!-- Estilos base del sitio -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header_overrides.css">
+    <link rel="stylesheet" href="./css/casos_overrides.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos espec&iacute;ficos de la subp&aacute;gina -->
+    <style>
+        :root {
+            --da-bg: #f7f8fb;
+            --da-text: #0a0a0a;
+            --da-muted: #2f3744;
+            --da-accent: #f5b400;
+            --da-border: #e5e7ef;
+            --da-card: #ffffff;
+            --da-shadow: 0 18px 50px rgba(16, 24, 40, 0.14);
+        }
+        html, body, .content, main {
+            background: var(--da-bg);
+            color: var(--da-text);
+        }
+
+        .da-hero {
+            position: relative;
+            min-height: 60vh;
+            display: grid;
+            place-items: center;
+            padding: 0;
+            overflow: hidden;
+            background: #0f1115;
+            isolation: isolate;
+        }
+        .da-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 35%, rgba(245, 180, 0, 0.36), transparent 48%);
+            mix-blend-mode: screen;
+            opacity: 0.9;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .da-hero img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.02);
+            z-index: 0;
+        }
+        .da-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(6, 8, 12, 0.65) 0%, rgba(6, 8, 12, 0.92) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+        .da-hero-content {
+            position: relative;
+            text-align: center;
+            color: #ffffff;
+            padding: 34px 20px;
+            max-width: 960px;
+            text-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+            z-index: 3;
+        }
+        .da-hero-eyebrow {
+            font-size: 0.95rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin: 0 0 10px;
+            color: #fff4c3;
+            text-shadow:
+                0 0 18px rgba(255, 231, 150, 0.75),
+                0 0 36px rgba(255, 231, 150, 0.45);
+        }
+        .da-hero h1 {
+            position: relative;
+            font-size: clamp(2.2rem, 4vw, 3rem);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin: 0 0 12px;
+            color: #ffffff;
+            text-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.55),
+                0 0 24px rgba(255, 232, 150, 0.9),
+                0 0 62px rgba(255, 232, 150, 0.55),
+                0 0 4px rgba(0, 0, 0, 0.7);
+        }
+        .da-hero-lead {
+            position: relative;
+            margin: 0 auto;
+            color: #ffffff;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 760px;
+            text-shadow:
+                0 14px 38px rgba(0, 0, 0, 0.5),
+                0 0 18px rgba(255, 232, 150, 0.45),
+                0 0 44px rgba(255, 232, 150, 0.3),
+                0 0 4px rgba(0, 0, 0, 0.65);
+        }
+
+        .da-shell {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 20px 36px;
+        }
+        .da-intro {
+            text-align: center;
+        }
+        .da-intro h2 {
+            font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin: 8px 0 14px;
+            color: var(--da-text);
+        }
+        .da-intro p {
+            color: var(--da-muted);
+            max-width: 880px;
+            margin: 0 auto 12px;
+            font-size: 1.02rem;
+            line-height: 1.6;
+        }
+
+        .da-bullets {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 22px 28px;
+            margin-top: 26px;
+        }
+        .da-bullet {
+            display: grid;
+            grid-template-columns: 32px 1fr;
+            gap: 10px 14px;
+            align-items: start;
+        }
+        .da-bullet .icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--da-accent);
+            display: grid;
+            place-items: center;
+            color: #0f1115;
+            font-weight: 800;
+            font-size: 0.95rem;
+            box-shadow: 0 6px 18px rgba(245, 180, 0, 0.35);
+        }
+        .da-bullet h3 { margin: 0; font-size: 1.05rem; color: var(--da-text); }
+        .da-bullet p { margin: 6px 0 0; color: var(--da-muted); font-size: 0.95rem; }
+
+        .da-grid {
+            margin-top: 32px;
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 18px;
+        }
+        @media (max-width: 1200px) {
+            .da-grid {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            }
+        }
+        .da-card {
+            background: var(--da-card);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--da-shadow);
+            display: grid;
+            grid-template-rows: 150px 1fr;
+            border: 1px solid var(--da-border);
+            position: relative;
+            transform-origin: center;
+            transition: transform 200ms ease, box-shadow 220ms ease, border-color 160ms ease, filter 200ms ease;
+        }
+        .da-card.will-animate {
+            opacity: 0;
+            transform: translate(-12px, 16px) scale(0.985);
+            filter: saturate(0.9) blur(0.2px);
+        }
+        .da-card.is-visible {
+            opacity: 1;
+            filter: saturate(1);
+            animation: daCardCascade 820ms cubic-bezier(0.22, 0.7, 0.28, 1) forwards;
+            animation-delay: var(--da-delay, 0ms);
+        }
+        .da-card:hover,
+        .da-card:focus-within {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 22px 58px rgba(16, 24, 40, 0.18);
+            border-color: rgba(16, 24, 40, 0.12);
+        }
+        .da-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+        }
+        .da-card-body {
+            padding: 12px 14px 14px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.6), transparent 38%);
+        }
+        .da-card-body h4 {
+            margin: 0 0 6px;
+            font-size: 0.95rem;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: var(--da-text);
+        }
+        .da-card-body p {
+            margin: 0;
+            color: var(--da-muted);
+            font-size: 0.94rem;
+            line-height: 1.45;
+        }
+
+        .da-cta {
+            margin: 36px auto 20px;
+            padding: 0 22px;
+            text-align: center;
+            background: var(--da-bg);
+        }
+        .da-cta h3 {
+            margin: 0 0 8px;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--da-text);
+        }
+        .da-cta p {
+            margin: 0 auto 18px;
+            max-width: 720px;
+            color: var(--da-muted);
+            line-height: 1.6;
+        }
+        .da-cta-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .da-cta-actions a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.98rem;
+            transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, border-color 160ms ease;
+        }
+        .da-cta-actions .da-cta-primary {
+            background: var(--da-accent);
+            color: #0f1115;
+            box-shadow: 0 10px 24px rgba(245, 180, 0, 0.35);
+        }
+        .da-cta-actions .da-cta-secondary {
+            background: #ffffff;
+            color: #0f1115;
+            border: 1px solid rgba(15, 17, 21, 0.18);
+        }
+        .da-cta-actions a:hover {
+            transform: translateY(-1px);
+        }
+        @media (max-width: 640px) {
+            .da-cta {
+                margin: 26px auto 18px;
+                padding: 0 18px;
+            }
+            .da-cta-actions a {
+                width: 100%;
+            }
+        }
+        @keyframes daCardCascade {
+            0% { opacity: 0; transform: translate(-12px, 16px) scale(0.985); filter: saturate(0.9) blur(0.2px); }
+            60% { opacity: 1; transform: translate(0, -4px) scale(1.01); filter: saturate(1); }
+            100% { opacity: 1; transform: translate(0, 0) scale(1); }
+        }
+
+        @media (max-width: 640px) {
+            .da-hero { min-height: 62vh; }
+            .da-shell { padding: 18px 16px 32px; }
+            .da-card { grid-template-rows: 140px 1fr; }
+            .da-card img { height: 140px; }
+            .da-hero h1 { font-size: clamp(1.9rem, 8vw, 2.4rem); }
+            .da-hero-lead { font-size: 0.98rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <div class="content">
+        <nav>
+            <a class="tm-header-badge" href="index.html#inicio" aria-label="GP home" id="tm-badge">
+                <img src="./img/TrendMakers-Header.png" alt="GP Consultora Pol&iacute;tica">
+            </a>
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos r&aacute;pidos">
+                <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                <a class="mailto-dynamic" href="mailto:info@gp.com?subject=Consulta%20sobre%20consultor%C3%ADa%20pol%C3%ADtica&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20consultor%C3%ADa%20pol%C3%ADtica.%20Muchas%20gracias." target="_blank" aria-label="Email">Email</a>
+                <a href="https://wa.me/541122549351?text=Hola,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20consultor%C3%ADa%20pol%C3%ADtica." target="_blank" aria-label="WhatsApp">WhatsApp</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="desktop-menu top-agency-menu">
+                <li><a href="index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
+                <li><a href="index.html#servicios" id="nav-servicios" class="menu-item">Servicios</a></li>
+                <li><a href="index.html#blog" id="nav-newsletter" class="menu-item">Newsletter</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
+            </ul>
+            <div class="nav-lang">
+              <div class="language-selector" aria-label="Selector de idioma">
+                <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
+                  <img src="./img/IDIOMA.PNG" alt="Idioma">
+                </button>
+                <div class="lang-menu" role="menu" aria-label="Idiomas">
+                  <button class="lang-option" role="menuitem" data-lang="es">Espa&ntilde;ol</button>
+                  <button class="lang-option" role="menuitem" data-lang="en">English</button>
+                </div>
+              </div>
+            </div>
+            <ul class="mobile-menu">
+                <li><a href="index.html#inicio" id="nav-inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="index.html#servicios" id="nav-servicios" class="menu-item" onclick="closeMenu()">Servicios</a></li>
+                <li><a href="index.html#blog" id="nav-newsletter-mobile" class="menu-item" onclick="closeMenu()">Newsletter</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto-mobile" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="da-hero">
+            <img src="./img/Transformacion%20Digital.webp" alt="Equipo gestionando anuncios digitales en pantallas m&uacute;ltiples">
+            <div class="da-hero-content">
+                <p class="da-hero-eyebrow">Performance y creatividad digital</p>
+                <h1>Publicidad digital y performance</h1>
+                <p class="da-hero-lead">Lanzamos campa&ntilde;as integrales con segmentaci&oacute;n, contenidos y medici&oacute;n en tiempo real para acelerar resultados.</p>
+            </div>
+        </div>
+
+        <main>
+            <section class="da-shell da-intro" id="intro">
+                <h2>Publicidad digital y performance</h2>
+                <p>En el mundo digital, hablarles a todos por igual significa no hablarle a nadie. Los targets son cada vez m&aacute;s peque&ntilde;os y espec&iacute;ficos, as&iacute; que se requieren herramientas para llegar con precisi&oacute;n.</p>
+                <p>Nuestros servicios permiten alcanzar audiencias efectivas, monitorear minuto a minuto cada campa&ntilde;a y maximizar el retorno de la inversi&oacute;n.</p>
+
+                <div class="da-bullets">
+                    <div class="da-bullet">
+                        <div class="icon">1</div>
+                        <div>
+                            <h3>Investigaci&oacute;n y segmentaci&oacute;n</h3>
+                            <p>Investigaci&oacute;n emp&iacute;rica en terreno para identificar segmentos clave. Replicamos esos segmentos y construimos audiencias en plataformas digitales.</p>
+                        </div>
+                    </div>
+                    <div class="da-bullet">
+                        <div class="icon">2</div>
+                        <div>
+                            <h3>Anal&iacute;tica y tracking</h3>
+                            <p>Cada acci&oacute;n es mensurable. Medimos, seguimos y optimizamos minuto a minuto las variables cr&iacute;ticas para mejorar performance.</p>
+                        </div>
+                    </div>
+                    <div class="da-bullet">
+                        <div class="icon">3</div>
+                        <div>
+                            <h3>Estrategia y desarrollo de contenidos</h3>
+                            <p>Iteramos mensajes basados en datos, alineando contenido con la estrategia digital sin dejar espacio a la intuici&oacute;n.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="da-shell" id="services">
+                <div class="da-grid">
+                    <article class="da-card">
+                        <img src="./img/youtube.jpg" alt="Consultor&iacute;a en YouTube">
+                        <div class="da-card-body">
+                            <h4>Consultor&iacute;a en YouTube</h4>
+                            <p>Alcance audiovisual masivo con segmentaci&oacute;n precisa y costos bajos.</p>
+                        </div>
+                    </article>
+                    <article class="da-card">
+                        <img src="./img/twitter.jpg" alt="Consultor&iacute;a en Twitter">
+                        <div class="da-card-body">
+                            <h4>Consultor&iacute;a en Twitter</h4>
+                            <p>Masificaci&oacute;n de mensajes orientados a conversaci&oacute;n e influencia.</p>
+                        </div>
+                    </article>
+                    <article class="da-card">
+                        <img src="./img/facebook.jpg" alt="Consultor&iacute;a en Facebook">
+                        <div class="da-card-body">
+                            <h4>Consultor&iacute;a en Facebook</h4>
+                            <p>Gesti&oacute;n directa de inversi&oacute;n y tracking avanzado en Meta.</p>
+                        </div>
+                    </article>
+                    <article class="da-card">
+                        <img src="./img/mobile-ads.jpg" alt="Publicidad m&oacute;vil">
+                        <div class="da-card-body">
+                            <h4>Publicidad m&oacute;vil</h4>
+                            <p>Formatos m&oacute;viles optimizados para impacto y conversi&oacute;n.</p>
+                        </div>
+                    </article>
+                    <article class="da-card">
+                        <img src="./img/adwords.jpg" alt="Consultor&iacute;a en Google Ads">
+                        <div class="da-card-body">
+                            <h4>Consultor&iacute;a en Google Ads</h4>
+                            <p>Captur&aacute; demanda real con keywords y medici&oacute;n constante.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <section class="da-shell da-cta">
+            <h3>Solicitar diagn&oacute;stico digital</h3>
+            <p>Eleg&iacute; el tipo de soporte que necesit&aacute;s y te respondemos con una propuesta concreta para tu proyecto.</p>
+            <div class="da-cta-actions">
+                <a class="da-cta-primary" href="mailto:contacto@gp.com?subject=Solicitud%20de%20asesoramiento%20en%20marketing">Asesoramiento en marketing</a>
+                <a class="da-cta-secondary" href="mailto:contacto@gp.com?subject=Solicitud%20de%20publicidad%20digital">Publicidad digital</a>
+            </div>
+        </section>
+
+        <footer class="footer-new" id="contact">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <p><strong>Direcci&oacute;n:</strong> Av. Rivadavia 1725, CABA</p>
+                    <p><strong>Tel&eacute;fonos:</strong> 54 11 554746300<br>54 9 2325457856</p>
+                    <p><strong>Email:</strong> contacto@gp.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="digital-advertisement.html">Asesoramiento en Marketing</a></li>
+                        <li><a href="consultoria-estrategica.html">Consultor&iacute;a Estrat&eacute;gica</a></li>
+                        <li><a href="investigacion-opinion-publica.html">Investigaci&oacute;n de opini&oacute;n p&uacute;blica</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Suscribite para recibir novedades y recursos estrat&eacute;gicos.</p>
+                    <form class="footer-newsletter" action="#" method="POST">
+                        <input type="email" name="email" placeholder="Correo electr&oacute;nico" required>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <p id="footer-text">&copy; 2025 GP Consultora Pol&iacute;tica. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/digital-advertisement-i18n.js"></script>
+    <script src="./js/success_cards.js"></script>
+    <script src="./js/blog_i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const cards = Array.from(document.querySelectorAll('.da-card'));
+            if (!cards.length) return;
+
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            const baseDelay = 120;
+            const stepDelay = 170;
+
+            cards.forEach((card, idx) => {
+                const delay = baseDelay + idx * stepDelay;
+                card.style.setProperty('--da-delay', `${delay}ms`);
+                if (!prefersReduced) card.classList.add('will-animate');
+            });
+
+            if (prefersReduced) return;
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.14, rootMargin: '0px 0px -4% 0px' });
+
+            cards.forEach((card) => {
+                const rect = card.getBoundingClientRect();
+                const onScreen = rect.top < window.innerHeight * 0.9 && rect.bottom > 0;
+                if (onScreen) {
+                    card.classList.add('is-visible');
+                } else {
+                    observer.observe(card);
+                }
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const badge = document.getElementById('tm-badge');
+            const menu = document.getElementById('tm-quick-menu');
+            if (!badge || !menu) return;
+            const closeMenu = () => menu.classList.remove('open');
+            badge.addEventListener('click', (e) => {
+                e.preventDefault();
+                menu.classList.toggle('open');
+            });
+            document.addEventListener('click', (e) => {
+                if (menu.contains(e.target) || badge.contains(e.target)) return;
+                closeMenu();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeMenu();
+            });
+        });
+
+        function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('nav ul.mobile-menu');
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+        function closeMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('nav ul.mobile-menu');
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
+
+
+
