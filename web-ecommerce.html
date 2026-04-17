@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html> 
+           <!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -97,7 +97,7 @@
             color: #eae6ff;
         }
         .list li::before {
-            content: "âœ”";
+            content: "✔";
             color: #7bffb2;
             font-size: 1.2rem;
             line-height: 1;
@@ -207,15 +207,17 @@
 </head>
 <body>
     <div class="content">
-        <a class="back-btn" href="index.html#problema" aria-label="Volver a la secciÃ³n Â¿Listo para llevar tu marca al prÃ³ximo nivel?">â† Volver</a>
+        <a class="back-btn" href="index.html#problema" aria-label="Volver a la sección ¿Listo para llevar tu marca al próximo nivel?">← Volver</a>
         <nav>
             <a class="tm-header-badge" href="index.html#inicio" aria-label="TrendMakers home" id="tm-badge">
-                <img src="./img/GOPE-HEADER.PNG" alt="TrendMakers">
+                <img src="./img/TrendMakers-Header.png" alt="TrendMakers">
             </a>
-            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos rÃ¡pidos">
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-                <a href="https://www.whatsapp.com/" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos rápidos">
+                <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                <!-- Email dinámico ES/EN -->
+                <a class="mailto-dynamic" href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias." target="_blank" aria-label="Email">Email</a>
+                <a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" aria-label="WhatsApp">WhatsApp</a>
             </div>
             <div class="hamburger" onclick="toggleMenu()">
                 <div></div>
@@ -225,8 +227,17 @@
             <ul class="desktop-menu top-agency-menu">
                 <li><a href="index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
                 <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item">Servicios</a></li>
-                <li><a href="index.html#blog" id="nav-newsletter" class="menu-item">Newsletter</a></li>
-                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de Ã‰xito</a></li>
+                <li class="dropdown about-dropdown">
+                    <button id="nav-acerca" class="menu-item dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Nosotros <span class="caret">v</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#equipo" id="nav-equipo" class="menu-item">Equipo</a></li>
+                        <li><a href="index.html#acerca" id="nav-nosotros" class="menu-item">Nosotros</a></li>
+                        <li><a href="blog/index.html" id="nav-blog" class="menu-item">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de Éxito</a></li>
                 <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
             </ul>
             <div class="nav-lang">
@@ -235,7 +246,7 @@
                   <img src="./img/IDIOMA.PNG" alt="Idioma">
                 </button>
                 <div class="lang-menu" role="menu" aria-label="Idiomas">
-                  <button class="lang-option" role="menuitem" data-lang="es">EspaÃ±ol</button>
+                  <button class="lang-option" role="menuitem" data-lang="es">Español</button>
                   <button class="lang-option" role="menuitem" data-lang="en">English</button>
                 </div>
               </div>
@@ -243,8 +254,11 @@
             <ul class="mobile-menu">
                 <li><a href="index.html#inicio" id="nav-inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
                 <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item" onclick="closeMenu()">Servicios</a></li>
-                <li><a href="index.html#blog" id="nav-newsletter-mobile" class="menu-item" onclick="closeMenu()">Newsletter</a></li>
-                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de Ã‰xito</a></li>
+                <li class="mobile-heading">Nosotros</li>
+                <li><a href="index.html#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
+                <li><a href="index.html#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
+                <li><a href="blog/index.html" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de Éxito</a></li>
                 <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
             </ul>
         </nav>
@@ -255,30 +269,30 @@
             <div>
                 <div class="pill" id="bc-badge">Web &amp; E-Commerce Development</div>
                 <h1 id="bc-h1">Web &amp; E-Commerce Development</h1>
-                <h2 id="bc-h2">Sitios y tiendas diseÃ±ados para convertir, no solo para estar.</h2>
+                <h2 id="bc-h2">Sitios y tiendas diseñados para convertir, no solo para estar.</h2>
                 <p id="bc-hero-text">
-                    En TrendMakers desarrollamos pÃ¡ginas web y tiendas online rÃ¡pidas, seguras y optimizadas para que tus visitantes se conviertan en clientes.
-                    Combinamos diseÃ±o moderno, experiencia de usuario y rendimiento tÃ©cnico para impulsar tus resultados.
+                    En TrendMakers desarrollamos páginas web y tiendas online rápidas, seguras y optimizadas para que tus visitantes se conviertan en clientes.
+                    Combinamos diseño moderno, experiencia de usuario y rendimiento técnico para impulsar tus resultados.
                 </p>
                 <a class="btn-primary" id="bc-cta" href="https://calendly.com/mgottler1999/30min" target="_blank" rel="noopener">Agendar una llamada</a>
             </div>
             <div class="hero-visual">
-                <img src="./img/WEB-ECOMM.png" alt="IlustraciÃ³n de sitio web y tienda online moderna">
+                <img src="./img/WEB-ECOMM.png" alt="Ilustración de sitio web y tienda online moderna">
             </div>
         </section>
 
-        <!-- QUÃ‰ HACEMOS -->
+        <!-- QUÉ HACEMOS -->
         <section>
             <div class="card">
-                <h2 id="bc-que-title">Â¿QuÃ© hacemos en Web &amp; E-Commerce Development?</h2>
+                <h2 id="bc-que-title">¿Qué hacemos en Web &amp; E-Commerce Development?</h2>
                 <p id="bc-que-text">
-                    Creamos experiencias digitales claras, modernas y diseÃ±adas para generar conversiones.
-                    Nuestros sitios y e-commerce integran diseÃ±o, SEO, velocidad, seguridad y analÃ­tica desde el primer dÃ­a.
+                    Creamos experiencias digitales claras, modernas y diseñadas para generar conversiones.
+                    Nuestros sitios y e-commerce integran diseño, SEO, velocidad, seguridad y analítica desde el primer día.
                 </p>
                 <ul class="list">
-                    <li id="bc-que-li1">DiseÃ±amos sitios modernos con enfoque UX/UI.</li>
+                    <li id="bc-que-li1">Diseñamos sitios modernos con enfoque UX/UI.</li>
                     <li id="bc-que-li2">Desarrollamos tiendas online completas (Shopify / WooCommerce).</li>
-                    <li id="bc-que-li3">Optimizamos velocidad, seguridad y SEO tÃ©cnico.</li>
+                    <li id="bc-que-li3">Optimizamos velocidad, seguridad y SEO técnico.</li>
                     <li id="bc-que-li4">Conectamos tu web con CRM, funnels y automatizaciones.</li>
                 </ul>
             </div>
@@ -291,62 +305,62 @@
                 <p id="bc-prob-text">Si te pasa alguna de estas situaciones, este servicio es para vos:</p>
                 <ul class="list">
                     <li id="bc-prob-li1">Tu web es lenta, antigua o no refleja el valor de tu marca.</li>
-                    <li id="bc-prob-li2">Tus visitantes no entienden quÃ© hacÃ©s o cÃ³mo contactarte.</li>
-                    <li id="bc-prob-li3">Tu tienda online no convierte, tiene errores o es difÃ­cil de gestionar.</li>
-                    <li id="bc-prob-li4">No tenÃ©s mÃ©tricas reales sobre el comportamiento de tus usuarios.</li>
+                    <li id="bc-prob-li2">Tus visitantes no entienden qué hacés o cómo contactarte.</li>
+                    <li id="bc-prob-li3">Tu tienda online no convierte, tiene errores o es difícil de gestionar.</li>
+                    <li id="bc-prob-li4">No tenés métricas reales sobre el comportamiento de tus usuarios.</li>
                 </ul>
             </div>
         </section>
 
-        <!-- QUÃ‰ INCLUYE -->
+        <!-- QUÉ INCLUYE -->
         <section>
             <div class="card">
-                <h2 id="bc-incl-title">Â¿QuÃ© incluye Web &amp; E-Commerce Development?</h2>
+                <h2 id="bc-incl-title">¿Qué incluye Web &amp; E-Commerce Development?</h2>
                 <p id="bc-incl-text">
                     Trabajamos de forma integral sobre tu presencia digital, combinando desarrollo web, tiendas online,
-                    performance tÃ©cnico y analÃ­tica para que tu sitio estÃ© listo para vender.
+                    performance técnico y analítica para que tu sitio esté listo para vender.
                 </p>
                 <div class="grid-3">
                     <div class="card">
-                        <h3 id="bc-b1-title">Bloque 1 â€“ Desarrollo Web</h3>
+                        <h3 id="bc-b1-title">Bloque 1 – Desarrollo Web</h3>
                         <ul class="list">
-                            <li id="bc-b1-li1">DiseÃ±o moderno, responsive y alineado a tu marca.</li>
-                            <li id="bc-b1-li2">Estructura clara orientada a conversiÃ³n (landings, multi-pÃ¡gina, institucional).</li>
-                            <li id="bc-b1-li3">ImplementaciÃ³n en HTML, WordPress u otros frameworks livianos.</li>
+                            <li id="bc-b1-li1">Diseño moderno, responsive y alineado a tu marca.</li>
+                            <li id="bc-b1-li2">Estructura clara orientada a conversión (landings, multi-página, institucional).</li>
+                            <li id="bc-b1-li3">Implementación en HTML, WordPress u otros frameworks livianos.</li>
                             <li id="bc-b1-li4">Formularios y secciones clave preparados para captar leads.</li>
                         </ul>
                     </div>
                     <div class="card">
-                        <h3 id="bc-b2-title">Bloque 2 â€“ E-Commerce Completo</h3>
+                        <h3 id="bc-b2-title">Bloque 2 – E-Commerce Completo</h3>
                         <ul class="list">
                             <li id="bc-b2-li1">Tiendas Shopify o WooCommerce listas para operar.</li>
-                            <li id="bc-b2-li2">IntegraciÃ³n de mÃ©todos de pago y envÃ­os.</li>
-                            <li id="bc-b2-li3">GestiÃ³n de catÃ¡logo, variantes e inventarios.</li>
+                            <li id="bc-b2-li2">Integración de métodos de pago y envíos.</li>
+                            <li id="bc-b2-li3">Gestión de catálogo, variantes e inventarios.</li>
                             <li id="bc-b2-li4">Automatizaciones clave ligadas a pedidos, carritos y clientes.</li>
                         </ul>
                     </div>
                     <div class="card">
-                        <h3 id="bc-b3-title">Bloque 3 â€“ SEO, Performance &amp; Data</h3>
+                        <h3 id="bc-b3-title">Bloque 3 – SEO, Performance &amp; Data</h3>
                         <ul class="list">
-                            <li id="bc-b3-li1">OptimizaciÃ³n de Core Web Vitals y velocidad de carga.</li>
-                            <li id="bc-b3-li2">SEO tÃ©cnico: indexaciÃ³n, sitemaps, metatags y estructura on-page.</li>
-                            <li id="bc-b3-li3">ImplementaciÃ³n de Google Analytics 4, eventos y Search Console.</li>
-                            <li id="bc-b3-li4">IntegraciÃ³n con CRM, funnels y automatizaciones para medir todo.</li>
+                            <li id="bc-b3-li1">Optimización de Core Web Vitals y velocidad de carga.</li>
+                            <li id="bc-b3-li2">SEO técnico: indexación, sitemaps, metatags y estructura on-page.</li>
+                            <li id="bc-b3-li3">Implementación de Google Analytics 4, eventos y Search Console.</li>
+                            <li id="bc-b3-li4">Integración con CRM, funnels y automatizaciones para medir todo.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CÃ“MO TRABAJAMOS -->
+        <!-- CÓMO TRABAJAMOS -->
         <section>
             <div class="card">
-                <h2 id="bc-how-title">Â¿CÃ³mo trabajamos este servicio?</h2>
+                <h2 id="bc-how-title">¿Cómo trabajamos este servicio?</h2>
                 <div class="grid-2">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div>
-                            <h3 id="bc-step1-title">Paso 1 â€“ PlanificaciÃ³n y estructura</h3>
+                            <h3 id="bc-step1-title">Paso 1 – Planificación y estructura</h3>
                             <p id="bc-step1-text">
                                 Definimos objetivos, contenido, secciones, funcionalidades y el rol de la web dentro de tu embudo.
                             </p>
@@ -355,7 +369,7 @@
                     <div class="step">
                         <div class="step-number">2</div>
                         <div>
-                            <h3 id="bc-step2-title">Paso 2 â€“ DiseÃ±o y desarrollo</h3>
+                            <h3 id="bc-step2-title">Paso 2 – Diseño y desarrollo</h3>
                             <p id="bc-step2-text">
                                 Creamos el sitio o la tienda con una experiencia clara, moderna y alineada a tu marca.
                             </p>
@@ -364,9 +378,9 @@
                     <div class="step">
                         <div class="step-number">3</div>
                         <div>
-                            <h3 id="bc-step3-title">Paso 3 â€“ OptimizaciÃ³n y mediciÃ³n</h3>
+                            <h3 id="bc-step3-title">Paso 3 – Optimización y medición</h3>
                             <p id="bc-step3-text">
-                                Conectamos analÃ­tica, optimizamos velocidad y dejamos todo listo para convertir visitas en clientes.
+                                Conectamos analítica, optimizamos velocidad y dejamos todo listo para convertir visitas en clientes.
                             </p>
                         </div>
                     </div>
@@ -377,25 +391,25 @@
         <!-- RESULTADOS -->
         <section>
             <div class="card">
-                <h2 id="bc-res-title">Â¿QuÃ© resultados podÃ©s esperar?</h2>
+                <h2 id="bc-res-title">¿Qué resultados podés esperar?</h2>
                 <ul class="list">
                     <li id="bc-res-li1">Una web o tienda moderna y profesional.</li>
-                    <li id="bc-res-li2">Mayor conversiÃ³n de visitantes en clientes o leads.</li>
-                    <li id="bc-res-li3">Mejor rendimiento tÃ©cnico (velocidad, SEO, estabilidad).</li>
-                    <li id="bc-res-li4">Visibilidad real de mÃ©tricas y comportamiento del usuario.</li>
+                    <li id="bc-res-li2">Mayor conversión de visitantes en clientes o leads.</li>
+                    <li id="bc-res-li3">Mejor rendimiento técnico (velocidad, SEO, estabilidad).</li>
+                    <li id="bc-res-li4">Visibilidad real de métricas y comportamiento del usuario.</li>
                     <li id="bc-res-li5">Mayor confianza, claridad y autoridad digital.</li>
                 </ul>
             </div>
         </section>
 
-        <!-- POR QUÃ‰ TM -->
+        <!-- POR QUÉ TM -->
         <section>
             <div class="card">
-                <h2 id="bc-why-title">Â¿Por quÃ© hacer tu web con TrendMakers?</h2>
+                <h2 id="bc-why-title">¿Por qué hacer tu web con TrendMakers?</h2>
                 <ul class="list">
-                    <li id="bc-why-li1">DiseÃ±amos webs como parte de tu estrategia, no como un elemento aislado.</li>
-                    <li id="bc-why-li2">Conectamos diseÃ±o, SEO, CRM y automatizaciÃ³n en un mismo sistema.</li>
-                    <li id="bc-why-li3">Cuidamos rendimiento tÃ©cnico y experiencia de usuario desde el inicio.</li>
+                    <li id="bc-why-li1">Diseñamos webs como parte de tu estrategia, no como un elemento aislado.</li>
+                    <li id="bc-why-li2">Conectamos diseño, SEO, CRM y automatización en un mismo sistema.</li>
+                    <li id="bc-why-li3">Cuidamos rendimiento técnico y experiencia de usuario desde el inicio.</li>
                     <li id="bc-why-li4">Entregamos sitios preparados para escalar sin tener que rehacer todo desde cero.</li>
                 </ul>
             </div>
@@ -403,9 +417,9 @@
 
         <!-- CTA FINAL -->
         <section class="cta-panel">
-            <h2 id="bc-cta2-title">Â¿Tu sitio estÃ¡ preparado para convertir visitas en ventas?</h2>
+            <h2 id="bc-cta2-title">¿Tu sitio está preparado para convertir visitas en ventas?</h2>
             <p class="section-lead" id="bc-cta2-text">
-                Hablemos del estado actual de tu web y del potencial de optimizaciÃ³n o rediseÃ±o.
+                Hablemos del estado actual de tu web y del potencial de optimización o rediseño.
             </p>
             <a class="btn-primary" id="bc-cta2-btn" href="https://calendly.com/mgottler1999/30min" target="_blank" rel="noopener">Agendar una llamada</a>
         </section>
@@ -416,30 +430,30 @@
             <div class="mini-cards">
                 <a class="mini-card" href="marketing-automation.html">
                     <h3 id="bc-os1-title">Marketing &amp; Automation</h3>
-                    <p id="bc-os1-text">Sistemas que generan y gestionan leads en piloto automÃ¡tico.</p>
+                    <p id="bc-os1-text">Sistemas que generan y gestionan leads en piloto automático.</p>
                 </a>
                 <a class="mini-card" href="branding-communication.html">
                     <h3 id="bc-os2-title">Branding &amp; Communication</h3>
-                    <p id="bc-os2-text">Identidades profesionales y comunicaciÃ³n coherente.</p>
+                    <p id="bc-os2-text">Identidades profesionales y comunicación coherente.</p>
                 </a>
                 <a class="mini-card" href="data-analitics.html">
                     <h3 id="bc-os3-title">Consulting, Data &amp; Strategy</h3>
-                    <p id="bc-os3-text">DirecciÃ³n estratÃ©gica basada en anÃ¡lisis y mÃ©tricas clave.</p>
+                    <p id="bc-os3-text">Dirección estratégica basada en análisis y métricas clave.</p>
                 </a>
                 <a class="mini-card" href="ia-hub.html">
                     <h3 id="bc-os4-title">AI &amp; Innovation Hub</h3>
-                    <p id="bc-os4-text">IA aplicada para mejorar procesos y escalar tu operaciÃ³n.</p>
+                    <p id="bc-os4-text">IA aplicada para mejorar procesos y escalar tu operación.</p>
                 </a>
             </div>
         </section>
     </div>
 
     <!-- Botones flotantes -->
-    <a href="https://wa.me/541122549351?text=Hello,%20I%20want%20more%20information.%0A%0AHola,%20quiero%20mÃ¡s%20informaciÃ³n." class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." class="whatsapp-button" target="_blank" aria-label="WhatsApp">
         <img src="./img/WPP.PNG" alt="WhatsApp">
     </a>
-    <!-- Email flotante dinÃ¡mico ES/EN -->
-    <a href="mailto:info@trendmakers.agency" class="email-button mailto-dynamic" target="_blank" aria-label="Email">
+    <!-- Email flotante dinámico ES/EN -->
+    <a href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias." class="email-button mailto-dynamic" target="_blank" aria-label="Email">
         <img src="./img/EMAIL.jpg" alt="Email">
     </a>
 
@@ -449,16 +463,16 @@
         es: {
           badge: "Web & E-Commerce Development",
           h1: "Web & E-Commerce Development",
-          h2: "Sitios y tiendas diseÃ±ados para convertir, no solo para estar.",
-          hero: "En TrendMakers desarrollamos pÃ¡ginas web y tiendas online rÃ¡pidas, seguras y optimizadas para que tus visitantes se conviertan en clientes. Combinamos diseÃ±o moderno, experiencia de usuario y rendimiento tÃ©cnico para impulsar tus resultados.",
+          h2: "Sitios y tiendas diseñados para convertir, no solo para estar.",
+          hero: "En TrendMakers desarrollamos páginas web y tiendas online rápidas, seguras y optimizadas para que tus visitantes se conviertan en clientes. Combinamos diseño moderno, experiencia de usuario y rendimiento técnico para impulsar tus resultados.",
           cta: "Agendar una llamada",
 
-          queTitle: "Â¿QuÃ© hacemos en Web & E-Commerce Development?",
-          queText: "Creamos experiencias digitales claras, modernas y diseÃ±adas para generar conversiones. Nuestros sitios y e-commerce integran diseÃ±o, SEO, velocidad, seguridad y analÃ­tica desde el primer dÃ­a.",
+          queTitle: "¿Qué hacemos en Web & E-Commerce Development?",
+          queText: "Creamos experiencias digitales claras, modernas y diseñadas para generar conversiones. Nuestros sitios y e-commerce integran diseño, SEO, velocidad, seguridad y analítica desde el primer día.",
           queList: [
-            "DiseÃ±amos sitios modernos con enfoque UX/UI.",
+            "Diseñamos sitios modernos con enfoque UX/UI.",
             "Desarrollamos tiendas online completas (Shopify / WooCommerce).",
-            "Optimizamos velocidad, seguridad y SEO tÃ©cnico.",
+            "Optimizamos velocidad, seguridad y SEO técnico.",
             "Conectamos tu web con CRM, funnels y automatizaciones."
           ],
 
@@ -466,85 +480,85 @@
           probText: "Si te pasa alguna de estas situaciones, este servicio es para vos:",
           probList: [
             "Tu web es lenta, antigua o no refleja el valor de tu marca.",
-            "Tus visitantes no entienden quÃ© hacÃ©s o cÃ³mo contactarte.",
-            "Tu tienda online no convierte, tiene errores o es difÃ­cil de gestionar.",
-            "No tenÃ©s mÃ©tricas reales sobre el comportamiento de tus usuarios."
+            "Tus visitantes no entienden qué hacés o cómo contactarte.",
+            "Tu tienda online no convierte, tiene errores o es difícil de gestionar.",
+            "No tenés métricas reales sobre el comportamiento de tus usuarios."
           ],
 
-          inclTitle: "Â¿QuÃ© incluye Web & E-Commerce Development?",
-          inclText: "Adaptamos cada proyecto segÃºn tus objetivos, pero siempre trabajamos de forma integral sobre desarrollo, tiendas online, SEO tÃ©cnico, performance y data.",
-          b1Title: "Bloque 1 â€“ Desarrollo Web",
+          inclTitle: "¿Qué incluye Web & E-Commerce Development?",
+          inclText: "Adaptamos cada proyecto según tus objetivos, pero siempre trabajamos de forma integral sobre desarrollo, tiendas online, SEO técnico, performance y data.",
+          b1Title: "Bloque 1 – Desarrollo Web",
           b1List: [
-            "DiseÃ±o moderno, responsive y alineado a tu marca.",
-            "Estructura clara orientada a conversiÃ³n (landings, multi-pÃ¡gina, institucional).",
-            "ImplementaciÃ³n en HTML, WordPress u otros frameworks livianos.",
+            "Diseño moderno, responsive y alineado a tu marca.",
+            "Estructura clara orientada a conversión (landings, multi-página, institucional).",
+            "Implementación en HTML, WordPress u otros frameworks livianos.",
             "Formularios y secciones clave preparados para captar leads."
           ],
-          b2Title: "Bloque 2 â€“ E-Commerce Completo",
+          b2Title: "Bloque 2 – E-Commerce Completo",
           b2List: [
             "Tiendas Shopify o WooCommerce listas para operar.",
-            "IntegraciÃ³n de medios de pago y envÃ­os.",
-            "GestiÃ³n de catÃ¡logo, variantes e inventarios.",
+            "Integración de medios de pago y envíos.",
+            "Gestión de catálogo, variantes e inventarios.",
             "Automatizaciones ligadas a pedidos, carritos y clientes."
           ],
-          b3Title: "Bloque 3 â€“ SEO, Performance & Data",
+          b3Title: "Bloque 3 – SEO, Performance & Data",
           b3List: [
-            "OptimizaciÃ³n de Core Web Vitals y velocidad de carga.",
-            "SEO tÃ©cnico: indexaciÃ³n, sitemaps, metatags y estructura on-page.",
-            "ImplementaciÃ³n de Google Analytics 4, eventos y Search Console.",
-            "IntegraciÃ³n con CRM, funnels y automatizaciones para medir todo."
+            "Optimización de Core Web Vitals y velocidad de carga.",
+            "SEO técnico: indexación, sitemaps, metatags y estructura on-page.",
+            "Implementación de Google Analytics 4, eventos y Search Console.",
+            "Integración con CRM, funnels y automatizaciones para medir todo."
           ],
 
-          howTitle: "Â¿CÃ³mo trabajamos este servicio?",
+          howTitle: "¿Cómo trabajamos este servicio?",
           steps: [
             {
-              title: "Paso 1 â€“ PlanificaciÃ³n y estructura",
+              title: "Paso 1 – Planificación y estructura",
               text: "Definimos objetivos, contenido, secciones, funcionalidades y el rol de la web dentro de tu embudo."
             },
             {
-              title: "Paso 2 â€“ DiseÃ±o y desarrollo",
+              title: "Paso 2 – Diseño y desarrollo",
               text: "Creamos el sitio o la tienda con una experiencia clara, moderna y alineada a tu marca."
             },
             {
-              title: "Paso 3 â€“ OptimizaciÃ³n y mediciÃ³n",
-              text: "Conectamos analÃ­tica, optimizamos velocidad y dejamos todo listo para convertir visitas en clientes."
+              title: "Paso 3 – Optimización y medición",
+              text: "Conectamos analítica, optimizamos velocidad y dejamos todo listo para convertir visitas en clientes."
             }
           ],
 
-          resTitle: "Â¿QuÃ© resultados podÃ©s esperar?",
+          resTitle: "¿Qué resultados podés esperar?",
           resList: [
             "Una web o tienda moderna y profesional.",
-            "Mayor conversiÃ³n de visitantes en clientes o leads.",
-            "Mejor rendimiento tÃ©cnico (velocidad, SEO, estabilidad).",
-            "Visibilidad real de mÃ©tricas y comportamiento del usuario.",
+            "Mayor conversión de visitantes en clientes o leads.",
+            "Mejor rendimiento técnico (velocidad, SEO, estabilidad).",
+            "Visibilidad real de métricas y comportamiento del usuario.",
             "Mayor confianza, claridad y autoridad digital."
           ],
 
-          whyTitle: "Â¿Por quÃ© hacer tu web con TrendMakers?",
+          whyTitle: "¿Por qué hacer tu web con TrendMakers?",
           whyList: [
-            "DiseÃ±amos webs como parte de tu estrategia, no como un elemento aislado.",
-            "Conectamos diseÃ±o, SEO, CRM y automatizaciÃ³n en un mismo sistema.",
-            "Cuidamos rendimiento tÃ©cnico y experiencia de usuario desde el inicio.",
+            "Diseñamos webs como parte de tu estrategia, no como un elemento aislado.",
+            "Conectamos diseño, SEO, CRM y automatización en un mismo sistema.",
+            "Cuidamos rendimiento técnico y experiencia de usuario desde el inicio.",
             "Entregamos sitios preparados para escalar sin rehacer todo desde cero."
           ],
 
-          cta2Title: "Â¿Tu sitio estÃ¡ preparado para convertir visitas en ventas?",
-          cta2Text: "Hablemos del estado actual de tu web y del potencial de optimizaciÃ³n o rediseÃ±o.",
+          cta2Title: "¿Tu sitio está preparado para convertir visitas en ventas?",
+          cta2Text: "Hablemos del estado actual de tu web y del potencial de optimización o rediseño.",
           cta2Btn: "Agendar una llamada",
 
           otherTitle: "Otros servicios",
-          os1: { title: "Marketing & Automation", text: "Sistemas que generan y gestionan leads en piloto automÃ¡tico." },
-          os2: { title: "Branding & Communication", text: "Identidades profesionales y comunicaciÃ³n coherente." },
-          os3: { title: "Consulting, Data & Strategy", text: "DirecciÃ³n estratÃ©gica basada en anÃ¡lisis y mÃ©tricas clave." },
-          os4: { title: "AI & Innovation Hub", text: "IA aplicada para mejorar procesos y escalar tu operaciÃ³n." },
+          os1: { title: "Marketing & Automation", text: "Sistemas que generan y gestionan leads en piloto automático." },
+          os2: { title: "Branding & Communication", text: "Identidades profesionales y comunicación coherente." },
+          os3: { title: "Consulting, Data & Strategy", text: "Dirección estratégica basada en análisis y métricas clave." },
+          os4: { title: "AI & Innovation Hub", text: "IA aplicada para mejorar procesos y escalar tu operación." },
 
-          back: "â† Volver"
+          back: "← Volver"
         },
 
         en: {
           badge: "Web & E-Commerce Development",
           h1: "Web & E-Commerce Development",
-          h2: "Websites and online stores designed to convertâ€”not just exist.",
+          h2: "Websites and online stores designed to convert—not just exist.",
           hero: "At TrendMakers, we build fast, secure and conversion-focused websites and e-commerce stores. We combine modern design, user experience and technical performance to drive real business results.",
           cta: "Book a call",
 
@@ -561,28 +575,28 @@
           probText: "If any of this sounds familiar, this service is for you:",
           probList: [
             "Your website feels outdated, slow or unprofessional.",
-            "Visitors donâ€™t clearly understand what you offer.",
-            "Your online store isnâ€™t converting or has constant issues.",
+            "Visitors don’t clearly understand what you offer.",
+            "Your online store isn’t converting or has constant issues.",
             "You lack meaningful analytics about user behavior."
           ],
 
-          inclTitle: "Whatâ€™s included in Web & E-Commerce Development?",
+          inclTitle: "What’s included in Web & E-Commerce Development?",
           inclText: "We tailor every project to your goals, but we always work across development, online stores, performance and data.",
-          b1Title: "Block 1 â€“ Website Development",
+          b1Title: "Block 1 – Website Development",
           b1List: [
             "Modern, responsive design aligned with your brand.",
             "Conversion-focused structure (landing pages, multi-page, corporate).",
             "Implementation in HTML, WordPress or lightweight frameworks.",
             "Lead-capturing sections and forms built-in."
           ],
-          b2Title: "Block 2 â€“ Full E-Commerce Setup",
+          b2Title: "Block 2 – Full E-Commerce Setup",
           b2List: [
             "Shopify or WooCommerce stores ready to operate.",
             "Payment gateways and shipping integrations.",
             "Catalog, variants and inventory management.",
             "Automations connected to orders, carts and customers."
           ],
-          b3Title: "Block 3 â€“ Technical SEO, Performance & Data",
+          b3Title: "Block 3 – Technical SEO, Performance & Data",
           b3List: [
             "Core Web Vitals and speed optimization.",
             "Technical SEO: indexing, sitemaps, metatags and on-page structure.",
@@ -593,15 +607,15 @@
           howTitle: "How do we deliver this service?",
           steps: [
             {
-              title: "Step 1 â€“ Planning & structure",
+              title: "Step 1 – Planning & structure",
               text: "We define objectives, content, features and the strategic role of your website."
             },
             {
-              title: "Step 2 â€“ Design & development",
+              title: "Step 2 – Design & development",
               text: "We build or redesign your site/store with clarity, speed and a modern aesthetic."
             },
             {
-              title: "Step 3 â€“ Optimization & measurement",
+              title: "Step 3 – Optimization & measurement",
               text: "We integrate analytics, optimize performance and ensure everything is conversion-ready."
             }
           ],
@@ -617,14 +631,14 @@
 
           whyTitle: "Why choose TrendMakers for your website?",
           whyList: [
-            "We design websites as part of a larger strategyâ€”not just a visual piece.",
+            "We design websites as part of a larger strategy—not just a visual piece.",
             "We connect design, SEO, CRM and automation.",
             "Strong technical performance and UX guaranteed.",
             "Sites built to scale, without constant rebuilds."
           ],
 
           cta2Title: "Is your site ready to convert visitors into customers?",
-          cta2Text: "Letâ€™s analyze your current website and identify opportunities for optimization or redesign.",
+          cta2Text: "Let’s analyze your current website and identify opportunities for optimization or redesign.",
           cta2Btn: "Book a call",
 
           otherTitle: "Other services",
@@ -633,7 +647,7 @@
           os3: { title: "Consulting, Data & Strategy", text: "Strategic direction built on real analysis and KPIs." },
           os4: { title: "AI & Innovation Hub", text: "AI-powered solutions to scale your operations." },
 
-          back: "â† Back"
+          back: "← Back"
         }
       };
 
@@ -642,11 +656,11 @@
         if (el && val !== undefined) el.innerHTML = val;
       };
 
-      /* === Config del mail dinÃ¡mico ES/EN para esta pÃ¡gina === */
+      /* === Config del mail dinámico ES/EN para esta página === */
       const EMAIL_TEMPLATES = {
         es: {
-          subject: "Solicitud de informaciÃ³n sobre sus servicios",
-          body: "Hola, Â¿cÃ³mo estÃ¡n? Me gustarÃ­a recibir informaciÃ³n adicional sobre los servicios que ofrecen. Muchas gracias."
+          subject: "Solicitud de información sobre sus servicios",
+          body: "Hola, ¿cómo están? Me gustaría recibir información adicional sobre los servicios que ofrecen. Muchas gracias."
         },
         en: {
           subject: "Project Inquiry",
@@ -741,7 +755,7 @@
           }
         } catch(e){}
 
-        // Texto + mailto segÃºn idioma inicial
+        // Texto + mailto según idioma inicial
         applyBCLang(lang);
         applyMailto(lang);
 
@@ -794,4 +808,7 @@
     </script>
 </body>
 </html>
+
+
+
 
