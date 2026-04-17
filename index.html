@@ -3,45 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GP Consultora Politica | Estrategia, datos y comunicacion politica</title>
-    <meta name="description" content="Consultora politica para campanas, gobiernos y lideres. Estrategia, investigacion, publicidad digital, narrativa y analisis de datos para proyectos politicos.">
-    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-    <link rel="canonical" href="https://gottlerpentke.com/">
+    <title>TrendMakers - Marketing digital, automatizacion y datos para acelerar tu crecimiento</title>
+    <meta name="description" content="Agencia TrendMakers: servicios de marketing digital, automatizacion, SEO, analitica de datos y casos de exito para escalar tu marca con resultados medibles.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://trendmakers.agency/">
     
     <!-- Favicon principal -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     
-    <!-- Favicon adicional para dispositivos mÃ³viles -->
+    <!-- Favicon adicional para dispositivos móviles -->
     <link rel="icon" sizes="192x192" href="favicon-192x192.png">
     <link rel="icon" sizes="32x32" href="favicon-32x32.png">
 
     <!-- Meta etiquetas para Open Graph -->
-    <meta property="og:title" content="GP Consultora Politica | Estrategia, datos y comunicacion politica">
-    <meta property="og:description" content="Estrategia, datos, investigacion y comunicacion politica para campanas, gobiernos y organizaciones.">
-    <meta property="og:image" content="https://gottlerpentke.com/img/logo1.png">
-    <meta property="og:url" content="https://gottlerpentke.com/">
+    <meta property="og:title" content="TrendMakers - Soluciones de Marketing, Datos y Automatizacion">
+    <meta property="og:description" content="Creamos estrategias digitales personalizadas, impulsadas por datos y automatizacion, para acelerar el crecimiento de tu marca.">
+    <meta property="og:image" content="https://trendmakers.agency/logo1.png">
+    <meta property="og:url" content="https://trendmakers.agency/">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Gottler Pentke">
-    <meta property="og:locale" content="es_AR">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GP Consultora Politica">
-    <meta name="twitter:description" content="Consultoria politica, analisis de datos, comunicacion estrategica y trabajo territorial para potenciar tu proyecto politico.">
-    <meta name="twitter:image" content="https://gottlerpentke.com/img/logo1.png">
-
+    <meta name="twitter:title" content="TrendMakers - Marketing, Datos & Automatizacion">
+    <meta name="twitter:description" content="Servicios de marketing digital, casos de exito y un equipo listo para llevar tu marca al proximo nivel.">
+    <meta name="twitter:image" content="https://trendmakers.agency/logo1.png">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "GP Consultora Politica",
-      "url": "https://gottlerpentke.com/",
-      "logo": "https://gottlerpentke.com/img/logo1.png",
+      "name": "TrendMakers",
+      "url": "https://trendmakers.agency/",
+      "logo": "https://trendmakers.agency/logo1.png",
       "sameAs": [
         "https://www.linkedin.com/company/trendmakersagency",
         "https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu"
       ],
       "contactPoint": [{
         "@type": "ContactPoint",
-        "email": "info@gp.com",
+        "email": "info@trendmakers.agency",
         "contactType": "sales",
         "availableLanguage": ["es", "en"]
       }]
@@ -55,8 +52,8 @@
         {
           "@type": "ListItem",
           "position": 1,
-      "name": "GP Consultora Politica",
-          "item": "https://gottlerpentke.com/"
+          "name": "Inicio",
+          "item": "https://trendmakers.agency/"
         }
       ]
     }
@@ -80,7 +77,7 @@
             font-weight: bold !important;
         }
 
-        /* Por quÃ© elegirnos */
+        /* Por qué elegirnos */
         .why-subtitle {
             font-size: 1.1rem;
             color: #e8defa;
@@ -161,75 +158,89 @@
                 border: none;
                 padding: 8px 0;
             }
-            .why-card h3 {
-                text-align: center;
-                font-size: 1.05rem;
+                .why-card h3 {
+                    text-align: center;
+                    font-size: 1.05rem;
+                }
             }
+            /* CTA del hero de blog mejorado */
+            #blog .blog-header .button {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                padding: 12px 24px;
+                margin-top: 18px;
+                border-radius: 14px;
+                background: linear-gradient(120deg, #8c3dff 0%, #6a0dad 45%, #0bd3ff 100%);
+                color: #fff;
+                font-weight: 800;
+                font-size: 0.95rem;
+                text-decoration: none;
+                box-shadow: 0 16px 38px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255,255,255,0.08);
+                transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+            }
+            #blog .blog-header .button::after {
+                content: "";
+                position: absolute;
+                inset: 2px;
+                border-radius: 12px;
+                background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.18), transparent 55%);
+                pointer-events: none;
+                opacity: 0.9;
+            }
+            #blog .blog-header .button:hover {
+                transform: translateY(-3px) scale(1.01);
+                box-shadow: 0 22px 46px rgba(0,0,0,0.45), 0 0 0 1px rgba(123,191,255,0.45);
+                filter: saturate(1.05);
+            }
+            #blog .blog-header .button:active {
+                transform: translateY(-1px);
+                box-shadow: 0 12px 28px rgba(0,0,0,0.4);
         }
 
-        /* CTA del hero de blog - oval transparente */
-        #blog .blog-header .button {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px 24px;
-            margin-top: 18px;
-            border-radius: 999px;
-            background: transparent;
-            color: #fff;
-            font-weight: 800;
-            font-size: 0.95rem;
-            text-decoration: none;
-            border: 2px solid rgba(255,255,255,0.9);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255,255,255,0.12);
-            backdrop-filter: blur(6px);
-            transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease, border-color 160ms ease, background-color 160ms ease;
-        }
-        #blog .blog-header .button::after {
-            display: none;
-        }
-        #blog .blog-header .button:hover {
-            transform: translateY(-3px) scale(1.01);
-            background: rgba(255,255,255,0.08);
-            border-color: rgba(255,255,255,0.95);
-            box-shadow: 0 18px 38px rgba(0,0,0,0.45), 0 0 0 1px rgba(123,191,255,0.4);
-            filter: saturate(1.05);
-        }
-        #blog .blog-header .button:active {
-            transform: translateY(-1px);
-            box-shadow: 0 10px 24px rgba(0,0,0,0.4);
-        }
+            /* CTA del hero de blog - oval transparente */
+            #blog .blog-header .button {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                padding: 12px 24px;
+                margin-top: 18px;
+                border-radius: 999px;
+                background: transparent;
+                color: #fff;
+                font-weight: 800;
+                font-size: 0.95rem;
+                text-decoration: none;
+                border: 2px solid rgba(255,255,255,0.9);
+                box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255,255,255,0.12);
+                backdrop-filter: blur(6px);
+                transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease, border-color 160ms ease, background-color 160ms ease;
+            }
+            #blog .blog-header .button::after {
+                display: none;
+            }
+            #blog .blog-header .button:hover {
+                transform: translateY(-3px) scale(1.01);
+                background: rgba(255,255,255,0.08);
+                border-color: rgba(255,255,255,0.95);
+                box-shadow: 0 18px 38px rgba(0,0,0,0.45), 0 0 0 1px rgba(123,191,255,0.4);
+                filter: saturate(1.05);
+            }
+            #blog .blog-header .button:active {
+                transform: translateY(-1px);
+                box-shadow: 0 10px 24px rgba(0,0,0,0.4);
+            }
 
         /* Hero Bienvenidos redesign */
         #inicio .overlay {
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: auto;
-            height: auto;
-            width: 100%;
-            box-sizing: border-box;
-            padding: clamp(18px, 5vw, 40px) clamp(16px, 5vw, 32px);
-        }
-        #inicio .overlay > .hero-shell {
-            width: 100%;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 6px;
-            box-sizing: border-box;
-        }
-        #inicio .overlay > .hero-shell > .hero-cards {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            box-sizing: border-box;
-        }
-        #inicio .overlay > .hero-shell > .hero-cards > .hero-card {
-            width: 100%;
-            box-sizing: border-box;
+            padding: clamp(18px, 5vw, 40px);
         }
         .hero-grid {
             display: grid;
@@ -261,23 +272,70 @@
             gap: 8px;
             padding: 14px 24px;
             border-radius: 999px;
-            background: linear-gradient(120deg, #00d1ff 0%, #7b2ff7 100%);
-            color: #0b0620;
+            border: 1px solid transparent;
+            background:
+              linear-gradient(120deg, rgba(255,255,255,0.04), rgba(255,255,255,0.04)) padding-box,
+              linear-gradient(120deg, rgba(0,209,255,0.55), rgba(123,47,247,0.65)) border-box;
+            color: #fff;
             font-weight: 800;
             text-decoration: none;
-            box-shadow: 0 16px 34px rgba(0,0,0,0.35);
-            transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.16), 0 0 16px rgba(0,209,255,0.08);
+            backdrop-filter: blur(10px) saturate(140%);
+            -webkit-backdrop-filter: blur(10px) saturate(140%);
+            transition: transform 160ms ease, box-shadow 180ms ease, filter 160ms ease, background 180ms ease;
         }
         .hero-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 22px 44px rgba(0,0,0,0.45);
-            filter: saturate(1.05);
+            transform: translateY(-2px) scale(1.01);
+            background:
+              linear-gradient(120deg, rgba(0,209,255,0.24), rgba(123,47,247,0.26)) padding-box,
+              linear-gradient(120deg, rgba(0,209,255,0.78), rgba(123,47,247,0.88)) border-box;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.28), 0 0 24px rgba(123,47,247,0.22);
+            filter: saturate(1.1);
         }
         .hero-visual {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        .tm-scroll-indicator {
+            position: relative;
+            margin: 23px auto 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            z-index: 5;
+            cursor: pointer;
+            pointer-events: auto;
+            background: transparent;
+            border: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        .tm-scroll-indicator span {
+            width: 22px;
+            height: 22px;
+            border-right: 3px solid rgba(56, 189, 248, 0.85);
+            border-bottom: 3px solid rgba(168, 85, 247, 0.85);
+            transform: rotate(45deg);
+            animation: tmScrollPulse 2.6s forwards;
+            animation-iteration-count: 1;
+            opacity: 0;
+        }
+        .tm-scroll-indicator span:nth-child(1) { animation-delay: 0s; }
+        .tm-scroll-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .tm-scroll-indicator span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes tmScrollPulse {
+            0% {
+                opacity: 0;
+                transform: rotate(45deg) translate(0, 0);
+            }
+            40% { opacity: 1; }
+            100% {
+                opacity: 1;
+                transform: rotate(45deg) translate(0, 6px);
+            }
         }
         .hero-brain {
             width: 100%;
@@ -294,61 +352,29 @@
             to { opacity: 1; transform: translateY(0) scale(1); }
         }
         @media (max-width: 768px) {
-            #inicio .overlay {
-                justify-content: center;
-                min-height: auto;
-                height: auto;
-                width: 100%;
-                padding: 24px 16px 28px;
-                box-sizing: border-box;
-            }
-            #inicio .overlay > .hero-shell {
-                width: 100%;
-                max-width: 540px;
-                margin-left: auto;
-                margin-right: auto;
-                padding: 0;
-            }
-            #inicio .overlay > .hero-shell > .hero-cards {
-                width: 100%;
-                max-width: 540px;
-                margin-left: auto;
-                margin-right: auto;
-                grid-template-columns: 1fr;
-                gap: 14px;
-            }
+            #inicio .overlay { padding: 20px 14px; }
             .hero-copy { text-align: left; }
             .hero-copy h2 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
+            .tm-scroll-indicator { margin-top: 17px; }
+            .tm-scroll-indicator span { width: 16px; height: 16px; border-width: 2px; }
+            .tm-scroll-indicator { display: none; }
         }
-
         /* Servicios premium */
-        #servicios {
-            background: #0f1115 !important;
-        }
-        #servicios .video-container {
-            position: relative;
-            background: #0f1115;
-        }
-        #servicios .overlay {
-            background: #0f1115;
-            padding: clamp(60px, 7vw, 100px) clamp(16px, 5vw, 40px) clamp(80px, 8vw, 120px);
-        }
-         #servicios .overlay::before { display: none; content: none; }
         #servicios .service-details {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 16px;
             max-width: 1240px;
             margin: 28px auto 0;
             padding: 6px;
         }
-         #servicios .service-card {
+        #servicios .service-card {
             position: relative;
             background:
-                radial-gradient(120% 120% at 15% 15%, rgba(255, 255, 255, 0.06), transparent 42%),
-                radial-gradient(120% 120% at 85% 10%, rgba(255, 255, 255, 0.05), transparent 45%),
-                linear-gradient(150deg, rgba(15,17,23,0.96), rgba(9, 10, 14, 0.94));
-            border: 1px solid rgba(255, 255, 255, 0.08);
+                radial-gradient(120% 120% at 15% 15%, rgba(123, 47, 247, 0.22), transparent 42%),
+                radial-gradient(120% 120% at 85% 10%, rgba(0, 195, 255, 0.16), transparent 45%),
+                linear-gradient(150deg, rgba(12,14,36,0.95), rgba(25,18,52,0.94));
+            border: 1px solid rgba(255,255,255,0.16);
             border-radius: 20px;
             padding: 26px 20px 22px;
             text-decoration: none;
@@ -369,13 +395,13 @@
             opacity: 0.7;
             pointer-events: none;
         }
-         #servicios .service-card::after {
+        #servicios .service-card::after {
             content: "";
             position: absolute;
             inset: -35%;
             background:
-                radial-gradient(80% 80% at 50% 50%, rgba(255, 255, 255, 0.05), transparent 55%),
-                radial-gradient(70% 70% at 60% 40%, rgba(255, 255, 255, 0.04), transparent 60%);
+                radial-gradient(80% 80% at 50% 50%, rgba(123, 47, 247, 0.28), transparent 55%),
+                radial-gradient(70% 70% at 60% 40%, rgba(0, 195, 255, 0.18), transparent 60%);
             opacity: 0.55;
             filter: blur(28px);
             transition: opacity 200ms ease, transform 200ms ease;
@@ -385,7 +411,7 @@
         #servicios .service-card:hover {
             transform: translateY(-8px) scale(1.015);
             box-shadow: 0 32px 70px rgba(0,0,0,0.6);
-            border-color: rgba(1, 12, 22, 0.6);
+            border-color: rgba(123,191,255,0.6);
         }
         #servicios .service-card:hover::after {
             opacity: 0.9;
@@ -414,14 +440,14 @@
             line-height: 1.6;
             font-size: 0.95rem;
             margin: 0 auto;
-            max-width: 260px;
+            max-width: 240px;
         }
         /* Halo suave detras de las cards para destacar la seccion */
-         #servicios .overlay {
+        #servicios .overlay {
             position: relative;
             overflow: visible;
         }
-         #servicios .overlay::before {
+        #servicios .overlay::before {
             content: "";
             position: absolute;
             left: 50%;
@@ -430,9 +456,9 @@
             width: min(1180px, 94vw);
             height: 520px;
             background:
-                radial-gradient(60% 55% at 20% 30%, rgba(255, 255, 255, 0.06), transparent 60%),
-                radial-gradient(58% 60% at 80% 25%, rgba(255, 255, 255, 0.05), transparent 62%),
-                radial-gradient(80% 60% at 50% 72%, rgba(255, 255, 255, 0.08), transparent 74%);
+                radial-gradient(60% 55% at 20% 30%, rgba(123, 47, 247, 0.22), transparent 60%),
+                radial-gradient(58% 60% at 80% 25%, rgba(0, 195, 255, 0.18), transparent 62%),
+                radial-gradient(80% 60% at 50% 72%, rgba(255, 255, 255, 0.07), transparent 74%);
             filter: blur(42px);
             opacity: 0.9;
             pointer-events: none;
@@ -468,9 +494,8 @@
             border-color: rgba(123,191,255,0.85);
             box-shadow: 0 18px 38px rgba(0,0,0,0.45);
         }
-        /* Oculta la lÃ­nea fina por defecto en el tÃ­tulo de servicios */
+        /* Oculta la línea fina por defecto en el título de servicios */
         #servicios .section-title::after { display: none; content: none; }
-
         @media (max-width: 768px) {
             #servicios .overlay::before {
                 top: 120px;
@@ -506,13 +531,14 @@
     </div>
     <div class="content">
         <nav>
-            <a class="tm-header-badge" href="#inicio" aria-label="GP home" id="tm-badge">
-                <img src="./img/GOPE-HEADER.PNG" alt="GP Consultora PolÃ­tica">
+            <a class="tm-header-badge" href="#inicio" aria-label="TrendMakers home" id="tm-badge">
+                <img src="./img/TrendMakers-Header.png" alt="TrendMakers">
             </a>
-            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos rÃ¡pidos">
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-                <a href="https://www.whatsapp.com/" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos rápidos">
+                <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                <a class="mailto-dynamic" href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias." target="_blank" aria-label="Email">Email</a>
+                <a href="Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20más%20información." target="_blank" aria-label="WhatsApp">WhatsApp</a>
             </div>
             <div class="hamburger" onclick="toggleMenu()">
                 <div></div>
@@ -521,15 +547,24 @@
             </div>
             <ul class="desktop-menu top-agency-menu">
                 <li><a href="#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
-                <li><a href="#servicios" id="nav-servicios" class="menu-item">Servicios</a></li>
-                <li><a href="#blog" id="nav-newsletter" class="menu-item">Newsletter</a></li>
-<li><a href="#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
+                <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item">Servicios</a></li>
+                <li class="dropdown about-dropdown">
+                    <button id="nav-acerca" class="menu-item dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Nosotros <span class="caret">v</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#equipo" id="nav-equipo" class="menu-item">Equipo</a></li>
+                        <li><a href="#acerca" id="nav-nosotros" class="menu-item">Nosotros</a></li>
+                        <li><a href="blog/index.html" id="nav-blog" class="menu-item">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="#casos-exito" id="nav-casos-exito" class="menu-item">Casos de éxito</a></li>
+                <li><a href="#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
             </ul>
             <div class="nav-lang">
               <div class="language-selector" aria-label="Selector de idioma">
                 <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
-                  <span class="lang-label">ES</span>
-                  <span class="lang-caret">v</span>
+                  <img src="./img/IDIOMA.PNG" alt="Idioma">
                 </button>
                 <div class="lang-menu" role="menu" aria-label="Idiomas">
                   <button class="lang-option" role="menuitem" data-lang="es">Espa&ntilde;ol</button>
@@ -539,12 +574,15 @@
             </div>
             <ul class="mobile-menu">
                 <li><a href="#inicio" id="nav-inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
-                <li><a href="#servicios" id="nav-servicios" class="menu-item" onclick="closeMenu()">Servicios</a></li>
-                <li><a href="#blog" id="nav-newsletter-mobile" class="menu-item" onclick="closeMenu()">Newsletter</a></li>
-<li><a href="#contact-form" id="nav-contacto-mobile" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
+                <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item">Servicios</a></li>
+                <li class="mobile-heading">Nosotros</li>
+                <li><a href="#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
+                <li><a href="#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
+                <li><a href="blog/index.html" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
+                <li><a href="#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de éxito</a></li>
+                <li><a href="#contact-form" id="nav-contacto" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
             </ul>
         </nav>
-
         <header>
             <div class="video-container">
                 <video autoplay muted loop playsinline id="background-video">
@@ -553,19 +591,25 @@
                 </video>
                 <div class="overlay">
                     <div class="title-container">
+                        <img src="./img/logo1.png" alt="TrendMakers Logo" class="logo animate__animated">
                         <div class="text-container">
-                            <h1 id="title" class="premium-fade-up">GP Consultora Pol&iacute;tica</h1>
-                            <p id="subtitle" class="hero-subtitle premium-fade-up" style="margin-top: 2px;">Transformando objetivos pol&iacute;ticos en realidad</p>
-                            <a href="#contact-form" class="button hero-contact-btn">Contacto</a>
-                            <a class="scroll-indicator" href="#inicio" aria-label="Ir a la primera secci&oacute;n">
-                                <span class="scroll-indicator__arrow">&darr;</span>
+                            <h1 id="title" class="animate__animated">TrendMakers</h1>
+                            <p id="subtitle" class="animate__animated">Your growth Partner</p>
+                            <a id="hero-contact-cta" class="hero-cta hero-contact-cta animate__animated" href="#contact-form">Contactate ahora</a>
+                            <a class="tm-scroll-indicator" href="#inicio" role="button" aria-label="Desplazar hacia contenido">
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </a>
+
                         </div>
+
+                        
                     </div>
+                    
                 </div>
             </div>
         </header>
-
         <section id="inicio" class="section">
             <div class="video-container">
                 <video autoplay muted loop playsinline id="background-video2">
@@ -573,159 +617,64 @@
                     Your browser does not support the video tag.
                 </video>
                 <div class="overlay">
-                    <div class="hero-shell">
-
-                        <div class="hero-cards">
-                            <div class="hero-card animate__animated animate__fadeInUp">
-                                <h3>Nuestra misi&oacute;n</h3>
-                                <img class="hero-card-logo" src="./img/MISION.png" alt="Nuestra misi&oacute;n">
-                                <p>Impulsamos proyectos pol&iacute;ticos con datos, estrategia y gesti&oacute;n territorial para maximizar impacto real.</p>
-                            </div>
-                            <div class="hero-card animate__animated animate__fadeInUp" style="animation-delay:0.08s;">
-                                <h3>C&oacute;mo lo hacemos</h3>
-                                <img class="hero-card-logo" src="./img/COMOLOHACEN.png" alt="C&oacute;mo lo hacemos">
-                                <p>Combinamos an&aacute;lisis, comunicaci&oacute;n y planificaci&oacute;n operativa para construir soluciones efectivas y medibles.</p>
-                            </div>
-                            <div class="hero-card hero-flags animate__animated animate__fadeInUp" style="animation-delay:0.12s;">
-                                <h3>Nuestro equipo tiene experiencia en los siguientes mercados:</h3>
-                                <div class="hero-flags-grid">
-                                    <div class="flag-slot"><img src="./img/BANDERA1.webp" alt="Bandera 1"></div>
-                                    <div class="flag-slot"><img src="./img/BANDERA2.webp" alt="Bandera 2"></div>
-                                    <div class="flag-slot"><img src="./img/BANDERA3.png" alt="Bandera 3"></div>
-                                    <div class="flag-slot"><img src="./img/BANDERA4.png" alt="Bandera 4"></div>
-                                    <div class="flag-slot"><img src="./img/BANDERA5.png" alt="Bandera 5"></div>
-                                    <div class="flag-slot"><img src="./img/BANDERA6.png" alt="Bandera 6"></div>
-                                </div>
-                            </div>
+                        <div class="hero-grid">
+                        <div class="hero-copy">
+                            <h2 id="intro-title" class="section-title animate__animated">Estrategia, datos y automatizaci&oacute;n al servicio del crecimiento</h2>
+                            <p class="intro-tagline animate__animated">Impulsamos el crecimiento de tu negocio con marketing, datos, automatizaci&oacute;n e IA.</p>
+                            <p id="intro-text" class="intro-subtitle animate__animated">Dise&ntilde;amos y ejecutamos sistemas digitales basados en informaci&oacute;n real para atraer mejores clientes y escalar resultados de forma sostenible.</p>
+                            <a href="https://calendly.com/mgottler1999/30min" class="hero-cta animate__animated" id="schedule-call" target="_blank">Agenda una Llamada</a>
+                            <p id="about-us-text" class="sr-only" aria-hidden="true"></p>
                         </div>
-                    </div>
+                        <div class="hero-visual">
+                            <img src="./img/BRAIN-BIENVENIDOS.png" alt="Inteligencia artificial aplicada al crecimiento" class="hero-brain" loading="lazy">
+                        </div>
                 </div>
             </div>
         </section>
-
-        <section class="cta-carousel" aria-labelledby="cta-carousel-heading">
-            <div class="cta-carousel__inner">
-                <h3 id="cta-carousel-heading" class="sr-only">Frases sobre estrategia y pol&iacute;tica</h3>
-                <div class="cta-carousel__viewport">
-                    <article class="cta-slide is-active" data-slide="0">
-                        <blockquote class="cta-quote">
-                            <p>&quot;La pol&iacute;tica es una competencia de organizaci&oacute;n, no de buenas intenciones.&quot;</p>
-                        </blockquote>
-                        <p class="cta-author">Napoleon Bonaparte <span class="cta-author-role">Emperador y estratega militar</span></p>
-                    </article>
-
-                    <article class="cta-slide" data-slide="1" aria-hidden="true">
-                        <blockquote class="cta-quote">
-                            <p>&quot;El liderazgo efectivo es aquel que convierte estrategia en victoria.&quot;</p>
-                        </blockquote>
-                        <p class="cta-author">Winston Churchill <span class="cta-author-role">Primer ministro del Reino Unido</span></p>
-                    </article>
-
-                    <article class="cta-slide" data-slide="2" aria-hidden="true">
-                        <blockquote class="cta-quote">
-                            <p>&quot;La victoria pertenece a quienes se preparan mejor, no a quienes improvisan.&quot;</p>
-                        </blockquote>
-                        <p class="cta-author">Sun Tzu <span class="cta-author-role">Estratega militar</span></p>
-                    </article>
-
-                    <article class="cta-slide" data-slide="3" aria-hidden="true">
-                        <blockquote class="cta-quote">
-                            <p>&quot;En pol&iacute;tica, ganar no es suficiente: hay que ganar con control del escenario.&quot;</p>
-                        </blockquote>
-                        <p class="cta-author">Henry Kissinger <span class="cta-author-role">Estratega pol&iacute;tico</span></p>
-                    </article>
-
-                    <article class="cta-slide" data-slide="4" aria-hidden="true">
-                        <blockquote class="cta-quote">
-                            <p>&quot;Toda victoria pol&iacute;tica es una combinaci&oacute;n de datos, narrativa y disciplina.&quot;</p>
-                        </blockquote>
-                        <p class="cta-author">Barack Obama <span class="cta-author-role">Presidente de EE. UU.</span></p>
-                    </article>
-
-                    <article class="cta-slide" data-slide="5" aria-hidden="true">
-                        <blockquote class="cta-quote">
-                            <p>&quot;La estrategia no garantiza la victoria, pero sin estrategia la derrota es segura.&quot;</p>
-                        </blockquote>
-                        <p class="cta-author">Carl von Clausewitz <span class="cta-author-role">Te&oacute;rico de la estrategia</span></p>
-                    </article>
-
-                    <article class="cta-slide" data-slide="6" aria-hidden="true">
-                        <blockquote class="cta-quote">
-                            <p>&quot;Quien domina el mensaje, domina la contienda.&quot;</p>
-                        </blockquote>
-                        <p class="cta-author">Walter Lippmann <span class="cta-author-role">Analista pol&iacute;tico</span></p>
-                    </article>
-
-                    <article class="cta-slide" data-slide="7" aria-hidden="true">
-                        <blockquote class="cta-quote">
-                            <p>&quot;Las elecciones no se deciden el d&iacute;a del voto, sino en los meses previos.&quot;</p>
-                        </blockquote>
-                        <p class="cta-author">James Carville <span class="cta-author-role">Estratega electoral</span></p>
-                    </article>
-
-                    <article class="cta-slide" data-slide="8" aria-hidden="true">
-                        <blockquote class="cta-quote">
-                            <p>&quot;No gana quien habla m&aacute;s fuerte, sino quien entiende mejor al electorado.&quot;</p>
-                        </blockquote>
-                        <p class="cta-author">David Axelrod <span class="cta-author-role">Consultor pol&iacute;tico</span></p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
         <div class="separator"></div>
-
         <section id="servicios" class="section">
             <div class="video-container">
                 <video autoplay muted loop playsinline id="background-video5">
-                    <source src="./video/backgroundvid2.mp4" type="video/mp4">
+                    <source src="./video/backgroundvid5.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="overlay">
-                    <h2 id="services-title" class="section-title animate__animated">Servicios</h2>
-                    <p id="services-text" class="animate__animated">
-                        Nos especializamos en acompa&ntilde;ar candidatos, partidos y gobiernos con servicios integrales para llegar a m&aacute;s personas y construir proyectos pol&iacute;ticos s&oacute;lidos.
-                    </p>
-                    <div class="service-gallery">
-                        <figure class="service-item animate__animated">
-                            <a href="digital-advertisement.html" aria-label="Ver Asesoramiento en Marketing">
-                                <img src="./img/Asesoramiento en Marketing.jpg" alt="Asesoramiento en Marketing">
-                                <figcaption>
-                                    <h3>Asesoramiento en Marketing</h3>
-                                    <p>Planificamos y ejecutamos campa&ntilde;as digitales, gestionamos tu posici&oacute;n comercial para potenciar tu presencia en redes.</p>
-                                    <span class="service-cta">Explorar servicio</span>
-                                </figcaption>
-                            </a>
-                        </figure>
-
-                        <figure class="service-item animate__animated">
-                            <a href="consultoria-estrategica.html" aria-label="Ver Consultor&iacute;a Estrat&eacute;gica">
-                                <img src="./img/Asesoramiento Estrategico.jpg" alt="Consultor&iacute;a Estrat&eacute;gica">
-                                <figcaption>
-                                    <h3>Consultor&iacute;a Estrat&eacute;gica</h3>
-                                    <p>Definimos la estrategia integral de tu Proyecto, a trav&eacute;s de una narrativa clara y con procesos definidos.</p>
-                                    <span class="service-cta">Explorar servicio</span>
-                                </figcaption>
-                            </a>
-                        </figure>
-
-                        <figure class="service-item animate__animated">
-                            <a href="investigacion-opinion-publica.html" aria-label="Ver Investigaci&oacute;n de opini&oacute;n p&uacute;blica">
-                                <img src="./img/Asesoramiento Politico.jpg" alt="Investigaci&oacute;n de opini&oacute;n p&uacute;blica">
-                                <figcaption>
-                                    <h3>Investigaci&oacute;n de opini&oacute;n p&uacute;blica</h3>
-                                    <p>Convertimos datos electorales y de opini&oacute;n p&uacute;blica en insights accionables para decidir con claridad y anticipar escenarios.</p>
-                                    <span class="service-cta">Explorar servicio</span>
-                                </figcaption>
-                            </a>
-                        </figure>
+                    <h2 id="services-title" class="section-title animate__animated">Soluciones dise&ntilde;adas para escalar negocios</h2>
+                    <p id="services-text" class="animate__animated">Integramos estrategia, datos, tecnolog&iacute;a y ejecuci&oacute;n en un sistema dise&ntilde;ado para generar crecimiento sostenible.</p>
+                    <div class="services-cta-wrap">
+                        <a class="services-cta" id="services-portfolio-cta" href="nuestros-servicios.html">PORTFOLIO DE SOLUCIONES</a>
+                    </div>
+                                        <div class="service-details">
+                        <a class="service-card animate__animated" href="marketing-automation.html" data-service-id="marketing-automation">
+                            <img src="./img/MATION.png" alt="Marketing &amp; Automation">
+                            <h3>Marketing &amp; Automation</h3>
+                            <p>Automatizamos tus procesos y funnels para generar m&aacute;s leads y conversiones con menos esfuerzo.</p>
+                        </a>
+                        <a class="service-card animate__animated" href="branding-communication.html" data-service-id="branding-communication">
+                            <img src="./img/BRANDING.png" alt="Branding &amp; Communication">
+                            <h3>Branding &amp; Communication</h3>
+                            <p>Creamos marcas coherentes y comunicaci&oacute;n clara que conecta con tu audiencia.</p>
+                        </a>
+                        <a class="service-card animate__animated" href="web-ecommerce.html" data-service-id="web-ecommerce">
+                            <img src="./img/WEB-ECOMM.png" alt="Web &amp; E-Commerce Development">
+                            <h3>Web &amp; E-Commerce Development</h3>
+                            <p>Desarrollamos sitios y tiendas r&aacute;pidas, seguras y optimizadas para convertir.</p>
+                        </a>
+                        <a class="service-card animate__animated" href="data-analitics.html" data-service-id="consulting-data-strategy">
+                            <img src="./img/DATA-STRAT.png" alt="Consulting, Data &amp; Strategy">
+                            <h3>Consulting, Data &amp; Strategy</h3>
+                            <p>Definimos tu rumbo con an&aacute;lisis, datos y estrategia para escalar tu negocio.</p>
+                        </a>
+                        <a class="service-card animate__animated" href="ia-hub.html" data-service-id="ai-innovation">
+                            <img src="./img/logo1.png" alt="AI &amp; Innovation Hub">
+                            <h3>AI &amp; Innovation Hub</h3>
+                            <p>Implementamos IA y automatizaciones que mejoran procesos y crean ventaja competitiva.</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-
         <div class="separator"></div>
-
         <section id="problema" class="section">
             <div class="video-container">
                 <video autoplay muted loop playsinline id="background-video3">
@@ -735,278 +684,279 @@
                 <div class="overlay">
                     <div class="closing-cta animate__animated">
                         <div class="closing-cta__content">
-                            <h2 class="closing-cta__title" id="closing-cta-title">
-                                &iquest;Listo para llevar tu proyecto pol&iacute;tico al siguiente nivel?
-                            </h2>
-                            <p id="contact-soon" class="closing-cta__subtitle">
-                                Contanos tu proyecto y en poco tiempo un especialista de GP Consultora Pol&iacute;tica se pondr&aacute; en contacto con vos para definir los pr&oacute;ximos pasos.
-                            </p>
+                            <h2 class="closing-cta__title" id="closing-cta-title">No trabajamos con intuici&oacute;n. Trabajamos con sistemas.</h2>
+                            <p id="contact-soon" class="closing-cta__subtitle">Si tu negocio ya factura y necesit&aacute;s escalar con orden, datos y tecnolog&iacute;a, este es el pr&oacute;ximo paso.</p>
                             <a role="button"
-                               href="mailto:info@gp.com?subject=Consulta%20sobre%20proyecto%20pol%C3%ADtico&body=Hola,%20me%20gustar%C3%ADa%20contarles%20sobre%20mi%20proyecto%20pol%C3%ADtico%20y%20ver%20c%C3%B3mo%20podemos%20trabajar%20juntos."
+                               href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias."
                                class="button closing-cta__btn mailto-dynamic"
                                id="show-popup">
-                                Contanos tu proyecto
+                                Solicitar diagn&oacute;stico
                             </a>
                         </div>
                     </div>
                 </div>
         </section>
-
         <div class="separator"></div>
+        <section id="equipo" class="section">
+            <div class="video-container">
+                <video autoplay muted loop id="background-video6">
+                    <source src="./video/backgroundvid4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="closing-cta__content">
+                        <h2 id="team-title" class="section-title animate__animated">Talento multidisciplinario. Ejecuci&oacute;n integrada.</h2>
+                        <p id="team-subtitle" class="closing-cta__subtitle animate__animated">Un equipo especializado que integra estrategia, datos, creatividad y tecnolog&iacute;a para escalar negocios con estructura y precisi&oacute;n.</p>
 
+                        <div class="team-details">
+                            <div class="team-card animate__animated">
+                                <h3>Estrategia &amp; Crecimiento</h3>
+                                <p>Consultores en marketing y performance que dise&ntilde;an roadmaps claros y objetivos de negocio medibles.</p>
+                            </div>
+                            <div class="team-card animate__animated">
+                                <h3>Dise&ntilde;o, Experiencia Digital &amp; Desarrollo Web</h3>
+                                <p>Dise&ntilde;adores UX/UI, visuales, multimedia y desarrolladores web enfocados en conversi&oacute;n, usabilidad, rendimiento y consistencia de marca.</p>
+                            </div>
+                            <div class="team-card animate__animated">
+                                <h3>Datos &amp; Business Intelligence</h3>
+                                <p>Analistas de datos y especialistas en BI que transforman m&eacute;tricas en informaci&oacute;n accionable para la toma de decisiones.</p>
+                            </div>
+                            <div class="team-card animate__animated">
+                                <h3>Activaci&oacute;n &amp; Performance</h3>
+                                <p>Especialistas en campa&ntilde;as digitales, SEO y contenidos orientados a resultados sostenibles y escalables.</p>
+                            </div>
+                        </div>
+
+                        <p id="team-cta-text" class="closing-cta__subtitle animate__animated">Conoc&eacute; c&oacute;mo trabaja nuestro equipo</p>
+                        <a id="team-page-button" class="button closing-cta__btn team-page-btn" href="equipo.html">Conoce nuestro equipo &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="casos-exito" class="section">
+            <div class="video-container">
+                <video autoplay muted loop playsinline id="background-video2">
+                    <source src="./video/backgroundvid2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <div class="intro">
+                        <h2 id="success-title" class="section-title animate__animated">Experiencia aplicada en negocios reales</h2>
+                        <p id="success-intro" class="animate__animated intro-subtitle">Ejecuci&oacute;n real, resultados medibles.</p>
+                        <p id="success-case1" class="animate__animated success-hidden-copy">
+                            Resultados concretos, impacto real.
+                            Con Prontoled, aplicamos una estrategia digital que generó un crecimiento directo en ventas. El enfoque estuvo en entender su mercado, optimizar su presencia online y automatizar procesos clave.
+                        </p>
+                        <p id="success-case2" class="animate__animated success-hidden-copy">
+                            +37% de facturación en Letratec.
+                            Creamos su página web, gestionamos sus leads y diseñamos una estrategia digital que convirtió visitas en ventas. Resultado: crecimiento real, medible y sostenido.
+                        </p>
+                        <p id="success-case3" class="animate__animated success-hidden-copy">
+                            GP Consultora potenció su generación de demanda con campañas de performance y automatizaciones de nurturing. En solo 60 días duplicamos la tasa de conversión en leads calificados.
+                        </p>
+                        <img src="./img/PRONTO.png" alt="PRONTO Logo" class="logo">
+                        <img src="./img/LETRA.png" alt="LETRA Logo" class="logo">
+                        <img src="./img/VCG IMAGEN.png" alt="VcG Imagen Logo" class="logo">
+
+                        <!-- Tarjetas de Casos de éxito -->
+                        <div class="flip-grid">
+                            <!-- Card Prontoled -->
+                            <a class="flip-card animate__animated animate__fadeInUp" style="animation-delay: 0.15s;" aria-label="Ver caso de éxito Prontoled" href="caso-prontoled.html" target="_self" data-case="prontoled">
+                                <div class="flip-inner">
+                                    <div class="flip-face flip-front">
+                                        <img src="./img/PRONTO.png" alt="Prontoled" class="flip-logo">
+                                        <h3 class="flip-title">Prontoled</h3>
+                                        <p id="success-desc-prontoled" class="flip-desc">Estrategia digital, performance y crecimiento comercial.</p>
+                                        <span class="flip-hint">Explorar caso &#8594;</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- Card Letratec -->
+                            <a class="flip-card animate__animated animate__fadeInUp" style="animation-delay: 0.3s;" aria-label="Ver caso de éxito Letratec" href="caso-letratec.html" target="_self" data-case="letratec">
+                                <div class="flip-inner">
+                                    <div class="flip-face flip-front">
+                                        <img src="./img/LETRA.png" alt="Letratec" class="flip-logo">
+                                        <h3 class="flip-title">Letratec</h3>
+                                        <p id="success-desc-letratec" class="flip-desc">Redise&ntilde;o web, posicionamiento y optimizaci&oacute;n digital.</p>
+                                        <span class="flip-hint">Explorar caso &#8594;</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- Card VcG Imagen -->
+                            <a class="flip-card animate__animated animate__fadeInUp" style="animation-delay: 0.45s;" aria-label="Ver caso de éxito VcG Imagen" href="caso-vcg-imagen.html" target="_self" data-case="vcg">
+                                <div class="flip-inner">
+                                    <div class="flip-face flip-front">
+                                        <img src="./img/VCG IMAGEN.png" alt="VcG Imagen" class="flip-logo">
+                                        <h3 class="flip-title">GP Consultora</h3>
+                                        <p id="success-desc-vcg" class="flip-desc">Branding, presencia digital y activaci&oacute;n online.</p>
+                                        <span class="flip-hint">Explorar caso &#8594;</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="separator"></div>
+        <section id="acerca" class="section">
+            <div class="video-container">
+                <video autoplay muted loop playsinline id="background-video4">
+                    <source src="./video/backgroundvid4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="overlay">
+                    <h2 id="about-title" class="section-title animate__animated">Cómo trabajamos</h2>
+                    <p id="about-subtitle" class="why-subtitle animate__animated">Nuestra metodología para un crecimiento escalable</p>
+                    <p id="about-text" class="why-subtitle animate__animated">No trabajamos con intuición. Trabajamos con sistemas, datos y disciplina en la ejecución.</p>
+                    <div class="why-grid">
+                        <div class="why-card animate__animated animate__fadeInUp" style="animation-delay:0.05s;">
+                            <div class="why-icon">✔</div>
+                            <h3 id="why1-title">Estrategia y Visión</h3>
+                            <p id="why1-text">Analizamos tu modelo de negocio, los datos y el mercado para definir objetivos claros, KPIs medibles y una hoja de ruta de crecimiento alineada con tus metas.</p>
+                        </div>
+                        <div class="why-card animate__animated animate__fadeInUp" style="animation-delay:0.12s;">
+                            <div class="why-icon">✔</div>
+                            <h3 id="why2-title">Ejecución y Tecnología</h3>
+                            <p id="why2-text">Implementamos soluciones de marketing, UX, automatización, inteligencia artificial y datos, con foco en el rendimiento, la escalabilidad y la eficiencia operativa.</p>
+                        </div>
+                        <div class="why-card animate__animated animate__fadeInUp" style="animation-delay:0.18s;">
+                            <div class="why-icon">✔</div>
+                            <h3 id="why3-title">Crecimiento y Optimización</h3>
+                            <p id="why3-text">Medimos resultados, iteramos de forma continua y optimizamos cada decisión para lograr un crecimiento sostenible en el largo plazo.</p>
+                        </div>
+                </div>
+            </div>
+        </section>
         <section id="blog" class="section blog-section">
             <div class="overlay">
                 <div class="blog-header animate__animated">
-                    <div class="blog-title-row">
-                        <span class="blog-title-line"></span>
-                        <h2 class="section-title" id="blog-title">Conoc&eacute; nuestro newsletter</h2>
-                        <span class="blog-title-line"></span>
+                    <p class="blog-kicker" id="blog-kicker">Marketing &middot; Datos &middot; automatizaci&oacute;n</p>
+                    <h2 class="section-title" id="blog-title">Conoc&eacute; nuestro blog</h2>
+                    <p class="blog-subtitle" id="blog-subtitle">Aprend&eacute; con nuestros especialistas los errores m&aacute;s comunes y c&oacute;mo evitarlos con datos y automatizaci&oacute;n.</p>
+                    <a class="button" id="blog-view-all" href="blog/index.html">Ver todos los art&iacute;culos</a>
+                </div>
+                <a class="blog-card animate__animated" href="blog-errores-marketing.html">
+                    <div class="blog-card__media">
+                        <img src="./img/ROBOT-IA.png" alt="Errores de marketing que frenan a cualquier negocio" loading="lazy">
                     </div>
-                </div>
-                <div class="newsletter-grid">
-                    <a class="newsletter-card animate__animated" href="newsletter-fragmentacion.html">
-                        <div class="newsletter-card__img">
-                            <img src="./img/ABC.png" alt="Fragmentaci&oacute;n social" loading="lazy">
-                        </div>
-                        <div class="newsletter-card__body">
-                            <p class="newsletter-card__meta" id="blog-meta">Estrategia &middot; Voto &middot; 2025</p>
-                            <p class="newsletter-card__tag" id="blog-eyebrow">Edici&oacute;n destacada</p>
-                            <h3 class="newsletter-card__title" id="blog-article-title">
-                                Fragmentaci&oacute;n social y fin de las mayor&iacute;as estables
-                            </h3>
-                            <p class="newsletter-card__desc" id="blog-excerpt">
-                                El electorado se rompe en capas con demandas superpuestas. Competir exige leer tensiones locales, coordinar microsegmentos y sostener una narrativa que ordene la diversidad.
-                            </p>
-                            <span class="newsletter-card__cta" id="blog-cta">Leer art&iacute;culo</span>
-                        </div>
-                    </a>
-                    <a class="newsletter-card animate__animated" href="newsletter-gobernar-sin-margen.html">
-                        <div class="newsletter-card__img">
-                            <img src="./img/GOBERNAR.png" alt="Gobernar sin margen" loading="lazy">
-                        </div>
-                        <div class="newsletter-card__body">
-                            <p class="newsletter-card__meta">Gobierno &middot; Crisis &middot; 2025</p>
-                            <h3 class="newsletter-card__title">
-                                Gobernar sin margen: decisiones impopulares en contextos cr&iacute;ticos
-                            </h3>
-                            <p class="newsletter-card__desc">
-                                Cuando no hay buenas noticias, el desaf&iacute;o es sostener legitimidad con claridad, presencia y estrategia para administrar costos pol&iacute;ticos.
-                            </p>
-                            <span class="newsletter-card__cta">Leer art&iacute;culo</span>
-                        </div>
-                    </a>
-                    <a class="newsletter-card animate__animated" href="newsletter-outsiders.html">
-                        <div class="newsletter-card__img">
-                            <img src="./img/outsiders.png" alt="Outsiders en ascenso" loading="lazy">
-                        </div>
-                        <div class="newsletter-card__body">
-                            <p class="newsletter-card__meta">Ecosistema &middot; Votante &middot; 2025</p>
-                            <h3 class="newsletter-card__title">
-                                Outsiders en ascenso: c&oacute;mo reconfiguran el tablero pol&iacute;tico
-                            </h3>
-                            <p class="newsletter-card__desc">
-                                Nuevas din&aacute;micas en un entorno de desconfianza. Por qu&eacute; candidaturas fuera de los partidos tradicionales capturan atenci&oacute;n y voto: qu&eacute; ven, interpretan y ejecutan mejor que las estructuras cl&aacute;sicas. El nuevo votante, la ruptura institucional y la transformaci&oacute;n del juego.
-                            </p>
-                            <span class="newsletter-card__cta">Leer art&iacute;culo</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="blog-all-link">
-                    <a href="news-daily.html">Ver todos los art&iacute;culos</a>
-                </div>
-            </div>
-        </section>
-
-        <div class="separator"></div>
-
-        <section id="contact-form" class="contact-form-section">
-            <div class="contact-glow"></div>
-            <div class="contact-shell">
-                <h2 id="contact-title">&iquest;Quer&eacute;s llevar tus objetivos pol&iacute;ticos al siguiente nivel? Dejanos tus datos y nos ponemos en contacto con vos.</h2>
-                <div class="contact-layout">
-                    <div class="contact-card">
-                        <form action="https://formspree.io/f/xyzwvwop" method="POST">
-                            <div class="form-grid">
-                                <div class="form-field">
-                                    <label for="name" id="label-name">Nombre</label>
-                                    <input type="text" id="name" name="name" required>
-                                </div>
-                                <div class="form-field">
-                                    <label for="company" id="label-company">Partido / Instituci&oacute;n</label>
-                                    <input type="text" id="company" name="company" required>
-                                </div>
-                                <div class="form-field full">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                                <div class="form-field full">
-                                    <label for="project" id="label-project">Proyecto</label>
-                                    <textarea id="project" name="project" required></textarea>
-                                </div>
+                    <div class="blog-card__content">
+                        <p class="blog-card__meta" id="blog-meta">Por TrendMakers &middot; 19/11/2025</p>
+                        <p class="blog-card__eyebrow" id="blog-eyebrow">Art&iacute;culo destacado</p>
+                        <h3 class="blog-card__title" id="blog-article-title">Errores de marketing que frenan a cualquier negocio (y c&oacute;mo evitarlos)</h3>
+                        <p class="blog-card__excerpt" id="blog-excerpt">
+                            En un mercado saturado, la diferencia no est&aacute; en publicar m&aacute;s sino en hacerlo estrat&eacute;gicamente. Conoc&eacute; los 9 fallos que vemos en negocios reales y c&oacute;mo evitarlos.
+                        </p>
+                        <div class="blog-stats">
+                            <div class="blog-stat animate__animated">
+                                <p class="blog-stat__number" data-count-prefix="" data-count-target="75" data-count-suffix="%">0%</p>
+                                <p class="blog-stat__label" id="blog-stat1">De los usuarios juzga la credibilidad por el dise&ntilde;o visual</p>
                             </div>
-                            <button type="submit" class="button contact-button" id="submit-contact-form">Enviar</button>
-                        </form>
+                            <div class="blog-stat animate__animated">
+                                <p class="blog-stat__number" data-count-prefix="+" data-count-target="23" data-count-suffix="%">0%</p>
+                                <p class="blog-stat__label" id="blog-stat2">De ingresos al mantener identidad consistente</p>
+                            </div>
+                            <div class="blog-stat animate__animated">
+                                <p class="blog-stat__number" data-count-prefix="" data-count-target="65" data-count-suffix="%">0%</p>
+                                <p class="blog-stat__label" id="blog-stat3">De interacci&oacute;n al publicar sin objetivo</p>
+                            </div>
+                            <div class="blog-stat animate__animated">
+                                <p class="blog-stat__number" data-count-prefix="x" data-count-target="3" data-count-suffix="">0</p>
+                                <p class="blog-stat__label" id="blog-stat4">M&aacute;s leads con un calendario estrat&eacute;gico</p>
+                            </div>
+                            <div class="blog-stat animate__animated">
+                                <p class="blog-stat__number" data-count-prefix="" data-count-target="88" data-count-suffix="%">0%</p>
+                                <p class="blog-stat__label" id="blog-stat5">No vuelve a un sitio con mala experiencia</p>
+                            </div>
+                            <div class="blog-stat animate__animated">
+                                <p class="blog-stat__number" data-count-prefix="+" data-count-target="230" data-count-suffix="%">0%</p>
+                                <p class="blog-stat__label" id="blog-stat6">Conversiones con CTA claro</p>
+                            </div>
+                            <div class="blog-stat animate__animated">
+                                <p class="blog-stat__number" data-count-prefix="+" data-count-target="70" data-count-suffix="%">0%</p>
+                                <p class="blog-stat__label" id="blog-stat7">Crecimiento con inversi&oacute;n constante en anuncios</p>
+                            </div>
+                            <div class="blog-stat animate__animated">
+                                <p class="blog-stat__number" data-count-prefix="" data-count-target="42" data-count-suffix="%">0%</p>
+                                <p class="blog-stat__label" id="blog-stat8">Del presupuesto se desperdicia por mala segmentaci&oacute;n</p>
+                            </div>
+                        </div>
+                        <span class="blog-card__cta" id="blog-cta">Leer art&iacute;culo</span>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
+        <div class="separator"></div>
+                <section id="contact-form" class="contact-form-section">
+  <div class="contact-glow"></div>
+  <div class="contact-shell">
+    <h2 id="contact-title">Inici&aacute; tu proceso de crecimiento</h2>
+    <p id="contact-microcopy" class="contact-microcopy">Te respondemos a la brevedad &middot; Comunicaci&oacute;n confidencial</p>
+    <div class="contact-layout">
+      <div class="contact-card">
+          <form action="https://formspree.io/f/xyzwvwop" method="POST">
+              <div class="form-grid">
+                  <div class="form-field">
+                      <label for="name" id="label-name">Tu nombre</label>
+                      <input type="text" id="name" name="name" required>
+                  </div>
+                  <div class="form-field">
+                      <label for="company" id="label-company">Empresa o marca</label>
+                      <input type="text" id="company" name="company" required>
+                  </div>
+                  <div class="form-field full">
+                      <label for="email" id="label-email">Email de contacto</label>
+                      <input type="email" id="email" name="email" required>
+                  </div>
+                  <div class="form-field full">
+                      <label for="project" id="label-project">&iquest;En qu&eacute; podemos ayudarte?</label>
+                      <textarea id="project" name="project" required></textarea>
+                  </div>
+              </div>
+              <button type="submit" class="button contact-button" id="submit-contact-form">Empezar el proceso</button>
+          </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <footer class="footer-new">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Contacto</h4>
-                    <p><strong>Direcci&oacute;n:</strong> Av. Rivadavia 1725, CABA</p>
-                    <p><strong>Tel&eacute;fonos:</strong> 54 11 554746300<br>54 9 2325457856</p>
-                    <p><strong>Email:</strong> contacto@gp.com</p>
-                    <div class="footer-social">
-                        <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" aria-label="LinkedIn">
-                            <img src="./img/Linkedinlogo.png" alt="LinkedIn">
-                        </a>
-                        <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" target="_blank" aria-label="Instagram">
-                            <img src="./img/INSTAGRAMLOGO.PNG" alt="Instagram">
-                        </a>
-                    </div>
+
+     
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-logos">
+                    <img src="./img/google-ads.svg" alt="Google Ads">
+                    <img src="./img/google-partner.svg" alt="Google Partner">
+                    <img src="./img/logofacebookads.png" alt="Facebook Ads">
+                    <img src="./img/cace.svg" alt="CACE">
                 </div>
-                <div class="footer-col">
-                    <h4>Links &uacute;tiles</h4>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#blog">Newsletter</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Servicios</h4>
-                    <ul>
-                        <li><a href="digital-advertisement.html">Asesoramiento en Marketing</a></li>
-                        <li><a href="consultoria-estrategica.html">Consultor&iacute;a Estrat&eacute;gica</a></li>
-                        <li><a href="investigacion-opinion-publica.html">Investigaci&oacute;n de opini&oacute;n p&uacute;blica</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Newsletter</h4>
-                    <p>Suscribite para recibir novedades y recursos estrat&eacute;gicos.</p>
-                    <form class="footer-newsletter" action="#" method="POST">
-                        <input type="email" name="email" placeholder="Correo electr&oacute;nico" required>
-                        <button type="submit">Enviar</button>
-                    </form>
+                <div class="footer-social-row">
+                    <a href="https://www.linkedin.com/company/trendmakersagency" class="linkedin-button" target="_blank" aria-label="LinkedIn">
+                        <img src="./img/Linkedinlogo.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" class="instagram-button" target="_blank" aria-label="Instagram">
+                        <img src="./img/INSTAGRAMLOGO.PNG" alt="Instagram">
+                    </a>
                 </div>
             </div>
-            <p id="footer-text">&copy; 2025 GP Consultora Pol&iacute;tica. Todos los derechos reservados.</p>
+            <p id="footer-text" class="animate__animated">&copy; 2023 TrendMakers. Todos los derechos reservados.</p>
         </footer>
+        <!-- Pop-up Modal eliminado: usamos enlace mailto directo -->
     </div>
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." class="whatsapp-button" target="_blank">
+  <img src="./img/WPP.PNG" alt="WhatsApp">
+</a>
 
-
+    <!-- Botón flotante de Email -->
+    <a href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias." class="email-button mailto-dynamic" target="_blank">
+        <img src="./img/EMAIL.jpg" alt="Email">
+    </a>
     <script src="./js/script.js"></script>
-    <script src="./js/success_cards.js"></script>
     <script src="./js/blog_i18n.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function(){
-            const carousel = document.querySelector('.cta-carousel');
-            if (!carousel) return;
-
-            const slides = Array.from(carousel.querySelectorAll('.cta-slide'));
-            if (!slides.length) return;
-
-            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            let current = 0;
-            let timer;
-
-            const setActive = (index) => {
-                slides.forEach((slide, i) => {
-                    const isActive = i === index;
-                    slide.classList.toggle('is-active', isActive);
-                    slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
-                });
-                current = index;
-            };
-
-            const next = () => setActive((current + 1) % slides.length);
-            const stopAuto = () => timer && clearInterval(timer);
-            const startAuto = () => {
-                if (prefersReduced) return;
-                stopAuto();
-                timer = setInterval(next, 7000);
-            };
-
-            carousel.addEventListener('mouseenter', stopAuto);
-            carousel.addEventListener('mouseleave', startAuto);
-
-            setActive(0);
-            startAuto();
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function(){
-            const ctaBtn = document.getElementById('show-popup');
-            if (!ctaBtn) return;
-            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (!prefersReduced) {
-                ctaBtn.classList.add('will-animate');
-            }
-
-            const observer = new IntersectionObserver((entries, obs) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        requestAnimationFrame(() => entry.target.classList.add('is-visible'));
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.3, rootMargin: '0px 0px -8% 0px' });
-
-            const rect = ctaBtn.getBoundingClientRect();
-            const onScreen = rect.top < window.innerHeight * 0.9 && rect.bottom > 0;
-            if (onScreen || prefersReduced) {
-                ctaBtn.classList.add('is-visible');
-            } else {
-                observer.observe(ctaBtn);
-            }
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function(){
-            const cards = Array.from(document.querySelectorAll('#servicios .service-item'));
-            if (!cards.length) return;
-
-            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-            const customDelays = [200, 400, 600];
-
-            cards.forEach((card, idx) => {
-                const delay = customDelays[idx] !== undefined ? customDelays[idx] : 260 + idx * 180;
-                card.style.setProperty('--service-delay', `${delay}ms`);
-                card.style.animationDelay = `${delay}ms`;
-                if (!prefersReduced) card.classList.add('service-animate-ready');
-            });
-
-            if (prefersReduced) return;
-
-            const observer = new IntersectionObserver((entries, obs) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        requestAnimationFrame(() => {
-                            entry.target.classList.remove('service-animate-ready');
-                            entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-                        });
-                        obs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.3, rootMargin: '0px 0px -10% 0px' });
-
-            cards.forEach((card) => {
-                const rect = card.getBoundingClientRect();
-                const onScreen = rect.top < window.innerHeight * 0.9 && rect.bottom > 0;
-                if (onScreen) {
-                    requestAnimationFrame(() => {
-                        card.classList.remove('service-animate-ready');
-                        card.classList.add('animate__animated', 'animate__fadeInUp');
-                    });
-                } else {
-                    observer.observe(card);
-                }
-            });
-        });
-    </script>
     <script>
         // Toggle quick links from header badge
         document.addEventListener('DOMContentLoaded', function(){
@@ -1028,37 +978,37 @@
         });
     </script>
     <script>
-        // Forzar logos correctos en services cards al cargar (se mantiene por compatibilidad, aunque se usan logo genÃ©rico)
+        // Forzar logos correctos en services cards al cargar
         document.addEventListener('DOMContentLoaded', function() {
             const marketingLogo = document.querySelector('.service-card[data-service-id="marketing-automation"] img');
             if (marketingLogo) {
-                marketingLogo.src = './img/logo1.png';
-                marketingLogo.alt = 'An&aacute;lisis de Datos Pol&iacute;ticos';
+                marketingLogo.src = './img/MATION.png';
+                marketingLogo.alt = 'Marketing & Automation';
             }
             const brandingLogo = document.querySelector('.service-card[data-service-id="branding-communication"] img');
             if (brandingLogo) {
-                brandingLogo.src = './img/logo1.png';
-                brandingLogo.alt = 'Asesoramiento Estrat&eacute;gico';
+                brandingLogo.src = './img/BRANDING.png';
+                brandingLogo.alt = 'Branding & Communication';
             }
             const webLogo = document.querySelector('.service-card[data-service-id="web-ecommerce"] img');
             if (webLogo) {
-                webLogo.src = './img/logo1.png';
-                webLogo.alt = 'Comunicaci&oacute;n Pol&iacute;tica &amp; Discurso';
+                webLogo.src = './img/WEB-ECOMM.png';
+                webLogo.alt = 'Web & E-Commerce Development';
             }
             const dataLogo = document.querySelector('.service-card[data-service-id="consulting-data-strategy"] img');
             if (dataLogo) {
-                dataLogo.src = './img/logo1.png';
-                dataLogo.alt = 'Estrategia Digital &amp; Redes Sociales';
+                dataLogo.src = './img/DATA-STRAT.png';
+                dataLogo.alt = 'Consulting, Data & Strategy';
             }
             const aiLogo = document.querySelector('.service-card[data-service-id="ai-innovation"] img');
             if (aiLogo) {
-                aiLogo.src = './img/logo1.png';
-                aiLogo.alt = 'Transformaci&oacute;n Digital &amp; IA';
+                aiLogo.src = './img/IA-HUB.png';
+                aiLogo.alt = 'AI & Innovation Hub';
             }
         });
     </script>
     <script>
-        // Disparar animaciÃ³n del hero cuando sea visible
+        // Disparar animación del hero cuando sea visible
         document.addEventListener('DOMContentLoaded', function(){
             try {
                 const heroImg = document.querySelector('.hero-brain');
@@ -1078,20 +1028,43 @@
         function toggleMenu() {
             const hamburger = document.querySelector('.hamburger');
             const mobileMenu = document.querySelector('nav ul.mobile-menu');
-            if (!hamburger || !mobileMenu) return;
             hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
         }
         function closeMenu() {
             const hamburger = document.querySelector('.hamburger');
             const mobileMenu = document.querySelector('nav ul.mobile-menu');
-            if (!hamburger || !mobileMenu) return;
             hamburger.classList.remove('active');
             mobileMenu.classList.remove('active');
         }
+        // Click handler para service cards movido a script.js con soporte mobile expand/collapse
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
