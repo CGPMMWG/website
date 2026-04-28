@@ -120,3 +120,70 @@
     window.setLanguage = function(lang){ applyTeamLang(lang); };
   }
 })();
+
+// Leaner team-page copy override.
+(function(){
+  const lean = {
+    es: {
+      heading: "Equipo senior",
+      subtitle: "Estrategia, datos y ejecuci&oacute;n en una sola mesa.",
+      cards: [
+        ["Strategy", "Roadmaps y prioridades."],
+        ["Design", "Experiencias que convierten."],
+        ["Data", "M&eacute;tricas accionables."],
+        ["Performance", "Medios y conversi&oacute;n."],
+        ["Web", "Productos r&aacute;pidos."],
+        ["SEO", "Tracci&oacute;n org&aacute;nica."],
+        ["BI", "Decisiones claras."],
+        ["Social", "Comunidad y marca."]
+      ]
+    },
+    en: {
+      heading: "Senior team",
+      subtitle: "Strategy, data and execution at one table.",
+      cards: [
+        ["Strategy", "Roadmaps and priorities."],
+        ["Design", "Experiences that convert."],
+        ["Data", "Actionable metrics."],
+        ["Performance", "Media and conversion."],
+        ["Web", "Fast products."],
+        ["SEO", "Organic traction."],
+        ["BI", "Clear decisions."],
+        ["Social", "Community and brand."]
+      ]
+    }
+  };
+
+  function setText(id, text) {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = text;
+  }
+
+  function applyLean(lang) {
+    const t = lean[lang === "en" ? "en" : "es"];
+    setText("team-heading", t.heading);
+    setText("team-subtitle", t.subtitle);
+    t.cards.forEach((pair, idx) => {
+      setText(`team-card${idx + 1}-title`, pair[0]);
+      setText(`team-card${idx + 1}-text`, pair[1]);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function(){
+    const lang = (typeof getRequestedLanguage === "function" && getRequestedLanguage()) || "es";
+    window.setTimeout(() => applyLean(lang), 0);
+  });
+
+  const wrap = function(){
+    if (!window.setLanguage || window.__teamLeanWrapped) return;
+    const original = window.setLanguage;
+    window.setLanguage = function(lang) {
+      original(lang);
+      applyLean(lang);
+    };
+    window.__teamLeanWrapped = true;
+  };
+
+  document.addEventListener("DOMContentLoaded", wrap);
+  wrap();
+})();

@@ -46,7 +46,7 @@ function takeI18nSnapshot(){
   try {
     const ids = [
       'nav-inicio','nav-acerca','nav-servicios','nav-contacto','nav-equipo','nav-equipo-mobile','nav-nosotros','nav-nosotros-mobile','nav-casos-exito','nav-problema',
-      'intro-title','intro-text','about-title','about-text','services-title','services-text','services-portfolio-cta','team-title','team-subtitle','team-cta-text',
+      'intro-title','intro-text','about-title','about-text','services-title','services-text','services-portfolio-cta','team-eyebrow','team-title','team-subtitle','team-support-text','team-cta-text',
       'hero-contact-cta',
       'blog-view-all',
       'contact-title','contact-microcopy','schedule-call','show-popup','popup-title','label-email','label-problema','submit-button',
@@ -55,7 +55,7 @@ function takeI18nSnapshot(){
       'success-intro','success-title','success-case1','success-case2','success-case3',
       'detail-hero-title','detail-hero-text','detail-back-link','detail-back-button',
       'blog-kicker','blog-title','blog-subtitle','blog-meta','blog-eyebrow','blog-article-title','blog-excerpt','blog-cta',
-      'blog-stat1','blog-stat2','blog-stat3','blog-stat4','blog-stat5','blog-stat6','blog-stat7','blog-stat8'
+      'blog-stat1','blog-stat2','blog-stat3','blog-stat4','blog-stat5','blog-stat6','blog-stat7','blog-stat8','blog-stat9'
     ];
     ['about-subtitle','why1-title','why1-text','why2-title','why2-text','why3-title','why3-text'].forEach(function(id){
       ids.push(id);
@@ -114,7 +114,7 @@ const translations = {
     successCase2: "Letratec: Aumentamos la facturaci&oacute;n en un 37% con la implementaci&oacute;n de un plan de marketing digital, la creaci&oacute;n de una p&aacute;gina web y gesti&oacute;n de leads.",
     successCase3: "GP Consultora: Automatizamos la nutrici&oacute;n de leads y optimizamos campa&ntilde;as de performance para duplicar la tasa de conversi&oacute;n en solo 60 d&iacute;as.",
     servicesText: "Integramos estrategia, datos, tecnolog&iacute;a y ejecuci&oacute;n en un sistema dise&ntilde;ado para generar crecimiento sostenible.",
-    closingCtaTitle: "No trabajamos con intuici&oacute;n. Trabajamos con sistemas.",
+    closingCtaTitle: "<span>No trabajamos con intuici&oacute;n.</span><span>Trabajamos con sistemas.</span>",
     blogKicker: "Marketing &middot; Datos &middot; automatizaci&oacute;n",
     blogTitle: "Conoc&eacute; nuestro blog",
     blogSubtitle: "Aprend&eacute; con nuestros especialistas los errores m&aacute;s comunes y c&oacute;mo evitarlos con datos y automatizaci&oacute;n.",
@@ -132,10 +132,13 @@ const translations = {
     blogStat6: "Conversiones con CTA claro",
     blogStat7: "Crecimiento con inversi&oacute;n constante en anuncios",
     blogStat8: "Del presupuesto se desperdicia por mala segmentaci&oacute;n",
+    blogStat9: "Mejor retenci&oacute;n con contenidos personalizados",
+    teamEyebrow: "Modelo operativo",
     teamTitle: "Talento multidisciplinario. Ejecuci&oacute;n integrada.",
     teamSubtitle: "Un equipo especializado que integra estrategia, datos, creatividad y tecnolog&iacute;a para escalar negocios con estructura y precisi&oacute;n.",
+    teamSupportText: "Trabajamos como una extensi&oacute;n de tu negocio: diagnosticamos oportunidades, priorizamos acciones y ejecutamos con foco en indicadores comerciales reales.",
     teamCtaText: "Conoc&eacute; c&oacute;mo trabaja nuestro equipo",
-    teamPageButton: "Conoce nuestro equipo &#8594;",
+    teamPageButton: "Conoce nuestro equipo",
     contactTitle: "Inici&aacute; tu proceso de crecimiento",
     contactMicrocopy: "Te respondemos a la brevedad &middot; Comunicaci&oacute;n confidencial",
     scheduleCall: "Agenda una Llamada",
@@ -147,48 +150,52 @@ const translations = {
     footerText: "&copy; 2023 TrendMakers. Todos los derechos reservados.",
 
     teamDetails: `
-      <div class="team-card">
+      <div class="team-card" data-index="01">
+        <span>01</span>
         <h3>Estrategia &amp; Crecimiento</h3>
-        <p>Consultores en marketing y performance que dise&ntilde;an roadmaps claros y objetivos de negocio medibles.</p>
+        <p>Consultores en marketing y performance que dise&ntilde;an roadmaps claros y objetivos de negocio medibles. Ordenamos prioridades para que cada acci&oacute;n tenga impacto comercial.</p>
       </div>
-      <div class="team-card">
+      <div class="team-card" data-index="02">
+        <span>02</span>
         <h3>Dise&ntilde;o, Experiencia Digital &amp; Desarrollo Web</h3>
-        <p>Dise&ntilde;adores UX/UI, visuales, multimedia y desarrolladores web enfocados en conversi&oacute;n, usabilidad, rendimiento y consistencia de marca.</p>
+        <p>Dise&ntilde;adores UX/UI, visuales, multimedia y desarrolladores web enfocados en conversi&oacute;n, usabilidad, rendimiento y consistencia de marca. Creamos activos digitales pensados para escalar.</p>
       </div>
-      <div class="team-card">
+      <div class="team-card" data-index="03">
+        <span>03</span>
         <h3>Datos &amp; Business Intelligence</h3>
-        <p>Analistas de datos y especialistas en BI que transforman m&eacute;tricas en informaci&oacute;n accionable para la toma de decisiones.</p>
+        <p>Analistas de datos y especialistas en BI que transforman m&eacute;tricas en informaci&oacute;n accionable para la toma de decisiones. Convertimos performance, clientes y canales en aprendizaje continuo.</p>
       </div>
-      <div class="team-card">
+      <div class="team-card" data-index="04">
+        <span>04</span>
         <h3>Activaci&oacute;n &amp; Performance</h3>
-        <p>Especialistas en campa&ntilde;as digitales, SEO y contenidos orientados a resultados sostenibles y escalables.</p>
+        <p>Especialistas en campa&ntilde;as digitales, SEO y contenidos orientados a resultados sostenibles y escalables. Probamos, medimos y optimizamos para mejorar volumen, eficiencia y calidad de leads.</p>
       </div>
     `,
 
     aboutUsText: "Somos una agencia de marketing a nivel global que se dedica a brindar servicios de excelencia a clientes de todas partes del mundo. Con un equipo de expertos en diversas &aacute;reas del marketing digital, nos especializamos en crear estrategias personalizadas que se adaptan a las necesidades espec&iacute;ficas de cada negocio. Nuestra misi&oacute;n es impulsar el crecimiento y &eacute;xito de nuestros clientes a trav&eacute;s de soluciones innovadoras y efectivas. Desde la gesti&oacute;n de redes sociales hasta el desarrollo de campa&ntilde;as publicitarias integrales, estamos comprometidos con la excelencia y la satisfacci&oacute;n del cliente en cada proyecto que emprendemos.",
 
     serviceDetails: `
-      <a class="service-card animate__animated" href="marketing-automation.html" data-service-id="marketing-automation">
+      <a class="service-card animate__animated" href="marketing-automation.html" data-service-id="marketing-automation" data-hover-label="Explorar servicio">
         <img src="./img/MATION.png" alt="Marketing &amp; Automation">
         <h3>Marketing &amp; Automation</h3>
         <p>Automatizamos tus procesos y funnels para generar m&aacute;s leads y conversiones con menos esfuerzo.</p>
       </a>
-      <a class="service-card animate__animated" href="branding-communication.html" data-service-id="branding-communication">
+      <a class="service-card animate__animated" href="branding-communication.html" data-service-id="branding-communication" data-hover-label="Explorar servicio">
         <img src="./img/BRANDING.png" alt="Branding &amp; Communication">
         <h3>Branding &amp; Communication</h3>
         <p>Creamos marcas coherentes y comunicaci&oacute;n clara que conecta con tu audiencia.</p>
       </a>
-      <a class="service-card animate__animated" href="web-ecommerce.html" data-service-id="web-ecommerce">
+      <a class="service-card animate__animated" href="web-ecommerce.html" data-service-id="web-ecommerce" data-hover-label="Explorar servicio">
         <img src="./img/WEB-ECOMM.png" alt="Web &amp; E-Commerce Development">
         <h3>Web &amp; E-Commerce Development</h3>
         <p>Desarrollamos sitios y tiendas r&aacute;pidas, seguras y optimizadas para convertir.</p>
       </a>
-      <a class="service-card animate__animated" href="data-analitics.html" data-service-id="consulting-data-strategy">
+      <a class="service-card animate__animated" href="data-analitics.html" data-service-id="consulting-data-strategy" data-hover-label="Explorar servicio">
         <img src="./img/DATA-STRAT.png" alt="Consulting, Data &amp; Strategy">
         <h3>Consulting, Data &amp; Strategy</h3>
         <p>Definimos tu rumbo con an&aacute;lisis, datos y estrategia para escalar tu negocio.</p>
       </a>
-      <a class="service-card animate__animated" href="ia-hub.html" data-service-id="ai-innovation">
+      <a class="service-card animate__animated" href="ia-hub.html" data-service-id="ai-innovation" data-hover-label="Explorar servicio">
         <img src="./img/IA-HUB.png" alt="AI &amp; Innovation Hub">
         <h3>AI &amp; Innovation Hub</h3>
         <p>Implementamos IA y automatizaciones que mejoran procesos y crean ventaja competitiva.</p>
@@ -248,7 +255,7 @@ const translations = {
     successCase2: "Letratec: We increased revenue by 37% with the implementation of a digital marketing plan, the creation of a website, and lead management.",
     successCase3: "GP Consultants: We automated lead nurturing and optimized performance media to double the qualified lead conversion rate in just 60 days.",
     servicesText: "We integrate strategy, data, technology and execution into a system designed to drive sustainable growth.",
-    closingCtaTitle: "We don't work on intuition. We work with systems.",
+    closingCtaTitle: "<span>We don't work on intuition.</span><span>We work with systems.</span>",
     blogKicker: "Marketing &middot; Data &middot; Automation",
     blogTitle: "Explore our blog",
     blogSubtitle: "Learn the most common mistakes from our specialists and how to avoid them with data and automation.",
@@ -266,10 +273,13 @@ const translations = {
     blogStat6: "Conversion lift with a clear CTA",
     blogStat7: "Growth with consistent ad investment",
     blogStat8: "Of the budget is wasted by poor targeting",
+    blogStat9: "Better retention with personalized content",
+    teamEyebrow: "Operating model",
     teamTitle: "Multidisciplinary talent. Integrated execution.",
     teamSubtitle: "A specialized team that brings together strategy, data, creativity and technology to scale businesses with structure and precision.",
+    teamSupportText: "We work as an extension of your business: diagnosing opportunities, prioritizing actions and executing with a focus on real commercial indicators.",
     teamCtaText: "See how our team works",
-    teamPageButton: "Team &#8594;",
+    teamPageButton: "Meet the team",
     contactTitle: "Start your growth process",
     contactMicrocopy: "We’ll get back to you shortly &middot; Confidential",
     scheduleCall: "Schedule a Call",
@@ -281,48 +291,52 @@ const translations = {
     footerText: "&copy; 2023 TrendMakers. All rights reserved.",
 
     teamDetails: `
-      <div class="team-card">
+      <div class="team-card" data-index="01">
+        <span>01</span>
         <h3>Strategy &amp; Growth</h3>
-        <p>Marketing and performance consultants who design clear roadmaps and measurable business objectives.</p>
+        <p>Marketing and performance consultants who design clear roadmaps and measurable business objectives. We organize priorities so every action has commercial impact.</p>
       </div>
-      <div class="team-card">
+      <div class="team-card" data-index="02">
+        <span>02</span>
         <h3>Design, Digital Experience &amp; Web Development</h3>
-        <p>UX/UI, visual and multimedia designers, together with web developers, focused on conversion, usability, performance and brand consistency.</p>
+        <p>UX/UI, visual and multimedia designers, together with web developers, focused on conversion, usability, performance and brand consistency. We create digital assets built to scale.</p>
       </div>
-      <div class="team-card">
+      <div class="team-card" data-index="03">
+        <span>03</span>
         <h3>Data &amp; Business Intelligence</h3>
-        <p>Data analysts and BI specialists who turn metrics into actionable insights for decision-making.</p>
+        <p>Data analysts and BI specialists who turn metrics into actionable insights for decision-making. We turn performance, customers and channels into continuous learning.</p>
       </div>
-      <div class="team-card">
+      <div class="team-card" data-index="04">
+        <span>04</span>
         <h3>Activation &amp; Performance</h3>
-        <p>Digital campaign, SEO and content specialists focused on sustainable, scalable results.</p>
+        <p>Digital campaign, SEO and content specialists focused on sustainable, scalable results. We test, measure and optimize to improve volume, efficiency and lead quality.</p>
       </div>
     `,
 
     aboutUsText: "We are a global marketing agency dedicated to providing excellent services to clients all over the world. With a team of experts in various areas of digital marketing, we specialize in creating personalized strategies that cater to the specific needs of each business. Our mission is to drive growth and success for our clients through innovative and effective solutions. From social media management to the development of comprehensive advertising campaigns, we are committed to excellence and customer satisfaction in every project we undertake.",
 
     serviceDetails: `
-      <a class="service-card animate__animated" href="marketing-automation.html?lang=en" data-service-id="marketing-automation">
+      <a class="service-card animate__animated" href="marketing-automation.html?lang=en" data-service-id="marketing-automation" data-hover-label="Explore service">
         <img src="./img/MATION.png" alt="Marketing &amp; Automation">
         <h3>Marketing &amp; Automation</h3>
         <p>We automate your funnels and processes to generate more qualified leads with less effort.</p>
       </a>
-      <a class="service-card animate__animated" href="branding-communication.html?lang=en" data-service-id="branding-communication">
+      <a class="service-card animate__animated" href="branding-communication.html?lang=en" data-service-id="branding-communication" data-hover-label="Explore service">
         <img src="./img/BRANDING.png" alt="Branding &amp; Communication">
         <h3>Branding &amp; Communication</h3>
         <p>We create coherent brands and clear communication that connects with your audience.</p>
       </a>
-      <a class="service-card animate__animated" href="web-ecommerce.html?lang=en" data-service-id="web-ecommerce">
+      <a class="service-card animate__animated" href="web-ecommerce.html?lang=en" data-service-id="web-ecommerce" data-hover-label="Explore service">
         <img src="./img/WEB-ECOMM.png" alt="Web &amp; E-Commerce Development">
         <h3>Web &amp; E-Commerce Development</h3>
         <p>We build fast, secure and conversion-focused websites and online stores.</p>
       </a>
-      <a class="service-card animate__animated" href="data-analitics.html?lang=en" data-service-id="consulting-data-strategy">
+      <a class="service-card animate__animated" href="data-analitics.html?lang=en" data-service-id="consulting-data-strategy" data-hover-label="Explore service">
         <img src="./img/DATA-STRAT.png" alt="Consulting, Data &amp; Strategy">
         <h3>Consulting, Data &amp; Strategy</h3>
         <p>We define your growth path through data, analysis and strategic direction.</p>
       </a>
-      <a class="service-card animate__animated" href="ia-hub.html?lang=en" data-service-id="ai-innovation">
+      <a class="service-card animate__animated" href="ia-hub.html?lang=en" data-service-id="ai-innovation" data-hover-label="Explore service">
         <img src="./img/IA-HUB.png" alt="AI &amp; Innovation Hub">
         <h3>AI &amp; Innovation Hub</h3>
         <p>We implement AI and automations to improve processes and build competitive advantage.</p>
@@ -572,6 +586,15 @@ function updateSuccessCards() {
 }
 
 // Override with a robust, reversible language switcher
+function ensureServicesTitleRing() {
+  const title = document.getElementById('services-title');
+  if (!title) return;
+  const rawText = title.querySelector('.services-title-text')
+    ? title.querySelector('.services-title-text').innerHTML
+    : title.innerHTML;
+  title.innerHTML = `<span class="services-title-text">${rawText}</span><svg class="services-title-ring" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><ellipse cx="50" cy="50" rx="48" ry="46" pathLength="1"></ellipse></svg>`;
+}
+
 function setLanguage(language) {
   language = (language || 'es').toLowerCase();
   takeI18nSnapshot();
@@ -616,6 +639,11 @@ function setLanguage(language) {
       });
 
       setServiceCardLogos();
+
+      const teamPageButton = document.getElementById('team-page-button');
+      if (teamPageButton && translations.es && translations.es.teamPageButton) {
+        teamPageButton.innerHTML = translations.es.teamPageButton;
+      }
 
       // Ensure restored ES service/team cards are visible
       try {
@@ -666,6 +694,7 @@ function setLanguage(language) {
     'blog-stat6': 'blogStat6',
     'blog-stat7': 'blogStat7',
     'blog-stat8': 'blogStat8',
+    'blog-stat9': 'blogStat9',
 
     'closing-cta-title': 'closingCtaTitle',
     'intro-title': 'introTitle',
@@ -683,8 +712,10 @@ function setLanguage(language) {
     'services-title': 'servicesTitle',
     'services-text': 'servicesText',
     'services-portfolio-cta': 'servicesPortfolio',
+    'team-eyebrow': 'teamEyebrow',
     'team-title': 'teamTitle',
     'team-subtitle': 'teamSubtitle',
+    'team-support-text': 'teamSupportText',
     'team-cta-text': 'teamCtaText',
     'team-page-button': 'teamPageButton',
 
@@ -730,6 +761,7 @@ function setLanguage(language) {
       element.innerHTML = translations[language][translationKey];
     }
   }
+  ensureServicesTitleRing();
 
   const serviceDetailsElement = document.querySelector('.service-details');
   if (serviceDetailsElement && translations[language] && translations[language].serviceDetails) {
