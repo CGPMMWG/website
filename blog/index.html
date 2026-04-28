@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -84,6 +84,9 @@
             transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
             display: flex;
             flex-direction: column;
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
         }
         .blog-card:hover {
             transform: translateY(-6px);
@@ -149,6 +152,317 @@
             box-shadow: 0 12px 26px rgba(0,0,0,0.45);
             border-color: rgba(123,191,255,0.7);
         }
+        /* Consulting blog rebrand */
+        body.blog-page {
+            background:
+                linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+                radial-gradient(circle at 82% 8%, rgba(31, 94, 255, 0.13), transparent 28%),
+                linear-gradient(180deg, #f7fbff 0%, #ffffff 50%, #f5f8fc 100%) !important;
+            background-size: 46px 46px, 46px 46px, auto, auto !important;
+            color: #0b1728 !important;
+        }
+
+        body.blog-page::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(180deg, rgba(255,255,255,0.34), transparent 38%);
+            z-index: 0;
+        }
+
+        body.blog-page .content {
+            position: relative;
+            z-index: 1;
+            padding-top: clamp(112px, 13vh, 146px) !important;
+        }
+
+        .blog-shell {
+            width: min(92vw, 1280px) !important;
+            max-width: 1280px !important;
+            padding: 0 20px 86px !important;
+        }
+
+        .blog-hero {
+            max-width: 1120px !important;
+            margin: 0 auto 34px !important;
+            text-align: left !important;
+            display: grid;
+            grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.56fr);
+            gap: clamp(28px, 6vw, 84px);
+            align-items: end;
+        }
+
+        .blog-hero__top {
+            grid-column: 1 / -1;
+            margin-bottom: 16px !important;
+        }
+
+        .blog-back-btn,
+        .back-btn {
+            background: rgba(255,255,255,0.84) !important;
+            border: 1px solid #d8e0ea !important;
+            color: #0b1728 !important;
+            border-radius: 8px !important;
+            box-shadow: 0 14px 34px rgba(15, 23, 42, 0.1) !important;
+        }
+
+        .blog-kicker {
+            width: fit-content;
+            margin: 0 0 16px !important;
+            background: #e8efff !important;
+            border: 1px solid rgba(31, 94, 255, 0.18) !important;
+            color: #1f5eff !important;
+            border-radius: 999px !important;
+            letter-spacing: 0.08em !important;
+            font-size: 0.74rem !important;
+        }
+
+        .blog-hero h1 {
+            margin: 0 !important;
+            max-width: 780px;
+            color: #0b1728 !important;
+            font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+            font-size: clamp(3rem, 6vw, 5.8rem) !important;
+            line-height: 0.94 !important;
+            letter-spacing: 0 !important;
+            text-transform: uppercase;
+        }
+
+        .blog-hero p {
+            max-width: 430px !important;
+            margin: 0 !important;
+            color: #53667f !important;
+            font-size: clamp(1rem, 1.2vw, 1.15rem) !important;
+            line-height: 1.7 !important;
+        }
+
+        .blog-value-panel {
+            grid-column: 2;
+            align-self: stretch;
+            display: grid;
+            align-content: center;
+            gap: 18px;
+            min-height: 230px;
+            padding: 24px;
+            border-radius: 10px;
+            border: 1px solid #d8e0ea;
+            background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.88));
+            box-shadow: 0 18px 42px rgba(15, 23, 42, 0.07);
+        }
+
+        .blog-value-panel strong {
+            display: block;
+            color: #0b1728;
+            font-size: 1.1rem;
+            line-height: 1.25;
+        }
+
+        .blog-value-panel span {
+            color: #53667f;
+            line-height: 1.55;
+        }
+
+        .blog-value-panel small {
+            width: fit-content;
+            color: #1f5eff;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .blog-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            gap: 22px !important;
+            margin: 34px auto 40px !important;
+            max-width: 1180px;
+        }
+
+        .blog-card {
+            border-radius: 10px !important;
+            background: rgba(255,255,255,0.86) !important;
+            border: 1px solid #d8e0ea !important;
+            box-shadow: 0 18px 42px rgba(15, 23, 42, 0.07) !important;
+            overflow: hidden;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px) !important;
+            border-color: rgba(31, 94, 255, 0.28) !important;
+            box-shadow: 0 22px 46px rgba(15, 23, 42, 0.1) !important;
+        }
+
+        .blog-card__media {
+            aspect-ratio: 16/10 !important;
+            padding: 14px 14px 0;
+            box-sizing: border-box;
+            background: transparent;
+        }
+
+        .blog-card__media img {
+            border-radius: 8px;
+            border: 1px solid #d8e0ea;
+        }
+
+        .blog-card__content {
+            padding: 18px 18px 20px !important;
+            gap: 12px !important;
+            background: transparent !important;
+        }
+
+        .blog-card__meta {
+            color: #53667f !important;
+            font-size: 0.82rem !important;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        .blog-card__title {
+            color: #0b1728 !important;
+            font-size: clamp(1.12rem, 1.3vw, 1.32rem) !important;
+            line-height: 1.18 !important;
+        }
+
+        .blog-card__excerpt {
+            color: #53667f !important;
+            line-height: 1.55 !important;
+        }
+
+        .blog-card__cta {
+            margin-top: auto;
+            padding: 0 !important;
+            border: 0 !important;
+            border-radius: 0 !important;
+            background: transparent !important;
+            color: #1f5eff !important;
+            font-size: 0.92rem;
+        }
+
+        .blog-card__cta::after {
+            content: " ->";
+        }
+
+        .cta-panel {
+            max-width: 980px !important;
+            padding: clamp(30px, 5vw, 54px) !important;
+            border-radius: 10px !important;
+            text-align: left !important;
+            background:
+                radial-gradient(circle at 86% 0%, rgba(31, 94, 255, 0.18), transparent 34%),
+                linear-gradient(135deg, #0b1728, #101d31) !important;
+            border: 1px solid rgba(185, 207, 255, 0.18) !important;
+            box-shadow: 0 26px 70px rgba(15, 23, 42, 0.18) !important;
+        }
+
+        .cta-panel h2,
+        .cta-panel p {
+            color: #ffffff !important;
+            max-width: 740px;
+            margin-left: 0 !important;
+            text-align: left !important;
+        }
+
+        .cta-panel p {
+            color: rgba(233, 240, 255, 0.76) !important;
+        }
+
+        .cta-button {
+            min-height: 48px !important;
+            padding: 0 22px !important;
+            border-radius: 8px !important;
+            background: #ffffff !important;
+            color: #0b1728 !important;
+            box-shadow: 0 16px 34px rgba(15, 23, 42, 0.18) !important;
+        }
+
+        .cta-button::after {
+            display: none !important;
+        }
+
+        .blog-reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 740ms cubic-bezier(.2,.8,.2,1), transform 740ms cubic-bezier(.2,.8,.2,1);
+        }
+
+        .blog-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .blog-hero > * {
+            opacity: 0;
+            transform: translateY(18px);
+            animation: blogHeroIn 780ms cubic-bezier(.2,.8,.2,1) forwards;
+        }
+
+        .blog-hero__top { animation-delay: 40ms; }
+        .blog-kicker { animation-delay: 90ms; }
+        .blog-hero h1 { animation-delay: 150ms; }
+        .blog-hero p { animation-delay: 230ms; }
+        .blog-value-panel { animation-delay: 280ms; }
+
+        body.blog-page > .content > .back-btn {
+            display: inline-flex !important;
+            top: 74px !important;
+            left: 14px !important;
+            z-index: 1200 !important;
+            min-height: 46px;
+            padding: 0 14px !important;
+            background: rgba(255,255,255,0.84) !important;
+            border: 1px solid #d8e0ea !important;
+            color: #0b1728 !important;
+            border-radius: 8px !important;
+            box-shadow: 0 14px 34px rgba(15, 23, 42, 0.1) !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+        }
+
+        .blog-hero__top {
+            display: none !important;
+        }
+
+        .blog-back-btn {
+            width: auto;
+            height: auto;
+            min-height: 46px;
+            padding: 0 14px !important;
+            justify-content: center;
+            gap: 6px;
+            font-size: 1rem;
+        }
+
+        .blog-back-btn::before {
+            font-size: 0.95rem;
+            line-height: 1;
+        }
+
+        .blog-back-btn:hover,
+        body.blog-page > .content > .back-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        @keyframes blogHeroIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 1020px) {
+            .blog-hero {
+                grid-template-columns: 1fr;
+                align-items: start;
+            }
+
+            .blog-value-panel {
+                grid-column: auto;
+                min-height: 0;
+            }
+
+            .blog-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+        }
+
         @media (max-width: 768px) {
             body.blog-page .content { padding-top: 120px; }
             .blog-shell {
@@ -168,17 +482,135 @@
             .blog-card { width: 100%; max-width: 420px; }
             .back-btn { top: 10px; left: 10px; padding: 9px 12px; }
         }
+
+        @media (max-width: 640px) {
+            .blog-hero {
+                text-align: left !important;
+                justify-items: stretch !important;
+            }
+
+            .blog-hero h1 {
+                font-size: clamp(2.45rem, 14vw, 3.8rem) !important;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body.blog-page > .content > .back-btn {
+                top: 72px !important;
+                left: 10px !important;
+                min-height: 42px;
+                padding: 0 12px !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body.blog-page {
+                overflow-x: hidden !important;
+            }
+
+            body.blog-page .content {
+                padding-top: 86px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                overflow-x: hidden !important;
+            }
+
+            body.blog-page > .content > .back-btn {
+                display: none !important;
+            }
+
+            .blog-shell {
+                width: 100vw !important;
+                max-width: 100vw !important;
+                margin-left: calc(50% - 50vw) !important;
+                margin-right: calc(50% - 50vw) !important;
+                padding: 0 0 56px !important;
+                overflow: hidden !important;
+                box-sizing: border-box !important;
+            }
+
+            .blog-hero {
+                width: calc(100vw - 32px) !important;
+                max-width: 390px !important;
+                margin: 0 auto 24px !important;
+                gap: 20px !important;
+                text-align: left !important;
+                box-sizing: border-box !important;
+            }
+
+            .blog-kicker {
+                max-width: 100% !important;
+                margin-bottom: 14px !important;
+                font-size: 0.7rem !important;
+                white-space: normal !important;
+            }
+
+            .blog-hero h1 {
+                max-width: 100% !important;
+                font-size: clamp(2rem, 10.5vw, 2.85rem) !important;
+                line-height: 1.02 !important;
+                overflow-wrap: break-word !important;
+                word-break: normal !important;
+            }
+
+            .blog-value-panel {
+                width: 100% !important;
+                box-sizing: border-box !important;
+                padding: 22px !important;
+                border-radius: 10px !important;
+            }
+
+            .blog-grid {
+                width: calc(100vw - 32px) !important;
+                max-width: 390px !important;
+                min-width: 0 !important;
+                margin: 24px auto 34px !important;
+                gap: 18px !important;
+                box-sizing: border-box !important;
+                justify-items: center !important;
+                place-items: center !important;
+                padding: 0 !important;
+                transform: none !important;
+            }
+
+            .blog-grid > * {
+                justify-self: center !important;
+            }
+
+            .blog-card {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-inline: auto !important;
+                border-radius: 10px !important;
+                box-sizing: border-box !important;
+                transform: none !important;
+            }
+
+            .blog-card__media {
+                padding: 12px 12px 0 !important;
+            }
+
+            .cta-panel {
+                padding: 28px 20px !important;
+            }
+        }
     </style>
+    <link rel="stylesheet" href="../css/header_dark_global.css">
 </head>
 <body class="blog-page">
     <div class="content">
-        <a class="back-btn" href="../index.html#inicio" aria-label="Volver al inicio">&larr; Volver</a>
+        <a class="back-btn" href="../index.html#inicio" aria-label="Back to home">&larr; Back</a>
         <nav>
             <a class="tm-header-badge" href="../index.html#inicio" aria-label="TrendMakers home" id="tm-badge">
                 <img src="../img/TrendMakers-Header.png" alt="TrendMakers">
             </a>
-            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos r?pidos">
-                <a href="https://www.instagram.com/trendmakersagency.ok?igsh=cTN1Z3N0ejk1YmJu target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos r&aacute;pidos">
+                <a href="https://www.instagram.com/trendmakersagency.ok?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
                 <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
                 <a class="mailto-dynamic" href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias." target="_blank" aria-label="Email">Email</a>
                 <a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" aria-label="WhatsApp">WhatsApp</a>
@@ -201,7 +633,7 @@
                         <li><a href="index.html" id="nav-blog" class="menu-item active-link">Blog</a></li>
                     </ul>
                 </li>
-                <li><a href="../index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de ?xito</a></li>
+                <li><a href="../index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de &eacute;xito</a></li>
                 <li><a href="../index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
             </ul>
             <div class="nav-lang">
@@ -210,7 +642,7 @@
                   <img src="../img/IDIOMA.PNG" alt="Idioma">
                 </button>
                 <div class="lang-menu" role="menu" aria-label="Idiomas">
-                  <button class="lang-option" role="menuitem" data-lang="es">Español</button>
+                  <button class="lang-option" role="menuitem" data-lang="es">Espa&ntilde;ol</button>
                   <button class="lang-option" role="menuitem" data-lang="en">English</button>
                 </div>
               </div>
@@ -222,7 +654,7 @@
                 <li><a href="../index.html#equipo" id="nav-equipo" class="menu-item" onclick="closeMenu()">Equipo</a></li>
                 <li><a href="../index.html#acerca" id="nav-nosotros" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
                 <li><a href="index.html" id="nav-blog" class="menu-item active-link" onclick="closeMenu()">Blog</a></li>
-                <li><a href="../index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de ?xito</a></li>
+                <li><a href="../index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de &eacute;xito</a></li>
                 <li><a href="../index.html#contact-form" id="nav-contacto" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
             </ul>
         </nav>
@@ -232,13 +664,19 @@
                 <div class="blog-hero__top">
                     <a class="blog-back-btn" id="blog-back-top" href="../index.html#blog">Volver</a>
                 </div>
-                <span class="blog-kicker" id="blog-kicker">Blog TrendMakers</span>
-                <h1 id="blog-title">Ideas accionables de marketing, datos e IA</h1>
-                <p id="blog-subtitle">Gu&iacute;as, casos y playbooks para ejecutar mejor: SEO t&eacute;cnico, performance, automatizaciones y decisiones basadas en datos.</p>
+                <div>
+                    <span class="blog-kicker" id="blog-kicker">Biblioteca gratuita</span>
+                    <h1 id="blog-title">Informaci&oacute;n gratuita para decidir mejor</h1>
+                </div>
+                <div class="blog-value-panel">
+                    <small id="blog-panel-label">Recursos consulting</small>
+                    <strong id="blog-panel-title">Ideas, diagn&oacute;sticos y playbooks para ordenar marketing, datos e IA.</strong>
+                    <span id="blog-subtitle">Contenido pr&aacute;ctico de TrendMakers para detectar problemas, priorizar acciones y ejecutar con sistemas m&aacute;s claros.</span>
+                </div>
             </section>
 
             <section class="blog-grid" id="blog-list">
-                <article class="blog-card">
+                <a class="blog-card" href="../blog-errores-marketing.html">
                     <div class="blog-card__media">
                         <img src="../img/BLOG1.jpg" alt="Sistema de marketing y automatizaci&oacute;n" loading="lazy">
                     </div>
@@ -246,11 +684,11 @@
                         <p class="blog-card__meta" id="card1-meta">Marketing &middot; Automatizaci&oacute;n</p>
                         <h2 class="blog-card__title" id="card1-title">Marketing &amp; Automation: cuando tu empresa deja de perder leads</h2>
                         <p class="blog-card__excerpt" id="card1-excerpt">C&oacute;mo convertir tu marketing en un sistema con funnels, CRM, automatizaciones y datos que no deja escapar oportunidades.</p>
-                        <a class="blog-card__cta" id="card1-cta" href="../blog-errores-marketing.html">Leer art&iacute;culo</a>
+                        <span class="blog-card__cta" id="card1-cta">Leer art&iacute;culo</span>
                     </div>
-                </article>
+                </a>
 
-                <article class="blog-card">
+                <a class="blog-card" href="../blog-ia-automatizacion.html">
                     <div class="blog-card__media">
                         <img src="../img/BLOG-IA-MARKETING.png" alt="IA aplicada a la operaci&oacute;n y marketing" loading="lazy">
                     </div>
@@ -258,11 +696,11 @@
                         <p class="blog-card__meta" id="card2-meta">IA &middot; Automatizaci&oacute;n</p>
                         <h2 class="blog-card__title" id="card2-title">C&oacute;mo la inteligencia artificial transforma empresas de cualquier tama&ntilde;o</h2>
                         <p class="blog-card__excerpt" id="card2-excerpt">Gu&iacute;a 2025 para integrar IA en pymes y grandes compa&ntilde;&iacute;as y ganar ventaja competitiva real.</p>
-                        <a class="blog-card__cta" id="card2-cta" href="../blog-ia-automatizacion.html">Leer art&iacute;culo</a>
+                        <span class="blog-card__cta" id="card2-cta">Leer art&iacute;culo</span>
                     </div>
-                </article>
+                </a>
 
-                <article class="blog-card">
+                <a class="blog-card" href="../blog-ia2.html">
                     <div class="blog-card__media">
                         <img src="../img/Blog-ia-personas.png" alt="IA aplicada a marketing y datos" loading="lazy">
                     </div>
@@ -270,11 +708,11 @@
                         <p class="blog-card__meta" id="card3-meta">Data &middot; IA</p>
                         <h2 class="blog-card__title" id="card3-title">IA en marketing: la inversi&oacute;n que separa a las marcas que crecen</h2>
                         <p class="blog-card__excerpt" id="card3-excerpt">IA operativa, automatizaci&oacute;n y datos para escalar con menos costo y m&aacute;s resultados.</p>
-                        <a class="blog-card__cta" id="card3-cta" href="../blog-ia2.html">Leer art&iacute;culo</a>
+                        <span class="blog-card__cta" id="card3-cta">Leer art&iacute;culo</span>
                     </div>
-                </article>
+                </a>
 
-                <article class="blog-card">
+                <a class="blog-card" href="../blog-branding.html">
                     <div class="blog-card__media">
                         <img src="../img/blogbrand.png" alt="Identidad de marca y comunicaci&oacute;n" loading="lazy">
                     </div>
@@ -282,11 +720,11 @@
                         <p class="blog-card__meta" id="card4-meta">Branding &middot; Comunicaci&oacute;n</p>
                         <h2 class="blog-card__title" id="card4-title">Branding &amp; Communication: una marca que no pierda oportunidades</h2>
                         <p class="blog-card__excerpt" id="card4-excerpt">Identidad visual, mensaje y comunicaci&oacute;n para que la marca refleje el valor real del negocio.</p>
-                        <a class="blog-card__cta" id="card4-cta" href="../blog-branding.html">Leer art&iacute;culo</a>
+                        <span class="blog-card__cta" id="card4-cta">Leer art&iacute;culo</span>
                     </div>
-                </article>
+                </a>
 
-                <article class="blog-card">
+                <a class="blog-card" href="../blog-websites1.html">
                     <div class="blog-card__media">
                         <img src="../img/web-ecommerce.png" alt="Sitios web y e-commerce centrados en conversi&oacute;n" loading="lazy">
                     </div>
@@ -294,15 +732,15 @@
                         <p class="blog-card__meta" id="card5-meta">Web &middot; E-Commerce</p>
                         <h2 class="blog-card__title" id="card5-title">Sitios y tiendas online dise&ntilde;ados para convertir</h2>
                         <p class="blog-card__excerpt" id="card5-excerpt">Por qu&eacute; tu web tiene que guiar a la acci&oacute;n: UX, velocidad, SEO y e-commerce conectados a tu sistema.</p>
-                        <a class="blog-card__cta" id="card5-cta" href="../blog-websites1.html">Leer art&iacute;culo</a>
+                        <span class="blog-card__cta" id="card5-cta">Leer art&iacute;culo</span>
                     </div>
-                </article>
+                </a>
             </section>
 
             <section class="cta-panel">
                 <h2 id="blog-cta-title">&iquest;Te sentiste identificado con alguno de estos art&iacute;culos?</h2>
                 <p id="blog-cta-text">Si alguno refleja lo que pasa en tu negocio, podemos ayudarte a resolverlo con un sistema real.</p>
-                <a class="cta-button" id="blog-cta-btn" href="#contacto">Hablemos de tu caso</a>
+                <a class="cta-button" id="blog-cta-btn" href="../index.html#contact-form">Hablemos de tu caso</a>
             </section>
         </main>
     </div>
@@ -322,10 +760,12 @@
                     nav: {
                         inicio: "Inicio", servicios: "Servicios", problema: "Contanos tu Proyecto", equipo: "Nuestro Equipo", acerca: "Nosotros", casos: "Casos de &eacute;xito", blog: "Blog", contacto: "Contacto"
                     },
-                    backTop: "Volver",
-                    kicker: "Blog TrendMakers",
-                    title: "Ideas accionables de marketing, datos e IA",
-                    subtitle: "Gu&iacute;as, casos y playbooks para ejecutar mejor: SEO t&eacute;cnico, performance, automatizaciones y decisiones basadas en datos.",
+                    backTop: "Back",
+                    kicker: "Biblioteca gratuita",
+                    title: "Informaci&oacute;n gratuita para decidir mejor",
+                    panelLabel: "Recursos consulting",
+                    panelTitle: "Ideas, diagn&oacute;sticos y playbooks para ordenar marketing, datos e IA.",
+                    subtitle: "Contenido pr&aacute;ctico de TrendMakers para detectar problemas, priorizar acciones y ejecutar con sistemas m&aacute;s claros.",
                     cards: [
                         { meta: "Marketing &middot; Automatizaci&oacute;n", title: "Marketing &amp; Automation: cuando tu empresa deja de perder leads", excerpt: "C&oacute;mo convertir tu marketing en un sistema con funnels, CRM, automatizaciones y datos que no deja escapar oportunidades.", cta: "Leer art&iacute;culo" },
                         { meta: "IA &middot; Automatizaci&oacute;n", title: "C&oacute;mo la inteligencia artificial transforma empresas de cualquier tama&ntilde;o", excerpt: "Gu&iacute;a 2025 para integrar IA en pymes y grandes compa&ntilde;&iacute;as y ganar ventaja competitiva real.", cta: "Leer art&iacute;culo" },
@@ -342,9 +782,11 @@
                         inicio: "Home", servicios: "Our Services", problema: "Tell us about your project", equipo: "Our Team", acerca: "Why us?", casos: "Success Stories", blog: "Blog", contacto: "Contact"
                     },
                     backTop: "Back",
-                    kicker: "TrendMakers Blog",
-                    title: "Actionable ideas on marketing, data and AI",
-                    subtitle: "Guides, cases and playbooks to execute better: technical SEO, performance, automations and data-driven decisions.",
+                    kicker: "Free knowledge base",
+                    title: "Free information to make better decisions",
+                    panelLabel: "Consulting resources",
+                    panelTitle: "Ideas, diagnostics and playbooks to organize marketing, data and AI.",
+                    subtitle: "Practical TrendMakers content to identify problems, prioritize actions and execute with clearer systems.",
                     cards: [
                         { meta: "Marketing &middot; Automation", title: "Marketing &amp; Automation: stop losing leads, scale with a system", excerpt: "Funnels, CRM, automation and data so every lead is tracked and turns into pipeline.", cta: "Read article" },
                         { meta: "AI &middot; Automation", title: "How AI transforms companies of every size", excerpt: "2025 guide to integrate AI in small, mid and large teams to win real competitive advantage.", cta: "Read article" },
@@ -364,7 +806,7 @@
                 setText('nav-inicio', t.nav.inicio); setText('nav-servicios', t.nav.servicios); setText('nav-problema', t.nav.problema);
                 setText('nav-equipo', t.nav.equipo); setText('nav-acerca', t.nav.acerca); setText('nav-casos-exito', t.nav.casos);
                 setText('nav-blog', t.nav.blog); setText('nav-blog-mobile', t.nav.blog); setText('nav-contacto', t.nav.contacto);
-                setText('blog-kicker', t.kicker); setText('blog-title', t.title); setText('blog-subtitle', t.subtitle);
+                setText('blog-kicker', t.kicker); setText('blog-title', t.title); setText('blog-panel-label', t.panelLabel); setText('blog-panel-title', t.panelTitle); setText('blog-subtitle', t.subtitle);
                 setText('blog-back-top', t.backTop);
                 t.cards.forEach((c, i) => {
                     const n = i + 1;
@@ -410,6 +852,20 @@
             function init(){
                 applyLang(getLang());
                 bindLangMenu();
+                const revealTargets = document.querySelectorAll('.blog-card, .cta-panel');
+                revealTargets.forEach(el => el.classList.add('blog-reveal'));
+                if ('IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver(entries => {
+                        entries.forEach(entry => {
+                            if (!entry.isIntersecting) return;
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        });
+                    }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+                    revealTargets.forEach(el => observer.observe(el));
+                } else {
+                    revealTargets.forEach(el => el.classList.add('is-visible'));
+                }
                 if (typeof window.setLanguage === 'function' && !window.__blogLangWrapped){
                     const _orig = window.setLanguage;
                     window.setLanguage = function(l){ _orig(l); applyLang((l || 'es').toLowerCase()); };
@@ -458,6 +914,7 @@
 
 </body>
 </html>
+
 
 
 
