@@ -81,13 +81,13 @@
     },
     vcg: {
       es: {
-        pageTitle: "TrendMakers - Caso GP Consultora",
-        eyebrow: "Caso de &eacute;xito &middot; GP Consultora",
-        title: "Performance creativo 360&deg; para GP Consultora",
+        pageTitle: "TrendMakers - Caso GOPE",
+        eyebrow: "Caso de &eacute;xito &middot; GOPE",
+        title: "Performance creativo 360&deg; para GOPE",
         summary:
           "Activamos demanda constante con c&aacute;psulas motion, inteligencia de audiencias y workflows que nutr&iacute;an a ventas con prioridad real en segundos.",
         hook: "Activamos demanda constante con contenido motion e inteligencia de audiencias.",
-        subtitle: "GP Consultora &middot; Performance creativo 360&deg;",
+        subtitle: "GOPE &middot; Performance creativo 360&deg;",
         body: "Dise&ntilde;amos y desarrollamos la identidad de marca y el sitio web, construyendo una experiencia visual coherente, funcional y pensada para convertir. Desde el branding hasta la ejecuci&oacute;n digital, cada decisi&oacute;n respondi&oacute; a una estrategia clara de posicionamiento y crecimiento.",
         stats: [
           "contactos el primer mes",
@@ -99,13 +99,13 @@
         back: "Volver a Casos de &eacute;xito",
       },
       en: {
-        pageTitle: "TrendMakers - GP Consultora Case Study",
-        eyebrow: "Success Story &middot; GP Consultora",
-        title: "360&deg; creative performance for GP Consultora",
+        pageTitle: "TrendMakers - GOPE Case Study",
+        eyebrow: "Success Story &middot; GOPE",
+        title: "360&deg; creative performance for GOPE",
         summary:
           "We build brand identity and web experiences to position, communicate, and convert.",
         hook: "Branding and web aligned with a clear positioning and growth strategy.",
-        subtitle: "GP Consultora &middot; 360&deg; creative performance",
+        subtitle: "GOPE &middot; 360&deg; creative performance",
         body: "We designed and developed the brand identity and website, creating a cohesive, functional visual experience built to convert. From branding to digital execution, every decision was driven by a clear positioning and growth strategy.",
         stats: [
           "contacts in the first month",
@@ -155,11 +155,11 @@
       es: {
         testimonialQuote:
           "\"Necesit&aacute;bamos una identidad m&aacute;s clara y una presencia digital que transmitiera confianza desde el primer contacto. El proceso nos ayud&oacute; a ordenar el mensaje, profesionalizar la marca y salir al mercado con una imagen m&aacute;s s&oacute;lida.\"",
-        testimonialAuthor: "Gustavo &middot; GP Consultora",
+        testimonialAuthor: "Gustavo &middot; GOPE",
         storyTitle: "De identidad difusa a una marca lista para crecer",
         storyPainTitle: "El punto de dolor",
         storyPain:
-          "GP Consultora ten&iacute;a experiencia, criterio profesional y una propuesta de valor concreta, pero la marca no lograba expresarlo con claridad. La identidad visual era inconsistente, la presencia web no transmit&iacute;a suficiente confianza y cada contacto requer&iacute;a explicar desde cero qui&eacute;nes eran y por qu&eacute; elegirlos.",
+          "GOPE ten&iacute;a experiencia, criterio profesional y una propuesta de valor concreta, pero la marca no lograba expresarlo con claridad. La identidad visual era inconsistente, la presencia web no transmit&iacute;a suficiente confianza y cada contacto requer&iacute;a explicar desde cero qui&eacute;nes eran y por qu&eacute; elegirlos.",
         storyPathTitle: "El desarrollo",
         storyPath:
           "Trabajamos el posicionamiento, la narrativa y el dise&ntilde;o como un sistema. Redefinimos la identidad, ordenamos los mensajes clave y construimos una experiencia web pensada para presentar autoridad, explicar servicios y facilitar el contacto con una lectura m&aacute;s profesional.",
@@ -170,11 +170,11 @@
       en: {
         testimonialQuote:
           "\"We needed a clearer identity and a digital presence that communicated trust from the first interaction. The process helped us organize the message, professionalize the brand, and go to market with a stronger image.\"",
-        testimonialAuthor: "Gustavo &middot; GP Consultora",
+        testimonialAuthor: "Gustavo &middot; GOPE",
         storyTitle: "From unclear identity to a brand ready to grow",
         storyPainTitle: "The pain point",
         storyPain:
-          "GP Consultora had experience, professional judgment, and a concrete value proposition, but the brand was not expressing it clearly. The visual identity was inconsistent, the web presence did not build enough trust, and every contact required explaining from scratch who they were and why clients should choose them.",
+          "GOPE had experience, professional judgment, and a concrete value proposition, but the brand was not expressing it clearly. The visual identity was inconsistent, the web presence did not build enough trust, and every contact required explaining from scratch who they were and why clients should choose them.",
         storyPathTitle: "The development",
         storyPath:
           "We worked on positioning, narrative, and design as one system. We redefined the identity, organized the key messages, and built a web experience designed to show authority, explain services, and make contact easier through a more professional reading.",
@@ -225,7 +225,7 @@
       servicios: "Nuestros Servicios",
       problema: "Contanos tu Proyecto",
       equipo: "Nuestro Equipo",
-      acerca: "Por que elegirnos",
+      acerca: "Nosotros",
       casos: "Casos de exito",
       blog: "Blog",
       contacto: "Contacto",
@@ -491,4 +491,5 @@
     bindLangDropdown();
   });
 })();
+
 

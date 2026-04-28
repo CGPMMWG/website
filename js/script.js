@@ -1,4 +1,4 @@
-// Initialize touch service-card behavior (idempotent)
+﻿// Initialize touch service-card behavior (idempotent)
 function initMobileServiceCards(){
   try {
     const cards = Array.from(document.querySelectorAll('#servicios .service-card'));
@@ -112,7 +112,7 @@ const translations = {
     successCtaButton: "Ver todos los casos",
     successCase1: "Prontoled: Afectamos directamente la facturaci&oacute;n con la implementaci&oacute;n de automatizaciones de IA, gesti&oacute;n de anuncios y la realizaci&oacute;n de un plan exhaustivo de mercado que deriv&oacute; en un plan de acci&oacute;n.",
     successCase2: "Letratec: Aumentamos la facturaci&oacute;n en un 37% con la implementaci&oacute;n de un plan de marketing digital, la creaci&oacute;n de una p&aacute;gina web y gesti&oacute;n de leads.",
-    successCase3: "GP Consultora: Automatizamos la nutrici&oacute;n de leads y optimizamos campa&ntilde;as de performance para duplicar la tasa de conversi&oacute;n en solo 60 d&iacute;as.",
+    successCase3: "GOPE: Automatizamos la nutrici&oacute;n de leads y optimizamos campa&ntilde;as de performance para duplicar la tasa de conversi&oacute;n en solo 60 d&iacute;as.",
     servicesText: "Integramos estrategia, datos, tecnolog&iacute;a y ejecuci&oacute;n en un sistema dise&ntilde;ado para generar crecimiento sostenible.",
     closingCtaTitle: "<span>No trabajamos con intuici&oacute;n.</span><span>Trabajamos con sistemas.</span>",
     blogKicker: "Marketing &middot; Datos &middot; automatizaci&oacute;n",
@@ -1019,5 +1019,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bindLangDropdown); else bindLangDropdown();
 })();
+
 
 

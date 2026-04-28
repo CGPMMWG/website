@@ -125,31 +125,31 @@
 (function(){
   const lean = {
     es: {
-      heading: "Equipo senior",
+      heading: "",
       subtitle: "Estrategia, datos y ejecuci&oacute;n en una sola mesa.",
       cards: [
-        ["Strategy", "Roadmaps y prioridades."],
-        ["Design", "Experiencias que convierten."],
-        ["Data", "M&eacute;tricas accionables."],
-        ["Performance", "Medios y conversi&oacute;n."],
-        ["Web", "Productos r&aacute;pidos."],
-        ["SEO", "Tracci&oacute;n org&aacute;nica."],
-        ["BI", "Decisiones claras."],
-        ["Social", "Comunidad y marca."]
+        ["Strategy", "Roadmaps, prioridades y foco comercial para ordenar el crecimiento sin perder velocidad."],
+        ["Design", "Experiencias visuales consistentes que hacen simple entender, confiar y convertir."],
+        ["Data", "M&eacute;tricas accionables para leer oportunidades, fricciones y pr&oacute;ximos pasos."],
+        ["Performance", "Medios, audiencias y conversi&oacute;n optimizados con aprendizaje continuo."],
+        ["Web", "Sitios, landings y productos r&aacute;pidos, seguros y preparados para escalar."],
+        ["SEO", "Arquitectura, contenido y t&eacute;cnica para construir tracci&oacute;n org&aacute;nica sostenible."],
+        ["BI", "Dashboards y modelos que convierten datos dispersos en decisiones claras."],
+        ["Social", "Comunidad, narrativa y reputaci&oacute;n para sostener presencia de marca."]
       ]
     },
     en: {
-      heading: "Senior team",
+      heading: "",
       subtitle: "Strategy, data and execution at one table.",
       cards: [
-        ["Strategy", "Roadmaps and priorities."],
-        ["Design", "Experiences that convert."],
-        ["Data", "Actionable metrics."],
-        ["Performance", "Media and conversion."],
-        ["Web", "Fast products."],
-        ["SEO", "Organic traction."],
-        ["BI", "Clear decisions."],
-        ["Social", "Community and brand."]
+        ["Strategy", "Roadmaps, priorities, and commercial focus to organize growth without losing speed."],
+        ["Design", "Consistent visual experiences that make it easier to understand, trust, and convert."],
+        ["Data", "Actionable metrics to read opportunities, friction points, and next steps."],
+        ["Performance", "Media, audiences, and conversion optimized through continuous learning."],
+        ["Web", "Fast, secure websites, landing pages, and products built to scale."],
+        ["SEO", "Architecture, content, and technical foundations for sustainable organic traction."],
+        ["BI", "Dashboards and models that turn scattered data into clear decisions."],
+        ["Social", "Community, narrative, and reputation to sustain brand presence."]
       ]
     }
   };
