@@ -1,31 +1,15 @@
-/* =========================================================
-   TEAM.CSS (COMPLETO)
-   Compatible con:
-   - HTML viejo: .team-cta .overlay > .team-cta-panel
-   - HTML nuevo: .team-shell / .team-shell-inner / .team-block--cta
-   ========================================================= */
-
-/* ===========================
-   BASE / SAFETY OVERRIDES
-   =========================== */
-
-/* Evita que estilos globales de <a> rompan el CTA */
-a#team-cta-button,
-.team-cta a.cta-button,
-.team-block--cta a.cta-button {
-  text-decoration: none !important;
-}
-
-/* Evita overflow horizontal (width: 100% + padding) */
+/* Team page */
 nav,
 .overlay,
 .team-shell {
   box-sizing: border-box;
 }
 
-/* ===========================
-   HERO
-   =========================== */
+a#team-cta-button,
+.team-cta a.cta-button,
+.team-block--cta a.cta-button {
+  text-decoration: none !important;
+}
 
 .team-hero .overlay {
   display: flex;
@@ -51,366 +35,23 @@ nav,
   line-height: 1.55;
 }
 
-@media (max-width: 768px) {
-  .team-hero .overlay {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 72px 16px 60px;
-  }
-  .team-intro {
-    max-width: min(520px, 92vw);
-    margin: 0 auto;
-    padding: 0 4px;
-    text-align: center;
-  }
-  .team-intro .section-title,
-  .team-intro .intro-tagline {
-    text-align: center;
-  }
-}
-
-
-/* ===========================
-   SHELL (HTML nuevo)
-   =========================== */
-
-.team-shell {
-  width: 100%;
-  box-sizing: border-box;
-  padding: clamp(18px, 4vw, 40px) clamp(16px, 4vw, 42px);
-}
-
-/* Override legacy #equipo styles from style.css (index section) */
-main#equipo.team-shell {
-
-  background:
-    radial-gradient(60% 70% at 20% 30%, rgba(0,195,255,0.18), transparent 60%),
-    radial-gradient(60% 70% at 80% 35%, rgba(72, 151, 253, 0.16), transparent 62%),
-    linear-gradient(135deg, #2c2f3d 0%, #07162a 45%, #163b9a 100%);
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.09);
-  box-shadow: 0 28px 70px rgba(0,0,0,0.55);
-  color: #f6f8ff;
-}
-
-.team-shell-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.team-block {
-  margin-top: clamp(14px, 2.5vw, 22px);
-}
-
-.team-block:first-child {
-  margin-top: 0;
-}
-
-.team-block--grid {
-  padding: clamp(16px, 3vw, 26px);
-  border-radius: 18px;
-  background: linear-gradient(120deg, rgba(0,195,255,0.14), rgba(26,126,255,0.08));
-  border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
-  backdrop-filter: blur(10px);
-}
-
-.team-block--grid .why-subtitle {
-  color: rgba(233,238,255,0.88);
-}
-
-
-/* ===========================
-   TEAM GRID
-   =========================== */
-
-.team-grid {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  max-width: 1100px;
-  margin: 24px auto 0;
-}
-
-.team-grid .team-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 14px;
-  padding: 18px 16px;
-  color: #e9ebff;
-  box-shadow: 0 14px 32px rgba(0,0,0,0.3);
-  backdrop-filter: blur(6px);
-  text-align: left;
-}
-
-.team-grid .team-card h3 {
-  margin: 0 0 8px;
-  font-size: 1.05rem;
-  color: #ffffff;
-}
-
-.team-grid .team-card p {
-  margin: 0;
-  color: #cfd9ff;
-  line-height: 1.5;
-}
-
-
-/* ===========================
-   CTA "HABLEMOS" – BLUE ONLY
-   (funciona en HTML viejo y nuevo)
-   =========================== */
-
-/* Soporte para ambos contenedores */
-.team-cta,
-.team-block--cta {
-  padding: clamp(18px, 3vw, 36px) 0;
-}
-
-/* Fondo / marco si existe overlay (HTML viejo) */
-.team-cta .overlay {
-  padding: clamp(22px, 3.5vw, 52px) clamp(18px, 4vw, 42px);
-  text-align: center;
-
-  background:
-    radial-gradient(60% 70% at 20% 30%, rgba(0,195,255,0.18), transparent 60%),
-    radial-gradient(60% 70% at 80% 35%, rgba(26,126,255,0.16), transparent 62%),
-    linear-gradient(135deg, #070a18 0%, #07162a 45%, #061029 100%);
-
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.09);
-  box-shadow: 0 28px 70px rgba(0,0,0,0.55);
-}
-
-/* Fondo / marco si NO hay overlay (HTML nuevo team-block--cta) */
-.team-block--cta {
-  text-align: center;
-
-  background:
-    radial-gradient(60% 70% at 20% 30%, rgba(0,195,255,0.18), transparent 60%),
-    radial-gradient(60% 70% at 80% 35%, rgba(26,126,255,0.16), transparent 62%),
-    linear-gradient(135deg, #070a18 0%, #07162a 45%, #061029 100%);
-
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.09);
-  box-shadow: 0 28px 70px rgba(0,0,0,0.55);
-
-  /* separa el marco del panel interior */
-  padding: clamp(16px, 2.8vw, 26px);
-}
-
-/* Panel glass interno (ambos) */
-.team-cta .team-cta-panel,
-.team-block--cta .team-cta-panel {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: clamp(18px, 3vw, 30px) clamp(16px, 3.5vw, 32px);
-  text-align: center;
-
-  border-radius: 18px;
-  background: linear-gradient(120deg, rgba(0,195,255,0.18), rgba(26,126,255,0.14));
-  border: 1px solid rgba(255,255,255,0.16);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.45);
-  backdrop-filter: blur(10px);
-}
-
-/* Mata la rayita violeta SOLO en el CTA */
-.team-cta .section-title::after,
-.team-block--cta .section-title::after,
-#team-cta-title.section-title::after {
-  display: none !important;
-}
-
-/* Quita la rayita debajo de "Nuestro equipo" */
-#team-heading.section-title::after {
-  display: none !important;
-}
-
-/* Título CTA */
-.team-cta .team-cta-panel .section-title,
-.team-block--cta .team-cta-panel .section-title,
-#team-cta-title.section-title {
-  margin: 0 0 10px;
-  font-size: clamp(1.9rem, 3.2vw, 3rem);
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  color: #f6f8ff;
-}
-
-/* Subtítulo CTA (evita que quede oscuro por estilos globales) */
-.team-cta .why-subtitle,
-.team-block--cta .why-subtitle,
-#team-cta-text {
-  color: rgba(233,238,255,0.88) !important;
-  max-width: 820px;
-  margin: 0 auto 16px;
-  line-height: 1.55;
-  font-size: clamp(1rem, 1.2vw, 1.1rem);
-}
-
-/* Botón CTA (evita link azul) */
-.team-cta a.cta-button,
-.team-block--cta a.cta-button,
-a#team-cta-button.cta-button {
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-
-  margin-top: 12px;
-  padding: 14px clamp(32px, 8vw, 60px);
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.12);
-
-  background: linear-gradient(120deg, #00d1ff 0%, #7b2ff7 100%) !important;
-  color: #0b0620 !important;
-
-  font-weight: 800;
-  letter-spacing: 0.2px;
-  text-decoration: none !important;
-
-  box-shadow: 0 16px 36px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.12);
-
-  transition: transform 150ms ease, box-shadow 180ms ease, filter 180ms ease, background-position 220ms ease;
-  background-size: 200% 200%;
-  background-position: 0% 50%;
-  position: relative;
-}
-
-/* Cuadradito del botón */
-.team-cta a.cta-button::after,
-.team-block--cta a.cta-button::after,
-a#team-cta-button.cta-button::after {
-  content: none;
-  width: 14px;
-  height: 14px;
-  border-radius: 4px;
-  background: rgba(6, 16, 34, 0.28);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.28);
-  display: inline-block;
-  flex: 0 0 14px;
-}
-
-.team-cta a.cta-button:hover,
-.team-block--cta a.cta-button:hover,
-a#team-cta-button.cta-button:hover {
-  filter: saturate(1.05);
-  transform: translateY(-2px);
-  box-shadow: 0 20px 42px rgba(0,0,0,0.45), 0 0 0 1px rgba(123,191,255,0.45);
-  background: linear-gradient(120deg, #7b2ff7 0%, #00d1ff 100%) !important;
-}
-
-.team-cta a.cta-button:active,
-.team-block--cta a.cta-button:active,
-a#team-cta-button.cta-button:active {
-  transform: translateY(-1px);
-}
-
-
-/* ===========================
-   CTA "TRABAJÁ CON NOSOTROS"
-   =========================== */
-
-.team-credibility-card {
-  margin: clamp(14px, 2.5vw, 22px) auto 0;
-  max-width: 1100px;
-
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 14px;
-  align-items: center;
-
-  padding: clamp(14px, 2.8vw, 22px);
-  border-radius: 18px;
-
-  text-align: left;
-  color: #f6f8ff;
-  background: linear-gradient(120deg, rgba(0,195,255,0.16), rgba(26,126,255,0.10));
-  border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
-  backdrop-filter: blur(10px);
-
-  transition: box-shadow 150ms ease, transform 150ms ease, border-color 150ms ease;
-}
-
-.team-credibility-card:hover {
-  box-shadow: 0 26px 60px rgba(0,0,0,0.52);
-  border-color: rgba(255,255,255,0.22);
-  transform: translateY(-1px);
-}
-
-.team-credibility-card .cred-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  display: grid;
-  place-items: center;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.14);
-}
-
-.team-credibility-card .cred-icon svg rect,
-.team-credibility-card .cred-icon svg path {
-  stroke: rgba(246,248,255,0.88);
-}
-
-.team-credibility-card h3 {
-  margin: 0 0 6px;
-  font-size: 1.1rem;
-  color: #ffffff;
-}
-
-.team-credibility-card p {
-  margin: 0 0 10px;
-  color: rgba(233,238,255,0.88);
-  line-height: 1.6;
-}
-
-.team-credibility-card .cred-email {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 700;
-  color: #00d1ff;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: color 140ms ease, border-color 140ms ease;
-}
-
-.team-credibility-card .cred-email:hover {
-  color: #7b2ff7;
-  border-color: rgba(123,47,247,0.5);
-}
-
-
-/* ===========================
-   BACK BUTTON
-   =========================== */
-
 .back-btn {
   position: fixed;
   top: calc(var(--header-height, 72px) + 8px);
   left: 12px;
   z-index: 80;
-
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
   padding: 10px 14px;
   border-radius: 999px;
-
   background: rgba(0,0,0,0.35);
   border: 1px solid rgba(255,255,255,0.2);
   color: #f4f6ff;
-
   text-decoration: none;
   font-weight: 700;
-
   box-shadow: 0 8px 20px rgba(0,0,0,0.35);
   backdrop-filter: blur(10px);
-
   transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
 }
 
@@ -420,20 +61,215 @@ a#team-cta-button.cta-button:active {
   border-color: rgba(0,195,255,0.7);
 }
 
+body:has(main#equipo.team-shell) {
+  background: #07111f;
+}
 
-/* ===========================
-   RESPONSIVE
-   =========================== */
+main#equipo.team-shell {
+  position: relative;
+  margin: 0;
+  padding: clamp(54px, 7vw, 92px) clamp(18px, 5vw, 64px) !important;
+  overflow: hidden;
+  color: #ffffff !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(36, 116, 255, 0.42), transparent 34%),
+    radial-gradient(circle at 86% 12%, rgba(0, 210, 255, 0.26), transparent 30%),
+    linear-gradient(135deg, #050b18 0%, #061a38 48%, #0d3f91 100%) !important;
+}
 
-@media (max-width: 720px) {
-  .team-credibility-card {
-    grid-template-columns: 1fr;
-    gap: 10px;
+main#equipo.team-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, transparent 0 42%, rgba(255,255,255,0.075) 42% 43%, transparent 43% 100%),
+    linear-gradient(90deg, rgba(255,255,255,0.055) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: auto, 72px 72px, 72px 72px;
+  opacity: 0.6;
+}
+
+main#equipo.team-shell .team-shell-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+main#equipo.team-shell .team-block--grid {
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+main#equipo.team-shell #team-heading {
+  margin: 0;
+  color: #ffffff !important;
+  font-size: clamp(2.5rem, 7vw, 6.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+  text-align: left;
+}
+
+main#equipo.team-shell #team-heading::after {
+  display: none !important;
+}
+
+main#equipo.team-shell #team-subtitle {
+  max-width: 540px;
+  margin: 18px 0 0;
+  color: rgba(228, 239, 255, 0.82) !important;
+  font-size: clamp(1.05rem, 1.8vw, 1.45rem);
+  line-height: 1.35;
+  text-align: left;
+}
+
+main#equipo.team-shell .team-grid {
+  counter-reset: teamcard;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: clamp(14px, 2vw, 22px) !important;
+  max-width: none !important;
+  margin: clamp(34px, 5vw, 58px) 0 0 !important;
+}
+
+main#equipo.team-shell .team-grid .team-card {
+  isolation: isolate;
+  position: relative !important;
+  display: flex !important;
+  min-width: 0 !important;
+  min-height: clamp(170px, 18vw, 230px);
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  overflow: hidden;
+  padding: clamp(18px, 2.4vw, 26px) !important;
+  color: #ffffff !important;
+  text-align: left !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  border-radius: 18px !important;
+  background: linear-gradient(150deg, rgba(255,255,255,0.18), rgba(255,255,255,0.055)) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28) !important;
+  backdrop-filter: blur(14px) saturate(145%);
+  -webkit-backdrop-filter: blur(14px) saturate(145%);
+  animation: tmCardIn 620ms cubic-bezier(.2,.8,.2,1) both;
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+
+main#equipo.team-shell .team-grid .team-card:nth-child(1) { animation-delay: 40ms; }
+main#equipo.team-shell .team-grid .team-card:nth-child(2) { animation-delay: 90ms; }
+main#equipo.team-shell .team-grid .team-card:nth-child(3) { animation-delay: 140ms; }
+main#equipo.team-shell .team-grid .team-card:nth-child(4) { animation-delay: 190ms; }
+main#equipo.team-shell .team-grid .team-card:nth-child(5) { animation-delay: 240ms; }
+main#equipo.team-shell .team-grid .team-card:nth-child(6) { animation-delay: 290ms; }
+main#equipo.team-shell .team-grid .team-card:nth-child(7) { animation-delay: 340ms; }
+main#equipo.team-shell .team-grid .team-card:nth-child(8) { animation-delay: 390ms; }
+
+main#equipo.team-shell .team-grid .team-card::before {
+  content: "";
+  position: absolute;
+  inset: -35%;
+  z-index: -1;
+  background: conic-gradient(from 180deg, transparent, rgba(0, 210, 255, 0.42), rgba(46, 107, 255, 0.48), transparent);
+  opacity: 0;
+  transform: rotate(0deg);
+  transition: opacity 220ms ease;
+}
+
+main#equipo.team-shell .team-grid .team-card::after {
+  content: "0" counter(teamcard);
+  counter-increment: teamcard;
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  color: rgba(255,255,255,0.42);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+main#equipo.team-shell .team-grid .team-card:hover {
+  transform: translateY(-8px) scale(1.015);
+  border-color: rgba(127, 215, 255, 0.76) !important;
+  background: linear-gradient(150deg, rgba(255,255,255,0.24), rgba(56, 132, 255, 0.16)) !important;
+  box-shadow: 0 28px 70px rgba(0, 32, 92, 0.42) !important;
+}
+
+main#equipo.team-shell .team-grid .team-card:hover::before {
+  opacity: 1;
+  animation: tmSpin 1800ms linear infinite;
+}
+
+main#equipo.team-shell .team-grid .team-card h3 {
+  margin: 0 !important;
+  color: #ffffff !important;
+  font-size: clamp(1.65rem, 3vw, 2.55rem) !important;
+  line-height: 0.95 !important;
+  letter-spacing: -0.045em;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+  hyphens: manual !important;
+  text-wrap: balance;
+}
+
+main#equipo.team-shell .team-grid .team-card p {
+  max-width: 18ch;
+  margin: 0 !important;
+  color: rgba(227, 240, 255, 0.76) !important;
+  font-size: clamp(0.95rem, 1.15vw, 1.06rem) !important;
+  line-height: 1.28 !important;
+}
+
+.team-block--cta,
+.team-block--cred {
+  display: none !important;
+}
+
+@keyframes tmCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes tmSpin {
+  to { transform: rotate(1turn); }
+}
+
+@media (max-width: 980px) {
+  main#equipo.team-shell .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-hero .overlay {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 72px 16px 60px;
   }
 
-  .team-credibility-card .cred-icon {
-    width: 42px;
-    height: 42px;
+  .team-intro {
+    max-width: min(520px, 92vw);
+    padding: 0 4px;
+    text-align: center;
+  }
+
+  .team-intro .section-title,
+  .team-intro .intro-tagline {
+    text-align: center;
   }
 }
 
@@ -443,8 +279,18 @@ a#team-cta-button.cta-button:active {
     left: 10px;
     padding: 9px 12px;
   }
+}
 
-  .team-shell {
-    padding: clamp(16px, 5vw, 28px) clamp(14px, 5vw, 22px);
+@media (max-width: 560px) {
+  main#equipo.team-shell {
+    padding: 46px 16px !important;
+  }
+
+  main#equipo.team-shell .team-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  main#equipo.team-shell .team-grid .team-card {
+    min-height: 142px;
   }
 }
