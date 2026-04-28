@@ -68,7 +68,7 @@ body:has(main#equipo.team-shell) {
 main#equipo.team-shell {
   position: relative;
   margin: 0;
-  padding: clamp(54px, 7vw, 92px) clamp(18px, 5vw, 64px) !important;
+  padding: clamp(54px, 7vw, 92px) clamp(18px, 5vw, 64px) clamp(28px, 4vw, 46px) !important;
   overflow: hidden;
   color: #ffffff !important;
   border: 0 !important;
@@ -110,12 +110,7 @@ main#equipo.team-shell .team-block--grid {
 }
 
 main#equipo.team-shell #team-heading {
-  margin: 0;
-  color: #ffffff !important;
-  font-size: clamp(2.5rem, 7vw, 6.4rem);
-  line-height: 0.9;
-  letter-spacing: -0.055em;
-  text-align: left;
+  display: none !important;
 }
 
 main#equipo.team-shell #team-heading::after {
@@ -124,9 +119,9 @@ main#equipo.team-shell #team-heading::after {
 
 main#equipo.team-shell #team-subtitle {
   max-width: 540px;
-  margin: 18px 0 0;
+  margin: 0;
   color: rgba(228, 239, 255, 0.82) !important;
-  font-size: clamp(1.05rem, 1.8vw, 1.45rem);
+  font-size: clamp(1.05rem, 1.7vw, 1.32rem);
   line-height: 1.35;
   text-align: left;
 }
@@ -135,9 +130,9 @@ main#equipo.team-shell .team-grid {
   counter-reset: teamcard;
   display: grid !important;
   grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  gap: clamp(14px, 2vw, 22px) !important;
+  gap: clamp(12px, 1.5vw, 18px) !important;
   max-width: none !important;
-  margin: clamp(34px, 5vw, 58px) 0 0 !important;
+  margin: clamp(26px, 4vw, 44px) 0 0 !important;
 }
 
 main#equipo.team-shell .team-grid .team-card {
@@ -145,22 +140,27 @@ main#equipo.team-shell .team-grid .team-card {
   position: relative !important;
   display: flex !important;
   min-width: 0 !important;
-  min-height: clamp(170px, 18vw, 230px);
+  min-height: clamp(158px, 14vw, 205px);
   flex-direction: column;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 8px;
   overflow: hidden;
-  padding: clamp(18px, 2.4vw, 26px) !important;
+  padding: 18px 18px 20px !important;
   color: #ffffff !important;
   text-align: left !important;
-  border: 1px solid rgba(255,255,255,0.18) !important;
-  border-radius: 18px !important;
-  background: linear-gradient(150deg, rgba(255,255,255,0.18), rgba(255,255,255,0.055)) !important;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28) !important;
-  backdrop-filter: blur(14px) saturate(145%);
-  -webkit-backdrop-filter: blur(14px) saturate(145%);
-  animation: tmCardIn 620ms cubic-bezier(.2,.8,.2,1) both;
-  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+  border: 1px solid rgba(174, 211, 255, 0.24) !important;
+  border-radius: 12px !important;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(166, 217, 255, 0.16), transparent 28%),
+    linear-gradient(150deg, rgba(255,255,255,0.13), rgba(255,255,255,0.045)),
+    linear-gradient(120deg, transparent 0 40%, rgba(255,255,255,0.08) 50%, transparent 60%) !important;
+  background-size: auto, 220% 100% !important;
+  background-position: center, 120% 0 !important;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255,255,255,0.12) !important;
+  backdrop-filter: blur(12px) saturate(135%);
+  -webkit-backdrop-filter: blur(12px) saturate(135%);
+  animation: tmCardIn 620ms cubic-bezier(.2,.8,.2,1) both, tmCardBreath 4.8s ease-in-out infinite;
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease, background-position 520ms ease, box-shadow 220ms ease;
 }
 
 main#equipo.team-shell .team-grid .team-card:nth-child(1) { animation-delay: 40ms; }
@@ -175,11 +175,12 @@ main#equipo.team-shell .team-grid .team-card:nth-child(8) { animation-delay: 390
 main#equipo.team-shell .team-grid .team-card::before {
   content: "";
   position: absolute;
-  inset: -35%;
+  inset: -45%;
   z-index: -1;
-  background: conic-gradient(from 180deg, transparent, rgba(0, 210, 255, 0.42), rgba(46, 107, 255, 0.48), transparent);
+  background: conic-gradient(from 180deg, transparent, rgba(0, 210, 255, 0.28), rgba(46, 107, 255, 0.34), transparent);
   opacity: 0;
   transform: rotate(0deg);
+  animation: tmSpin 10s linear infinite;
   transition: opacity 220ms ease;
 }
 
@@ -187,44 +188,70 @@ main#equipo.team-shell .team-grid .team-card::after {
   content: "0" counter(teamcard);
   counter-increment: teamcard;
   position: absolute;
-  top: 18px;
-  left: 20px;
-  color: rgba(255,255,255,0.42);
-  font-size: 0.78rem;
+  top: 14px;
+  left: 16px;
+  color: rgba(180, 211, 244, 0.62);
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.12em;
+  text-shadow: 0 0 0 rgba(127, 215, 255, 0);
+  transition: color 220ms ease, transform 220ms ease, text-shadow 220ms ease;
 }
 
 main#equipo.team-shell .team-grid .team-card:hover {
-  transform: translateY(-8px) scale(1.015);
-  border-color: rgba(127, 215, 255, 0.76) !important;
-  background: linear-gradient(150deg, rgba(255,255,255,0.24), rgba(56, 132, 255, 0.16)) !important;
-  box-shadow: 0 28px 70px rgba(0, 32, 92, 0.42) !important;
+  transform: translateY(-5px);
+  border-color: rgba(127, 215, 255, 0.68) !important;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(166, 217, 255, 0.22), transparent 30%),
+    linear-gradient(150deg, rgba(255,255,255,0.18), rgba(56, 132, 255, 0.13)),
+    linear-gradient(120deg, transparent 0 36%, rgba(255,255,255,0.15) 48%, transparent 60%) !important;
+  background-size: auto, 220% 100% !important;
+  background-position: center, -40% 0 !important;
+  box-shadow: 0 20px 46px rgba(0, 32, 92, 0.34), inset 0 1px 0 rgba(255,255,255,0.16) !important;
+  animation-play-state: paused;
 }
 
 main#equipo.team-shell .team-grid .team-card:hover::before {
-  opacity: 1;
-  animation: tmSpin 1800ms linear infinite;
+  opacity: 0.5;
+  animation-duration: 2600ms;
+}
+
+main#equipo.team-shell .team-grid .team-card:hover::after {
+  color: rgba(179, 226, 255, 0.92);
+  transform: translateY(-2px);
+  text-shadow: 0 0 18px rgba(127, 215, 255, 0.56);
 }
 
 main#equipo.team-shell .team-grid .team-card h3 {
   margin: 0 !important;
   color: #ffffff !important;
-  font-size: clamp(1.65rem, 3vw, 2.55rem) !important;
-  line-height: 0.95 !important;
-  letter-spacing: -0.045em;
+  font-size: clamp(1.16rem, 1.8vw, 1.62rem) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.035em;
   overflow-wrap: normal !important;
   word-break: normal !important;
   hyphens: manual !important;
   text-wrap: balance;
+  transition: transform 220ms ease, text-shadow 220ms ease;
 }
 
 main#equipo.team-shell .team-grid .team-card p {
-  max-width: 18ch;
+  max-width: 29ch;
   margin: 0 !important;
-  color: rgba(227, 240, 255, 0.76) !important;
-  font-size: clamp(0.95rem, 1.15vw, 1.06rem) !important;
-  line-height: 1.28 !important;
+  color: rgba(227, 240, 255, 0.82) !important;
+  font-size: clamp(0.8rem, 0.86vw, 0.9rem) !important;
+  line-height: 1.32 !important;
+  transition: color 220ms ease, transform 220ms ease;
+}
+
+main#equipo.team-shell .team-grid .team-card:hover h3 {
+  transform: translateY(-2px);
+  text-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
+}
+
+main#equipo.team-shell .team-grid .team-card:hover p {
+  color: rgba(247, 252, 255, 0.94) !important;
+  transform: translateY(-1px);
 }
 
 .team-block--cta,
@@ -245,6 +272,22 @@ main#equipo.team-shell .team-grid .team-card p {
 
 @keyframes tmSpin {
   to { transform: rotate(1turn); }
+}
+
+@keyframes tmCardBreath {
+  0%, 100% {
+    filter: brightness(1) saturate(1);
+  }
+  50% {
+    filter: brightness(1.06) saturate(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main#equipo.team-shell .team-grid .team-card,
+  main#equipo.team-shell .team-grid .team-card::before {
+    animation: none !important;
+  }
 }
 
 @media (max-width: 980px) {
@@ -283,7 +326,7 @@ main#equipo.team-shell .team-grid .team-card p {
 
 @media (max-width: 560px) {
   main#equipo.team-shell {
-    padding: 46px 16px !important;
+    padding: 42px 16px !important;
   }
 
   main#equipo.team-shell .team-grid {
@@ -291,6 +334,161 @@ main#equipo.team-shell .team-grid .team-card p {
   }
 
   main#equipo.team-shell .team-grid .team-card {
-    min-height: 142px;
+    min-height: 150px;
   }
+}
+
+.team-contact-section {
+  position: relative;
+  overflow: hidden;
+  margin-top: 0 !important;
+  min-height: auto !important;
+  display: block !important;
+  align-items: initial !important;
+  justify-content: initial !important;
+  text-align: left !important;
+  padding: clamp(30px, 4vw, 46px) clamp(16px, 5vw, 64px) clamp(42px, 5vw, 62px) !important;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(36, 116, 255, 0.22), transparent 32%),
+    radial-gradient(circle at 86% 8%, rgba(0, 210, 255, 0.18), transparent 28%),
+    linear-gradient(135deg, #050b18 0%, #061a38 48%, #0d3f91 100%) !important;
+  border-top: 0;
+}
+
+.team-contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  opacity: 0.48;
+  mask-image: linear-gradient(180deg, transparent 0%, #000 12%, #000 100%);
+}
+
+.team-contact-section .contact-shell {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.team-contact-section .contact-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(360px, 520px);
+  align-items: center;
+  gap: clamp(28px, 5vw, 74px);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.team-contact-copy {
+  max-width: 520px;
+}
+
+.team-contact-section h2 {
+  margin: 0;
+  color: #ffffff !important;
+  font-size: clamp(2rem, 4.2vw, 4.2rem) !important;
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+}
+
+.team-contact-section .contact-microcopy {
+  max-width: 480px;
+  margin: 18px 0 0;
+  color: rgba(228, 239, 255, 0.78) !important;
+  font-size: clamp(0.98rem, 1.2vw, 1.12rem);
+  line-height: 1.56;
+}
+
+.team-contact-section .contact-card {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(83, 158, 255, 0.22), transparent 34%),
+    linear-gradient(145deg, rgba(13, 51, 112, 0.94), rgba(6, 21, 48, 0.96)) !important;
+  border: 1px solid rgba(179, 226, 255, 0.28) !important;
+  border-radius: 14px;
+  padding: 22px !important;
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.13) !important;
+  backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+}
+
+.team-contact-section .form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.team-contact-section .form-field {
+  gap: 6px;
+}
+
+.team-contact-section label {
+  color: #f8fbff !important;
+  font-weight: 750;
+  font-size: 0.88rem;
+  letter-spacing: 0;
+}
+
+.team-contact-section input,
+.team-contact-section textarea {
+  border-radius: 10px;
+  min-height: 44px;
+  padding: 10px 12px !important;
+  border: 1px solid rgba(179, 226, 255, 0.28) !important;
+  background: rgba(3, 17, 42, 0.72) !important;
+  color: #ffffff !important;
+  caret-color: #ffffff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 0 0 1px rgba(255,255,255,0.02) !important;
+}
+
+.team-contact-section textarea {
+  min-height: 104px !important;
+}
+
+.team-contact-section input::placeholder,
+.team-contact-section textarea::placeholder {
+  color: rgba(224, 239, 255, 0.62) !important;
+}
+
+.team-contact-section input:focus,
+.team-contact-section textarea:focus {
+  border-color: rgba(125, 211, 252, 0.95) !important;
+  background: rgba(4, 24, 58, 0.88) !important;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.22), inset 0 1px 0 rgba(255,255,255,0.12) !important;
+}
+
+.team-contact-section .contact-button {
+  height: 48px;
+  margin-top: 12px;
+  background: linear-gradient(120deg, #7dd3fc 0%, #2f7dff 48%, #1d4ed8 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(191, 219, 254, 0.38) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 18px 42px rgba(17, 91, 217, 0.34), inset 0 1px 0 rgba(255,255,255,0.18) !important;
+}
+
+@media (max-width: 860px) {
+  .team-contact-section .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .team-contact-copy,
+  .team-contact-section .contact-microcopy {
+    max-width: none;
+  }
+
+  .team-contact-section .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team-contact-section .contact-button:hover {
+  background: linear-gradient(120deg, #38bdf8 0%, #2563eb 52%, #1e40af 100%) !important;
+  box-shadow: 0 22px 50px rgba(17, 91, 217, 0.44), 0 0 0 1px rgba(125, 211, 252, 0.34) !important;
 }
