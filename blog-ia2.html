@@ -75,20 +75,6 @@
             z-index: 0;
         }
 
-        /* Nav estilo más caro sin romper el resto de la web */
-        body.blog-article nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 40;
-            background: radial-gradient(circle at 0% 0%, rgba(124,58,237,0.20), transparent 55%)
-                        ,rgba(5,3,19,0.84);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            border-bottom: 1px solid rgba(148,163,255,0.35);
-        }
-
         .article-shell {
             position: relative;
             z-index: 1;
@@ -321,6 +307,8 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="./css/blog_article_clean.css">
+    <link rel="stylesheet" href="./css/header_dark_global.css">
 </head>
 <body class="blog-article">
     <nav>
@@ -376,8 +364,9 @@
     </nav>
 
     <main class="article-shell">
+        <div class="article-intro">
         <div class="article-hero">
-            <a class="back-link" id="blog-back" href="index.html#blog">Volver</a>
+            <a class="back-link" id="blog-back" href="./blog/index.html">Volver</a>
             <h1 id="article-title">IA en Marketing: la inversión que separa a las marcas que crecen de las que se quedan atrás</h1>
             <p class="article-meta" id="article-meta">Por TrendMakers - IA, Marketing &amp; Automatización · 2026</p>
             <p class="lead" id="lead-1">El marketing cambió para siempre. Hoy, las marcas que crecen más rápido no son las que publican más, sino las que usan IA para entender, anticipar y ejecutar antes que la competencia.</p>
@@ -387,6 +376,8 @@
 
         <div class="article-image">
             <img src="./img/ROBOT-IA.png" alt="Empresas argentinas escalando con IA y automatización">
+        </div>
+
         </div>
 
         <section class="article-section" id="section-1">

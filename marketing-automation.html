@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -109,7 +109,7 @@
             color: #eae6ff;
         }
         .list li::before {
-            content: "✔";
+            content: "";
             color: #7bffb2;
             font-size: 1.2rem;
             line-height: 1;
@@ -243,19 +243,329 @@
             50%  { filter: brightness(1.18) drop-shadow(0 0 12px rgba(0, 255, 255, 0.55)); }
             100% { filter: brightness(1) drop-shadow(0 0 6px rgba(0, 255, 255, 0.35)); }
         }
+
+        /* Consulting rebrand */
+        :root {
+            --ma-ink: #0b1728;
+            --ma-muted: #53667f;
+            --ma-line: #d8e0ea;
+            --ma-blue: #1f5eff;
+            --ma-soft: #f4f8fc;
+            --ma-panel: rgba(255,255,255,0.88);
+        }
+
+        body {
+            background:
+                linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+                radial-gradient(circle at 82% 8%, rgba(31, 94, 255, 0.13), transparent 28%),
+                linear-gradient(180deg, #f7fbff 0%, #ffffff 48%, #f5f8fc 100%) !important;
+            background-size: 46px 46px, 46px 46px, auto, auto !important;
+            color: var(--ma-ink) !important;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(180deg, rgba(255,255,255,0.28), transparent 38%);
+            z-index: 0;
+        }
+
+        .content,
+        .shell {
+            position: relative;
+            z-index: 1;
+        }
+
+        .shell {
+            max-width: 1180px;
+            padding-top: clamp(112px, 13vh, 148px) !important;
+        }
+
+        section {
+            margin: clamp(28px, 4vw, 58px) 0 !important;
+        }
+
+        h1, h2, h3 {
+            color: var(--ma-ink) !important;
+            letter-spacing: 0 !important;
+        }
+
+        h1 {
+            font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+            font-size: clamp(3.1rem, 5.8vw, 5.7rem) !important;
+            line-height: 0.94 !important;
+            max-width: 720px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: clamp(1.65rem, 2.6vw, 3rem) !important;
+            line-height: 1.04 !important;
+        }
+
+        h3 {
+            font-size: 1.06rem !important;
+        }
+
+        p {
+            color: var(--ma-muted) !important;
+            font-size: 1rem;
+        }
+
+        .hero {
+            grid-template-columns: minmax(0, 0.98fr) minmax(360px, 0.7fr) !important;
+            gap: clamp(38px, 7vw, 108px) !important;
+            align-items: center !important;
+            min-height: clamp(500px, 68vh, 660px);
+            padding-bottom: clamp(24px, 4vw, 42px);
+        }
+
+        .hero > div:first-child {
+            display: grid;
+            gap: 18px;
+        }
+
+        .pill {
+            display: none !important;
+        }
+
+        .hero #ma-h2 {
+            max-width: 620px;
+            font-size: clamp(1.35rem, 2vw, 2.15rem) !important;
+            color: var(--ma-ink) !important;
+        }
+
+        .hero #ma-hero-text {
+            max-width: 690px;
+            font-size: clamp(1rem, 1.25vw, 1.18rem);
+            line-height: 1.68;
+        }
+
+        .hero-visual {
+            min-height: 430px !important;
+            border-radius: 10px !important;
+            background:
+                radial-gradient(circle at 50% 18%, rgba(31, 94, 255, 0.11), transparent 42%),
+                linear-gradient(180deg, rgba(255,255,255,0.56), rgba(244,248,252,0.42)) !important;
+            border: 1px solid rgba(216, 224, 234, 0.75);
+            box-shadow: 0 24px 58px rgba(15, 23, 42, 0.09) !important;
+        }
+
+        .hero-visual img {
+            max-width: min(76%, 330px) !important;
+            filter: drop-shadow(0 20px 34px rgba(15, 23, 42, 0.16)) !important;
+        }
+
+        .btn-primary,
+        .cta-panel .btn-primary {
+            width: fit-content;
+            min-height: 48px;
+            padding: 0 22px !important;
+            border-radius: 8px !important;
+            background: var(--ma-ink) !important;
+            border: 1px solid rgba(11, 23, 40, 0.16) !important;
+            color: #ffffff !important;
+            box-shadow: 0 16px 34px rgba(15, 23, 42, 0.18) !important;
+            font-size: 0.94rem;
+        }
+
+        .btn-primary:hover,
+        .cta-panel .btn-primary:hover {
+            transform: translateY(-2px) !important;
+            background: #13243d !important;
+            box-shadow: 0 22px 44px rgba(15, 23, 42, 0.22) !important;
+        }
+
+        .card {
+            border-radius: 10px !important;
+            background:
+                linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.9)),
+                var(--ma-panel) !important;
+            border: 1px solid var(--ma-line) !important;
+            box-shadow: 0 18px 42px rgba(15, 23, 42, 0.07) !important;
+            color: var(--ma-ink) !important;
+        }
+
+        section > .card {
+            padding: clamp(26px, 4vw, 44px) !important;
+        }
+
+        .grid-3,
+        .grid-2 {
+            gap: 18px !important;
+        }
+
+        .grid-3 > .card,
+        .grid-2 .step,
+        .mini-card {
+            background: rgba(255,255,255,0.74) !important;
+            border: 1px solid var(--ma-line) !important;
+            box-shadow: none !important;
+        }
+
+        .list li {
+            color: #32445b !important;
+            line-height: 1.5;
+        }
+
+        .list li::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            margin-top: 0.58em;
+            border-radius: 999px;
+            background: var(--ma-blue);
+            box-shadow: none;
+        }
+
+        .step {
+            padding: 22px;
+            border-radius: 10px;
+        }
+
+        .step-number {
+            width: 32px !important;
+            height: 32px !important;
+            border-radius: 8px !important;
+            background: #e8efff !important;
+            border: 1px solid rgba(31, 94, 255, 0.18);
+            color: var(--ma-blue) !important;
+            box-shadow: none !important;
+        }
+
+        .ma-include-image,
+        .ma-steps-image {
+            display: none !important;
+        }
+
+        .neon-electric {
+            animation: none !important;
+        }
+
+        .cta-panel {
+            max-width: 980px !important;
+            padding: clamp(30px, 5vw, 54px) !important;
+            border-radius: 10px !important;
+            text-align: left !important;
+            background:
+                radial-gradient(circle at 86% 0%, rgba(31, 94, 255, 0.18), transparent 34%),
+                linear-gradient(135deg, #0b1728, #101d31) !important;
+            border: 1px solid rgba(185, 207, 255, 0.18) !important;
+            box-shadow: 0 26px 70px rgba(15, 23, 42, 0.18) !important;
+        }
+
+        .cta-panel h2,
+        .cta-panel p {
+            color: #ffffff !important;
+            max-width: 740px;
+            margin-left: 0 !important;
+            text-align: left !important;
+        }
+
+        .cta-panel p {
+            color: rgba(233, 240, 255, 0.76) !important;
+        }
+
+        .cta-panel .btn-primary {
+            background: #ffffff !important;
+            color: var(--ma-ink) !important;
+        }
+
+        .mini-card {
+            border-radius: 10px !important;
+            padding: 20px !important;
+        }
+
+        .mini-card:hover {
+            transform: translateY(-3px) !important;
+            border-color: rgba(31, 94, 255, 0.28) !important;
+            box-shadow: 0 18px 34px rgba(15, 23, 42, 0.1) !important;
+        }
+
+        .back-btn {
+            top: calc(var(--header-height) + 14px) !important;
+            background: rgba(255,255,255,0.84) !important;
+            border: 1px solid var(--ma-line) !important;
+            color: var(--ma-ink) !important;
+            border-radius: 8px !important;
+            box-shadow: 0 14px 34px rgba(15, 23, 42, 0.1) !important;
+        }
+
+        .ma-reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 760ms cubic-bezier(.2,.8,.2,1), transform 760ms cubic-bezier(.2,.8,.2,1);
+        }
+
+        .ma-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero .pill,
+        .hero h1,
+        .hero h2,
+        .hero p,
+        .hero .btn-primary,
+        .hero .hero-visual {
+            opacity: 0;
+            transform: translateY(18px);
+            animation: maHeroIn 800ms cubic-bezier(.2,.8,.2,1) forwards;
+        }
+
+        .hero .pill { animation-delay: 80ms; }
+        .hero h1 { animation-delay: 90ms; }
+        .hero h2 { animation-delay: 180ms; }
+        .hero p { animation-delay: 270ms; }
+        .hero .btn-primary { animation-delay: 360ms; }
+        .hero .hero-visual { animation-delay: 180ms; }
+
+        @keyframes maHeroIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 860px) {
+            .hero {
+                grid-template-columns: 1fr !important;
+                min-height: 0;
+                align-items: start !important;
+            }
+
+            h1 {
+                font-size: clamp(2.55rem, 15vw, 4.1rem) !important;
+            }
+
+            .hero-visual {
+                min-height: 260px !important;
+            }
+
+            .grid-3,
+            .grid-2,
+            .mini-cards {
+                grid-template-columns: 1fr !important;
+            }
+
+            .shell {
+                padding-top: 128px !important;
+            }
+        }
     </style>
+    <link rel="stylesheet" href="./css/header_dark_global.css">
 </head>
 <body>
     <div class="content">
-        <a class="back-btn" href="index.html#problema" aria-label="Volver a la sección ¿Listo para llevar tu marca al próximo nivel?">&#8592; Volver</a>
+        <a class="back-btn" href="index.html#problema" aria-label="Volver al inicio">&#8592; Volver</a>
         <nav>
             <a class="tm-header-badge" href="index.html#inicio" aria-label="TrendMakers home" id="tm-badge">
                 <img src="./img/TrendMakers-Header.png" alt="TrendMakers">
             </a>
-            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos rápidos">
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos r&aacute;pidos">
                 <a href="https://www.instagram.com/trendmakersagency.ok?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
                 <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-                <!-- Email dinámico ES/EN -->
+                <!-- Email dinamico ES/EN -->
                 <a class="mailto-dynamic" href="mailto:info@trendmakers.agency" target="_blank" aria-label="Email">Email</a>
                 <a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" aria-label="WhatsApp">WhatsApp</a>
             </div>
@@ -277,7 +587,7 @@
                         <li><a href="blog/index.html" id="nav-blog" class="menu-item">Blog</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de éxito</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de &eacute;xito</a></li>
                 <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
             </ul>
             <div class="nav-lang">
@@ -286,7 +596,7 @@
                   <img src="./img/IDIOMA.PNG" alt="Idioma">
                 </button>
                 <div class="lang-menu" role="menu" aria-label="Idiomas">
-                  <button class="lang-option" role="menuitem" data-lang="es">Español</button>
+                  <button class="lang-option" role="menuitem" data-lang="es">Espa&ntilde;ol</button>
                   <button class="lang-option" role="menuitem" data-lang="en">English</button>
                 </div>
               </div>
@@ -298,7 +608,7 @@
                 <li><a href="index.html#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
                 <li><a href="index.html#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
                 <li><a href="blog/index.html" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
-                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de éxito</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de &eacute;xito</a></li>
                 <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
             </ul>
         </nav>
@@ -470,127 +780,127 @@
         </section>
     </div>
     <!-- Botones flotantes -->
-    <a href="Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20más%20información." class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." class="whatsapp-button" target="_blank" aria-label="WhatsApp">
         <img src="./img/WPP.PNG" alt="WhatsApp">
     </a>
-    <!-- Email flotante dinámico ES/EN -->
+    <!-- Email flotante dinamico ES/EN -->
     <a href="mailto:info@trendmakers.agency" class="email-button mailto-dynamic" target="_blank" aria-label="Email">
         <img src="./img/EMAIL.jpg" alt="Email">
     </a>
     <script src="./js/script.js"></script>
     <script>
-      /* === Copy i18n de la página === */
+      /* === Copy i18n de la pagina === */
       const maCopy = {
         es: {
           badge: "Marketing & Automation",
           h1: "Marketing & Automation",
-          h2: "Sistemas que generan y gestionan leads en piloto automático.",
-          hero: "En TrendMakers diseñamos y automatizamos funnels, pipelines y workflows para que tu negocio genere, califique y siga leads sin depender de tareas manuales. Más eficiencia, más ventas y decisiones basadas en datos reales, no en intuición.",
+          h2: "Sistemas que generan y gestionan leads en piloto autom&aacute;tico.",
+          hero: "En TrendMakers dise&ntilde;amos y automatizamos funnels, pipelines y workflows para que tu negocio genere, califique y siga leads sin depender de tareas manuales. M&aacute;s eficiencia, m&aacute;s ventas y decisiones basadas en datos reales, no en intuici&oacute;n.",
           cta: "Agendar una llamada",
-          queTitle: "¿Qué hacemos en Marketing & Automation?",
-          queText: "Transformamos tu marketing en un sistema ordenado, medible y automatizado. Conectamos tu web, tus formularios, tus campañas y tu equipo comercial para que cada lead tenga un recorrido claro: desde el primer contacto hasta la venta.",
+          queTitle: "&iquest;Qu&eacute; hacemos en Marketing & Automation?",
+          queText: "Transformamos tu marketing en un sistema ordenado, medible y automatizado. Conectamos tu web, tus formularios, tus campa&ntilde;as y tu equipo comercial para que cada lead tenga un recorrido claro: desde el primer contacto hasta la venta.",
           queList: [
-            "Diseñamos embudos de captación y nurturing de leads.",
+            "Dise&ntilde;amos embudos de captaci&oacute;n y nurturing de leads.",
             "Automatizamos correos, mensajes y seguimientos clave.",
             "Organizamos tu CRM y tus pipelines comerciales.",
-            "Te damos visibilidad en tiempo real de qué está funcionando."
+            "Te damos visibilidad en tiempo real de qu&eacute; est&aacute; funcionando."
           ],
-          probTitle: "De campañas sueltas a un sistema que no se apaga",
+          probTitle: "De campa&ntilde;as sueltas a un sistema que no se apaga",
           probText: "Si te pasa alguna de estas cosas, este servicio es para vos:",
           probList: [
-            "Tenés formularios o campañas que traen leads, pero nadie los sigue bien.",
-            "Estás cargando datos a mano en hojas de cálculo o sistemas desordenados.",
-            "No sabés qué canal trae mejores clientes ni dónde se están perdiendo oportunidades.",
-            "Sentís que el marketing depende de personas, no de procesos."
+            "Ten&eacute;s formularios o campa&ntilde;as que traen leads, pero nadie los sigue bien.",
+            "Est&aacute;s cargando datos a mano en hojas de c&aacute;lculo o sistemas desordenados.",
+            "No sab&eacute;s qu&eacute; canal trae mejores clientes ni d&oacute;nde se est&aacute;n perdiendo oportunidades.",
+            "Sent&iacute;s que el marketing depende de personas, no de procesos."
           ],
-          inclTitle: "¿Qué incluye Marketing & Automation?",
-          inclText: "Adaptamos la solución a tu negocio, pero siempre trabajamos sobre tres grandes bloques:",
-          b1Title: "Bloque 1 – CRM & Procesos Comerciales",
+          inclTitle: "&iquest;Qu&eacute; incluye Marketing & Automation?",
+          inclText: "Adaptamos la soluci&oacute;n a tu negocio, pero siempre trabajamos sobre tres grandes bloques:",
+          b1Title: "Bloque 1 - CRM & Procesos Comerciales",
           b1List: [
-            "Implementación o mejora de CRM (HubSpot, Zoho, Pipedrive, etc.).",
-            "Definición de etapas del pipeline (del lead frío al cliente).",
-            "Reglas claras de asignación y seguimiento de oportunidades."
+            "Implementaci&oacute;n o mejora de CRM (HubSpot, Zoho, Pipedrive, etc.).",
+            "Definici&oacute;n de etapas del pipeline (del lead fr&iacute;o al cliente).",
+            "Reglas claras de asignaci&oacute;n y seguimiento de oportunidades."
           ],
-          b2Title: "Bloque 2 – Automatización de Funnels y Comunicación",
+          b2Title: "Bloque 2 - Automatizaci&oacute;n de Funnels y Comunicaci&oacute;n",
           b2List: [
-            "Automatización de formularios, campañas y seguimientos.",
-            "Flujos de email y/o WhatsApp según etapa del lead.",
-            "Recordatorios y tareas automáticas para tu equipo comercial."
+            "Automatizaci&oacute;n de formularios, campa&ntilde;as y seguimientos.",
+            "Flujos de email y/o WhatsApp seg&uacute;n etapa del lead.",
+            "Recordatorios y tareas autom&aacute;ticas para tu equipo comercial."
           ],
-          b3Title: "Bloque 3 – Datos, Dashboards y Métricas",
+          b3Title: "Bloque 3 - Datos, Dashboards y M&eacute;tricas",
           b3List: [
-            "Definición de KPIs clave (leads, conversión, tiempos de respuesta, etc.).",
+            "Definici&oacute;n de KPIs clave (leads, conversi&oacute;n, tiempos de respuesta, etc.).",
             "Dashboards en Looker Studio u otra herramienta.",
             "Reportes claros para tomar decisiones sin adivinar."
           ],
-          howTitle: "¿Cómo trabajamos este servicio?",
+          howTitle: "&iquest;C&oacute;mo trabajamos este servicio?",
           steps: [
-            { title: "Paso 1 – Diagnóstico del embudo", text: "Revisamos cómo llegan hoy tus leads, qué herramientas usás, cómo se registran los datos y qué puntos de contacto existen. Definimos qué ordenar y qué automatizar." },
-            { title: "Paso 2 – Diseño del sistema", text: "Diseñamos tu embudo ideal (tráfico → captación → nurturing → seguimiento → cierre). Definimos qué herramientas actúan en cada etapa y qué tareas son automáticas." },
-            { title: "Paso 3 – Implementación y automatización", text: "Configuramos CRM, pipelines, automatizaciones de email/WhatsApp e integraciones entre formularios, campañas y herramientas internas." },
-            { title: "Paso 4 – Medición y optimización", text: "Revisamos métricas, detectamos cuellos de botella y ajustamos flujos, mensajes y reglas para mejorar conversiones y calidad de leads." }
+            { title: "Paso 1 - Diagn&oacute;stico del embudo", text: "Revisamos c&oacute;mo llegan hoy tus leads, qu&eacute; herramientas us&aacute;s, c&oacute;mo se registran los datos y qu&eacute; puntos de contacto existen. Definimos qu&eacute; ordenar y qu&eacute; automatizar." },
+            { title: "Paso 2 - Dise&ntilde;o del sistema", text: "Dise&ntilde;amos tu embudo ideal (tr&aacute;fico &rarr; captaci&oacute;n &rarr; nurturing &rarr; seguimiento &rarr; cierre). Definimos qu&eacute; herramientas act&uacute;an en cada etapa y qu&eacute; tareas son autom&aacute;ticas." },
+            { title: "Paso 3 - Implementaci&oacute;n y automatizaci&oacute;n", text: "Configuramos CRM, pipelines, automatizaciones de email/WhatsApp e integraciones entre formularios, campa&ntilde;as y herramientas internas." },
+            { title: "Paso 4 - Medici&oacute;n y optimizaci&oacute;n", text: "Revisamos m&eacute;tricas, detectamos cuellos de botella y ajustamos flujos, mensajes y reglas para mejorar conversiones y calidad de leads." }
           ],
-          resTitle: "¿Qué resultados podés esperar?",
+          resTitle: "&iquest;Qu&eacute; resultados pod&eacute;s esperar?",
           resList: [
-            "Más leads calificados sin multiplicar el trabajo de tu equipo.",
+            "M&aacute;s leads calificados sin multiplicar el trabajo de tu equipo.",
             "Menos oportunidades perdidas por falta de seguimiento.",
-            "Respuestas más rápidas, ordenadas y consistentes.",
-            "Visibilidad real de qué canales y campañas generan mejores clientes.",
+            "Respuestas m&aacute;s r&aacute;pidas, ordenadas y consistentes.",
+            "Visibilidad real de qu&eacute; canales y campa&ntilde;as generan mejores clientes.",
             "Un sistema que mejora con el tiempo sin reiniciar desde cero."
           ],
-          whyTitle: "¿Por qué hacer Marketing & Automation con TrendMakers?",
+          whyTitle: "&iquest;Por qu&eacute; hacer Marketing & Automation con TrendMakers?",
           whyList: [
-            "Combinamos marketing, datos y automatización: miramos números, no suposiciones.",
-            "Venimos de consultoría y finanzas: pensamos en procesos, eficiencia y retorno.",
-            "Diseñamos sistemas simples para tu equipo, no setups complejos que quedan abandonados."
+            "Combinamos marketing, datos y automatizaci&oacute;n: miramos n&uacute;meros, no suposiciones.",
+            "Venimos de consultor&iacute;a y finanzas: pensamos en procesos, eficiencia y retorno.",
+            "Dise&ntilde;amos sistemas simples para tu equipo, no setups complejos que quedan abandonados."
           ],
-          cta2Title: "¿Querés que tu marketing funcione como un sistema, no como campañas aisladas?",
-          cta2Text: "Hablemos de tu embudo actual y de tus oportunidades de automatización. En una primera reunión podemos detectar rápido dónde estás perdiendo leads.",
+          cta2Title: "&iquest;Quer&eacute;s que tu marketing funcione como un sistema, no como campa&ntilde;as aisladas?",
+          cta2Text: "Hablemos de tu embudo actual y de tus oportunidades de automatizaci&oacute;n. En una primera reuni&oacute;n podemos detectar r&aacute;pido d&oacute;nde est&aacute;s perdiendo leads.",
           cta2Btn: "Agendar una llamada",
           otherTitle: "Otros servicios",
-          os1: { title: "Branding & Communication", text: "Hacemos que tu marca y comunicación estén a la altura del sistema que estamos construyendo detrás." },
-          os2: { title: "Web & E-Commerce Development", text: "Diseñamos webs y tiendas integradas con tus funnels, CRM y automatizaciones." },
+          os1: { title: "Branding & Communication", text: "Hacemos que tu marca y comunicaci&oacute;n est&eacute;n a la altura del sistema que estamos construyendo detr&aacute;s." },
+          os2: { title: "Web & E-Commerce Development", text: "Dise&ntilde;amos webs y tiendas integradas con tus funnels, CRM y automatizaciones." },
           os3: { title: "Consulting, Data & Strategy", text: "Definimos el rumbo, prioridades y KPIs que van a guiar tu crecimiento." },
-          os4: { title: "AI & Innovation Hub", text: "Sumamos IA y automatizaciones avanzadas para escalar tu operación." },
-          back: "← Volver"
+          os4: { title: "AI & Innovation Hub", text: "Sumamos IA y automatizaciones avanzadas para escalar tu operaci&oacute;n." },
+          back: "&#8592; Volver"
         },
         en: {
           badge: "Marketing & Automation",
           h1: "Marketing & Automation",
           h2: "Systems that generate and manage leads on autopilot.",
-          hero: "At TrendMakers, we design and automate funnels, pipelines and workflows so your business can generate, qualify and follow up with leads without manual effort. More efficiency, more sales and decisions based on real data—not intuition.",
+          hero: "At TrendMakers, we design and automate funnels, pipelines and workflows so your business can generate, qualify and follow up with leads without manual effort. More efficiency, more sales and decisions based on real data, not intuition.",
           cta: "Book a call",
           queTitle: "What do we do in Marketing & Automation?",
-          queText: "We transform your marketing into an organized, measurable and automated system. We connect your website, forms, campaigns and sales team so every lead has a clear journey—from first contact to closing the deal.",
+          queText: "We transform your marketing into an organized, measurable and automated system. We connect your website, forms, campaigns and sales team so every lead has a clear journey, from first contact to closing the deal.",
           queList: [
             "We design lead acquisition and nurturing funnels.",
             "We automate emails, messages and key follow-ups.",
             "We organize your CRM and sales pipelines.",
-            "We give you real-time visibility into what’s working."
+            "We give you real-time visibility into what is working."
           ],
           probTitle: "From isolated campaigns to a system that never stops",
           probText: "If any of this sounds familiar, this service is for you:",
           probList: [
             "You receive leads through forms or campaigns, but follow-up is inconsistent.",
-            "You're manually entering data into spreadsheets or scattered tools.",
-            "You don’t know which channel brings your best customers or where opportunities are being lost.",
+            "You are manually entering data into spreadsheets or scattered tools.",
+            "You do not know which channel brings your best customers or where opportunities are being lost.",
             "Your marketing depends on people, not processes."
           ],
-          inclTitle: "What’s included in Marketing & Automation?",
+          inclTitle: "What is included in Marketing & Automation?",
           inclText: "We adapt the solution to your business, but we always work across three main blocks:",
-          b1Title: "Block 1 – CRM & Sales Processes",
+          b1Title: "Block 1 - CRM & Sales Processes",
           b1List: [
             "CRM implementation or optimization (HubSpot, Zoho, Pipedrive, etc.).",
             "Definition of pipeline stages (from cold lead to customer).",
             "Clear rules for lead assignment and follow-up."
           ],
-          b2Title: "Block 2 – Funnel & Communication Automation",
+          b2Title: "Block 2 - Funnel & Communication Automation",
           b2List: [
             "Automation of forms, campaigns and follow-ups.",
             "Email and/or WhatsApp flows based on lead stage.",
             "Automatic reminders and tasks for your sales team."
           ],
-          b3Title: "Block 3 – Data, Dashboards & Metrics",
+          b3Title: "Block 3 - Data, Dashboards & Metrics",
           b3List: [
             "Definition of key KPIs (leads, conversion, response time, etc.).",
             "Dashboards in Looker Studio or similar tools.",
@@ -598,10 +908,10 @@
           ],
           howTitle: "How do we deliver this service?",
           steps: [
-            { title: "1 — Funnel Diagnosis", text: "We analyze how your leads arrive today, which tools you use, how data is recorded and what contact points exist. We define what needs to be organized and what can be automated." },
-            { title: "2 — System Design", text: "We design your ideal funnel (traffic → capture → nurturing → follow-up → closing). We define which tools act at each stage and which tasks should be automated." },
-            { title: "3 — Implementation & Automation", text: "We set up CRM, pipelines, email/WhatsApp automations and integrations between forms, campaigns and internal tools." },
-            { title: "4 — Measurement & Optimization", text: "We review metrics, identify bottlenecks and adjust flows, messages and rules to improve conversions and lead quality." }
+            { title: "1 - Funnel Diagnosis", text: "We analyze how your leads arrive today, which tools you use, how data is recorded and what contact points exist. We define what needs to be organized and what can be automated." },
+            { title: "2 - System Design", text: "We design your ideal funnel (traffic &rarr; capture &rarr; nurturing &rarr; follow-up &rarr; closing). We define which tools act at each stage and which tasks should be automated." },
+            { title: "3 - Implementation & Automation", text: "We set up CRM, pipelines, email/WhatsApp automations and integrations between forms, campaigns and internal tools." },
+            { title: "4 - Measurement & Optimization", text: "We review metrics, identify bottlenecks and adjust flows, messages and rules to improve conversions and lead quality." }
           ],
           resTitle: "What results can you expect?",
           resList: [
@@ -615,27 +925,26 @@
           whyList: [
             "We combine marketing, data and automation: we rely on numbers, not guesses.",
             "We come from consulting and finance backgrounds: we think in processes, efficiency and ROI.",
-            "We design simple systems your team can actually use—no complex setups that get abandoned."
+            "We design simple systems your team can actually use, not complex setups that get abandoned."
           ],
           cta2Title: "Do you want your marketing to work as a system, not isolated campaigns?",
-          cta2Text: "Let’s talk about your funnel and automation opportunities. In a first meeting, we can quickly identify where leads are being lost and what can be automated.",
+          cta2Text: "Let's talk about your funnel and automation opportunities. In a first meeting, we can quickly identify where leads are being lost and what can be automated.",
           cta2Btn: "Book a call",
           otherTitle: "Other Services",
           os1: { title: "Branding & Communication", text: "We make sure your brand and communication match the strength of the system running behind it." },
           os2: { title: "Web & E-Commerce Development", text: "We design websites and stores fully integrated with your funnels, CRM and automations." },
           os3: { title: "Consulting, Data & Strategy", text: "We define the direction, priorities and KPIs that will guide your growth." },
           os4: { title: "AI & Innovation Hub", text: "We add advanced AI and automations to scale your operations." },
-          back: "← Back"
+          back: "&#8592; Back"
         }
       };
-
       const maSet = (id, val) => { const el = document.getElementById(id); if (el && val !== undefined) el.innerHTML = val; };
 
-      /* === Config del mail dinámico ES/EN para esta página === */
+      /* === Config del mail dinamico ES/EN para esta pagina === */
       const EMAIL_TEMPLATES = {
         es: {
-          subject: "Solicitud de información sobre sus servicios",
-          body: "Hola, ¿cómo están? Me gustaría recibir información adicional sobre los servicios que ofrecen. Muchas gracias."
+          subject: "Solicitud de informacion sobre sus servicios",
+          body: "Hola, como estan? Me gustaria recibir informacion adicional sobre los servicios que ofrecen. Muchas gracias."
         },
         en: {
           subject: "Project Inquiry",
@@ -724,7 +1033,7 @@
           }
         } catch(e){}
 
-        // Aplicar texto + mailto según idioma inicial
+        // Aplicar texto + mailto segun idioma inicial
         applyMALang(lang);
         applyMailto(lang);
 
@@ -760,6 +1069,23 @@
           });
       });
 
+      document.addEventListener('DOMContentLoaded', function(){
+          const targets = document.querySelectorAll('.shell > section:not(.hero), .grid-3 > .card, .grid-2 .step, .mini-card');
+          targets.forEach(function(el){ el.classList.add('ma-reveal'); });
+          if (!('IntersectionObserver' in window)) {
+              targets.forEach(function(el){ el.classList.add('is-visible'); });
+              return;
+          }
+          const observer = new IntersectionObserver(function(entries){
+              entries.forEach(function(entry){
+                  if (!entry.isIntersecting) return;
+                  entry.target.classList.add('is-visible');
+                  observer.unobserve(entry.target);
+              });
+          }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+          targets.forEach(function(el){ observer.observe(el); });
+      });
+
       function toggleMenu() {
           const hamburger = document.querySelector('.hamburger');
           const mobileMenu = document.querySelector('nav ul.mobile-menu');
@@ -779,3 +1105,4 @@
 </body>
 
 </html>
+

@@ -88,20 +88,6 @@
             z-index: 0;
         }
 
-        /* NAV fijo premium (se apoya en header_overrides.css para layout base) */
-        body.blog-article nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 40;
-            background: radial-gradient(circle at 0% 0%, rgba(124,58,237,0.20), transparent 55%),
-                        rgba(5,3,19,0.84);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            border-bottom: 1px solid rgba(148,163,255,0.35);
-        }
-
         .content {
             max-width: 1140px;
             margin: 0 auto;
@@ -353,7 +339,234 @@
                 border-radius: 18px;
             }
         }
+
+        /* Futuristic clean blog concept: light, neutral, no grid background */
+        :root {
+            --article-ink: #0a1422;
+            --article-muted: #5f6d7c;
+            --article-line: rgba(113, 128, 145, 0.22);
+            --article-shadow: 0 24px 70px rgba(17, 24, 39, 0.09);
+        }
+
+        body.blog-article {
+            background:
+                linear-gradient(128deg, rgba(255,255,255,0) 0 52%, rgba(209,216,226,0.22) 52% 62%, rgba(255,255,255,0) 62% 100%),
+                radial-gradient(900px 640px at 78% 4%, rgba(198, 208, 219, 0.48), transparent 62%),
+                radial-gradient(760px 520px at 12% 28%, rgba(255, 255, 255, 0.94), transparent 68%),
+                radial-gradient(620px 420px at 6% 84%, rgba(191, 201, 214, 0.34), transparent 64%),
+                linear-gradient(180deg, #ffffff 0%, #f4f6f8 44%, #e9eef3 100%) !important;
+            color: var(--article-ink) !important;
+        }
+
+        body.blog-article::before {
+            background:
+                linear-gradient(112deg, rgba(15,23,42,0.035) 0 1px, transparent 1px 100%),
+                linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.72) 42%, transparent 68%),
+                radial-gradient(circle at 50% -10%, rgba(255,255,255,0.9), transparent 38%) !important;
+            mix-blend-mode: normal !important;
+        }
+
+        .article-shell {
+            max-width: 1080px !important;
+            padding-top: clamp(132px, 13vw, 166px) !important;
+            display: block;
+        }
+
+        .article-intro {
+            display: grid;
+            grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.62fr);
+            gap: clamp(18px, 3vw, 30px);
+            align-items: start;
+            margin-bottom: clamp(30px, 5vw, 48px);
+        }
+
+        .article-hero {
+            position: relative;
+            grid-column: 1;
+            margin-bottom: 0 !important;
+            padding: clamp(24px, 4vw, 40px);
+            border: 1px solid var(--article-line);
+            border-radius: 18px;
+            background:
+                linear-gradient(140deg, rgba(255,255,255,0.94), rgba(248,250,252,0.74)),
+                radial-gradient(circle at 100% 0%, rgba(203, 213, 225, 0.42), transparent 38%) !important;
+            box-shadow: var(--article-shadow);
+            overflow: hidden;
+        }
+
+        .article-hero::before {
+            content: "TrendMakers / 2025" !important;
+            width: fit-content;
+            color: #334155 !important;
+            background: rgba(241, 245, 249, 0.88) !important;
+            border: 1px solid rgba(148, 163, 184, 0.34);
+            box-shadow: none !important;
+            letter-spacing: 0.16em !important;
+        }
+
+        .article-hero::after {
+            content: "";
+            position: absolute;
+            right: -80px;
+            top: -110px;
+            width: 300px;
+            height: 300px;
+            border-radius: 999px;
+            border: 1px solid rgba(100, 116, 139, 0.16);
+            background: radial-gradient(circle, rgba(255,255,255,0.85), rgba(226,232,240,0.24) 56%, transparent 58%);
+            pointer-events: none;
+        }
+
+        .back-link { display: none !important; }
+
+        .article-hero h1 {
+            max-width: 860px;
+            margin: 10px 0 4px !important;
+            background: linear-gradient(120deg, #07111f 0%, #263a52 44%, #6f4a64 74%, #0f172a 100%) !important;
+            -webkit-background-clip: text !important;
+            background-clip: text !important;
+            color: transparent !important;
+            font-size: clamp(2.2rem, 4.2vw, 3.9rem) !important;
+            line-height: 0.96 !important;
+            letter-spacing: -0.02em !important;
+            text-transform: uppercase;
+        }
+
+        .article-meta {
+            color: #6f4a64 !important;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-size: 0.78rem !important;
+        }
+
+        .lead {
+            max-width: 860px !important;
+            color: #46586b !important;
+            font-size: clamp(1.02rem, 1.5vw, 1.18rem) !important;
+            line-height: 1.75 !important;
+        }
+
+        .lead:first-of-type { color: #263a52 !important; }
+
+        .article-image {
+            grid-column: 2;
+            margin: 0 !important;
+            padding: 12px !important;
+            border-radius: 18px !important;
+            border: 1px solid var(--article-line);
+            background: rgba(255,255,255,0.78) !important;
+            box-shadow: var(--article-shadow);
+            position: sticky;
+            top: 96px;
+        }
+
+        .article-image::before { display: none !important; }
+
+        .article-image img {
+            border-radius: 12px !important;
+            box-shadow: none !important;
+            filter: saturate(0.92) contrast(1.02);
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+        }
+
+        .article-section {
+            border-radius: 16px !important;
+            padding: clamp(20px, 3.2vw, 30px) !important;
+            margin-bottom: 16px !important;
+            background: linear-gradient(145deg, rgba(255,255,255,0.92), rgba(246,248,250,0.78)) !important;
+            border: 1px solid var(--article-line) !important;
+            box-shadow: 0 18px 50px rgba(17, 24, 39, 0.065) !important;
+            backdrop-filter: blur(14px) saturate(120%) !important;
+            -webkit-backdrop-filter: blur(14px) saturate(120%) !important;
+        }
+
+        .article-section:hover {
+            transform: translateY(-2px) !important;
+            border-color: rgba(51, 65, 85, 0.28) !important;
+            background: #ffffff !important;
+            box-shadow: 0 24px 62px rgba(17, 24, 39, 0.09) !important;
+        }
+
+        .article-section::after {
+            top: 18px !important;
+            right: 18px !important;
+            width: 42px !important;
+            height: 42px !important;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(15,23,42,0.08), rgba(148,163,184,0.08)) !important;
+            opacity: 1 !important;
+        }
+
+        .article-section h2 {
+            color: #182433 !important;
+            font-size: clamp(1.28rem, 2vw, 1.78rem) !important;
+            line-height: 1.1 !important;
+            letter-spacing: -0.01em !important;
+            text-transform: none !important;
+        }
+
+        .article-section:nth-of-type(1) h2 { color: #31516f !important; }
+        .article-section:nth-of-type(2) h2 { color: #5b6470 !important; }
+        .article-section:nth-of-type(3) h2 { color: #6f4a64 !important; }
+        .article-section:nth-of-type(4) h2 { color: #2f5c68 !important; }
+        .article-section:nth-of-type(5) h2 { color: #42536b !important; }
+
+        .article-section p,
+        .article-section ul { color: var(--article-muted) !important; }
+        .article-section strong { color: var(--article-ink); }
+        .article-section li::marker { color: #6f4a64 !important; }
+
+        #section-conclusion {
+            border: 1px solid rgba(15, 23, 42, 0.24) !important;
+            background: linear-gradient(145deg, #111827, #253142) !important;
+            box-shadow: 0 28px 70px rgba(15, 23, 42, 0.18) !important;
+        }
+
+        #section-conclusion h2,
+        #section-conclusion p { color: #ffffff !important; }
+        #section-conclusion p { opacity: 0.82; }
+
+        .article-cta {
+            justify-self: start;
+            border-radius: 10px !important;
+            padding: 15px 22px !important;
+            background: #0a1422 !important;
+            border: 1px solid rgba(15, 23, 42, 0.2) !important;
+            color: #ffffff !important;
+            box-shadow: 0 18px 44px rgba(15, 23, 42, 0.2) !important;
+            letter-spacing: 0 !important;
+            text-transform: none !important;
+        }
+
+        .article-cta::after { display: none !important; }
+
+        @media (max-width: 900px) {
+            .article-intro { grid-template-columns: 1fr; }
+            .article-hero,
+            .article-image { grid-column: 1; }
+            .article-image {
+                position: relative;
+                top: auto;
+                max-width: 520px;
+                width: 100%;
+                margin: -8px 0 24px !important;
+            }
+            .article-image img { aspect-ratio: 16 / 9; }
+        }
+
+        @media (max-width: 640px) {
+            .article-shell { padding-top: 124px !important; }
+            .article-hero {
+                padding: 20px 16px !important;
+                border-radius: 14px;
+            }
+            .article-hero h1 { font-size: clamp(2.15rem, 13vw, 3.3rem) !important; }
+        }
     </style>
+    <link rel="stylesheet" href="./css/blog_article_clean.css">
+    <link rel="stylesheet" href="./css/header_dark_global.css">
 </head>
 <body class="blog-article">
     <div class="content">
@@ -421,8 +634,9 @@
 
         <!-- ===== CONTENIDO DEL ARTÍCULO ===== -->
         <main class="article-shell">
+            <div class="article-intro">
             <div class="article-hero">
-                <a class="back-link" id="blog-back" href="index.html#blog">Volver</a>
+                <a class="back-link" id="blog-back" href="./blog/index.html">Volver</a>
                 <h1 id="article-title">Cómo las marcas dejan de perder oportunidades con un Branding & Communication profesional</h1>
                 <p class="article-meta" id="article-meta">Por TrendMakers · Branding & Communication · 2025</p>
                 <p class="lead" id="lead-1">En todo tipo de industrias se repite la misma historia: equipos sólidos, buenos productos y servicios competitivos… pero marcas que no transmiten ese nivel.</p>
@@ -434,6 +648,8 @@
                 <!-- IMAGEN -->
                 <img src="./img/blogbrand.png"
                      alt="Empresas construyendo marcas claras y coherentes con TrendMakers">
+            </div>
+
             </div>
 
             <section class="article-section" id="section-1">

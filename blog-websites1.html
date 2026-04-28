@@ -88,20 +88,6 @@
             z-index: 0;
         }
 
-        /* NAV fijo premium (se apoya en header_overrides.css para layout base) */
-        body.blog-article nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 40;
-            background: radial-gradient(circle at 0% 0%, rgba(124,58,237,0.20), transparent 55%),
-                        rgba(5,3,19,0.84);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            border-bottom: 1px solid rgba(148,163,255,0.35);
-        }
-
         .content {
             max-width: 1140px;
             margin: 0 auto;
@@ -354,6 +340,8 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="./css/blog_article_clean.css">
+    <link rel="stylesheet" href="./css/header_dark_global.css">
 </head>
 <body class="blog-article">
     <div class="content">
@@ -421,8 +409,9 @@
 
         <!-- ===== CONTENIDO DEL ARTÍCULO ===== -->
         <main class="article-shell">
+            <div class="article-intro">
             <div class="article-hero">
-                <a class="back-link" id="blog-back" href="index.html#blog">Volver</a>
+                <a class="back-link" id="blog-back" href="./blog/index.html">Volver</a>
                 <h1 id="article-title">Sitios que convierten: por qué tu web y tu e-commerce tienen que estar diseñados para generar resultados</h1>
                 <p class="article-meta" id="article-meta">Por TrendMakers · Web & E-Commerce Development · 2025</p>
                 <p class="lead" id="lead-1">Durante años, tener una página web era suficiente. El objetivo era “estar en internet” y marcar la casilla de presencia digital.</p>
@@ -432,8 +421,10 @@
 
             <div class="article-image">
                 <!-- IMAGEN -->
-                <img src=".img/Blog-ia-personas.png"
+                <img src="./img/Blog-ia-personas.png"
                      alt="Sitios web y tiendas online modernas diseñadas para convertir con TrendMakers">
+            </div>
+
             </div>
 
             <section class="article-section" id="section-1">

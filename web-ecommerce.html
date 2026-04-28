@@ -1,4 +1,4 @@
-           <!DOCTYPE html> 
+﻿           <!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -97,7 +97,7 @@
             color: #eae6ff;
         }
         .list li::before {
-            content: "✔";
+            content: "";
             color: #7bffb2;
             font-size: 1.2rem;
             line-height: 1;
@@ -203,19 +203,377 @@
             .back-btn { top: calc(var(--header-height) + 6px); left: 10px; padding: 9px 12px; }
             .shell { padding-top: calc(var(--header-height) + 40px); }
         }
+    
+        /* Consulting rebrand */
+        :root {
+            --ma-ink: #0b1728;
+            --ma-muted: #53667f;
+            --ma-line: #d8e0ea;
+            --ma-blue: #1f5eff;
+            --ma-soft: #f4f8fc;
+            --ma-panel: rgba(255,255,255,0.88);
+        }
+
+        body {
+            background:
+                linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+                radial-gradient(circle at 82% 8%, rgba(31, 94, 255, 0.13), transparent 28%),
+                linear-gradient(180deg, #f7fbff 0%, #ffffff 48%, #f5f8fc 100%) !important;
+            background-size: 46px 46px, 46px 46px, auto, auto !important;
+            color: var(--ma-ink) !important;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(180deg, rgba(255,255,255,0.28), transparent 38%);
+            z-index: 0;
+        }
+
+        .content,
+        .shell {
+            position: relative;
+            z-index: 1;
+        }
+
+        .shell {
+            max-width: 1180px;
+            padding-top: clamp(112px, 13vh, 148px) !important;
+        }
+
+        section {
+            margin: clamp(28px, 4vw, 58px) 0 !important;
+        }
+
+        h1, h2, h3 {
+            color: var(--ma-ink) !important;
+            letter-spacing: 0 !important;
+        }
+
+        h1 {
+            font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+            font-size: clamp(3.1rem, 5.8vw, 5.7rem) !important;
+            line-height: 0.94 !important;
+            max-width: 720px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: clamp(1.65rem, 2.6vw, 3rem) !important;
+            line-height: 1.04 !important;
+        }
+
+        h3 {
+            font-size: 1.06rem !important;
+        }
+
+        p {
+            color: var(--ma-muted) !important;
+            font-size: 1rem;
+        }
+
+        .hero {
+            grid-template-columns: minmax(0, 0.98fr) minmax(360px, 0.7fr) !important;
+            gap: clamp(38px, 7vw, 108px) !important;
+            align-items: center !important;
+            min-height: clamp(500px, 68vh, 660px);
+            padding-bottom: clamp(24px, 4vw, 42px);
+        }
+
+        .hero > div:first-child {
+            display: grid;
+            gap: 18px;
+        }
+
+        .pill {
+            display: none !important;
+        }
+
+        .hero #ma-h2 {
+            max-width: 620px;
+            font-size: clamp(1.35rem, 2vw, 2.15rem) !important;
+            color: var(--ma-ink) !important;
+        }
+
+        .hero #ma-hero-text {
+            max-width: 690px;
+            font-size: clamp(1rem, 1.25vw, 1.18rem);
+            line-height: 1.68;
+        }
+
+        .hero-visual {
+            min-height: 430px !important;
+            border-radius: 10px !important;
+            background:
+                radial-gradient(circle at 50% 18%, rgba(31, 94, 255, 0.11), transparent 42%),
+                linear-gradient(180deg, rgba(255,255,255,0.56), rgba(244,248,252,0.42)) !important;
+            border: 1px solid rgba(216, 224, 234, 0.75);
+            box-shadow: 0 24px 58px rgba(15, 23, 42, 0.09) !important;
+        }
+
+        .hero-visual img {
+            max-width: min(76%, 330px) !important;
+            filter: drop-shadow(0 20px 34px rgba(15, 23, 42, 0.16)) !important;
+        }
+
+        .btn-primary,
+        .cta-panel .btn-primary {
+            width: fit-content;
+            min-height: 48px;
+            padding: 0 22px !important;
+            border-radius: 8px !important;
+            background: var(--ma-ink) !important;
+            border: 1px solid rgba(11, 23, 40, 0.16) !important;
+            color: #ffffff !important;
+            box-shadow: 0 16px 34px rgba(15, 23, 42, 0.18) !important;
+            font-size: 0.94rem;
+        }
+
+        .btn-primary:hover,
+        .cta-panel .btn-primary:hover {
+            transform: translateY(-2px) !important;
+            background: #13243d !important;
+            box-shadow: 0 22px 44px rgba(15, 23, 42, 0.22) !important;
+        }
+
+        .card {
+            border-radius: 10px !important;
+            background:
+                linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.9)),
+                var(--ma-panel) !important;
+            border: 1px solid var(--ma-line) !important;
+            box-shadow: 0 18px 42px rgba(15, 23, 42, 0.07) !important;
+            color: var(--ma-ink) !important;
+        }
+
+        section > .card {
+            padding: clamp(26px, 4vw, 44px) !important;
+        }
+
+        .grid-3,
+        .grid-2 {
+            gap: 18px !important;
+        }
+
+        .grid-3 > .card,
+        .grid-2 .step,
+        .mini-card {
+            background: rgba(255,255,255,0.74) !important;
+            border: 1px solid var(--ma-line) !important;
+            box-shadow: none !important;
+        }
+
+        .list li {
+            color: #32445b !important;
+            line-height: 1.5;
+        }
+
+        .list li::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            margin-top: 0.58em;
+            border-radius: 999px;
+            background: var(--ma-blue);
+            box-shadow: none;
+        }
+
+        .step {
+            padding: 22px;
+            border-radius: 10px;
+        }
+
+        .step-number {
+            width: 32px !important;
+            height: 32px !important;
+            border-radius: 8px !important;
+            background: #e8efff !important;
+            border: 1px solid rgba(31, 94, 255, 0.18);
+            color: var(--ma-blue) !important;
+            box-shadow: none !important;
+        }
+
+        .ma-include-image,
+        .ma-steps-image {
+            display: none !important;
+        }
+
+        .neon-electric {
+            animation: none !important;
+        }
+
+        .cta-panel {
+            max-width: 980px !important;
+            padding: clamp(30px, 5vw, 54px) !important;
+            border-radius: 10px !important;
+            text-align: left !important;
+            background:
+                radial-gradient(circle at 86% 0%, rgba(31, 94, 255, 0.18), transparent 34%),
+                linear-gradient(135deg, #0b1728, #101d31) !important;
+            border: 1px solid rgba(185, 207, 255, 0.18) !important;
+            box-shadow: 0 26px 70px rgba(15, 23, 42, 0.18) !important;
+        }
+
+        .cta-panel h2,
+        .cta-panel p {
+            color: #ffffff !important;
+            max-width: 740px;
+            margin-left: 0 !important;
+            text-align: left !important;
+        }
+
+        .cta-panel p {
+            color: rgba(233, 240, 255, 0.76) !important;
+        }
+
+        .cta-panel .btn-primary {
+            background: #ffffff !important;
+            color: var(--ma-ink) !important;
+        }
+
+        .mini-card {
+            border-radius: 10px !important;
+            padding: 20px !important;
+        }
+
+        .mini-card:hover {
+            transform: translateY(-3px) !important;
+            border-color: rgba(31, 94, 255, 0.28) !important;
+            box-shadow: 0 18px 34px rgba(15, 23, 42, 0.1) !important;
+        }
+
+        .back-btn {
+            top: calc(var(--header-height) + 14px) !important;
+            background: rgba(255,255,255,0.84) !important;
+            border: 1px solid var(--ma-line) !important;
+            color: var(--ma-ink) !important;
+            border-radius: 8px !important;
+            box-shadow: 0 14px 34px rgba(15, 23, 42, 0.1) !important;
+        }
+
+        .ma-reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 760ms cubic-bezier(.2,.8,.2,1), transform 760ms cubic-bezier(.2,.8,.2,1);
+        }
+
+        .ma-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero .pill,
+        .hero h1,
+        .hero h2,
+        .hero p,
+        .hero .btn-primary,
+        .hero .hero-visual {
+            opacity: 0;
+            transform: translateY(18px);
+            animation: maHeroIn 800ms cubic-bezier(.2,.8,.2,1) forwards;
+        }
+
+        .hero .pill { animation-delay: 80ms; }
+        .hero h1 { animation-delay: 90ms; }
+        .hero h2 { animation-delay: 180ms; }
+        .hero p { animation-delay: 270ms; }
+        .hero .btn-primary { animation-delay: 360ms; }
+        .hero .hero-visual { animation-delay: 180ms; }
+
+        @keyframes maHeroIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 860px) {
+            .hero {
+                grid-template-columns: 1fr !important;
+                min-height: 0;
+                align-items: start !important;
+            }
+
+            h1 {
+                font-size: clamp(2.55rem, 15vw, 4.1rem) !important;
+            }
+
+            .hero-visual {
+                min-height: 260px !important;
+            }
+
+            .grid-3,
+            .grid-2,
+            .mini-cards {
+                grid-template-columns: 1fr !important;
+            }
+
+            .shell {
+                padding-top: 128px !important;
+            }
+        }
+
+        /* Web & E-Commerce hero tuning */
+        .hero {
+            grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.62fr) !important;
+            gap: clamp(40px, 7vw, 100px) !important;
+            min-height: clamp(460px, 62vh, 610px) !important;
+        }
+
+        .hero h1 {
+            max-width: 720px !important;
+            font-size: clamp(2.65rem, 4.55vw, 5rem) !important;
+            line-height: 0.96 !important;
+        }
+
+        .hero #bc-h2 {
+            max-width: 620px;
+            font-size: clamp(1.32rem, 1.8vw, 2rem) !important;
+        }
+
+        .hero #bc-hero-text {
+            max-width: 650px;
+        }
+
+        .hero-visual {
+            min-height: 360px !important;
+            max-width: 430px;
+            justify-self: center;
+        }
+
+        .hero-visual img {
+            max-width: min(74%, 270px) !important;
+        }
+
+        @media (max-width: 860px) {
+            .hero {
+                grid-template-columns: 1fr !important;
+                gap: 28px !important;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.35rem, 12.5vw, 3.75rem) !important;
+            }
+
+            .hero-visual {
+                max-width: none;
+                min-height: 240px !important;
+            }
+        }
     </style>
+    <link rel="stylesheet" href="./css/header_dark_global.css">
 </head>
 <body>
     <div class="content">
-        <a class="back-btn" href="index.html#problema" aria-label="Volver a la sección ¿Listo para llevar tu marca al próximo nivel?">← Volver</a>
+        <a class="back-btn" href="index.html#problema" aria-label="Volver a la secci&oacute;n &iquest;Listo para llevar tu marca al pr&oacute;ximo nivel?">&#8592; Volver</a>
         <nav>
             <a class="tm-header-badge" href="index.html#inicio" aria-label="TrendMakers home" id="tm-badge">
                 <img src="./img/TrendMakers-Header.png" alt="TrendMakers">
             </a>
-            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos rápidos">
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos r&aacute;pidos">
                 <a href="https://www.instagram.com/trendmakers.agency_?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
                 <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-                <!-- Email dinámico ES/EN -->
+                <!-- Email din&aacute;mico ES/EN -->
                 <a class="mailto-dynamic" href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias." target="_blank" aria-label="Email">Email</a>
                 <a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" aria-label="WhatsApp">WhatsApp</a>
             </div>
@@ -237,7 +595,7 @@
                         <li><a href="blog/index.html" id="nav-blog" class="menu-item">Blog</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de Éxito</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de &Eacute;xito</a></li>
                 <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
             </ul>
             <div class="nav-lang">
@@ -246,7 +604,7 @@
                   <img src="./img/IDIOMA.PNG" alt="Idioma">
                 </button>
                 <div class="lang-menu" role="menu" aria-label="Idiomas">
-                  <button class="lang-option" role="menuitem" data-lang="es">Español</button>
+                  <button class="lang-option" role="menuitem" data-lang="es">Espa&ntilde;ol</button>
                   <button class="lang-option" role="menuitem" data-lang="en">English</button>
                 </div>
               </div>
@@ -258,7 +616,7 @@
                 <li><a href="index.html#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
                 <li><a href="index.html#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
                 <li><a href="blog/index.html" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
-                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de Éxito</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de &Eacute;xito</a></li>
                 <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
             </ul>
         </nav>
@@ -269,30 +627,30 @@
             <div>
                 <div class="pill" id="bc-badge">Web &amp; E-Commerce Development</div>
                 <h1 id="bc-h1">Web &amp; E-Commerce Development</h1>
-                <h2 id="bc-h2">Sitios y tiendas diseñados para convertir, no solo para estar.</h2>
+                <h2 id="bc-h2">Sitios y tiendas dise&ntilde;ados para convertir, no solo para estar.</h2>
                 <p id="bc-hero-text">
-                    En TrendMakers desarrollamos páginas web y tiendas online rápidas, seguras y optimizadas para que tus visitantes se conviertan en clientes.
-                    Combinamos diseño moderno, experiencia de usuario y rendimiento técnico para impulsar tus resultados.
+                    En TrendMakers desarrollamos p&aacute;ginas web y tiendas online r&aacute;pidas, seguras y optimizadas para que tus visitantes se conviertan en clientes.
+                    Combinamos dise&ntilde;o moderno, experiencia de usuario y rendimiento t&eacute;cnico para impulsar tus resultados.
                 </p>
                 <a class="btn-primary" id="bc-cta" href="https://calendly.com/mgottler1999/30min" target="_blank" rel="noopener">Agendar una llamada</a>
             </div>
             <div class="hero-visual">
-                <img src="./img/WEB-ECOMM.png" alt="Ilustración de sitio web y tienda online moderna">
+                <img src="./img/WEB-ECOMM.png" alt="Ilustraci&oacute;n de sitio web y tienda online moderna">
             </div>
         </section>
 
-        <!-- QUÉ HACEMOS -->
+        <!-- QU&Eacute; HACEMOS -->
         <section>
             <div class="card">
-                <h2 id="bc-que-title">¿Qué hacemos en Web &amp; E-Commerce Development?</h2>
+                <h2 id="bc-que-title">&iquest;Qu&eacute; hacemos en Web &amp; E-Commerce Development?</h2>
                 <p id="bc-que-text">
-                    Creamos experiencias digitales claras, modernas y diseñadas para generar conversiones.
-                    Nuestros sitios y e-commerce integran diseño, SEO, velocidad, seguridad y analítica desde el primer día.
+                    Creamos experiencias digitales claras, modernas y dise&ntilde;adas para generar conversiones.
+                    Nuestros sitios y e-commerce integran dise&ntilde;o, SEO, velocidad, seguridad y anal&iacute;tica desde el primer d&iacute;a.
                 </p>
                 <ul class="list">
-                    <li id="bc-que-li1">Diseñamos sitios modernos con enfoque UX/UI.</li>
+                    <li id="bc-que-li1">Dise&ntilde;amos sitios modernos con enfoque UX/UI.</li>
                     <li id="bc-que-li2">Desarrollamos tiendas online completas (Shopify / WooCommerce).</li>
-                    <li id="bc-que-li3">Optimizamos velocidad, seguridad y SEO técnico.</li>
+                    <li id="bc-que-li3">Optimizamos velocidad, seguridad y SEO t&eacute;cnico.</li>
                     <li id="bc-que-li4">Conectamos tu web con CRM, funnels y automatizaciones.</li>
                 </ul>
             </div>
@@ -305,62 +663,62 @@
                 <p id="bc-prob-text">Si te pasa alguna de estas situaciones, este servicio es para vos:</p>
                 <ul class="list">
                     <li id="bc-prob-li1">Tu web es lenta, antigua o no refleja el valor de tu marca.</li>
-                    <li id="bc-prob-li2">Tus visitantes no entienden qué hacés o cómo contactarte.</li>
-                    <li id="bc-prob-li3">Tu tienda online no convierte, tiene errores o es difícil de gestionar.</li>
-                    <li id="bc-prob-li4">No tenés métricas reales sobre el comportamiento de tus usuarios.</li>
+                    <li id="bc-prob-li2">Tus visitantes no entienden qu&eacute; hac&eacute;s o c&oacute;mo contactarte.</li>
+                    <li id="bc-prob-li3">Tu tienda online no convierte, tiene errores o es dif&iacute;cil de gestionar.</li>
+                    <li id="bc-prob-li4">No ten&eacute;s m&eacute;tricas reales sobre el comportamiento de tus usuarios.</li>
                 </ul>
             </div>
         </section>
 
-        <!-- QUÉ INCLUYE -->
+        <!-- QU&Eacute; INCLUYE -->
         <section>
             <div class="card">
-                <h2 id="bc-incl-title">¿Qué incluye Web &amp; E-Commerce Development?</h2>
+                <h2 id="bc-incl-title">&iquest;Qu&eacute; incluye Web &amp; E-Commerce Development?</h2>
                 <p id="bc-incl-text">
                     Trabajamos de forma integral sobre tu presencia digital, combinando desarrollo web, tiendas online,
-                    performance técnico y analítica para que tu sitio esté listo para vender.
+                    performance t&eacute;cnico y anal&iacute;tica para que tu sitio est&eacute; listo para vender.
                 </p>
                 <div class="grid-3">
                     <div class="card">
-                        <h3 id="bc-b1-title">Bloque 1 – Desarrollo Web</h3>
+                        <h3 id="bc-b1-title">Bloque 1 - Desarrollo Web</h3>
                         <ul class="list">
-                            <li id="bc-b1-li1">Diseño moderno, responsive y alineado a tu marca.</li>
-                            <li id="bc-b1-li2">Estructura clara orientada a conversión (landings, multi-página, institucional).</li>
-                            <li id="bc-b1-li3">Implementación en HTML, WordPress u otros frameworks livianos.</li>
+                            <li id="bc-b1-li1">Dise&ntilde;o moderno, responsive y alineado a tu marca.</li>
+                            <li id="bc-b1-li2">Estructura clara orientada a conversi&oacute;n (landings, multi-p&aacute;gina, institucional).</li>
+                            <li id="bc-b1-li3">Implementaci&oacute;n en HTML, WordPress u otros frameworks livianos.</li>
                             <li id="bc-b1-li4">Formularios y secciones clave preparados para captar leads.</li>
                         </ul>
                     </div>
                     <div class="card">
-                        <h3 id="bc-b2-title">Bloque 2 – E-Commerce Completo</h3>
+                        <h3 id="bc-b2-title">Bloque 2 - E-Commerce Completo</h3>
                         <ul class="list">
                             <li id="bc-b2-li1">Tiendas Shopify o WooCommerce listas para operar.</li>
-                            <li id="bc-b2-li2">Integración de métodos de pago y envíos.</li>
-                            <li id="bc-b2-li3">Gestión de catálogo, variantes e inventarios.</li>
+                            <li id="bc-b2-li2">Integraci&oacute;n de m&eacute;todos de pago y env&iacute;os.</li>
+                            <li id="bc-b2-li3">Gesti&oacute;n de cat&aacute;logo, variantes e inventarios.</li>
                             <li id="bc-b2-li4">Automatizaciones clave ligadas a pedidos, carritos y clientes.</li>
                         </ul>
                     </div>
                     <div class="card">
-                        <h3 id="bc-b3-title">Bloque 3 – SEO, Performance &amp; Data</h3>
+                        <h3 id="bc-b3-title">Bloque 3 - SEO, Performance &amp; Data</h3>
                         <ul class="list">
-                            <li id="bc-b3-li1">Optimización de Core Web Vitals y velocidad de carga.</li>
-                            <li id="bc-b3-li2">SEO técnico: indexación, sitemaps, metatags y estructura on-page.</li>
-                            <li id="bc-b3-li3">Implementación de Google Analytics 4, eventos y Search Console.</li>
-                            <li id="bc-b3-li4">Integración con CRM, funnels y automatizaciones para medir todo.</li>
+                            <li id="bc-b3-li1">Optimizaci&oacute;n de Core Web Vitals y velocidad de carga.</li>
+                            <li id="bc-b3-li2">SEO t&eacute;cnico: indexaci&oacute;n, sitemaps, metatags y estructura on-page.</li>
+                            <li id="bc-b3-li3">Implementaci&oacute;n de Google Analytics 4, eventos y Search Console.</li>
+                            <li id="bc-b3-li4">Integraci&oacute;n con CRM, funnels y automatizaciones para medir todo.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CÓMO TRABAJAMOS -->
+        <!-- C&Oacute;MO TRABAJAMOS -->
         <section>
             <div class="card">
-                <h2 id="bc-how-title">¿Cómo trabajamos este servicio?</h2>
+                <h2 id="bc-how-title">&iquest;C&oacute;mo trabajamos este servicio?</h2>
                 <div class="grid-2">
                     <div class="step">
                         <div class="step-number">1</div>
                         <div>
-                            <h3 id="bc-step1-title">Paso 1 – Planificación y estructura</h3>
+                            <h3 id="bc-step1-title">Paso 1 - Planificaci&oacute;n y estructura</h3>
                             <p id="bc-step1-text">
                                 Definimos objetivos, contenido, secciones, funcionalidades y el rol de la web dentro de tu embudo.
                             </p>
@@ -369,7 +727,7 @@
                     <div class="step">
                         <div class="step-number">2</div>
                         <div>
-                            <h3 id="bc-step2-title">Paso 2 – Diseño y desarrollo</h3>
+                            <h3 id="bc-step2-title">Paso 2 - Dise&ntilde;o y desarrollo</h3>
                             <p id="bc-step2-text">
                                 Creamos el sitio o la tienda con una experiencia clara, moderna y alineada a tu marca.
                             </p>
@@ -378,9 +736,9 @@
                     <div class="step">
                         <div class="step-number">3</div>
                         <div>
-                            <h3 id="bc-step3-title">Paso 3 – Optimización y medición</h3>
+                            <h3 id="bc-step3-title">Paso 3 - Optimizaci&oacute;n y medici&oacute;n</h3>
                             <p id="bc-step3-text">
-                                Conectamos analítica, optimizamos velocidad y dejamos todo listo para convertir visitas en clientes.
+                                Conectamos anal&iacute;tica, optimizamos velocidad y dejamos todo listo para convertir visitas en clientes.
                             </p>
                         </div>
                     </div>
@@ -391,25 +749,25 @@
         <!-- RESULTADOS -->
         <section>
             <div class="card">
-                <h2 id="bc-res-title">¿Qué resultados podés esperar?</h2>
+                <h2 id="bc-res-title">&iquest;Qu&eacute; resultados pod&eacute;s esperar?</h2>
                 <ul class="list">
                     <li id="bc-res-li1">Una web o tienda moderna y profesional.</li>
-                    <li id="bc-res-li2">Mayor conversión de visitantes en clientes o leads.</li>
-                    <li id="bc-res-li3">Mejor rendimiento técnico (velocidad, SEO, estabilidad).</li>
-                    <li id="bc-res-li4">Visibilidad real de métricas y comportamiento del usuario.</li>
+                    <li id="bc-res-li2">Mayor conversi&oacute;n de visitantes en clientes o leads.</li>
+                    <li id="bc-res-li3">Mejor rendimiento t&eacute;cnico (velocidad, SEO, estabilidad).</li>
+                    <li id="bc-res-li4">Visibilidad real de m&eacute;tricas y comportamiento del usuario.</li>
                     <li id="bc-res-li5">Mayor confianza, claridad y autoridad digital.</li>
                 </ul>
             </div>
         </section>
 
-        <!-- POR QUÉ TM -->
+        <!-- POR QU&Eacute; TM -->
         <section>
             <div class="card">
-                <h2 id="bc-why-title">¿Por qué hacer tu web con TrendMakers?</h2>
+                <h2 id="bc-why-title">&iquest;Por qu&eacute; hacer tu web con TrendMakers?</h2>
                 <ul class="list">
-                    <li id="bc-why-li1">Diseñamos webs como parte de tu estrategia, no como un elemento aislado.</li>
-                    <li id="bc-why-li2">Conectamos diseño, SEO, CRM y automatización en un mismo sistema.</li>
-                    <li id="bc-why-li3">Cuidamos rendimiento técnico y experiencia de usuario desde el inicio.</li>
+                    <li id="bc-why-li1">Dise&ntilde;amos webs como parte de tu estrategia, no como un elemento aislado.</li>
+                    <li id="bc-why-li2">Conectamos dise&ntilde;o, SEO, CRM y automatizaci&oacute;n en un mismo sistema.</li>
+                    <li id="bc-why-li3">Cuidamos rendimiento t&eacute;cnico y experiencia de usuario desde el inicio.</li>
                     <li id="bc-why-li4">Entregamos sitios preparados para escalar sin tener que rehacer todo desde cero.</li>
                 </ul>
             </div>
@@ -417,9 +775,9 @@
 
         <!-- CTA FINAL -->
         <section class="cta-panel">
-            <h2 id="bc-cta2-title">¿Tu sitio está preparado para convertir visitas en ventas?</h2>
+            <h2 id="bc-cta2-title">&iquest;Tu sitio est&aacute; preparado para convertir visitas en ventas?</h2>
             <p class="section-lead" id="bc-cta2-text">
-                Hablemos del estado actual de tu web y del potencial de optimización o rediseño.
+                Hablemos del estado actual de tu web y del potencial de optimizaci&oacute;n o redise&ntilde;o.
             </p>
             <a class="btn-primary" id="bc-cta2-btn" href="https://calendly.com/mgottler1999/30min" target="_blank" rel="noopener">Agendar una llamada</a>
         </section>
@@ -430,19 +788,19 @@
             <div class="mini-cards">
                 <a class="mini-card" href="marketing-automation.html">
                     <h3 id="bc-os1-title">Marketing &amp; Automation</h3>
-                    <p id="bc-os1-text">Sistemas que generan y gestionan leads en piloto automático.</p>
+                    <p id="bc-os1-text">Sistemas que generan y gestionan leads en piloto autom&aacute;tico.</p>
                 </a>
                 <a class="mini-card" href="branding-communication.html">
                     <h3 id="bc-os2-title">Branding &amp; Communication</h3>
-                    <p id="bc-os2-text">Identidades profesionales y comunicación coherente.</p>
+                    <p id="bc-os2-text">Identidades profesionales y comunicaci&oacute;n coherente.</p>
                 </a>
                 <a class="mini-card" href="data-analitics.html">
                     <h3 id="bc-os3-title">Consulting, Data &amp; Strategy</h3>
-                    <p id="bc-os3-text">Dirección estratégica basada en análisis y métricas clave.</p>
+                    <p id="bc-os3-text">Direcci&oacute;n estrat&eacute;gica basada en an&aacute;lisis y m&eacute;tricas clave.</p>
                 </a>
                 <a class="mini-card" href="ia-hub.html">
                     <h3 id="bc-os4-title">AI &amp; Innovation Hub</h3>
-                    <p id="bc-os4-text">IA aplicada para mejorar procesos y escalar tu operación.</p>
+                    <p id="bc-os4-text">IA aplicada para mejorar procesos y escalar tu operaci&oacute;n.</p>
                 </a>
             </div>
         </section>
@@ -452,7 +810,7 @@
     <a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." class="whatsapp-button" target="_blank" aria-label="WhatsApp">
         <img src="./img/WPP.PNG" alt="WhatsApp">
     </a>
-    <!-- Email flotante dinámico ES/EN -->
+    <!-- Email flotante din&aacute;mico ES/EN -->
     <a href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias." class="email-button mailto-dynamic" target="_blank" aria-label="Email">
         <img src="./img/EMAIL.jpg" alt="Email">
     </a>
@@ -463,16 +821,16 @@
         es: {
           badge: "Web & E-Commerce Development",
           h1: "Web & E-Commerce Development",
-          h2: "Sitios y tiendas diseñados para convertir, no solo para estar.",
-          hero: "En TrendMakers desarrollamos páginas web y tiendas online rápidas, seguras y optimizadas para que tus visitantes se conviertan en clientes. Combinamos diseño moderno, experiencia de usuario y rendimiento técnico para impulsar tus resultados.",
+          h2: "Sitios y tiendas dise&ntilde;ados para convertir, no solo para estar.",
+          hero: "En TrendMakers desarrollamos p&aacute;ginas web y tiendas online r&aacute;pidas, seguras y optimizadas para que tus visitantes se conviertan en clientes. Combinamos dise&ntilde;o moderno, experiencia de usuario y rendimiento t&eacute;cnico para impulsar tus resultados.",
           cta: "Agendar una llamada",
 
-          queTitle: "¿Qué hacemos en Web & E-Commerce Development?",
-          queText: "Creamos experiencias digitales claras, modernas y diseñadas para generar conversiones. Nuestros sitios y e-commerce integran diseño, SEO, velocidad, seguridad y analítica desde el primer día.",
+          queTitle: "&iquest;Qu&eacute; hacemos en Web & E-Commerce Development?",
+          queText: "Creamos experiencias digitales claras, modernas y dise&ntilde;adas para generar conversiones. Nuestros sitios y e-commerce integran dise&ntilde;o, SEO, velocidad, seguridad y anal&iacute;tica desde el primer d&iacute;a.",
           queList: [
-            "Diseñamos sitios modernos con enfoque UX/UI.",
+            "Dise&ntilde;amos sitios modernos con enfoque UX/UI.",
             "Desarrollamos tiendas online completas (Shopify / WooCommerce).",
-            "Optimizamos velocidad, seguridad y SEO técnico.",
+            "Optimizamos velocidad, seguridad y SEO t&eacute;cnico.",
             "Conectamos tu web con CRM, funnels y automatizaciones."
           ],
 
@@ -480,85 +838,85 @@
           probText: "Si te pasa alguna de estas situaciones, este servicio es para vos:",
           probList: [
             "Tu web es lenta, antigua o no refleja el valor de tu marca.",
-            "Tus visitantes no entienden qué hacés o cómo contactarte.",
-            "Tu tienda online no convierte, tiene errores o es difícil de gestionar.",
-            "No tenés métricas reales sobre el comportamiento de tus usuarios."
+            "Tus visitantes no entienden qu&eacute; hac&eacute;s o c&oacute;mo contactarte.",
+            "Tu tienda online no convierte, tiene errores o es dif&iacute;cil de gestionar.",
+            "No ten&eacute;s m&eacute;tricas reales sobre el comportamiento de tus usuarios."
           ],
 
-          inclTitle: "¿Qué incluye Web & E-Commerce Development?",
-          inclText: "Adaptamos cada proyecto según tus objetivos, pero siempre trabajamos de forma integral sobre desarrollo, tiendas online, SEO técnico, performance y data.",
-          b1Title: "Bloque 1 – Desarrollo Web",
+          inclTitle: "&iquest;Qu&eacute; incluye Web & E-Commerce Development?",
+          inclText: "Adaptamos cada proyecto seg&uacute;n tus objetivos, pero siempre trabajamos de forma integral sobre desarrollo, tiendas online, SEO t&eacute;cnico, performance y data.",
+          b1Title: "Bloque 1 - Desarrollo Web",
           b1List: [
-            "Diseño moderno, responsive y alineado a tu marca.",
-            "Estructura clara orientada a conversión (landings, multi-página, institucional).",
-            "Implementación en HTML, WordPress u otros frameworks livianos.",
+            "Dise&ntilde;o moderno, responsive y alineado a tu marca.",
+            "Estructura clara orientada a conversi&oacute;n (landings, multi-p&aacute;gina, institucional).",
+            "Implementaci&oacute;n en HTML, WordPress u otros frameworks livianos.",
             "Formularios y secciones clave preparados para captar leads."
           ],
-          b2Title: "Bloque 2 – E-Commerce Completo",
+          b2Title: "Bloque 2 - E-Commerce Completo",
           b2List: [
             "Tiendas Shopify o WooCommerce listas para operar.",
-            "Integración de medios de pago y envíos.",
-            "Gestión de catálogo, variantes e inventarios.",
+            "Integraci&oacute;n de medios de pago y env&iacute;os.",
+            "Gesti&oacute;n de cat&aacute;logo, variantes e inventarios.",
             "Automatizaciones ligadas a pedidos, carritos y clientes."
           ],
-          b3Title: "Bloque 3 – SEO, Performance & Data",
+          b3Title: "Bloque 3 - SEO, Performance & Data",
           b3List: [
-            "Optimización de Core Web Vitals y velocidad de carga.",
-            "SEO técnico: indexación, sitemaps, metatags y estructura on-page.",
-            "Implementación de Google Analytics 4, eventos y Search Console.",
-            "Integración con CRM, funnels y automatizaciones para medir todo."
+            "Optimizaci&oacute;n de Core Web Vitals y velocidad de carga.",
+            "SEO t&eacute;cnico: indexaci&oacute;n, sitemaps, metatags y estructura on-page.",
+            "Implementaci&oacute;n de Google Analytics 4, eventos y Search Console.",
+            "Integraci&oacute;n con CRM, funnels y automatizaciones para medir todo."
           ],
 
-          howTitle: "¿Cómo trabajamos este servicio?",
+          howTitle: "&iquest;C&oacute;mo trabajamos este servicio?",
           steps: [
             {
-              title: "Paso 1 – Planificación y estructura",
+              title: "Paso 1 - Planificaci&oacute;n y estructura",
               text: "Definimos objetivos, contenido, secciones, funcionalidades y el rol de la web dentro de tu embudo."
             },
             {
-              title: "Paso 2 – Diseño y desarrollo",
+              title: "Paso 2 - Dise&ntilde;o y desarrollo",
               text: "Creamos el sitio o la tienda con una experiencia clara, moderna y alineada a tu marca."
             },
             {
-              title: "Paso 3 – Optimización y medición",
-              text: "Conectamos analítica, optimizamos velocidad y dejamos todo listo para convertir visitas en clientes."
+              title: "Paso 3 - Optimizaci&oacute;n y medici&oacute;n",
+              text: "Conectamos anal&iacute;tica, optimizamos velocidad y dejamos todo listo para convertir visitas en clientes."
             }
           ],
 
-          resTitle: "¿Qué resultados podés esperar?",
+          resTitle: "&iquest;Qu&eacute; resultados pod&eacute;s esperar?",
           resList: [
             "Una web o tienda moderna y profesional.",
-            "Mayor conversión de visitantes en clientes o leads.",
-            "Mejor rendimiento técnico (velocidad, SEO, estabilidad).",
-            "Visibilidad real de métricas y comportamiento del usuario.",
+            "Mayor conversi&oacute;n de visitantes en clientes o leads.",
+            "Mejor rendimiento t&eacute;cnico (velocidad, SEO, estabilidad).",
+            "Visibilidad real de m&eacute;tricas y comportamiento del usuario.",
             "Mayor confianza, claridad y autoridad digital."
           ],
 
-          whyTitle: "¿Por qué hacer tu web con TrendMakers?",
+          whyTitle: "&iquest;Por qu&eacute; hacer tu web con TrendMakers?",
           whyList: [
-            "Diseñamos webs como parte de tu estrategia, no como un elemento aislado.",
-            "Conectamos diseño, SEO, CRM y automatización en un mismo sistema.",
-            "Cuidamos rendimiento técnico y experiencia de usuario desde el inicio.",
+            "Dise&ntilde;amos webs como parte de tu estrategia, no como un elemento aislado.",
+            "Conectamos dise&ntilde;o, SEO, CRM y automatizaci&oacute;n en un mismo sistema.",
+            "Cuidamos rendimiento t&eacute;cnico y experiencia de usuario desde el inicio.",
             "Entregamos sitios preparados para escalar sin rehacer todo desde cero."
           ],
 
-          cta2Title: "¿Tu sitio está preparado para convertir visitas en ventas?",
-          cta2Text: "Hablemos del estado actual de tu web y del potencial de optimización o rediseño.",
+          cta2Title: "&iquest;Tu sitio est&aacute; preparado para convertir visitas en ventas?",
+          cta2Text: "Hablemos del estado actual de tu web y del potencial de optimizaci&oacute;n o redise&ntilde;o.",
           cta2Btn: "Agendar una llamada",
 
           otherTitle: "Otros servicios",
-          os1: { title: "Marketing & Automation", text: "Sistemas que generan y gestionan leads en piloto automático." },
-          os2: { title: "Branding & Communication", text: "Identidades profesionales y comunicación coherente." },
-          os3: { title: "Consulting, Data & Strategy", text: "Dirección estratégica basada en análisis y métricas clave." },
-          os4: { title: "AI & Innovation Hub", text: "IA aplicada para mejorar procesos y escalar tu operación." },
+          os1: { title: "Marketing & Automation", text: "Sistemas que generan y gestionan leads en piloto autom&aacute;tico." },
+          os2: { title: "Branding & Communication", text: "Identidades profesionales y comunicaci&oacute;n coherente." },
+          os3: { title: "Consulting, Data & Strategy", text: "Direcci&oacute;n estrat&eacute;gica basada en an&aacute;lisis y m&eacute;tricas clave." },
+          os4: { title: "AI & Innovation Hub", text: "IA aplicada para mejorar procesos y escalar tu operaci&oacute;n." },
 
-          back: "← Volver"
+          back: "&#8592; Volver"
         },
 
         en: {
           badge: "Web & E-Commerce Development",
           h1: "Web & E-Commerce Development",
-          h2: "Websites and online stores designed to convert—not just exist.",
+          h2: "Websites and online stores designed to convert-not just exist.",
           hero: "At TrendMakers, we build fast, secure and conversion-focused websites and e-commerce stores. We combine modern design, user experience and technical performance to drive real business results.",
           cta: "Book a call",
 
@@ -575,28 +933,28 @@
           probText: "If any of this sounds familiar, this service is for you:",
           probList: [
             "Your website feels outdated, slow or unprofessional.",
-            "Visitors don’t clearly understand what you offer.",
-            "Your online store isn’t converting or has constant issues.",
+            "Visitors don't clearly understand what you offer.",
+            "Your online store isn't converting or has constant issues.",
             "You lack meaningful analytics about user behavior."
           ],
 
-          inclTitle: "What’s included in Web & E-Commerce Development?",
+          inclTitle: "What's included in Web & E-Commerce Development?",
           inclText: "We tailor every project to your goals, but we always work across development, online stores, performance and data.",
-          b1Title: "Block 1 – Website Development",
+          b1Title: "Block 1 - Website Development",
           b1List: [
             "Modern, responsive design aligned with your brand.",
             "Conversion-focused structure (landing pages, multi-page, corporate).",
             "Implementation in HTML, WordPress or lightweight frameworks.",
             "Lead-capturing sections and forms built-in."
           ],
-          b2Title: "Block 2 – Full E-Commerce Setup",
+          b2Title: "Block 2 - Full E-Commerce Setup",
           b2List: [
             "Shopify or WooCommerce stores ready to operate.",
             "Payment gateways and shipping integrations.",
             "Catalog, variants and inventory management.",
             "Automations connected to orders, carts and customers."
           ],
-          b3Title: "Block 3 – Technical SEO, Performance & Data",
+          b3Title: "Block 3 - Technical SEO, Performance & Data",
           b3List: [
             "Core Web Vitals and speed optimization.",
             "Technical SEO: indexing, sitemaps, metatags and on-page structure.",
@@ -607,15 +965,15 @@
           howTitle: "How do we deliver this service?",
           steps: [
             {
-              title: "Step 1 – Planning & structure",
+              title: "Step 1 - Planning & structure",
               text: "We define objectives, content, features and the strategic role of your website."
             },
             {
-              title: "Step 2 – Design & development",
+              title: "Step 2 - Design & development",
               text: "We build or redesign your site/store with clarity, speed and a modern aesthetic."
             },
             {
-              title: "Step 3 – Optimization & measurement",
+              title: "Step 3 - Optimization & measurement",
               text: "We integrate analytics, optimize performance and ensure everything is conversion-ready."
             }
           ],
@@ -631,14 +989,14 @@
 
           whyTitle: "Why choose TrendMakers for your website?",
           whyList: [
-            "We design websites as part of a larger strategy—not just a visual piece.",
+            "We design websites as part of a larger strategy-not just a visual piece.",
             "We connect design, SEO, CRM and automation.",
             "Strong technical performance and UX guaranteed.",
             "Sites built to scale, without constant rebuilds."
           ],
 
           cta2Title: "Is your site ready to convert visitors into customers?",
-          cta2Text: "Let’s analyze your current website and identify opportunities for optimization or redesign.",
+          cta2Text: "Let's analyze your current website and identify opportunities for optimization or redesign.",
           cta2Btn: "Book a call",
 
           otherTitle: "Other services",
@@ -647,7 +1005,7 @@
           os3: { title: "Consulting, Data & Strategy", text: "Strategic direction built on real analysis and KPIs." },
           os4: { title: "AI & Innovation Hub", text: "AI-powered solutions to scale your operations." },
 
-          back: "← Back"
+          back: "&#8592; Back"
         }
       };
 
@@ -656,11 +1014,11 @@
         if (el && val !== undefined) el.innerHTML = val;
       };
 
-      /* === Config del mail dinámico ES/EN para esta página === */
+      /* === Config del mail din&aacute;mico ES/EN para esta p&aacute;gina === */
       const EMAIL_TEMPLATES = {
         es: {
-          subject: "Solicitud de información sobre sus servicios",
-          body: "Hola, ¿cómo están? Me gustaría recibir información adicional sobre los servicios que ofrecen. Muchas gracias."
+          subject: "Solicitud de informaci&oacute;n sobre sus servicios",
+          body: "Hola, &iquest;c&oacute;mo est&aacute;n? Me gustar&iacute;a recibir informaci&oacute;n adicional sobre los servicios que ofrecen. Muchas gracias."
         },
         en: {
           subject: "Project Inquiry",
@@ -755,7 +1113,7 @@
           }
         } catch(e){}
 
-        // Texto + mailto según idioma inicial
+        // Texto + mailto seg&uacute;n idioma inicial
         applyBCLang(lang);
         applyMailto(lang);
 
@@ -791,6 +1149,23 @@
           });
       });
 
+      document.addEventListener('DOMContentLoaded', function(){
+          const targets = document.querySelectorAll('.shell > section:not(.hero), .grid-3 > .card, .grid-2 .step, .mini-card');
+          targets.forEach(function(el){ el.classList.add('ma-reveal'); });
+          if (!('IntersectionObserver' in window)) {
+              targets.forEach(function(el){ el.classList.add('is-visible'); });
+              return;
+          }
+          const observer = new IntersectionObserver(function(entries){
+              entries.forEach(function(entry){
+                  if (!entry.isIntersecting) return;
+                  entry.target.classList.add('is-visible');
+                  observer.unobserve(entry.target);
+              });
+          }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+          targets.forEach(function(el){ observer.observe(el); });
+      });
+
       function toggleMenu() {
           const hamburger = document.querySelector('.hamburger');
           const mobileMenu = document.querySelector('nav ul.mobile-menu');
@@ -808,6 +1183,7 @@
     </script>
 </body>
 </html>
+
 
 
 

@@ -6,6 +6,7 @@
     <title>TrendMakers - Caso Prontoled</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/header_overrides.css">
+    <link rel="stylesheet" href="./css/header_dark_global.css">
     <link rel="stylesheet" href="./css/casos_overrides.css">
     <link href="https://fonts.googleapis.com/css2family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -40,7 +41,7 @@
                         <li><a href="blog/index.html" id="nav-blog" class="menu-item">Blog</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de ?xito</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de &eacute;xito</a></li>
                 <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
             </ul>
             <div class="nav-lang">
@@ -49,7 +50,7 @@
                   <img src="./img/IDIOMA.PNG" alt="Idioma">
                 </button>
                 <div class="lang-menu" role="menu" aria-label="Idiomas">
-                  <button class="lang-option" role="menuitem" data-lang="es">Espa?ol</button>
+                  <button class="lang-option" role="menuitem" data-lang="es">Espa&ntilde;ol</button>
                   <button class="lang-option" role="menuitem" data-lang="en">English</button>
                 </div>
               </div>
@@ -61,7 +62,7 @@
                 <li><a href="index.html#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
                 <li><a href="index.html#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
                 <li><a href="blog/index.html" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
-                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de ?xito</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de &eacute;xito</a></li>
                 <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
             </ul>
         </nav>
@@ -97,11 +98,67 @@
                     <div class="case-detail-footer">
                         <p class="stack"><span id="stack-label">Stack:</span> <span id="stack-value">Meta + Google Performance Max &middot; HubSpot &middot; Flujos IA</span></p>
                         <a href="index.html#contact-form" class="case-detail-cta" id="case-cta">Quiero un caso as&iacute;</a>
+                        <aside class="case-testimonial" aria-label="Testimonio">
+                            <p class="case-testimonial__quote" id="case-testimonial-quote">
+                                "Necesit&aacute;bamos ordenar la demanda digital y convertirla en ventas reales. TrendMakers nos ayud&oacute; a transformar una base dormida en un canal comercial activo."
+                            </p>
+                            <p class="case-testimonial__author" id="case-testimonial-author">Roberto &middot; Prontoled</p>
+                        </aside>
                     </div>
                 </article>
             </div>
         </section>
+        <section class="case-story" aria-labelledby="case-story-title">
+            <div class="case-story__intro">
+                <h2 id="case-story-title">Del ruido comercial a un sistema que vuelve a vender</h2>
+            </div>
+            <div class="case-story__steps">
+                <article class="case-story__step" tabindex="0">
+                    <h3 id="case-story-pain-title">El punto de dolor</h3>
+                    <p id="case-story-pain">Prontoled ten&iacute;a inter&eacute;s, contactos y clientes previos, pero la conversaci&oacute;n comercial se dilu&iacute;a. Hab&iacute;a oportunidades sin seguimiento, recompra sin automatizar y campa&ntilde;as que no conectaban con un sistema de nurturing.</p>
+                </article>
+                <article class="case-story__step" tabindex="0">
+                    <h3 id="case-story-path-title">El cruce</h3>
+                    <p id="case-story-path">Convertimos ese desorden en una ruta medible: segmentaci&oacute;n, mensajes por etapa, retargeting din&aacute;mico y flujos de IA para responder con contexto. La marca dej&oacute; de perseguir leads y empez&oacute; a acompa&ntilde;arlos.</p>
+                </article>
+                <article class="case-story__step" tabindex="0">
+                    <h3 id="case-story-result-title">La transformaci&oacute;n</h3>
+                    <p id="case-story-result">El canal pas&oacute; de ser una base pasiva a un motor de ventas recurrentes. Cada contacto recibi&oacute; un pr&oacute;ximo paso claro, el equipo comercial gan&oacute; foco y la demanda empez&oacute; a moverse con ritmo propio.</p>
+                </article>
+            </div>
+        </section>
     </div>
+    <section class="case-contact-section" id="contact-form" aria-labelledby="case-contact-title">
+        <div class="case-contact-shell">
+            <div class="case-contact-copy">
+                <p class="case-contact-kicker">Next growth system</p>
+                <h2 id="case-contact-title">Convert&iacute; tu demanda en un sistema comercial.</h2>
+                <p>Si ten&eacute;s leads, clientes dormidos o campa&ntilde;as que no terminan de convertir, podemos ayudarte a ordenar el funnel y activar un sistema medible.</p>
+            </div>
+            <div class="case-contact-card">
+                <form action="https://formspree.io/f/xyzwvwop" method="POST">
+                    <div class="case-contact-grid">
+                        <label><span>Nombre</span><input type="text" name="name" autocomplete="name" required></label>
+                        <label><span>Empresa</span><input type="text" name="company" autocomplete="organization" required></label>
+                        <label class="full"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>
+                        <label class="full"><span>Contanos qu&eacute; necesit&aacute;s resolver</span><textarea name="project" required></textarea></label>
+                    </div>
+                    <button type="submit" class="case-contact-button">Enviar consulta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="case-footer">
+        <div class="case-footer-inner">
+            <div class="case-footer-logos">
+                <img src="./img/google-ads.svg" alt="Google Ads">
+                <img src="./img/google-partner.svg" alt="Google Partner">
+                <img src="./img/logofacebookads.png" alt="Facebook Ads">
+                <img src="./img/cace.svg" alt="CACE">
+            </div>
+        </div>
+        <p class="case-footer-copy">&copy; 2023 TrendMakers. Todos los derechos reservados.</p>
+    </footer>
     <a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." class="whatsapp-button" target="_blank">
         <img src="./img/WPP.PNG" alt="WhatsApp">
     </a>
