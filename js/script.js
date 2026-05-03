@@ -82,10 +82,10 @@ const translations = {
     heroContactCta: "Solicitar diagn&oacute;stico gratuito",
     heroCasesCta: "Ver casos de &eacute;xito <span aria-hidden=\"true\">-&gt;</span>",
     heroKicker: "<span></span> Tu socio de crecimiento",
-    heroMetricIndustries: "Casos con resultados medibles",
-    heroMetricResult: "Al primer resultado",
-    heroMetricData: "Orientado a datos",
-    heroMetricAutomation: "Automatizaci&oacute;n activa",
+    heroMetricIndustries: "Diagn&oacute;stico inicial",
+    heroMetricResult: "Primeras mejoras visibles",
+    heroMetricData: "Sistema funcionando",
+    heroMetricAutomation: "Profesionales dedicados",
     navInicio: "Inicio",
     navAcerca: "Nosotros",
     navServicios: "Servicios",
@@ -158,8 +158,15 @@ const translations = {
     teamSupportText: "Trabajamos como una extensi&oacute;n de tu negocio: diagnosticamos oportunidades, priorizamos acciones y ejecutamos con foco en indicadores comerciales reales.",
     teamCtaText: "Conoc&eacute; c&oacute;mo trabaja nuestro equipo",
     teamPageButton: "Conoce nuestro equipo",
+    contactKicker: "DIAGN&Oacute;STICO GRATUITO",
     contactTitle: "Inici&aacute; tu proceso de crecimiento",
-    contactMicrocopy: "Te respondemos a la brevedad &middot; Comunicaci&oacute;n confidencial",
+    contactMicrocopy: "Complet&aacute; el formulario y en menos de 48hs te enviamos un diagn&oacute;stico inicial.",
+    contactBenefit1: "Sin compromiso",
+    contactBenefit2: "Respuesta en 48hs",
+    contactBenefit3: "Comunicaci&oacute;n confidencial",
+    contactAssurance1: "Sin compromiso",
+    contactAssurance2: "No te vamos a spamear",
+    contactAssurance3: "Diagn&oacute;stico sin costo",
     scheduleCall: "Agenda una Llamada",
     problemaButton: "Solicitar diagn&oacute;stico",
     popupTitle: "Solicitar diagn&oacute;stico",
@@ -169,23 +176,19 @@ const translations = {
     footerText: "&copy; 2023 TrendMakers. Todos los derechos reservados.",
 
     teamDetails: `
-      <div class="team-card" data-index="01">
-        <span>01</span>
+      <div class="team-card">
         <h3>Estrategia &amp; Crecimiento</h3>
         <p>Consultores en marketing y performance que dise&ntilde;an roadmaps claros y objetivos de negocio medibles. Ordenamos prioridades para que cada acci&oacute;n tenga impacto comercial.</p>
       </div>
-      <div class="team-card" data-index="02">
-        <span>02</span>
+      <div class="team-card">
         <h3>Dise&ntilde;o, Experiencia Digital &amp; Desarrollo Web</h3>
         <p>Dise&ntilde;adores UX/UI, visuales, multimedia y desarrolladores web enfocados en conversi&oacute;n, usabilidad, rendimiento y consistencia de marca. Creamos activos digitales pensados para escalar.</p>
       </div>
-      <div class="team-card" data-index="03">
-        <span>03</span>
+      <div class="team-card">
         <h3>Datos &amp; Business Intelligence</h3>
         <p>Analistas de datos y especialistas en BI que transforman m&eacute;tricas en informaci&oacute;n accionable para la toma de decisiones. Convertimos performance, clientes y canales en aprendizaje continuo.</p>
       </div>
-      <div class="team-card" data-index="04">
-        <span>04</span>
+      <div class="team-card">
         <h3>Activaci&oacute;n &amp; Performance</h3>
         <p>Especialistas en campa&ntilde;as digitales, SEO y contenidos orientados a resultados sostenibles y escalables. Probamos, medimos y optimizamos para mejorar volumen, eficiencia y calidad de leads.</p>
       </div>
@@ -242,10 +245,10 @@ const translations = {
     heroContactCta: "Request a free diagnosis",
     heroCasesCta: "View success stories <span aria-hidden=\"true\">-&gt;</span>",
     heroKicker: "<span></span> Your growth partner",
-    heroMetricIndustries: "Measurable result cases",
-    heroMetricResult: "To first result",
-    heroMetricData: "Data oriented",
-    heroMetricAutomation: "Active automation",
+    heroMetricIndustries: "Initial diagnostic",
+    heroMetricResult: "First visible improvements",
+    heroMetricData: "System running",
+    heroMetricAutomation: "Dedicated professionals",
     navInicio: "Home",
     navAcerca: "About us",
     navServicios: "Services",
@@ -318,8 +321,15 @@ const translations = {
     teamSupportText: "We work as an extension of your business: diagnosing opportunities, prioritizing actions and executing with a focus on real commercial indicators.",
     teamCtaText: "See how our team works",
     teamPageButton: "Meet the team",
+    contactKicker: "FREE DIAGNOSTIC",
     contactTitle: "Start your growth process",
-    contactMicrocopy: "We’ll get back to you shortly &middot; Confidential",
+    contactMicrocopy: "Complete the form and we will send you an initial diagnostic within 48 hours.",
+    contactBenefit1: "No commitment",
+    contactBenefit2: "Reply within 48 hours",
+    contactBenefit3: "Confidential communication",
+    contactAssurance1: "No commitment",
+    contactAssurance2: "We will not spam you",
+    contactAssurance3: "No-cost diagnostic",
     scheduleCall: "Schedule a Call",
     problemaButton: "Request a diagnostic",
     popupTitle: "Request a diagnostic",
@@ -329,23 +339,19 @@ const translations = {
     footerText: "&copy; 2023 TrendMakers. All rights reserved.",
 
     teamDetails: `
-      <div class="team-card" data-index="01">
-        <span>01</span>
+      <div class="team-card">
         <h3>Strategy &amp; Growth</h3>
         <p>Marketing and performance consultants who design clear roadmaps and measurable business objectives. We organize priorities so every action has commercial impact.</p>
       </div>
-      <div class="team-card" data-index="02">
-        <span>02</span>
+      <div class="team-card">
         <h3>Design, Digital Experience &amp; Web Development</h3>
         <p>UX/UI, visual and multimedia designers, together with web developers, focused on conversion, usability, performance and brand consistency. We create digital assets built to scale.</p>
       </div>
-      <div class="team-card" data-index="03">
-        <span>03</span>
+      <div class="team-card">
         <h3>Data &amp; Business Intelligence</h3>
         <p>Data analysts and BI specialists who turn metrics into actionable insights for decision-making. We turn performance, customers and channels into continuous learning.</p>
       </div>
-      <div class="team-card" data-index="04">
-        <span>04</span>
+      <div class="team-card">
         <h3>Activation &amp; Performance</h3>
         <p>Digital campaign, SEO and content specialists focused on sustainable, scalable results. We test, measure and optimize to improve volume, efficiency and lead quality.</p>
       </div>
@@ -521,6 +527,14 @@ function getLanguagePreference() {
 }
 function updateDocumentLanguageAttr(lang) {
   try { document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'es'); } catch (e) { /* noop */ }
+}
+function updateLanguageToggleLabel(lang) {
+  try {
+    const code = (lang === 'en' ? 'en' : 'es').toUpperCase();
+    document.querySelectorAll('.lang-code').forEach(function(el){
+      el.textContent = code;
+    });
+  } catch (e) { /* noop */ }
 }
 function getRequestedLanguage() {
   try {
@@ -698,6 +712,7 @@ function setLanguage(language) {
     setupScrollAnimations(true);
     saveLanguagePreference('es');
     updateDocumentLanguageAttr('es');
+    updateLanguageToggleLabel('es');
     applyMailtoLinks('es');
     return;
   }
@@ -779,8 +794,15 @@ function setLanguage(language) {
     'team-cta-text': 'teamCtaText',
     'team-page-button': 'teamPageButton',
 
+    'contact-kicker': 'contactKicker',
     'contact-title': 'contactTitle',
     'contact-microcopy': 'contactMicrocopy',
+    'contact-benefit-1': 'contactBenefit1',
+    'contact-benefit-2': 'contactBenefit2',
+    'contact-benefit-3': 'contactBenefit3',
+    'contact-assurance-1': 'contactAssurance1',
+    'contact-assurance-2': 'contactAssurance2',
+    'contact-assurance-3': 'contactAssurance3',
     'schedule-call': 'scheduleCall',
     'show-popup': 'problemaButton',
 
@@ -821,6 +843,19 @@ function setLanguage(language) {
       element.innerHTML = translations[language][translationKey];
     }
   }
+
+  const metricSuffixes = {
+    'hero-metric-value-diagnostic': ' hs',
+    'hero-metric-value-result': language === 'en' ? ' days' : ' días',
+    'hero-metric-value-system': language === 'en' ? ' days' : ' días',
+    'hero-metric-value-areas': language === 'en' ? ' areas' : ' áreas'
+  };
+  Object.keys(metricSuffixes).forEach(function(id) {
+    const metric = document.getElementById(id);
+    if (!metric) return;
+    metric.setAttribute('data-suffix', metricSuffixes[id]);
+    metric.dataset.counted = 'false';
+  });
   ensureServicesTitleRing();
 
   const serviceDetailsElement = document.querySelector('.service-details');
@@ -870,6 +905,7 @@ function setLanguage(language) {
   setupScrollAnimations(true);
   saveLanguagePreference(language);
   updateDocumentLanguageAttr(language);
+  updateLanguageToggleLabel(language);
   applyMailtoLinks(language);
 }
 
@@ -880,6 +916,7 @@ document.addEventListener('DOMContentLoaded', function(){
   } else {
     saveLanguagePreference('es');
     updateDocumentLanguageAttr('es');
+    updateLanguageToggleLabel('es');
     setServiceCardLogos();
   }
   applyMailtoLinks(initialLang || 'es');
