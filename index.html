@@ -1271,87 +1271,144 @@
             position: relative;
             display: grid !important;
             grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-            gap: clamp(18px, 3vw, 44px) !important;
+            gap: clamp(14px, 2.2vw, 28px) !important;
             width: 100% !important;
-            max-width: none !important;
-            margin: 54px auto 0 !important;
+            max-width: 1120px !important;
+            margin: 44px auto 0 !important;
             padding: 0 !important;
             overflow: visible !important;
         }
 
         #acerca .why-card {
             position: relative;
-            min-height: 336px;
+            min-height: 278px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             text-align: left;
-            padding: 28px 28px 20px !important;
-            border: 1px solid rgba(248, 250, 252, 0.18) !important;
+            padding: 22px 22px 18px !important;
+            border: 1px solid rgba(248, 250, 252, 0.14) !important;
             border-radius: 8px !important;
-            background: #292a28 !important;
-            box-shadow: none !important;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012)),
+                #242624 !important;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.06) !important;
             transform: none !important;
             backdrop-filter: none !important;
             box-sizing: border-box;
+            overflow: hidden;
         }
 
         #acerca .why-card:not(:last-child)::after {
             content: "";
             position: absolute;
             top: 50%;
-            right: calc(clamp(18px, 3vw, 44px) * -1 + 6px);
-            width: calc(clamp(18px, 3vw, 44px) - 12px);
+            right: calc(clamp(14px, 2.2vw, 28px) * -1 + 6px);
+            width: calc(clamp(14px, 2.2vw, 28px) - 12px);
             height: 1px;
-            background: rgba(248, 250, 252, 0.28);
+            background: linear-gradient(90deg, rgba(248, 250, 252, 0.08), rgba(248, 250, 252, 0.34));
         }
 
         #acerca .why-card:not(:last-child)::before {
             content: ">";
             position: absolute;
             top: calc(50% - 9px);
-            right: calc(clamp(18px, 3vw, 44px) * -1 - 1px);
-            color: rgba(248, 250, 252, 0.52);
+            right: calc(clamp(14px, 2.2vw, 28px) * -1 - 1px);
+            color: rgba(248, 250, 252, 0.44);
             font-size: 14px;
             line-height: 1;
         }
 
         #acerca .why-card-featured {
-            background: #121833 !important;
-            border-color: rgba(79, 109, 255, 0.64) !important;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012)),
+                #242624 !important;
+            border-color: rgba(248, 250, 252, 0.14) !important;
         }
 
         #acerca .why-card:hover {
-            border-color: rgba(79, 109, 255, 0.82) !important;
-            transform: translateY(-4px) !important;
+            border-color: rgba(185, 129, 255, 0.52) !important;
+            transform: translateY(-3px) !important;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 16px 34px rgba(0,0,0,0.18) !important;
         }
 
         #acerca .why-step {
-            margin-bottom: 18px;
-            color: #4f6dff;
-            font-size: 0.72rem;
+            margin-bottom: 14px;
+            color: #8ea2ff;
+            font-size: 0.68rem;
             font-weight: 900;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
         }
 
         #acerca .why-icon {
-            width: 34px !important;
-            height: 34px !important;
-            margin: 0 0 22px !important;
-            border: 1px solid rgba(248, 250, 252, 0.2) !important;
-            border-radius: 7px !important;
-            background: rgba(255, 255, 255, 0.04) !important;
-            color: rgba(248, 250, 252, 0.86) !important;
+            width: 30px !important;
+            height: 30px !important;
+            display: inline-grid !important;
+            place-items: center !important;
+            margin: 0 0 18px !important;
+            border: 1px solid rgba(185, 129, 255, 0.36) !important;
+            border-radius: 50% !important;
+            background: rgba(185, 129, 255, 0.08) !important;
+            color: rgba(248, 250, 252, 0.82) !important;
             box-shadow: none !important;
-            font-size: 0.82rem !important;
+            font-size: 0.9rem !important;
             font-weight: 900 !important;
+            line-height: 1 !important;
+        }
+
+        #acerca .why-icon svg {
+            width: 15px;
+            height: 15px;
+            display: block;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        #acerca .why-icon svg * {
+            stroke-dasharray: 120;
+            stroke-dashoffset: 0;
+        }
+
+        #acerca .why-card.visible .why-icon svg * {
+            animation: whyIconDraw 950ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+        }
+
+        #acerca .why-card.visible .why-icon svg *:nth-child(2) {
+            animation-delay: 120ms;
+        }
+
+        #acerca .why-card.visible .why-icon svg *:nth-child(3) {
+            animation-delay: 220ms;
+        }
+
+        #acerca .why-card:hover .why-icon svg * {
+            animation: whyIconDraw 720ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+        }
+
+        @keyframes whyIconDraw {
+            from {
+                stroke-dashoffset: 120;
+            }
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #acerca .why-icon svg * {
+                stroke-dashoffset: 0 !important;
+                animation: none !important;
+            }
         }
 
         #acerca .why-card h3 {
             margin: 0 0 10px !important;
             color: #ffffff !important;
-            font-size: 1.05rem !important;
+            font-size: 1rem !important;
             line-height: 1.2 !important;
             font-weight: 900 !important;
             text-align: left !important;
@@ -1360,9 +1417,9 @@
         #acerca .why-card p {
             display: block !important;
             margin: 0 !important;
-            color: rgba(248, 250, 252, 0.74) !important;
-            font-size: 0.93rem !important;
-            line-height: 1.55 !important;
+            color: rgba(248, 250, 252, 0.7) !important;
+            font-size: 0.88rem !important;
+            line-height: 1.48 !important;
         }
 
         #acerca .why-time {
@@ -1372,9 +1429,9 @@
             margin-top: auto;
             padding: 4px 10px;
             border-radius: 999px;
-            background: rgba(79, 109, 255, 0.28);
-            color: #dbeafe;
-            font-size: 0.72rem;
+            background: rgba(248, 250, 252, 0.08);
+            color: rgba(248, 250, 252, 0.82);
+            font-size: 0.68rem;
             font-weight: 900;
         }
 
@@ -1508,7 +1565,8 @@
             <div class="nav-lang">
               <div class="language-selector" aria-label="Selector de idioma">
                 <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
-                  <img src="./img/IDIOMA.PNG" alt="Idioma">
+                  <span class="lang-code">ES</span>
+                  <span class="lang-caret" aria-hidden="true">v</span>
                 </button>
                 <div class="lang-menu" role="menu" aria-label="Idiomas">
                   <button class="lang-option" role="menuitem" data-lang="es">Espa&ntilde;ol</button>
@@ -1565,20 +1623,20 @@
                             <a class="hero-academy-link" href="trendmakers-academy.html">Conoc&eacute; nuestra academia <span aria-hidden="true">-&gt;</span></a>
                             <div class="hero-metrics" aria-label="M&eacute;tricas de experiencia">
                                 <div>
-                                    <strong class="hero-counter" data-prefix="+" data-count-to="3" data-suffix="">+1</strong>
-                                    <span id="hero-metric-industries">Casos con resultados medibles</span>
+                                    <strong class="hero-counter" id="hero-metric-value-diagnostic" data-count-to="48" data-suffix=" hs">1</strong>
+                                    <span id="hero-metric-industries">Diagn&oacute;stico inicial</span>
                                 </div>
                                 <div>
-                                    <strong class="hero-counter" data-count-to="30" data-suffix=" d&iacute;as">1</strong>
-                                    <span id="hero-metric-result">Al primer resultado</span>
+                                    <strong class="hero-counter" id="hero-metric-value-result" data-count-to="30" data-suffix=" d&iacute;as">1</strong>
+                                    <span id="hero-metric-result">Primeras mejoras visibles</span>
                                 </div>
                                 <div>
-                                    <strong class="hero-counter" data-count-to="100" data-suffix="%">1</strong>
-                                    <span id="hero-metric-data">Orientado a datos</span>
+                                    <strong class="hero-counter" id="hero-metric-value-system" data-count-to="90" data-suffix=" d&iacute;as">1</strong>
+                                    <span id="hero-metric-data">Sistema funcionando</span>
                                 </div>
                                 <div>
-                                    <strong class="hero-counter" data-count-to="24" data-suffix="/7">1</strong>
-                                    <span id="hero-metric-automation">Automatizaci&oacute;n activa</span>
+                                    <strong class="hero-counter" id="hero-metric-value-areas" data-prefix="+" data-count-to="5" data-suffix=" áreas">+1</strong>
+                                    <span id="hero-metric-automation">Profesionales dedicados</span>
                                 </div>
                             </div>
                         </div>
@@ -1682,23 +1740,19 @@
                         <p id="team-support-text" class="team-support-text animate__animated">Trabajamos como una extensi&oacute;n de tu negocio: diagnosticamos oportunidades, priorizamos acciones y ejecutamos con foco en indicadores comerciales reales.</p>
 
                         <div class="team-details">
-                            <div class="team-card animate__animated" data-index="01">
-                                <span>01</span>
+                            <div class="team-card animate__animated">
                                 <h3>Estrategia &amp; Crecimiento</h3>
                                 <p>Consultores en marketing y performance que dise&ntilde;an roadmaps claros y objetivos de negocio medibles. Ordenamos prioridades para que cada acci&oacute;n tenga impacto comercial.</p>
                             </div>
-                            <div class="team-card animate__animated" data-index="02">
-                                <span>02</span>
+                            <div class="team-card animate__animated">
                                 <h3>Dise&ntilde;o, Experiencia Digital &amp; Desarrollo Web</h3>
                                 <p>Dise&ntilde;adores UX/UI, visuales, multimedia y desarrolladores web enfocados en conversi&oacute;n, usabilidad, rendimiento y consistencia de marca. Creamos activos digitales pensados para escalar.</p>
                             </div>
-                            <div class="team-card animate__animated" data-index="03">
-                                <span>03</span>
+                            <div class="team-card animate__animated">
                                 <h3>Datos &amp; Business Intelligence</h3>
                                 <p>Analistas de datos y especialistas en BI que transforman m&eacute;tricas en informaci&oacute;n accionable para la toma de decisiones. Convertimos performance, clientes y canales en aprendizaje continuo.</p>
                             </div>
-                            <div class="team-card animate__animated" data-index="04">
-                                <span>04</span>
+                            <div class="team-card animate__animated">
                                 <h3>Activaci&oacute;n &amp; Performance</h3>
                                 <p>Especialistas en campa&ntilde;as digitales, SEO y contenidos orientados a resultados sostenibles y escalables. Probamos, medimos y optimizamos para mejorar volumen, eficiencia y calidad de leads.</p>
                             </div>
@@ -1777,28 +1831,50 @@
                     <div class="why-grid">
                         <div class="why-card why-card-featured animate__animated animate__fadeInUp" style="animation-delay:0.05s;">
                             <span class="why-step" id="why0-step">Paso 00</span>
-                            <div class="why-icon">D</div>
+                            <div class="why-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false">
+                                    <circle cx="11" cy="11" r="6"></circle>
+                                    <path d="m16 16 4 4"></path>
+                                </svg>
+                            </div>
                             <h3 id="why0-title">Diagn&oacute;stico</h3>
                             <p id="why0-text">Analizamos tu negocio, tu funnel actual y tus m&eacute;tricas reales. Identificamos d&oacute;nde est&aacute; el cuello de botella antes de proponer cualquier soluci&oacute;n.</p>
                             <span class="why-time" id="why0-time">Semana 1</span>
                         </div>
                         <div class="why-card animate__animated animate__fadeInUp" style="animation-delay:0.12s;">
                             <span class="why-step" id="why1-step">Paso 01</span>
-                            <div class="why-icon">E</div>
+                            <div class="why-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false">
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <path d="m15.5 8.5-2.2 5-4.8 2 2.2-5 4.8-2Z"></path>
+                                    <path d="M12 2v2M12 20v2M2 12h2M20 12h2"></path>
+                                </svg>
+                            </div>
                             <h3 id="why1-title">Estrategia y Visi&oacute;n</h3>
                             <p id="why1-text">Definimos objetivos claros, KPIs medibles y una hoja de ruta alineada con tu modelo de negocio. Nada se ejecuta sin una direcci&oacute;n validada.</p>
                             <span class="why-time" id="why1-time">Semanas 2-3</span>
                         </div>
                         <div class="why-card animate__animated animate__fadeInUp" style="animation-delay:0.18s;">
                             <span class="why-step" id="why2-step">Paso 02</span>
-                            <div class="why-icon">T</div>
+                            <div class="why-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false">
+                                    <path d="M12 8.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Z"></path>
+                                    <path d="M19.4 13.5a7.8 7.8 0 0 0 0-3l2-1.5-2-3.4-2.4 1a8 8 0 0 0-2.6-1.5L14 2.5h-4l-.4 2.6A8 8 0 0 0 7 6.6l-2.4-1-2 3.4 2 1.5a7.8 7.8 0 0 0 0 3l-2 1.5 2 3.4 2.4-1a8 8 0 0 0 2.6 1.5l.4 2.6h4l.4-2.6a8 8 0 0 0 2.6-1.5l2.4 1 2-3.4-2-1.5Z"></path>
+                                </svg>
+                            </div>
                             <h3 id="why2-title">Ejecuci&oacute;n y Tecnolog&iacute;a</h3>
                             <p id="why2-text">Implementamos soluciones de marketing, automatizaci&oacute;n, UX e inteligencia artificial definidas en la estrategia. Ejecutamos con foco en rendimiento y escalabilidad.</p>
                             <span class="why-time" id="why2-time">Mes 1-3</span>
                         </div>
                         <div class="why-card animate__animated animate__fadeInUp" style="animation-delay:0.24s;">
                             <span class="why-step" id="why3-step">Paso 03</span>
-                            <div class="why-icon">O</div>
+                            <div class="why-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false">
+                                    <path d="M4 19h16"></path>
+                                    <path d="M6 16l4-4 3 3 5-7"></path>
+                                    <path d="M15 8h3v3"></path>
+                                </svg>
+                            </div>
                             <h3 id="why3-title">Crecimiento y Optimizaci&oacute;n</h3>
                             <p id="why3-text">Medimos resultados, iteramos de forma continua y optimizamos cada decisi&oacute;n con datos reales. El sistema mejora solo en el tiempo.</p>
                             <span class="why-time" id="why3-time">Mes 3 en adelante</span>
@@ -1874,11 +1950,27 @@
             </div>
         </section>
         <div class="separator"></div>
-                <section id="contact-form" class="contact-form-section">
+<section id="contact-form" class="contact-form-section">
   <div class="contact-glow"></div>
+  <div class="contact-line-field" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
   <div class="contact-shell">
+    <p class="contact-kicker" id="contact-kicker">DIAGN&Oacute;STICO GRATUITO</p>
     <h2 id="contact-title">Inici&aacute; tu proceso de crecimiento</h2>
-    <p id="contact-microcopy" class="contact-microcopy">Te respondemos a la brevedad &middot; Comunicaci&oacute;n confidencial</p>
+    <p id="contact-microcopy" class="contact-microcopy">Complet&aacute; el formulario y en menos de 48hs te enviamos un diagn&oacute;stico inicial.</p>
+    <ul class="contact-benefits" aria-label="Beneficios del formulario">
+      <li id="contact-benefit-1">Sin compromiso</li>
+      <li id="contact-benefit-2">Respuesta en 48hs</li>
+      <li id="contact-benefit-3">Comunicaci&oacute;n confidencial</li>
+    </ul>
     <div class="contact-layout">
       <div class="contact-card">
           <form action="https://formspree.io/f/xyzwvwop" method="POST">
@@ -1902,6 +1994,11 @@
               </div>
               <button type="submit" class="button contact-button" id="submit-contact-form">Empezar el proceso</button>
           </form>
+      </div>
+      <div class="contact-assurances" aria-label="Garant&iacute;as del contacto">
+        <span id="contact-assurance-1">Sin compromiso</span>
+        <span id="contact-assurance-2">No te vamos a spamear</span>
+        <span id="contact-assurance-3">Diagn&oacute;stico sin costo</span>
       </div>
     </div>
   </div>
@@ -2110,6 +2207,22 @@
                 }, { threshold: 0.35, rootMargin: '0px 0px -10% 0px' });
                 obs.observe(heroImg);
             } catch(e){}
+        });
+
+        document.addEventListener('DOMContentLoaded', function(){
+            const contactSection = document.querySelector('.contact-form-section');
+            if (!contactSection) return;
+            const revealContactLines = () => contactSection.classList.add('is-visible');
+            if (!('IntersectionObserver' in window)) {
+                revealContactLines();
+                return;
+            }
+            const observer = new IntersectionObserver((entries) => {
+                if (!entries.some(entry => entry.isIntersecting)) return;
+                revealContactLines();
+                observer.disconnect();
+            }, { threshold: 0.32, rootMargin: '0px 0px -10% 0px' });
+            observer.observe(contactSection);
         });
 
         function toggleMenu() {

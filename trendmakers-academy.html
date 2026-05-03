@@ -576,8 +576,9 @@
         }
 
         body.academy-page nav {
+            position: fixed !important;
             height: 72px;
-            padding: 0 36px !important;
+            padding: 0 90px 0 36px !important;
             background: #ffffff !important;
             border-bottom: 1px solid #d6dde2 !important;
             box-shadow: none !important;
@@ -588,7 +589,7 @@
             border: 0 !important;
             box-shadow: none !important;
             width: auto !important;
-            height: 56px !important;
+            height: 42px !important;
             padding: 0 !important;
             overflow: hidden;
         }
@@ -599,8 +600,8 @@
 
         body.academy-page nav .tm-header-badge .academy-header-logo {
             display: block !important;
-            width: clamp(210px, 20vw, 330px) !important;
-            height: 56px !important;
+            width: clamp(160px, 15vw, 250px) !important;
+            height: 42px !important;
             object-fit: cover;
             object-position: center;
             border-radius: 0;
@@ -667,6 +668,63 @@
         body.academy-page .lang-toggle {
             background: transparent !important;
             box-shadow: none !important;
+        }
+
+        body.academy-page nav .nav-lang {
+            position: fixed !important;
+            top: 15px;
+            right: 168px;
+            z-index: 2400;
+            display: flex !important;
+            width: auto !important;
+            height: 42px !important;
+            align-items: center;
+            visibility: visible !important;
+            margin: 0 !important;
+            transform: none !important;
+            pointer-events: auto;
+        }
+
+        body.academy-page nav .language-selector {
+            position: relative !important;
+            top: auto !important;
+            right: auto !important;
+            display: flex;
+            align-items: center;
+            height: 42px;
+            padding: 0 !important;
+        }
+
+        body.academy-page nav .lang-toggle {
+            min-width: 0;
+            height: auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            padding: 0 !important;
+            border: 0 !important;
+            border-radius: 999px !important;
+            background: transparent !important;
+            color: #101610 !important;
+            box-shadow: none !important;
+        }
+
+        body.academy-page nav .lang-toggle img {
+            display: none !important;
+        }
+
+        body.academy-page nav .lang-code {
+            color: #101610;
+            font-size: 0.82rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        body.academy-page nav .lang-menu {
+            top: calc(100% + 10px) !important;
+            right: 0 !important;
+            min-width: 132px;
         }
 
         body.academy-page .academy-shell {
@@ -1378,6 +1436,97 @@
             color: #1f2937;
         }
 
+        body.academy-page .academy-proof {
+            padding: clamp(68px, 8vw, 106px) clamp(22px, 4vw, 54px);
+            border-radius: 8px;
+            background: #101610;
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        body.academy-page .academy-proof__grid {
+            display: grid;
+            grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.22fr);
+            gap: clamp(34px, 6vw, 82px);
+            align-items: start;
+        }
+
+        body.academy-page .academy-proof__intro {
+            position: sticky;
+            top: 104px;
+        }
+
+        body.academy-page .academy-proof__intro span {
+            display: inline-flex;
+            margin-bottom: 18px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: #b981ff;
+            color: #111611;
+            font-size: 0.86rem;
+            font-weight: 900;
+        }
+
+        body.academy-page .academy-proof__intro h2 {
+            margin: 0;
+            color: #ffffff;
+            font-size: clamp(2.25rem, 4.7vw, 4.7rem);
+            line-height: 0.98;
+            font-weight: 900;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+        body.academy-page .academy-proof__intro p {
+            margin: 22px 0 0;
+            color: rgba(255, 255, 255, 0.78);
+            font-size: clamp(1rem, 1.3vw, 1.2rem);
+            line-height: 1.55;
+            font-weight: 600;
+        }
+
+        body.academy-page .academy-proof__list {
+            display: grid;
+            gap: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        body.academy-page .academy-proof__item {
+            display: grid;
+            grid-template-columns: 78px minmax(0, 1fr);
+            gap: clamp(18px, 3vw, 34px);
+            padding: clamp(24px, 3.4vw, 38px) 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        body.academy-page .academy-proof__item strong {
+            display: grid;
+            place-items: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #e4f5f2;
+            color: #101610;
+            font-size: 0.9rem;
+            font-weight: 900;
+        }
+
+        body.academy-page .academy-proof__item h3 {
+            margin: 0;
+            color: #ffffff;
+            font-size: clamp(1.35rem, 2vw, 2rem);
+            line-height: 1.08;
+            font-weight: 900;
+        }
+
+        body.academy-page .academy-proof__item p {
+            margin: 12px 0 0;
+            color: rgba(255, 255, 255, 0.74);
+            font-size: clamp(0.98rem, 1.1vw, 1.08rem);
+            line-height: 1.55;
+            font-weight: 500;
+        }
+
         body.academy-page .audience-grid {
             gap: 24px;
         }
@@ -1430,11 +1579,40 @@
                 gap: 18px;
                 padding: 44px 18px;
             }
+
+            body.academy-page .academy-proof__grid {
+                grid-template-columns: 1fr;
+            }
+
+            body.academy-page .academy-proof__intro {
+                position: static;
+            }
         }
 
         @media (max-width: 640px) {
             body.academy-page nav {
-                padding: 0 14px !important;
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
+                padding: 0 64px 0 14px !important;
+            }
+
+            body.academy-page nav .nav-lang {
+                top: 18px;
+                right: 12px;
+            }
+
+            body.academy-page nav .lang-toggle {
+                min-width: 0;
+                height: auto;
+            }
+
+            body.academy-page nav .lang-toggle img {
+                display: none !important;
+            }
+
+            body.academy-page nav .lang-code {
+                font-size: 0.78rem;
             }
 
             body.academy-page .academy-back {
@@ -1482,6 +1660,26 @@
                 grid-template-columns: 1fr;
             }
 
+            body.academy-page .academy-proof {
+                padding: 52px 18px;
+            }
+
+            body.academy-page .academy-proof__intro h2 {
+                font-size: clamp(2rem, 10vw, 2.75rem);
+                line-height: 1.04;
+                overflow-wrap: anywhere;
+            }
+
+            body.academy-page .academy-proof__item {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            body.academy-page .academy-proof__item strong {
+                width: 42px;
+                height: 42px;
+            }
+
             body.academy-page .career-diploma__grid,
             body.academy-page .career-diploma__card {
                 grid-template-columns: 1fr;
@@ -1489,6 +1687,154 @@
 
             body.academy-page .career-diploma__visual {
                 min-height: 360px;
+            }
+        }
+
+        @media (max-width: 980px) {
+            body.academy-page,
+            body.academy-page .content {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: clip;
+            }
+
+            body.academy-page .academy-shell {
+                width: 100%;
+                max-width: 100%;
+                padding-right: 18px;
+                padding-left: 18px;
+                box-sizing: border-box;
+            }
+
+            body.academy-page .academy-hero,
+            body.academy-page .academy-course-model,
+            body.academy-page .career-diploma__grid,
+            body.academy-page .academy-cta {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            body.academy-page .academy-course-model,
+            body.academy-page .career-diploma__grid {
+                min-width: 0;
+            }
+
+            body.academy-page .academy-course-model__copy,
+            body.academy-page .academy-course-model__visual,
+            body.academy-page .career-diploma__copy,
+            body.academy-page .career-diploma__visual {
+                min-width: 0;
+                max-width: 100%;
+            }
+
+            body.academy-page .academy-course-model__visual img,
+            body.academy-page .career-diploma__visual img {
+                width: 100%;
+                max-width: 620px;
+                transform: none;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body.academy-page .academy-shell {
+                width: auto !important;
+                max-width: none;
+                margin-right: 0;
+                margin-left: 0;
+                padding-right: 16px;
+                padding-left: 16px;
+            }
+
+            body.academy-page .academy-hero {
+                gap: 22px;
+                min-height: 0;
+                padding: 72px 0 56px;
+            }
+
+            body.academy-page .academy-hero > * {
+                min-width: 0;
+                max-width: 100%;
+            }
+
+            body.academy-page .academy-hero h1 {
+                max-width: 100%;
+                font-size: clamp(2.15rem, 10.6vw, 2.75rem);
+                line-height: 1.03;
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+
+            body.academy-page .academy-lead {
+                max-width: 100%;
+                font-size: 1rem;
+                line-height: 1.48;
+                overflow-wrap: break-word;
+            }
+
+            body.academy-page .academy-actions {
+                gap: 10px;
+                max-width: 100%;
+            }
+
+            body.academy-page .academy-btn {
+                width: 100%;
+                min-width: 0;
+                box-sizing: border-box;
+            }
+
+            body.academy-page .academy-panel {
+                min-height: 300px;
+                max-width: 100%;
+            }
+
+            body.academy-page .academy-hero-seal {
+                opacity: 1;
+                transform: none;
+                animation: none;
+            }
+
+            body.academy-page .academy-course-model {
+                margin: 10px 0 22px;
+                padding: 22px;
+                gap: 22px;
+            }
+
+            body.academy-page .academy-course-model__copy h2,
+            body.academy-page .career-diploma__copy h2,
+            body.academy-page .section-heading h2 {
+                font-size: clamp(2rem, 10vw, 2.75rem);
+                line-height: 1.04;
+                overflow-wrap: anywhere;
+            }
+
+            body.academy-page .academy-course-model__facts strong,
+            body.academy-page .track-card li {
+                width: auto;
+                max-width: 100%;
+            }
+
+            body.academy-page .career-diploma {
+                padding: 58px 0;
+            }
+
+            body.academy-page .career-diploma__grid {
+                gap: 28px;
+            }
+
+            body.academy-page .career-diploma__card {
+                width: 100%;
+                max-width: 100%;
+                grid-template-columns: 52px minmax(0, 1fr);
+                box-sizing: border-box;
+                padding: 12px;
+            }
+
+            body.academy-page .career-diploma__card img {
+                width: 52px;
+                height: 52px;
+            }
+
+            body.academy-page .career-diploma__visual {
+                min-height: 0;
             }
         }
     </style>
@@ -1531,6 +1877,7 @@
               <div class="language-selector" aria-label="Selector de idioma">
                 <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
                   <img src="./img/IDIOMA.PNG" alt="Idioma">
+                  <span class="lang-code">ES</span>
                 </button>
                 <div class="lang-menu" role="menu" aria-label="Idiomas">
                   <button class="lang-option" role="menuitem" data-lang="es">Espa&ntilde;ol</button>
@@ -1728,6 +2075,46 @@
                 </div>
             </section>
 
+            <section class="academy-proof" aria-label="Por qu&eacute; aprender con TrendMakers Academy">
+                <div class="academy-proof__grid">
+                    <div class="academy-proof__intro">
+                        <span id="proof-kicker">Por qu&eacute; aprender con nosotros</span>
+                        <h2 id="proof-title">Somos una agencia que tambi&eacute;n forma. Eso cambia todo.</h2>
+                        <p id="proof-text">No ense&ntilde;amos desde un aula. Ense&ntilde;amos desde proyectos activos. Lo que entra al programa es lo que ya probamos que funciona.</p>
+                    </div>
+                    <div class="academy-proof__list">
+                        <article class="academy-proof__item">
+                            <strong>01</strong>
+                            <div>
+                                <h3 id="proof1-title">Casos reales, no escenarios de manual</h3>
+                                <p id="proof1-text">Los ejemplos y ejercicios vienen de proyectos que corremos en la agencia. No de situaciones inventadas para que tengan sentido en clase.</p>
+                            </div>
+                        </article>
+                        <article class="academy-proof__item">
+                            <strong>02</strong>
+                            <div>
+                                <h3 id="proof2-title">Mentores que ejecutan hoy</h3>
+                                <p id="proof2-text">Quienes ense&ntilde;an tienen proyectos activos en agencias y empresas. Traen lo que les funciona ahora, no lo que funcionaba hace cinco a&ntilde;os.</p>
+                            </div>
+                        </article>
+                        <article class="academy-proof__item">
+                            <strong>03</strong>
+                            <div>
+                                <h3 id="proof3-title">Entregables, no apuntes</h3>
+                                <p id="proof3-text">Cada m&oacute;dulo cierra con algo concreto: una plantilla aplicada, un proceso documentado, un sistema configurado. No con un PDF para guardar y olvidar.</p>
+                            </div>
+                        </article>
+                        <article class="academy-proof__item">
+                            <strong>04</strong>
+                            <div>
+                                <h3 id="proof4-title">Feedback sobre lo que hiciste</h3>
+                                <p id="proof4-text">Los entregables se revisan. Recib&iacute;s criterio espec&iacute;fico sobre tu trabajo, no comentarios gen&eacute;ricos que podr&iacute;an aplicar a cualquiera.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
             <section class="academy-section">
                 <div class="section-heading">
                     <span class="section-kicker" id="method-kicker">Metodolog&iacute;a</span>
@@ -1834,6 +2221,15 @@
                     methodKicker: "Metodolog&iacute;a",
                     methodTitle: "Aprender haciendo, con entregables que quedan funcionando.",
                     methodText: "La academia no est&aacute; pensada como biblioteca de videos. Est&aacute; pensada como un sistema de avance: contexto, pr&aacute;ctica, feedback y aplicaci&oacute;n.",
+                    proofKicker: "Por qu&eacute; aprender con nosotros",
+                    proofTitle: "Somos una agencia que tambi&eacute;n forma. Eso cambia todo.",
+                    proofText: "No ense&ntilde;amos desde un aula. Ense&ntilde;amos desde proyectos activos. Lo que entra al programa es lo que ya probamos que funciona.",
+                    proofItems: [
+                        ["Casos reales, no escenarios de manual", "Los ejemplos y ejercicios vienen de proyectos que corremos en la agencia. No de situaciones inventadas para que tengan sentido en clase."],
+                        ["Mentores que ejecutan hoy", "Quienes ense&ntilde;an tienen proyectos activos en agencias y empresas. Traen lo que les funciona ahora, no lo que funcionaba hace cinco a&ntilde;os."],
+                        ["Entregables, no apuntes", "Cada m&oacute;dulo cierra con algo concreto: una plantilla aplicada, un proceso documentado, un sistema configurado. No con un PDF para guardar y olvidar."],
+                        ["Feedback sobre lo que hiciste", "Los entregables se revisan. Recib&iacute;s criterio espec&iacute;fico sobre tu trabajo, no comentarios gen&eacute;ricos que podr&iacute;an aplicar a cualquiera."]
+                    ],
                     methods: [
                         ["Diagn&oacute;stico", "Identificamos punto de partida, objetivos y brechas reales del negocio o del equipo."],
                         ["Framework", "Trabajamos con modelos simples para ordenar decisiones, no con teor&iacute;a aislada."],
@@ -1882,6 +2278,15 @@
                     methodKicker: "Method",
                     methodTitle: "Learn by doing, with deliverables that keep working.",
                     methodText: "The academy is not built as a video library. It is built as a progress system: context, practice, feedback and application.",
+                    proofKicker: "Why learn with us",
+                    proofTitle: "We are an agency that also trains. That changes everything.",
+                    proofText: "We do not teach from a classroom. We teach from active projects. What enters the program is what we have already proven works.",
+                    proofItems: [
+                        ["Real cases, not textbook scenarios", "Examples and exercises come from projects we run at the agency, not invented situations built just to make sense in class."],
+                        ["Mentors who execute today", "The people teaching have active projects in agencies and companies. They bring what works now, not what worked five years ago."],
+                        ["Deliverables, not notes", "Each module closes with something concrete: an applied template, a documented process, a configured system. Not a PDF to store and forget."],
+                        ["Feedback on what you did", "Deliverables are reviewed. You receive specific judgment on your work, not generic comments that could apply to anyone."]
+                    ],
                     methods: [
                         ["Diagnosis", "We identify the starting point, goals and real gaps of the business or team."],
                         ["Framework", "We use simple models to organize decisions, not isolated theory."],
@@ -1909,6 +2314,9 @@
 
             function applyAcademyLang(lang) {
                 const t = copy[lang] || copy.es;
+                document.querySelectorAll(".lang-code").forEach((el) => {
+                    el.textContent = (lang || "es").toUpperCase();
+                });
                 set("academy-kicker", t.academyKicker);
                 set("academy-title", t.academyTitle);
                 set("academy-lead", t.academyLead);
@@ -1938,6 +2346,13 @@
                 set("method-kicker", t.methodKicker);
                 set("method-title", t.methodTitle);
                 set("method-text", t.methodText);
+                set("proof-kicker", t.proofKicker);
+                set("proof-title", t.proofTitle);
+                set("proof-text", t.proofText);
+                t.proofItems.forEach((item, index) => {
+                    set(`proof${index + 1}-title`, item[0]);
+                    set(`proof${index + 1}-text`, item[1]);
+                });
                 t.methods.forEach((method, index) => {
                     set(`method${index + 1}-title`, method[0]);
                     set(`method${index + 1}-text`, method[1]);
