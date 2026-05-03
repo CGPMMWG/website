@@ -1491,6 +1491,26 @@ nav .menu-item:hover,
   background-color: #f8fafc !important;
 }
 
+@media (min-width: 1180px) {
+  nav ul.desktop-menu.top-agency-menu {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    flex: none !important;
+    width: max-content !important;
+    max-width: calc(100vw - 520px);
+    margin: 0 !important;
+  }
+
+  nav .tm-header-badge {
+    margin-right: 0;
+  }
+
+  nav .nav-lang {
+    margin-left: auto !important;
+  }
+}
+
 @media (max-width: 768px) {
   nav ul.mobile-menu {
     background: rgba(8, 15, 28, 0.98) !important;

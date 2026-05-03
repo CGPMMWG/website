@@ -11,28 +11,72 @@ a#team-cta-button,
   text-decoration: none !important;
 }
 
+.team-hero {
+  position: relative !important;
+  height: 100vh !important;
+  min-height: 620px;
+  padding: 0 !important;
+  overflow: hidden;
+  background: #000;
+}
+
+.team-hero .video-container {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0 !important;
+}
+
+.team-hero .video-container video {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
 .team-hero .overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
-  padding: clamp(52px, 7vw, 96px) clamp(18px, 6vw, 64px);
+  height: 100% !important;
+  padding: clamp(82px, 10vh, 112px) clamp(18px, 6vw, 64px) clamp(52px, 7vw, 96px) !important;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.48) 0%, rgba(0, 0, 0, 0.2) 34%, rgba(0, 0, 0, 0.04) 68%, rgba(0, 0, 0, 0) 100%) !important;
 }
 
 .team-intro {
-  max-width: 960px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
 .team-intro .section-title {
-  font-size: clamp(2.4rem, 4vw, 3.4rem);
-  line-height: 1.15;
+  margin: 0;
+  color: #ffffff !important;
+  font-size: clamp(4.2rem, 8vw, 8.2rem);
+  font-weight: 950;
+  line-height: 0.88;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-shadow: 0 8px 26px rgba(0, 0, 0, 0.56), 0 0 42px rgba(0, 0, 0, 0.34);
+}
+
+.team-intro .section-title::after {
+  display: none !important;
 }
 
 .team-intro .intro-tagline {
-  margin-top: 12px;
+  max-width: 860px;
+  margin: 22px auto 0;
   color: #dfe6ff;
-  line-height: 1.55;
+  font-size: clamp(1.08rem, 1.45vw, 1.42rem);
+  font-weight: 800;
+  line-height: 1.38;
+  text-shadow: 0 5px 18px rgba(0, 0, 0, 0.58);
 }
 
 .back-btn {
@@ -299,9 +343,9 @@ main#equipo.team-shell .team-grid .team-card:hover p {
 @media (max-width: 768px) {
   .team-hero .overlay {
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
-    padding: 72px 16px 60px;
+    padding: 104px 16px 60px !important;
   }
 
   .team-intro {
@@ -313,6 +357,16 @@ main#equipo.team-shell .team-grid .team-card:hover p {
   .team-intro .section-title,
   .team-intro .intro-tagline {
     text-align: center;
+  }
+
+  .team-intro .section-title {
+    font-size: clamp(3.05rem, 14vw, 4.6rem);
+    line-height: 0.92;
+  }
+
+  .team-intro .intro-tagline {
+    font-size: 1rem;
+    line-height: 1.42;
   }
 }
 
