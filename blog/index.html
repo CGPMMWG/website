@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -633,6 +633,7 @@
                         <li><a href="index.html" id="nav-blog" class="menu-item active-link">Blog</a></li>
                     </ul>
                 </li>
+                <li><a href="../trendmakers-academy.html" id="nav-academy" class="menu-item">Academia</a></li>
                 <li><a href="../index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de &eacute;xito</a></li>
                 <li><a href="../index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
             </ul>
@@ -654,6 +655,7 @@
                 <li><a href="../index.html#equipo" id="nav-equipo" class="menu-item" onclick="closeMenu()">Equipo</a></li>
                 <li><a href="../index.html#acerca" id="nav-nosotros" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
                 <li><a href="index.html" id="nav-blog" class="menu-item active-link" onclick="closeMenu()">Blog</a></li>
+                <li><a href="../trendmakers-academy.html" id="nav-academy-mobile" class="menu-item" onclick="closeMenu()">Academia</a></li>
                 <li><a href="../index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de &eacute;xito</a></li>
                 <li><a href="../index.html#contact-form" id="nav-contacto" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
             </ul>
@@ -758,7 +760,7 @@
             const copy = {
                 es: {
                     nav: {
-                        inicio: "Inicio", servicios: "Servicios", problema: "Contanos tu Proyecto", equipo: "Nuestro Equipo", acerca: "Nosotros", casos: "Casos de &eacute;xito", blog: "Blog", contacto: "Contacto"
+                        inicio: "Inicio", servicios: "Servicios", problema: "Contanos tu Proyecto", equipo: "Nuestro Equipo", acerca: "Nosotros", academy: "Academia", casos: "Casos de &eacute;xito", blog: "Blog", contacto: "Contacto"
                     },
                     backTop: "Back",
                     kicker: "Biblioteca gratuita",
@@ -779,7 +781,7 @@
                 },
                 en: {
                     nav: {
-                        inicio: "Home", servicios: "Our Services", problema: "Tell us about your project", equipo: "Our Team", acerca: "Why us?", casos: "Success Stories", blog: "Blog", contacto: "Contact"
+                        inicio: "Home", servicios: "Our Services", problema: "Tell us about your project", equipo: "Our Team", acerca: "Why us?", academy: "Academy", casos: "Success Stories", blog: "Blog", contacto: "Contact"
                     },
                     backTop: "Back",
                     kicker: "Free knowledge base",
@@ -804,7 +806,7 @@
             function applyLang(lang){
                 const t = copy[lang] || copy.es;
                 setText('nav-inicio', t.nav.inicio); setText('nav-servicios', t.nav.servicios); setText('nav-problema', t.nav.problema);
-                setText('nav-equipo', t.nav.equipo); setText('nav-acerca', t.nav.acerca); setText('nav-casos-exito', t.nav.casos);
+                setText('nav-equipo', t.nav.equipo); setText('nav-acerca', t.nav.acerca); setText('nav-academy', t.nav.academy); setText('nav-academy-mobile', t.nav.academy); setText('nav-casos-exito', t.nav.casos);
                 setText('nav-blog', t.nav.blog); setText('nav-blog-mobile', t.nav.blog); setText('nav-contacto', t.nav.contacto);
                 setText('blog-kicker', t.kicker); setText('blog-title', t.title); setText('blog-panel-label', t.panelLabel); setText('blog-panel-title', t.panelTitle); setText('blog-subtitle', t.subtitle);
                 setText('blog-back-top', t.backTop);
