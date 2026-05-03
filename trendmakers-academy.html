@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendMakers Academy | Formaci&oacute;n en Marketing, Datos e IA</title>
+    <meta name="description" content="TrendMakers Academy: programas pr&aacute;cticos para aprender marketing, automatizaci&oacute;n, datos e IA aplicados al crecimiento de negocios reales.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://trendmakers.agency/trendmakers-academy.html">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header_overrides.css">
+    <link rel="stylesheet" href="./css/header_dark_global.css">
+    <link rel="stylesheet" href="./css/casos_overrides.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body.academy-page {
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #f7fbff;
+            background:
+                radial-gradient(900px 620px at 78% 0%, rgba(61, 103, 255, 0.24), transparent 64%),
+                radial-gradient(760px 560px at 10% 82%, rgba(45, 212, 191, 0.12), transparent 62%),
+                linear-gradient(135deg, #07111f 0%, #08121f 48%, #040916 100%);
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body.academy-page .content {
+            padding-top: 136px;
+            position: relative;
+            isolation: isolate;
+        }
+
+        body.academy-page .content::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            background:
+                linear-gradient(90deg, transparent 0 8%, rgba(79, 109, 255, 0.11) 8.1%, transparent 8.28% 100%),
+                linear-gradient(90deg, transparent 0 62%, rgba(96, 165, 250, 0.08) 62.08%, transparent 62.24% 100%),
+                linear-gradient(rgba(148, 163, 184, 0.028) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(148, 163, 184, 0.028) 1px, transparent 1px);
+            background-size: auto, auto, 84px 84px, 84px 84px;
+            opacity: 0.7;
+        }
+
+        .academy-shell {
+            width: min(1180px, calc(100% - 40px));
+            margin: 0 auto;
+            padding-bottom: 92px;
+        }
+
+        .academy-hero {
+            min-height: calc(100vh - 160px);
+            display: grid;
+            grid-template-columns: minmax(0, 1.06fr) minmax(330px, 0.74fr);
+            gap: clamp(36px, 6vw, 86px);
+            align-items: center;
+            padding: 24px 0 72px;
+        }
+
+        .academy-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 22px;
+            color: rgba(226, 232, 240, 0.96);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .academy-kicker::before {
+            content: "";
+            width: 34px;
+            height: 1px;
+            background: #4f6dff;
+            box-shadow: 0 0 18px rgba(79, 109, 255, 0.62);
+        }
+
+        .academy-hero h1 {
+            max-width: 780px;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(3rem, 7.2vw, 6.8rem);
+            line-height: 0.96;
+            font-weight: 950;
+            letter-spacing: 0;
+            text-shadow: 0 3px 0 rgba(37, 99, 235, 0.45), 0 28px 70px rgba(0, 0, 0, 0.38);
+        }
+
+        .academy-hero h1 span {
+            display: block;
+            color: #5f79ff;
+        }
+
+        .academy-lead {
+            max-width: 700px;
+            margin: 34px 0 0;
+            color: rgba(226, 232, 240, 0.82);
+            font-size: clamp(1.04rem, 1.6vw, 1.22rem);
+            line-height: 1.7;
+            font-weight: 500;
+        }
+
+        .academy-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 42px;
+        }
+
+        .academy-btn {
+            min-height: 50px;
+            width: 244px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.48);
+            padding: 13px 20px;
+            color: #ffffff;
+            background: transparent;
+            font-weight: 800;
+            font-size: 0.92rem;
+            line-height: 1.15;
+            text-decoration: none;
+            transition: transform 170ms ease, border-color 170ms ease, background 170ms ease;
+        }
+
+        .academy-btn.primary {
+            background: #ffffff;
+            color: #0f1628;
+            border-color: #ffffff;
+        }
+
+        .academy-btn:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255,255,255,0.9);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .academy-btn.primary:hover {
+            background: #dbeafe;
+            color: #0f1628;
+        }
+
+        .academy-panel {
+            position: relative;
+            padding: 24px;
+            border: 1px solid rgba(148, 163, 184, 0.22);
+            border-radius: 8px;
+            background: rgba(8, 17, 32, 0.72);
+            box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255,255,255,0.04);
+            overflow: hidden;
+        }
+
+        .academy-panel::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 12% 18%, rgba(79, 109, 255, 0.18), transparent 34%),
+                linear-gradient(135deg, transparent 0 52%, rgba(96, 165, 250, 0.1) 52.2%, transparent 52.45% 100%);
+            pointer-events: none;
+        }
+
+        .panel-top,
+        .panel-grid,
+        .panel-footer {
+            position: relative;
+            z-index: 1;
+        }
+
+        .panel-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding-bottom: 22px;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .panel-top strong {
+            display: block;
+            color: #ffffff;
+            font-size: 1rem;
+            line-height: 1.25;
+        }
+
+        .panel-top span {
+            display: block;
+            margin-top: 4px;
+            color: rgba(148, 163, 184, 0.82);
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .panel-badge {
+            padding: 8px 10px;
+            border: 1px solid rgba(79, 109, 255, 0.42);
+            border-radius: 999px;
+            color: #c7d2fe;
+            background: rgba(79, 109, 255, 0.12);
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            white-space: nowrap;
+        }
+
+        .panel-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .panel-card {
+            min-height: 112px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            border-radius: 8px;
+            padding: 16px;
+            background: rgba(15, 23, 42, 0.62);
+        }
+
+        .panel-card img {
+            width: 34px;
+            height: 34px;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 14px rgba(0,0,0,0.32));
+        }
+
+        .panel-card strong {
+            margin-top: 14px;
+            color: #ffffff;
+            font-size: 0.9rem;
+            line-height: 1.25;
+        }
+
+        .panel-footer {
+            margin-top: 20px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(148, 163, 184, 0.2);
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .panel-stat strong,
+        .panel-stat span {
+            display: block;
+        }
+
+        .panel-stat strong {
+            color: #ffffff;
+            font-size: 1.55rem;
+            line-height: 1;
+            font-weight: 900;
+            text-shadow: 0 2px 0 rgba(37, 99, 235, 0.5);
+        }
+
+        .panel-stat span {
+            margin-top: 7px;
+            color: rgba(148, 163, 184, 0.82);
+            font-size: 0.76rem;
+            line-height: 1.25;
+            font-weight: 700;
+        }
+
+        .academy-section {
+            padding: 86px 0;
+            border-top: 1px solid rgba(148, 163, 184, 0.16);
+        }
+
+        .section-heading {
+            max-width: 780px;
+            margin-bottom: 34px;
+        }
+
+        .section-kicker {
+            display: block;
+            margin-bottom: 12px;
+            color: #8ea2ff;
+            font-size: 0.78rem;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            color: #ffffff;
+            font-size: clamp(2rem, 4vw, 3.6rem);
+            line-height: 1.04;
+            font-weight: 900;
+            letter-spacing: 0;
+        }
+
+        .section-heading p {
+            margin: 18px 0 0;
+            color: rgba(203, 213, 225, 0.82);
+            font-size: 1.02rem;
+            line-height: 1.7;
+        }
+
+        .track-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .track-card,
+        .audience-card,
+        .method-card {
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 8px;
+            background: rgba(8, 17, 32, 0.62);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+        }
+
+        .track-card {
+            padding: 22px;
+            min-height: 348px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .track-number {
+            color: rgba(96, 165, 250, 0.84);
+            font-size: 0.82rem;
+            font-weight: 900;
+            letter-spacing: 0.12em;
+        }
+
+        .track-card h3 {
+            margin: 34px 0 12px;
+            color: #ffffff;
+            font-size: 1.2rem;
+            line-height: 1.24;
+        }
+
+        .track-card p {
+            margin: 0;
+            color: rgba(203, 213, 225, 0.78);
+            font-size: 0.95rem;
+            line-height: 1.62;
+        }
+
+        .track-card ul {
+            list-style: none;
+            padding: 0;
+            margin: auto 0 0;
+            display: grid;
+            gap: 8px;
+        }
+
+        .track-card li {
+            color: rgba(226, 232, 240, 0.86);
+            font-size: 0.86rem;
+            line-height: 1.35;
+            font-weight: 700;
+        }
+
+        .track-card li::before {
+            content: "";
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin-right: 8px;
+            border-radius: 50%;
+            background: #4f6dff;
+            vertical-align: 1px;
+        }
+
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .method-card {
+            padding: 20px;
+            min-height: 196px;
+        }
+
+        .method-card span {
+            display: inline-grid;
+            place-items: center;
+            width: 34px;
+            height: 34px;
+            border: 1px solid rgba(79, 109, 255, 0.5);
+            border-radius: 50%;
+            color: #c7d2fe;
+            font-size: 0.78rem;
+            font-weight: 900;
+        }
+
+        .method-card h3 {
+            margin: 28px 0 10px;
+            color: #ffffff;
+            font-size: 1rem;
+            line-height: 1.25;
+        }
+
+        .method-card p {
+            margin: 0;
+            color: rgba(203, 213, 225, 0.76);
+            font-size: 0.9rem;
+            line-height: 1.55;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .audience-card {
+            padding: 22px;
+            min-height: 210px;
+        }
+
+        .audience-card h3 {
+            margin: 0 0 12px;
+            color: #ffffff;
+            font-size: 1.1rem;
+            line-height: 1.28;
+        }
+
+        .audience-card p {
+            margin: 0;
+            color: rgba(203, 213, 225, 0.78);
+            font-size: 0.94rem;
+            line-height: 1.62;
+        }
+
+        .academy-cta {
+            margin-top: 26px;
+            padding: clamp(28px, 5vw, 48px);
+            border: 1px solid rgba(148, 163, 184, 0.24);
+            border-radius: 8px;
+            background:
+                radial-gradient(620px 280px at 88% 0%, rgba(79, 109, 255, 0.24), transparent 60%),
+                rgba(8, 17, 32, 0.76);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .academy-cta h2 {
+            margin: 0;
+            color: #ffffff;
+            font-size: clamp(1.7rem, 3.2vw, 3rem);
+            line-height: 1.05;
+            letter-spacing: 0;
+        }
+
+        .academy-cta p {
+            max-width: 690px;
+            margin: 14px 0 0;
+            color: rgba(203, 213, 225, 0.82);
+            font-size: 1rem;
+            line-height: 1.65;
+        }
+
+        @media (max-width: 980px) {
+            body.academy-page .content {
+                padding-top: 112px;
+            }
+
+            body.academy-page .academy-course-model {
+                grid-template-columns: 1fr;
+                min-height: 0;
+            }
+
+            body.academy-page .academy-course-model__copy {
+                max-width: none;
+            }
+
+            body.academy-page .academy-course-model__visual {
+                min-height: 0;
+            }
+
+            body.academy-page .academy-course-model__visual img {
+                width: min(100%, 620px);
+                max-width: 680px;
+            }
+
+            .academy-hero {
+                min-height: 0;
+                grid-template-columns: 1fr;
+                padding: 34px 0 64px;
+            }
+
+            .academy-panel {
+                max-width: 620px;
+            }
+
+            .track-grid,
+            .method-grid,
+            .audience-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .academy-cta {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .academy-shell {
+                width: min(100% - 28px, 1180px);
+            }
+
+            .academy-hero h1 {
+                font-size: clamp(2.55rem, 16vw, 4rem);
+            }
+
+            .academy-actions,
+            .academy-btn {
+                width: 100%;
+            }
+
+            .academy-btn {
+                min-width: 0;
+            }
+
+            .panel-grid,
+            .panel-footer,
+            .track-grid,
+            .method-grid,
+            .audience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .academy-section {
+                padding: 62px 0;
+            }
+
+            body.academy-page .academy-course-model {
+                margin: 12px 0 24px;
+                padding: 22px;
+                border-radius: 14px;
+            }
+
+            body.academy-page .academy-course-model__copy h2 {
+                font-size: clamp(2rem, 12vw, 3rem);
+            }
+        }
+
+        /* Light Academy visual system */
+        body.academy-page {
+            color: #121913;
+            background: #ffffff;
+        }
+
+        body.academy-page .content {
+            padding-top: 72px;
+            background:
+                radial-gradient(540px 260px at 68% 34%, rgba(185, 129, 255, 0.14), transparent 68%),
+                radial-gradient(520px 240px at 34% 42%, rgba(24, 231, 192, 0.08), transparent 70%),
+                linear-gradient(180deg, #e3f5f2 0%, #eef2ff 620px, #ffffff 621px);
+        }
+
+        body.academy-page .content::before {
+            display: none;
+        }
+
+        body.academy-page nav {
+            height: 72px;
+            padding: 0 36px !important;
+            background: #ffffff !important;
+            border-bottom: 1px solid #d6dde2 !important;
+            box-shadow: none !important;
+        }
+
+        body.academy-page nav .tm-header-badge {
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            width: auto !important;
+            height: 56px !important;
+            padding: 0 !important;
+            overflow: hidden;
+        }
+
+        body.academy-page nav .tm-header-badge img {
+            display: none !important;
+        }
+
+        body.academy-page nav .tm-header-badge .academy-header-logo {
+            display: block !important;
+            width: clamp(210px, 20vw, 330px) !important;
+            height: 56px !important;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 0;
+        }
+
+        body.academy-page .academy-nav-logo {
+            display: inline-flex;
+            align-items: center;
+            min-height: 40px;
+            color: #b981ff;
+            font-size: 1rem;
+            font-weight: 900;
+            letter-spacing: 0;
+        }
+
+        body.academy-page nav ul li a,
+        body.academy-page nav .menu-item,
+        body.academy-page nav .dropdown-toggle {
+            color: #050807 !important;
+            font-size: 0.98rem !important;
+            font-weight: 800 !important;
+            text-shadow: none !important;
+        }
+
+        body.academy-page nav ul li a:hover,
+        body.academy-page nav .menu-item:hover,
+        body.academy-page nav .dropdown-toggle:hover,
+        body.academy-page nav .dropdown-toggle[aria-expanded="true"] {
+            color: #050807 !important;
+            background: #f1f3f4 !important;
+            text-shadow: none !important;
+        }
+
+        body.academy-page nav .nav-cta {
+            min-height: 42px;
+            padding: 10px 22px !important;
+            border-radius: 999px !important;
+            background: #b981ff !important;
+            color: #111611 !important;
+            border: 0 !important;
+        }
+
+        body.academy-page nav .dropdown-menu,
+        body.academy-page .language-selector .lang-menu {
+            background: #ffffff !important;
+            border: 1px solid #d6dde2 !important;
+            box-shadow: 0 18px 44px rgba(44, 54, 70, 0.14) !important;
+        }
+
+        body.academy-page nav .dropdown-menu a,
+        body.academy-page .language-selector .lang-option {
+            color: #050807 !important;
+            background: transparent !important;
+            text-shadow: none !important;
+        }
+
+        body.academy-page nav .dropdown-menu a:hover,
+        body.academy-page .language-selector .lang-option:hover {
+            color: #050807 !important;
+            background: #f1f3f4 !important;
+        }
+
+        body.academy-page .language-selector,
+        body.academy-page .lang-toggle {
+            background: transparent !important;
+            box-shadow: none !important;
+        }
+
+        body.academy-page .academy-shell {
+            width: min(1360px, calc(100% - 56px));
+            padding-bottom: 0;
+        }
+
+        body.academy-page .academy-back {
+            position: absolute;
+            top: 86px;
+            left: 38px;
+            z-index: 20;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 0;
+            color: #101610;
+            font-size: 0.92rem;
+            font-weight: 900;
+            text-decoration: none;
+            letter-spacing: 0;
+            border: 1px solid rgba(17, 22, 17, 0.16);
+            border-radius: 999px;
+            padding: 8px 16px 8px 8px;
+            background: rgba(255, 255, 255, 0.72);
+            box-shadow: 0 14px 30px rgba(44, 54, 70, 0.09);
+            transform: none;
+            transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+        }
+
+        body.academy-page .academy-back img {
+            width: 34px;
+            height: 34px;
+            object-fit: contain;
+            flex: 0 0 auto;
+        }
+
+        body.academy-page .academy-back span {
+            display: inline-block;
+            line-height: 1;
+            white-space: nowrap;
+        }
+
+        body.academy-page .academy-back:hover {
+            transform: translateY(-2px);
+            background: #ffffff;
+            border-color: rgba(185, 129, 255, 0.58);
+            box-shadow: 0 18px 34px rgba(44, 54, 70, 0.13);
+        }
+
+        body.academy-page .academy-hero {
+            min-height: 600px;
+            grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.68fr);
+            gap: clamp(32px, 5vw, 76px);
+            padding: 70px 0 96px;
+        }
+
+        body.academy-page .academy-kicker {
+            margin-bottom: 24px;
+            color: #a56fff;
+            font-size: 1rem;
+            font-weight: 900;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+
+        body.academy-page .academy-kicker::before {
+            display: none;
+        }
+
+        body.academy-page .academy-hero h1 {
+            max-width: 760px;
+            color: #121913;
+            font-size: clamp(3.6rem, 5.4vw, 5.25rem);
+            line-height: 1.03;
+            font-weight: 900;
+            text-shadow: none;
+        }
+
+        body.academy-page .academy-hero h1 span {
+            color: #121913;
+        }
+
+        body.academy-page .academy-lead {
+            max-width: 720px;
+            margin-top: 22px;
+            color: #050807;
+            font-size: clamp(1.04rem, 1.35vw, 1.35rem);
+            line-height: 1.42;
+            font-weight: 500;
+        }
+
+        body.academy-page .academy-seal {
+            width: max-content;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 24px;
+            padding: 10px 14px 10px 10px;
+            border: 1px solid #d7dde3;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.72);
+            box-shadow: 0 16px 34px rgba(44, 54, 70, 0.08);
+        }
+
+        body.academy-page .academy-seal img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        body.academy-page .academy-seal span {
+            color: #101610;
+            font-size: 0.9rem;
+            line-height: 1.2;
+            font-weight: 900;
+        }
+
+        body.academy-page .academy-actions {
+            margin-top: 36px;
+        }
+
+        body.academy-page .academy-btn {
+            width: auto;
+            min-width: 172px;
+            min-height: 56px;
+            padding: 15px 32px;
+            border-radius: 999px;
+            border-color: #111611;
+            color: #111611;
+            background: transparent;
+            font-size: 0.98rem;
+            font-weight: 900;
+        }
+
+        body.academy-page .academy-btn.primary {
+            background: #b981ff;
+            border-color: #b981ff;
+            color: #111611;
+        }
+
+        body.academy-page .academy-btn:hover {
+            background: #111611;
+            border-color: #111611;
+            color: #ffffff;
+        }
+
+        body.academy-page .academy-btn.primary:hover {
+            background: #a56fff;
+            border-color: #a56fff;
+            color: #111611;
+        }
+
+        body.academy-page .academy-panel {
+            min-height: 430px;
+            align-self: center;
+            border: 0;
+            border-radius: 8px;
+            background: transparent;
+            box-shadow: none;
+            overflow: visible;
+            display: grid;
+            place-items: center;
+        }
+
+        body.academy-page .academy-panel::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 390px;
+            height: 390px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background:
+                radial-gradient(circle, rgba(255, 255, 255, 0.86) 0 48%, transparent 49%),
+                repeating-linear-gradient(0deg, rgba(185, 129, 255, 0.48) 0 4px, transparent 4px 12px);
+            box-shadow: 0 28px 70px rgba(55, 65, 81, 0.1);
+            z-index: 0;
+        }
+
+        body.academy-page .academy-hero-seal {
+            position: relative;
+            z-index: 2;
+            width: min(78%, 430px);
+            height: auto;
+            display: block;
+            border-radius: 50%;
+            filter: drop-shadow(0 34px 58px rgba(32, 42, 55, 0.2));
+            opacity: 0;
+            transform: translateX(120px) scale(0.92) rotate(8deg);
+            animation: academySealEnter 950ms cubic-bezier(0.2, 0.8, 0.2, 1) 260ms forwards;
+        }
+
+        @keyframes academySealEnter {
+            to {
+                opacity: 1;
+                transform: translateX(0) scale(1) rotate(0deg);
+            }
+        }
+
+        body.academy-page .panel-top {
+            display: none;
+            width: min(86%, 360px);
+            margin: 56px auto 0;
+            padding: 28px 30px 18px;
+            border: 0;
+            border-radius: 8px 8px 0 0;
+            background: #ffffff;
+            box-shadow: 0 20px 50px rgba(44, 54, 70, 0.12);
+        }
+
+        body.academy-page .panel-top strong {
+            color: #111611;
+            font-size: 1.45rem;
+            line-height: 1.1;
+        }
+
+        body.academy-page .panel-top span {
+            color: #4b5563;
+            font-size: 0.9rem;
+            line-height: 1.35;
+        }
+
+        body.academy-page .panel-badge {
+            display: inline-flex;
+            margin-top: 18px;
+            border: 0;
+            background: #eee7ff;
+            color: #a56fff;
+            letter-spacing: 0;
+        }
+
+        body.academy-page .panel-grid {
+            display: none;
+            width: min(86%, 360px);
+            margin: 0 auto;
+            grid-template-columns: 1fr;
+            gap: 0;
+            padding: 0 30px 28px;
+            background: #ffffff;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 28px 60px rgba(44, 54, 70, 0.12);
+        }
+
+        body.academy-page .panel-card {
+            min-height: 0;
+            display: grid;
+            grid-template-columns: 28px 1fr;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 0;
+            border: 0;
+            border-top: 1px solid #eef1f3;
+            border-radius: 0;
+            background: transparent;
+        }
+
+        body.academy-page .panel-card img {
+            width: 24px;
+            height: 24px;
+            filter: none;
+        }
+
+        body.academy-page .panel-card strong {
+            margin: 0;
+            color: #111611;
+            font-size: 0.92rem;
+            line-height: 1.25;
+        }
+
+        body.academy-page .panel-footer {
+            display: none;
+        }
+
+        body.academy-page .career-diploma {
+            padding: clamp(64px, 8vw, 104px) 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        }
+
+        body.academy-page .career-diploma__grid {
+            display: grid;
+            grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1fr);
+            gap: clamp(34px, 6vw, 88px);
+            align-items: center;
+        }
+
+        body.academy-page .career-diploma__copy h2 {
+            margin: 0;
+            color: #101610;
+            font-size: clamp(2.8rem, 5vw, 5.35rem);
+            line-height: 0.98;
+            font-weight: 900;
+            letter-spacing: 0;
+        }
+
+        body.academy-page .career-diploma__copy p {
+            max-width: 560px;
+            margin: 22px 0 0;
+            color: #161b18;
+            font-size: clamp(1.05rem, 1.45vw, 1.28rem);
+            line-height: 1.48;
+            font-weight: 500;
+        }
+
+        body.academy-page .career-diploma__card {
+            width: max-content;
+            max-width: 100%;
+            display: grid;
+            grid-template-columns: 72px minmax(0, 1fr);
+            gap: 14px;
+            align-items: center;
+            margin-top: 34px;
+            padding: 14px 18px 14px 14px;
+            border: 1px solid rgba(16, 22, 16, 0.12);
+            border-radius: 12px;
+            background: #ffffff;
+            box-shadow: 0 24px 56px rgba(44, 54, 70, 0.12);
+        }
+
+        body.academy-page .career-diploma__card img {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        body.academy-page .career-diploma__card strong,
+        body.academy-page .career-diploma__card span {
+            display: block;
+        }
+
+        body.academy-page .career-diploma__card strong {
+            color: #101610;
+            font-size: 1rem;
+            line-height: 1.15;
+            font-weight: 900;
+        }
+
+        body.academy-page .career-diploma__card span {
+            margin-top: 5px;
+            color: #4b5563;
+            font-size: 0.9rem;
+            line-height: 1.28;
+            font-weight: 700;
+        }
+
+        body.academy-page .career-diploma__visual {
+            position: relative;
+            min-height: 500px;
+            display: grid;
+            place-items: center;
+        }
+
+        body.academy-page .career-diploma__visual::before {
+            display: none;
+        }
+
+        body.academy-page .career-diploma__visual img {
+            position: relative;
+            z-index: 1;
+            width: min(104%, 660px);
+            height: auto;
+            filter: none;
+            transform: rotate(1.5deg);
+        }
+
+        body.academy-page .panel-stat {
+            display: none;
+        }
+
+        body.academy-page .panel-stat:first-child {
+            display: block;
+        }
+
+        body.academy-page .panel-stat strong {
+            color: #111611;
+            font-size: 1.4rem;
+            text-shadow: none;
+        }
+
+        body.academy-page .panel-stat span {
+            color: #4b5563;
+            font-size: 0.82rem;
+        }
+
+        body.academy-page .academy-section {
+            padding: 72px 0;
+            border-top: 0;
+            background: #ffffff;
+        }
+
+        body.academy-page #programas {
+            padding-top: 76px;
+        }
+
+        body.academy-page .academy-course-model {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(300px, 0.68fr) minmax(460px, 1fr);
+            align-items: center;
+            gap: clamp(18px, 3.8vw, 46px);
+            margin: 24px 0 28px;
+            padding: clamp(22px, 3.2vw, 34px) clamp(22px, 4vw, 46px);
+            overflow: hidden;
+            min-height: 360px;
+            border: 1px solid #cfd7df;
+            border-radius: 12px;
+            background:
+                radial-gradient(circle at 78% 16%, rgba(185, 129, 255, 0.2), transparent 34%),
+                linear-gradient(135deg, #ffffff 0%, #f7f5ff 54%, #ffffff 100%);
+            box-shadow: 0 22px 54px rgba(44, 54, 70, 0.12);
+        }
+
+        body.academy-page .academy-course-model::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background:
+                linear-gradient(90deg, rgba(185, 129, 255, 0.08) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(185, 129, 255, 0.06) 1px, transparent 1px);
+            background-size: 44px 44px;
+            opacity: 0.34;
+        }
+
+        body.academy-page .academy-course-model__copy,
+        body.academy-page .academy-course-model__visual {
+            position: relative;
+            z-index: 1;
+        }
+
+        body.academy-page .academy-course-model__copy {
+            max-width: 520px;
+        }
+
+        body.academy-page .academy-course-model__copy span {
+            display: inline-flex;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: #b981ff;
+            color: #111611;
+            font-size: 0.86rem;
+            font-weight: 900;
+        }
+
+        body.academy-page .academy-course-model__copy h2 {
+            margin: 20px 0 0;
+            color: #101610;
+            font-size: clamp(2rem, 3.4vw, 3.65rem);
+            line-height: 0.98;
+            font-weight: 900;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+        body.academy-page .academy-course-model__copy p {
+            margin: 20px 0 0;
+            color: #1f2937;
+            font-size: clamp(0.98rem, 1.08vw, 1.08rem);
+            line-height: 1.55;
+            font-weight: 650;
+        }
+
+        body.academy-page .academy-course-model__facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        body.academy-page .academy-course-model__facts strong {
+            padding: 8px 11px;
+            border-radius: 8px;
+            background: #f1f3f4;
+            color: #050807;
+            font-size: 0.86rem;
+            font-weight: 900;
+        }
+
+        body.academy-page .academy-course-model__visual {
+            min-height: 300px;
+            display: grid;
+            place-items: center;
+            align-self: stretch;
+        }
+
+        body.academy-page .academy-course-model__visual img {
+            width: min(108%, 740px);
+            max-width: none;
+            height: auto;
+            display: block;
+            border-radius: 0;
+            filter: drop-shadow(0 24px 44px rgba(44, 54, 70, 0.18));
+        }
+
+        body.academy-page .section-heading {
+            max-width: 1220px;
+            margin-bottom: 32px;
+        }
+
+        body.academy-page .section-kicker {
+            color: #a56fff;
+            letter-spacing: 0;
+            font-size: 0.95rem;
+            text-transform: none;
+        }
+
+        body.academy-page .section-heading h2 {
+            color: #101610;
+            font-size: clamp(2.4rem, 4vw, 3.9rem);
+            line-height: 1.04;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        body.academy-page .section-heading p {
+            max-width: 860px;
+            color: #111611;
+            font-size: 1.05rem;
+            line-height: 1.55;
+        }
+
+        body.academy-page .track-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 26px;
+        }
+
+        body.academy-page .track-card,
+        body.academy-page .audience-card,
+        body.academy-page .method-card {
+            border: 1px solid #cfd7df;
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: none;
+        }
+
+        body.academy-page .track-card {
+            min-height: 430px;
+            padding: 18px 18px 22px;
+            color: inherit;
+            text-decoration: none;
+            transform: translateY(18px);
+            opacity: 0;
+            animation: academyCardIn 700ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+            will-change: transform;
+        }
+
+        body.academy-page .track-card:nth-child(1) { animation-delay: 80ms; }
+        body.academy-page .track-card:nth-child(2) { animation-delay: 150ms; }
+        body.academy-page .track-card:nth-child(3) { animation-delay: 220ms; }
+        body.academy-page .track-card:nth-child(4) { animation-delay: 290ms; }
+        body.academy-page .track-card:nth-child(5) { animation-delay: 360ms; }
+        body.academy-page .track-card:nth-child(6) { animation-delay: 430ms; }
+
+        body.academy-page .track-card:hover {
+            transform: translateY(-10px);
+            border-color: #b981ff;
+            box-shadow: 0 22px 42px rgba(44, 54, 70, 0.14);
+        }
+
+        body.academy-page .track-card:hover .track-number {
+            transform: scale(1.06);
+        }
+
+        body.academy-page .track-card:hover::after {
+            color: #8b5cf6;
+        }
+
+        @keyframes academyCardIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body.academy-page .track-number {
+            width: max-content;
+            padding: 6px 10px;
+            border-radius: 6px;
+            background: #b981ff;
+            color: #111611;
+            font-size: 0.86rem;
+            letter-spacing: 0;
+            transition: transform 220ms ease;
+        }
+
+        body.academy-page .track-card h3 {
+            margin: 26px 0 14px;
+            color: #050807;
+            font-size: 1.55rem;
+            line-height: 1.08;
+            font-weight: 900;
+        }
+
+        body.academy-page .track-card p {
+            color: #101610;
+            font-size: 1rem;
+            line-height: 1.42;
+        }
+
+        body.academy-page .track-card .track-meta {
+            margin-top: 14px;
+            color: #5b6268;
+            font-size: 0.84rem;
+            line-height: 1.2;
+            font-weight: 800;
+        }
+
+        body.academy-page .track-card .track-fit {
+            margin-top: 18px;
+            color: #151a16;
+            font-size: 0.92rem;
+            line-height: 1.34;
+            font-weight: 800;
+        }
+
+        body.academy-page .track-card ul {
+            align-content: start;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 24px 0 0;
+        }
+
+        body.academy-page .track-card li {
+            width: max-content;
+            max-width: 100%;
+            padding: 6px 10px;
+            border-radius: 6px;
+            background: #f1f3f4;
+            color: #050807;
+            font-size: 0.86rem;
+            line-height: 1.2;
+            font-weight: 500;
+        }
+
+        body.academy-page .track-card li::before {
+            display: none;
+        }
+
+        body.academy-page .track-card::after {
+            content: "Ver curso";
+            margin-top: auto;
+            color: #050807;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 220ms ease;
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+            body.academy-page .track-card {
+                animation: none;
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+
+            body.academy-page .track-card:hover,
+            body.academy-page .track-card:hover .track-number {
+                transform: none;
+            }
+
+            body.academy-page .academy-hero-seal {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        body.academy-page .method-grid {
+            gap: 0;
+            min-height: 560px;
+            align-items: center;
+            padding: 74px 0;
+            background:
+                radial-gradient(circle at 70% 44%, #ffffff 0 16%, transparent 16.3%),
+                repeating-linear-gradient(0deg, #18e7c0 0 5px, transparent 5px 14px),
+                linear-gradient(180deg, #e2f4f2 0%, #eef0ff 100%);
+        }
+
+        body.academy-page .method-card {
+            width: min(92%, 260px);
+            min-height: 164px;
+            margin: 0 auto;
+            padding: 22px;
+            background: #ffffff;
+            box-shadow: 0 20px 46px rgba(44, 54, 70, 0.12);
+        }
+
+        body.academy-page .method-card span {
+            border-color: #b981ff;
+            color: #111611;
+            background: #eee7ff;
+        }
+
+        body.academy-page .method-card h3,
+        body.academy-page .audience-card h3 {
+            color: #101610;
+        }
+
+        body.academy-page .method-card p,
+        body.academy-page .audience-card p {
+            color: #1f2937;
+        }
+
+        body.academy-page .audience-grid {
+            gap: 24px;
+        }
+
+        body.academy-page .audience-card {
+            min-height: 230px;
+            padding: 26px;
+            background: #f8fafc;
+        }
+
+        body.academy-page .academy-cta {
+            margin: 34px auto 90px;
+            border: 0;
+            border-radius: 8px;
+            background: #e4f5f2;
+            box-shadow: none;
+        }
+
+        body.academy-page .academy-cta h2,
+        body.academy-page .academy-cta p {
+            color: #101610;
+        }
+
+        body.academy-page .whatsapp-button,
+        body.academy-page .email-button {
+            filter: drop-shadow(0 10px 20px rgba(15, 22, 40, 0.18));
+        }
+
+        @media (max-width: 980px) {
+            body.academy-page .content {
+                padding-top: 72px;
+            }
+
+            body.academy-page .academy-shell {
+                width: min(100% - 36px, 1360px);
+            }
+
+            body.academy-page .academy-hero,
+            body.academy-page .track-grid,
+            body.academy-page .audience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            body.academy-page .academy-panel {
+                max-width: 560px;
+            }
+
+            body.academy-page .method-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 18px;
+                padding: 44px 18px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body.academy-page nav {
+                padding: 0 14px !important;
+            }
+
+            body.academy-page .academy-back {
+                top: 82px;
+                left: 16px;
+                padding: 7px 14px 7px 7px;
+                font-size: 0.86rem;
+            }
+
+            body.academy-page .academy-back img {
+                width: 30px;
+                height: 30px;
+            }
+
+            body.academy-page .academy-hero {
+                padding-top: 42px;
+            }
+
+            body.academy-page .academy-hero h1 {
+                font-size: clamp(2.8rem, 15vw, 4.3rem);
+            }
+
+            body.academy-page .academy-seal {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            body.academy-page .academy-panel::before {
+                width: 280px;
+                height: 280px;
+            }
+
+            body.academy-page .academy-hero-seal {
+                width: min(84%, 360px);
+            }
+
+            body.academy-page .panel-footer {
+                position: relative;
+                inset: auto;
+                width: auto;
+                margin: 16px auto 0;
+            }
+
+            body.academy-page .method-grid {
+                grid-template-columns: 1fr;
+            }
+
+            body.academy-page .career-diploma__grid,
+            body.academy-page .career-diploma__card {
+                grid-template-columns: 1fr;
+            }
+
+            body.academy-page .career-diploma__visual {
+                min-height: 360px;
+            }
+        }
+    </style>
+</head>
+<body class="academy-page">
+    <div class="content">
+        <nav>
+            <a class="tm-header-badge" href="trendmakers-academy.html" aria-label="TrendMakers Academy" id="tm-badge">
+                <img class="academy-header-logo" src="./img/academy-header-logo.png" alt="TrendMakers Academy">
+            </a>
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos rapidos">
+                <a href="https://www.instagram.com/trendmakersagency.ok" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                <a class="mailto-dynamic" href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20TrendMakers%20Academy&body=Hola,%20quiero%20recibir%20informaci%C3%B3n%20sobre%20TrendMakers%20Academy." target="_blank" aria-label="Email">Email</a>
+                <a href="https://wa.me/541122549351?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20TrendMakers%20Academy." target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="desktop-menu top-agency-menu">
+                <li><a href="index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
+                <li><a href="nuestros-servicios.html" id="nav-servicios" class="menu-item">Servicios</a></li>
+                <li class="dropdown about-dropdown">
+                    <button id="nav-acerca" class="menu-item dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Nosotros <span class="caret">v</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#equipo" id="nav-equipo" class="menu-item">Equipo</a></li>
+                        <li><a href="index.html#acerca" id="nav-nosotros" class="menu-item">Nosotros</a></li>
+                        <li><a href="blog/index.html" id="nav-blog" class="menu-item">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="trendmakers-academy.html" class="menu-item">Academy</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de &eacute;xito</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
+            </ul>
+            <div class="nav-lang">
+              <div class="language-selector" aria-label="Selector de idioma">
+                <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
+                  <img src="./img/IDIOMA.PNG" alt="Idioma">
+                </button>
+                <div class="lang-menu" role="menu" aria-label="Idiomas">
+                  <button class="lang-option" role="menuitem" data-lang="es">Espa&ntilde;ol</button>
+                  <button class="lang-option" role="menuitem" data-lang="en">English</button>
+                </div>
+              </div>
+            </div>
+            <ul class="mobile-menu">
+                <li><a href="index.html#inicio" id="nav-inicio-mobile" class="menu-item" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="nuestros-servicios.html" id="nav-servicios-mobile" class="menu-item" onclick="closeMenu()">Servicios</a></li>
+                <li><a href="trendmakers-academy.html" class="menu-item" onclick="closeMenu()">Academy</a></li>
+                <li class="mobile-heading">Nosotros</li>
+                <li><a href="index.html#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
+                <li><a href="index.html#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
+                <li><a href="blog/index.html" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
+                <li><a href="index.html#casos-exito" id="nav-casos-exito-mobile" class="menu-item" onclick="closeMenu()">Casos de &eacute;xito</a></li>
+                <li><a href="index.html#contact-form" id="nav-contacto-mobile" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main class="academy-shell">
+            <section class="academy-hero">
+                <div>
+                    <p class="academy-kicker" id="academy-kicker">Formaci&oacute;n aplicada</p>
+                    <h1 id="academy-title">TrendMakers <span>Academy</span></h1>
+                    <p class="academy-lead" id="academy-lead">Programas pr&aacute;cticos para aprender marketing, automatizaci&oacute;n, datos e IA con metodolog&iacute;as usadas en negocios reales. Menos teor&iacute;a suelta, m&aacute;s sistemas para ejecutar.</p>
+                    <div class="academy-actions">
+                        <a class="academy-btn primary" id="academy-primary" href="index.html#contact-form">Solicitar informaci&oacute;n</a>
+                        <a class="academy-btn" id="academy-secondary" href="#programas">Ver programas</a>
+                    </div>
+                </div>
+
+                <aside class="academy-panel" aria-label="Resumen de TrendMakers Academy">
+                    <img class="academy-hero-seal" src="./img/logo_academy.png" alt="Sello TrendMakers Academy">
+                    <div class="panel-top">
+                        <div>
+                            <strong id="panel-title">Aprendizaje orientado a ejecuci&oacute;n</strong>
+                            <span id="panel-subtitle">Estrategia, herramientas y casos reales</span>
+                        </div>
+                        <span class="panel-badge" id="panel-badge">Academy</span>
+                    </div>
+                    <div class="panel-grid">
+                        <div class="panel-card">
+                            <img src="./img/MATION.png" alt="Automatizaci&oacute;n">
+                            <strong id="panel-card-1">Funnels, CRM y automatizaci&oacute;n</strong>
+                        </div>
+                        <div class="panel-card">
+                            <img src="./img/DATA-STRAT.png" alt="Datos">
+                            <strong id="panel-card-2">Datos para tomar mejores decisiones</strong>
+                        </div>
+                        <div class="panel-card">
+                            <img src="./img/IA-HUB.png" alt="Inteligencia artificial">
+                            <strong id="panel-card-3">IA aplicada a tareas comerciales</strong>
+                        </div>
+                        <div class="panel-card">
+                            <img src="./img/BRANDING.png" alt="Marca">
+                            <strong id="panel-card-4">Marca, contenido y performance</strong>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="panel-stat">
+                            <strong>4</strong>
+                            <span id="panel-stat-1">Rutas de aprendizaje</span>
+                        </div>
+                        <div class="panel-stat">
+                            <strong>100%</strong>
+                            <span id="panel-stat-2">Aplicado a negocio</span>
+                        </div>
+                        <div class="panel-stat">
+                            <strong>1:1</strong>
+                            <span id="panel-stat-3">Correcciones y feedback</span>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+            <a class="academy-back" href="index.html#inicio" aria-label="Ir a Trendmakers Agency">
+                <img src="./img/logo1.png" alt="" aria-hidden="true">
+                <span>Trendmakers Agency</span>
+            </a>
+
+            <section class="academy-course-model" aria-label="Modelo de cursos TrendMakers Academy">
+                <div class="academy-course-model__copy">
+                    <span>Modelo de aprendizaje</span>
+                    <h2>Cursos pr&aacute;cticos para pasar de mirar datos a tomar mejores decisiones.</h2>
+                    <p>Combinamos criterio estrat&eacute;gico, herramientas digitales e IA aplicada para que cada programa termine con acciones claras, materiales concretos y prioridades listas para ejecutar.</p>
+                    <div class="academy-course-model__facts">
+                        <strong>Online</strong>
+                        <strong>Certificado</strong>
+                        <strong>Plantillas incluidas</strong>
+                    </div>
+                </div>
+                <div class="academy-course-model__visual">
+                    <img src="./img/course-model.png" alt="Modelo visual de cursos online de TrendMakers Academy">
+                </div>
+            </section>
+
+            <section class="academy-section" id="programas">
+                <div class="section-heading">
+                    <span class="section-kicker" id="programs-kicker">Programas</span>
+                    <h2 id="programs-title">Cursos para detectar oportunidades, ordenar sistemas y convertir mejor.</h2>
+                    <p id="programs-text">Cada curso aborda un frente clave del crecimiento digital con ejemplos pr&aacute;cticos, criterios de decisi&oacute;n y acciones aplicables a empresas reales.</p>
+                </div>
+                <div class="track-grid">
+                    <a class="track-card" href="academy-cursos/academy-diagnostico-digital-ceos.html">
+                        <span class="track-number">01</span>
+                        <h3 id="track1-title">Diagn&oacute;stico Digital para CEOs</h3>
+                        <p id="track1-text">Ayuda a detectar oportunidades perdidas en tu web, redes, comunicaci&oacute;n y proceso comercial digital.</p>
+                        <p class="track-meta" id="track1-meta">Curso online &middot; 20 hs &middot; Certificado</p>
+                        <ul>
+                            <li id="track1-li1">Web, redes y propuesta de valor</li>
+                            <li id="track1-li2">Conversi&oacute;n, confianza y puntos de fuga</li>
+                            <li id="track1-li3">Quick wins y prioridades de mejora</li>
+                        </ul>
+                        <p class="track-fit" id="track1-fit">Ideal para due&ntilde;os, CEOs y l&iacute;deres que quieren entender qu&eacute; mejorar primero.</p>
+                    </a>
+                    <a class="track-card" href="academy-cursos/academy-webs-que-convierten.html">
+                        <span class="track-number">02</span>
+                        <h3 id="track2-title">Webs que convierten</h3>
+                        <p id="track2-text">Aprend&eacute; a estructurar una web pensada para generar confianza, explicar tu propuesta y convertir visitas en consultas.</p>
+                        <p class="track-meta" id="track2-meta">Curso online &middot; 29 hs &middot; Certificado</p>
+                        <ul>
+                            <li id="track2-li1">Hero, propuesta de valor y CTAs</li>
+                            <li id="track2-li2">Estructura, confianza y recorrido</li>
+                            <li id="track2-li3">Landing pages y sitios orientados a resultados</li>
+                        </ul>
+                        <p class="track-fit" id="track2-fit">Ideal para marcas, negocios y profesionales que quieren una web m&aacute;s efectiva.</p>
+                    </a>
+                    <a class="track-card" href="academy-cursos/academy-branding-communication-b2b.html">
+                        <span class="track-number">03</span>
+                        <h3 id="track3-title">Marca profesional</h3>
+                        <p id="track3-text">Aprend&eacute; a ordenar la imagen, el mensaje y la comunicaci&oacute;n de tu marca para transmitir m&aacute;s claridad y confianza.</p>
+                        <p class="track-meta" id="track3-meta">Curso online &middot; 40 hs &middot; Certificado</p>
+                        <ul>
+                            <li id="track3-li1">Posicionamiento, mensaje y propuesta de valor</li>
+                            <li id="track3-li2">Tono, identidad y coherencia visual</li>
+                            <li id="track3-li3">Web, redes y materiales comerciales</li>
+                        </ul>
+                        <p class="track-fit" id="track3-fit">Ideal para marcas que se ven desordenadas o no transmiten su verdadero valor.</p>
+                    </a>
+                    <a class="track-card" href="academy-cursos/academy-paid-media-essentials.html">
+                        <span class="track-number">04</span>
+                        <h3 id="track4-title">Marketing Digital desde Cero</h3>
+                        <p id="track4-text">Una formaci&oacute;n pr&aacute;ctica para entender los canales digitales, ordenar tu presencia online y construir un plan simple para tu negocio.</p>
+                        <p class="track-meta" id="track4-meta">Curso online &middot; 100 hs &middot; Certificado</p>
+                        <ul>
+                            <li id="track4-li1">Fundamentos, canales y m&eacute;tricas b&aacute;sicas</li>
+                            <li id="track4-li2">Contenido, funnels y presencia online</li>
+                            <li id="track4-li3">Plan inicial de marketing de 30 d&iacute;as</li>
+                        </ul>
+                        <p class="track-fit" id="track4-fit">Ideal para emprendedores y personas que quieren empezar sin abrumarse.</p>
+                    </a>
+                    <a class="track-card" href="academy-cursos/academy-marketing-automation-basics.html">
+                        <span class="track-number">05</span>
+                        <h3 id="track5-title">Ventas Digitales para Emprendedores</h3>
+                        <p id="track5-text">Aprend&eacute; a responder consultas, presentar tu oferta y hacer seguimiento para convertir m&aacute;s interesados en clientes.</p>
+                        <p class="track-meta" id="track5-meta">Curso online &middot; 25 hs &middot; Certificado</p>
+                        <ul>
+                            <li id="track5-li1">WhatsApp, Instagram y mensajes de venta</li>
+                            <li id="track5-li2">Objeciones, seguimiento y cierre</li>
+                            <li id="track5-li3">Scripts y flujo comercial simple</li>
+                        </ul>
+                        <p class="track-fit" id="track5-fit">Ideal para negocios que reciben consultas pero convierten poco.</p>
+                    </a>
+                    <a class="track-card" href="academy-cursos/academy-ai-business-marketing.html">
+                        <span class="track-number">06</span>
+                        <h3 id="track6-title">Creaci&oacute;n de Contenido con IA</h3>
+                        <p id="track6-text">Us&aacute; herramientas de IA para generar ideas, textos y piezas de contenido de forma m&aacute;s r&aacute;pida y ordenada.</p>
+                        <p class="track-meta" id="track6-meta">Curso online &middot; 14 hs &middot; Certificado</p>
+                        <ul>
+                            <li id="track6-li1">Ideas, prompts y calendario de contenido</li>
+                            <li id="track6-li2">Posts, captions y contenido comercial</li>
+                            <li id="track6-li3">IA aplicada sin humo ni complejidad</li>
+                        </ul>
+                        <p class="track-fit" id="track6-fit">Ideal para marcas que no saben qu&eacute; publicar o quieren crear contenido m&aacute;s r&aacute;pido.</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="career-diploma" aria-label="Diploma de TrendMakers Academy">
+                <div class="career-diploma__grid">
+                    <div class="career-diploma__copy">
+                        <h2>Potenci&aacute; tu carrera con un diploma que habla de ejecuci&oacute;n.</h2>
+                        <p>Termin&aacute; el recorrido con una certificaci&oacute;n pensada para mostrar criterio, manejo de herramientas y capacidad real para convertir marketing en sistemas de crecimiento.</p>
+                        <div class="career-diploma__card">
+                            <img src="./img/logo_academy.png" alt="Sello TrendMakers Academy">
+                            <div>
+                                <strong>TrendMakers Academy Certified</strong>
+                                <span>Marketing, branding, automation e IA aplicados a negocios reales.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="career-diploma__visual">
+                        <img src="./img/diploma_academy.png" alt="Diploma de certificaci&oacute;n de TrendMakers Academy">
+                    </div>
+                </div>
+            </section>
+
+            <section class="academy-section">
+                <div class="section-heading">
+                    <span class="section-kicker" id="method-kicker">Metodolog&iacute;a</span>
+                    <h2 id="method-title">Aprender haciendo, con entregables que quedan funcionando.</h2>
+                    <p id="method-text">La academia no est&aacute; pensada como biblioteca de videos. Est&aacute; pensada como un sistema de avance: contexto, pr&aacute;ctica, feedback y aplicaci&oacute;n.</p>
+                </div>
+                <div class="method-grid">
+                    <article class="method-card">
+                        <span>01</span>
+                        <h3 id="method1-title">Diagn&oacute;stico</h3>
+                        <p id="method1-text">Identificamos punto de partida, objetivos y brechas reales del negocio o del equipo.</p>
+                    </article>
+                    <article class="method-card">
+                        <span>02</span>
+                        <h3 id="method2-title">Framework</h3>
+                        <p id="method2-text">Trabajamos con modelos simples para ordenar decisiones, no con teor&iacute;a aislada.</p>
+                    </article>
+                    <article class="method-card">
+                        <span>03</span>
+                        <h3 id="method3-title">Implementaci&oacute;n</h3>
+                        <p id="method3-text">Cada m&oacute;dulo termina con un activo, proceso o tablero aplicado a un caso concreto.</p>
+                    </article>
+                    <article class="method-card">
+                        <span>04</span>
+                        <h3 id="method4-title">Feedback</h3>
+                        <p id="method4-text">Revisamos entregables para mejorar criterio, claridad y calidad de ejecuci&oacute;n.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="academy-section">
+                <div class="section-heading">
+                    <span class="section-kicker" id="audience-kicker">Para qui&eacute;n</span>
+                    <h2 id="audience-title">Formaci&oacute;n para personas y equipos que tienen que ejecutar.</h2>
+                </div>
+                <div class="audience-grid">
+                    <article class="audience-card">
+                        <h3 id="aud1-title">Equipos de marketing</h3>
+                        <p id="aud1-text">Para pasar de acciones sueltas a sistemas medibles de captaci&oacute;n, conversi&oacute;n y optimizaci&oacute;n.</p>
+                    </article>
+                    <article class="audience-card">
+                        <h3 id="aud2-title">Fundadores y l&iacute;deres</h3>
+                        <p id="aud2-text">Para entender qu&eacute; pedir, qu&eacute; medir y c&oacute;mo priorizar inversiones digitales con criterio.</p>
+                    </article>
+                    <article class="audience-card">
+                        <h3 id="aud3-title">Profesionales digitales</h3>
+                        <p id="aud3-text">Para actualizar habilidades con herramientas, IA y procesos que ya se usan en proyectos reales.</p>
+                    </article>
+                    <article class="audience-card">
+                        <h3 id="aud4-title">Personas que quieren empezar</h3>
+                        <p id="aud4-text">Para aprender las bases del marketing digital, ordenar ideas y dar los primeros pasos con una gu&iacute;a clara y pr&aacute;ctica.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="academy-cta" id="inscripcion">
+                <div>
+                    <h2 id="cta-title">Constru&iacute; capacidades que se noten en la ejecuci&oacute;n.</h2>
+                    <p id="cta-text">Contanos si busc&aacute;s formaci&oacute;n individual, un workshop para tu equipo o una ruta a medida. Te respondemos con la mejor opci&oacute;n para tu etapa.</p>
+                </div>
+                <a class="academy-btn primary" id="cta-btn" href="index.html#contact-form">Quiero informaci&oacute;n</a>
+            </section>
+        </main>
+    </div>
+
+    <a href="https://wa.me/541122549351?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20TrendMakers%20Academy." class="whatsapp-button" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+        <img src="./img/WPP.PNG" alt="WhatsApp">
+    </a>
+    <a href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20TrendMakers%20Academy&body=Hola,%20quiero%20recibir%20informaci%C3%B3n%20sobre%20TrendMakers%20Academy." class="email-button mailto-dynamic" target="_blank" aria-label="Escribinos por email">
+        <img src="./img/EMAIL.jpg" alt="Email">
+    </a>
+
+    <script src="./js/script.js"></script>
+    <script>
+        (function(){
+            const copy = {
+                es: {
+                    academyKicker: "Formaci&oacute;n aplicada",
+                    academyTitle: "TrendMakers <span>Academy</span>",
+                    academyLead: "Programas pr&aacute;cticos para aprender marketing, automatizaci&oacute;n, datos e IA con metodolog&iacute;as usadas en negocios reales. Menos teor&iacute;a suelta, m&aacute;s sistemas para ejecutar.",
+                    academyPrimary: "Solicitar informaci&oacute;n",
+                    academySecondary: "Ver programas",
+                    panelTitle: "Aprendizaje orientado a ejecuci&oacute;n",
+                    panelSubtitle: "Estrategia, herramientas y casos reales",
+                    panelBadge: "Academy",
+                    panelCard1: "Funnels, CRM y automatizaci&oacute;n",
+                    panelCard2: "Datos para tomar mejores decisiones",
+                    panelCard3: "IA aplicada a tareas comerciales",
+                    panelCard4: "Marca, contenido y performance",
+                    panelStat1: "Rutas de aprendizaje",
+                    panelStat2: "Aplicado a negocio",
+                    panelStat3: "Correcciones y feedback",
+                    programsKicker: "Programas",
+                    programsTitle: "Cursos para detectar oportunidades, ordenar sistemas y convertir mejor.",
+                    programsText: "Cada curso aborda un frente clave del crecimiento digital con ejemplos pr&aacute;cticos, criterios de decisi&oacute;n y acciones aplicables a empresas reales.",
+                    tracks: [
+                        ["Diagn&oacute;stico Digital para CEOs", "Ayuda a detectar oportunidades perdidas en tu web, redes, comunicaci&oacute;n y proceso comercial digital.", "Curso online &middot; 20 hs &middot; Certificado", ["Web, redes y propuesta de valor", "Conversi&oacute;n, confianza y puntos de fuga", "Quick wins y prioridades de mejora"], "Ideal para due&ntilde;os, CEOs y l&iacute;deres que quieren entender qu&eacute; mejorar primero."],
+                        ["Webs que convierten", "Aprend&eacute; a estructurar una web pensada para generar confianza, explicar tu propuesta y convertir visitas en consultas.", "Curso online &middot; 29 hs &middot; Certificado", ["Hero, propuesta de valor y CTAs", "Estructura, confianza y recorrido", "Landing pages y sitios orientados a resultados"], "Ideal para marcas, negocios y profesionales que quieren una web m&aacute;s efectiva."],
+                        ["Marca profesional", "Aprend&eacute; a ordenar la imagen, el mensaje y la comunicaci&oacute;n de tu marca para transmitir m&aacute;s claridad y confianza.", "Curso online &middot; 40 hs &middot; Certificado", ["Posicionamiento, mensaje y propuesta de valor", "Tono, identidad y coherencia visual", "Web, redes y materiales comerciales"], "Ideal para marcas que se ven desordenadas o no transmiten su verdadero valor."],
+                        ["Marketing Digital desde Cero", "Una formaci&oacute;n pr&aacute;ctica para entender los canales digitales, ordenar tu presencia online y construir un plan simple para tu negocio.", "Curso online &middot; 100 hs &middot; Certificado", ["Fundamentos, canales y m&eacute;tricas b&aacute;sicas", "Contenido, funnels y presencia online", "Plan inicial de marketing de 30 d&iacute;as"], "Ideal para emprendedores y personas que quieren empezar sin abrumarse."],
+                        ["Ventas Digitales para Emprendedores", "Aprend&eacute; a responder consultas, presentar tu oferta y hacer seguimiento para convertir m&aacute;s interesados en clientes.", "Curso online &middot; 25 hs &middot; Certificado", ["WhatsApp, Instagram y mensajes de venta", "Objeciones, seguimiento y cierre", "Scripts y flujo comercial simple"], "Ideal para negocios que reciben consultas pero convierten poco."],
+                        ["Creaci&oacute;n de Contenido con IA", "Us&aacute; herramientas de IA para generar ideas, textos y piezas de contenido de forma m&aacute;s r&aacute;pida y ordenada.", "Curso online &middot; 14 hs &middot; Certificado", ["Ideas, prompts y calendario de contenido", "Posts, captions y contenido comercial", "IA aplicada sin humo ni complejidad"], "Ideal para marcas que no saben qu&eacute; publicar o quieren crear contenido m&aacute;s r&aacute;pido."]
+                    ],
+                    methodKicker: "Metodolog&iacute;a",
+                    methodTitle: "Aprender haciendo, con entregables que quedan funcionando.",
+                    methodText: "La academia no est&aacute; pensada como biblioteca de videos. Est&aacute; pensada como un sistema de avance: contexto, pr&aacute;ctica, feedback y aplicaci&oacute;n.",
+                    methods: [
+                        ["Diagn&oacute;stico", "Identificamos punto de partida, objetivos y brechas reales del negocio o del equipo."],
+                        ["Framework", "Trabajamos con modelos simples para ordenar decisiones, no con teor&iacute;a aislada."],
+                        ["Implementaci&oacute;n", "Cada m&oacute;dulo termina con un activo, proceso o tablero aplicado a un caso concreto."],
+                        ["Feedback", "Revisamos entregables para mejorar criterio, claridad y calidad de ejecuci&oacute;n."]
+                    ],
+                    audienceKicker: "Para qui&eacute;n",
+                    audienceTitle: "Formaci&oacute;n para personas y equipos que tienen que ejecutar.",
+                    audiences: [
+                        ["Equipos de marketing", "Para pasar de acciones sueltas a sistemas medibles de captaci&oacute;n, conversi&oacute;n y optimizaci&oacute;n."],
+                        ["Fundadores y l&iacute;deres", "Para entender qu&eacute; pedir, qu&eacute; medir y c&oacute;mo priorizar inversiones digitales con criterio."],
+                        ["Profesionales digitales", "Para actualizar habilidades con herramientas, IA y procesos que ya se usan en proyectos reales."],
+                        ["Personas que quieren empezar", "Para aprender las bases del marketing digital, ordenar ideas y dar los primeros pasos con una gu&iacute;a clara y pr&aacute;ctica."]
+                    ],
+                    ctaTitle: "Constru&iacute; capacidades que se noten en la ejecuci&oacute;n.",
+                    ctaText: "Contanos si busc&aacute;s formaci&oacute;n individual, un workshop para tu equipo o una ruta a medida. Te respondemos con la mejor opci&oacute;n para tu etapa.",
+                    ctaBtn: "Quiero informaci&oacute;n"
+                },
+                en: {
+                    academyKicker: "Applied training",
+                    academyTitle: "TrendMakers <span>Academy</span>",
+                    academyLead: "Practical programs to learn marketing, automation, data and AI with methods used in real businesses. Less isolated theory, more systems for execution.",
+                    academyPrimary: "Request information",
+                    academySecondary: "View programs",
+                    panelTitle: "Execution-oriented learning",
+                    panelSubtitle: "Strategy, tools and real cases",
+                    panelBadge: "Academy",
+                    panelCard1: "Funnels, CRM and automation",
+                    panelCard2: "Data for better decisions",
+                    panelCard3: "AI applied to commercial work",
+                    panelCard4: "Brand, content and performance",
+                    panelStat1: "Learning tracks",
+                    panelStat2: "Applied to business",
+                    panelStat3: "Reviews and feedback",
+                    programsKicker: "Programs",
+                    programsTitle: "Courses to spot opportunities, organize systems and convert better.",
+                    programsText: "Each course covers a key growth area with practical examples, decision criteria and actions that apply to real companies.",
+                    tracks: [
+                        ["Digital Diagnosis for CEOs", "Helps detect missed opportunities in your website, social channels, communication and digital sales process.", "Online course &middot; 20 h &middot; Certificate", ["Website, social channels and value proposition", "Conversion, trust and leakage points", "Quick wins and improvement priorities"], "For owners, CEOs and leaders who want to understand what to improve first."],
+                        ["Websites that convert", "Learn how to structure a website designed to build trust, explain your offer and turn visits into inquiries.", "Online course &middot; 29 h &middot; Certificate", ["Hero, value proposition and CTAs", "Structure, trust and user journey", "Landing pages and result-oriented websites"], "For brands, businesses and professionals who want a more effective website."],
+                        ["Professional brand", "Learn how to organize your brand image, message and communication to transmit more clarity and trust.", "Online course &middot; 40 h &middot; Certificate", ["Positioning, message and value proposition", "Tone, identity and visual consistency", "Website, social channels and sales materials"], "For brands that feel messy or do not communicate their real value."],
+                        ["Digital Marketing from Zero", "A practical introduction to understand digital channels and start building a simple plan for your business.", "Online course &middot; 100 h &middot; Certificate", ["Fundamentals, channels and basic metrics", "Content, funnels and online presence", "Initial 30-day marketing plan"], "For entrepreneurs and people who want to start without getting overwhelmed."],
+                        ["Digital Sales for Entrepreneurs", "Learn how to answer inquiries, present your offer and follow up to turn more interested people into customers.", "Online course &middot; 25 h &middot; Certificate", ["WhatsApp, Instagram and sales messages", "Objections, follow-up and closing", "Scripts and simple sales flow"], "For businesses that receive inquiries but convert too few."],
+                        ["AI Content Creation", "Use AI tools to generate ideas, copy and content pieces in a faster and more organized way.", "Online course &middot; 14 h &middot; Certificate", ["Ideas, prompts and content calendar", "Posts, captions and sales content", "AI applied without hype or complexity"], "For brands that do not know what to post or want to create content faster."]
+                    ],
+                    methodKicker: "Method",
+                    methodTitle: "Learn by doing, with deliverables that keep working.",
+                    methodText: "The academy is not built as a video library. It is built as a progress system: context, practice, feedback and application.",
+                    methods: [
+                        ["Diagnosis", "We identify the starting point, goals and real gaps of the business or team."],
+                        ["Framework", "We use simple models to organize decisions, not isolated theory."],
+                        ["Implementation", "Each module ends with an asset, process or dashboard applied to a concrete case."],
+                        ["Feedback", "We review deliverables to improve judgment, clarity and execution quality."]
+                    ],
+                    audienceKicker: "Who it is for",
+                    audienceTitle: "Training for people and teams who need to execute.",
+                    audiences: [
+                        ["Marketing teams", "Move from scattered actions to measurable systems for acquisition, conversion and optimization."],
+                        ["Founders and leaders", "Understand what to request, what to measure and how to prioritize digital investments."],
+                        ["Digital professionals", "Upgrade skills with tools, AI and processes already used in real projects."],
+                        ["People who want to start", "Learn the basics of digital marketing, organize ideas and take the first steps with a clear, practical guide."]
+                    ],
+                    ctaTitle: "Build capabilities that show up in execution.",
+                    ctaText: "Tell us if you need individual training, a team workshop or a custom track. We will reply with the best option for your stage.",
+                    ctaBtn: "I want information"
+                }
+            };
+
+            const set = (id, value) => {
+                const el = document.getElementById(id);
+                if (el && value !== undefined) el.innerHTML = value;
+            };
+
+            function applyAcademyLang(lang) {
+                const t = copy[lang] || copy.es;
+                set("academy-kicker", t.academyKicker);
+                set("academy-title", t.academyTitle);
+                set("academy-lead", t.academyLead);
+                set("academy-primary", t.academyPrimary);
+                set("academy-secondary", t.academySecondary);
+                set("panel-title", t.panelTitle);
+                set("panel-subtitle", t.panelSubtitle);
+                set("panel-badge", t.panelBadge);
+                set("panel-card-1", t.panelCard1);
+                set("panel-card-2", t.panelCard2);
+                set("panel-card-3", t.panelCard3);
+                set("panel-card-4", t.panelCard4);
+                set("panel-stat-1", t.panelStat1);
+                set("panel-stat-2", t.panelStat2);
+                set("panel-stat-3", t.panelStat3);
+                set("programs-kicker", t.programsKicker);
+                set("programs-title", t.programsTitle);
+                set("programs-text", t.programsText);
+                t.tracks.forEach((track, index) => {
+                    const n = index + 1;
+                    set(`track${n}-title`, track[0]);
+                    set(`track${n}-text`, track[1]);
+                    set(`track${n}-meta`, track[2]);
+                    track[3].forEach((item, itemIndex) => set(`track${n}-li${itemIndex + 1}`, item));
+                    set(`track${n}-fit`, track[4]);
+                });
+                set("method-kicker", t.methodKicker);
+                set("method-title", t.methodTitle);
+                set("method-text", t.methodText);
+                t.methods.forEach((method, index) => {
+                    set(`method${index + 1}-title`, method[0]);
+                    set(`method${index + 1}-text`, method[1]);
+                });
+                set("audience-kicker", t.audienceKicker);
+                set("audience-title", t.audienceTitle);
+                t.audiences.forEach((audience, index) => {
+                    set(`aud${index + 1}-title`, audience[0]);
+                    set(`aud${index + 1}-text`, audience[1]);
+                });
+                set("cta-title", t.ctaTitle);
+                set("cta-text", t.ctaText);
+                set("cta-btn", t.ctaBtn);
+            }
+
+            document.addEventListener("DOMContentLoaded", function(){
+                const lang = localStorage.getItem("preferredLanguage") || document.documentElement.lang || "es";
+                applyAcademyLang(lang);
+                document.querySelectorAll(".lang-option").forEach((btn) => {
+                    btn.addEventListener("click", () => applyAcademyLang(btn.dataset.lang || "es"));
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
