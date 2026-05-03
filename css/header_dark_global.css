@@ -1,5 +1,10 @@
 /* Final global header skin. Load this after page-level inline styles. */
 html body nav {
+  min-height: 58px !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+  box-sizing: border-box !important;
+  align-items: center !important;
   background:
     radial-gradient(circle at 12% 0%, rgba(78, 52, 155, 0.22), transparent 34%),
     radial-gradient(circle at 78% 0%, rgba(29, 78, 216, 0.16), transparent 36%),
@@ -44,11 +49,23 @@ html body .nav-cta {
   color: #ffffff !important;
   border: 1px solid rgba(147, 197, 253, 0.36) !important;
   border-radius: 8px !important;
+  line-height: 1.15 !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
   box-shadow: 0 12px 28px rgba(37, 99, 235, 0.24) !important;
 }
 
 html body .nav-cta:hover {
   background: #1d4ed8 !important;
+  color: #ffffff !important;
+}
+
+html body .btn-primary:hover,
+html body .btn-primary:focus-visible,
+html body .cta-button:hover,
+html body .cta-button:focus-visible,
+html body .cta-panel .btn-primary:hover,
+html body .cta-panel .btn-primary:focus-visible {
   color: #ffffff !important;
 }
 

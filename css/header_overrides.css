@@ -1468,23 +1468,59 @@ nav .menu-item:hover,
 
 .language-selector button,
 .lang-toggle {
-  border-color: rgba(148, 163, 184, 0.35) !important;
-  background: rgba(15, 23, 42, 0.58) !important;
+  min-width: 34px !important;
+  height: 34px !important;
+  padding: 0 6px !important;
+  border: 0 !important;
+  background: transparent !important;
   color: #ffffff !important;
+  box-shadow: none !important;
+  font-size: 0.86rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
+.language-selector .lang-toggle img {
+  display: none !important;
+}
+
+.language-selector .lang-code {
+  color: #ffffff !important;
+  font-size: 0.86rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
 }
 
 .lang-menu {
-  background: rgba(8, 15, 28, 0.96) !important;
-  border: 1px solid rgba(75, 85, 99, 0.52) !important;
-  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.28) !important;
+  top: calc(100% + 10px) !important;
+  right: 0 !important;
+  min-width: 116px !important;
+  padding: 6px !important;
+  border-radius: 8px !important;
+  background: rgba(8, 15, 28, 0.98) !important;
+  border: 1px solid rgba(148, 163, 184, 0.28) !important;
+  box-shadow: 0 16px 34px rgba(2, 6, 23, 0.34) !important;
 }
 
 .lang-option {
+  width: 100% !important;
+  min-height: 32px !important;
+  height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 8px 10px !important;
+  border: 0 !important;
+  border-radius: 6px !important;
+  background: transparent !important;
   color: #f8fafc !important;
+  font-size: 0.88rem !important;
+  font-weight: 800 !important;
+  text-align: left !important;
 }
 
 .lang-option:hover {
-  background: rgba(148, 163, 184, 0.1) !important;
+  color: #ffffff !important;
+  background: rgba(148, 163, 184, 0.16) !important;
 }
 
 .hamburger div {
@@ -1511,7 +1547,66 @@ nav .menu-item:hover,
   }
 }
 
+body:not(.academy-page):not(.academy-course-page) nav .nav-lang {
+  position: absolute !important;
+  top: 50%;
+  right: 86px;
+  z-index: 1700;
+  margin: 0 !important;
+  transform: translateY(-50%);
+}
+
+body:not(.academy-page):not(.academy-course-page) nav .language-selector {
+  padding: 0 !important;
+}
+
+body:not(.academy-page):not(.academy-course-page) nav .lang-toggle {
+  min-width: 28px !important;
+  height: auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body:not(.academy-page):not(.academy-course-page) nav .lang-code {
+  color: #f8fafc !important;
+  font-size: 0.88rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
+body:not(.academy-page):not(.academy-course-page) nav .lang-caret {
+  color: rgba(248, 250, 252, 0.78) !important;
+  font-size: 0.76rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  transform: translateY(-1px);
+}
+
+body:not(.academy-page):not(.academy-course-page) nav .lang-menu {
+  top: calc(100% + 14px) !important;
+  right: -8px !important;
+  min-width: 118px !important;
+  padding: 6px !important;
+  border-radius: 8px !important;
+  background: rgba(8, 15, 28, 0.98) !important;
+  border: 1px solid rgba(148, 163, 184, 0.28) !important;
+}
+
+body:not(.academy-page):not(.academy-course-page) nav .lang-option {
+  background: transparent !important;
+  color: #f8fafc !important;
+}
+
 @media (max-width: 768px) {
+  body:not(.academy-page):not(.academy-course-page) nav .nav-lang {
+    right: 62px;
+  }
+
   nav ul.mobile-menu {
     background: rgba(8, 15, 28, 0.98) !important;
     border-top: 1px solid rgba(75, 85, 99, 0.42) !important;

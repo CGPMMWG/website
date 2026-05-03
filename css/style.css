@@ -1420,17 +1420,132 @@ nav ul li a:hover::after {
     pointer-events: none;
 }
 
+.contact-line-field {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.contact-line-field span {
+    position: absolute;
+    left: var(--line-left);
+    top: var(--line-top);
+    width: var(--line-width);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(31, 94, 255, 0.34), rgba(20, 184, 166, 0.22), transparent);
+    opacity: 0;
+    transform: rotate(var(--line-rotate)) scaleX(0);
+    transform-origin: left center;
+    filter: drop-shadow(0 0 10px rgba(31, 94, 255, 0.12));
+}
+
+.contact-line-field span:nth-child(1) { --line-left: 7%; --line-top: 18%; --line-width: 28vw; --line-rotate: 0deg; }
+.contact-line-field span:nth-child(2) { --line-left: 66%; --line-top: 20%; --line-width: 22vw; --line-rotate: 0deg; }
+.contact-line-field span:nth-child(3) { --line-left: 10%; --line-top: 47%; --line-width: 18vw; --line-rotate: -28deg; }
+.contact-line-field span:nth-child(4) { --line-left: 73%; --line-top: 42%; --line-width: 20vw; --line-rotate: 26deg; }
+.contact-line-field span:nth-child(5) { --line-left: 3%; --line-top: 78%; --line-width: 34vw; --line-rotate: 0deg; }
+.contact-line-field span:nth-child(6) { --line-left: 64%; --line-top: 76%; --line-width: 30vw; --line-rotate: 0deg; }
+.contact-line-field span:nth-child(7) { --line-left: 24%; --line-top: 10%; --line-width: 16vw; --line-rotate: 90deg; }
+.contact-line-field span:nth-child(8) { --line-left: 82%; --line-top: 55%; --line-width: 15vw; --line-rotate: 90deg; }
+
+.contact-form-section.is-visible .contact-line-field span {
+    animation: contactLineIn 900ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards, contactLinePulse 5200ms ease-in-out infinite;
+    animation-delay: calc((var(--line-index, 1) - 1) * 160ms), calc(900ms + ((var(--line-index, 1) - 1) * 160ms));
+}
+
+.contact-line-field span:nth-child(1) { --line-index: 1; }
+.contact-line-field span:nth-child(2) { --line-index: 2; }
+.contact-line-field span:nth-child(3) { --line-index: 3; }
+.contact-line-field span:nth-child(4) { --line-index: 4; }
+.contact-line-field span:nth-child(5) { --line-index: 5; }
+.contact-line-field span:nth-child(6) { --line-index: 6; }
+.contact-line-field span:nth-child(7) { --line-index: 7; }
+.contact-line-field span:nth-child(8) { --line-index: 8; }
+
+@keyframes contactLineIn {
+    from {
+        opacity: 0;
+        transform: rotate(var(--line-rotate)) scaleX(0);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(var(--line-rotate)) scaleX(1);
+    }
+}
+
+@keyframes contactLinePulse {
+    0%, 100% { opacity: 0.42; }
+    50% { opacity: 0.86; }
+}
+
 .contact-shell {
     position: relative;
     max-width: 1180px;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .contact-form-section h2 {
     font-size: clamp(2rem, 3vw, 2.8rem);
     margin-bottom: 10px;
     line-height: 1.1;
+}
+
+.contact-kicker {
+    margin: 0 0 12px;
+    color: #1f5eff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.contact-benefits,
+.contact-assurances {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 24px;
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+    color: #64748b;
+    font-size: 0.86rem;
+    line-height: 1.35;
+}
+
+.contact-benefits li {
+    position: relative;
+    padding-left: 12px;
+}
+
+.contact-benefits li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.62em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #1f5eff;
+    transform: translateY(-50%);
+}
+
+.contact-assurances {
+    width: 100%;
+    margin-top: 8px;
+    padding-top: 2px;
+    font-size: 0.82rem;
+}
+
+.contact-assurances span::before {
+    content: "\2713";
+    margin-right: 6px;
+    color: #16a34a;
+    font-weight: 800;
 }
 
 .contact-layout {
@@ -1559,6 +1674,11 @@ nav ul li a:hover::after {
     .contact-form-section { padding: 48px 16px 140px; }
     .contact-shell { padding: 0 4px; }
     .contact-card { padding: 18px 12px; width: calc(100% - 12px); }
+    .contact-benefits,
+    .contact-assurances {
+        gap: 8px 14px;
+        font-size: 0.78rem;
+    }
     .form-grid { grid-template-columns: 1fr; }
     .form-field { gap: 6px; }
     .contact-form-section input,
@@ -2192,12 +2312,21 @@ header .overlay {
 
 .contact-form-section {
   background:
+    radial-gradient(720px 360px at 18% 18%, rgba(31, 94, 255, 0.08), transparent 64%),
+    radial-gradient(680px 320px at 84% 72%, rgba(20, 184, 166, 0.07), transparent 66%),
+    linear-gradient(rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.032) 1px, transparent 1px),
     linear-gradient(180deg, #f4f7fb 0%, #ffffff 100%) !important;
+  background-size: auto, auto, 54px 54px, 54px 54px, auto !important;
   color: var(--tm-corporate-ink) !important;
 }
 
 .contact-glow {
   display: none !important;
+}
+
+.contact-line-field {
+  opacity: 1;
 }
 
 .contact-card {
@@ -2244,6 +2373,23 @@ header .overlay {
 .contact-button:hover {
   background: var(--tm-corporate-blue-dark) !important;
   box-shadow: 0 16px 34px rgba(31,94,255,0.24) !important;
+}
+
+@media (max-width: 768px) {
+  .contact-line-field span:nth-child(3),
+  .contact-line-field span:nth-child(4),
+  .contact-line-field span:nth-child(7),
+  .contact-line-field span:nth-child(8) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-line-field span {
+    opacity: 0.42;
+    transform: rotate(var(--line-rotate)) scaleX(1);
+    animation: none !important;
+  }
 }
 
 footer {

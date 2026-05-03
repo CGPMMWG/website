@@ -1,6 +1,7 @@
 body.academy-course-page {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
   color: #101610;
   background: linear-gradient(180deg, #e4f5f2 0%, #eef0ff 520px, #ffffff 521px);
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -23,7 +24,7 @@ body.academy-course-page nav .tm-header-badge {
   border: 0 !important;
   box-shadow: none !important;
   width: auto !important;
-  height: 56px !important;
+  height: 42px !important;
   padding: 0 !important;
   overflow: hidden;
 }
@@ -34,8 +35,8 @@ body.academy-course-page nav .tm-header-badge img {
 
 body.academy-course-page nav .tm-header-badge .academy-header-logo {
   display: block !important;
-  width: clamp(210px, 20vw, 330px) !important;
-  height: 56px !important;
+  width: clamp(160px, 15vw, 250px) !important;
+  height: 42px !important;
   object-fit: cover;
   object-position: center;
 }
@@ -525,16 +526,76 @@ body.academy-course-page .language-selector .lang-option:hover {
 }
 
 @media (max-width: 640px) {
+  body.academy-course-page,
+  body.academy-course-page .content {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
   body.academy-course-page nav {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     padding: 0 14px !important;
   }
 
+  .course-shell {
+    width: auto;
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 18px;
+    padding-left: 18px;
+    box-sizing: border-box;
+  }
+
+  .course-back {
+    margin-top: 30px;
+  }
+
+  .course-hero {
+    min-height: 0;
+    gap: 28px;
+    padding: 42px 0 64px;
+  }
+
+  .course-hero > *,
+  .course-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+
   .course-hero h1 {
-    font-size: clamp(2.6rem, 14vw, 4rem);
+    max-width: 100%;
+    font-size: clamp(2.18rem, 10.4vw, 2.95rem);
+    line-height: 1.05;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .course-lead,
+  .course-lead-secondary {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .course-card {
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .course-actions,
   .course-btn {
     width: 100%;
+  }
+
+  .course-btn {
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .course-facts span {
+    width: auto;
   }
 }
