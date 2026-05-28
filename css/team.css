@@ -57,7 +57,7 @@ a#team-cta-button,
 .team-intro .section-title {
   margin: 0;
   color: #ffffff !important;
-  font-size: clamp(4.2rem, 8vw, 8.2rem);
+  font-size: clamp(3.5rem, 6.9vw, 7rem);
   font-weight: 950;
   line-height: 0.88;
   letter-spacing: 0;

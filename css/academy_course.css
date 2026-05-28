@@ -12,8 +12,11 @@ body.academy-course-page .content {
 }
 
 body.academy-course-page nav {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   height: 72px;
-  padding: 0 36px !important;
+  padding: 0 150px 0 36px !important;
   background: #ffffff !important;
   border-bottom: 1px solid #d6dde2 !important;
   box-shadow: none !important;
@@ -76,13 +79,80 @@ body.academy-course-page nav .nav-cta {
   border: 0 !important;
 }
 
+body.academy-course-page nav .hamburger div {
+  background-color: #101610 !important;
+}
+
 body.academy-course-page .language-selector,
 body.academy-course-page .lang-toggle {
   background: transparent !important;
   box-shadow: none !important;
 }
 
+body.academy-course-page nav .nav-lang {
+  position: absolute !important;
+  top: 50%;
+  right: 36px;
+  z-index: 2400;
+  display: flex !important;
+  width: auto !important;
+  height: 42px !important;
+  align-items: center;
+  margin: 0 !important;
+  transform: translateY(-50%) !important;
+  pointer-events: auto;
+}
+
+body.academy-course-page nav .language-selector {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  display: flex;
+  align-items: center;
+  height: 42px;
+  padding: 0 !important;
+}
+
+body.academy-course-page nav .lang-toggle {
+  min-width: 82px !important;
+  height: 42px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  padding: 0 12px !important;
+  border: 1px solid #d6dde2 !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: #101610 !important;
+  box-shadow: 0 10px 24px rgba(44, 54, 70, 0.08) !important;
+}
+
+body.academy-course-page nav .lang-toggle img {
+  display: block !important;
+  width: 20px !important;
+  height: 20px !important;
+  object-fit: contain;
+}
+
+body.academy-course-page nav .lang-code {
+  color: #101610 !important;
+  font-size: 0.82rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
+body.academy-course-page nav .lang-caret {
+  color: rgba(16, 22, 16, 0.68) !important;
+  font-size: 0.72rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
 body.academy-course-page .language-selector .lang-menu {
+  top: calc(100% + 10px) !important;
+  right: 0 !important;
+  min-width: 132px !important;
   background: #ffffff !important;
   border: 1px solid #d6dde2 !important;
   box-shadow: 0 18px 44px rgba(44, 54, 70, 0.14) !important;
@@ -97,6 +167,21 @@ body.academy-course-page .language-selector .lang-option {
 body.academy-course-page .language-selector .lang-option:hover {
   color: #050807 !important;
   background: #f1f3f4 !important;
+}
+
+@media (max-width: 1180px) {
+  body.academy-course-page nav {
+    padding-right: 122px !important;
+  }
+
+  body.academy-course-page nav .nav-lang {
+    right: 78px;
+  }
+
+  body.academy-course-page nav .lang-toggle {
+    min-width: 68px !important;
+    padding: 0 10px !important;
+  }
 }
 
 .course-shell {
@@ -537,7 +622,38 @@ body.academy-course-page .language-selector .lang-option:hover {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    padding: 0 14px !important;
+    padding: 0 82px 0 14px !important;
+  }
+
+  body.academy-course-page nav .nav-lang {
+    position: fixed !important;
+    top: 19px !important;
+    right: auto !important;
+    left: min(calc(100vw - 72px), 306px) !important;
+    transform: none !important;
+  }
+
+  body.academy-course-page nav .lang-toggle {
+    min-width: 60px !important;
+    height: 34px !important;
+    gap: 5px !important;
+    padding: 0 9px !important;
+    background: #ffffff !important;
+    border: 1px solid #d6dde2 !important;
+    box-shadow: 0 8px 18px rgba(44, 54, 70, 0.1) !important;
+  }
+
+  body.academy-course-page nav .lang-toggle img {
+    display: none !important;
+  }
+
+  body.academy-course-page nav .lang-code {
+    color: #101610 !important;
+    font-size: 0.78rem !important;
+  }
+
+  body.academy-course-page nav .lang-caret {
+    color: rgba(16, 22, 16, 0.68) !important;
   }
 
   .course-shell {
