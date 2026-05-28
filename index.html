@@ -556,7 +556,7 @@
             width: min(100%, 440px);
             min-height: 52px;
             padding: 0 34px !important;
-            border-radius: 999px !important;
+            border-radius: 8px !important;
             font-size: 0.9rem;
             font-weight: 800;
             letter-spacing: 0.11em;
@@ -572,7 +572,7 @@
                 0 18px 38px rgba(31, 94, 255, 0.22),
                 0 2px 0 rgba(255,255,255,0.3) inset,
                 0 -10px 24px rgba(4, 22, 74, 0.22) inset !important;
-            clip-path: inset(0 100% 0 0 round 999px);
+            clip-path: inset(0 100% 0 0 round 8px);
             animation:
                 servicesCtaReveal 780ms cubic-bezier(.2,.8,.2,1) 720ms forwards,
                 servicesCtaFloat 4.5s ease-in-out 1.6s infinite;
@@ -601,7 +601,7 @@
 
         @keyframes servicesCtaReveal {
             to {
-                clip-path: inset(0 0 0 0 round 999px);
+                clip-path: inset(0 0 0 0 round 8px);
             }
         }
 
@@ -1435,53 +1435,6 @@
             font-weight: 900;
         }
 
-        #acerca .method-proof {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 22px;
-            margin: 50px auto 0;
-            padding: 24px 36px;
-            border: 1px solid rgba(248, 250, 252, 0.18);
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.03);
-            text-align: left;
-        }
-
-        #acerca .method-proof p {
-            max-width: 720px;
-            margin: 0;
-            color: rgba(248, 250, 252, 0.78);
-            font-size: 1rem;
-            line-height: 1.45;
-            font-weight: 700;
-        }
-
-        #acerca .method-proof strong {
-            color: #ffffff;
-            font-weight: 900;
-        }
-
-        #acerca .method-proof a {
-            min-height: 44px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 20px;
-            border: 1px solid rgba(248, 250, 252, 0.36);
-            border-radius: 8px;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 900;
-            white-space: nowrap;
-        }
-
-        #acerca .method-proof a:hover {
-            background: #ffffff;
-            color: #101610;
-        }
-
         @media (max-width: 980px) {
             #acerca .why-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -1509,16 +1462,6 @@
                 padding: 24px !important;
             }
 
-            #acerca .method-proof {
-                flex-direction: column;
-                align-items: stretch;
-                padding: 22px;
-            }
-
-            #acerca .method-proof a {
-                width: 100%;
-                box-sizing: border-box;
-            }
         }
     </style>
     <link rel="stylesheet" href="./css/header_dark_global.css">
@@ -1614,41 +1557,41 @@
                             <p class="hero-brand"><span class="hero-brand-text">TrendMakers</span></p>
                             <h1 id="title" class="animate__animated">
                                 <span class="hero-title-line">Convertimos tu marketing en un <strong>sistema que escala</strong></span>
-                                <em>No en campa&ntilde;as que se apagan</em>
+                                <em>No campa&ntilde;as que se apagan</em>
                             </h1>
                             <div class="hero-actions">
                                 <a id="hero-contact-cta" class="hero-cta hero-contact-cta animate__animated" href="#contact-form">Solicitar diagn&oacute;stico gratuito</a>
                                 <a id="hero-cases-cta" class="hero-cta hero-cta-secondary animate__animated" href="#casos-exito">Ver casos de &eacute;xito <span aria-hidden="true">-&gt;</span></a>
                             </div>
-                            <a class="hero-academy-link" href="trendmakers-academy.html">Conoc&eacute; nuestra academia <span aria-hidden="true">-&gt;</span></a>
+                            <a id="hero-academy-link" class="hero-academy-link" href="trendmakers-academy.html">Conoc&eacute; nuestra academia <span aria-hidden="true">-&gt;</span></a>
                             <div class="hero-metrics" aria-label="M&eacute;tricas de experiencia">
                                 <div>
                                     <strong class="hero-counter" id="hero-metric-value-diagnostic" data-count-to="48" data-suffix=" hs">1</strong>
-                                    <span id="hero-metric-industries">Diagn&oacute;stico inicial</span>
+                                    <span id="hero-metric-industries">Diagn&oacute;stico ejecutivo inicial</span>
                                 </div>
                                 <div>
                                     <strong class="hero-counter" id="hero-metric-value-result" data-count-to="30" data-suffix=" d&iacute;as">1</strong>
-                                    <span id="hero-metric-result">Primeras mejoras visibles</span>
+                                    <span id="hero-metric-result">Primeras mejoras implementadas</span>
                                 </div>
                                 <div>
                                     <strong class="hero-counter" id="hero-metric-value-system" data-count-to="90" data-suffix=" d&iacute;as">1</strong>
-                                    <span id="hero-metric-data">Sistema funcionando</span>
+                                    <span id="hero-metric-data">Ecosistema digital funcionando</span>
                                 </div>
                                 <div>
-                                    <strong class="hero-counter" id="hero-metric-value-areas" data-prefix="+" data-count-to="5" data-suffix=" áreas">+1</strong>
-                                    <span id="hero-metric-automation">Profesionales dedicados</span>
+                                    <strong class="hero-counter" id="hero-metric-value-areas" data-prefix="+" data-count-to="5" data-suffix=" frentes">+1</strong>
+                                    <span id="hero-metric-automation">Web, branding, campa&ntilde;as, contenido y automation</span>
                                 </div>
                             </div>
                         </div>
                         <div class="hero-partners" aria-label="Partners y plataformas">
-                            <span>Partners</span>
+                            <span id="hero-partners-label">Partners</span>
                             <span>Google Ads</span>
                             <span>Google Partner</span>
                             <span>Facebook Ads</span>
                             <span>CACE</span>
                         </div>
                         <div class="hero-scroll-indicator" aria-hidden="true">
-                            <small>Scroll</small>
+                            <small id="hero-scroll-label">Desliz&aacute;</small>
                             <span></span>
                         </div>
                     </div>
@@ -1879,10 +1822,6 @@
                             <p id="why3-text">Medimos resultados, iteramos de forma continua y optimizamos cada decisi&oacute;n con datos reales. El sistema mejora solo en el tiempo.</p>
                             <span class="why-time" id="why3-time">Mes 3 en adelante</span>
                         </div>
-                    </div>
-                    <div class="method-proof animate__animated animate__fadeInUp">
-                        <p id="method-proof-text">El primer resultado medible aparece dentro de los primeros <strong>30 d&iacute;as</strong>. El sistema completo opera de forma aut&oacute;noma en <strong>90 d&iacute;as</strong>.</p>
-                        <a id="method-proof-link" href="#casos-exito">Ver un caso real <span aria-hidden="true">-&gt;</span></a>
                     </div>
                 </div>
             </div>

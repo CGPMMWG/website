@@ -578,7 +578,7 @@
         body.academy-page nav {
             position: fixed !important;
             height: 72px;
-            padding: 0 90px 0 36px !important;
+            padding: 0 150px 0 36px !important;
             background: #ffffff !important;
             border-bottom: 1px solid #d6dde2 !important;
             box-shadow: none !important;
@@ -671,9 +671,9 @@
         }
 
         body.academy-page nav .nav-lang {
-            position: fixed !important;
-            top: 15px;
-            right: 168px;
+            position: absolute !important;
+            top: 50%;
+            right: 36px;
             z-index: 2400;
             display: flex !important;
             width: auto !important;
@@ -681,7 +681,7 @@
             align-items: center;
             visibility: visible !important;
             margin: 0 !important;
-            transform: none !important;
+            transform: translateY(-50%) !important;
             pointer-events: auto;
         }
 
@@ -696,27 +696,37 @@
         }
 
         body.academy-page nav .lang-toggle {
-            min-width: 0;
-            height: auto;
+            min-width: 82px;
+            height: 42px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 0;
-            padding: 0 !important;
-            border: 0 !important;
+            gap: 7px;
+            padding: 0 12px !important;
+            border: 1px solid #d6dde2 !important;
             border-radius: 999px !important;
-            background: transparent !important;
+            background: #ffffff !important;
             color: #101610 !important;
-            box-shadow: none !important;
+            box-shadow: 0 10px 24px rgba(44, 54, 70, 0.08) !important;
         }
 
         body.academy-page nav .lang-toggle img {
-            display: none !important;
+            display: block !important;
+            width: 20px !important;
+            height: 20px !important;
+            object-fit: contain;
         }
 
         body.academy-page nav .lang-code {
-            color: #101610;
+            color: #101610 !important;
             font-size: 0.82rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        body.academy-page nav .lang-caret {
+            color: rgba(16, 22, 16, 0.68) !important;
+            font-size: 0.72rem;
             font-weight: 900;
             line-height: 1;
         }
@@ -725,6 +735,21 @@
             top: calc(100% + 10px) !important;
             right: 0 !important;
             min-width: 132px;
+        }
+
+        @media (max-width: 1180px) {
+            body.academy-page nav {
+                padding-right: 122px !important;
+            }
+
+            body.academy-page nav .nav-lang {
+                right: 78px;
+            }
+
+            body.academy-page nav .lang-toggle {
+                min-width: 68px;
+                padding: 0 10px !important;
+            }
         }
 
         body.academy-page .academy-shell {
@@ -1085,13 +1110,143 @@
             display: none;
         }
 
-        body.academy-page .career-diploma__visual img {
+        body.academy-page .academy-certificate {
             position: relative;
             z-index: 1;
             width: min(104%, 660px);
-            height: auto;
-            filter: none;
+            min-height: 420px;
+            padding: clamp(34px, 4vw, 54px);
+            box-sizing: border-box;
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: 24px 46px 24px 24px;
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(255, 251, 244, 0.98)),
+                #ffffff;
+            box-shadow: 0 28px 70px rgba(44, 54, 70, 0.16);
             transform: rotate(1.5deg);
+            overflow: hidden;
+        }
+
+        body.academy-page .academy-certificate::before,
+        body.academy-page .academy-certificate::after {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+        }
+
+        body.academy-page .academy-certificate::before {
+            inset: 18px;
+            border: 1px solid rgba(167, 139, 250, 0.36);
+            border-radius: 18px 36px 18px 18px;
+        }
+
+        body.academy-page .academy-certificate::after {
+            right: 28px;
+            bottom: 26px;
+            width: 120px;
+            height: 84px;
+            border-right: 3px solid rgba(167, 139, 250, 0.78);
+            border-bottom: 3px solid rgba(167, 139, 250, 0.78);
+            transform: skewX(-22deg);
+        }
+
+        body.academy-page .academy-certificate__inner {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            gap: 22px;
+        }
+
+        body.academy-page .academy-certificate__kicker {
+            color: #a78bfa;
+            font-size: 0.8rem;
+            font-weight: 900;
+            letter-spacing: 0.42em;
+            text-transform: uppercase;
+        }
+
+        body.academy-page .academy-certificate h3 {
+            margin: 0;
+            color: #101610;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.4rem, 5vw, 4.25rem);
+            line-height: 0.95;
+            font-weight: 700;
+        }
+
+        body.academy-page .academy-certificate__line {
+            width: 240px;
+            max-width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #a78bfa, rgba(167, 139, 250, 0));
+        }
+
+        body.academy-page .academy-certificate__label {
+            margin: 0;
+            color: #6b7280;
+            font-size: 0.72rem;
+            font-weight: 900;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+        }
+
+        body.academy-page .academy-certificate__name {
+            margin: -8px 0 0;
+            color: #111827;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.5rem, 5vw, 4.35rem);
+            line-height: 0.95;
+        }
+
+        body.academy-page .academy-certificate__text {
+            max-width: 430px;
+            margin: -6px 0 0;
+            color: #4b5563;
+            font-size: 0.9rem;
+            line-height: 1.35;
+            font-weight: 600;
+        }
+
+        body.academy-page .academy-certificate__course {
+            width: max-content;
+            max-width: 100%;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 18px;
+            border: 1px solid rgba(167, 139, 250, 0.46);
+            border-radius: 12px;
+            color: #111827;
+            font-size: 0.86rem;
+            font-weight: 900;
+            letter-spacing: 0.02em;
+        }
+
+        body.academy-page .academy-certificate__seal-row {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 24px;
+            margin-top: 8px;
+        }
+
+        body.academy-page .academy-certificate__seal {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        body.academy-page .academy-certificate__signature {
+            min-width: 180px;
+            padding-top: 18px;
+            border-top: 2px solid rgba(167, 139, 250, 0.58);
+            color: #6b7280;
+            text-align: center;
+            font-size: 0.62rem;
+            font-weight: 900;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
         }
 
         body.academy-page .panel-stat {
@@ -1598,13 +1753,21 @@
             }
 
             body.academy-page nav .nav-lang {
-                top: 18px;
-                right: 12px;
+                position: fixed !important;
+                top: 19px !important;
+                right: auto !important;
+                left: min(calc(100vw - 72px), 306px) !important;
+                transform: none !important;
             }
 
             body.academy-page nav .lang-toggle {
-                min-width: 0;
-                height: auto;
+                min-width: 60px;
+                height: 34px;
+                gap: 5px;
+                padding: 0 9px !important;
+                background: #ffffff !important;
+                border: 1px solid #d6dde2 !important;
+                box-shadow: 0 8px 18px rgba(44, 54, 70, 0.1) !important;
             }
 
             body.academy-page nav .lang-toggle img {
@@ -1612,7 +1775,12 @@
             }
 
             body.academy-page nav .lang-code {
+                color: #101610 !important;
                 font-size: 0.78rem;
+            }
+
+            body.academy-page nav .lang-caret {
+                color: rgba(16, 22, 16, 0.68) !important;
             }
 
             body.academy-page .academy-back {
@@ -1727,7 +1895,7 @@
             }
 
             body.academy-page .academy-course-model__visual img,
-            body.academy-page .career-diploma__visual img {
+            body.academy-page .academy-certificate {
                 width: 100%;
                 max-width: 620px;
                 transform: none;
@@ -1869,7 +2037,7 @@
                         <li><a href="blog/index.html" id="nav-blog" class="menu-item">Blog</a></li>
                     </ul>
                 </li>
-                <li><a href="trendmakers-academy.html" class="menu-item">Academy</a></li>
+                <li><a href="trendmakers-academy.html" id="nav-academy-page" class="menu-item">Academia</a></li>
                 <li><a href="index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de &eacute;xito</a></li>
                 <li><a href="index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
             </ul>
@@ -1878,6 +2046,7 @@
                 <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
                   <img src="./img/IDIOMA.PNG" alt="Idioma">
                   <span class="lang-code">ES</span>
+                  <span class="lang-caret" aria-hidden="true">v</span>
                 </button>
                 <div class="lang-menu" role="menu" aria-label="Idiomas">
                   <button class="lang-option" role="menuitem" data-lang="es">Espa&ntilde;ol</button>
@@ -1888,7 +2057,7 @@
             <ul class="mobile-menu">
                 <li><a href="index.html#inicio" id="nav-inicio-mobile" class="menu-item" onclick="closeMenu()">Inicio</a></li>
                 <li><a href="nuestros-servicios.html" id="nav-servicios-mobile" class="menu-item" onclick="closeMenu()">Servicios</a></li>
-                <li><a href="trendmakers-academy.html" class="menu-item" onclick="closeMenu()">Academy</a></li>
+                <li><a href="trendmakers-academy.html" id="nav-academy-page-mobile" class="menu-item" onclick="closeMenu()">Academia</a></li>
                 <li class="mobile-heading">Nosotros</li>
                 <li><a href="index.html#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
                 <li><a href="index.html#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
@@ -1960,13 +2129,13 @@
 
             <section class="academy-course-model" aria-label="Modelo de cursos TrendMakers Academy">
                 <div class="academy-course-model__copy">
-                    <span>Modelo de aprendizaje</span>
-                    <h2>Cursos pr&aacute;cticos para pasar de mirar datos a tomar mejores decisiones.</h2>
-                    <p>Combinamos criterio estrat&eacute;gico, herramientas digitales e IA aplicada para que cada programa termine con acciones claras, materiales concretos y prioridades listas para ejecutar.</p>
+                    <span id="course-model-kicker">Modelo de aprendizaje</span>
+                    <h2 id="course-model-title">Cursos pr&aacute;cticos para pasar de mirar datos a tomar mejores decisiones.</h2>
+                    <p id="course-model-text">Combinamos criterio estrat&eacute;gico, herramientas digitales e IA aplicada para que cada programa termine con acciones claras, materiales concretos y prioridades listas para ejecutar.</p>
                     <div class="academy-course-model__facts">
-                        <strong>Online</strong>
-                        <strong>Certificado</strong>
-                        <strong>Plantillas incluidas</strong>
+                        <strong id="course-model-fact-1">Online</strong>
+                        <strong id="course-model-fact-2">Certificado</strong>
+                        <strong id="course-model-fact-3">Plantillas incluidas</strong>
                     </div>
                 </div>
                 <div class="academy-course-model__visual">
@@ -2056,21 +2225,35 @@
                 </div>
             </section>
 
-            <section class="career-diploma" aria-label="Diploma de TrendMakers Academy">
+            <section class="career-diploma" id="diploma" aria-label="Diploma de TrendMakers Academy">
                 <div class="career-diploma__grid">
                     <div class="career-diploma__copy">
-                        <h2>Potenci&aacute; tu carrera con un diploma que habla de ejecuci&oacute;n.</h2>
-                        <p>Termin&aacute; el recorrido con una certificaci&oacute;n pensada para mostrar criterio, manejo de herramientas y capacidad real para convertir marketing en sistemas de crecimiento.</p>
+                        <h2 id="diploma-title">Potenci&aacute; tu carrera con un diploma que habla de ejecuci&oacute;n.</h2>
+                        <p id="diploma-text">Termin&aacute; el recorrido con una certificaci&oacute;n pensada para mostrar criterio, manejo de herramientas y capacidad real para convertir marketing en sistemas de crecimiento.</p>
                         <div class="career-diploma__card">
                             <img src="./img/logo_academy.png" alt="Sello TrendMakers Academy">
                             <div>
-                                <strong>TrendMakers Academy Certified</strong>
-                                <span>Marketing, branding, automation e IA aplicados a negocios reales.</span>
+                                <strong id="diploma-card-title">Certificaci&oacute;n TrendMakers Academy</strong>
+                                <span id="diploma-card-text">Marketing, branding, automatizaci&oacute;n e IA aplicados a negocios reales.</span>
                             </div>
                         </div>
                     </div>
                     <div class="career-diploma__visual">
-                        <img src="./img/diploma_academy.png" alt="Diploma de certificaci&oacute;n de TrendMakers Academy">
+                        <div class="academy-certificate" role="img" aria-label="Diploma de certificaci&oacute;n de TrendMakers Academy">
+                            <div class="academy-certificate__inner">
+                                <span class="academy-certificate__kicker" id="certificate-kicker">TrendMakers Academy</span>
+                                <h3 id="certificate-title">Certificado de finalizaci&oacute;n</h3>
+                                <span class="academy-certificate__line" aria-hidden="true"></span>
+                                <p class="academy-certificate__label" id="certificate-presented">Otorgado a</p>
+                                <strong class="academy-certificate__name" id="certificate-name">Tu nombre</strong>
+                                <p class="academy-certificate__text" id="certificate-text">Recib&iacute;s este certificado por completar correctamente el recorrido de formaci&oacute;n.</p>
+                                <span class="academy-certificate__course" id="certificate-course">Crecimiento digital y automatizaci&oacute;n</span>
+                                <div class="academy-certificate__seal-row">
+                                    <img class="academy-certificate__seal" src="./img/logo_academy.png" alt="">
+                                    <span class="academy-certificate__signature" id="certificate-signature">Fundador y director acad&eacute;mico</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -2197,6 +2380,7 @@
                     academyLead: "Programas pr&aacute;cticos para aprender marketing, automatizaci&oacute;n, datos e IA con metodolog&iacute;as usadas en negocios reales. Menos teor&iacute;a suelta, m&aacute;s sistemas para ejecutar.",
                     academyPrimary: "Solicitar informaci&oacute;n",
                     academySecondary: "Ver programas",
+                    navAcademy: "Academia",
                     panelTitle: "Aprendizaje orientado a ejecuci&oacute;n",
                     panelSubtitle: "Estrategia, herramientas y casos reales",
                     panelBadge: "Academy",
@@ -2207,6 +2391,10 @@
                     panelStat1: "Rutas de aprendizaje",
                     panelStat2: "Aplicado a negocio",
                     panelStat3: "Correcciones y feedback",
+                    courseModelKicker: "Modelo de aprendizaje",
+                    courseModelTitle: "Cursos pr&aacute;cticos para pasar de mirar datos a tomar mejores decisiones.",
+                    courseModelText: "Combinamos criterio estrat&eacute;gico, herramientas digitales e IA aplicada para que cada programa termine con acciones claras, materiales concretos y prioridades listas para ejecutar.",
+                    courseModelFacts: ["Online", "Certificado", "Plantillas incluidas"],
                     programsKicker: "Programas",
                     programsTitle: "Cursos para detectar oportunidades, ordenar sistemas y convertir mejor.",
                     programsText: "Cada curso aborda un frente clave del crecimiento digital con ejemplos pr&aacute;cticos, criterios de decisi&oacute;n y acciones aplicables a empresas reales.",
@@ -2218,6 +2406,17 @@
                         ["Ventas Digitales para Emprendedores", "Aprend&eacute; a responder consultas, presentar tu oferta y hacer seguimiento para convertir m&aacute;s interesados en clientes.", "Curso online &middot; 25 hs &middot; Certificado", ["WhatsApp, Instagram y mensajes de venta", "Objeciones, seguimiento y cierre", "Scripts y flujo comercial simple"], "Ideal para negocios que reciben consultas pero convierten poco."],
                         ["Creaci&oacute;n de Contenido con IA", "Us&aacute; herramientas de IA para generar ideas, textos y piezas de contenido de forma m&aacute;s r&aacute;pida y ordenada.", "Curso online &middot; 14 hs &middot; Certificado", ["Ideas, prompts y calendario de contenido", "Posts, captions y contenido comercial", "IA aplicada sin humo ni complejidad"], "Ideal para marcas que no saben qu&eacute; publicar o quieren crear contenido m&aacute;s r&aacute;pido."]
                     ],
+                    diplomaTitle: "Potenci&aacute; tu carrera con un diploma que habla de ejecuci&oacute;n.",
+                    diplomaText: "Termin&aacute; el recorrido con una certificaci&oacute;n pensada para mostrar criterio, manejo de herramientas y capacidad real para convertir marketing en sistemas de crecimiento.",
+                    diplomaCardTitle: "Certificaci&oacute;n TrendMakers Academy",
+                    diplomaCardText: "Marketing, branding, automatizaci&oacute;n e IA aplicados a negocios reales.",
+                    certificateKicker: "TrendMakers Academy",
+                    certificateTitle: "Certificado de finalizaci&oacute;n",
+                    certificatePresented: "Otorgado a",
+                    certificateName: "Tu nombre",
+                    certificateText: "Recib&iacute;s este certificado por completar correctamente el recorrido de formaci&oacute;n.",
+                    certificateCourse: "Crecimiento digital y automatizaci&oacute;n",
+                    certificateSignature: "Fundador y director acad&eacute;mico",
                     methodKicker: "Metodolog&iacute;a",
                     methodTitle: "Aprender haciendo, con entregables que quedan funcionando.",
                     methodText: "La academia no est&aacute; pensada como biblioteca de videos. Est&aacute; pensada como un sistema de avance: contexto, pr&aacute;ctica, feedback y aplicaci&oacute;n.",
@@ -2254,6 +2453,7 @@
                     academyLead: "Practical programs to learn marketing, automation, data and AI with methods used in real businesses. Less isolated theory, more systems for execution.",
                     academyPrimary: "Request information",
                     academySecondary: "View programs",
+                    navAcademy: "Academy",
                     panelTitle: "Execution-oriented learning",
                     panelSubtitle: "Strategy, tools and real cases",
                     panelBadge: "Academy",
@@ -2264,6 +2464,10 @@
                     panelStat1: "Learning tracks",
                     panelStat2: "Applied to business",
                     panelStat3: "Reviews and feedback",
+                    courseModelKicker: "Learning model",
+                    courseModelTitle: "Practical courses to move from looking at data to making better decisions.",
+                    courseModelText: "We combine strategic judgment, digital tools and applied AI so every program ends with clear actions, concrete materials and priorities ready to execute.",
+                    courseModelFacts: ["Online", "Certificate", "Templates included"],
                     programsKicker: "Programs",
                     programsTitle: "Courses to spot opportunities, organize systems and convert better.",
                     programsText: "Each course covers a key growth area with practical examples, decision criteria and actions that apply to real companies.",
@@ -2275,6 +2479,17 @@
                         ["Digital Sales for Entrepreneurs", "Learn how to answer inquiries, present your offer and follow up to turn more interested people into customers.", "Online course &middot; 25 h &middot; Certificate", ["WhatsApp, Instagram and sales messages", "Objections, follow-up and closing", "Scripts and simple sales flow"], "For businesses that receive inquiries but convert too few."],
                         ["AI Content Creation", "Use AI tools to generate ideas, copy and content pieces in a faster and more organized way.", "Online course &middot; 14 h &middot; Certificate", ["Ideas, prompts and content calendar", "Posts, captions and sales content", "AI applied without hype or complexity"], "For brands that do not know what to post or want to create content faster."]
                     ],
+                    diplomaTitle: "Boost your career with a diploma that speaks to execution.",
+                    diplomaText: "Finish the journey with a certification designed to show judgment, tool mastery and real ability to turn marketing into growth systems.",
+                    diplomaCardTitle: "TrendMakers Academy Certified",
+                    diplomaCardText: "Marketing, branding, automation and AI applied to real businesses.",
+                    certificateKicker: "TrendMakers Academy",
+                    certificateTitle: "Certificate of Completion",
+                    certificatePresented: "Proudly presented to",
+                    certificateName: "Your Name",
+                    certificateText: "This certificate is awarded for the successful completion of the training journey.",
+                    certificateCourse: "Digital Growth & Automation",
+                    certificateSignature: "Founder & Academy Director",
                     methodKicker: "Method",
                     methodTitle: "Learn by doing, with deliverables that keep working.",
                     methodText: "The academy is not built as a video library. It is built as a progress system: context, practice, feedback and application.",
@@ -2314,14 +2529,19 @@
 
             function applyAcademyLang(lang) {
                 const t = copy[lang] || copy.es;
+                const activeLang = copy[lang] ? lang : "es";
+                localStorage.setItem("preferredLanguage", activeLang);
+                document.documentElement.lang = activeLang;
                 document.querySelectorAll(".lang-code").forEach((el) => {
-                    el.textContent = (lang || "es").toUpperCase();
+                    el.textContent = activeLang.toUpperCase();
                 });
                 set("academy-kicker", t.academyKicker);
                 set("academy-title", t.academyTitle);
                 set("academy-lead", t.academyLead);
                 set("academy-primary", t.academyPrimary);
                 set("academy-secondary", t.academySecondary);
+                set("nav-academy-page", t.navAcademy);
+                set("nav-academy-page-mobile", t.navAcademy);
                 set("panel-title", t.panelTitle);
                 set("panel-subtitle", t.panelSubtitle);
                 set("panel-badge", t.panelBadge);
@@ -2332,6 +2552,12 @@
                 set("panel-stat-1", t.panelStat1);
                 set("panel-stat-2", t.panelStat2);
                 set("panel-stat-3", t.panelStat3);
+                set("course-model-kicker", t.courseModelKicker);
+                set("course-model-title", t.courseModelTitle);
+                set("course-model-text", t.courseModelText);
+                set("course-model-fact-1", t.courseModelFacts[0]);
+                set("course-model-fact-2", t.courseModelFacts[1]);
+                set("course-model-fact-3", t.courseModelFacts[2]);
                 set("programs-kicker", t.programsKicker);
                 set("programs-title", t.programsTitle);
                 set("programs-text", t.programsText);
@@ -2343,6 +2569,17 @@
                     track[3].forEach((item, itemIndex) => set(`track${n}-li${itemIndex + 1}`, item));
                     set(`track${n}-fit`, track[4]);
                 });
+                set("diploma-title", t.diplomaTitle);
+                set("diploma-text", t.diplomaText);
+                set("diploma-card-title", t.diplomaCardTitle);
+                set("diploma-card-text", t.diplomaCardText);
+                set("certificate-kicker", t.certificateKicker);
+                set("certificate-title", t.certificateTitle);
+                set("certificate-presented", t.certificatePresented);
+                set("certificate-name", t.certificateName);
+                set("certificate-text", t.certificateText);
+                set("certificate-course", t.certificateCourse);
+                set("certificate-signature", t.certificateSignature);
                 set("method-kicker", t.methodKicker);
                 set("method-title", t.methodTitle);
                 set("method-text", t.methodText);
@@ -2372,7 +2609,10 @@
                 const lang = localStorage.getItem("preferredLanguage") || document.documentElement.lang || "es";
                 applyAcademyLang(lang);
                 document.querySelectorAll(".lang-option").forEach((btn) => {
-                    btn.addEventListener("click", () => applyAcademyLang(btn.dataset.lang || "es"));
+                    btn.addEventListener("click", (event) => {
+                        event.preventDefault();
+                        applyAcademyLang(btn.dataset.lang || "es");
+                    });
                 });
             });
         })();
