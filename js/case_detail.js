@@ -275,6 +275,13 @@
     document.documentElement.setAttribute("lang", lang === "en" ? "en" : "es");
   }
 
+  function updateLanguageToggleLabel(lang) {
+    const code = lang === "en" ? "EN" : "ES";
+    document.querySelectorAll(".lang-code").forEach(function (el) {
+      el.textContent = code;
+    });
+  }
+
   function applyCaseLanguage(caseKey, lang) {
     const pack = CASE_COPY[caseKey];
     if (!pack) return;
@@ -345,6 +352,7 @@
     });
 
     setHtmlLang(lang);
+    updateLanguageToggleLabel(lang);
     persistLang(lang);
   }
 

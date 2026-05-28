@@ -47,7 +47,7 @@ function takeI18nSnapshot(){
     const ids = [
       'nav-inicio','nav-acerca','nav-servicios','nav-contacto','nav-equipo','nav-equipo-mobile','nav-nosotros','nav-nosotros-mobile','nav-academy','nav-academy-mobile','nav-casos-exito','nav-problema',
       'intro-title','intro-text','about-title','about-text','services-title','services-text','services-portfolio-cta','team-eyebrow','team-title','team-subtitle','team-support-text','team-cta-text',
-      'hero-contact-cta','hero-cases-cta','hero-kicker','hero-metric-industries','hero-metric-result','hero-metric-data','hero-metric-automation',
+      'hero-contact-cta','hero-cases-cta','hero-kicker','hero-academy-link','hero-partners-label','hero-scroll-label','hero-metric-industries','hero-metric-result','hero-metric-data','hero-metric-automation',
       'blog-view-all',
       'contact-title','contact-microcopy','schedule-call','show-popup','popup-title','label-email','label-problema','submit-button',
       'footer-text','about-us-text','label-name','label-company','label-project','submit-contact-form','contact-soon',
@@ -57,7 +57,7 @@ function takeI18nSnapshot(){
       'blog-kicker','blog-title','blog-subtitle','blog-meta','blog-eyebrow','blog-article-title','blog-excerpt','blog-cta',
       'blog-stat1','blog-stat2','blog-stat3','blog-stat4','blog-stat5','blog-stat6','blog-stat7','blog-stat8','blog-stat9'
     ];
-    ['about-method-kicker','about-subtitle','why0-step','why0-title','why0-text','why0-time','why1-step','why1-title','why1-text','why1-time','why2-step','why2-title','why2-text','why2-time','why3-step','why3-title','why3-text','why3-time','method-proof-text','method-proof-link'].forEach(function(id){
+    ['about-method-kicker','about-subtitle','why0-step','why0-title','why0-text','why0-time','why1-step','why1-title','why1-text','why1-time','why2-step','why2-title','why2-text','why2-time','why3-step','why3-title','why3-text','why3-time'].forEach(function(id){
       ids.push(id);
     });
 
@@ -78,14 +78,17 @@ function takeI18nSnapshot(){
 
 const translations = {
   es: {
-    title: "<span class=\"hero-title-line\">Convertimos tu marketing en un <strong>sistema que escala</strong></span><em>No en campa&ntilde;as que se apagan</em>",
+    title: "<span class=\"hero-title-line\">Convertimos tu marketing en un <strong>sistema que escala</strong></span><em>No campa&ntilde;as que se apagan</em>",
     heroContactCta: "Solicitar diagn&oacute;stico gratuito",
     heroCasesCta: "Ver casos de &eacute;xito <span aria-hidden=\"true\">-&gt;</span>",
     heroKicker: "<span></span> Tu socio de crecimiento",
-    heroMetricIndustries: "Diagn&oacute;stico inicial",
-    heroMetricResult: "Primeras mejoras visibles",
-    heroMetricData: "Sistema funcionando",
-    heroMetricAutomation: "Profesionales dedicados",
+    heroAcademyLink: "Conoc&eacute; nuestra academia <span aria-hidden=\"true\">-&gt;</span>",
+    heroPartnersLabel: "Partners",
+    heroScrollLabel: "Desliz&aacute;",
+    heroMetricIndustries: "Diagn&oacute;stico ejecutivo inicial",
+    heroMetricResult: "Primeras mejoras implementadas",
+    heroMetricData: "Ecosistema digital funcionando",
+    heroMetricAutomation: "Web, branding, campa&ntilde;as, contenido y automation",
     navInicio: "Inicio",
     navAcerca: "Nosotros",
     navServicios: "Servicios",
@@ -118,8 +121,6 @@ const translations = {
     why3Title: "Crecimiento y Optimizaci&oacute;n",
     why3Text: "Medimos resultados, iteramos de forma continua y optimizamos cada decisi&oacute;n con datos reales. El sistema mejora solo en el tiempo.",
     why3Time: "Mes 3 en adelante",
-    methodProofText: "El primer resultado medible aparece dentro de los primeros <strong>30 d&iacute;as</strong>. El sistema completo opera de forma aut&oacute;noma en <strong>90 d&iacute;as</strong>.",
-    methodProofLink: "Ver un caso real <span aria-hidden=\"true\">-&gt;</span>",
     servicesTitle: "Soluciones dise&ntilde;adas para escalar negocios",
     servicesPortfolio: "PORTFOLIO DE SOLUCIONES",
     successtitle: "Experiencia aplicada en negocios reales",
@@ -245,10 +246,13 @@ const translations = {
     heroContactCta: "Request a free diagnosis",
     heroCasesCta: "View success stories <span aria-hidden=\"true\">-&gt;</span>",
     heroKicker: "<span></span> Your growth partner",
-    heroMetricIndustries: "Initial diagnostic",
-    heroMetricResult: "First visible improvements",
-    heroMetricData: "System running",
-    heroMetricAutomation: "Dedicated professionals",
+    heroAcademyLink: "Explore our academy <span aria-hidden=\"true\">-&gt;</span>",
+    heroPartnersLabel: "Partners",
+    heroScrollLabel: "Scroll",
+    heroMetricIndustries: "Executive initial diagnosis",
+    heroMetricResult: "First improvements implemented",
+    heroMetricData: "Digital ecosystem running",
+    heroMetricAutomation: "Web, branding, campaigns, content and automation",
     navInicio: "Home",
     navAcerca: "About us",
     navServicios: "Services",
@@ -281,8 +285,6 @@ const translations = {
     why3Title: "Growth &amp; Optimization",
     why3Text: "We measure results, iterate continuously and optimize every decision with real data. The system improves over time.",
     why3Time: "Month 3 onward",
-    methodProofText: "The first measurable result appears within the first <strong>30 days</strong>. The full system operates autonomously in <strong>90 days</strong>.",
-    methodProofLink: "View a real case <span aria-hidden=\"true\">-&gt;</span>",
     servicesTitle: "Solutions designed to scale businesses",
     servicesPortfolio: "SOLUTIONS PORTFOLIO",
     successtitle: "Experience applied to real businesses",
@@ -647,6 +649,25 @@ function ensureServicesTitleRing() {
   title.innerHTML = `<span class="services-title-text">${rawText}</span><svg class="services-title-ring" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><ellipse cx="50" cy="50" rx="48" ry="46" pathLength="1"></ellipse></svg>`;
 }
 
+function setHeroMetricSuffixes(language) {
+  const metricSuffixes = {
+    'hero-metric-value-diagnostic': language === 'en' ? ' hrs' : ' hs',
+    'hero-metric-value-result': language === 'en' ? ' days' : ' d\u00edas',
+    'hero-metric-value-system': language === 'en' ? ' days' : ' d\u00edas',
+    'hero-metric-value-areas': language === 'en' ? ' fronts' : ' frentes'
+  };
+  Object.keys(metricSuffixes).forEach(function(id) {
+    const metric = document.getElementById(id);
+    if (!metric) return;
+    const suffix = metricSuffixes[id];
+    metric.setAttribute('data-suffix', suffix);
+    metric.dataset.counted = 'false';
+    const prefix = metric.getAttribute('data-prefix') || '';
+    const target = metric.getAttribute('data-count-to') || '1';
+    metric.innerHTML = prefix + target + suffix;
+  });
+}
+
 function setLanguage(language) {
   language = (language || 'es').toLowerCase();
   takeI18nSnapshot();
@@ -698,6 +719,25 @@ function setLanguage(language) {
       if (teamPageButton && translations.es && translations.es.teamPageButton) {
         teamPageButton.innerHTML = translations.es.teamPageButton;
       }
+
+      [
+        ['title', 'title'],
+        ['hero-contact-cta', 'heroContactCta'],
+        ['hero-cases-cta', 'heroCasesCta'],
+        ['hero-kicker', 'heroKicker'],
+        ['hero-academy-link', 'heroAcademyLink'],
+        ['hero-partners-label', 'heroPartnersLabel'],
+        ['hero-scroll-label', 'heroScrollLabel'],
+        ['hero-metric-industries', 'heroMetricIndustries'],
+        ['hero-metric-result', 'heroMetricResult'],
+        ['hero-metric-data', 'heroMetricData'],
+        ['hero-metric-automation', 'heroMetricAutomation']
+      ].forEach(function(pair) {
+        const element = document.getElementById(pair[0]);
+        const value = translations.es[pair[1]];
+        if (element && value !== undefined) element.innerHTML = value;
+      });
+      setHeroMetricSuffixes('es');
 
       // Ensure restored ES service/team cards are visible
       try {
@@ -758,6 +798,9 @@ function setLanguage(language) {
     'hero-contact-cta': 'heroContactCta',
     'hero-cases-cta': 'heroCasesCta',
     'hero-kicker': 'heroKicker',
+    'hero-academy-link': 'heroAcademyLink',
+    'hero-partners-label': 'heroPartnersLabel',
+    'hero-scroll-label': 'heroScrollLabel',
     'hero-metric-industries': 'heroMetricIndustries',
     'hero-metric-result': 'heroMetricResult',
     'hero-metric-data': 'heroMetricData',
@@ -782,8 +825,6 @@ function setLanguage(language) {
     'why3-title': 'why3Title',
     'why3-text': 'why3Text',
     'why3-time': 'why3Time',
-    'method-proof-text': 'methodProofText',
-    'method-proof-link': 'methodProofLink',
     'services-title': 'servicesTitle',
     'services-text': 'servicesText',
     'services-portfolio-cta': 'servicesPortfolio',
@@ -844,18 +885,7 @@ function setLanguage(language) {
     }
   }
 
-  const metricSuffixes = {
-    'hero-metric-value-diagnostic': ' hs',
-    'hero-metric-value-result': language === 'en' ? ' days' : ' días',
-    'hero-metric-value-system': language === 'en' ? ' days' : ' días',
-    'hero-metric-value-areas': language === 'en' ? ' areas' : ' áreas'
-  };
-  Object.keys(metricSuffixes).forEach(function(id) {
-    const metric = document.getElementById(id);
-    if (!metric) return;
-    metric.setAttribute('data-suffix', metricSuffixes[id]);
-    metric.dataset.counted = 'false';
-  });
+  setHeroMetricSuffixes(language);
   ensureServicesTitleRing();
 
   const serviceDetailsElement = document.querySelector('.service-details');

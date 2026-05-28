@@ -28,12 +28,61 @@
 
   function getLang() {
     try {
-      const stored = localStorage.getItem("preferredLanguage");
+      const q = new URLSearchParams(window.location.search).get("lang");
+      if (q) return q.toLowerCase() === "en" ? "en" : "es";
+    } catch (e) {
+      /* noop */
+    }
+    try {
+      const stored = localStorage.getItem("trendLang") || localStorage.getItem("preferredLanguage");
       if (stored) return stored.toLowerCase() === "en" ? "en" : "es";
     } catch (e) {
       /* noop */
     }
     return document.documentElement.lang === "en" ? "en" : "es";
+  }
+
+  function saveCourseLang(lang) {
+    try {
+      localStorage.setItem("trendLang", lang);
+      localStorage.setItem("preferredLanguage", lang);
+    } catch (e) {
+      /* noop */
+    }
+  }
+
+  function updateCourseHeaderLang(lang) {
+    const copy = {
+      es: {
+        academy: "Academia",
+        courses: "Cursos",
+        cases: "Casos",
+        contact: "Contacto",
+      },
+      en: {
+        academy: "Academy",
+        courses: "Courses",
+        cases: "Cases",
+        contact: "Contact",
+      },
+    };
+    const t = copy[lang] || copy.es;
+    document.documentElement.lang = lang;
+    document.querySelectorAll(".lang-code").forEach((el) => {
+      el.textContent = lang.toUpperCase();
+    });
+    document.querySelectorAll('nav a[href="../trendmakers-academy.html"]:not(.tm-header-badge)').forEach((el) => {
+      el.textContent = t.academy;
+    });
+    document.querySelectorAll('nav a[href="../trendmakers-academy.html#programas"]').forEach((el) => {
+      el.textContent = t.courses;
+    });
+    document.querySelectorAll('nav a[href="../index.html#casos-exito"]').forEach((el) => {
+      el.textContent = t.cases;
+    });
+    document.querySelectorAll('nav a[href="../index.html#contact-form"]').forEach((el) => {
+      el.textContent = t.contact;
+    });
   }
 
   function getCourse() {
@@ -98,11 +147,24 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    updateCourseHeaderLang(getLang());
     updateCourseMailto();
     document.querySelectorAll(".lang-option").forEach((btn) => {
       btn.addEventListener("click", function () {
-        setTimeout(updateCourseMailto, 0);
+        const lang = (this.dataset.lang || "es").toLowerCase() === "en" ? "en" : "es";
+        saveCourseLang(lang);
+        updateCourseHeaderLang(lang);
+        setTimeout(function () {
+          updateCourseHeaderLang(lang);
+          updateCourseMailto();
+        }, 0);
       });
+    });
+    window.addEventListener("academyCourseLanguageChanged", function (event) {
+      const lang = event.detail && event.detail.lang ? event.detail.lang : getLang();
+      saveCourseLang(lang);
+      updateCourseHeaderLang(lang);
+      updateCourseMailto();
     });
   });
 })();
