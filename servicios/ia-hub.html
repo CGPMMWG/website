@@ -1,0 +1,1136 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI &amp; Innovation Hub | TrendMakers</title>
+    <meta name="description" content="Aplicamos inteligencia artificial para mejorar procesos, equipos y resultados en empresas junto a TrendMakers.">
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <link rel="canonical" href="https://trendmakers.agency/servicios/ia-hub.html">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="TrendMakers">
+    <meta property="og:title" content="AI &amp; Innovation Hub | TrendMakers">
+    <meta property="og:description" content="Aplicamos inteligencia artificial para mejorar procesos, equipos y resultados en empresas junto a TrendMakers.">
+    <meta property="og:image" content="https://trendmakers.agency/img/IA-HUB.png">
+    <meta property="og:image:width" content="384">
+    <meta property="og:image:height" content="379">
+    <meta property="og:url" content="https://trendmakers.agency/servicios/ia-hub.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="../img/logo1.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header_overrides.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        :root { --tm-gradient: linear-gradient(135deg, #1b0b2e 0%, #34105a 50%, #4c1d95 100%); }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        html {
+            overflow-x: hidden;
+        }
+        body {
+            margin: 0;
+            font-family: "Inter", system-ui, -apple-system, sans-serif;
+            background:
+                radial-gradient(900px 900px at 10% 15%, rgba(123, 47, 247, 0.16), transparent 45%),
+                radial-gradient(820px 820px at 85% 8%, rgba(0, 195, 255, 0.14), transparent 48%),
+                linear-gradient(135deg, #0a0616 0%, #120b27 50%, #0b0f1f 100%);
+            color: #f5f2ff;
+            overflow-x: hidden;
+        }
+        .shell {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: clamp(18px, 4vw, 42px) clamp(16px, 4vw, 32px) 72px;
+        }
+        section {
+            margin: clamp(42px, 6vw, 78px) 0;
+        }
+        h1, h2, h3 { margin: 0 0 10px; color: #fff; line-height: 1.2; }
+        h1 { font-size: clamp(1.9rem, 1.2rem + 2vw, 3rem); }
+        h2 { font-size: clamp(1.4rem, 1rem + 1.4vw, 2.1rem); }
+        h3 { font-size: 1.1rem; }
+        p { margin: 0 0 10px; color: #e7e1ff; line-height: 1.6; }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 22px;
+            border-radius: 999px;
+            background: linear-gradient(120deg, #7b2ff7, #6a0dad 40%, #00c3ff);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+            transition: transform 160ms ease, box-shadow 160ms ease;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(0,0,0,0.45); }
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            align-items: center;
+        }
+        .hero-visual {
+            position: relative;
+            min-height: 260px;
+            border-radius: 18px;
+            background:
+                radial-gradient(500px 500px at 20% 20%, rgba(236,72,153,0.12), transparent 40%),
+                radial-gradient(500px 500px at 80% 10%, rgba(59,130,246,0.12), transparent 40%),
+                linear-gradient(145deg, #120a24, #1e1036 50%, #2b0f4b);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+        }
+        .hero-visual img { max-width: 100%; height: auto; display: block; }
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.08);
+            color: #dcd4ff;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+        .card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: clamp(18px, 3vw, 26px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+        }
+        .list { margin: 12px 0 0; padding: 0; list-style: none; }
+        .list li {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            align-items: start;
+            margin-bottom: 10px;
+            color: #eae6ff;
+        }
+        .list li::before {
+            content: "✔";
+            color: #7bffb2;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+        .step {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 12px;
+            align-items: start;
+        }
+        .step-number {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7b2ff7, #00c3ff);
+            color: #0b0620;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+        }
+        .mini-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+        .mini-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 14px;
+            text-decoration: none;
+            color: #f7f4ff;
+            display: grid;
+            gap: 8px;
+            transition: transform 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+        }
+        .mini-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(123,191,255,0.8);
+            box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+        }
+        .section-title-center {
+            text-align: center;
+            margin-bottom: clamp(16px, 3vw, 24px);
+        }
+        .section-lead {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto clamp(20px, 3vw, 28px);
+            color: #e7e1ff;
+        }
+        :root { --header-height: 72px; }
+        @media (max-width: 640px){ :root { --header-height: 110px; } }
+        /* CTA estilo panel gradiente */
+        .cta-panel {
+            max-width: 900px;
+            margin: 10px auto 0;
+            text-align: center;
+            padding: 20px 22px 26px;
+            border-radius: 18px;
+            background: linear-gradient(120deg, rgba(123, 47, 247, 0.14), rgba(0, 195, 255, 0.14));
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+        }
+        .cta-panel .btn-primary {
+            padding: 14px 28px;
+            background: linear-gradient(120deg, #8c3dff 0%, #6a0dad 45%, #0bd3ff 100%);
+            box-shadow: 0 18px 38px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.08);
+            font-weight: 800;
+        }
+        .cta-panel .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 24px 50px rgba(0,0,0,0.45), 0 0 0 1px rgba(123,191,255,0.45);
+        }
+        .back-btn {
+            position: fixed;
+            top: calc(var(--header-height) + 8px);
+            left: 12px;
+            z-index: 80;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: rgba(0,0,0,0.35);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #f4f2ff;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+            backdrop-filter: blur(10px);
+            transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 26px rgba(0,0,0,0.45);
+            border-color: rgba(123,191,255,0.7);
+        }
+        @media (max-width: 640px) {
+            .back-btn { top: calc(var(--header-height) + 6px); left: 10px; padding: 9px 12px; }
+            .shell { padding-top: calc(var(--header-height) + 40px); }
+        }
+        /* Consulting rebrand */
+        :root {
+            --ai-ink: #0b1728;
+            --ai-muted: #53667f;
+            --ai-line: #d8e0ea;
+            --ai-blue: #1f5eff;
+            --ai-panel: rgba(255,255,255,0.9);
+        }
+
+        body {
+            background:
+                linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+                radial-gradient(circle at 82% 8%, rgba(31, 94, 255, 0.13), transparent 28%),
+                linear-gradient(180deg, #f7fbff 0%, #ffffff 48%, #f5f8fc 100%) !important;
+            background-size: 46px 46px, 46px 46px, auto, auto !important;
+            color: var(--ai-ink) !important;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(180deg, rgba(255,255,255,0.3), transparent 38%);
+            z-index: 0;
+        }
+
+        .content,
+        .shell {
+            position: relative;
+            z-index: 1;
+        }
+
+        .shell {
+            max-width: 1180px;
+            padding-top: clamp(112px, 13vh, 148px) !important;
+        }
+
+        section {
+            margin: clamp(28px, 4vw, 58px) 0 !important;
+        }
+
+        h1, h2, h3 {
+            color: var(--ai-ink) !important;
+            letter-spacing: 0 !important;
+        }
+
+        h1 {
+            font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+            font-size: clamp(3rem, 5.5vw, 5.4rem) !important;
+            line-height: 0.95 !important;
+            max-width: 760px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: clamp(1.55rem, 2.35vw, 2.65rem) !important;
+            line-height: 1.06 !important;
+        }
+
+        h3 {
+            font-size: 1.06rem !important;
+        }
+
+        p {
+            color: var(--ai-muted) !important;
+            font-size: 1rem;
+        }
+
+        .hero {
+            grid-template-columns: minmax(0, 0.98fr) minmax(340px, 0.66fr) !important;
+            gap: clamp(38px, 7vw, 108px) !important;
+            align-items: center !important;
+            min-height: clamp(500px, 68vh, 660px);
+            padding-bottom: clamp(24px, 4vw, 42px);
+        }
+
+        .hero > div:first-child {
+            display: grid;
+            gap: 18px;
+        }
+
+        .pill {
+            display: none !important;
+        }
+
+        .hero #ai-h2 {
+            max-width: 620px;
+            font-size: clamp(1.28rem, 1.9vw, 2.05rem) !important;
+            color: var(--ai-ink) !important;
+        }
+
+        .hero #ai-hero-text {
+            max-width: 690px;
+            font-size: clamp(1rem, 1.25vw, 1.18rem);
+            line-height: 1.68;
+        }
+
+        .hero-visual {
+            min-height: 410px !important;
+            border-radius: 10px !important;
+            background:
+                radial-gradient(circle at 50% 18%, rgba(31, 94, 255, 0.11), transparent 42%),
+                linear-gradient(180deg, rgba(255,255,255,0.56), rgba(244,248,252,0.42)) !important;
+            border: 1px solid rgba(216, 224, 234, 0.75);
+            box-shadow: 0 24px 58px rgba(15, 23, 42, 0.09) !important;
+        }
+
+        .hero-visual img {
+            max-width: min(76%, 320px) !important;
+            filter: drop-shadow(0 20px 34px rgba(15, 23, 42, 0.16)) !important;
+        }
+
+        .btn-primary,
+        .cta-panel .btn-primary {
+            width: fit-content;
+            min-height: 48px;
+            padding: 0 22px !important;
+            border-radius: 8px !important;
+            background: var(--ai-ink) !important;
+            border: 1px solid rgba(11, 23, 40, 0.16) !important;
+            color: #ffffff !important;
+            box-shadow: 0 16px 34px rgba(15, 23, 42, 0.18) !important;
+            font-size: 0.94rem;
+        }
+
+        .btn-primary:hover,
+        .cta-panel .btn-primary:hover {
+            transform: translateY(-2px) !important;
+            background: #13243d !important;
+            box-shadow: 0 22px 44px rgba(15, 23, 42, 0.22) !important;
+        }
+
+        .card {
+            border-radius: 10px !important;
+            background:
+                linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.9)),
+                var(--ai-panel) !important;
+            border: 1px solid var(--ai-line) !important;
+            box-shadow: 0 18px 42px rgba(15, 23, 42, 0.07) !important;
+            color: var(--ai-ink) !important;
+        }
+
+        section > .card {
+            padding: clamp(26px, 4vw, 44px) !important;
+        }
+
+        .grid-3,
+        .grid-2 {
+            gap: 18px !important;
+        }
+
+        .grid-3 > .card,
+        .grid-2 .step,
+        .mini-card {
+            background: rgba(255,255,255,0.74) !important;
+            border: 1px solid var(--ai-line) !important;
+            box-shadow: none !important;
+        }
+
+        .list li {
+            color: #32445b !important;
+            line-height: 1.5;
+        }
+
+        .list li::before {
+            content: "" !important;
+            width: 7px;
+            height: 7px;
+            margin-top: 0.58em;
+            border-radius: 999px;
+            background: var(--ai-blue);
+            box-shadow: none;
+        }
+
+        .step {
+            padding: 22px;
+            border-radius: 10px;
+        }
+
+        .step-number {
+            width: 32px !important;
+            height: 32px !important;
+            border-radius: 8px !important;
+            background: #e8efff !important;
+            border: 1px solid rgba(31, 94, 255, 0.18);
+            color: var(--ai-blue) !important;
+            box-shadow: none !important;
+        }
+
+        .cta-panel {
+            max-width: 980px !important;
+            padding: clamp(30px, 5vw, 54px) !important;
+            border-radius: 10px !important;
+            text-align: left !important;
+            background:
+                radial-gradient(circle at 86% 0%, rgba(31, 94, 255, 0.18), transparent 34%),
+                linear-gradient(135deg, #0b1728, #101d31) !important;
+            border: 1px solid rgba(185, 207, 255, 0.18) !important;
+            box-shadow: 0 26px 70px rgba(15, 23, 42, 0.18) !important;
+        }
+
+        .cta-panel h2,
+        .cta-panel p {
+            color: #ffffff !important;
+            max-width: 740px;
+            margin-left: 0 !important;
+            text-align: left !important;
+        }
+
+        .cta-panel p {
+            color: rgba(233, 240, 255, 0.76) !important;
+        }
+
+        .cta-panel .btn-primary {
+            background: #ffffff !important;
+            color: var(--ai-ink) !important;
+        }
+
+        .mini-card {
+            border-radius: 10px !important;
+            padding: 20px !important;
+        }
+
+        .mini-card:hover {
+            transform: translateY(-3px) !important;
+            border-color: rgba(31, 94, 255, 0.28) !important;
+            box-shadow: 0 18px 34px rgba(15, 23, 42, 0.1) !important;
+        }
+
+        .back-btn {
+            top: calc(var(--header-height) + 14px) !important;
+            background: rgba(255,255,255,0.84) !important;
+            border: 1px solid var(--ai-line) !important;
+            color: var(--ai-ink) !important;
+            border-radius: 8px !important;
+            box-shadow: 0 14px 34px rgba(15, 23, 42, 0.1) !important;
+        }
+
+        .ai-reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 760ms cubic-bezier(.2,.8,.2,1), transform 760ms cubic-bezier(.2,.8,.2,1);
+        }
+
+        .ai-reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero .pill,
+        .hero h1,
+        .hero h2,
+        .hero p,
+        .hero .btn-primary,
+        .hero .hero-visual {
+            opacity: 0;
+            transform: translateY(18px);
+            animation: aiHeroIn 800ms cubic-bezier(.2,.8,.2,1) forwards;
+        }
+
+        .hero .pill { animation-delay: 80ms; }
+        .hero h1 { animation-delay: 90ms; }
+        .hero h2 { animation-delay: 180ms; }
+        .hero p { animation-delay: 270ms; }
+        .hero .btn-primary { animation-delay: 360ms; }
+        .hero .hero-visual { animation-delay: 180ms; }
+
+        @keyframes aiHeroIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 860px) {
+            .hero {
+                grid-template-columns: 1fr !important;
+                min-height: 0;
+                align-items: start !important;
+            }
+
+            h1 {
+                max-width: 100%;
+                font-size: clamp(2.35rem, 12vw, 3.35rem) !important;
+                line-height: 1.05 !important;
+                overflow-wrap: anywhere;
+            }
+
+            .hero #ai-h2,
+            .hero #ai-hero-text {
+                max-width: 100%;
+            }
+
+            .hero-visual {
+                min-height: 260px !important;
+            }
+
+            .grid-3,
+            .grid-2,
+            .mini-cards {
+                grid-template-columns: 1fr !important;
+            }
+
+            .shell {
+                padding-top: 128px !important;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="../css/header_dark_global.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"AI \u0026 Innovation Hub | TrendMakers","description":"Aplicamos inteligencia artificial para mejorar procesos, equipos y resultados en empresas junto a TrendMakers.","url":"https://trendmakers.agency/servicios/ia-hub.html","provider":{"@type":"Organization","name":"TrendMakers","url":"https://trendmakers.agency/"}}</script>
+    <script id="seo-entity-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://trendmakers.agency/#organization","name":"TrendMakers","url":"https://trendmakers.agency/","logo":{"@type":"ImageObject","url":"https://trendmakers.agency/img/logo1.png","width":384,"height":379},"sameAs":["https://www.linkedin.com/company/trendmakersagency","https://www.instagram.com/trendmakers.agency_"]},{"@type":"WebSite","@id":"https://trendmakers.agency/#website","url":"https://trendmakers.agency/","name":"TrendMakers","publisher":{"@id":"https://trendmakers.agency/#organization"},"inLanguage":"es-AR"},{"@type":"Service","@id":"https://trendmakers.agency/servicios/ia-hub.html#primary","name":"AI \u0026 Innovation Hub | TrendMakers","description":"Aplicamos inteligencia artificial para mejorar procesos, equipos y resultados en empresas junto a TrendMakers.","url":"https://trendmakers.agency/servicios/ia-hub.html","inLanguage":"es-AR","isPartOf":{"@id":"https://trendmakers.agency/#website"},"provider":{"@id":"https://trendmakers.agency/#organization"},"areaServed":"Argentina"},{"@type":"BreadcrumbList","@id":"https://trendmakers.agency/servicios/ia-hub.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://trendmakers.agency/"},{"@type":"ListItem","position":2,"name":"Servicios","item":"https://trendmakers.agency/servicios"},{"@type":"ListItem","position":3,"name":"Ia Hub","item":"https://trendmakers.agency/servicios/ia-hub.html"}]}]}</script>
+</head>
+<body>
+    <div class="content">
+        <a class="back-btn" href="../index.html#problema" aria-label="Volver a la sección Ready to take your brand to the next level">← Volver</a>
+        <nav>
+            <a class="tm-header-badge" href="../index.html#inicio" aria-label="TrendMakers home" id="tm-badge">
+                <img src="../img/TrendMakers-Header.png" alt="TrendMakers" decoding="async">
+            </a>
+            <div class="tm-quick-menu" id="tm-quick-menu" aria-label="Accesos rápidos">
+                <a href="https://www.instagram.com/trendmakersagency.ok?igsh=cTN1Z3N0ejk1YmJu" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+                <a href="https://www.linkedin.com/company/trendmakersagency" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+                <a class="mailto-dynamic"
+                   href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias."
+                   target="_blank"
+                   aria-label="Email">
+                   Email
+                </a>
+                <a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n."
+                   target="_blank"
+                   aria-label="WhatsApp">
+                   WhatsApp
+                </a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="desktop-menu top-agency-menu">
+                <li><a href="../index.html#inicio" id="nav-inicio" class="menu-item">Inicio</a></li>
+                <li><a href="/servicios/" id="nav-servicios" class="menu-item">Servicios</a></li>
+                <li class="dropdown about-dropdown">
+                    <button id="nav-acerca" class="menu-item dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Nosotros <span class="caret">v</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="../index.html#equipo" id="nav-equipo" class="menu-item">Equipo</a></li>
+                        <li><a href="../index.html#acerca" id="nav-nosotros" class="menu-item">Nosotros</a></li>
+                        <li><a href="/blog/" id="nav-blog" class="menu-item">Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="/academy/" id="nav-academy" class="menu-item">Academia</a></li>
+                <li><a href="../index.html#casos-exito" id="nav-casos-exito" class="menu-item">Casos de Éxito</a></li>
+                <li><a href="../index.html#contact-form" id="nav-contacto" class="menu-item nav-cta">Contacto</a></li>
+            </ul>
+            <div class="nav-lang">
+              <div class="language-selector" aria-label="Selector de idioma">
+                <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Seleccionar idioma">
+                  <img src="../img/IDIOMA.PNG" alt="Idioma" decoding="async">
+                </button>
+                <div class="lang-menu" role="menu" aria-label="Idiomas">
+                  <button class="lang-option" role="menuitem" data-lang="es">Español</button>
+                  <button class="lang-option" role="menuitem" data-lang="en">English</button>
+                </div>
+              </div>
+            </div>
+            <ul class="mobile-menu">
+                <li><a href="../index.html#inicio" id="nav-inicio" class="menu-item" onclick="closeMenu()">Inicio</a></li>
+                <li><a href="/servicios/" id="nav-servicios" class="menu-item" onclick="closeMenu()">Servicios</a></li>
+                <li class="mobile-heading">Nosotros</li>
+                <li><a href="../index.html#equipo" id="nav-equipo-mobile" class="menu-item" onclick="closeMenu()">Equipo</a></li>
+                <li><a href="../index.html#acerca" id="nav-nosotros-mobile" class="menu-item" onclick="closeMenu()">Nosotros</a></li>
+                <li><a href="/blog/" class="menu-item" onclick="closeMenu()" id="nav-blog-mobile">Blog</a></li>
+                <li><a href="/academy/" id="nav-academy-mobile" class="menu-item" onclick="closeMenu()">Academia</a></li>
+                <li><a href="../index.html#casos-exito" id="nav-casos-exito" class="menu-item" onclick="closeMenu()">Casos de Éxito</a></li>
+                <li><a href="../index.html#contact-form" id="nav-contacto" class="menu-item nav-cta" onclick="closeMenu()">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="shell">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div>
+                <div class="pill" id="ai-badge">AI &amp; Innovation Hub</div>
+                <h1 id="ai-h1">AI &amp; Innovation Hub</h1>
+                <h2 id="ai-h2">Aplicamos inteligencia artificial para mejorar procesos, equipos y resultados.</h2>
+                <p id="ai-hero-text">
+                    En TrendMakers ayudamos a empresas a incorporar Inteligencia Artificial, automatización y herramientas digitales en su operación diaria. No se trata solo de usar tecnología: se trata de aplicarla donde realmente genera valor.
+                    Diseñamos soluciones prácticas para optimizar procesos, reducir tareas manuales, ordenar información, mejorar la atención al cliente y capacitar equipos para que puedan trabajar mejor con IA.
+                </p>
+                <a class="btn-primary" id="ai-cta" href="https://calendly.com/mgottler1999/30min" target="_blank" rel="noopener">
+                    Agendar una llamada
+                </a>
+            </div>
+            <div class="hero-visual">
+                <img src="../img/IA-HUB.png" alt="AI &amp; Innovation Hub, automatización e inteligencia artificial" decoding="async" loading="lazy">
+            </div>
+        </section>
+
+        <!-- ¿QUÉ HACEMOS? -->
+        <section>
+            <div class="card">
+                <h2 id="ai-que-title">¿Qué hacemos en AI &amp; Innovation Hub?</h2>
+                <p id="ai-que-text">
+                    Ayudamos a empresas a entender, implementar y aprovechar la Inteligencia Artificial de forma concreta. Combinamos diagnóstico, capacitación, automatización y desarrollo de soluciones para que la tecnología se integre de manera útil en la operación del negocio.
+                    Trabajamos sobre procesos reales, equipos reales y necesidades concretas. Nuestro objetivo es que la IA no quede como una herramienta aislada, sino como una ventaja operativa para la empresa.
+                </p>
+                <ul class="list">
+                    <li id="ai-que-li1">Aplicamos IA en procesos comerciales, administrativos, operativos y de atención.</li>
+                    <li id="ai-que-li2">Automatizamos tareas repetitivas y flujos de trabajo.</li>
+                    <li id="ai-que-li3">Capacitamos equipos para usar IA de forma productiva y estratégica.</li>
+                    <li id="ai-que-li4">Implementamos asistentes, chatbots y herramientas internas.</li>
+                    <li id="ai-que-li5">Creamos dashboards y reportes para ordenar la información del negocio.</li>
+                    <li id="ai-que-li6">Integramos herramientas digitales para mejorar la eficiencia diaria.</li>
+                    <li id="ai-que-li7">Acompañamos a las empresas en la adopción de nuevas tecnologías.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PROBLEMAS / PARA QUIÉN ES -->
+        <section>
+            <div class="card">
+                <h2 id="ai-prob-title">De herramientas aisladas a empresas más inteligentes</h2>
+                <p id="ai-prob-text">Si te pasa alguna de estas cosas, este servicio es para vos:</p>
+                <ul class="list">
+                    <li id="ai-prob-li1">Tu equipo usa IA, pero sin una estrategia clara.</li>
+                    <li id="ai-prob-li2">Querés capacitar a tu empresa para aprovechar mejor estas herramientas.</li>
+                    <li id="ai-prob-li3">Tenés procesos manuales que consumen tiempo y recursos.</li>
+                    <li id="ai-prob-li4">La información está desordenada o dispersa en distintas plataformas.</li>
+                    <li id="ai-prob-li5">Querés automatizar tareas, pero no sabés por dónde empezar.</li>
+                    <li id="ai-prob-li6">Necesitás mejorar la atención, la gestión de leads o los reportes internos.</li>
+                    <li id="ai-prob-li7">Buscás incorporar tecnología sin complicar la operación diaria.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- BLOQUES / QUÉ INCLUYE -->
+        <section>
+            <div class="card">
+                <h2 id="ai-incl-title">¿Qué incluye AI &amp; Innovation Hub?</h2>
+                <p id="ai-incl-text">
+                    Adaptamos cada proyecto según la realidad de cada empresa, pero trabajamos sobre tres pilares principales:
+                </p>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3 id="ai-b1-title">Bloque 1 - IA Aplicada a Empresas</h3>
+                        <ul class="list">
+                            <li id="ai-b1-li1">Identificación de oportunidades reales para aplicar IA.</li>
+                            <li id="ai-b1-li2">Implementación de herramientas de IA en procesos internos.</li>
+                            <li id="ai-b1-li3">Uso de IA generativa para contenido, análisis, soporte y gestión.</li>
+                            <li id="ai-b1-li4">Creación de asistentes personalizados para equipos o clientes.</li>
+                            <li id="ai-b1-li5">Mejora de procesos comerciales, administrativos y operativos mediante IA.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 id="ai-b2-title">Bloque 2 - Capacitación &amp; Adopción de IA</h3>
+                        <ul class="list">
+                            <li id="ai-b2-li1">Capacitaciones para equipos comerciales, administrativos, directivos y operativos.</li>
+                            <li id="ai-b2-li2">Entrenamiento en uso de herramientas de IA para tareas diarias.</li>
+                            <li id="ai-b2-li3">Guías de buenas prácticas para incorporar IA de forma segura y efectiva.</li>
+                            <li id="ai-b2-li4">Acompañamiento en la adopción tecnológica dentro de la empresa.</li>
+                            <li id="ai-b2-li5">Desarrollo de criterios para usar IA con foco en productividad y calidad.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 id="ai-b3-title">Bloque 3 - Automatización, Datos &amp; Dashboards</h3>
+                        <ul class="list">
+                            <li id="ai-b3-li1">Automatización de tareas repetitivas y flujos de trabajo.</li>
+                            <li id="ai-b3-li2">Integración de herramientas, formularios, CRM, planillas y plataformas.</li>
+                            <li id="ai-b3-li3">Dashboards ejecutivos para visualizar métricas clave del negocio.</li>
+                            <li id="ai-b3-li4">Reportes automáticos para mejorar la toma de decisiones.</li>
+                            <li id="ai-b3-li5">Ordenamiento, extracción y limpieza de datos para uso operativo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CÓMO TRABAJAMOS -->
+        <section>
+            <div class="card">
+                <h2 id="ai-how-title">¿Cómo trabajamos este servicio?</h2>
+                <div class="grid-2">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h3 id="ai-step1-title">1. Diagnóstico y oportunidades</h3>
+                            <p id="ai-step1-text">
+                                Analizamos cómo trabaja tu empresa, qué procesos consumen más tiempo, qué herramientas usa tu equipo y dónde la IA puede generar mejoras reales.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h3 id="ai-step2-title">2. Diseño e implementación</h3>
+                            <p id="ai-step2-text">
+                                Definimos las soluciones más adecuadas: capacitaciones, automatizaciones, dashboards, asistentes internos o mejoras en procesos existentes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h3 id="ai-step3-title">3. Capacitación y entrega</h3>
+                            <p id="ai-step3-text">
+                                Capacitamos al equipo, documentamos el funcionamiento de las soluciones y dejamos todo preparado para que la empresa pueda usarlo de forma clara y sostenible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESULTADOS -->
+        <section>
+            <div class="card">
+                <h2 id="ai-res-title">¿Qué resultados podés esperar?</h2>
+                <ul class="list">
+                    <li id="ai-res-li1">Equipos mejor preparados para usar IA en su trabajo diario.</li>
+                    <li id="ai-res-li2">Menos tiempo perdido en tareas repetitivas.</li>
+                    <li id="ai-res-li3">Procesos más ordenados, rápidos y consistentes.</li>
+                    <li id="ai-res-li4">Mejor uso de la información disponible en la empresa.</li>
+                    <li id="ai-res-li5">Mayor productividad sin necesidad de sumar más estructura.</li>
+                    <li id="ai-res-li6">Herramientas digitales aplicadas a problemas concretos del negocio.</li>
+                    <li id="ai-res-li7">Una adopción de IA clara, práctica y alineada a los objetivos de la empresa.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- POR QUÉ TM -->
+        <section>
+            <div class="card">
+                <h2 id="ai-why-title">¿Por qué trabajar AI &amp; Innovation Hub con TrendMakers?</h2>
+                <ul class="list">
+                    <li id="ai-why-li1">No implementamos tecnología por moda: trabajamos para que la Inteligencia Artificial tenga una aplicación concreta dentro del negocio.</li>
+                    <li id="ai-why-li2">Combinamos visión estratégica, conocimiento operativo, automatización, datos y capacitación para incorporar IA de manera útil, entendible y accionable.</li>
+                    <li id="ai-why-li3">Buscamos que cada solución pueda ser utilizada por el equipo, sostenida en el tiempo y conectada con objetivos reales de crecimiento, eficiencia y mejora operativa.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="cta-panel">
+            <h2 id="ai-cta2-title">¿Estás listo para aplicar IA en tu empresa?</h2>
+            <p class="section-lead" id="ai-cta2-text">
+                Trabajemos juntos para identificar oportunidades, capacitar a tu equipo e implementar soluciones de Inteligencia Artificial que mejoren la forma en que opera tu negocio.
+            </p>
+            <a class="btn-primary" id="ai-cta2-btn" href="https://calendly.com/mgottler1999/30min" target="_blank" rel="noopener">
+                Agendar una llamada
+            </a>
+        </section>
+
+        <!-- OTROS SERVICIOS -->
+        <section>
+            <h2 class="section-title-center" id="ai-other-title">Otros servicios</h2>
+            <div class="mini-cards">
+                <a class="mini-card" href="/servicios/marketing-automation.html">
+                    <h3 id="ai-os1-title">Marketing Automation &amp; Growth</h3>
+                    <p id="ai-os1-text">Sistemas que generan y gestionan leads en piloto automático.</p>
+                </a>
+                <a class="mini-card" href="/servicios/branding-communication.html">
+                    <h3 id="ai-os2-title">Branding &amp; Communication</h3>
+                    <p id="ai-os2-text">Identidades profesionales y comunicación coherente.</p>
+                </a>
+                <a class="mini-card" href="/servicios/web-ecommerce.html">
+                    <h3 id="ai-os3-title">Web &amp; E-Commerce Development</h3>
+                    <p id="ai-os3-text">Sitios y tiendas rápidas, modernas e integradas a tus funnels.</p>
+                </a>
+                <a class="mini-card" href="/servicios/data-analytics.html">
+                    <h3 id="ai-os4-title">Consulting, Data &amp; Strategy</h3>
+                    <p id="ai-os4-text">Dirección estratégica basada en análisis y métricas clave.</p>
+                </a>
+            </div>
+        </section>
+
+        </div>
+    </div>
+
+    <!-- Botones flotantes -->
+    <a href="https://wa.me/541122549351?text=Hello%2C%20I%20want%20more%20information.%0A%0AHola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n."
+       class="whatsapp-button"
+       target="_blank"
+       aria-label="WhatsApp">
+        <img src="../img/WPP.PNG" alt="WhatsApp" decoding="async" loading="lazy">
+    </a>
+    <a href="mailto:info@trendmakers.agency?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20sus%20servicios&body=Hola,%20%C2%BFc%C3%B3mo%20est%C3%A1n%3F%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20adicional%20sobre%20los%20servicios%20que%20ofrecen.%20Muchas%20gracias."
+       class="email-button mailto-dynamic"
+       target="_blank"
+       aria-label="Email">
+        <img src="../img/EMAIL.jpg" alt="Email" decoding="async" loading="lazy">
+    </a>
+
+    <script src="../js/script.js"></script>
+    <script>
+      const aiCopy = {
+        es: {
+          badge: "AI & Innovation Hub",
+          h1: "AI & Innovation Hub",
+          h2: "Aplicamos inteligencia artificial para mejorar procesos, equipos y resultados.",
+          hero: "En TrendMakers ayudamos a empresas a incorporar Inteligencia Artificial, automatizaci&oacute;n y herramientas digitales en su operaci&oacute;n diaria. No se trata solo de usar tecnolog&iacute;a: se trata de aplicarla donde realmente genera valor. Dise&ntilde;amos soluciones pr&aacute;cticas para optimizar procesos, reducir tareas manuales, ordenar informaci&oacute;n, mejorar la atenci&oacute;n al cliente y capacitar equipos para que puedan trabajar mejor con IA.",
+          cta: "Agendar una llamada",
+          queTitle: "&iquest;Qu&eacute; hacemos en AI & Innovation Hub?",
+          queText: "Ayudamos a empresas a entender, implementar y aprovechar la Inteligencia Artificial de forma concreta. Combinamos diagn&oacute;stico, capacitaci&oacute;n, automatizaci&oacute;n y desarrollo de soluciones para que la tecnolog&iacute;a se integre de manera &uacute;til en la operaci&oacute;n del negocio. Trabajamos sobre procesos reales, equipos reales y necesidades concretas. Nuestro objetivo es que la IA no quede como una herramienta aislada, sino como una ventaja operativa para la empresa.",
+          queList: [
+            "Aplicamos IA en procesos comerciales, administrativos, operativos y de atenci&oacute;n.",
+            "Automatizamos tareas repetitivas y flujos de trabajo.",
+            "Capacitamos equipos para usar IA de forma productiva y estrat&eacute;gica.",
+            "Implementamos asistentes, chatbots y herramientas internas.",
+            "Creamos dashboards y reportes para ordenar la informaci&oacute;n del negocio.",
+            "Integramos herramientas digitales para mejorar la eficiencia diaria.",
+            "Acompa&ntilde;amos a las empresas en la adopci&oacute;n de nuevas tecnolog&iacute;as."
+          ],
+          probTitle: "De herramientas aisladas a empresas m&aacute;s inteligentes",
+          probText: "Si te pasa alguna de estas cosas, este servicio es para vos:",
+          probList: [
+            "Tu equipo usa IA, pero sin una estrategia clara.",
+            "Quer&eacute;s capacitar a tu empresa para aprovechar mejor estas herramientas.",
+            "Ten&eacute;s procesos manuales que consumen tiempo y recursos.",
+            "La informaci&oacute;n est&aacute; desordenada o dispersa en distintas plataformas.",
+            "Quer&eacute;s automatizar tareas, pero no sab&eacute;s por d&oacute;nde empezar.",
+            "Necesit&aacute;s mejorar la atenci&oacute;n, la gesti&oacute;n de leads o los reportes internos.",
+            "Busc&aacute;s incorporar tecnolog&iacute;a sin complicar la operaci&oacute;n diaria."
+          ],
+          inclTitle: "&iquest;Qu&eacute; incluye AI & Innovation Hub?",
+          inclText: "Adaptamos cada proyecto seg&uacute;n la realidad de cada empresa, pero trabajamos sobre tres pilares principales:",
+          b1Title: "Bloque 1 - IA Aplicada a Empresas",
+          b1List: [
+            "Identificaci&oacute;n de oportunidades reales para aplicar IA.",
+            "Implementaci&oacute;n de herramientas de IA en procesos internos.",
+            "Uso de IA generativa para contenido, an&aacute;lisis, soporte y gesti&oacute;n.",
+            "Creaci&oacute;n de asistentes personalizados para equipos o clientes.",
+            "Mejora de procesos comerciales, administrativos y operativos mediante IA."
+          ],
+          b2Title: "Bloque 2 - Capacitaci&oacute;n & Adopci&oacute;n de IA",
+          b2List: [
+            "Capacitaciones para equipos comerciales, administrativos, directivos y operativos.",
+            "Entrenamiento en uso de herramientas de IA para tareas diarias.",
+            "Gu&iacute;as de buenas pr&aacute;cticas para incorporar IA de forma segura y efectiva.",
+            "Acompa&ntilde;amiento en la adopci&oacute;n tecnol&oacute;gica dentro de la empresa.",
+            "Desarrollo de criterios para usar IA con foco en productividad y calidad."
+          ],
+          b3Title: "Bloque 3 - Automatizaci&oacute;n, Datos & Dashboards",
+          b3List: [
+            "Automatizaci&oacute;n de tareas repetitivas y flujos de trabajo.",
+            "Integraci&oacute;n de herramientas, formularios, CRM, planillas y plataformas.",
+            "Dashboards ejecutivos para visualizar m&eacute;tricas clave del negocio.",
+            "Reportes autom&aacute;ticos para mejorar la toma de decisiones.",
+            "Ordenamiento, extracci&oacute;n y limpieza de datos para uso operativo."
+          ],
+          howTitle: "&iquest;C&oacute;mo trabajamos este servicio?",
+          steps: [
+            { title: "1. Diagn&oacute;stico y oportunidades", text: "Analizamos c&oacute;mo trabaja tu empresa, qu&eacute; procesos consumen m&aacute;s tiempo, qu&eacute; herramientas usa tu equipo y d&oacute;nde la IA puede generar mejoras reales." },
+            { title: "2. Dise&ntilde;o e implementaci&oacute;n", text: "Definimos las soluciones m&aacute;s adecuadas: capacitaciones, automatizaciones, dashboards, asistentes internos o mejoras en procesos existentes." },
+            { title: "3. Capacitaci&oacute;n y entrega", text: "Capacitamos al equipo, documentamos el funcionamiento de las soluciones y dejamos todo preparado para que la empresa pueda usarlo de forma clara y sostenible." }
+          ],
+          resTitle: "&iquest;Qu&eacute; resultados pod&eacute;s esperar?",
+          resList: [
+            "Equipos mejor preparados para usar IA en su trabajo diario.",
+            "Menos tiempo perdido en tareas repetitivas.",
+            "Procesos m&aacute;s ordenados, r&aacute;pidos y consistentes.",
+            "Mejor uso de la informaci&oacute;n disponible en la empresa.",
+            "Mayor productividad sin necesidad de sumar m&aacute;s estructura.",
+            "Herramientas digitales aplicadas a problemas concretos del negocio.",
+            "Una adopci&oacute;n de IA clara, pr&aacute;ctica y alineada a los objetivos de la empresa."
+          ],
+          whyTitle: "&iquest;Por qu&eacute; trabajar AI & Innovation Hub con TrendMakers?",
+          whyList: [
+            "No implementamos tecnolog&iacute;a por moda: trabajamos para que la Inteligencia Artificial tenga una aplicaci&oacute;n concreta dentro del negocio.",
+            "Combinamos visi&oacute;n estrat&eacute;gica, conocimiento operativo, automatizaci&oacute;n, datos y capacitaci&oacute;n para incorporar IA de manera &uacute;til, entendible y accionable.",
+            "Buscamos que cada soluci&oacute;n pueda ser utilizada por el equipo, sostenida en el tiempo y conectada con objetivos reales de crecimiento, eficiencia y mejora operativa."
+          ],
+          cta2Title: "&iquest;Est&aacute;s listo para aplicar IA en tu empresa?",
+          cta2Text: "Trabajemos juntos para identificar oportunidades, capacitar a tu equipo e implementar soluciones de Inteligencia Artificial que mejoren la forma en que opera tu negocio.",
+          cta2Btn: "Agendar una llamada",
+          otherTitle: "Otros servicios",
+          os1: { title: "Marketing Automation & Growth", text: "Marketing estrat&eacute;gico para atraer mejores clientes y ordenar oportunidades comerciales." },
+          os2: { title: "Branding & Communication", text: "Identidades profesionales y comunicaci&oacute;n coherente." },
+          os3: { title: "Web & E-Commerce Development", text: "Sitios y tiendas r&aacute;pidas, modernas e integradas a tus canales comerciales." },
+          os4: { title: "Consulting, Data & Strategy", text: "Direcci&oacute;n estrat&eacute;gica basada en an&aacute;lisis y m&eacute;tricas clave." },
+          back: "&#8592; Volver"
+        },
+        en: {
+          badge: "AI & Innovation Hub",
+          h1: "AI & Innovation Hub",
+          h2: "We apply artificial intelligence to improve processes, teams and results.",
+          hero: "At TrendMakers, we help companies incorporate Artificial Intelligence, automation and digital tools into their daily operations. It is not only about using technology: it is about applying it where it truly creates value. We design practical solutions to optimize processes, reduce manual tasks, organize information, improve customer service and train teams to work better with AI.",
+          cta: "Book a call",
+          queTitle: "What do we do in AI & Innovation Hub?",
+          queText: "We help companies understand, implement and use Artificial Intelligence in concrete ways. We combine diagnosis, training, automation and solution development so technology becomes useful inside the business operation. We work on real processes, real teams and concrete needs. Our goal is for AI to become an operational advantage, not an isolated tool.",
+          queList: [
+            "We apply AI to commercial, administrative, operational and customer service processes.",
+            "We automate repetitive tasks and workflows.",
+            "We train teams to use AI productively and strategically.",
+            "We implement assistants, chatbots and internal tools.",
+            "We create dashboards and reports to organize business information.",
+            "We integrate digital tools to improve daily efficiency.",
+            "We support companies in the adoption of new technologies."
+          ],
+          probTitle: "From isolated tools to smarter companies",
+          probText: "This service is for you if:",
+          probList: [
+            "Your team uses AI, but without a clear strategy.",
+            "You want to train your company to make better use of these tools.",
+            "You have manual processes that consume time and resources.",
+            "Information is disorganized or scattered across different platforms.",
+            "You want to automate tasks, but do not know where to start.",
+            "You need to improve service, lead management or internal reporting.",
+            "You want to incorporate technology without complicating daily operations."
+          ],
+          inclTitle: "What is included in AI & Innovation Hub?",
+          inclText: "We adapt each project to the reality of each company, but we work across three main pillars:",
+          b1Title: "Block 1 - AI Applied to Companies",
+          b1List: [
+            "Identification of real opportunities to apply AI.",
+            "Implementation of AI tools in internal processes.",
+            "Use of generative AI for content, analysis, support and management.",
+            "Creation of custom assistants for teams or customers.",
+            "Improvement of commercial, administrative and operational processes through AI."
+          ],
+          b2Title: "Block 2 - AI Training & Adoption",
+          b2List: [
+            "Training for commercial, administrative, leadership and operational teams.",
+            "Training in the use of AI tools for daily tasks.",
+            "Best-practice guides to incorporate AI safely and effectively.",
+            "Support during technology adoption inside the company.",
+            "Development of criteria to use AI with a focus on productivity and quality."
+          ],
+          b3Title: "Block 3 - Automation, Data & Dashboards",
+          b3List: [
+            "Automation of repetitive tasks and workflows.",
+            "Integration of tools, forms, CRM, spreadsheets and platforms.",
+            "Executive dashboards to visualize key business metrics.",
+            "Automatic reports to improve decision-making.",
+            "Data organization, extraction and cleaning for operational use."
+          ],
+          howTitle: "How do we deliver this service?",
+          steps: [
+            { title: "1. Diagnosis and opportunities", text: "We analyze how your company works, which processes consume the most time, which tools your team uses and where AI can create real improvements." },
+            { title: "2. Design and implementation", text: "We define the most appropriate solutions: training, automations, dashboards, internal assistants or improvements to existing processes." },
+            { title: "3. Training and handoff", text: "We train the team, document how the solutions work and leave everything ready so the company can use it clearly and sustainably." }
+          ],
+          resTitle: "What results can you expect?",
+          resList: [
+            "Teams better prepared to use AI in their daily work.",
+            "Less time lost on repetitive tasks.",
+            "More organized, faster and more consistent processes.",
+            "Better use of the information available in the company.",
+            "Greater productivity without adding more structure.",
+            "Digital tools applied to concrete business problems.",
+            "A clear, practical AI adoption aligned with company goals."
+          ],
+          whyTitle: "Why work on AI & Innovation Hub with TrendMakers?",
+          whyList: [
+            "We do not implement technology because it is trendy. We work so Artificial Intelligence has a concrete application inside the business.",
+            "We combine strategic vision, operational knowledge, automation, data and training so the company can incorporate AI in a useful, understandable and actionable way.",
+            "Our approach seeks solutions the team can use, sustain over time and connect with real goals for growth, efficiency and operational improvement."
+          ],
+          cta2Title: "Are you ready to apply AI in your company?",
+          cta2Text: "Let's work together to identify opportunities, train your team and implement Artificial Intelligence solutions that improve the way your business operates.",
+          cta2Btn: "Book a call",
+          otherTitle: "Other Services",
+          os1: { title: "Marketing Automation & Growth", text: "Strategic marketing to attract better clients and organize commercial opportunities." },
+          os2: { title: "Branding & Communication", text: "Professional identities and coherent communication." },
+          os3: { title: "Web & E-Commerce Development", text: "Fast, modern websites and stores integrated with your commercial channels." },
+          os4: { title: "Consulting, Data & Strategy", text: "Strategic direction based on analysis and key metrics." },
+          back: "&#8592; Back"
+        }
+      };
+
+      const aiSet = (id, val) => { const el = document.getElementById(id); if (el && val !== undefined) el.innerHTML = val; };
+
+      function applyAILang(lang) {
+        const t = aiCopy[lang] || aiCopy.es;
+        document.documentElement.lang = lang === "en" ? "en" : "es";
+        aiSet("ai-badge", t.badge);
+        aiSet("ai-h1", t.h1);
+        aiSet("ai-h2", t.h2);
+        aiSet("ai-hero-text", t.hero);
+        aiSet("ai-cta", t.cta);
+        aiSet("ai-que-title", t.queTitle);
+        aiSet("ai-que-text", t.queText);
+        ["ai-que-li1","ai-que-li2","ai-que-li3","ai-que-li4","ai-que-li5","ai-que-li6","ai-que-li7"].forEach((id, i) => aiSet(id, t.queList[i]));
+        aiSet("ai-prob-title", t.probTitle);
+        aiSet("ai-prob-text", t.probText);
+        ["ai-prob-li1","ai-prob-li2","ai-prob-li3","ai-prob-li4","ai-prob-li5","ai-prob-li6","ai-prob-li7"].forEach((id, i) => aiSet(id, t.probList[i]));
+        aiSet("ai-incl-title", t.inclTitle);
+        aiSet("ai-incl-text", t.inclText);
+        aiSet("ai-b1-title", t.b1Title);
+        ["ai-b1-li1","ai-b1-li2","ai-b1-li3","ai-b1-li4","ai-b1-li5"].forEach((id, i) => aiSet(id, t.b1List[i]));
+        aiSet("ai-b2-title", t.b2Title);
+        ["ai-b2-li1","ai-b2-li2","ai-b2-li3","ai-b2-li4","ai-b2-li5"].forEach((id, i) => aiSet(id, t.b2List[i]));
+        aiSet("ai-b3-title", t.b3Title);
+        ["ai-b3-li1","ai-b3-li2","ai-b3-li3","ai-b3-li4","ai-b3-li5"].forEach((id, i) => aiSet(id, t.b3List[i]));
+        aiSet("ai-how-title", t.howTitle);
+        ["ai-step1","ai-step2","ai-step3"].forEach((key, i) => {
+          const data = t.steps[i];
+          if (!data) return;
+          aiSet(`${key}-title`, data.title);
+          aiSet(`${key}-text`, data.text);
+        });
+        aiSet("ai-res-title", t.resTitle);
+        ["ai-res-li1","ai-res-li2","ai-res-li3","ai-res-li4","ai-res-li5","ai-res-li6","ai-res-li7"].forEach((id, i) => aiSet(id, t.resList[i]));
+        aiSet("ai-why-title", t.whyTitle);
+        ["ai-why-li1","ai-why-li2","ai-why-li3"].forEach((id, i) => aiSet(id, t.whyList[i]));
+        aiSet("ai-cta2-title", t.cta2Title);
+        aiSet("ai-cta2-text", t.cta2Text);
+        aiSet("ai-cta2-btn", t.cta2Btn);
+        aiSet("ai-other-title", t.otherTitle);
+        aiSet("ai-os1-title", t.os1.title);
+        aiSet("ai-os1-text", t.os1.text);
+        aiSet("ai-os2-title", t.os2.title);
+        aiSet("ai-os2-text", t.os2.text);
+        aiSet("ai-os3-title", t.os3.title);
+        aiSet("ai-os3-text", t.os3.text);
+        aiSet("ai-os4-title", t.os4.title);
+        aiSet("ai-os4-text", t.os4.text);
+        const back = document.querySelector(".back-btn");
+        if (back) back.innerHTML = t.back;
+      }
+
+      (function(){
+        let lang = "es";
+        try {
+          const params = new URLSearchParams(window.location.search);
+          const q = params.get("lang");
+          lang = q ? q.toLowerCase() : lang;
+          if (!q && typeof getLanguagePreference === "function") {
+            lang = (getLanguagePreference() || lang).toLowerCase();
+          }
+        } catch(e) {}
+
+        applyAILang(lang);
+
+        if (typeof window.setLanguage === "function" && !window.__aiLangWrapped) {
+          const originalSetLanguage = window.setLanguage;
+          window.setLanguage = function(l) {
+            originalSetLanguage(l);
+            applyAILang((l || "es").toLowerCase());
+          };
+          window.__aiLangWrapped = true;
+        }
+      })();
+
+      document.addEventListener("DOMContentLoaded", function(){
+        const badge = document.getElementById("tm-badge");
+        const menu = document.getElementById("tm-quick-menu");
+        if (!badge || !menu) return;
+        const closeQuickMenu = () => menu.classList.remove("open");
+        badge.addEventListener("click", (e) => {
+          e.preventDefault();
+          menu.classList.toggle("open");
+        });
+        document.addEventListener("click", (e) => {
+          if (menu.contains(e.target) || badge.contains(e.target)) return;
+          closeQuickMenu();
+        });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeQuickMenu();
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function(){
+        const targets = document.querySelectorAll(".shell > section:not(.hero), .grid-3 > .card, .grid-2 .step, .mini-card");
+        targets.forEach(function(el){ el.classList.add("ma-reveal"); });
+        if (!("IntersectionObserver" in window)) {
+          targets.forEach(function(el){ el.classList.add("is-visible"); });
+          return;
+        }
+        const observer = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          });
+        }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
+        targets.forEach(function(el){ observer.observe(el); });
+      });
+
+      function toggleMenu() {
+        const hamburger = document.querySelector(".hamburger");
+        const mobileMenu = document.querySelector("nav ul.mobile-menu");
+        if (!hamburger || !mobileMenu) return;
+        hamburger.classList.toggle("active");
+        mobileMenu.classList.toggle("active");
+      }
+
+      function closeMenu() {
+        const hamburger = document.querySelector(".hamburger");
+        const mobileMenu = document.querySelector("nav ul.mobile-menu");
+        if (!hamburger || !mobileMenu) return;
+        hamburger.classList.remove("active");
+        mobileMenu.classList.remove("active");
+      }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
