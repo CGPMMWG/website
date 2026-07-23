@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   const COURSE_MAIL = {
     "academy-diagnostico-digital-ceos.html": {
       es: "Diagn\u00f3stico Digital para CEOs",
@@ -71,10 +71,10 @@
     document.querySelectorAll(".lang-code").forEach((el) => {
       el.textContent = lang.toUpperCase();
     });
-    document.querySelectorAll('nav a[href="../trendmakers-academy.html"]:not(.tm-header-badge)').forEach((el) => {
+    document.querySelectorAll('nav a[href="/academy/"]:not(.tm-header-badge)').forEach((el) => {
       el.textContent = t.academy;
     });
-    document.querySelectorAll('nav a[href="../trendmakers-academy.html#programas"]').forEach((el) => {
+    document.querySelectorAll('nav a[href="/academy/#programas"]').forEach((el) => {
       el.textContent = t.courses;
     });
     document.querySelectorAll('nav a[href="../index.html#casos-exito"]').forEach((el) => {
@@ -168,3 +168,4 @@
     });
   });
 })();
+

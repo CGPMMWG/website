@@ -47,7 +47,7 @@ function takeI18nSnapshot(){
     const ids = [
       'nav-inicio','nav-acerca','nav-servicios','nav-contacto','nav-equipo','nav-equipo-mobile','nav-nosotros','nav-nosotros-mobile','nav-academy','nav-academy-mobile','nav-casos-exito','nav-problema',
       'intro-title','intro-text','about-title','about-text','services-title','services-text','services-portfolio-cta','team-eyebrow','team-title','team-subtitle','team-support-text','team-cta-text',
-      'hero-contact-cta','hero-cases-cta','hero-kicker','hero-academy-link','hero-partners-label','hero-scroll-label','hero-metric-industries','hero-metric-result','hero-metric-data','hero-metric-automation',
+      'hero-contact-cta','hero-cases-cta','hero-kicker','hero-academy-link','hero-partners-label','hero-scroll-label','hero-stage-diagnostic','hero-stage-prioritization','hero-stage-implementation','hero-stage-optimization','hero-metric-industries','hero-metric-result','hero-metric-data','hero-metric-automation',
       'blog-view-all',
       'contact-title','contact-microcopy','schedule-call','show-popup','popup-title','label-email','label-problema','submit-button',
       'footer-text','about-us-text','label-name','label-company','label-project','submit-contact-form','contact-soon',
@@ -85,10 +85,14 @@ const translations = {
     heroAcademyLink: "Conoc&eacute; nuestra academia <span aria-hidden=\"true\">-&gt;</span>",
     heroPartnersLabel: "Partners",
     heroScrollLabel: "Desliz&aacute;",
-    heroMetricIndustries: "Diagn&oacute;stico ejecutivo inicial",
-    heroMetricResult: "Primeras mejoras implementadas",
-    heroMetricData: "Ecosistema digital funcionando",
-    heroMetricAutomation: "Web, branding, campa&ntilde;as, contenido y automation",
+    heroStageDiagnostic: "Diagn&oacute;stico",
+    heroStagePrioritization: "Priorizaci&oacute;n",
+    heroStageImplementation: "Implementaci&oacute;n",
+    heroStageOptimization: "Optimizaci&oacute;n",
+    heroMetricIndustries: "An&aacute;lisis inicial del negocio y sus oportunidades",
+    heroMetricResult: "Definici&oacute;n de objetivos y l&iacute;neas de acci&oacute;n",
+    heroMetricData: "Ejecuci&oacute;n progresiva de iniciativas estrat&eacute;gicas",
+    heroMetricAutomation: "Medici&oacute;n, aprendizaje y mejora continua",
     navInicio: "Inicio",
     navAcerca: "Nosotros",
     navServicios: "Servicios",
@@ -166,7 +170,7 @@ const translations = {
     contactBenefit2: "Respuesta en 48hs",
     contactBenefit3: "Comunicaci&oacute;n confidencial",
     contactAssurance1: "Sin compromiso",
-    contactAssurance2: "No te vamos a spamear",
+    contactAssurance2: "100% confidencial",
     contactAssurance3: "Diagn&oacute;stico sin costo",
     scheduleCall: "Agenda una Llamada",
     problemaButton: "Solicitar diagn&oacute;stico",
@@ -198,27 +202,27 @@ const translations = {
     aboutUsText: "Somos una agencia de marketing a nivel global que se dedica a brindar servicios de excelencia a clientes de todas partes del mundo. Con un equipo de expertos en diversas &aacute;reas del marketing digital, nos especializamos en crear estrategias personalizadas que se adaptan a las necesidades espec&iacute;ficas de cada negocio. Nuestra misi&oacute;n es impulsar el crecimiento y &eacute;xito de nuestros clientes a trav&eacute;s de soluciones innovadoras y efectivas. Desde la gesti&oacute;n de redes sociales hasta el desarrollo de campa&ntilde;as publicitarias integrales, estamos comprometidos con la excelencia y la satisfacci&oacute;n del cliente en cada proyecto que emprendemos.",
 
     serviceDetails: `
-      <a class="service-card animate__animated" href="marketing-automation.html" data-service-id="marketing-automation" data-hover-label="Explorar servicio">
-        <img src="./img/MATION.png" alt="Marketing &amp; Automation">
-        <h3>Marketing &amp; Automation</h3>
+      <a class="service-card animate__animated" href="/servicios/marketing-automation.html" data-service-id="marketing-automation" data-hover-label="Explorar servicio">
+        <img src="./img/MATION.png" alt="Marketing Automation &amp; Growth">
+        <h3>Marketing Automation &amp; Growth</h3>
         <p>Automatizamos tus procesos y funnels para generar m&aacute;s leads y conversiones con menos esfuerzo.</p>
       </a>
-      <a class="service-card animate__animated" href="branding-communication.html" data-service-id="branding-communication" data-hover-label="Explorar servicio">
+      <a class="service-card animate__animated" href="/servicios/branding-communication.html" data-service-id="branding-communication" data-hover-label="Explorar servicio">
         <img src="./img/BRANDING.png" alt="Branding &amp; Communication">
         <h3>Branding &amp; Communication</h3>
         <p>Creamos marcas coherentes y comunicaci&oacute;n clara que conecta con tu audiencia.</p>
       </a>
-      <a class="service-card animate__animated" href="web-ecommerce.html" data-service-id="web-ecommerce" data-hover-label="Explorar servicio">
+      <a class="service-card animate__animated" href="/servicios/web-ecommerce.html" data-service-id="web-ecommerce" data-hover-label="Explorar servicio">
         <img src="./img/WEB-ECOMM.png" alt="Web &amp; E-Commerce Development">
         <h3>Web &amp; E-Commerce Development</h3>
         <p>Desarrollamos sitios y tiendas r&aacute;pidas, seguras y optimizadas para convertir.</p>
       </a>
-      <a class="service-card animate__animated" href="data-analitics.html" data-service-id="consulting-data-strategy" data-hover-label="Explorar servicio">
+      <a class="service-card animate__animated" href="/servicios/data-analytics.html" data-service-id="consulting-data-strategy" data-hover-label="Explorar servicio">
         <img src="./img/DATA-STRAT.png" alt="Consulting, Data &amp; Strategy">
         <h3>Consulting, Data &amp; Strategy</h3>
         <p>Definimos tu rumbo con an&aacute;lisis, datos y estrategia para escalar tu negocio.</p>
       </a>
-      <a class="service-card animate__animated" href="ia-hub.html" data-service-id="ai-innovation" data-hover-label="Explorar servicio">
+      <a class="service-card animate__animated" href="/servicios/ia-hub.html" data-service-id="ai-innovation" data-hover-label="Explorar servicio">
         <img src="./img/IA-HUB.png" alt="AI &amp; Innovation Hub">
         <h3>AI &amp; Innovation Hub</h3>
         <p>Implementamos IA y automatizaciones que mejoran procesos y crean ventaja competitiva.</p>
@@ -249,10 +253,14 @@ const translations = {
     heroAcademyLink: "Explore our academy <span aria-hidden=\"true\">-&gt;</span>",
     heroPartnersLabel: "Partners",
     heroScrollLabel: "Scroll",
-    heroMetricIndustries: "Executive initial diagnosis",
-    heroMetricResult: "First improvements implemented",
-    heroMetricData: "Digital ecosystem running",
-    heroMetricAutomation: "Web, branding, campaigns, content and automation",
+    heroStageDiagnostic: "Diagnosis",
+    heroStagePrioritization: "Prioritization",
+    heroStageImplementation: "Implementation",
+    heroStageOptimization: "Optimization",
+    heroMetricIndustries: "Initial analysis of the business and its opportunities",
+    heroMetricResult: "Definition of objectives and lines of action",
+    heroMetricData: "Progressive execution of strategic initiatives",
+    heroMetricAutomation: "Measurement, learning and continuous improvement",
     navInicio: "Home",
     navAcerca: "About us",
     navServicios: "Services",
@@ -330,7 +338,7 @@ const translations = {
     contactBenefit2: "Reply within 48 hours",
     contactBenefit3: "Confidential communication",
     contactAssurance1: "No commitment",
-    contactAssurance2: "We will not spam you",
+    contactAssurance2: "100% confidential",
     contactAssurance3: "No-cost diagnostic",
     scheduleCall: "Schedule a Call",
     problemaButton: "Request a diagnostic",
@@ -362,27 +370,27 @@ const translations = {
     aboutUsText: "We are a global marketing agency dedicated to providing excellent services to clients all over the world. With a team of experts in various areas of digital marketing, we specialize in creating personalized strategies that cater to the specific needs of each business. Our mission is to drive growth and success for our clients through innovative and effective solutions. From social media management to the development of comprehensive advertising campaigns, we are committed to excellence and customer satisfaction in every project we undertake.",
 
     serviceDetails: `
-      <a class="service-card animate__animated" href="marketing-automation.html?lang=en" data-service-id="marketing-automation" data-hover-label="Explore service">
-        <img src="./img/MATION.png" alt="Marketing &amp; Automation">
-        <h3>Marketing &amp; Automation</h3>
+      <a class="service-card animate__animated" href="/servicios/marketing-automation.html?lang=en" data-service-id="marketing-automation" data-hover-label="Explore service">
+        <img src="./img/MATION.png" alt="Marketing Automation &amp; Growth">
+        <h3>Marketing Automation &amp; Growth</h3>
         <p>We automate your funnels and processes to generate more qualified leads with less effort.</p>
       </a>
-      <a class="service-card animate__animated" href="branding-communication.html?lang=en" data-service-id="branding-communication" data-hover-label="Explore service">
+      <a class="service-card animate__animated" href="/servicios/branding-communication.html?lang=en" data-service-id="branding-communication" data-hover-label="Explore service">
         <img src="./img/BRANDING.png" alt="Branding &amp; Communication">
         <h3>Branding &amp; Communication</h3>
         <p>We create coherent brands and clear communication that connects with your audience.</p>
       </a>
-      <a class="service-card animate__animated" href="web-ecommerce.html?lang=en" data-service-id="web-ecommerce" data-hover-label="Explore service">
+      <a class="service-card animate__animated" href="/servicios/web-ecommerce.html?lang=en" data-service-id="web-ecommerce" data-hover-label="Explore service">
         <img src="./img/WEB-ECOMM.png" alt="Web &amp; E-Commerce Development">
         <h3>Web &amp; E-Commerce Development</h3>
         <p>We build fast, secure and conversion-focused websites and online stores.</p>
       </a>
-      <a class="service-card animate__animated" href="data-analitics.html?lang=en" data-service-id="consulting-data-strategy" data-hover-label="Explore service">
+      <a class="service-card animate__animated" href="/servicios/data-analytics.html?lang=en" data-service-id="consulting-data-strategy" data-hover-label="Explore service">
         <img src="./img/DATA-STRAT.png" alt="Consulting, Data &amp; Strategy">
         <h3>Consulting, Data &amp; Strategy</h3>
         <p>We define your growth path through data, analysis and strategic direction.</p>
       </a>
-      <a class="service-card animate__animated" href="ia-hub.html?lang=en" data-service-id="ai-innovation" data-hover-label="Explore service">
+      <a class="service-card animate__animated" href="/servicios/ia-hub.html?lang=en" data-service-id="ai-innovation" data-hover-label="Explore service">
         <img src="./img/IA-HUB.png" alt="AI &amp; Innovation Hub">
         <h3>AI &amp; Innovation Hub</h3>
         <p>We implement AI and automations to improve processes and build competitive advantage.</p>
@@ -504,7 +512,7 @@ function applyMailtoLinks(lang){
 function setServiceCardLogos(){
   try {
     const logos = {
-      'marketing-automation': { src: './img/MATION.png', alt: 'Marketing & Automation' },
+      'marketing-automation': { src: './img/MATION.png', alt: 'Marketing Automation & Growth' },
       'branding-communication': { src: './img/BRANDING.png', alt: 'Branding & Communication' },
       'web-ecommerce': { src: './img/WEB-ECOMM.png', alt: 'Web & E-Commerce Development' },
       'consulting-data-strategy': { src: './img/DATA-STRAT.png', alt: 'Consulting, Data & Strategy' },
@@ -533,6 +541,11 @@ function updateDocumentLanguageAttr(lang) {
 function updateLanguageToggleLabel(lang) {
   try {
     const code = (lang === 'en' ? 'en' : 'es').toUpperCase();
+    document.querySelectorAll('.lang-toggle').forEach(function(btn){
+      if (!btn.querySelector('.lang-code')) {
+        btn.innerHTML = '<span class="lang-code"></span><span class="lang-caret" aria-hidden="true">v</span>';
+      }
+    });
     document.querySelectorAll('.lang-code').forEach(function(el){
       el.textContent = code;
     });
@@ -728,6 +741,10 @@ function setLanguage(language) {
         ['hero-academy-link', 'heroAcademyLink'],
         ['hero-partners-label', 'heroPartnersLabel'],
         ['hero-scroll-label', 'heroScrollLabel'],
+        ['hero-stage-diagnostic', 'heroStageDiagnostic'],
+        ['hero-stage-prioritization', 'heroStagePrioritization'],
+        ['hero-stage-implementation', 'heroStageImplementation'],
+        ['hero-stage-optimization', 'heroStageOptimization'],
         ['hero-metric-industries', 'heroMetricIndustries'],
         ['hero-metric-result', 'heroMetricResult'],
         ['hero-metric-data', 'heroMetricData'],
@@ -801,6 +818,10 @@ function setLanguage(language) {
     'hero-academy-link': 'heroAcademyLink',
     'hero-partners-label': 'heroPartnersLabel',
     'hero-scroll-label': 'heroScrollLabel',
+    'hero-stage-diagnostic': 'heroStageDiagnostic',
+    'hero-stage-prioritization': 'heroStagePrioritization',
+    'hero-stage-implementation': 'heroStageImplementation',
+    'hero-stage-optimization': 'heroStageOptimization',
     'hero-metric-industries': 'heroMetricIndustries',
     'hero-metric-result': 'heroMetricResult',
     'hero-metric-data': 'heroMetricData',
@@ -1123,30 +1144,57 @@ document.addEventListener('DOMContentLoaded', function() {
 (function(){
   function bindLangDropdown(){
     try {
-      var sel = document.querySelector('nav .language-selector');
-      if (!sel || sel.dataset.bound) return;
-      var toggle = sel.querySelector('.lang-toggle');
-      var menu = sel.querySelector('.lang-menu');
-      var open = function(v){
-        sel.classList.toggle('open', !!v);
-        if (toggle) toggle.setAttribute('aria-expanded', v ? 'true' : 'false');
-      };
-      if (toggle) toggle.addEventListener('click', function(e){ e.stopPropagation(); open(!sel.classList.contains('open')); });
-      if (menu) menu.querySelectorAll('.lang-option').forEach(function(btn){
-        btn.addEventListener('click', function(e){
-          e.preventDefault();
-          var lang = this.getAttribute('data-lang');
-          if (window.setLanguage) window.setLanguage(lang);
-          open(false);
+      var selectors = document.querySelectorAll('nav .language-selector');
+      if (!selectors.length) return;
+      selectors.forEach(function(sel){
+        if (!sel || sel.dataset.bound) return;
+        var toggle = sel.querySelector('.lang-toggle');
+        var menu = sel.querySelector('.lang-menu');
+        var open = function(v){
+          selectors.forEach(function(other){
+            if (other !== sel) {
+              other.classList.remove('open');
+              var otherToggle = other.querySelector('.lang-toggle');
+              if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
+            }
+          });
+          sel.classList.toggle('open', !!v);
+          if (toggle) toggle.setAttribute('aria-expanded', v ? 'true' : 'false');
+        };
+        if (toggle) toggle.addEventListener('click', function(e){ e.stopPropagation(); open(!sel.classList.contains('open')); });
+        if (menu) menu.querySelectorAll('.lang-option').forEach(function(btn){
+          btn.addEventListener('click', function(e){
+            e.preventDefault();
+            var lang = this.getAttribute('data-lang');
+            if (window.setLanguage) window.setLanguage(lang);
+            open(false);
+          });
         });
+        sel.dataset.bound = '1';
       });
-      document.addEventListener('click', function(){ open(false); });
-      document.addEventListener('keydown', function(e){ if (e.key === 'Escape') open(false); });
-      sel.dataset.bound = '1';
+      if (!document.documentElement.dataset.langDropdownCloseBound) {
+        document.addEventListener('click', function(){
+          document.querySelectorAll('nav .language-selector.open').forEach(function(sel){
+            sel.classList.remove('open');
+            var toggle = sel.querySelector('.lang-toggle');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+        document.addEventListener('keydown', function(e){
+          if (e.key !== 'Escape') return;
+          document.querySelectorAll('nav .language-selector.open').forEach(function(sel){
+            sel.classList.remove('open');
+            var toggle = sel.querySelector('.lang-toggle');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+        document.documentElement.dataset.langDropdownCloseBound = '1';
+      }
     } catch(e) { /* noop */ }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bindLangDropdown); else bindLangDropdown();
 })();
+
 
 
 

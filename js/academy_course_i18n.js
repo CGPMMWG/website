@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   const STORAGE_KEYS = ["trendLang", "preferredLanguage"];
 
   const shared = {
@@ -289,6 +289,34 @@
     });
   }
 
+  function withLang(href, lang) {
+    const hashIndex = href.indexOf("#");
+    const hash = hashIndex >= 0 ? href.slice(hashIndex) : "";
+    const base = hashIndex >= 0 ? href.slice(0, hashIndex) : href;
+    const cleanBase = base.replace(/[?&]lang=(es|en)/, "");
+    const separator = cleanBase.includes("?") ? "&" : "?";
+    return `${cleanBase}${separator}lang=${lang}${hash}`;
+  }
+
+  function syncUrlLang(lang) {
+    try {
+      const url = new URL(window.location.href);
+      if (url.searchParams.get("lang") === lang) return;
+      url.searchParams.set("lang", lang);
+      window.history.replaceState({}, "", url);
+    } catch (e) { /* noop */ }
+  }
+
+  function syncCourseLinks(lang) {
+    const back = document.querySelector(".course-back");
+    if (back) back.setAttribute("href", withLang("/academy/#programas", lang));
+    document.querySelectorAll('a[href^="/academy/"]:not(.tm-header-badge)').forEach((el) => {
+      const href = el.getAttribute("href");
+      const target = href.includes("#programas") ? "/academy/#programas" : "/academy/";
+      el.setAttribute("href", withLang(target, lang));
+    });
+  }
+
   function getLang() {
     try {
       const q = new URLSearchParams(window.location.search).get("lang");
@@ -357,10 +385,13 @@
     const t = shared[lang];
     document.documentElement.lang = lang;
     saveLang(lang);
+    syncUrlLang(lang);
+    syncCourseLinks(lang);
     setList(".lang-code", [lang.toUpperCase()]);
     document.querySelectorAll(".lang-code").forEach((el) => { el.textContent = lang.toUpperCase(); });
-    document.querySelectorAll('nav a[href="../trendmakers-academy.html"]:not(.tm-header-badge)').forEach((el) => { el.textContent = t.nav[0]; });
-    document.querySelectorAll('nav a[href="../trendmakers-academy.html#programas"]').forEach((el) => { el.textContent = t.nav[1]; });
+    document.querySelectorAll('nav a[href^="/academy/"]:not(.tm-header-badge)').forEach((el) => {
+      el.textContent = el.getAttribute("href").includes("#programas") ? t.nav[1] : t.nav[0];
+    });
     document.querySelectorAll('nav a[href="../index.html#casos-exito"]').forEach((el) => { el.textContent = t.nav[2]; });
     document.querySelectorAll('nav a[href="../index.html#contact-form"]').forEach((el) => { el.textContent = t.nav[3]; });
   }
@@ -442,3 +473,4 @@
     });
   });
 })();
+

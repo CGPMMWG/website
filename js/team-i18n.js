@@ -1,27 +1,27 @@
-// Lightweight i18n for equipo.html (ES/EN)
+﻿// Lightweight i18n for /equipo/ (ES/EN)
 (function(){
   const copy = {
     es: {
-      heroTitle: "Mentes estratégicas que convierten visión en crecimiento.",
-      heroTagline: "Estrategia, creatividad, datos y tecnología alineados para escalar tu marca con foco en resultados.",
+      heroTitle: "Mentes estratÃ©gicas que convierten visiÃ³n en crecimiento.",
+      heroTagline: "Estrategia, creatividad, datos y tecnologÃ­a alineados para escalar tu marca con foco en resultados.",
       heading: "Nuestro equipo",
-      subtitle: "Talento multidisciplinario para estrategia, datos, tecnología y ejecución.",
+      subtitle: "Talento multidisciplinario para estrategia, datos, tecnologÃ­a y ejecuciÃ³n.",
       back: "&#8592; Volver",
       credHeading: "Sumate a nuestro equipo",
-      credTitle: "¿Te interesa trabajar con nosotros?",
-      credText: "En TrendMakers buscamos profesionales con experiencia que quieran formar parte de una agencia de marketing y tecnología que opera con estándares de calidad a nivel internacional.<br><br>Trabajamos con procesos claros, enfoque en datos y una cultura colaborativa, acompañando el crecimiento de marcas que buscan escalar de manera sostenible. Si tenés experiencia en marketing, datos, tecnología, diseño o áreas afines y te motiva crecer en un entorno dinámico, profesional y en constante evolución, nos interesa conocerte.",
+      credTitle: "Â¿Te interesa trabajar con nosotros?",
+      credText: "En TrendMakers buscamos profesionales con experiencia que quieran formar parte de una agencia de marketing y tecnologÃ­a que opera con estÃ¡ndares de calidad a nivel internacional.<br><br>Trabajamos con procesos claros, enfoque en datos y una cultura colaborativa, acompaÃ±ando el crecimiento de marcas que buscan escalar de manera sostenible. Si tenÃ©s experiencia en marketing, datos, tecnologÃ­a, diseÃ±o o Ã¡reas afines y te motiva crecer en un entorno dinÃ¡mico, profesional y en constante evoluciÃ³n, nos interesa conocerte.",
       credEmail: "talent@trendmakers.agency",
       cards: [
-        ["Consultores en Marketing", "Diseñan roadmaps y definen objetivos de negocio medibles."],
-        ["Diseñadores UX/UI, Gráficos y Multimedia", "Construyen experiencias visuales consistentes y orientadas a conversión."],
-        ["Analistas de Datos", "Transforman métricas en decisiones accionables y dashboards en tiempo real."],
-        ["Especialistas en Campañas Digitales", "Operan y optimizan medios para maximizar ROAS y volumen de leads."],
+        ["Consultores en Marketing", "DiseÃ±an roadmaps y definen objetivos de negocio medibles."],
+        ["DiseÃ±adores UX/UI, GrÃ¡ficos y Multimedia", "Construyen experiencias visuales consistentes y orientadas a conversiÃ³n."],
+        ["Analistas de Datos", "Transforman mÃ©tricas en decisiones accionables y dashboards en tiempo real."],
+        ["Especialistas en CampaÃ±as Digitales", "Operan y optimizan medios para maximizar ROAS y volumen de leads."],
         ["Desarrolladores Web", "Implementan sitios y productos digitales de alto rendimiento y seguridad."],
-        ["Especialistas en SEO", "Escalan visibilidad orgánica con contenido, técnica y autoridad."],
+        ["Especialistas en SEO", "Escalan visibilidad orgÃ¡nica con contenido, tÃ©cnica y autoridad."],
         ["Especialistas en Business Intelligence", "Modelan datos para detectar oportunidades y priorizar decisiones."],
-        ["Community Managers", "Gestionan comunidades y reputación para impulsar engagement."]
+        ["Community Managers", "Gestionan comunidades y reputaciÃ³n para impulsar engagement."]
       ],
-      ctaTitle: "¿Listo para sumar a este equipo a tu crecimiento?",
+      ctaTitle: "Â¿Listo para sumar a este equipo a tu crecimiento?",
       ctaText: "Contanos tu proyecto y te proponemos un plan con especialistas dedicados.",
       ctaButton: "Hablemos"
     },
@@ -33,7 +33,7 @@
       back: "&#8592; Back",
       credHeading: "Join our team",
       credTitle: "Interested in working with us?",
-      credText: "At TrendMakers, we are looking for experienced professionals who want to be part of a marketing and technology agency operating under international quality standards.<br><br>We work with clear processes, a data-driven mindset, and a collaborative culture, supporting the sustainable growth of ambitious brands. If you have experience in marketing, data, technology, design, or related fields and are motivated to grow within a dynamic, professional, and evolving environment, we’d love to hear from you.",
+      credText: "At TrendMakers, we are looking for experienced professionals who want to be part of a marketing and technology agency operating under international quality standards.<br><br>We work with clear processes, a data-driven mindset, and a collaborative culture, supporting the sustainable growth of ambitious brands. If you have experience in marketing, data, technology, design, or related fields and are motivated to grow within a dynamic, professional, and evolving environment, weâ€™d love to hear from you.",
       credEmail: "talent@trendmakers.agency",
       cards: [
         ["Marketing Consultants", "Design roadmaps and define measurable business objectives."],
@@ -46,8 +46,8 @@
         ["Community Managers", "Manage communities and brand reputation to drive engagement."]
       ],
       ctaTitle: "Ready to add this team to your growth?",
-      ctaText: "Tell us about your project and we’ll propose a plan with dedicated specialists.",
-      ctaButton: "Let’s talk"
+      ctaText: "Tell us about your project and weâ€™ll propose a plan with dedicated specialists.",
+      ctaButton: "Letâ€™s talk"
     }
   };
 
@@ -187,3 +187,4 @@
   document.addEventListener("DOMContentLoaded", wrap);
   wrap();
 })();
+
