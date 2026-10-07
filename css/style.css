@@ -11,7 +11,7 @@
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: #000; /* Fondo negro */
+    background: #000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,58 +23,21 @@
     opacity: 0;
 }
 
-.spinner {
-    position: relative;
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    filter: drop-shadow(0 0 24px rgba(168, 85, 247, .35)); /* glow suave violeta */
-    animation: spin 1.2s cubic-bezier(.6,.2,.2,.8) infinite;
+.preloader-logo {
+    display: block;
+    width: min(72vw, 520px);
+    height: auto;
+    animation: preloader-logo-in .8s cubic-bezier(.22, 1, .36, 1) both;
 }
 
-.spinner::before,
-.spinner::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-}
-
-/* Arco violeta transl?cido girando */
-.spinner::before {
-    background: conic-gradient(
-        from 0turn,
-        rgba(168, 85, 247, 0.0) 0% 55%,
-        rgba(168, 85, 247, 0.9) 60% 80%,
-        rgba(168, 85, 247, 0.0) 85% 100%
-    );
-    -webkit-mask: radial-gradient(circle 38px at 50% 50%, transparent 59%, #000 60%);
-            mask: radial-gradient(circle 38px at 50% 50%, transparent 59%, #000 60%);
-    filter: blur(.5px);
-}
-
-/* Halo interior pulsando */
-.spinner::after {
-    background: radial-gradient(circle at 50% 50%, rgba(168,85,247,.5), rgba(168,85,247,.15) 40%, rgba(0,0,0,0) 60%);
-    -webkit-mask: radial-gradient(circle 40px at 50% 50%, #000 60%, transparent 61%);
-            mask: radial-gradient(circle 40px at 50% 50%, #000 60%, transparent 61%);
-    animation: pulse 1.6s ease-in-out infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0turn); }
-    100% { transform: rotate(1turn); }
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: .35; filter: blur(2px); }
-    50% { opacity: .9; filter: blur(4px); }
+@keyframes preloader-logo-in {
+    from { opacity: 0; transform: translateY(10px) scale(.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 /* Respeto a usuarios con reducci?n de movimiento */
 @media (prefers-reduced-motion: reduce) {
-    .spinner { animation: none; }
-    .spinner::after { animation: none; }
+    .preloader-logo { animation: none; }
 }
 
 /* Ocultar contenido hasta que todo est? cargado */
@@ -247,6 +210,27 @@ nav ul.mobile-menu li {
     height: 34px;
     border-radius: 10px;
     box-shadow: 0 10px 22px rgba(0,0,0,0.28);
+}
+
+footer #footer-text {
+    display: block;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 20px auto 0;
+    padding: 0 18px;
+    color: #b8c2d1;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 640px) {
+    footer #footer-text {
+        max-width: calc(100% - 160px);
+        padding: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -432,20 +416,6 @@ video-container {
     z-index: 1; /* Asegura que est? sobre el video */
     pointer-events: auto; /* Permite interacci?n con el contenido */
 }
-
-#background-video,
-#background-video2,
-#background-video3,
-#background-video4,
-#background-video5,
-#background-video6 {
-    pointer-events: none; /* Disable interaction */
-    user-select: none; /* Prevent text selection */
-    -webkit-user-select: none; /* Safari compatibility */
-    -webkit-touch-callout: none; /* Disable touch callout on iOS */
-}
-
-
 
 .overlay {
     position: absolute;
@@ -893,16 +863,6 @@ footer {
     overflow: hidden;
 }
 
-#background-video,
-#background-video2,
-#background-video3,
-#background-video4,
-#background-video5,
-#background-video6 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 /* ===== Overrides: Floating email/WhatsApp icons (bigger, no contour) ===== */
 .email-button img,
 .whatsapp-button img {
@@ -935,11 +895,135 @@ footer {
     box-shadow: none !important;
 }
 
+/* Equal visual sizing for the floating contact actions. */
+.email-button,
+.whatsapp-button {
+    width: 64px !important;
+    height: 64px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-button img {
+    width: 78px !important;
+    height: 78px !important;
+    max-width: none !important;
+    object-fit: contain !important;
+    flex: 0 0 78px;
+}
+
+.whatsapp-button img {
+    width: 64px !important;
+    height: 64px !important;
+    object-fit: contain !important;
+    flex: 0 0 64px;
+}
+
+.email-button,
+.whatsapp-button {
+    right: 18px !important;
+}
+
+.email-button { bottom: 94px !important; }
+.whatsapp-button { bottom: 18px !important; }
+
+/* Pre-footer brand marquee */
+.brand-marquee {
+    display: none;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: clamp(12px, 1.5vw, 18px) 0;
+    border-top: 1px solid rgba(118, 151, 219, 0.2);
+    border-bottom: 1px solid rgba(118, 151, 219, 0.2);
+    background:
+        radial-gradient(circle at 18% 50%, rgba(31, 94, 255, 0.2), transparent 28%),
+        linear-gradient(105deg, #071426 0%, #0b1f3f 52%, #071426 100%);
+    color: #ffffff;
+}
+
+.brand-marquee::before,
+.brand-marquee::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: clamp(38px, 8vw, 140px);
+    pointer-events: none;
+}
+
+.brand-marquee::before {
+    left: 0;
+    background: linear-gradient(90deg, #071426, transparent);
+}
+
+.brand-marquee::after {
+    right: 0;
+    background: linear-gradient(-90deg, #071426, transparent);
+}
+
+.brand-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: brandMarqueeMove 42s linear infinite;
+    will-change: transform;
+}
+
+.brand-marquee:hover .brand-marquee__track {
+    animation-duration: 24s;
+}
+
+.brand-marquee__group {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: clamp(16px, 2vw, 32px);
+    padding-right: clamp(16px, 2vw, 32px);
+}
+
+.brand-marquee__group span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(1rem, 1.7vw, 1.65rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.035em;
+    white-space: nowrap;
+}
+
+.brand-marquee__group span:nth-of-type(even) {
+    color: #78a2ff;
+}
+
+.brand-marquee__group i {
+    width: clamp(5px, 0.5vw, 8px);
+    height: clamp(5px, 0.5vw, 8px);
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: #2d7cff;
+    box-shadow: 0 0 18px rgba(45, 124, 255, 0.75);
+}
+
+@keyframes brandMarqueeMove {
+    to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .brand-marquee__track {
+        animation: none;
+    }
+
+    .brand-marquee__group:nth-child(2) {
+        display: none;
+    }
+}
+
 /* ===== Custom Scrollbar (global) ===== */
 :root {
     /* Pulgar m?s p?rpura y pista casi negra */
-    --scroll-thumb: rgba(106, 13, 173, 0.85);       /* p?rpura fuerte */
-    --scroll-thumb-hover: rgba(106, 13, 173, 1.0);  /* a?n m?s intenso al hover */
+    --scroll-thumb: rgba(22, 55, 100, 0.82);
+    --scroll-thumb-hover: rgba(12, 39, 77, 0.96);
     --scroll-track: rgba(5, 5, 8, 0.9);             /* casi negro transl?cido */
 }
 
@@ -1434,7 +1518,8 @@ nav ul li a:hover::after {
     top: var(--line-top);
     width: var(--line-width);
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(31, 94, 255, 0.34), rgba(20, 184, 166, 0.22), transparent);
+    background: linear-gradient(90deg, transparent 4%, rgba(31, 94, 255, 0.12) 24%, rgba(31, 94, 255, 0.52) 48%, rgba(20, 184, 166, 0.3) 64%, transparent 96%);
+    background-size: 220% 100%;
     opacity: 0;
     transform: rotate(var(--line-rotate)) scaleX(0);
     transform-origin: left center;
@@ -1449,10 +1534,16 @@ nav ul li a:hover::after {
 .contact-line-field span:nth-child(6) { --line-left: 64%; --line-top: 76%; --line-width: 30vw; --line-rotate: 0deg; }
 .contact-line-field span:nth-child(7) { --line-left: 24%; --line-top: 10%; --line-width: 16vw; --line-rotate: 90deg; }
 .contact-line-field span:nth-child(8) { --line-left: 82%; --line-top: 55%; --line-width: 15vw; --line-rotate: 90deg; }
+.contact-line-field span:nth-child(9) { --line-left: -3%; --line-top: 34%; --line-width: 17vw; --line-rotate: 0deg; }
+.contact-line-field span:nth-child(10) { --line-left: 88%; --line-top: 33%; --line-width: 15vw; --line-rotate: 0deg; }
+.contact-line-field span:nth-child(11) { --line-left: 18%; --line-top: 65%; --line-width: 12vw; --line-rotate: -12deg; }
+.contact-line-field span:nth-child(12) { --line-left: 70%; --line-top: 66%; --line-width: 13vw; --line-rotate: 12deg; }
+.contact-line-field span:nth-child(13) { --line-left: 48%; --line-top: 4%; --line-width: 10vw; --line-rotate: 90deg; }
+.contact-line-field span:nth-child(14) { --line-left: 52%; --line-top: 88%; --line-width: 9vw; --line-rotate: 90deg; }
 
 .contact-form-section.is-visible .contact-line-field span {
-    animation: contactLineIn 900ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards, contactLinePulse 5200ms ease-in-out infinite;
-    animation-delay: calc((var(--line-index, 1) - 1) * 160ms), calc(900ms + ((var(--line-index, 1) - 1) * 160ms));
+    animation: contactLineIn 900ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards, contactLinePulse 5200ms ease-in-out infinite, contactLineFlow 6800ms linear infinite;
+    animation-delay: calc((var(--line-index, 1) - 1) * 120ms), calc(900ms + ((var(--line-index, 1) - 1) * 120ms)), calc(var(--line-index, 1) * -430ms);
 }
 
 .contact-line-field span:nth-child(1) { --line-index: 1; }
@@ -1463,6 +1554,12 @@ nav ul li a:hover::after {
 .contact-line-field span:nth-child(6) { --line-index: 6; }
 .contact-line-field span:nth-child(7) { --line-index: 7; }
 .contact-line-field span:nth-child(8) { --line-index: 8; }
+.contact-line-field span:nth-child(9) { --line-index: 9; }
+.contact-line-field span:nth-child(10) { --line-index: 10; }
+.contact-line-field span:nth-child(11) { --line-index: 11; }
+.contact-line-field span:nth-child(12) { --line-index: 12; }
+.contact-line-field span:nth-child(13) { --line-index: 13; }
+.contact-line-field span:nth-child(14) { --line-index: 14; }
 
 @keyframes contactLineIn {
     from {
@@ -1478,6 +1575,11 @@ nav ul li a:hover::after {
 @keyframes contactLinePulse {
     0%, 100% { opacity: 0.42; }
     50% { opacity: 0.86; }
+}
+
+@keyframes contactLineFlow {
+    from { background-position: 120% 50%; }
+    to { background-position: -120% 50%; }
 }
 
 .contact-shell {
@@ -2041,24 +2143,7 @@ body {
 }
 
 #preloader {
-  background: var(--tm-corporate-navy);
-}
-
-.spinner {
-  filter: drop-shadow(0 0 18px rgba(31, 94, 255, 0.22));
-}
-
-.spinner::before {
-  background: conic-gradient(
-    from 0turn,
-    rgba(31, 94, 255, 0) 0% 55%,
-    rgba(31, 94, 255, 0.9) 60% 80%,
-    rgba(31, 94, 255, 0) 85% 100%
-  );
-}
-
-.spinner::after {
-  background: radial-gradient(circle at 50% 50%, rgba(31,94,255,.42), rgba(31,94,255,.12) 40%, rgba(0,0,0,0) 60%);
+  background: #000;
 }
 
 header .overlay {
@@ -2088,7 +2173,9 @@ header .overlay {
 #problema {
   height: auto !important;
   min-height: 0 !important;
+  /* Keep all shading on the section so the inset content has no visible edges. */
   background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.18), transparent 46%),
     radial-gradient(620px 240px at 86% 12%, rgba(31, 94, 255, 0.34), transparent 64%),
     linear-gradient(135deg, #06162d 0%, #0b2344 52%, #061326 100%) !important;
   border-block: 1px solid rgba(96, 165, 250, 0.2);
@@ -2111,9 +2198,7 @@ header .overlay {
   min-height: clamp(300px, 35vw, 380px) !important;
   height: auto !important;
   padding: clamp(54px, 7vw, 86px) clamp(24px, 7vw, 88px) !important;
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.18), transparent 46%),
-    transparent !important;
+  background: transparent !important;
 }
 
 .closing-cta {
@@ -2379,7 +2464,11 @@ header .overlay {
   .contact-line-field span:nth-child(3),
   .contact-line-field span:nth-child(4),
   .contact-line-field span:nth-child(7),
-  .contact-line-field span:nth-child(8) {
+  .contact-line-field span:nth-child(8),
+  .contact-line-field span:nth-child(11),
+  .contact-line-field span:nth-child(12),
+  .contact-line-field span:nth-child(13),
+  .contact-line-field span:nth-child(14) {
     display: none;
   }
 }

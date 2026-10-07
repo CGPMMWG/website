@@ -199,6 +199,35 @@ body.academy-course-page .language-selector .lang-option:hover {
   text-underline-offset: 4px;
 }
 
+/* Shared subtle, static back navigation. */
+.course-shell > .course-back,
+.course-shell > .course-back:hover,
+.course-shell > .course-back:focus-visible {
+  position: static !important;
+  inset: auto !important;
+  display: inline-flex;
+  width: max-content;
+  margin: 34px 0 0 !important;
+  padding: 7px 2px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #64748b !important;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  opacity: 0.86;
+  transition: color 180ms ease, opacity 180ms ease, transform 180ms ease;
+}
+
+.course-shell > .course-back:hover,
+.course-shell > .course-back:focus-visible {
+  color: #1f5eff !important;
+  opacity: 1;
+  transform: translateX(-3px) !important;
+}
+
 .course-hero {
   min-height: 500px;
   display: grid;

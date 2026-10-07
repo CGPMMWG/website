@@ -1,0 +1,63 @@
+.service-portfolio-action {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.service-portfolio-button {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 22px;
+  border: 1px solid #d8e0ea;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #334155 !important;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+  transition: transform 170ms ease, background-color 170ms ease, border-color 170ms ease, box-shadow 170ms ease;
+}
+
+.service-portfolio-button::after {
+  content: "\2192";
+  font-size: 1.05rem;
+  line-height: 1;
+  transition: transform 170ms ease;
+}
+
+.service-portfolio-button:hover,
+.service-portfolio-button:focus-visible {
+  transform: translateY(-1px);
+  border-color: #b8c6d8;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.service-portfolio-button:focus-visible {
+  outline: 2px solid #64748b;
+  outline-offset: 3px;
+}
+
+.service-portfolio-button:hover::after,
+.service-portfolio-button:focus-visible::after {
+  transform: translateX(2px);
+}
+
+.service-portfolio-label--en { display: none; }
+html[lang="en"] .service-portfolio-label--es { display: none; }
+html[lang="en"] .service-portfolio-label--en { display: inline; }
+
+@media (prefers-reduced-motion: reduce) {
+  .service-portfolio-button,
+  .service-portfolio-button::after {
+    transition: none;
+  }
+}

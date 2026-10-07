@@ -78,7 +78,7 @@
        <p>A well-segmented database, clear journeys, purposeful automations, and business-connected metrics allow email to work continuously without losing relevance or personalization.</p>
        <p>At TrendMakers, we design email marketing and nurturing systems connected to the sales process so every message has a purpose, every contact has a next step, and every campaign can be measured by its real business impact.</p>
        <p class="conclusion-kicker">Activate an email marketing system that converts better.</p>
-       <div class="article-cta-wrap"><a class="article-cta" id="article-cta" href="../index.html#contact-form"><span id="article-cta-text">Schedule a call</span><span class="article-cta-arrow" aria-hidden="true">&rarr;</span></a><p class="article-cta-note" id="article-cta-note">We segment your audience, design the journeys, automate follow-up, and connect every campaign with real commercial results.</p></div>`
+       <div class="article-cta-wrap"><a class="article-cta" id="article-cta" href="https://calendly.com/trendmakers/30min"><span id="article-cta-text">Schedule a call</span><span class="article-cta-arrow" aria-hidden="true">&rarr;</span></a><p class="article-cta-note" id="article-cta-note">We segment your audience, design the journeys, automate follow-up, and connect every campaign with real commercial results.</p></div>`
     ]
   };
 

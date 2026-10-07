@@ -1,0 +1,642 @@
+/* Final homepage composition refinements. Loaded after page-level styles. */
+/* Keep the introduction image proportional when HTML supplies intrinsic dimensions. */
+#inicio .hero-brain {
+  height: auto;
+}
+
+/* Hero without the former process metrics: stronger promise and primary actions. */
+html body nav .tm-header-badge {
+  width: clamp(190px, 14vw, 225px) !important;
+  height: 46px !important;
+}
+
+html body nav .tm-header-badge img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  filter: drop-shadow(0 0 12px rgba(79, 109, 255, .16));
+  transition: filter 240ms ease, transform 240ms ease !important;
+}
+
+html body nav .tm-header-badge:hover img,
+html body nav .tm-header-badge:focus-visible img {
+  transform: translateY(-1px) scale(1.025);
+  filter: drop-shadow(0 0 18px rgba(79, 109, 255, .32));
+}
+
+html body header .hero-main {
+  grid-column: 1;
+  width: 100%;
+  min-width: 0;
+  max-width: none !important;
+}
+
+@media (min-width: 981px) {
+  html body header .title-container.hero-shell {
+    grid-template-columns: minmax(0, 1fr) !important;
+    align-items: center !important;
+    column-gap: clamp(24px, 3vw, 58px) !important;
+    padding: clamp(42px, 5vh, 64px) clamp(44px, 5vw, 88px) 72px !important;
+  }
+
+  html body header .hero-main {
+    position: relative;
+    z-index: 2;
+    width: min(1240px, 76vw);
+    min-height: calc(100vh - 190px) !important;
+    justify-content: center;
+    padding-bottom: 24px;
+    box-sizing: border-box;
+  }
+}
+
+html body header .hero-kicker {
+  margin-bottom: 0 !important;
+  color: #6284ff !important;
+}
+
+html body header .hero-brand {
+  display: block !important;
+  width: fit-content;
+  margin-top: 15px !important;
+  font-size: clamp(4.8rem, 6vw, 6.8rem) !important;
+  line-height: 1 !important;
+  letter-spacing: -.045em !important;
+  text-transform: none !important;
+}
+
+html body header .hero-brand-text {
+  background-image: linear-gradient(105deg, #ffffff 0%, #dce6ff 42%, #6284ff 55%, #ffffff 72%, #ffffff 100%) !important;
+  background-size: 240% 100% !important;
+  filter:
+    drop-shadow(0 0 4px rgba(130, 151, 224, .24))
+    drop-shadow(0 0 14px rgba(79, 109, 255, .13)) !important;
+  animation: trendRevealSweep 2.2s steps(28, end) 280ms forwards !important;
+}
+
+html body header .hero-brand::after {
+  animation:
+    trendCaretSweep 2.2s steps(28, end) 280ms forwards,
+    heroCaretFade 220ms ease 2.65s forwards !important;
+}
+
+@keyframes heroCaretFade {
+  to { opacity: 0; }
+}
+
+html body header #title {
+  width: 100% !important;
+  max-width: 1220px;
+  margin-top: 30px !important;
+  font-size: clamp(3.5rem, 4.25vw, 4.95rem) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -.04em !important;
+  text-wrap: balance;
+}
+
+html body header #title em {
+  margin-top: 20px !important;
+  color: rgba(218, 227, 239, .86) !important;
+  font-size: clamp(2rem, 2.6vw, 2.8rem) !important;
+  font-style: italic !important;
+  font-weight: 650 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -.025em;
+}
+
+html body header .hero-actions {
+  width: min(100%, 900px);
+  gap: 14px !important;
+  margin-top: 34px !important;
+}
+
+html body header .hero-growth-visual {
+  position: absolute;
+  z-index: 0;
+  top: 12%;
+  right: -5%;
+  width: min(54vw, 920px);
+  margin: 0;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(34px, 16px, 0) scale(.94);
+  -webkit-mask-image: radial-gradient(ellipse 76% 72% at 62% 50%, rgba(0,0,0,.72) 35%, rgba(0,0,0,.38) 62%, transparent 100%);
+  mask-image: radial-gradient(ellipse 76% 72% at 62% 50%, rgba(0,0,0,.72) 35%, rgba(0,0,0,.38) 62%, transparent 100%);
+  animation:
+    heroGrowthVisualIn 1200ms cubic-bezier(.2,.8,.2,1) 680ms forwards;
+}
+
+html body header .hero-growth-visual::after {
+  content: "";
+  position: absolute;
+  left: 14%;
+  right: 3%;
+  bottom: 4%;
+  height: 12%;
+  border-radius: 50%;
+  background: rgba(31, 94, 255, .16);
+  filter: blur(38px);
+  z-index: -1;
+  opacity: .38;
+  animation: none;
+}
+
+html body header .hero-growth-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: .42;
+  filter:
+    saturate(.72)
+    brightness(.78)
+    contrast(.9)
+    drop-shadow(0 28px 42px rgba(0, 31, 100, .2))
+    drop-shadow(0 0 10px rgba(62, 121, 255, .08));
+}
+
+@keyframes heroGrowthVisualIn {
+  to { opacity: .34; transform: translate3d(0, 0, 0) scale(1); }
+}
+
+html body header .hero-actions .hero-cta {
+  flex: 1 1 0;
+  width: auto !important;
+  min-width: 380px;
+  min-height: 58px;
+  padding: 0 34px !important;
+  font-size: .96rem !important;
+  letter-spacing: .01em;
+  border-radius: 8px !important;
+}
+
+html body header .hero-partners {
+  position: absolute !important;
+  left: clamp(44px, 5vw, 88px);
+  bottom: 24px;
+  width: auto !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 980px) {
+  /* Allow the grid to shrink below the wordmark's intrinsic width. */
+  html body header .title-container.hero-shell {
+    grid-template-columns: minmax(0, 1fr) !important;
+    row-gap: 32px;
+    padding-bottom: 64px !important;
+  }
+  html body header .hero-main { width: 100%; max-width: 100% !important; }
+  html body header .hero-brand {
+    font-size: clamp(2.5rem, 11.5vw, 4.8rem) !important;
+  }
+  html body header #title {
+    max-width: 100%;
+    font-size: clamp(2.9rem, 7.6vw, 4.8rem) !important;
+  }
+  html body header .hero-growth-visual { display: none; }
+  html body header .hero-actions .hero-cta { min-width: 0; }
+  html body header .hero-partners {
+    position: static !important;
+    min-width: 0;
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  html body nav .tm-header-badge {
+    width: 154px !important;
+    height: 44px !important;
+  }
+  html body header #title {
+    margin-top: 24px !important;
+    font-size: clamp(2rem, 8.5vw, 3.1rem) !important;
+    line-height: 1.08 !important;
+  }
+  html body header #title em {
+    margin-top: 20px !important;
+    font-size: clamp(1.25rem, 6vw, 1.7rem) !important;
+  }
+  html body header .hero-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 30px !important;
+  }
+  html body header .hero-actions .hero-cta {
+    box-sizing: border-box;
+    width: 100% !important;
+    min-width: 0;
+    min-height: 52px;
+    padding: 12px 18px !important;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html body header .hero-growth-visual {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  html body header .hero-growth-visual::after { animation: none; }
+  html body nav .tm-header-badge img { transition: none !important; }
+}
+
+#servicios .overlay {
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, .75fr) !important;
+  grid-template-rows: auto auto auto;
+  column-gap: clamp(56px, 7vw, 104px) !important;
+}
+
+#servicios #services-title {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: center;
+}
+
+#servicios #services-text,
+#servicios .services-cta-wrap {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 460px;
+}
+
+#servicios #services-text {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  margin: 0 !important;
+  padding: 2px 0 2px 22px;
+  border-left: 2px solid rgba(31, 94, 255, .72);
+  color: #425873 !important;
+  font-size: clamp(1.04rem, 1.25vw, 1.18rem) !important;
+  line-height: 1.66 !important;
+  text-wrap: pretty;
+}
+
+#servicios .services-cta-wrap {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  padding-left: 24px;
+  margin: 28px 0 0 !important;
+}
+
+#servicios .services-cta {
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 60px;
+  padding: 12px 48px !important;
+  border: 1px solid rgba(56, 189, 248, .38) !important;
+  border-radius: 10px !important;
+  background: linear-gradient(90deg, rgba(255,255,255,.9), rgba(224, 245, 255, .72)) !important;
+  color: #244a70 !important;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .075em;
+  text-align: center;
+  box-shadow: 0 10px 26px rgba(14, 165, 233, .075) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+#servicios .services-cta::before {
+  opacity: 0 !important;
+}
+
+#servicios .services-cta::after {
+  display: none !important;
+  content: none !important;
+}
+
+#servicios .services-cta:hover,
+#servicios .services-cta:focus-visible {
+  background: rgba(255, 255, 255, .94) !important;
+  color: #1f5eff !important;
+  border-color: rgba(31, 94, 255, .34) !important;
+  box-shadow: 0 12px 26px rgba(31, 94, 255, .09) !important;
+}
+
+#servicios .service-details {
+  grid-row: 3;
+  margin-top: clamp(52px, 6vw, 76px) !important;
+}
+
+@media (max-width: 1040px) {
+  #servicios .overlay {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 0 !important;
+  }
+  #servicios #services-title { grid-column: 1; grid-row: 1; align-self: auto; }
+  #servicios #services-text {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 680px;
+    margin-top: 30px !important;
+  }
+  #servicios .services-cta-wrap {
+    grid-column: 1;
+    grid-row: 3;
+    max-width: 680px;
+    margin-top: 24px !important;
+  }
+  #servicios .service-details {
+    grid-row: 4;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    margin-top: 48px !important;
+  }
+  #servicios .service-details > .service-card {
+    grid-column: auto !important;
+    min-width: 0;
+  }
+  #servicios .service-card .service-logo-slot {
+    max-width: 100% !important;
+  }
+  #servicios .service-card[data-service-id] .service-logo-slot img {
+    max-width: 100% !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  #servicios .service-details {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  #servicios .service-details > .service-card {
+    grid-column: 1 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  #servicios #services-text {
+    margin-top: 24px !important;
+    padding: 0;
+    border-left: 0;
+    text-align: center;
+  }
+  #servicios .services-cta-wrap {
+    padding-left: 0;
+    margin: 22px 0 0 !important;
+  }
+  #servicios .services-cta {
+    min-width: 0;
+    min-height: 56px;
+    padding: 12px 24px !important;
+    font-size: .95rem !important;
+  }
+  #servicios .service-details { margin-top: 38px !important; }
+}
+
+/* Match the visible artwork, accounting for each PNG's transparent margins.
+   DATA-STRAT: 5847x606, artwork (75, 71, 5701, 453).
+   IA-HUB: 2000x666, artwork (149, 239, 1747, 174). */
+#servicios .service-card[data-service-id="consulting-data-strategy"] {
+  --logo-canvas-width: 102.560954%;
+  --logo-canvas-left: -1.315559%;
+  --logo-canvas-center: -49.092409%;
+}
+
+#servicios .service-card[data-service-id="ai-innovation"] {
+  --logo-canvas-width: 114.481969%;
+  --logo-canvas-left: -8.528907%;
+  --logo-canvas-center: -48.948949%;
+}
+
+#servicios .service-card:is([data-service-id="consulting-data-strategy"], [data-service-id="ai-innovation"]) .service-logo-slot {
+  position: relative;
+  width: 240px !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+#servicios .service-card:is([data-service-id="consulting-data-strategy"], [data-service-id="ai-innovation"]) .service-logo-slot img {
+  position: absolute;
+  top: 50%;
+  left: var(--logo-canvas-left);
+  width: var(--logo-canvas-width) !important;
+  max-width: none !important;
+  height: auto !important;
+  object-fit: contain !important;
+  transform: translateY(var(--logo-canvas-center)) !important;
+}
+
+@media (max-width: 560px) {
+  #servicios .service-card:is([data-service-id="consulting-data-strategy"], [data-service-id="ai-innovation"]) .service-logo-slot {
+    width: 190px !important;
+  }
+}
+
+/* A quiet homepage: static artwork and brief feedback on user interaction.
+   Scoped to the home so shared service, course and article styles stay independent. */
+.home-page {
+  --home-action: #245bdb;
+  --home-action-hover: #1948b8;
+  --home-radius: 8px;
+}
+
+html body.home-page .content *,
+html body.home-page .content *::before,
+html body.home-page .content *::after,
+html body.home-page :is(.whatsapp-button, .email-button) {
+  animation: none !important;
+}
+
+/* Entrance effects previously left these elements transparent or clipped. */
+html body.home-page :is(
+  .animate__animated, .service-card, .hero-kicker, .hero-brand,
+  .hero-brand-text, .hero-actions, .hero-partners, .hero-brain,
+  .services-cta, #title, #title *, #blog-view-all-text,
+  .closing-cta__title span, .closing-cta__subtitle, .closing-cta__btn
+) {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  clip-path: none !important;
+  filter: none !important;
+  animation: none !important;
+}
+
+html body.home-page header :is(.hero-brand, #title, #title em) {
+  text-shadow: none !important;
+}
+
+html body.home-page header .hero-brand-text {
+  background: none !important;
+  color: #f4f7ff !important;
+  -webkit-text-fill-color: currentColor;
+}
+
+html body.home-page nav .tm-header-badge img,
+html body.home-page nav .tm-header-badge:hover img {
+  transform: none !important;
+  filter: none !important;
+}
+
+html body.home-page :is(
+  .hero-line-trace, .hero-scroll-indicator, .services-title-ring,
+  .blog-view-all-ring, .contact-line-field, .contact-glow
+),
+html body.home-page header .hero-brand::after,
+html body.home-page #inicio .video-container::before,
+html body.home-page #inicio .video-container::after {
+  display: none !important;
+}
+
+html body.home-page header::before,
+html body.home-page header::after { opacity: .16 !important; }
+
+html body.home-page header .hero-growth-visual {
+  opacity: .34 !important;
+  transform: none !important;
+}
+
+html body.home-page #inicio .hero-brain {
+  box-shadow: none !important;
+}
+
+/* Shared sizing and feedback for primary and secondary actions. */
+html body.home-page .content :is(
+  #hero-contact-cta, #hero-cases-cta, #schedule-call, #show-popup,
+  #services-portfolio-cta, #about-team-button, #blog-view-all,
+  #submit-contact-form, .nav-cta
+) {
+  --action-bg: var(--home-action);
+  --action-hover: var(--home-action-hover);
+  --action-text: #fff;
+  --action-border: var(--home-action);
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+  min-height: 52px !important;
+  max-width: 100%;
+  padding: 13px 24px !important;
+  border: 1px solid var(--action-border) !important;
+  border-radius: var(--home-radius) !important;
+  background: var(--action-bg) !important;
+  color: var(--action-text) !important;
+  font-family: var(--font-body);
+  font-size: .95rem !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  text-align: center;
+  white-space: normal;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transform: none !important;
+  filter: none !important;
+  clip-path: none !important;
+  opacity: 1 !important;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease !important;
+}
+
+html body.home-page .content :is(#hero-cases-cta, #about-team-button) {
+  --action-bg: transparent;
+  --action-hover: rgba(255, 255, 255, .08);
+  --action-text: #e5edff;
+  --action-border: #6f829e;
+}
+
+html body.home-page .content :is(#services-portfolio-cta, #blog-view-all) {
+  --action-bg: transparent;
+  --action-hover: #e9effb;
+  --action-text: #2452ae;
+  --action-border: #9baed0;
+}
+
+html body.home-page .content :is(
+  #hero-contact-cta, #hero-cases-cta, #schedule-call, #show-popup,
+  #services-portfolio-cta, #about-team-button, #blog-view-all,
+  #submit-contact-form, .nav-cta
+):is(:hover, :focus-visible) {
+  background: var(--action-hover) !important;
+  color: var(--action-text) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+html body.home-page .content :is(
+  #hero-contact-cta, #hero-cases-cta, #schedule-call, #show-popup,
+  #services-portfolio-cta, #about-team-button, #blog-view-all,
+  #submit-contact-form, .nav-cta
+)::before,
+html body.home-page .content :is(
+  #hero-contact-cta, #hero-cases-cta, #schedule-call, #show-popup,
+  #services-portfolio-cta, #about-team-button, #blog-view-all,
+  #submit-contact-form, .nav-cta
+)::after { display: none !important; }
+
+html body.home-page .content .nav-cta {
+  min-height: 42px !important;
+  padding: 9px 18px !important;
+  font-size: .875rem !important;
+}
+
+html body.home-page #blog #blog-view-all-text {
+  color: inherit !important;
+  font: inherit !important;
+  letter-spacing: inherit !important;
+  white-space: normal;
+  text-shadow: none !important;
+  transition: none !important;
+}
+
+/* Subtle borders replace bouncing cards and large hover shadows. */
+html body.home-page :is(.service-card, .why-card, .blog-card, .home-blog-mini, .flip-front) {
+  box-shadow: 0 4px 16px rgba(15, 23, 42, .05) !important;
+  transition: border-color 160ms ease, background-color 160ms ease !important;
+}
+
+html body.home-page :is(.service-card, .why-card, .blog-card, .home-blog-mini, .flip-card):is(:hover, :focus-visible) {
+  transform: none !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, .05) !important;
+}
+
+html body.home-page #casos-exito .success-layout .flip-card:is(:hover, :focus-visible, .is-active) .flip-front {
+  box-shadow: inset 3px 0 0 var(--home-action) !important;
+}
+
+html body.home-page #servicios .service-card::after {
+  animation: none !important;
+  border-right: 0 !important;
+  clip-path: none !important;
+}
+
+html body.home-page :is(a, button, input, textarea):focus-visible {
+  outline: 2px solid #7ba6ff !important;
+  outline-offset: 4px;
+}
+
+/* Keep the closing signature, without a continuously scrolling strip. */
+html body.home-page .brand-marquee__track {
+  width: 100%;
+  justify-content: center;
+  transform: none;
+  will-change: auto;
+}
+html body.home-page .brand-marquee__group { padding-right: 0; flex-wrap: wrap; justify-content: center; }
+html body.home-page .brand-marquee__group:nth-child(2),
+html body.home-page .brand-marquee__group > :nth-child(n+4) { display: none; }
+html body.home-page .brand-marquee__group i { box-shadow: none; }
+
+@media (max-width: 640px) {
+  html body.home-page .content :is(#show-popup, #services-portfolio-cta, #about-team-button, #blog-view-all) {
+    width: 100% !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:has(body.home-page) { scroll-behavior: auto !important; }
+  html body.home-page *,
+  html body.home-page *::before,
+  html body.home-page *::after { transition: none !important; }
+}

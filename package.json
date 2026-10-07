@@ -1,0 +1,13 @@
+{
+  "name": "trendmakers-website",
+  "private": true,
+  "scripts": {
+    "build:seo": "node scripts/build-seo.cjs",
+    "check:seo": "node scripts/check-seo.cjs",
+    "check:paths": "node scripts/check-paths.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "sharp": "0.35.4"
+  }
+}

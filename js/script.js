@@ -1,4 +1,10 @@
 ﻿// Initialize touch service-card behavior (idempotent)
+const serviceAssetBase = new URL('../', document.currentScript.src);
+function serviceAssetURL(name) {
+  const asset = new URL(name.replace(/^\//, ''), serviceAssetBase);
+  return asset.protocol === 'file:' ? asset.href : asset.pathname;
+}
+
 function initMobileServiceCards(){
   try {
     const cards = Array.from(document.querySelectorAll('#servicios .service-card'));
@@ -46,9 +52,9 @@ function takeI18nSnapshot(){
   try {
     const ids = [
       'nav-inicio','nav-acerca','nav-servicios','nav-contacto','nav-equipo','nav-equipo-mobile','nav-nosotros','nav-nosotros-mobile','nav-academy','nav-academy-mobile','nav-casos-exito','nav-problema',
-      'intro-title','intro-text','about-title','about-text','services-title','services-text','services-portfolio-cta','team-eyebrow','team-title','team-subtitle','team-support-text','team-cta-text',
+      'intro-title','intro-text','about-title','about-text','about-team-button','services-title','services-text','services-portfolio-cta','team-eyebrow','team-title','team-subtitle','team-support-text','team-cta-text',
       'hero-contact-cta','hero-cases-cta','hero-kicker','hero-academy-link','hero-partners-label','hero-scroll-label','hero-stage-diagnostic','hero-stage-prioritization','hero-stage-implementation','hero-stage-optimization','hero-metric-industries','hero-metric-result','hero-metric-data','hero-metric-automation',
-      'blog-view-all',
+      'blog-view-all-text',
       'contact-title','contact-microcopy','schedule-call','show-popup','popup-title','label-email','label-problema','submit-button',
       'footer-text','about-us-text','label-name','label-company','label-project','submit-contact-form','contact-soon',
       'closing-cta-title',
@@ -80,7 +86,7 @@ const translations = {
   es: {
     title: "<span class=\"hero-title-line\">Convertimos tu marketing en un <strong>sistema que escala</strong></span><em>No campa&ntilde;as que se apagan</em>",
     heroContactCta: "Solicitar diagn&oacute;stico gratuito",
-    heroCasesCta: "Ver casos de &eacute;xito <span aria-hidden=\"true\">-&gt;</span>",
+    heroCasesCta: "Ver casos de &eacute;xito",
     heroKicker: "<span></span> Tu socio de crecimiento",
     heroAcademyLink: "Conoc&eacute; nuestra academia <span aria-hidden=\"true\">-&gt;</span>",
     heroPartnersLabel: "Partners",
@@ -102,12 +108,13 @@ const translations = {
     navAcademy: "Academia",
     navcasosexito: "Casos de &eacute;xito",
     blogNav: "Blog",
-    introTitle: "Estrategia, datos y automatizaci&oacute;n al servicio del crecimiento",
+    introTitle: "Estrategia, datos e Inteligencia Artificial al servicio del crecimiento",
     introTagline: "Impulsamos el crecimiento de tu negocio con marketing, datos, automatizaci&oacute;n e IA.",
-    introText: "Dise&ntilde;amos y ejecutamos sistemas digitales basados en informaci&oacute;n real para atraer mejores clientes y escalar resultados de forma sostenible.",
+    introText: "Dise&ntilde;amos y ejecutamos sistemas digitales basados en informaci&oacute;n para escalar resultados de forma sostenible.",
     aboutTitle: "C&oacute;mo trabajamos",
     aboutMethodKicker: "Nuestra metodolog&iacute;a",
     aboutSubtitle: "No arrancamos a ejecutar sin entender primero. Cada proyecto empieza por un diagn&oacute;stico real, sin supuestos ni plantillas gen&eacute;ricas.",
+    aboutTeamButton: "Conoc&eacute; a nuestro equipo",
     aboutText: "Trabajamos con sistemas, datos y disciplina en la ejecuci&oacute;n.",
     why0Step: "Paso 00",
     why0Title: "Diagn&oacute;stico",
@@ -133,19 +140,24 @@ const translations = {
     successDescProntoled: "Estrategia digital, performance y crecimiento comercial.",
     successDescLetratec: "Redise&ntilde;o web, posicionamiento y optimizaci&oacute;n digital.",
     successDescVcg: "Branding, presencia digital y activaci&oacute;n online.",
+    successTestimonialEyebrow: "La experiencia del cliente",
+    successTestimonialNote: "Caso seleccionado",
+    successTestimonialProntoled: "Una base de clientes inactiva se transform&oacute; en un canal comercial que volvi&oacute; a generar oportunidades y ventas reales.",
+    successTestimonialLetratec: "La nueva web dej&oacute; de ser una simple vidriera: hoy comunica mejor, genera consultas claras y sostiene una base real para crecer.",
+    successTestimonialVcg: "El proceso orden&oacute; nuestro mensaje y consolid&oacute; una identidad profesional que transmite confianza desde el primer contacto.",
     successCtaButton: "Ver todos los casos",
     successCase1: "Prontoled: Afectamos directamente la facturaci&oacute;n con la implementaci&oacute;n de automatizaciones de IA, gesti&oacute;n de anuncios y la realizaci&oacute;n de un plan exhaustivo de mercado que deriv&oacute; en un plan de acci&oacute;n.",
     successCase2: "Letratec: Aumentamos la facturaci&oacute;n en un 37% con la implementaci&oacute;n de un plan de marketing digital, la creaci&oacute;n de una p&aacute;gina web y gesti&oacute;n de leads.",
-    successCase3: "GOPE: Automatizamos la nutrici&oacute;n de leads y optimizamos campa&ntilde;as de performance para duplicar la tasa de conversi&oacute;n en solo 60 d&iacute;as.",
-    servicesText: "Integramos estrategia, datos, tecnolog&iacute;a y ejecuci&oacute;n en un sistema dise&ntilde;ado para generar crecimiento sostenible.",
+    successCase3: "GOPE Consulting: Automatizamos la nutrici&oacute;n de leads y optimizamos campa&ntilde;as de performance para duplicar la tasa de conversi&oacute;n en solo 60 d&iacute;as.",
+    servicesText: "Conectamos estrategia, datos, tecnolog&iacute;a y ejecuci&oacute;n para transformar oportunidades en crecimiento medible y sostenible.",
     closingCtaTitle: "<span>No trabajamos con intuici&oacute;n.</span><span>Trabajamos con sistemas.</span>",
     blogKicker: "Marketing &middot; Datos &middot; automatizaci&oacute;n",
     blogTitle: "Conoc&eacute; nuestro blog",
     blogSubtitle: "Aprend&eacute; con nuestros especialistas los errores m&aacute;s comunes y c&oacute;mo evitarlos con datos y automatizaci&oacute;n.",
     blogMeta: "Por TrendMakers &middot; 19/11/2025",
     blogEyebrow: "Art&iacute;culo destacado",
-    blogArticleTitle: "Errores de marketing que frenan a cualquier negocio (y c&oacute;mo evitarlos)",
-    blogExcerpt: "En un mercado saturado, la diferencia no est&aacute; en publicar m&aacute;s sino en hacerlo estrat&eacute;gicamente. Conoc&eacute; los 9 fallos que vemos en negocios reales y c&oacute;mo evitarlos.",
+    blogArticleTitle: "Marketing Automation &amp; Growth: cómo dejar de perder leads",
+    blogExcerpt: "Conectá funnels, CRM, automatización y datos para dar seguimiento a cada lead y construir un sistema de crecimiento medible.",
     blogCta: "Leer art&iacute;culo",
     blogViewAll: "Ver todos los art&iacute;culos",
     blogStat1: "De los usuarios juzga la credibilidad por el dise&ntilde;o visual",
@@ -178,22 +190,22 @@ const translations = {
     labelEmail: "Email de contacto",
     labelProblema: "Proyecto:",
     submitButton: "Enviar",
-    footerText: "&copy; 2023 TrendMakers. Todos los derechos reservados.",
+    footerText: "&copy; 2026 TrendMakers. Todos los derechos reservados.",
 
     teamDetails: `
-      <div class="team-card">
+      <div class="team-card animate__animated">
         <h3>Estrategia &amp; Crecimiento</h3>
         <p>Consultores en marketing y performance que dise&ntilde;an roadmaps claros y objetivos de negocio medibles. Ordenamos prioridades para que cada acci&oacute;n tenga impacto comercial.</p>
       </div>
-      <div class="team-card">
-        <h3>Dise&ntilde;o, Experiencia Digital &amp; Desarrollo Web</h3>
+      <div class="team-card animate__animated">
+        <h3>Dise&ntilde;o Digital &amp; Desarrollo Web</h3>
         <p>Dise&ntilde;adores UX/UI, visuales, multimedia y desarrolladores web enfocados en conversi&oacute;n, usabilidad, rendimiento y consistencia de marca. Creamos activos digitales pensados para escalar.</p>
       </div>
-      <div class="team-card">
+      <div class="team-card animate__animated">
         <h3>Datos &amp; Business Intelligence</h3>
         <p>Analistas de datos y especialistas en BI que transforman m&eacute;tricas en informaci&oacute;n accionable para la toma de decisiones. Convertimos performance, clientes y canales en aprendizaje continuo.</p>
       </div>
-      <div class="team-card">
+      <div class="team-card animate__animated">
         <h3>Activaci&oacute;n &amp; Performance</h3>
         <p>Especialistas en campa&ntilde;as digitales, SEO y contenidos orientados a resultados sostenibles y escalables. Probamos, medimos y optimizamos para mejorar volumen, eficiencia y calidad de leads.</p>
       </div>
@@ -203,27 +215,27 @@ const translations = {
 
     serviceDetails: `
       <a class="service-card animate__animated" href="/servicios/marketing-automation.html" data-service-id="marketing-automation" data-hover-label="Explorar servicio">
-        <img src="./img/MATION.png" alt="Marketing Automation &amp; Growth">
+        <img src="${serviceAssetURL('/img/MATION.png')}" alt="Marketing Automation &amp; Growth">
         <h3>Marketing Automation &amp; Growth</h3>
         <p>Automatizamos tus procesos y funnels para generar m&aacute;s leads y conversiones con menos esfuerzo.</p>
       </a>
       <a class="service-card animate__animated" href="/servicios/branding-communication.html" data-service-id="branding-communication" data-hover-label="Explorar servicio">
-        <img src="./img/BRANDING.png" alt="Branding &amp; Communication">
+        <img src="${serviceAssetURL('/img/BRANDING.png')}" alt="Branding &amp; Communication">
         <h3>Branding &amp; Communication</h3>
         <p>Creamos marcas coherentes y comunicaci&oacute;n clara que conecta con tu audiencia.</p>
       </a>
       <a class="service-card animate__animated" href="/servicios/web-ecommerce.html" data-service-id="web-ecommerce" data-hover-label="Explorar servicio">
-        <img src="./img/WEB-ECOMM.png" alt="Web &amp; E-Commerce Development">
+        <img src="${serviceAssetURL('/img/WEB-ECOMM.png')}" alt="Web &amp; E-Commerce Development">
         <h3>Web &amp; E-Commerce Development</h3>
         <p>Desarrollamos sitios y tiendas r&aacute;pidas, seguras y optimizadas para convertir.</p>
       </a>
       <a class="service-card animate__animated" href="/servicios/data-analytics.html" data-service-id="consulting-data-strategy" data-hover-label="Explorar servicio">
-        <img src="./img/DATA-STRAT.png" alt="Consulting, Data &amp; Strategy">
+        <img src="${serviceAssetURL('/img/DATA-STRAT.png')}" alt="Consulting, Data &amp; Strategy">
         <h3>Consulting, Data &amp; Strategy</h3>
         <p>Definimos tu rumbo con an&aacute;lisis, datos y estrategia para escalar tu negocio.</p>
       </a>
       <a class="service-card animate__animated" href="/servicios/ia-hub.html" data-service-id="ai-innovation" data-hover-label="Explorar servicio">
-        <img src="./img/IA-HUB.png" alt="AI &amp; Innovation Hub">
+        <img src="${serviceAssetURL('/img/IA-HUB.png')}" alt="AI &amp; Innovation Hub">
         <h3>AI &amp; Innovation Hub</h3>
         <p>Implementamos IA y automatizaciones que mejoran procesos y crean ventaja competitiva.</p>
       </a>
@@ -248,7 +260,7 @@ const translations = {
   en: {
     title: "<span class=\"hero-title-line\">We turn your marketing into a <strong>system that scales</strong></span><em>Not campaigns that fade out</em>",
     heroContactCta: "Request a free diagnosis",
-    heroCasesCta: "View success stories <span aria-hidden=\"true\">-&gt;</span>",
+    heroCasesCta: "View success stories",
     heroKicker: "<span></span> Your growth partner",
     heroAcademyLink: "Explore our academy <span aria-hidden=\"true\">-&gt;</span>",
     heroPartnersLabel: "Partners",
@@ -270,12 +282,13 @@ const translations = {
     navAcademy: "Academy",
     navcasosexito: "Success Stories",
     blogNav: "Blog",
-    introTitle: "Where strategy, data and automation drive growth",
-    introTagline: "We drive your business growth through marketing, data analysis, automation, and artificial intelligence.",
-    introText: "We design and execute personalized, data-driven digital strategies to attract better clients and scale your results.",
+    introTitle: "Strategy, data and Artificial Intelligence in service of growth",
+    introTagline: "We drive your business growth with marketing, data, automation and AI.",
+    introText: "We design and execute information-driven digital systems to scale results sustainably.",
     aboutTitle: "How we work",
     aboutMethodKicker: "Our methodology",
     aboutSubtitle: "We do not start executing before understanding first. Every project begins with a real diagnosis, without assumptions or generic templates.",
+    aboutTeamButton: "Meet our team",
     aboutText: "We work with systems, data and execution discipline.",
     why0Step: "Step 00",
     why0Title: "Diagnosis",
@@ -301,19 +314,24 @@ const translations = {
     successDescProntoled: "Digital strategy, performance marketing and commercial growth.",
     successDescLetratec: "Website redesign, positioning and digital optimization.",
     successDescVcg: "Branding, digital presence and online activation.",
+    successTestimonialEyebrow: "The client experience",
+    successTestimonialNote: "Selected case",
+    successTestimonialProntoled: "An inactive customer base became a commercial channel that started generating opportunities and real sales again.",
+    successTestimonialLetratec: "The new website is no longer just a showcase: it communicates more clearly, generates qualified inquiries, and provides a solid foundation for growth.",
+    successTestimonialVcg: "The process clarified our message and established a professional identity that builds trust from the very first interaction.",
     successCtaButton: "View all cases",
     successCase1: "Prontoled: We directly impacted revenue with the implementation of AI automations, ad management, and the execution of a comprehensive market plan that led to an action plan.",
     successCase2: "Letratec: We increased revenue by 37% with the implementation of a digital marketing plan, the creation of a website, and lead management.",
     successCase3: "GP Consultants: We automated lead nurturing and optimized performance media to double the qualified lead conversion rate in just 60 days.",
-    servicesText: "We integrate strategy, data, technology and execution into a system designed to drive sustainable growth.",
+    servicesText: "We connect strategy, data, technology and execution to turn opportunities into measurable, sustainable growth.",
     closingCtaTitle: "<span>We don't work on intuition.</span><span>We work with systems.</span>",
     blogKicker: "Marketing &middot; Data &middot; Automation",
     blogTitle: "Explore our blog",
     blogSubtitle: "Learn the most common mistakes from our specialists and how to avoid them with data and automation.",
     blogMeta: "By TrendMakers &middot; Nov 19, 2025",
     blogEyebrow: "Featured article",
-    blogArticleTitle: "Marketing mistakes that slow any business (and how to avoid them)",
-    blogExcerpt: "In a saturated market, the difference isn't publishing more but doing it strategically. See the 9 mistakes we find in real businesses and how to avoid them.",
+    blogArticleTitle: "Marketing Automation &amp; Growth: Stop Losing Leads",
+    blogExcerpt: "Connect funnels, CRM, automation and data to follow up on every lead and build a measurable growth system.",
     blogCta: "Read article",
     blogViewAll: "View all articles",
     blogStat1: "Of users judge credibility by visual design",
@@ -346,22 +364,22 @@ const translations = {
     labelEmail: "Contact email",
     labelProblema: "Project:",
     submitButton: "Submit",
-    footerText: "&copy; 2023 TrendMakers. All rights reserved.",
+    footerText: "&copy; 2026 TrendMakers. All rights reserved.",
 
     teamDetails: `
-      <div class="team-card">
+      <div class="team-card animate__animated">
         <h3>Strategy &amp; Growth</h3>
         <p>Marketing and performance consultants who design clear roadmaps and measurable business objectives. We organize priorities so every action has commercial impact.</p>
       </div>
-      <div class="team-card">
-        <h3>Design, Digital Experience &amp; Web Development</h3>
+      <div class="team-card animate__animated">
+        <h3>Digital Design &amp; Web Development</h3>
         <p>UX/UI, visual and multimedia designers, together with web developers, focused on conversion, usability, performance and brand consistency. We create digital assets built to scale.</p>
       </div>
-      <div class="team-card">
+      <div class="team-card animate__animated">
         <h3>Data &amp; Business Intelligence</h3>
         <p>Data analysts and BI specialists who turn metrics into actionable insights for decision-making. We turn performance, customers and channels into continuous learning.</p>
       </div>
-      <div class="team-card">
+      <div class="team-card animate__animated">
         <h3>Activation &amp; Performance</h3>
         <p>Digital campaign, SEO and content specialists focused on sustainable, scalable results. We test, measure and optimize to improve volume, efficiency and lead quality.</p>
       </div>
@@ -371,27 +389,27 @@ const translations = {
 
     serviceDetails: `
       <a class="service-card animate__animated" href="/servicios/marketing-automation.html?lang=en" data-service-id="marketing-automation" data-hover-label="Explore service">
-        <img src="./img/MATION.png" alt="Marketing Automation &amp; Growth">
+        <img src="${serviceAssetURL('/img/MATION.png')}" alt="Marketing Automation &amp; Growth">
         <h3>Marketing Automation &amp; Growth</h3>
         <p>We automate your funnels and processes to generate more qualified leads with less effort.</p>
       </a>
       <a class="service-card animate__animated" href="/servicios/branding-communication.html?lang=en" data-service-id="branding-communication" data-hover-label="Explore service">
-        <img src="./img/BRANDING.png" alt="Branding &amp; Communication">
+        <img src="${serviceAssetURL('/img/BRANDING.png')}" alt="Branding &amp; Communication">
         <h3>Branding &amp; Communication</h3>
         <p>We create coherent brands and clear communication that connects with your audience.</p>
       </a>
       <a class="service-card animate__animated" href="/servicios/web-ecommerce.html?lang=en" data-service-id="web-ecommerce" data-hover-label="Explore service">
-        <img src="./img/WEB-ECOMM.png" alt="Web &amp; E-Commerce Development">
+        <img src="${serviceAssetURL('/img/WEB-ECOMM.png')}" alt="Web &amp; E-Commerce Development">
         <h3>Web &amp; E-Commerce Development</h3>
         <p>We build fast, secure and conversion-focused websites and online stores.</p>
       </a>
       <a class="service-card animate__animated" href="/servicios/data-analytics.html?lang=en" data-service-id="consulting-data-strategy" data-hover-label="Explore service">
-        <img src="./img/DATA-STRAT.png" alt="Consulting, Data &amp; Strategy">
+        <img src="${serviceAssetURL('/img/DATA-STRAT.png')}" alt="Consulting, Data &amp; Strategy">
         <h3>Consulting, Data &amp; Strategy</h3>
         <p>We define your growth path through data, analysis and strategic direction.</p>
       </a>
       <a class="service-card animate__animated" href="/servicios/ia-hub.html?lang=en" data-service-id="ai-innovation" data-hover-label="Explore service">
-        <img src="./img/IA-HUB.png" alt="AI &amp; Innovation Hub">
+        <img src="${serviceAssetURL('/img/IA-HUB.png')}" alt="AI &amp; Innovation Hub">
         <h3>AI &amp; Innovation Hub</h3>
         <p>We implement AI and automations to improve processes and build competitive advantage.</p>
       </a>
@@ -512,17 +530,28 @@ function applyMailtoLinks(lang){
 function setServiceCardLogos(){
   try {
     const logos = {
-      'marketing-automation': { src: './img/MATION.png', alt: 'Marketing Automation & Growth' },
-      'branding-communication': { src: './img/BRANDING.png', alt: 'Branding & Communication' },
-      'web-ecommerce': { src: './img/WEB-ECOMM.png', alt: 'Web & E-Commerce Development' },
-      'consulting-data-strategy': { src: './img/DATA-STRAT.png', alt: 'Consulting, Data & Strategy' },
-      'ai-innovation': { src: './img/IA-HUB.png', alt: 'AI & Innovation Hub' }
+      'marketing-automation': { src: '/img/MATION.png', alt: 'Marketing Automation & Growth' },
+      'branding-communication': { src: '/img/BRANDING.png', alt: 'Branding & Communication' },
+      'web-ecommerce': { src: '/img/WEB-ECOMM.png', alt: 'Web & E-Commerce Development' },
+      'consulting-data-strategy': { src: '/img/DATA-STRAT.png', alt: 'Consulting, Data & Strategy' },
+      'ai-innovation': { src: '/img/IA-HUB.png', alt: 'AI & Innovation Hub' }
     };
     Object.keys(logos).forEach(function(key){
       const img = document.querySelector(`.service-card[data-service-id="${key}"] img`);
       if (img) {
-        img.src = logos[key].src;
+        // Keep the responsive logo layout when language templates replace the cards.
+        if (!img.parentElement.classList.contains('service-logo-slot')) {
+          const slot = document.createElement('span');
+          slot.className = 'service-logo-slot';
+          img.replaceWith(slot);
+          slot.appendChild(img);
+        }
+        img.src = serviceAssetURL(logos[key].src);
         img.alt = logos[key].alt;
+        img.width = key === 'consulting-data-strategy' ? 5847 : 2000;
+        img.height = key === 'consulting-data-strategy' ? 606 : 666;
+        img.loading = 'lazy';
+        img.decoding = 'async';
       }
     });
   } catch(e){ /* noop */ }
@@ -552,6 +581,7 @@ function updateLanguageToggleLabel(lang) {
   } catch (e) { /* noop */ }
 }
 function getRequestedLanguage() {
+  if (document.documentElement.dataset.siteLanguage) return document.documentElement.dataset.siteLanguage;
   try {
     const params = new URLSearchParams(window.location.search);
     const q = params.get('lang');
@@ -564,6 +594,12 @@ function getRequestedLanguage() {
 // IntersectionObserver para disparar animaciones solo cuando el usuario vea el elemento
 let scrollObserver;
 function setupScrollAnimations(rescan) {
+  if (document.body.classList.contains('home-page')) {
+    document.querySelectorAll('.animate__animated, .service-card').forEach(element => {
+      element.classList.add('visible');
+    });
+    return;
+  }
   const observerOptions = {
     root: null,
     rootMargin: '0px 0px -10% 0px',
@@ -598,6 +634,13 @@ let countObserver;
 function initCountUps() {
   const counters = document.querySelectorAll('[data-count-target]');
   if (!counters.length) return;
+
+  if (document.body.classList.contains('home-page') || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    counters.forEach(el => {
+      el.textContent = (el.dataset.countPrefix || '') + el.dataset.countTarget + (el.dataset.countSuffix || '');
+    });
+    return;
+  }
 
   if (!countObserver) {
     countObserver = new IntersectionObserver((entries, observer) => {
@@ -758,12 +801,19 @@ function setLanguage(language) {
 
       // Ensure restored ES service/team cards are visible
       try {
-        document.querySelectorAll('#servicios .service-card, #equipo .team-card, .animate__animated').forEach(function(el){
+        document.querySelectorAll('#servicios .service-card, .animate__animated').forEach(function(el){
+          if (el.matches('#equipo .team-card')) return;
           el.classList.add('visible');
         });
       } catch(e) { /* noop */ }
 
       initMobileServiceCards();
+      document.querySelectorAll('[data-count-target]').forEach(function(counter) {
+        const target = Number(counter.dataset.countTarget || 0);
+        const prefix = counter.dataset.countPrefix || '';
+        const suffix = counter.dataset.countSuffix || '';
+        counter.textContent = prefix + String(target) + suffix;
+      });
     } catch (e) { /* noop */ }
 
     setupScrollAnimations(true);
@@ -798,7 +848,7 @@ function setLanguage(language) {
     'blog-article-title': 'blogArticleTitle',
     'blog-excerpt': 'blogExcerpt',
     'blog-cta': 'blogCta',
-    'blog-view-all': 'blogViewAll',
+    'blog-view-all-text': 'blogViewAll',
     'blog-stat1': 'blogStat1',
     'blog-stat2': 'blogStat2',
     'blog-stat3': 'blogStat3',
@@ -830,6 +880,7 @@ function setLanguage(language) {
     'about-text': 'aboutText',
     'about-method-kicker': 'aboutMethodKicker',
     'about-subtitle': 'aboutSubtitle',
+    'about-team-button': 'aboutTeamButton',
     'why0-step': 'why0Step',
     'why0-title': 'why0Title',
     'why0-text': 'why0Text',
@@ -952,6 +1003,10 @@ function setLanguage(language) {
     } catch(e){ /* noop */ }
   });
 
+  document.querySelectorAll('#servicios .service-card').forEach(function(card) {
+    card.setAttribute('data-hover-label', language === 'en' ? 'Explore service' : 'Explorar servicio');
+  });
+
   setServiceCardLogos();
   setupScrollAnimations(true);
   saveLanguagePreference(language);
@@ -970,6 +1025,7 @@ document.addEventListener('DOMContentLoaded', function(){
     updateLanguageToggleLabel('es');
     setServiceCardLogos();
   }
+
   applyMailtoLinks(initialLang || 'es');
   initCountUps();
 });
@@ -1008,6 +1064,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(hidePreloader, 1500);
 
   body.classList.add('loading');
+  hidePreloader(); // The HTML is ready; do not block it behind image and font downloads.
 
   // Manejo del video de fondo
   const videos = document.querySelectorAll('video');
@@ -1081,6 +1138,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function syncSuccessContent(language){
     try{
       var t = (typeof translations !== 'undefined') ? translations[language] : null;
+      document.documentElement.setAttribute('lang', language === 'en' ? 'en' : 'es');
       var st = document.getElementById('success-title');
       var si = document.getElementById('success-intro');
       var sc1 = document.getElementById('success-case1');
@@ -1096,8 +1154,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if(st) st.textContent = 'Success Stories';
         if(si) si.textContent = 'Some of our success stories:';
       }
-      var hint = (t && t.successCardHint) ? t.successCardHint : ((language === 'en') ? 'Explore case &#8594;' : 'Explorar caso &#8594;');
-      document.querySelectorAll('.flip-hint').forEach(function(el){ el.innerHTML = hint; });
+      var hint = (t && t.successCardHint) ? t.successCardHint : ((language === 'en') ? 'Explore case' : 'Explorar caso');
+      hint = hint.replace(/\s*(?:&#8594;|\u2192)\s*$/i, '');
+      document.querySelectorAll('.flip-hint').forEach(function(el){
+        el.innerHTML = hint + ' <span class="flip-hint-arrow" aria-hidden="true">&#8594;</span>';
+      });
 
       var d1 = document.getElementById('success-desc-prontoled');
       var d2 = document.getElementById('success-desc-letratec');
@@ -1105,6 +1166,20 @@ document.addEventListener('DOMContentLoaded', function() {
       if (d1 && t && t.successDescProntoled) d1.innerHTML = t.successDescProntoled;
       if (d2 && t && t.successDescLetratec) d2.innerHTML = t.successDescLetratec;
       if (d3 && t && t.successDescVcg) d3.innerHTML = t.successDescVcg;
+
+      var testimonialEyebrow = document.getElementById('success-testimonial-eyebrow');
+      var testimonialNote = document.getElementById('success-testimonial-note');
+      var testimonialQuote = document.getElementById('success-testimonial-quote');
+      var testimonialAuthor = document.getElementById('success-testimonial-author');
+      var activeCard = document.querySelector('#casos-exito .flip-card.is-active') || document.querySelector('#casos-exito .flip-card');
+      if (testimonialEyebrow && t && t.successTestimonialEyebrow) testimonialEyebrow.innerHTML = t.successTestimonialEyebrow;
+      if (testimonialNote && t && t.successTestimonialNote) testimonialNote.innerHTML = t.successTestimonialNote;
+      if (testimonialQuote && activeCard) {
+        var caseKey = activeCard.getAttribute('data-case');
+        var quoteKey = caseKey === 'letratec' ? 'successTestimonialLetratec' : (caseKey === 'vcg' ? 'successTestimonialVcg' : 'successTestimonialProntoled');
+        if (t && t[quoteKey]) testimonialQuote.innerHTML = t[quoteKey];
+      }
+      if (testimonialAuthor && activeCard) testimonialAuthor.textContent = activeCard.getAttribute('data-testimonial-author') || '';
 
       var ctaBtn = document.getElementById('success-cta-button');
       if (ctaBtn && t && t.successCtaButton) ctaBtn.innerHTML = t.successCtaButton;

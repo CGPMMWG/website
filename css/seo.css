@@ -1,0 +1,21 @@
+/* Content links share the site's typography and remain readable without animation. */
+.seo-related { margin: 3rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(148,163,184,.25); }
+.seo-related h2 { font: inherit; font-weight: 600; margin: 0 0 1rem; }
+.seo-related ul { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; padding: 0; list-style: none; }
+.seo-related a { color: #8db7ff; font: inherit; text-decoration-thickness: 1px; text-underline-offset: .25em; }
+.seo-related a:hover { color: #fff; }
+.seo-related a:focus-visible, a.lang-option:focus-visible { outline: 2px solid #8db7ff; outline-offset: 4px; }
+nav .lang-menu a.lang-option { display: block; box-sizing: border-box; text-decoration: none; font: inherit; }
+
+/* Show the main message and actions on first paint instead of waiting for entrance timers. */
+html body header #title,
+html body header #title .hero-title-line,
+html body header .hero-actions,
+html body header .hero-actions .hero-cta {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html body header #title em { opacity: 1 !important; visibility: visible !important; transform: none !important; }
+}

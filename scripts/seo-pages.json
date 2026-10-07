@@ -1,0 +1,363 @@
+[
+  {
+    "file": "index.html",
+    "type": "WebPage",
+    "image": "BLOGWEB.jpg",
+    "es": {
+      "title": "Agencia de marketing digital, datos e IA | TrendMakers",
+      "description": "Estrategia, marketing digital, automatización, desarrollo web e inteligencia artificial para empresas en Argentina, Latinoamérica y mercados internacionales."
+    },
+    "en": {
+      "title": "Digital Marketing, Data & AI Agency | TrendMakers",
+      "description": "Grow your business with digital marketing, automation, branding, web development and AI. Strategy and execution for Argentina, Latin America and global markets."
+    }
+  },
+  {
+    "file": "servicios/index.html",
+    "type": "CollectionPage",
+    "image": "BLOGWEB.jpg",
+    "es": {
+      "title": "Servicios de marketing, desarrollo web e IA | TrendMakers",
+      "description": "Conocé nuestros servicios de marketing digital, automatización, branding, desarrollo web, e-commerce, consultoría de datos e inteligencia artificial."
+    },
+    "en": {
+      "title": "Digital Marketing, Web Development & AI Services | TrendMakers",
+      "description": "Explore our digital marketing, automation, branding, web development, e-commerce, data consulting and artificial intelligence services."
+    }
+  },
+  {
+    "file": "servicios/marketing-automation.html",
+    "type": "Service",
+    "image": "MAFOTO1.png",
+    "es": {
+      "title": "Marketing digital y automatización para empresas | TrendMakers",
+      "description": "Conectamos estrategia de marketing, campañas, contenidos, CRM y automatización para atraer clientes, dar seguimiento a leads y mejorar la conversión."
+    },
+    "en": {
+      "title": "Digital Marketing & Marketing Automation | TrendMakers",
+      "description": "Connect marketing strategy, campaigns, content, CRM and automation to attract customers, follow up on leads and improve conversion."
+    }
+  },
+  {
+    "file": "servicios/branding-communication.html",
+    "type": "Service",
+    "image": "blogbrand.png",
+    "es": {
+      "title": "Branding y comunicación de marca | TrendMakers",
+      "description": "Estrategia de marca, identidad visual y comunicación para transmitir el valor de tu negocio. Construimos marcas coherentes en cada punto de contacto."
+    },
+    "en": {
+      "title": "Brand Strategy, Identity & Communication | TrendMakers",
+      "description": "Brand strategy, visual identity and communication that convey your business value. Build a consistent brand across every customer touchpoint."
+    }
+  },
+  {
+    "file": "servicios/web-ecommerce.html",
+    "type": "Service",
+    "image": "web-ecommerce.png",
+    "es": {
+      "title": "Desarrollo web y tiendas e-commerce | TrendMakers",
+      "description": "Diseñamos sitios web, landing pages y tiendas online con foco en velocidad, SEO y conversión. Conectamos tu web con marketing, datos y automatizaciones."
+    },
+    "en": {
+      "title": "Website & E-Commerce Development | TrendMakers",
+      "description": "Websites, landing pages and online stores built for speed, SEO and conversion. Connect your digital experience with marketing, data and automation."
+    }
+  },
+  {
+    "file": "servicios/data-analytics.html",
+    "type": "Service",
+    "image": "BLOGWEB.jpg",
+    "es": {
+      "title": "Consultoría de datos, analítica y estrategia | TrendMakers",
+      "description": "Diagnóstico digital, análisis de funnels, dashboards y business intelligence para detectar oportunidades y tomar decisiones comerciales basadas en datos."
+    },
+    "en": {
+      "title": "Data Analytics & Digital Strategy Consulting | TrendMakers",
+      "description": "Digital diagnostics, funnel analysis, dashboards and business intelligence to identify opportunities and make informed business decisions."
+    }
+  },
+  {
+    "file": "servicios/ia-hub.html",
+    "type": "Service",
+    "image": "BLOG-IA-MARKETING.png",
+    "es": {
+      "title": "Inteligencia artificial y automatización para empresas | TrendMakers",
+      "description": "Implementamos inteligencia artificial, automatización de procesos y capacitación de equipos para mejorar operaciones, atención al cliente y decisiones."
+    },
+    "en": {
+      "title": "AI Implementation & Business Automation | TrendMakers",
+      "description": "Implement artificial intelligence, workflow automation and team training to improve operations, customer service and business decisions."
+    }
+  },
+  {
+    "file": "equipo/index.html",
+    "type": "AboutPage",
+    "image": "BLOGWEB.jpg",
+    "es": {
+      "title": "Equipo de marketing, datos, diseño e IA | TrendMakers",
+      "description": "Conocé al equipo de TrendMakers: especialistas en estrategia, marketing, diseño, datos e inteligencia artificial que trabajan para hacer crecer tu negocio."
+    },
+    "en": {
+      "title": "Marketing, Data, Design & AI Team | TrendMakers",
+      "description": "Meet the TrendMakers team: specialists in strategy, digital marketing, design, data and artificial intelligence working together to grow your business."
+    }
+  },
+  {
+    "file": "academy/index.html",
+    "type": "CollectionPage",
+    "image": "logo_academy.png",
+    "es": {
+      "title": "Cursos de marketing, datos e IA | TrendMakers Academy",
+      "description": "Explorá los cursos de TrendMakers Academy sobre marketing digital, ventas, branding, desarrollo web e IA. Formación práctica aplicada a negocios reales."
+    },
+    "en": {
+      "title": "Marketing, Data & AI Courses | TrendMakers Academy",
+      "description": "Explore TrendMakers Academy courses in digital marketing, sales, branding, websites and AI. Practical learning applied to real business challenges."
+    }
+  },
+  {
+    "file": "blog/index.html",
+    "type": "CollectionPage",
+    "image": "BLOGWEB.jpg",
+    "es": {
+      "title": "Blog de marketing digital, automatización e IA | TrendMakers",
+      "description": "Guías y artículos de marketing digital, branding, desarrollo web, datos e inteligencia artificial para mejorar tus decisiones y hacer crecer tu negocio."
+    },
+    "en": {
+      "title": "Digital Marketing, Automation & AI Blog | TrendMakers",
+      "description": "Guides and articles on digital marketing, branding, web development, data and artificial intelligence to improve decisions and grow your business."
+    }
+  },
+  {
+    "file": "blog/blog-branding.html",
+    "type": "BlogPosting",
+    "image": "blogbrand.png",
+    "es": {
+      "title": "Branding que convierte oportunidades | TrendMakers",
+      "description": "Cómo construir una marca clara y coherente con identidad, mensajes y sistemas de comunicación que generen confianza y oportunidades."
+    },
+    "en": {
+      "title": "Branding That Builds Trust and Business Opportunities | TrendMakers",
+      "description": "Learn how clear positioning, visual identity and consistent brand communication build trust and support business growth."
+    }
+  },
+  {
+    "file": "blog/blog-calificaciones-google.html",
+    "type": "BlogPosting",
+    "image": "calificaciones-google.png",
+    "es": {
+      "title": "Reseñas de Google: impacto en ventas | TrendMakers",
+      "description": "Cómo las reseñas y calificaciones de Google impactan en la confianza, la visibilidad y la conversión de tu negocio."
+    },
+    "en": null
+  },
+  {
+    "file": "blog/blog-email-marketing-automatizacion.html",
+    "type": "BlogPosting",
+    "image": "EMAILMKTNG.png",
+    "es": {
+      "title": "Email marketing y nurturing: cómo convertir leads | TrendMakers",
+      "description": "Descubrí cómo conectar email marketing, automatización, nurturing y CRM para acompañar leads y convertir oportunidades en ventas."
+    },
+    "en": {
+      "title": "Email Marketing & Lead Nurturing That Converts | TrendMakers",
+      "description": "Learn how to connect email marketing, automation, lead nurturing and CRM to guide prospects through the funnel and turn opportunities into sales."
+    }
+  },
+  {
+    "file": "blog/blog-errores-marketing.html",
+    "type": "BlogPosting",
+    "image": "BLOG1.jpg",
+    "es": {
+      "title": "Marketing Automation & Growth sin perder leads | TrendMakers",
+      "description": "Cómo integrar funnels, CRM, automatización y datos para dejar de perder leads y convertir el marketing en un sistema de crecimiento medible."
+    },
+    "en": {
+      "title": "Marketing Automation: Stop Losing Leads | TrendMakers",
+      "description": "Connect funnels, CRM, automation and data to follow up on every lead and turn digital marketing into a measurable growth system."
+    }
+  },
+  {
+    "file": "blog/blog-ia-automatizacion.html",
+    "type": "BlogPosting",
+    "image": "Blog-ia-personas.png",
+    "es": {
+      "title": "IA para transformar empresas y competir mejor | TrendMakers",
+      "description": "Cómo aplicar inteligencia artificial en empresas para automatizar procesos, mejorar decisiones y crear una ventaja competitiva sostenible."
+    },
+    "en": {
+      "title": "How AI Transforms Businesses and Operations | TrendMakers",
+      "description": "Explore practical uses of artificial intelligence to automate business processes, improve decisions and build a competitive advantage."
+    }
+  },
+  {
+    "file": "blog/blog-ia-marketing-growth.html",
+    "type": "BlogPosting",
+    "image": "IA EN MKTNG.png",
+    "es": {
+      "title": "IA en marketing para crecer con estrategia | TrendMakers",
+      "description": "Cómo integrar IA al sistema de marketing para conectar investigación, creatividad, segmentación, automatización y medición."
+    },
+    "en": {
+      "title": "AI in Marketing: From Content to Business Growth | TrendMakers",
+      "description": "Connect AI with marketing research, creativity, segmentation, automation and measurement to turn isolated content into strategic business growth."
+    }
+  },
+  {
+    "file": "blog/blog-ia2.html",
+    "type": "BlogPosting",
+    "image": "ROBOT-IA.png",
+    "es": {
+      "title": "IA en marketing: inversión y crecimiento de marca | TrendMakers",
+      "description": "Cómo integrar inteligencia artificial, automatización y datos al marketing para mejorar decisiones, reducir tareas manuales y escalar el crecimiento."
+    },
+    "en": {
+      "title": "AI in Marketing: Investing in Brand Growth | TrendMakers",
+      "description": "Learn how AI, automation and data help brands improve marketing decisions, reduce manual work and build a more scalable growth system."
+    }
+  },
+  {
+    "file": "blog/blog-marketing-estrategico.html",
+    "type": "BlogPosting",
+    "image": "MKTNG2.png",
+    "es": {
+      "title": "Marketing estratégico para crecer con sistema | TrendMakers",
+      "description": "Marketing estratégico para conectar contenidos, paid media, ventas y datos en un sistema de crecimiento medible."
+    },
+    "en": {
+      "title": "Strategic Marketing: Build a Growth System | TrendMakers",
+      "description": "Connect content, paid media, sales and data in a measurable growth system. Learn how strategic marketing turns isolated actions into coordinated execution."
+    }
+  },
+  {
+    "file": "blog/blog-websites1.html",
+    "type": "BlogPosting",
+    "image": "web-ecommerce.png",
+    "es": {
+      "title": "Web y e-commerce diseñados para convertir | TrendMakers",
+      "description": "Cómo diseñar sitios y tiendas online rápidos, conectados y optimizados para SEO, experiencia de usuario y conversión."
+    },
+    "en": {
+      "title": "Websites & E-Commerce Designed to Convert | TrendMakers",
+      "description": "Learn how website speed, user experience, SEO and connected digital systems help turn visits into inquiries and online sales."
+    }
+  },
+  {
+    "file": "casos-exito/caso-gope-consulting.html",
+    "type": "Article",
+    "image": "VCG IMAGEN.png",
+    "es": {
+      "title": "GOPE Consulting: branding y desarrollo web | TrendMakers",
+      "description": "Caso de éxito de GOPE Consulting: estrategia de marca, identidad visual y desarrollo web para construir una presencia digital coherente y orientada a conversión."
+    },
+    "en": {
+      "title": "GOPE Consulting: Branding & Website Case Study | TrendMakers",
+      "description": "See how TrendMakers connected brand strategy, visual identity and website development to build a consistent digital presence for GOPE Consulting."
+    }
+  },
+  {
+    "file": "casos-exito/caso-letratec.html",
+    "type": "Article",
+    "image": "LETRA.png",
+    "es": {
+      "title": "Letratec: desarrollo web, SEO y crecimiento | TrendMakers",
+      "description": "Caso de éxito de Letratec: desarrollo web, SEO técnico, campañas y optimización de conversión conectados con el seguimiento comercial."
+    },
+    "en": {
+      "title": "Letratec: Website, SEO & Growth Case Study | TrendMakers",
+      "description": "Explore the Letratec project: website development, technical SEO, campaigns and conversion optimization connected to the sales pipeline."
+    }
+  },
+  {
+    "file": "casos-exito/caso-prontoled.html",
+    "type": "Article",
+    "image": "PRONTO.png",
+    "es": {
+      "title": "Prontoled: email marketing y automatización | TrendMakers",
+      "description": "Caso de éxito de Prontoled: segmentación de audiencias, campañas de email y automatizaciones para reactivar clientes y acompañar la recompra."
+    },
+    "en": {
+      "title": "Prontoled: Email Marketing & Automation Case Study | TrendMakers",
+      "description": "Explore how email campaigns, audience segmentation and automated workflows supported customer reactivation and repeat purchases for Prontoled."
+    }
+  },
+  {
+    "file": "academy-cursos/academy-ai-business-marketing.html",
+    "type": "Course",
+    "image": "logo_academy.png",
+    "es": {
+      "title": "Creación de Contenido con IA | TrendMakers Academy",
+      "description": "Curso Creación de Contenido con IA: aprendé a usar IA para generar ideas, textos, calendarios y contenido comercial con más criterio."
+    },
+    "en": {
+      "title": "AI Content Creation | TrendMakers Academy",
+      "description": "Learn to use AI for ideas, copy, content calendars and business communication with clearer prompts and a practical editorial process."
+    }
+  },
+  {
+    "file": "academy-cursos/academy-branding-communication-b2b.html",
+    "type": "Course",
+    "image": "logo_academy.png",
+    "es": {
+      "title": "Branding & Communication | TrendMakers Academy",
+      "description": "Curso Branding & Communication: aprendé a comunicar mejor el valor de tu marca, ordenar mensajes y construir una presencia más clara y profesional."
+    },
+    "en": {
+      "title": "Branding & Communication | TrendMakers Academy",
+      "description": "Learn to communicate your brand value, organize your message and build a clearer, more professional and differentiated business presence."
+    }
+  },
+  {
+    "file": "academy-cursos/academy-diagnostico-digital-ceos.html",
+    "type": "Course",
+    "image": "logo_academy.png",
+    "es": {
+      "title": "Diagnóstico Digital para CEOs | TrendMakers Academy",
+      "description": "Curso Diagnóstico Digital para CEOs de TrendMakers Academy: detectá oportunidades perdidas en web, redes, posicionamiento, embudo y automatización."
+    },
+    "en": {
+      "title": "Digital Diagnosis for CEOs | TrendMakers Academy",
+      "description": "Learn to assess your website, social channels, positioning, sales funnel and automation to identify missed opportunities and prioritize improvements."
+    }
+  },
+  {
+    "file": "academy-cursos/academy-marketing-automation-basics.html",
+    "type": "Course",
+    "image": "logo_academy.png",
+    "es": {
+      "title": "Ventas Digitales para Emprendedores | TrendMakers Academy",
+      "description": "Curso Ventas Digitales para Emprendedores: aprendé a responder consultas, presentar tu oferta y hacer seguimiento para convertir más interesados en clientes."
+    },
+    "en": {
+      "title": "Digital Sales for Entrepreneurs | TrendMakers Academy",
+      "description": "Learn to handle inquiries, present your offer and follow up with prospects to improve sales through WhatsApp, Instagram, email and other digital channels."
+    }
+  },
+  {
+    "file": "academy-cursos/academy-paid-media-essentials.html",
+    "type": "Course",
+    "image": "logo_academy.png",
+    "es": {
+      "title": "Marketing Digital desde Cero | TrendMakers Academy",
+      "description": "Curso Marketing Digital desde Cero: aprendé fundamentos, canales, contenido, funnels, métricas y construí un plan inicial de marketing digital."
+    },
+    "en": {
+      "title": "Digital Marketing from Scratch | TrendMakers Academy",
+      "description": "Learn digital marketing fundamentals, channels, content, funnels and metrics, then build an initial marketing plan for your business."
+    }
+  },
+  {
+    "file": "academy-cursos/academy-webs-que-convierten.html",
+    "type": "Course",
+    "image": "logo_academy.png",
+    "es": {
+      "title": "Webs que convierten | TrendMakers Academy",
+      "description": "Curso Webs que convierten: aprendé cómo estructurar una web o e-commerce para generar consultas, ventas y leads."
+    },
+    "en": {
+      "title": "Websites That Convert | TrendMakers Academy",
+      "description": "Learn to structure websites and online stores that build trust, explain your offer and turn visits into inquiries, sales and leads."
+    }
+  }
+]

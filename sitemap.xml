@@ -1,199 +1,331 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://trendmakers.agency/</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/"/>
   </url>
   <url>
     <loc>https://trendmakers.agency/servicios/</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/servicios/"/>
   </url>
   <url>
-    <loc>https://trendmakers.agency/blog/</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/academy/</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/academy-cursos/academy-ai-business-marketing.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/academy-cursos/academy-branding-communication-b2b.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/academy-cursos/academy-diagnostico-digital-ceos.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/academy-cursos/academy-marketing-automation-basics.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/academy-cursos/academy-paid-media-essentials.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/academy-cursos/academy-webs-que-convierten.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/blog/blog-branding.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/blog/blog-calificaciones-google.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/blog/blog-email-marketing-automatizacion.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/blog/blog-errores-marketing.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/blog/blog-ia2.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/blog/blog-ia-automatizacion.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/blog/blog-ia-marketing-growth.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/blog/blog-marketing-estrategico.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/blog/blog-websites1.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/casos-exito/caso-letratec.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/casos-exito/caso-prontoled.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/casos-exito/caso-vcg-imagen.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/equipo/</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/logo1.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/servicios/branding-communication.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/BRANDING.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/servicios/data-analytics.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/DATA-STRAT.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://trendmakers.agency/servicios/ia-hub.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/IA-HUB.png</image:loc>
-    </image:image>
+    <loc>https://trendmakers.agency/en/servicios/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/servicios/"/>
   </url>
   <url>
     <loc>https://trendmakers.agency/servicios/marketing-automation.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/MATION.png</image:loc>
-    </image:image>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/servicios/marketing-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/servicios/marketing-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/servicios/marketing-automation.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/servicios/marketing-automation.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/servicios/marketing-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/servicios/marketing-automation.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/servicios/marketing-automation.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/servicios/branding-communication.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/servicios/branding-communication.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/servicios/branding-communication.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/servicios/branding-communication.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/servicios/branding-communication.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/servicios/branding-communication.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/servicios/branding-communication.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/servicios/branding-communication.html"/>
   </url>
   <url>
     <loc>https://trendmakers.agency/servicios/web-ecommerce.html</loc>
-    <lastmod>2026-07-23</lastmod>
-    <image:image>
-      <image:loc>https://trendmakers.agency/img/WEB-ECOMM.png</image:loc>
-    </image:image>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/servicios/web-ecommerce.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/servicios/web-ecommerce.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/servicios/web-ecommerce.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/servicios/web-ecommerce.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/servicios/web-ecommerce.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/servicios/web-ecommerce.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/servicios/web-ecommerce.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/servicios/data-analytics.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/servicios/data-analytics.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/servicios/data-analytics.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/servicios/data-analytics.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/servicios/data-analytics.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/servicios/data-analytics.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/servicios/data-analytics.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/servicios/data-analytics.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/servicios/ia-hub.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/servicios/ia-hub.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/servicios/ia-hub.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/servicios/ia-hub.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/servicios/ia-hub.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/servicios/ia-hub.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/servicios/ia-hub.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/servicios/ia-hub.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/equipo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/equipo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/equipo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/equipo/"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/equipo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/equipo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/equipo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/equipo/"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/academy/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/academy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/academy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/academy/"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/academy/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/academy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/academy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/academy/"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/blog/blog-branding.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-branding.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/blog/blog-branding.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-branding.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-branding.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/blog/blog-calificaciones-google.html</loc>
+
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/blog/blog-email-marketing-automatizacion.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-email-marketing-automatizacion.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-email-marketing-automatizacion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-email-marketing-automatizacion.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/blog/blog-email-marketing-automatizacion.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-email-marketing-automatizacion.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-email-marketing-automatizacion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-email-marketing-automatizacion.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/blog/blog-errores-marketing.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-errores-marketing.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-errores-marketing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-errores-marketing.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/blog/blog-errores-marketing.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-errores-marketing.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-errores-marketing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-errores-marketing.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/blog/blog-ia-automatizacion.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-ia-automatizacion.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-ia-automatizacion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-ia-automatizacion.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/blog/blog-ia-automatizacion.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-ia-automatizacion.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-ia-automatizacion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-ia-automatizacion.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/blog/blog-ia-marketing-growth.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-ia-marketing-growth.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-ia-marketing-growth.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-ia-marketing-growth.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/blog/blog-ia-marketing-growth.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-ia-marketing-growth.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-ia-marketing-growth.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-ia-marketing-growth.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/blog/blog-ia2.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-ia2.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-ia2.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-ia2.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/blog/blog-ia2.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-ia2.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-ia2.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-ia2.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/blog/blog-marketing-estrategico.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-marketing-estrategico.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-marketing-estrategico.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-marketing-estrategico.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/blog/blog-marketing-estrategico.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-marketing-estrategico.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-marketing-estrategico.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-marketing-estrategico.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/blog/blog-websites1.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-websites1.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-websites1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-websites1.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/blog/blog-websites1.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/blog/blog-websites1.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/blog/blog-websites1.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/blog/blog-websites1.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/casos-exito/caso-gope-consulting.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/casos-exito/caso-gope-consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/casos-exito/caso-gope-consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/casos-exito/caso-gope-consulting.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/casos-exito/caso-gope-consulting.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/casos-exito/caso-gope-consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/casos-exito/caso-gope-consulting.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/casos-exito/caso-gope-consulting.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/casos-exito/caso-letratec.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/casos-exito/caso-letratec.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/casos-exito/caso-letratec.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/casos-exito/caso-letratec.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/casos-exito/caso-letratec.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/casos-exito/caso-letratec.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/casos-exito/caso-letratec.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/casos-exito/caso-letratec.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/casos-exito/caso-prontoled.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/casos-exito/caso-prontoled.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/casos-exito/caso-prontoled.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/casos-exito/caso-prontoled.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/casos-exito/caso-prontoled.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/casos-exito/caso-prontoled.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/casos-exito/caso-prontoled.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/casos-exito/caso-prontoled.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/academy-cursos/academy-ai-business-marketing.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/academy-cursos/academy-ai-business-marketing.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/academy-cursos/academy-ai-business-marketing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/academy-cursos/academy-ai-business-marketing.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/academy-cursos/academy-ai-business-marketing.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/academy-cursos/academy-ai-business-marketing.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/academy-cursos/academy-ai-business-marketing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/academy-cursos/academy-ai-business-marketing.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/academy-cursos/academy-branding-communication-b2b.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/academy-cursos/academy-branding-communication-b2b.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/academy-cursos/academy-branding-communication-b2b.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/academy-cursos/academy-branding-communication-b2b.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/academy-cursos/academy-branding-communication-b2b.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/academy-cursos/academy-branding-communication-b2b.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/academy-cursos/academy-branding-communication-b2b.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/academy-cursos/academy-branding-communication-b2b.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/academy-cursos/academy-diagnostico-digital-ceos.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/academy-cursos/academy-diagnostico-digital-ceos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/academy-cursos/academy-diagnostico-digital-ceos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/academy-cursos/academy-diagnostico-digital-ceos.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/academy-cursos/academy-diagnostico-digital-ceos.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/academy-cursos/academy-diagnostico-digital-ceos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/academy-cursos/academy-diagnostico-digital-ceos.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/academy-cursos/academy-diagnostico-digital-ceos.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/academy-cursos/academy-marketing-automation-basics.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/academy-cursos/academy-marketing-automation-basics.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/academy-cursos/academy-marketing-automation-basics.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/academy-cursos/academy-marketing-automation-basics.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/academy-cursos/academy-marketing-automation-basics.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/academy-cursos/academy-marketing-automation-basics.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/academy-cursos/academy-marketing-automation-basics.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/academy-cursos/academy-marketing-automation-basics.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/academy-cursos/academy-paid-media-essentials.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/academy-cursos/academy-paid-media-essentials.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/academy-cursos/academy-paid-media-essentials.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/academy-cursos/academy-paid-media-essentials.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/academy-cursos/academy-paid-media-essentials.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/academy-cursos/academy-paid-media-essentials.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/academy-cursos/academy-paid-media-essentials.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/academy-cursos/academy-paid-media-essentials.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/academy-cursos/academy-webs-que-convierten.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/academy-cursos/academy-webs-que-convierten.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/academy-cursos/academy-webs-que-convierten.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/academy-cursos/academy-webs-que-convierten.html"/>
+  </url>
+  <url>
+    <loc>https://trendmakers.agency/en/academy-cursos/academy-webs-que-convierten.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://trendmakers.agency/academy-cursos/academy-webs-que-convierten.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trendmakers.agency/en/academy-cursos/academy-webs-que-convierten.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trendmakers.agency/academy-cursos/academy-webs-que-convierten.html"/>
   </url>
 </urlset>

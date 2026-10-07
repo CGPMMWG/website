@@ -299,6 +299,7 @@
   }
 
   function syncUrlLang(lang) {
+    if (document.documentElement.dataset.siteLanguage) return;
     try {
       const url = new URL(window.location.href);
       if (url.searchParams.get("lang") === lang) return;
@@ -318,6 +319,7 @@
   }
 
   function getLang() {
+    if (document.documentElement.dataset.siteLanguage) return document.documentElement.dataset.siteLanguage;
     try {
       const q = new URLSearchParams(window.location.search).get("lang");
       if (q) return normalizeLang(q);

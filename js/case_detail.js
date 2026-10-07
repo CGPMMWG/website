@@ -1,4 +1,4 @@
-﻿// Standalone case detail translations
+// Standalone case detail translations
 (function () {
   const LANG_KEY = "trendLang";
 
@@ -7,7 +7,7 @@
       es: {
         pageTitle: "TrendMakers - Caso Prontoled",
         eyebrow: "Caso de &eacute;xito &middot; Prontoled",
-        title: "Email Marketing & Automation",
+        title: "Email marketing y automatización para Prontoled",
         summary:
           "Encendimos la demanda directa con un mix creativo + performance sin fricci&oacute;n. Diagnosticamos el funnel B2B y conectamos automatizaciones para responder, priorizar y nutrir cada lead en segundos.",
         hook: "Creatividad, automatizaci&oacute;n y media para ventas directas.",
@@ -19,13 +19,13 @@
           "tiempo promedio de primera respuesta",
         ],
         stackValue: "Meta + Google Performance Max &middot; HubSpot &middot; Flujos IA",
-        cta: "Quiero un caso as&iacute;",
+        cta: "Planifiquemos tu caso",
         back: "Volver a Casos de &eacute;xito",
       },
       en: {
         pageTitle: "TrendMakers - Prontoled Case Study",
         eyebrow: "Success Story &middot; Prontoled",
-        title: "Email Marketing & Automation",
+        title: "Email marketing and automation for Prontoled",
         summary:
           "We ignited direct demand with a frictionless creative + performance mix. We diagnosed their B2B funnel and connected automation to answer, prioritize, and nurture every lead in seconds.",
         hook: "Creativity, automation, and media aligned to drive direct sales.",
@@ -37,7 +37,7 @@
           "average first-response time",
         ],
         stackValue: "Meta + Google Performance Max &middot; HubSpot &middot; AI flows",
-        cta: "I want a case like this",
+        cta: "Let's plan your case",
         back: "Back to Success Stories",
       },
     },
@@ -45,7 +45,7 @@
       es: {
         pageTitle: "TrendMakers - Caso Letratec",
         eyebrow: "Caso de &eacute;xito &middot; Letratec",
-        title: "Website modular + growth sprints para Letratec",
+        title: "Desarrollo web, SEO y crecimiento para Letratec",
         summary:
           "Reconstruimos la presencia digital desde cero con una arquitectura SEO s&oacute;lida, un sitio ligero en Jamstack y sprints de growth que empujaron cada cotizaci&oacute;n sin inflar el presupuesto.",
         hook: "Reconstruimos la presencia digital de cero con foco en autoridad y conversi&oacute;n.",
@@ -57,13 +57,13 @@
           "tasa de cierre en leads asistidos",
         ],
         stackValue: "Next.js &middot; GA4 &middot; Search Ads &middot; Tableros Looker",
-        cta: "Hablemos del proyecto",
+        cta: "Planifiquemos tu caso",
         back: "Volver a Casos de &eacute;xito",
       },
       en: {
         pageTitle: "TrendMakers - Letratec Case Study",
         eyebrow: "Success Story &middot; Letratec",
-        title: "Modular website + growth sprints for Letratec",
+        title: "Website development, SEO and growth for Letratec",
         summary:
           "We rebuilt their digital presence from scratch with a solid SEO architecture, a lightweight Jamstack site, and growth sprints that pushed every quote without inflating spend.",
         hook: "Authority, performance, and operations connected in one playbook.",
@@ -75,19 +75,19 @@
           "close rate on assisted leads",
         ],
         stackValue: "Next.js &middot; GA4 &middot; Search Ads &middot; Looker dashboards",
-        cta: "Let's talk about your project",
+        cta: "Let's plan your case",
         back: "Back to Success Stories",
       },
     },
     vcg: {
       es: {
-        pageTitle: "TrendMakers - Caso GOPE",
-        eyebrow: "Caso de &eacute;xito &middot; GOPE",
-        title: "Performance creativo 360&deg; para GOPE",
+        pageTitle: "TrendMakers - Caso GOPE Consulting",
+        eyebrow: "Caso de &eacute;xito &middot; GOPE Consulting",
+        title: "Branding y desarrollo web para GOPE Consulting",
         summary:
-          "Activamos demanda constante con c&aacute;psulas motion, inteligencia de audiencias y workflows que nutr&iacute;an a ventas con prioridad real en segundos.",
-        hook: "Activamos demanda constante con contenido motion e inteligencia de audiencias.",
-        subtitle: "GOPE &middot; Performance creativo 360&deg;",
+          "Diseñamos una identidad de marca y una experiencia web coherentes, alineadas con una estrategia de posicionamiento y conversión.",
+        hook: "Branding y desarrollo web alineados con una estrategia de posicionamiento y crecimiento.",
+        subtitle: "GOPE Consulting &middot; Branding y desarrollo web",
         body: "Dise&ntilde;amos y desarrollamos la identidad de marca y el sitio web, construyendo una experiencia visual coherente, funcional y pensada para convertir. Desde el branding hasta la ejecuci&oacute;n digital, cada decisi&oacute;n respondi&oacute; a una estrategia clara de posicionamiento y crecimiento.",
         stats: [
           "contactos el primer mes",
@@ -99,13 +99,13 @@
         back: "Volver a Casos de &eacute;xito",
       },
       en: {
-        pageTitle: "TrendMakers - GOPE Case Study",
-        eyebrow: "Success Story &middot; GOPE",
-        title: "360&deg; creative performance for GOPE",
+        pageTitle: "TrendMakers - GOPE Consulting Case Study",
+        eyebrow: "Success Story &middot; GOPE Consulting",
+        title: "Branding and website development for GOPE Consulting",
         summary:
           "We build brand identity and web experiences to position, communicate, and convert.",
         hook: "Branding and web aligned with a clear positioning and growth strategy.",
-        subtitle: "GOPE &middot; 360&deg; creative performance",
+        subtitle: "GOPE Consulting &middot; Branding and website development",
         body: "We designed and developed the brand identity and website, creating a cohesive, functional visual experience built to convert. From branding to digital execution, every decision was driven by a clear positioning and growth strategy.",
         stats: [
           "contacts in the first month",
@@ -155,11 +155,11 @@
       es: {
         testimonialQuote:
           "\"Necesit&aacute;bamos una identidad m&aacute;s clara y una presencia digital que transmitiera confianza desde el primer contacto. El proceso nos ayud&oacute; a ordenar el mensaje, profesionalizar la marca y salir al mercado con una imagen m&aacute;s s&oacute;lida.\"",
-        testimonialAuthor: "Gustavo &middot; GOPE",
+        testimonialAuthor: "Martin &middot; GOPE Consulting",
         storyTitle: "De identidad difusa a una marca lista para crecer",
         storyPainTitle: "El punto de dolor",
         storyPain:
-          "GOPE ten&iacute;a experiencia, criterio profesional y una propuesta de valor concreta, pero la marca no lograba expresarlo con claridad. La identidad visual era inconsistente, la presencia web no transmit&iacute;a suficiente confianza y cada contacto requer&iacute;a explicar desde cero qui&eacute;nes eran y por qu&eacute; elegirlos.",
+          "GOPE Consulting ten&iacute;a experiencia, criterio profesional y una propuesta de valor concreta, pero la marca no lograba expresarlo con claridad. La identidad visual era inconsistente, la presencia web no transmit&iacute;a suficiente confianza y cada contacto requer&iacute;a explicar desde cero qui&eacute;nes eran y por qu&eacute; elegirlos.",
         storyPathTitle: "El desarrollo",
         storyPath:
           "Trabajamos el posicionamiento, la narrativa y el dise&ntilde;o como un sistema. Redefinimos la identidad, ordenamos los mensajes clave y construimos una experiencia web pensada para presentar autoridad, explicar servicios y facilitar el contacto con una lectura m&aacute;s profesional.",
@@ -170,11 +170,11 @@
       en: {
         testimonialQuote:
           "\"We needed a clearer identity and a digital presence that communicated trust from the first interaction. The process helped us organize the message, professionalize the brand, and go to market with a stronger image.\"",
-        testimonialAuthor: "Gustavo &middot; GOPE",
+        testimonialAuthor: "Martin &middot; GOPE Consulting",
         storyTitle: "From unclear identity to a brand ready to grow",
         storyPainTitle: "The pain point",
         storyPain:
-          "GOPE had experience, professional judgment, and a concrete value proposition, but the brand was not expressing it clearly. The visual identity was inconsistent, the web presence did not build enough trust, and every contact required explaining from scratch who they were and why clients should choose them.",
+          "GOPE Consulting had experience, professional judgment, and a concrete value proposition, but the brand was not expressing it clearly. The visual identity was inconsistent, the web presence did not build enough trust, and every contact required explaining from scratch who they were and why clients should choose them.",
         storyPathTitle: "The development",
         storyPath:
           "We worked on positioning, narrative, and design as one system. We redefined the identity, organized the key messages, and built a web experience designed to show authority, explain services, and make contact easier through a more professional reading.",
@@ -187,7 +187,7 @@
       es: {
         testimonialQuote:
           "\"Necesit&aacute;bamos ordenar la demanda digital y convertirla en ventas reales. TrendMakers nos ayud&oacute; a transformar una base dormida en un canal comercial activo.\"",
-        testimonialAuthor: "Roberto &middot; Prontoled",
+        testimonialAuthor: "Robert &middot; Prontoled",
         storyEyebrow: "Storytelling",
         storyTitle: "Del ruido comercial a un sistema que vuelve a vender",
         storyPainTitle: "El punto de dolor",
@@ -203,7 +203,7 @@
       en: {
         testimonialQuote:
           "\"We needed to organize digital demand and turn it into real sales. TrendMakers helped us transform a dormant database into an active commercial channel.\"",
-        testimonialAuthor: "Roberto &middot; Prontoled",
+        testimonialAuthor: "Robert &middot; Prontoled",
         storyEyebrow: "Storytelling",
         storyTitle: "From commercial noise to a system that sells again",
         storyPainTitle: "The pain point",
@@ -255,6 +255,7 @@
   }
 
   function getLangFromRequest() {
+    if (document.documentElement.dataset.siteLanguage) return document.documentElement.dataset.siteLanguage;
     try {
       const params = new URLSearchParams(window.location.search);
       const q = params.get("lang");
@@ -318,9 +319,9 @@
     assign("case-story-result-title", story.storyResultTitle);
     assign("case-story-result", story.storyResult);
     const cta = document.getElementById("case-cta");
-    if (cta) cta.setAttribute("href", "index.html#contact-form");
+    if (cta) cta.setAttribute("href", "#contact-form");
     const back = document.getElementById("case-back-link");
-    if (back) back.setAttribute("href", "index.html#casos-exito");
+    if (back) back.setAttribute("href", "../index.html#casos-exito");
     if (copy.pageTitle) document.title = copy.pageTitle;
 
     const navText = NAV_TEXT[lang] || NAV_TEXT.es;
