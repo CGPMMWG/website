@@ -640,3 +640,83 @@ html body.home-page .brand-marquee__group i { box-shadow: none; }
   html body.home-page *::before,
   html body.home-page *::after { transition: none !important; }
 }
+
+
+/* Mobile: content-sized hero and case cards, including iOS Safari. */
+@media (max-width: 640px) {
+  html body header {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  html body header .overlay,
+  html body header .title-container.hero-shell,
+  html body header .hero-main {
+    height: auto !important;
+    min-height: 0 !important;
+    justify-content: flex-start !important;
+    align-content: start !important;
+  }
+
+  html body header .title-container.hero-shell {
+    padding: 28px 18px 40px !important;
+  }
+
+  #casos-exito .success-layout .flip-card,
+  #casos-exito .success-layout .flip-inner,
+  #casos-exito .success-layout .flip-front {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+  }
+
+  /* Avoid percentage heights and stretched grid rows hiding the copy. */
+  #casos-exito .success-layout .flip-front {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 24px !important;
+  }
+
+  #casos-exito .success-layout .flip-logo {
+    flex: 0 0 auto;
+    width: 132px !important;
+    height: 54px !important;
+    margin: 0 !important;
+  }
+
+  #casos-exito .success-layout :is(.flip-title, .flip-desc, .flip-hint) {
+    position: static !important;
+    display: block !important;
+    height: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    align-self: stretch;
+  }
+
+  #casos-exito .success-layout .flip-hint {
+    margin-top: 8px !important;
+  }
+
+  html body :is(.email-button, .whatsapp-button) {
+    width: 44px !important;
+    height: 44px !important;
+    right: 10px !important;
+  }
+
+  html body :is(.email-button, .whatsapp-button) img {
+    width: 44px !important;
+    height: 44px !important;
+    flex: 0 0 44px !important;
+  }
+
+  html body .whatsapp-button {
+    bottom: calc(10px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  html body .email-button {
+    bottom: calc(64px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}
