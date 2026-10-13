@@ -84,7 +84,7 @@
   if (window.TrendMakersConsent) return;
   var KEY = 'tm.analytics.consent.v1';
   var AGE = 180 * 24 * 60 * 60 * 1000;
-  window.TM_GA4_SETTINGS = {enabled: true, enhancedMeasurementDisabled: false};
+  window.TM_GA4_SETTINGS = {enabled: true, enhancedMeasurementDisabled: true};
   function read() {
     try {
       var value = JSON.parse(localStorage.getItem(KEY));
