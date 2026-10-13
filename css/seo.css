@@ -195,3 +195,42 @@ html body.case-detail-page .case-detail-stage.single .case-detail-grid {
     margin: 16px 0 0;
   }
 }
+
+/* Centered case masthead with a narrower, taller title and subtitle. */
+html body.case-detail-page .case-detail-top {
+  max-width: 780px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+html body.case-detail-page .case-detail-top p {
+  margin-left: auto;
+  margin-right: auto;
+}
+html body.case-detail-page .case-detail-top h1 {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+html body.case-detail-page .case-detail-top #case-intro-subtitle {
+  max-width: 640px;
+  margin: 24px auto 0;
+  font-size: clamp(1.1rem, 1.6vw, 1.45rem);
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -.015em;
+  color: #dce7fc;
+  text-transform: none;
+}
+html body.case-detail-page .case-detail-top #case-summary {
+  max-width: 580px;
+  margin: 18px auto 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #aebbd0 !important;
+}
+@media (min-width: 641px) {
+  html body.case-detail-page .case-detail-top h1 {
+    font-size: clamp(3rem, 5vw, 4.8rem);
+    line-height: 1.04;
+  }
+}
