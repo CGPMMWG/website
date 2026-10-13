@@ -2,12 +2,12 @@
 Measurement ID: G-22TN2VP54F
 
 ## Estado
-Integración instalada en todas las páginas. Seguimiento bloqueado por defecto.
+Integración instalada en todas las páginas. GA4 habilitado solo tras consentimiento explícito. El usuario confirmó Medición mejorada desactivada el 13/10/2026.
 Banner propio ES/EN instalado; aviso en /privacy.html y /en/privacy.html. Preferencias al pie. Elección en localStorage durante 180 días.
 No se carga gtag.js ni se envía información a Google mientras falten los requisitos.
 
 ## Antes de activar
-1. Banner y aviso ya implementados. Falta confirmar la desactivación de Medición mejorada antes de habilitar el indicador enhancedMeasurementDisabled en js/analytics.js.
+1. Banner y aviso ya implementados. Desactivación confirmada y enhancedMeasurementDisabled habilitado en js/analytics.js.
 2. En GA4 > Administrar > Flujos de datos > Web > Medición mejorada: DESACTIVAR la medición mejorada completa. Los enlaces mailto/WhatsApp pueden incluir datos personales; no activar clics, formularios, búsqueda ni page views por cambios de historial.
 3. El CMP debe definir window.TM_GA4_SETTINGS = {enabled: true, enhancedMeasurementDisabled: true} antes de conceder permiso. Este indicador requiere comprobar la configuración real de GA4.
 4. Tras consentimiento explícito: window.TrendMakersAnalytics.setConsent(true). Repetir al cargar cada documento si hay consentimiento persistido.
