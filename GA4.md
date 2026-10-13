@@ -2,30 +2,36 @@
 Measurement ID: G-22TN2VP54F
 
 ## Estado
-Integración instalada en todas las páginas. GA4 habilitado solo tras consentimiento explícito. El usuario confirmó Medición mejorada desactivada el 13/10/2026.
-Banner propio ES/EN instalado; aviso en /privacy.html y /en/privacy.html. Preferencias al pie. Elección en localStorage durante 180 días.
-No se carga gtag.js ni se envía información a Google mientras falten los requisitos.
+El sitio permite Medición mejorada parcial, manteniendo una vista manual por documento.
+Google solo se carga después de aceptar analítica. Rechazar/retirar bloquea el seguimiento.
+El banner ES/EN conserva la elección 180 días y se puede reabrir desde el pie.
 
-## Antes de activar
-1. Banner y aviso ya implementados. Desactivación confirmada y enhancedMeasurementDisabled habilitado en js/analytics.js.
-2. En GA4 > Administrar > Flujos de datos > Web > Medición mejorada: DESACTIVAR la medición mejorada completa. Los enlaces mailto/WhatsApp pueden incluir datos personales; no activar clics, formularios, búsqueda ni page views por cambios de historial.
-3. El CMP debe definir window.TM_GA4_SETTINGS = {enabled: true, enhancedMeasurementDisabled: true} antes de conceder permiso. Este indicador requiere comprobar la configuración real de GA4.
-4. Tras consentimiento explícito: window.TrendMakersAnalytics.setConsent(true). Repetir al cargar cada documento si hay consentimiento persistido.
-5. Al rechazar o retirar: window.TrendMakersAnalytics.setConsent(false). Nunca conceder permiso por silencio o visita.
+## Configuración en Google Analytics (acción pendiente en la cuenta)
+Administrar > Flujos de datos > Web > Medición mejorada > engranaje.
+Activar el interruptor general.
+Activar: desplazamientos, descargas de archivos e interacción con videos.
+Desactivar: clics salientes, búsquedas del sitio e interacciones con formularios.
+En Vistas de página > configuración avanzada, desactivar Cambios de página basados en eventos del historial del navegador.
+La vista automática inicial se bloquea con send_page_view:false en cada documento.
+No activar toda la medición sin revisar los campos y las URLs que registra.
+El sitio no puede cambiar los ajustes de la propiedad GA4.
 
-## Eventos y privacidad
-Un page_view manual por documento tras consentimiento; send_page_view:false impide el automático.
-Repetir setConsent(true) no duplica vistas. Los anchors no crean vistas; ES/EN y servicios cargan documentos nuevos.
-Se excluyen query strings, hashes, referrer y títulos editoriales; el título técnico es el pathname estático.
-Sin user_id, datos de formularios, email, teléfono, nombres ni eventos de enlaces.
-No introducir datos personales en rutas del sitio. No añadir otra etiqueta GA/GTM para esta propiedad.
-Solo se permite carga en trendmakers.agency y www.trendmakers.agency.
-Al retirar consentimiento se bloquean nuevos envíos y se eliminan cookies _ga accesibles.
+## Privacidad
+No se envían formularios, emails, teléfonos ni mensajes mediante eventos propios.
+Las vistas manuales excluyen query strings, hashes, referrer y rutas desconocidas.
+Mantener archivos y URLs de videos libres de información personal; revisar antes de añadirlos.
+En GA4 > Flujos de datos > Web > Ocultar datos: mantener ocultación de emails y configurar parámetros sensibles (email, name, phone, message, text, subject, body) como defensa adicional.
+No añadir otra etiqueta GA/GTM para esta propiedad.
+Aviso: /privacy.html y /en/privacy.html.
 
 ## Validación
-Antes de activar: Network no debe mostrar googletagmanager.com/gtag/js ni google-analytics.com/g/collect.
-Después de conectar el CMP y desactivar medición mejorada: aceptar analítica, abrir home y un servicio y comprobar una petición page_view por documento con tid=G-22TN2VP54F.
-Inspeccionar page_location sin query/hash; sin campos de formulario ni link_url.
-Rechazar en sesión nueva: cero solicitudes GA. Retirar permiso: sin nuevas solicitudes.
-Comprobar window.TrendMakersAnalytics.status().
-GA4 > Informes > Tiempo real: abrir sitio sin bloqueador, aceptar analítica y navegar; verificar usuario activo y page_view. La confirmación de ingestión requiere acceso a la propiedad GA4 y una sesión consentida.
+Sesión nueva/rechazo: sin gtag.js ni g/collect.
+Aceptación: una carga de gtag.js, una vista page_view por documento.
+Repetir aceptación o navegar anchors: no crea vistas manuales adicionales.
+Retirada: ga-disable-G-22TN2VP54F=true.
+Después de configurar GA4, usar Realtime o DebugView:
+- visitar home y servicio: una vista por documento;
+- scroll al 90%: evento scroll;
+- descarga/video compatible: eventos automáticos correspondientes;
+- revisar payloads: sin datos de contacto o formularios.
+La recepción real y los eventos mejorados requieren verificar la cuenta de GA4.
