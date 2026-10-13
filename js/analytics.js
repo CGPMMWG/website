@@ -73,7 +73,25 @@
       });
     });
   }
+
+  function track(name, category) {
+    var categories = {
+      contact_click: ['whatsapp', 'email', 'calendar', 'phone'],
+      outbound_click: ['linkedin', 'instagram', 'external'],
+      form_start: ['contact'], form_submit_attempt: ['contact'],
+      generate_lead: ['contact'], form_submit_error: ['network', 'rate_limit', 'server'],
+      site_search: ['internal']
+    };
+    if (!allowed || !configured || window['ga-disable-' + id] || !categories[name] || categories[name].indexOf(category) === -1) return false;
+    window.gtag('event', name, {
+      send_to: id, interaction_category: category,
+      page_location: cleanLocation(), page_referrer: '', page_title: cleanPath(),
+      transport_type: 'beacon'
+    });
+    return true;
+  }
   window.TrendMakersAnalytics = {
+    track: track,
     setConsent: function (value) { if (value === true) return grant(); revoke(); return false; },
     status: function () { return {measurementId: id, prerequisitesReady: ready(), consentGranted: allowed, configured: configured, pageViewSent: sent}; }
   };
@@ -160,4 +178,92 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
+})();
+
+/* Safe interaction events and confirmed Formspree submissions. */
+(function () {
+  'use strict';
+  if (window.__tmInteractionsInstalled) return;
+  window.__tmInteractionsInstalled = true;
+  var started = new WeakSet();
+  var pending = new WeakSet();
+  function emit(name, category) { return window.TrendMakersAnalytics.track(name, category); }
+  function classify(href) {
+    try {
+      var url = new URL(href, location.href);
+      if (url.protocol === 'mailto:') return ['contact_click', 'email'];
+      if (url.protocol === 'tel:') return ['contact_click', 'phone'];
+      if (url.protocol !== 'https:' && url.protocol !== 'http:') return null;
+      if (['wa.me', 'api.whatsapp.com', 'web.whatsapp.com'].indexOf(url.hostname) !== -1) return ['contact_click', 'whatsapp'];
+      if (url.hostname === 'calendly.com' || url.hostname.endsWith('.calendly.com')) return ['contact_click', 'calendar'];
+      if (url.origin === location.origin) return null;
+      if (url.hostname === 'linkedin.com' || url.hostname.endsWith('.linkedin.com')) return ['outbound_click', 'linkedin'];
+      if (url.hostname === 'instagram.com' || url.hostname.endsWith('.instagram.com')) return ['outbound_click', 'instagram'];
+      return ['outbound_click', 'external'];
+    } catch (_) { return null; }
+  }
+  function contactForm(form) {
+    return form && form.tagName === 'FORM' && form.method.toLowerCase() === 'post' &&
+      form.action === 'https://formspree.io/f/xyzwvwop';
+  }
+  document.addEventListener('click', function (event) {
+    if (event.button !== 0) return;
+    var anchor = event.target.closest && event.target.closest('a[href]');
+    var category = anchor && classify(anchor.href);
+    if (category) emit(category[0], category[1]);
+  }, true);
+  document.addEventListener('focusin', function (event) {
+    var form = event.target.closest && event.target.closest('form');
+    if (contactForm(form) && !started.has(form) && emit('form_start', 'contact')) started.add(form);
+  });
+  document.addEventListener('submit', function (event) {
+    var form = event.target;
+    if (form.matches && form.matches('form[role="search"]')) emit('site_search', 'internal');
+    if (!contactForm(form) || !window.fetch || !window.FormData || !window.AbortController || event.defaultPrevented) return;
+    event.preventDefault();
+    if (pending.has(form)) return;
+    pending.add(form);
+    if (!started.has(form) && emit('form_start', 'contact')) started.add(form);
+    emit('form_submit_attempt', 'contact');
+    var en = document.documentElement.lang === 'en';
+    var controls = Array.from(form.querySelectorAll('button[type="submit"], input[type="submit"]'));
+    var previous = controls.map(function (button) { return button.disabled; });
+    var status = form.querySelector('.tm-form-status');
+    if (!status) {
+      status = document.createElement('p'); status.className = 'tm-form-status';
+      status.setAttribute('role', 'status'); status.setAttribute('aria-live', 'polite');
+      form.appendChild(status);
+    }
+    status.textContent = en ? 'Sending your request…' : 'Enviando tu consulta…';
+    form.setAttribute('aria-busy', 'true');
+    var data = new FormData(form);
+    if (event.submitter && event.submitter.name) data.append(event.submitter.name, event.submitter.value);
+    controls.forEach(function (button) { button.disabled = true; });
+    var controller = new AbortController();
+    var timer = setTimeout(function () { controller.abort(); }, 30000);
+    window.fetch(form.action, {
+      method: 'POST', body: data, headers: {Accept: 'application/json'}, signal: controller.signal
+    }).then(function (response) {
+      if (!response.ok) {
+        var failure = new Error('Submission failed');
+        failure.category = response.status === 429 ? 'rate_limit' : 'server';
+        throw failure;
+      }
+      return response.json();
+    }).then(function (result) {
+      if (result.ok !== true) { var error = new Error('Unconfirmed submission'); error.category = 'server'; throw error; }
+      emit('generate_lead', 'contact');
+      status.textContent = en ? 'Your request was sent successfully. Thank you!' : 'Tu consulta se envió correctamente. ¡Gracias!';
+      form.reset(); started.delete(form);
+    }).catch(function (error) {
+      var category = error.category || 'network';
+      emit('form_submit_error', category);
+      status.textContent = category === 'rate_limit'
+        ? (en ? 'Too many requests. Please wait a few minutes and try again.' : 'Hubo demasiados envíos. Esperá unos minutos y volvé a intentarlo.')
+        : (en ? 'We could not confirm delivery. Your details are preserved. Check your connection or contact info@trendmakers.agency.' : 'No pudimos confirmar el envío. Conservamos tus datos. Revisá tu conexión o escribinos a info@trendmakers.agency.');
+    }).finally(function () {
+      clearTimeout(timer); pending.delete(form); form.removeAttribute('aria-busy');
+      controls.forEach(function (button, index) { button.disabled = previous[index]; });
+    });
+  });
 })();
