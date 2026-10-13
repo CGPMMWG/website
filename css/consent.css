@@ -1,0 +1,24 @@
+/* Consent controls are isolated from existing site button styles. */
+html body .tm-consent[hidden], html body .tm-consent button[hidden] { display: none !important; }
+html body .tm-consent {
+ position: fixed; inset: auto 16px 16px; z-index: 10000;
+ box-sizing: border-box; max-width: 880px; margin: 0 auto; padding: 22px 24px;
+ max-height: 65vh; overflow-y: auto; color: #edf3ff; background: #0b1527;
+ border: 1px solid #41536e; border-radius: 16px; box-shadow: 0 16px 50px #0005;
+ font-family: Inter, system-ui, sans-serif;
+}
+html body .tm-consent h2 { color: #fff; margin: 0 0 8px; font: 600 1.1rem/1.4 Inter,system-ui,sans-serif; text-transform:none; }
+html body .tm-consent p { color:#c4d0e3; margin:0 0 10px; font-size:.9rem; line-height:1.6; }
+html body .tm-consent a { color:#a8c8ff; font-size:.85rem; text-decoration:underline; }
+html body .tm-consent__actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+html body .tm-consent button {
+ flex:1 1 160px; min-height:44px; border:1px solid #7189ae; border-radius:8px;
+ padding:10px 14px; background:#172a47; color:#fff; cursor:pointer;
+ font:600 .88rem/1.3 Inter,system-ui,sans-serif;
+}
+html body .tm-consent button:hover { background:#284469; }
+html body .tm-consent .tm-consent__close { flex:0 1 auto; background:transparent; }
+html body .tm-privacy-links { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; padding:20px 16px 28px; background:#07101f; }
+html body .tm-privacy-links button, html body .tm-privacy-links a { border:0; background:none; color:#bdcce3; cursor:pointer; text-decoration:underline; font: .8rem/1.5 Inter,system-ui,sans-serif; padding:6px; }
+html body .tm-consent :focus-visible, html body .tm-privacy-links :focus-visible { outline:2px solid #a8c8ff; outline-offset:4px; }
+@media(max-width:480px) { html body .tm-consent { inset:auto 10px 10px; padding:18px; } }
