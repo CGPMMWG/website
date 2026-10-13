@@ -84,3 +84,14 @@
     });
   });
 })();
+
+(function () {
+  if (!document.querySelector('link[rel="icon"]')) {
+    var icon = document.createElement('link');
+    icon.rel = 'icon';
+    icon.type = 'image/png';
+    icon.sizes = '192x192';
+    icon.href = '/favicon.png';
+    document.head.appendChild(icon);
+  }
+})();
