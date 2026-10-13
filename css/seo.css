@@ -234,3 +234,16 @@ html body.case-detail-page .case-detail-top #case-summary {
     line-height: 1.04;
   }
 }
+
+/* Compact case back button. */
+html body.case-detail-page .case-detail-shell > .case-back-link {
+  min-height: 30px;
+  padding: 0 10px !important;
+  gap: 6px;
+  font-size: .72rem;
+  font-weight: 600;
+  border-radius: 7px;
+}
+html body.case-detail-page .case-detail-shell > .case-back-link::before {
+  font-size: .8rem;
+}
