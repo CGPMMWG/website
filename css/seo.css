@@ -148,3 +148,50 @@ html body.blog-article .article-image img {
   from { transform: translateY(0); }
   to { transform: translateY(260px); }
 }
+
+/* Editorial case introduction with a readable vertical rhythm. */
+html body.case-detail-page .case-detail-shell > .case-back-link {
+  position: static !important;
+  inset: auto !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+  min-height: 42px;
+  margin: 0 0 26px !important;
+  padding: 0 16px !important;
+  border: 1px solid rgba(148, 163, 184, .25);
+  border-radius: 10px;
+  background: rgba(255,255,255,.045);
+  color: #c5d0e2;
+  opacity: 1;
+}
+html body.case-detail-page .case-detail-top {
+  max-width: 780px;
+  margin: 0 0 32px;
+  text-align: left;
+}
+html body.case-detail-page .case-detail-top p {
+  margin-left: 0;
+  margin-right: 0;
+}
+html body.case-detail-page .case-detail-top #case-summary {
+  max-width: 620px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-top: 22px;
+}
+html body.case-detail-page .case-detail-stage.single {
+  margin-top: 28px;
+  padding: clamp(18px, 2.5vw, 32px);
+}
+html body.case-detail-page .case-detail-stage.single .case-detail-grid {
+  max-width: none;
+}
+@media (min-width: 641px) {
+  html body.case-detail-page .case-detail-top h1 {
+    font-size: clamp(2.7rem, 4.6vw, 4.4rem);
+    line-height: 1.06;
+    letter-spacing: -.035em;
+    text-wrap: balance;
+    margin: 16px 0 0;
+  }
+}
