@@ -247,3 +247,27 @@ html body.case-detail-page .case-detail-shell > .case-back-link {
 html body.case-detail-page .case-detail-shell > .case-back-link::before {
   font-size: .8rem;
 }
+
+/* Match the subtle back links used by the other subpages. */
+html body.case-detail-page .case-detail-shell > .case-back-link {
+  min-height: 0;
+  padding: 7px 2px !important;
+  gap: 7px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #94a3b8;
+  font-size: .82rem;
+  font-weight: 700;
+  opacity: .86;
+}
+html body.case-detail-page .case-detail-shell > .case-back-link::before { font-size: .95rem; }
+html body.case-detail-page .case-detail-shell > .case-back-link:hover,
+html body.case-detail-page .case-detail-shell > .case-back-link:focus-visible {
+  color: #8bb8ff;
+  opacity: 1;
+}
+@media (max-width: 640px) {
+  html body.case-detail-page .case-detail-shell > .case-back-link { font-size: .78rem; }
+}
