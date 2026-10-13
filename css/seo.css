@@ -19,3 +19,50 @@ html body header .hero-actions .hero-cta {
 @media (prefers-reduced-motion: reduce) {
   html body header #title em { opacity: 1 !important; visibility: visible !important; transform: none !important; }
 }
+
+/* Consistent back navigation and compact introductions across subpages. */
+html body :is(.article-shell, .case-detail-shell, .blog-shell) {
+  position: relative;
+  padding-top: 92px !important;
+}
+html body .course-shell { position: relative; }
+html body .course-shell > .course-back { margin: 16px 0 0 !important; }
+html body .course-hero { padding-top: 24px !important; align-items: start; }
+html body .case-detail-shell > .case-back-link { margin-top: 0 !important; margin-bottom: 16px !important; }
+html body .article-shell .back-link {
+  display: inline-flex !important;
+  margin: 0 0 16px !important;
+  padding: 7px 2px !important;
+  color: #64748b !important;
+  font-size: .82rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+html body .article-hero:has(.back-link) { overflow: visible; }
+@media (min-width: 1400px) {
+  html body :is(.article-shell, .case-detail-shell, .blog-shell) :is(.back-link, .case-back-link, .blog-back-btn) {
+    position: absolute !important;
+    inset: 96px auto auto -76px !important;
+    margin: 0 !important;
+    width: max-content;
+    max-width: 160px;
+  }
+  html body .article-hero > .back-link { top: 0 !important; }
+  html body .case-detail-shell > .case-back-link { max-width: 150px; left: -150px !important; }
+  html body .blog-hero__top { margin: 0 !important; min-height: 0; }
+  html body .course-shell > .course-back {
+    position: absolute !important;
+    inset: 24px auto auto -136px !important;
+    margin: 0 !important;
+    max-width: 128px;
+  }
+  html body main#equipo.team-shell { padding-top: 32px !important; }
+  html body main#equipo.team-shell > .back-btn {
+    position: absolute !important;
+    inset: 36px auto auto 24px !important;
+    margin: 0 !important;
+  }
+}
+@media (max-width: 860px) {
+  html body :is(.article-shell, .case-detail-shell, .blog-shell) { padding-top: 84px !important; }
+}
