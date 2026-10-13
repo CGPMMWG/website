@@ -296,6 +296,14 @@
     assign("case-eyebrow", copy.eyebrow);
     assign("case-title", copy.title);
     assign("case-summary", copy.summary);
+    const introTitle = document.getElementById("case-title");
+    let introSubtitle = document.getElementById("case-intro-subtitle");
+    if (introTitle && !introSubtitle) {
+      introSubtitle = document.createElement("h2");
+      introSubtitle.id = "case-intro-subtitle";
+      introTitle.insertAdjacentElement("afterend", introSubtitle);
+    }
+    assign("case-intro-subtitle", copy.hook);
     assign("case-hook", copy.hook);
     assign("case-subtitle", copy.subtitle);
     assign("case-body", copy.body);
