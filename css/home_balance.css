@@ -499,7 +499,7 @@ html body.home-page #inicio .hero-brain {
 
 /* Shared sizing and feedback for primary and secondary actions. */
 html body.home-page .content :is(
-  #hero-contact-cta, #hero-cases-cta, #schedule-call, #show-popup,
+  #hero-contact-cta, #hero-cases-cta, #show-popup,
   #services-portfolio-cta, #about-team-button, #blog-view-all,
   #submit-contact-form, .nav-cta
 ) {
@@ -554,7 +554,7 @@ html body.home-page .content :is(#services-portfolio-cta, #blog-view-all) {
 }
 
 html body.home-page .content :is(
-  #hero-contact-cta, #hero-cases-cta, #schedule-call, #show-popup,
+  #hero-contact-cta, #hero-cases-cta, #show-popup,
   #services-portfolio-cta, #about-team-button, #blog-view-all,
   #submit-contact-form, .nav-cta
 ):is(:hover, :focus-visible) {
@@ -565,12 +565,12 @@ html body.home-page .content :is(
 }
 
 html body.home-page .content :is(
-  #hero-contact-cta, #hero-cases-cta, #schedule-call, #show-popup,
+  #hero-contact-cta, #hero-cases-cta, #show-popup,
   #services-portfolio-cta, #about-team-button, #blog-view-all,
   #submit-contact-form, .nav-cta
 )::before,
 html body.home-page .content :is(
-  #hero-contact-cta, #hero-cases-cta, #schedule-call, #show-popup,
+  #hero-contact-cta, #hero-cases-cta, #show-popup,
   #services-portfolio-cta, #about-team-button, #blog-view-all,
   #submit-contact-form, .nav-cta
 )::after { display: none !important; }
