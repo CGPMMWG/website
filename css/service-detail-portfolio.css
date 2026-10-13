@@ -61,3 +61,18 @@ html[lang="en"] .service-portfolio-label--en { display: inline; }
     transition: none;
   }
 }
+
+/* Place service navigation beside the introduction on wide screens. */
+body .shell:has(> .hero) { padding-top: 92px !important; }
+body .shell > .hero { margin-top: 0 !important; align-items: start !important; }
+body .shell > .back-btn { margin-bottom: 16px !important; }
+@media (min-width: 1400px) {
+  body .shell:has(> .hero) > .back-btn {
+    position: absolute !important;
+    inset: 96px auto auto -76px !important;
+    margin: 0 !important;
+  }
+}
+@media (max-width: 860px) {
+  body .shell:has(> .hero) { padding-top: 84px !important; }
+}
