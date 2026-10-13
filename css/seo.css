@@ -66,3 +66,7 @@ html body .article-hero:has(.back-link) { overflow: visible; }
 @media (max-width: 860px) {
   html body :is(.article-shell, .case-detail-shell, .blog-shell) { padding-top: 84px !important; }
 }
+
+@media (min-width: 1400px) {
+  html body .case-detail-shell > .case-back-link { left: 18px !important; }
+}
