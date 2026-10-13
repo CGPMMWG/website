@@ -135,3 +135,16 @@ html body.blog-article .article-image img {
     gap: clamp(28px, 3vw, 44px) !important;
   }
 }
+
+/* Smaller landscape illustration with a stronger scroll drift. */
+@media (min-width: 821px) {
+  html body.blog-article .article-intro > .article-image,
+  html body.blog-article .article-shell > .article-image {
+    width: 60% !important;
+    max-width: 276px !important;
+  }
+}
+@keyframes blog-image-drift {
+  from { transform: translateY(0); }
+  to { transform: translateY(260px); }
+}
