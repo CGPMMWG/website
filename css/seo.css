@@ -572,3 +572,12 @@ html body.blog-article .article-image img {
    max-width: 460px !important;
  }
 }
+
+/* Related content stays readable on light pages when hovered. */
+html body .seo-related a:is(:hover,:focus-visible) { color:#8db7ff !important; }
+html body:is(.blog-article,.blog-page) .seo-related h2,
+html body:has(.shell > .hero) .seo-related h2 { color:#0b1728 !important; }
+html body:is(.blog-article,.blog-page) .seo-related a,
+html body:has(.shell > .hero) .seo-related a { color:#2454b8 !important; }
+html body:is(.blog-article,.blog-page) .seo-related a:is(:hover,:focus-visible),
+html body:has(.shell > .hero) .seo-related a:is(:hover,:focus-visible) { color:#2454b8 !important; text-decoration-thickness:2px; }

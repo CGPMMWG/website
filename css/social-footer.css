@@ -17,3 +17,11 @@ html body :is(.footer-logos,.case-footer-logos) img[alt="Google Partner"]{width:
 html body :is(.footer-logos,.case-footer-logos) img[alt="Facebook Ads"]{width:100px!important}
 html body :is(.footer-logos,.case-footer-logos) img[alt="CACE"]{width:90px!important}
 html body :is(#footer-text,.case-footer-copy){text-align:center!important;font-size:12px!important;line-height:1.6;margin:6px auto 0!important;color:#8f9cb0!important}
+
+/* Identical social glyphs and stable footer link colors. */
+html body :is(.tm-footer-social-inline,.footer-social-row) a,
+html body :is(.tm-footer-social-inline,.footer-social-row) a:is(:hover,:focus-visible,:visited) {
+ color:#9faec5 !important; filter:none !important; text-decoration:none !important;
+}
+html body .tm-privacy-links a:is(:hover,:focus-visible),
+html body .tm-privacy-links button:is(:hover,:focus-visible) { color:#a4b0c4 !important; }
