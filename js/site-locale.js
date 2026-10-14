@@ -113,12 +113,13 @@
 
 /* Supplied case wordmarks with a shared canvas. */
 (function () {
+ var logoRoot = new URL('../', document.currentScript.src);
  function updateCaseLogos() {
   document.querySelectorAll('img.flip-logo, img.case-detail-logo').forEach(function (image) {
    var source = image.getAttribute('src') || '';
    var brand = /pronto/i.test(source) ? 'prontoled' : /letra/i.test(source) ? 'letratec' : /vcg|gope/i.test(source) ? 'gope' : null;
    if (!brand) return;
-   image.src = '/img/case-logo-' + brand + '.png';
+   image.src = new URL('img/case-logo-' + brand + '.png', logoRoot).href;
    image.removeAttribute('srcset'); image.removeAttribute('sizes');
    image.width = 600; image.height = 220;
   });
