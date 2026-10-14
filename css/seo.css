@@ -486,3 +486,8 @@ html body.blog-article .article-image-track > .article-image {
    position:relative !important; top:auto !important; width:100% !important; margin:18px auto 24px !important;
  }
 }
+
+/* Consistent presentation of supplied case logos. */
+html body.case-detail-page .case-detail-logo { width:140px !important; height:64px !important; flex:0 0 140px !important; padding:0 !important; object-fit:contain; border:0 !important; border-radius:0; background:transparent !important; box-shadow:none !important; }
+html body #casos-exito .success-layout .flip-logo { width:140px !important; max-width:140px !important; height:56px !important; object-fit:contain !important; object-position:center !important; }
+@media(max-width:640px) { html body.case-detail-page .case-detail-logo { width:110px !important; height:48px !important; flex-basis:110px !important; } }

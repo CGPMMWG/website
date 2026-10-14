@@ -110,3 +110,19 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boundArticleImages);
   else boundArticleImages();
 })();
+
+/* Supplied case wordmarks with a shared canvas. */
+(function () {
+ function updateCaseLogos() {
+  document.querySelectorAll('img.flip-logo, img.case-detail-logo').forEach(function (image) {
+   var source = image.getAttribute('src') || '';
+   var brand = /pronto/i.test(source) ? 'prontoled' : /letra/i.test(source) ? 'letratec' : /vcg|gope/i.test(source) ? 'gope' : null;
+   if (!brand) return;
+   image.src = '/img/case-logo-' + brand + '.png';
+   image.removeAttribute('srcset'); image.removeAttribute('sizes');
+   image.width = 600; image.height = 220;
+  });
+ }
+ if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', updateCaseLogos);
+ else updateCaseLogos();
+})();
