@@ -32,3 +32,6 @@ html body :is(.tm-footer-social-inline,.footer-social-row) a[aria-label="Instagr
  width:25px !important; height:25px !important;
  opacity:1 !important; filter:none !important;
 }
+
+/* Match the visible size of both footer social icons. */
+html body :is(.tm-footer-social-inline,.footer-social-row) a[aria-label="LinkedIn"] img {content:url("linkedin-footer.svg?v=20261014-balanced");width:25px!important;height:25px!important;opacity:1!important;filter:none!important;}
