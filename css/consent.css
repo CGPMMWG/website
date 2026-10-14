@@ -76,3 +76,13 @@ html body.case-detail-page .tm-privacy-links {
 }
 html body.case-detail-page .tm-footer-social,
 html body.case-detail-page .tm-footer-legal { justify-content: center; }
+
+/* Isolate footer navigation even when older cached markup uses a nav tag. */
+html body .tm-privacy-links .tm-footer-social {
+ position:static !important; inset:auto !important; z-index:auto !important;
+ width:auto !important; height:auto !important; min-height:0 !important;
+ padding:0 !important; margin:0 !important; border:0 !important;
+ background:transparent !important; box-shadow:none !important;
+ backdrop-filter:none !important; transform:none !important;
+ display:flex !important; flex-wrap:wrap; gap:20px;
+}

@@ -144,7 +144,7 @@
       path: '/privacy.html'
     };
     var style = document.createElement('link');
-    style.rel = 'stylesheet'; style.href = '/css/consent.css';
+    style.rel = 'stylesheet'; style.href = '/css/consent.css?v=20261014-footer-nav';
     document.head.appendChild(style);
     banner = document.createElement('section');
     banner.className = 'tm-consent'; banner.hidden = true;
