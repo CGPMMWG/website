@@ -25,3 +25,10 @@ html body :is(.tm-footer-social-inline,.footer-social-row) a:is(:hover,:focus-vi
 }
 html body .tm-privacy-links a:is(:hover,:focus-visible),
 html body .tm-privacy-links button:is(:hover,:focus-visible) { color:#a4b0c4 !important; }
+
+/* Instagram: white, heavier glyph matching the LinkedIn footer mark. */
+html body :is(.tm-footer-social-inline,.footer-social-row) a[aria-label="Instagram"] img {
+ content:url("instagram-footer.svg?v=20261014-white");
+ width:25px !important; height:25px !important;
+ opacity:1 !important; filter:none !important;
+}
