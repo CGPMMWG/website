@@ -296,6 +296,27 @@
     assign("case-eyebrow", copy.eyebrow);
     assign("case-title", copy.title);
     assign("case-summary", copy.summary);
+    // Translate the complete case contact section, including generated EN pages.
+    const contactTranslations = {"prontoled":{"es":["Convertí tu demanda en un sistema comercial.","Si tenés leads, clientes dormidos o campañas que no terminan de convertir, podemos ayudarte a ordenar el funnel y activar un sistema medible."],"en":["Turn demand into a sales system.","If you have leads, inactive customers or campaigns that are not converting, we can help you organize your funnel and build a measurable sales system."]},"letratec":{"es":["Convertí tu web en una plataforma comercial.","Si tu presencia digital no está generando consultas claras, podemos ayudarte a ordenar la experiencia, el posicionamiento y el camino hacia la conversión."],"en":["Turn your website into a sales platform.","If your digital presence is not generating meaningful inquiries, we can help you improve the experience, positioning and path to conversion."]},"vcg":{"es":["Convertí tu marca en un activo comercial.","Si tu identidad, tu web o tus campañas no están transmitiendo el valor real de tu negocio, podemos ayudarte a ordenarlo con estrategia, diseño y ejecución."],"en":["Turn your brand into a business asset.","If your identity, website or campaigns are not communicating the true value of your business, we can help bring them together through strategy, design and execution."]}};
+    const contactPack = contactTranslations[caseKey];
+    if (contactPack) {
+      const contact = contactPack[lang] || contactPack.es;
+      assign("case-contact-title", contact[0]);
+      const description = document.querySelector('.case-contact-copy #case-contact-title + p');
+      if (description) description.textContent = contact[1];
+    }
+    const contactLabels = lang === 'en'
+      ? {name: 'Name', company: 'Company', email: 'Email', project: 'Tell us what you need help with'}
+      : {name: 'Nombre', company: 'Empresa', email: 'Email', project: 'Contanos qué necesitás resolver'};
+    Object.keys(contactLabels).forEach(function (name) {
+      const field = document.querySelector('.case-contact-section [name="' + name + '"]');
+      const label = field && field.closest('label');
+      const span = label && label.querySelector('span');
+      if (span) span.textContent = contactLabels[name];
+    });
+    const contactButton = document.querySelector('.case-contact-button');
+    if (contactButton) contactButton.textContent = lang === 'en' ? 'Send inquiry' : 'Enviar consulta';
+
     const introTitle = document.getElementById("case-title");
     let introSubtitle = document.getElementById("case-intro-subtitle");
     if (introTitle && !introSubtitle) {
