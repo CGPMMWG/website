@@ -169,7 +169,10 @@
     var policy = document.createElement('a'); policy.href = new URL(text.path.replace(/^\//, ''), consentRoot).href; policy.textContent = text.privacy;
     var legal = document.createElement('div'); legal.className = 'tm-footer-legal';
     legal.appendChild(prefs); legal.appendChild(policy);
-    footer.appendChild(legal); document.body.appendChild(footer);
+    footer.appendChild(legal);
+    var socialLinks = document.querySelector('body > .tm-footer-social-inline');
+    if (socialLinks) footer.insertBefore(socialLinks, legal);
+    document.body.appendChild(footer);
     banner.addEventListener('keydown', function (event) { if (event.key === 'Escape' && read()) hide(); });
     var choice = read();
     apply(choice);
