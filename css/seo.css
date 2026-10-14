@@ -491,3 +491,53 @@ html body.blog-article .article-image-track > .article-image {
 html body.case-detail-page .case-detail-logo { width:140px !important; height:64px !important; flex:0 0 140px !important; padding:0 !important; object-fit:contain; border:0 !important; border-radius:0; background:transparent !important; box-shadow:none !important; }
 html body #casos-exito .success-layout .flip-logo { width:140px !important; max-width:140px !important; height:56px !important; object-fit:contain !important; object-position:center !important; }
 @media(max-width:640px) { html body.case-detail-page .case-detail-logo { width:110px !important; height:48px !important; flex-basis:110px !important; } }
+
+/* Center the case-card text group instead of stretching its second grid row. */
+html body #casos-exito .success-layout .flip-front {
+  grid-template-columns: 180px minmax(0,1fr) auto;
+  grid-template-rows: max-content max-content;
+  align-content: center !important;
+  column-gap: 28px;
+  row-gap: 8px !important;
+}
+html body #casos-exito .success-layout .flip-title {
+  align-self: center;
+  margin: 0 !important;
+  line-height: 1.3;
+}
+html body #casos-exito .success-layout .flip-desc {
+  align-self: center;
+  margin: 0 !important;
+  line-height: 1.55;
+}
+html body #casos-exito .success-layout .flip-logo {
+  width: 160px !important;
+  max-width: 160px !important;
+  height: 72px !important;
+  justify-self: center;
+}
+html body #casos-exito .success-layout .flip-logo[src*="case-logo-gope"] {
+  transform: scale(1.22);
+}
+html body #casos-exito .success-layout .flip-hint {
+  align-self: center !important;
+}
+@media (max-width:900px) {
+ html body #casos-exito .success-layout .flip-front {
+   grid-template-columns:160px minmax(0,1fr);
+   grid-template-rows:max-content max-content max-content;
+ }
+ html body #casos-exito .success-layout .flip-hint {
+   grid-column:2; grid-row:3; justify-self:start; margin-top:6px !important;
+ }
+ html body #casos-exito .success-layout .flip-logo { grid-row:1 / 4; }
+}
+@media (max-width:560px) {
+ html body #casos-exito .success-layout .flip-front {
+   grid-template-columns:minmax(0,1fr); text-align:center;
+   padding:28px 24px !important; row-gap:12px !important;
+ }
+ html body #casos-exito .success-layout :is(.flip-logo,.flip-title,.flip-desc,.flip-hint) {
+   grid-column:1; grid-row:auto; justify-self:center;
+ }
+}
