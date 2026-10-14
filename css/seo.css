@@ -464,3 +464,25 @@ html body.blog-article .article-image img {
     max-width: 390px !important;
   }
 }
+
+/* The rail ends with the intro: artwork cannot cover the next section. */
+html body.blog-article .article-intro { overflow: clip; }
+html body.blog-article .article-image-track {
+  grid-column: 2; grid-row: 1;
+  align-self: stretch; position: relative; min-width: 0;
+}
+html body.blog-article .article-intro > .article-hero { grid-row: 1; }
+html body.blog-article .article-image-track > .article-image {
+  position: sticky !important; top: 104px !important;
+  width: 80% !important; max-width: 400px !important;
+  height: auto !important; min-height: 0 !important;
+  margin: 0 auto !important; padding: 10px !important;
+  animation: none !important; transform: none !important;
+}
+@media(max-width:820px) {
+ html body.blog-article .article-image-track { grid-column:1; grid-row:auto; }
+ html body.blog-article .article-intro > .article-hero { grid-row:auto; }
+ html body.blog-article .article-image-track > .article-image {
+   position:relative !important; top:auto !important; width:100% !important; margin:18px auto 24px !important;
+ }
+}

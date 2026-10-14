@@ -95,3 +95,18 @@
     document.head.appendChild(icon);
   }
 })();
+
+/* Bound sticky article artwork to a dedicated intro-height rail. */
+(function () {
+  function boundArticleImages() {
+    if (!document.body.classList.contains('blog-article')) return;
+    document.querySelectorAll('.article-intro > .article-image').forEach(function (image) {
+      var rail = document.createElement('div');
+      rail.className = 'article-image-track';
+      image.parentNode.insertBefore(rail, image);
+      rail.appendChild(image);
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boundArticleImages);
+  else boundArticleImages();
+})();
