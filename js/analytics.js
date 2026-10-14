@@ -166,7 +166,8 @@
     var footer = document.createElement('div'); footer.className = 'tm-privacy-links';
     prefs = button(text.prefs, show);
     var policy = document.createElement('a'); policy.href = text.path; policy.textContent = text.privacy;
-    var social = document.createElement('nav');
+    var social = document.createElement('div');
+    social.setAttribute('role', 'navigation');
     social.className = 'tm-footer-social';
     social.setAttribute('aria-label', en ? 'Social media' : 'Redes sociales');
     [
