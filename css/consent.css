@@ -126,3 +126,16 @@ html body .tm-privacy-links button {
 }
 html body .tm-privacy-links a:hover,
 html body .tm-privacy-links button:hover { color:#dce7fc !important; }
+
+/* Align button and link baselines consistently in both languages. */
+html body .tm-privacy-links .tm-footer-legal {
+ display:flex !important; align-items:center !important; justify-content:center !important;
+ gap:12px 24px !important;
+}
+html body .tm-privacy-links .tm-footer-legal > :is(a,button) {
+ display:inline-flex !important; align-items:center !important; justify-content:center !important;
+ box-sizing:border-box !important; height:36px !important; min-height:36px !important;
+ margin:0 !important; padding:6px 2px !important; border:0 !important;
+ background:transparent !important; line-height:1.5 !important;
+ vertical-align:middle !important; transform:none !important; font-family:inherit !important;
+}
