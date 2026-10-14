@@ -86,3 +86,43 @@ html body .tm-privacy-links .tm-footer-social {
  backdrop-filter:none !important; transform:none !important;
  display:flex !important; flex-wrap:wrap; gap:20px;
 }
+
+/* Consistent compact footer across all page templates. */
+html body .tm-privacy-links {
+  position: relative !important;
+  inset: auto !important;
+  isolation: isolate;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 20px 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  background: #07101f !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(170,191,224,.12) !important;
+  box-shadow: none !important;
+  text-align: center !important;
+}
+html body .tm-privacy-links::before,
+html body .tm-privacy-links::after { display: none !important; }
+html body .tm-privacy-links .tm-footer-legal {
+ display:flex !important; justify-content:center !important; align-items:center;
+ flex-wrap:wrap; gap:10px 24px; width:100%;
+}
+html body .tm-privacy-links .tm-footer-social-inline {
+ width:100%; margin:0; justify-content:center;
+ background:transparent !important; background-image:none !important;
+}
+html body .tm-privacy-links a,
+html body .tm-privacy-links button {
+ font-size:12px !important; font-weight:400 !important;
+ color:#a4b0c4 !important; min-height:30px; padding:6px 2px;
+}
+html body .tm-privacy-links a:hover,
+html body .tm-privacy-links button:hover { color:#dce7fc !important; }
