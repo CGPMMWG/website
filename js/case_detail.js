@@ -441,7 +441,9 @@
     if (!counters.length) return;
 
     counters.forEach(function (counter) {
-      const raw = counter.textContent.trim();
+      const raw = counter.dataset.value !== undefined
+        ? (counter.dataset.prefix || "") + counter.dataset.value + (counter.dataset.suffix || "")
+        : counter.textContent.trim();
       const match = raw.match(/^([^0-9+\-]*)([+\-]?)([\d.,]+)(.*)$/);
       if (!match) return;
       const prefix = (match[1] || "") + (match[2] || "");
@@ -457,21 +459,23 @@
       counter.dataset.suffix = suffix;
       counter.dataset.value = numberPart.replace(",", ".");
       counter.dataset.decimals = decimals;
-      counter.textContent = prefix + "0" + suffix;
+      counter.textContent = prefix + numberPart + suffix;
     });
 
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
           const el = entry.target;
           if (entry.isIntersecting) {
             startAnimation(el);
+            observer.unobserve(el);
           } else {
             resetCounter(el);
           }
         });
       },
-      { threshold: 0.65 }
+      { threshold: 0.15 }
     );
 
     counters.forEach(function (counter) {
@@ -510,7 +514,7 @@
         el._raf = null;
       }
       el.dataset.animating = "false";
-      el.textContent = (el.dataset.prefix || "") + "0" + (el.dataset.suffix || "");
+      el.textContent = (el.dataset.prefix || "") + (el.dataset.value || "0") + (el.dataset.suffix || "");
     }
 
     function formatNumber(value, decimals) {

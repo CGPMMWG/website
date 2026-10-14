@@ -390,3 +390,31 @@ html body.case-detail-page .case-detail-cta:hover { background: #3574f0 !importa
   html body.case-detail-page .case-detail-stats p { margin: 0; font-size: .82rem; }
   html body.case-detail-page .case-detail-logo { flex-basis: 56px; width: 56px; height: 56px; }
 }
+
+/* Clean editorial project summary. */
+html body.case-detail-page .case-detail-stage.single { max-width: 1040px; padding: clamp(24px,4vw,48px); }
+html body.case-detail-page .case-detail-stage.single .case-detail-card { grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr); gap:40px; }
+html body.case-detail-page .case-detail-card .case-hook { display:none; }
+html body.case-detail-page .case-detail-hero { align-items:center; margin-bottom:28px; }
+html body.case-detail-page .case-detail-card h4 { font-size:clamp(1.35rem,2vw,1.85rem); line-height:1.25; max-width:480px; }
+html body.case-detail-page .case-detail-copy { font-size:1rem; line-height:1.8; }
+html body.case-detail-page .case-detail-stats { gap:0; border-top:1px solid rgba(170,190,225,.18); padding-top:22px; }
+html body.case-detail-page .case-detail-stats li { border:0 !important; background:transparent !important; padding:0 16px; border-radius:0; }
+html body.case-detail-page .case-detail-stats li:first-child { padding-left:0; }
+html body.case-detail-page .case-detail-stats li+li { border-left:1px solid rgba(170,190,225,.14) !important; }
+html body.case-detail-page .case-detail-stats span { font-size:2rem; font-weight:700; }
+html body.case-detail-page .case-detail-stats p { margin-top:8px; font-size:.78rem; }
+html body.case-detail-page .case-detail-footer { padding-left:32px; gap:26px; }
+html body.case-detail-page .case-detail-footer .stack { order:0; font-size:.8rem; }
+html body.case-detail-page .case-testimonial { order:1; padding:0; border:0; background:transparent; box-shadow:none; }
+html body.case-detail-page .case-testimonial__quote { font-size:1.02rem; line-height:1.75; color:#e2eaf8; }
+html body.case-detail-page .case-testimonial__author { color:#93b7ed; }
+html body.case-detail-page .case-detail-cta { order:2; }
+@media(max-width:900px) {
+ html body.case-detail-page .case-detail-stage.single .case-detail-card { grid-template-columns:1fr; gap:28px; }
+ html body.case-detail-page .case-detail-footer { padding:24px 0 0; }
+}
+@media(max-width:480px) {
+ html body.case-detail-page .case-detail-stats li { padding:14px 0; }
+ html body.case-detail-page .case-detail-stats li+li { border-left:0 !important; border-top:1px solid rgba(170,190,225,.14) !important; }
+}
