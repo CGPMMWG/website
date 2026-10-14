@@ -541,3 +541,34 @@ html body #casos-exito .success-layout .flip-hint {
    grid-column:1; grid-row:auto; justify-self:center;
  }
 }
+
+/* Large portrait article artwork, constrained by the intro rail. */
+html body.blog-article .article-image-track > .article-image,
+html body.blog-article .article-intro > .article-image,
+html body.blog-article .article-shell > .article-image {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 460px !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 12px !important;
+  border-radius: 16px !important;
+}
+html body.blog-article .article-image img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 3 / 4 !important;
+  max-height: none !important;
+  min-height: 0 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 10px !important;
+}
+@media (max-width:820px) {
+ html body.blog-article .article-image-track > .article-image,
+ html body.blog-article .article-intro > .article-image,
+ html body.blog-article .article-shell > .article-image {
+   max-width: 460px !important;
+ }
+}
