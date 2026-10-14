@@ -105,7 +105,7 @@ function schemaFor(page,lang,heading) {
 
 // This function runs in Chromium's parser, with no page scripts or network requests.
 function transform({html,page,lang,assets,config,graph,stamp,origin,cleanup}) {
-  const doc = new DOMParser().parseFromString(html,'text/html');
+  const doc = new DOMParser().parseFromString(html.replace(/\uFEFF/g,''),'text/html');
   const canonical=origin+(lang==='en'?'/en':'')+'/'+page.file.replace(/index\.html$/,'');
   const originalUrl=origin+(cleanup&&lang==='en'?'/en/':'/')+page.file;
   const meta=page[lang];
