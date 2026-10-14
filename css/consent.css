@@ -22,3 +22,18 @@ html body .tm-privacy-links { display:flex; justify-content:center; flex-wrap:wr
 html body .tm-privacy-links button, html body .tm-privacy-links a { border:0; background:none; color:#bdcce3; cursor:pointer; text-decoration:underline; font: .8rem/1.5 Inter,system-ui,sans-serif; padding:6px; }
 html body .tm-consent :focus-visible, html body .tm-privacy-links :focus-visible { outline:2px solid #a8c8ff; outline-offset:4px; }
 @media(max-width:480px) { html body .tm-consent { inset:auto 10px 10px; padding:18px; } }
+
+/* Shared social and privacy footer. */
+html body .tm-privacy-links {
+  justify-content: space-between; align-items: center;
+  gap: 16px 32px; padding: 24px max(24px, calc((100vw - 1120px) / 2));
+  border-top: 1px solid rgba(170,191,224,.16);
+}
+html body .tm-footer-social, html body .tm-footer-legal { display:flex; align-items:center; flex-wrap:wrap; gap:20px; }
+html body .tm-footer-social a { display:inline-flex; align-items:center; gap:9px; min-height:44px; text-decoration:none; }
+html body .tm-footer-social a:hover { color:#fff; }
+html body .tm-footer-social svg { flex-shrink:0; }
+@media(max-width:640px) {
+  html body .tm-privacy-links { justify-content:center; }
+  html body .tm-footer-social, html body .tm-footer-legal { justify-content:center; }
+}

@@ -166,7 +166,30 @@
     var footer = document.createElement('div'); footer.className = 'tm-privacy-links';
     prefs = button(text.prefs, show);
     var policy = document.createElement('a'); policy.href = text.path; policy.textContent = text.privacy;
-    footer.appendChild(prefs); footer.appendChild(policy); document.body.appendChild(footer);
+    var social = document.createElement('nav');
+    social.className = 'tm-footer-social';
+    social.setAttribute('aria-label', en ? 'Social media' : 'Redes sociales');
+    [
+      ['Instagram', 'https://www.instagram.com/trendmakers.agency_/', 'instagram'],
+      ['LinkedIn', 'https://www.linkedin.com/company/trendmakersagency/', 'linkedin']
+    ].forEach(function (item) {
+      var link = document.createElement('a');
+      link.href = item[1]; link.target = '_blank'; link.rel = 'noopener noreferrer';
+      var icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      icon.setAttribute('viewBox', '0 0 24 24'); icon.setAttribute('aria-hidden', 'true');
+      icon.setAttribute('width', '18'); icon.setAttribute('height', '18');
+      if (item[2] === 'instagram') {
+        icon.innerHTML = '<rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>';
+      } else {
+        icon.innerHTML = '<rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="7.5" cy="7.5" r="1.2" fill="currentColor"/><path d="M7.5 10v7M11 17v-7m0 3c0-4 6-4 6 0v4" fill="none" stroke="currentColor" stroke-width="1.8"/>';
+      }
+      link.appendChild(icon);
+      link.appendChild(document.createTextNode(item[0]));
+      social.appendChild(link);
+    });
+    var legal = document.createElement('div'); legal.className = 'tm-footer-legal';
+    legal.appendChild(prefs); legal.appendChild(policy);
+    footer.appendChild(social); footer.appendChild(legal); document.body.appendChild(footer);
     banner.addEventListener('keydown', function (event) { if (event.key === 'Escape' && read()) hide(); });
     var choice = read();
     apply(choice);
