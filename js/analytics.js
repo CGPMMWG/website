@@ -100,6 +100,7 @@
 (function () {
   'use strict';
   if (window.TrendMakersConsent) return;
+  var consentRoot = new URL('../', document.currentScript.src);
   var KEY = 'tm.analytics.consent.v1';
   var AGE = 180 * 24 * 60 * 60 * 1000;
   window.TM_GA4_SETTINGS = {enabled: true, measurementMode: 'manual-pageviews-with-enhanced-events'};
@@ -144,14 +145,14 @@
       path: '/privacy.html'
     };
     var style = document.createElement('link');
-    style.rel = 'stylesheet'; style.href = '/css/consent.css?v=20261014-footer-nav';
+    style.rel = 'stylesheet'; style.href = new URL('css/consent.css?v=20261014-local-paths', consentRoot).href;
     document.head.appendChild(style);
     banner = document.createElement('section');
     banner.className = 'tm-consent'; banner.hidden = true;
     banner.setAttribute('role', 'region'); banner.setAttribute('aria-label', text.title);
     var heading = document.createElement('h2'); heading.textContent = text.title;
     var body = document.createElement('p'); body.textContent = text.body;
-    var more = document.createElement('a'); more.href = text.path; more.textContent = text.privacy;
+    var more = document.createElement('a'); more.href = new URL(text.path.replace(/^\//, ''), consentRoot).href; more.textContent = text.privacy;
     var actions = document.createElement('div'); actions.className = 'tm-consent__actions';
     function button(label, handler) {
       var el = document.createElement('button'); el.type = 'button'; el.textContent = label;
@@ -165,7 +166,7 @@
     document.body.appendChild(banner);
     var footer = document.createElement('div'); footer.className = 'tm-privacy-links';
     prefs = button(text.prefs, show);
-    var policy = document.createElement('a'); policy.href = text.path; policy.textContent = text.privacy;
+    var policy = document.createElement('a'); policy.href = new URL(text.path.replace(/^\//, ''), consentRoot).href; policy.textContent = text.privacy;
     var legal = document.createElement('div'); legal.className = 'tm-footer-legal';
     legal.appendChild(prefs); legal.appendChild(policy);
     footer.appendChild(legal); document.body.appendChild(footer);
