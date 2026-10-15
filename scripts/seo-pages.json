@@ -140,7 +140,11 @@
     "en": {
       "title": "Branding That Builds Trust and Business Opportunities | TrendMakers",
       "description": "Learn how clear positioning, visual identity and consistent brand communication build trust and support business growth."
-    }
+    },
+    "relatedFiles": [
+      "servicios/branding-communication.html",
+      "casos-exito/caso-gope-consulting.html"
+    ]
   },
   {
     "file": "blog/blog-calificaciones-google.html",
@@ -150,7 +154,12 @@
       "title": "Reseñas de Google: impacto en ventas | TrendMakers",
       "description": "Cómo las reseñas y calificaciones de Google impactan en la confianza, la visibilidad y la conversión de tu negocio."
     },
-    "en": null
+    "en": null,
+    "relatedFiles": [
+      "servicios/marketing-automation.html",
+      "servicios/data-analytics.html",
+      "casos-exito/caso-prontoled.html"
+    ]
   },
   {
     "file": "blog/blog-email-marketing-automatizacion.html",
@@ -163,7 +172,11 @@
     "en": {
       "title": "Email Marketing & Lead Nurturing That Converts | TrendMakers",
       "description": "Learn how to connect email marketing, automation, lead nurturing and CRM to guide prospects through the funnel and turn opportunities into sales."
-    }
+    },
+    "relatedFiles": [
+      "servicios/marketing-automation.html",
+      "casos-exito/caso-prontoled.html"
+    ]
   },
   {
     "file": "blog/blog-errores-marketing.html",
@@ -176,7 +189,11 @@
     "en": {
       "title": "Marketing Automation: Stop Losing Leads | TrendMakers",
       "description": "Connect funnels, CRM, automation and data to follow up on every lead and turn digital marketing into a measurable growth system."
-    }
+    },
+    "relatedFiles": [
+      "servicios/marketing-automation.html",
+      "casos-exito/caso-prontoled.html"
+    ]
   },
   {
     "file": "blog/blog-ia-automatizacion.html",
@@ -189,7 +206,12 @@
     "en": {
       "title": "How AI Transforms Businesses and Operations | TrendMakers",
       "description": "Explore practical uses of artificial intelligence to automate business processes, improve decisions and build a competitive advantage."
-    }
+    },
+    "relatedFiles": [
+      "servicios/ia-hub.html",
+      "servicios/marketing-automation.html",
+      "casos-exito/caso-prontoled.html"
+    ]
   },
   {
     "file": "blog/blog-ia-marketing-growth.html",
@@ -202,7 +224,12 @@
     "en": {
       "title": "AI in Marketing: From Content to Business Growth | TrendMakers",
       "description": "Connect AI with marketing research, creativity, segmentation, automation and measurement to turn isolated content into strategic business growth."
-    }
+    },
+    "relatedFiles": [
+      "servicios/ia-hub.html",
+      "servicios/marketing-automation.html",
+      "casos-exito/caso-prontoled.html"
+    ]
   },
   {
     "file": "blog/blog-ia2.html",
@@ -215,7 +242,12 @@
     "en": {
       "title": "AI in Marketing: Investing in Brand Growth | TrendMakers",
       "description": "Learn how AI, automation and data help brands improve marketing decisions, reduce manual work and build a more scalable growth system."
-    }
+    },
+    "relatedFiles": [
+      "servicios/ia-hub.html",
+      "servicios/data-analytics.html",
+      "casos-exito/caso-prontoled.html"
+    ]
   },
   {
     "file": "blog/blog-marketing-estrategico.html",
@@ -228,7 +260,12 @@
     "en": {
       "title": "Strategic Marketing: Build a Growth System | TrendMakers",
       "description": "Connect content, paid media, sales and data in a measurable growth system. Learn how strategic marketing turns isolated actions into coordinated execution."
-    }
+    },
+    "relatedFiles": [
+      "servicios/marketing-automation.html",
+      "servicios/data-analytics.html",
+      "casos-exito/caso-prontoled.html"
+    ]
   },
   {
     "file": "blog/blog-websites1.html",
@@ -241,7 +278,11 @@
     "en": {
       "title": "Websites & E-Commerce Designed to Convert | TrendMakers",
       "description": "Learn how website speed, user experience, SEO and connected digital systems help turn visits into inquiries and online sales."
-    }
+    },
+    "relatedFiles": [
+      "servicios/web-ecommerce.html",
+      "casos-exito/caso-letratec.html"
+    ]
   },
   {
     "file": "casos-exito/caso-gope-consulting.html",
