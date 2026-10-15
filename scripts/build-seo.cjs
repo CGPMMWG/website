@@ -209,7 +209,7 @@ function transform({html,page,lang,assets,config,graph,stamp,origin,cleanup}) {
     const container=doc.querySelector('main')||doc.querySelector('.shell');
     if(container){
       const section=doc.createElement('section');section.className='seo-related';
-      const title=doc.createElement('h2');title.textContent=page.type==='BlogPosting'?(lang==='en'?'Related services and case studies':'Servicios y casos de éxito relacionados'):(lang==='en'?'Explore related services and insights':'Servicios y artículos relacionados');section.appendChild(title);
+      const title=doc.createElement('h2');title.textContent=page.type==='BlogPosting'?(lang==='en'?'Related services, case studies and articles':'Servicios, casos y artículos relacionados'):(lang==='en'?'Related services, case studies and articles':'Servicios, casos y artículos relacionados');section.appendChild(title);
       const list=doc.createElement('ul');
       config.related.forEach(item=>{const li=doc.createElement('li');const a=doc.createElement('a');a.href=item.href;a.textContent=item.name;li.appendChild(a);list.appendChild(li);});
       section.appendChild(list);container.appendChild(section);
