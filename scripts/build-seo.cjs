@@ -220,7 +220,7 @@ function transform({html,page,lang,assets,config,graph,stamp,origin,cleanup}) {
       if(page.type==='BlogPosting'){
         section.outerHTML=config.reading;
         doc.querySelectorAll('link[href*="related-reading.css"]').forEach(el=>el.remove());
-        add('link',{rel:'stylesheet',href:'/css/related-reading.css?v=20261017-cards'});
+        add('link',{rel:'stylesheet',href:'/css/related-reading.css?v=20261017-mobile-gutters'});
       } else {
         section.outerHTML=config.relatedCards;
         doc.querySelectorAll('link[href*="related-content.css"]').forEach(el=>el.remove());

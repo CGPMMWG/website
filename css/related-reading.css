@@ -26,3 +26,17 @@ html body .article-reading__practice a{font:600 14px/1.6 Inter,system-ui,sans-se
 @media(max-width:700px){html body .article-reading__header{align-items:flex-start;flex-direction:column;gap:12px}html body .article-reading__grid{grid-template-columns:1fr}html body .article-reading .reading-card__body{padding:22px}html body .article-reading__practice{padding:22px}html body .article-reading__practice ul{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html body .article-reading .reading-card{transition:none}html body .article-reading .reading-card:hover{transform:none}}
 
+
+/* Mobile reading recommendations need their own gutter inside edge-to-edge article shells. */
+@media(max-width:700px){
+ html body .article-reading{box-sizing:border-box;width:calc(100% - 40px)!important;max-width:calc(100% - 40px)!important;margin-left:auto!important;margin-right:auto!important;padding-top:28px}
+ html body .article-reading__header{gap:10px;margin-bottom:20px}
+ html body .article-reading h2{font-size:26px!important;line-height:1.18!important;letter-spacing:-.025em}
+ html body .article-reading__header p{font-size:14px!important;line-height:1.6!important}
+ html body .article-reading__all{font-size:13px;padding:6px 0}
+ html body .article-reading__grid{min-width:0;gap:20px}
+ html body .article-reading .reading-card{min-width:0;max-width:100%;border-radius:14px}
+ html body .article-reading .reading-card__body{padding:20px}
+ html body .article-reading .reading-card h3{font-size:19px!important;line-height:1.3}
+ html body .article-reading__practice{padding:20px;margin-top:22px}
+}
