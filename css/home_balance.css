@@ -744,3 +744,9 @@ html body.home-page .brand-marquee__group i { box-shadow: none; }
 }
 @keyframes mobileServicesUnderline{from{clip-path:inset(0 100% 0 0);opacity:.35}to{clip-path:inset(0);opacity:1}}
 @media(max-width:767px) and (prefers-reduced-motion:reduce){html body #servicios #services-title.is-visible::after{animation:none!important}}
+
+/* Give methodology cards breathing room at phone viewport edges. */
+@media(max-width:640px){
+ html body #acerca .why-grid{box-sizing:border-box;width:calc(100% - 40px)!important;max-width:100%!important;margin-left:auto!important;margin-right:auto!important;gap:16px!important}
+ html body #acerca .why-card{box-sizing:border-box;width:100%!important;min-width:0!important}
+}
