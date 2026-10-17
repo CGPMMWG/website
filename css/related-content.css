@@ -1,0 +1,25 @@
+/* Shared resource cards; scoped away from article reading recommendations. */
+html body .related-content{margin:clamp(40px,6vw,72px) 0 24px!important;padding-top:32px;border-top:1px solid #d8e0eb}
+html body .related-content__heading{margin-bottom:24px;max-width:780px}
+html body .related-content__eyebrow{display:block;margin-bottom:12px;font:700 11px/1.5 Inter,system-ui,sans-serif;letter-spacing:.16em;color:#4265a2}
+html body .related-content h2{font:700 clamp(24px,2.6vw,34px)/1.2 Inter,system-ui,sans-serif!important;letter-spacing:-.03em;margin:0!important;color:#142338!important}
+html body .related-content ul.related-content__grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px;margin:0;padding:0;list-style:none}
+html body .related-content__grid>li{display:flex;min-width:0;margin:0;padding:0;list-style:none}
+html body .related-content a.related-link-card{box-sizing:border-box;display:flex;flex-direction:column;width:100%;padding:28px;border:1px solid #d6dfeb;border-radius:16px;background:#fff;box-shadow:0 8px 24px #16294306;color:#142338!important;text-decoration:none!important;transition:transform .2s,border-color .2s,box-shadow .2s}
+html body .related-content a.related-link-card:is(:hover,:focus-visible){color:#142338!important;border-color:#8ba8da;box-shadow:0 16px 32px #16294312;transform:translateY(-4px);text-decoration:none!important}
+html body .related-content a.related-link-card:focus-visible{outline:3px solid #2861e8;outline-offset:4px}
+html body .related-content .related-link-card__type{font:600 11px/1.5 Inter,system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#4265a2;margin-bottom:16px}
+html body .related-content .related-link-card h3{font:700 clamp(20px,1.8vw,24px)/1.3 Inter,system-ui,sans-serif!important;letter-spacing:-.02em;color:#142338!important;margin:0 0 14px!important}
+html body .related-content .related-link-card p{font:400 14px/1.7 Inter,system-ui,sans-serif!important;color:#586a83!important;margin:0 0 24px!important}
+html body .related-content .related-link-card__action{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-top:auto;padding-top:18px;border-top:1px solid #e6ebf2;font:600 13px/1.5 Inter,system-ui,sans-serif;color:#2454b8}
+html body.case-detail-page .related-content{border-color:#263449}
+html body.case-detail-page .related-content h2{color:#f4f7ff!important}
+html body.case-detail-page .related-content__eyebrow,html body.case-detail-page .related-link-card__type{color:#9abcf4}
+html body.case-detail-page .related-content a.related-link-card{background:#101c2e;border-color:#2b3b52;color:#f4f7ff!important}
+html body.case-detail-page .related-content a.related-link-card:is(:hover,:focus-visible){border-color:#7da4df;color:#f4f7ff!important}
+html body.case-detail-page .related-content .related-link-card h3{color:#f4f7ff!important}
+html body.case-detail-page .related-content .related-link-card p{color:#b0bfd4!important}
+html body.case-detail-page .related-content .related-link-card__action{color:#a8c8ff;border-color:#2b3b52}
+@media(max-width:600px){html body .related-content ul.related-content__grid{grid-template-columns:1fr}html body .related-content a.related-link-card{padding:24px}}
+@media(prefers-reduced-motion:reduce){html body .related-content a.related-link-card{transition:none}html body .related-content a.related-link-card:is(:hover,:focus-visible){transform:none}}
+

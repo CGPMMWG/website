@@ -3,6 +3,7 @@ const sharp = require('sharp');
 const {fs,path,root,origin,pages,route,localized,browser,server} = require('./site-tools.cjs');
 const { portableMarkup } = require('./portable-paths.cjs');
 const { relatedReading } = require('./related-reading.cjs');
+const { relatedContent } = require('./related-content.cjs');
 const stamp = '20260921-seo';
 const optimizedDir = path.join(root,'img/optimized');
 const assets = {};
@@ -55,11 +56,12 @@ function configFor(page,lang) {
   const topic=/branding|gope|calificaciones/.test(page.file)?'branding':/web|letratec/.test(page.file)?'web':/ia-|ia2|data-/.test(page.file)?'ai':'marketing';
   const related = (page.relatedFiles || topics[topic]).filter(file=>file!==page.file).map(file=>{
     const entry=pages.find(p=>p.file===file);
-    return {href:localized(file,lang),name:entry[lang].title.split(' | ')[0]};
+    return {href:localized(file,lang),name:entry[lang].title.split(' | ')[0],description:entry[lang].description,type:entry.type};
   });
   return {
     title:meta.title,description:meta.description,
     reading:page.type==='BlogPosting'?relatedReading(page,lang,pages):null,
+    relatedCards:['Service','Article'].includes(page.type)?relatedContent(related,lang):null,
     alternates:{es:route(page.file),...(page.en?{en:localized(page.file,'en')}:{})},
     pages:pages.map(p=>route(p.file)),english:pages.filter(p=>p.en).map(p=>route(p.file)),related
   };
@@ -131,7 +133,7 @@ function transform({html,page,lang,assets,config,graph,stamp,origin,cleanup}) {
   if(page.en)add('meta',{property:'og:locale:alternate',content:lang==='en'?'es_AR':'en_US'});
   for(const [key,value]of Object.entries({card:'summary_large_image',title:meta.title,description:meta.description,image,'image:alt':meta.title.split(' | ')[0]}))add('meta',{name:'twitter:'+key,content:value});
   add('script',{id:'seo-entity-schema',type:'application/ld+json'},JSON.stringify(graph).replace(/</g,'\\u003c'));
-  const configEl=add('script',{id:'page-seo',type:'application/json'},JSON.stringify(config).replace(/</g,'\\u003c'));
+  const configEl=add('script',{id:'page-seo',type:'application/json'},JSON.stringify({...config,reading:undefined,relatedCards:undefined}).replace(/</g,'\\u003c'));
   const locale=doc.createElement('script');locale.src='/js/site-locale.js?v='+stamp;
   // Locale is established before any inline page translation or deferred script.
   doc.head.insertBefore(configEl,doc.head.querySelector('script'));
@@ -219,6 +221,10 @@ function transform({html,page,lang,assets,config,graph,stamp,origin,cleanup}) {
         section.outerHTML=config.reading;
         doc.querySelectorAll('link[href*="related-reading.css"]').forEach(el=>el.remove());
         add('link',{rel:'stylesheet',href:'/css/related-reading.css?v=20261017-cards'});
+      } else {
+        section.outerHTML=config.relatedCards;
+        doc.querySelectorAll('link[href*="related-content.css"]').forEach(el=>el.remove());
+        add('link',{rel:'stylesheet',href:'/css/related-content.css?v=20261017-cards'});
       }
     }
   }
