@@ -75,7 +75,7 @@ function schemaFor(page,lang,heading) {
   const image = {'@type':'ImageObject','@id':canonical+'#image',url:origin+asset.src,width:asset.width,height:asset.height};
   const orgId=origin+'/#organization',siteId=origin+'/#website';
   const graph = [
-    {'@type':'Organization','@id':orgId,name:'TrendMakers',alternateName:'TrendMakers Agency',url:origin+'/',logo:{'@type':'ImageObject',url:origin+'/img/logo1.png',width:384,height:379},email:'info@trendmakers.agency',telephone:'+54 11 2254-9351',sameAs:['https://www.linkedin.com/company/trendmakersagency','https://www.instagram.com/trendmakers.agency_'],contactPoint:[{'@type':'ContactPoint',contactType:'sales',email:'info@trendmakers.agency',availableLanguage:['Spanish','English']}]},
+    {'@type':'Organization','@id':orgId,name:'TrendMakers',alternateName:'TrendMakers Agency',url:origin+'/',logo:{'@type':'ImageObject',url:origin+'/img/logo1.png',width:384,height:379},email:'info@trendmakers.agency',telephone:'+54 11 2254-9351',sameAs:['https://www.linkedin.com/company/trendmakersagency','https://www.instagram.com/trendmakersagency.ok?rpxt=cTN1Z3N0ejk1YmJu'],contactPoint:[{'@type':'ContactPoint',contactType:'sales',email:'info@trendmakers.agency',availableLanguage:['Spanish','English']}]},
     {'@type':'WebSite','@id':siteId,url:origin+'/',name:'TrendMakers',inLanguage:['es','en'],publisher:{'@id':orgId}},
     image,
     {'@type':['CollectionPage','AboutPage'].includes(page.type)?page.type:'WebPage','@id':canonical+'#webpage',url:canonical,name:meta.title,description:meta.description,inLanguage:lang,isPartOf:{'@id':siteId},primaryImageOfPage:{'@id':image['@id']},about:{'@id':orgId}}
