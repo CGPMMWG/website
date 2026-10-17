@@ -734,3 +734,13 @@ html body.home-page .brand-marquee__group i { box-shadow: none; }
  html body #acerca .method-team-btn{display:flex!important;width:fit-content!important;max-width:100%;min-height:44px!important;margin:22px auto 0!important;padding:8px 16px!important;gap:10px;font-size:13px!important;line-height:1.35!important}
  html body #acerca .method-team-btn::after{width:20px;height:20px;flex:0 0 20px;font-size:13px}
 }
+
+/* A compact underline replaces the oversized animated oval on phones. */
+@media(max-width:767px){
+ html body #servicios #services-title{width:100%;max-width:360px!important;box-sizing:border-box;padding:0!important;font-size:clamp(28px,8.3vw,36px)!important;line-height:1.12!important;font-weight:700!important;letter-spacing:-.03em!important;text-wrap:balance}
+ html body #servicios #services-title .services-title-ring{display:none!important}
+ html body #servicios #services-title::after{content:""!important;display:block!important;position:static!important;width:64px!important;height:3px!important;margin:16px auto 0!important;border:0!important;border-radius:3px;background:#5b82ed!important;transform:none!important;opacity:1!important}
+ html body #servicios #services-title.is-visible::after{animation:mobileServicesUnderline 550ms ease-out both!important}
+}
+@keyframes mobileServicesUnderline{from{clip-path:inset(0 100% 0 0);opacity:.35}to{clip-path:inset(0);opacity:1}}
+@media(max-width:767px) and (prefers-reduced-motion:reduce){html body #servicios #services-title.is-visible::after{animation:none!important}}
