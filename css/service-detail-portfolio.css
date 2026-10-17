@@ -107,3 +107,7 @@ html body .hero:has(#bc-h1) .hero-visual {
     font-size: clamp(1.6rem, 8.5cqi, 3.25rem) !important;
   }
 }
+
+/* Keep the Web & E-Commerce intro fitted to its content. */
+html body.web-ecommerce-page .shell > .hero {min-height:0!important;height:auto!important;padding-bottom:0!important;margin-bottom:clamp(32px,4vw,48px)!important;}
+html body.web-ecommerce-page .shell > .hero + section {margin-top:0!important;}
