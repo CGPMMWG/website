@@ -735,16 +735,17 @@ html body.home-page .brand-marquee__group i { box-shadow: none; }
  html body #acerca .method-team-btn::after{width:20px;height:20px;flex:0 0 20px;font-size:13px}
 }
 
-/* A compact underline replaces the oversized animated oval on phones. */
+/* Draw a fitted oval around the mobile title without moving the lettering. */
 @media(max-width:767px){
- html body #servicios #services-title{width:100%;max-width:360px!important;box-sizing:border-box;padding:0!important;font-size:clamp(28px,8.3vw,36px)!important;line-height:1.12!important;font-weight:700!important;letter-spacing:-.03em!important;text-wrap:balance}
- html body #servicios #services-title .services-title-ring{display:none!important}
- html body #servicios #services-title::after{content:""!important;display:block!important;position:static!important;width:64px!important;height:3px!important;margin:16px auto 0!important;border:0!important;border-radius:3px;background:#5b82ed!important;transform:none!important;opacity:1!important}
- html body #servicios #services-title.is-visible::after{animation:mobileServicesUnderline 550ms ease-out both!important}
+ html body #servicios #services-title{width:100%;max-width:360px!important;box-sizing:border-box;padding:30px 30px 34px!important;font-size:clamp(27px,7.8vw,34px)!important;line-height:1.14!important;font-weight:700!important;letter-spacing:-.03em!important;text-wrap:balance;isolation:isolate}
+ html body #servicios #services-title .services-title-text{position:relative;z-index:1;display:block}
+ html body #servicios #services-title::after{content:none!important;display:none!important;animation:none!important}
+ html body #servicios #services-title .services-title-ring{display:block!important;position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0}
+ html body #servicios #services-title .services-title-ring ellipse{fill:none;stroke:#6b8ff0;stroke-width:1.4;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;opacity:1;transform:none!important;animation:none!important}
+ html body #servicios #services-title.is-visible .services-title-ring ellipse{animation:mobileServicesCircleDraw 1200ms cubic-bezier(.25,.65,.3,1) 150ms forwards!important}
 }
-@keyframes mobileServicesUnderline{from{clip-path:inset(0 100% 0 0);opacity:.35}to{clip-path:inset(0);opacity:1}}
-@media(max-width:767px) and (prefers-reduced-motion:reduce){html body #servicios #services-title.is-visible::after{animation:none!important}}
-
+@keyframes mobileServicesCircleDraw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@media(max-width:767px) and (prefers-reduced-motion:reduce){html body #servicios #services-title .services-title-ring ellipse,html body #servicios #services-title.is-visible .services-title-ring ellipse{animation:none!important;stroke-dashoffset:0!important}}
 /* Give methodology cards breathing room at phone viewport edges. */
 @media(max-width:640px){
  html body #acerca .why-grid{box-sizing:border-box;width:calc(100% - 40px)!important;max-width:100%!important;margin-left:auto!important;margin-right:auto!important;gap:16px!important}
