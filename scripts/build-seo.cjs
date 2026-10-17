@@ -2,6 +2,7 @@
 const sharp = require('sharp');
 const {fs,path,root,origin,pages,route,localized,browser,server} = require('./site-tools.cjs');
 const { portableMarkup } = require('./portable-paths.cjs');
+const { relatedReading } = require('./related-reading.cjs');
 const stamp = '20260921-seo';
 const optimizedDir = path.join(root,'img/optimized');
 const assets = {};
@@ -58,6 +59,7 @@ function configFor(page,lang) {
   });
   return {
     title:meta.title,description:meta.description,
+    reading:page.type==='BlogPosting'?relatedReading(page,lang,pages):null,
     alternates:{es:route(page.file),...(page.en?{en:localized(page.file,'en')}:{})},
     pages:pages.map(p=>route(p.file)),english:pages.filter(p=>p.en).map(p=>route(p.file)),related
   };
@@ -213,6 +215,11 @@ function transform({html,page,lang,assets,config,graph,stamp,origin,cleanup}) {
       const list=doc.createElement('ul');
       config.related.forEach(item=>{const li=doc.createElement('li');const a=doc.createElement('a');a.href=item.href;a.textContent=item.name;li.appendChild(a);list.appendChild(li);});
       section.appendChild(list);container.appendChild(section);
+      if(page.type==='BlogPosting'){
+        section.outerHTML=config.reading;
+        doc.querySelectorAll('link[href*="related-reading.css"]').forEach(el=>el.remove());
+        add('link',{rel:'stylesheet',href:'/css/related-reading.css?v=20261017-cards'});
+      }
     }
   }
   if(page.type==='Course'&&!doc.querySelector('script[src*="academy_course_i18n.js"]')){
