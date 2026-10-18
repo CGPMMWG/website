@@ -37,7 +37,22 @@ function relatedReading(page,lang,pages) {
     const slug=entry.file.split('/').pop().replace('.html',''), meta=entry[lang];
     return `<a class="reading-card" href="${prefix+entry.file}"><div class="reading-card__image"><img src="/img/optimized/${artwork[slug]}" width="480" height="270" alt="" loading="lazy" decoding="async"></div><div class="reading-card__body"><span class="reading-card__topic">${escape(topics[slug][en?1:0])}</span><h3>${escape(meta.title.split(' | ')[0])}</h3><p>${escape(meta.description)}</p><span class="reading-card__action">${en?'Read article':'Leer artículo'} <span aria-hidden="true">↗</span></span></div></a>`;
   }).join('');
-  const links=(page.relatedFiles||[]).map(file=>{const entry=pages.find(p=>p.file===file);if(!entry||!entry[lang])throw new Error('Missing related destination');return `<li><a href="${prefix+file}">${escape(entry[lang].title.split(' | ')[0])} <span aria-hidden="true">↗</span></a></li>`;}).join('');
+  const practiceLogos = {
+    'servicios/marketing-automation.html':'MATION.png',
+    'servicios/branding-communication.html':'BRANDING.png',
+    'servicios/web-ecommerce.html':'WEB-ECOMM.png',
+    'servicios/data-analytics.html':'DATA-STRAT.png',
+    'servicios/ia-hub.html':'IA-HUB.png',
+    'casos-exito/caso-prontoled.html':'case-logo-prontoled.png',
+    'casos-exito/caso-gope-consulting.html':'case-logo-gope.png',
+    'casos-exito/caso-letratec.html':'case-logo-letratec.png'
+  };
+  const links=(page.relatedFiles||[]).map(file=>{
+    const entry=pages.find(p=>p.file===file);
+    if(!entry||!entry[lang]||!practiceLogos[file])throw new Error('Missing related destination or logo');
+    const client=entry.type==='Article',meta=entry[lang];
+    return `<li><a class="practice-card" href="${prefix+file}"><span class="practice-card__type">${client?(en?'Case study':'Caso de éxito'):(en?'Service':'Servicio')}</span><div class="practice-card__logo"><img src="/img/${practiceLogos[file]}" width="210" height="72" alt="" loading="lazy" decoding="async"></div><h4>${escape(meta.title.split(' | ')[0])}</h4><p class="practice-card__summary">${escape(meta.description)}</p><span class="practice-card__action">${client?(en?'Explore the project':'Explorá el proyecto'):(en?'Discover the service':'Conocé el servicio')} <span aria-hidden="true">↗</span></span></a></li>`;
+  }).join('');
   return `<section class="seo-related article-reading">${en?"<div class=\"article-reading__intro\"><span class=\"article-reading__eyebrow\">TRENDMAKERS BLOG</span><h2>Discover our blog</h2><p>We share ideas, insights and practical tools to help businesses grow through marketing, data and technology.</p><a class=\"article-reading__browse\" href=\""+prefix+"blog/\">View all articles <span aria-hidden=\"true\">↗</span></a></div>":"<div class=\"article-reading__intro\"><span class=\"article-reading__eyebrow\">TRENDMAKERS BLOG</span><h2>Conocé nuestro blog</h2><p>Presentamos nuestras ideas, aprendizajes y herramientas prácticas para ayudar a los negocios a crecer con marketing, datos y tecnología.</p><a class=\"article-reading__browse\" href=\""+prefix+"blog/\">Ver todos los artículos <span aria-hidden=\"true\">↗</span></a></div>"}<div class="article-reading__grid">${cards}</div><div class="article-reading__practice"><h3>${en?'From ideas to practice':'De las ideas a la práctica'}</h3><p>${en?'Explore our related services and client projects.':'Explorá nuestros servicios y proyectos relacionados.'}</p><ul>${links}</ul></div></section>`;
 }
 module.exports = { relatedReading };
