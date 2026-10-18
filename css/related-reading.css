@@ -73,3 +73,6 @@ html body .article-reading__practice li+li{border-left:1px solid #ccd7e7}
  html body .article-reading__practice li+li{border-left:0;border-top:1px solid #ccd7e7}
  html body .article-reading__practice a.practice-card{padding:24px 0}
 }
+
+/* Present services/projects before introducing the blog. */
+html body .article-reading > .article-reading__practice{margin:0 0 32px!important}
