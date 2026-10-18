@@ -41,14 +41,13 @@ html body .article-reading__practice a{font:600 14px/1.6 Inter,system-ui,sans-se
  html body .article-reading__practice{padding:20px;margin-top:22px}
 }
 
-/* A prominent editorial gateway to the complete blog. */
-html body .article-reading__header{align-items:center}
-html body .article-reading .article-reading__all{box-sizing:border-box;display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:320px;max-width:100%;padding:26px;border:1px solid #c8d8f2;border-radius:18px;background:linear-gradient(135deg,#edf3ff,#e4ebfa);box-shadow:0 10px 28px #1a3a7009;white-space:normal;transition:border-color .2s,box-shadow .2s}
-html body .article-reading .article-reading__all:hover{border-color:#8aa9dc;box-shadow:0 14px 32px #1a3a7014}
-html body .article-reading .blog-portal__label{font:700 10px/1.5 Inter,system-ui,sans-serif;letter-spacing:.13em;color:#4265a2}
-html body .article-reading .article-reading__all strong{font:700 25px/1.12 Inter,system-ui,sans-serif;letter-spacing:-.035em;color:#142338}
-html body .article-reading .blog-portal__description{font:400 13px/1.6 Inter,system-ui,sans-serif;color:#586a83}
-html body .article-reading .blog-portal__button{box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;gap:18px;width:100%;min-height:48px;margin-top:4px;padding:12px 16px;border-radius:9px;background:#245ce0;color:#fff;font:600 14px/1.4 Inter,system-ui,sans-serif}
-html body .article-reading .blog-portal__button>span{font-size:20px}
-@media(max-width:900px){html body .article-reading__header{flex-direction:column;align-items:flex-start}html body .article-reading .article-reading__all{width:100%;padding:22px}html body .article-reading .article-reading__all strong{font-size:23px}}
-@media(prefers-reduced-motion:reduce){html body .article-reading .article-reading__all{transition:none}}
+
+/* Introduce the blog in one full-width box, followed by the three articles. */
+html body .article-reading__intro{box-sizing:border-box;width:100%;padding:clamp(26px,4vw,44px);margin-bottom:28px;border:1px solid #cbd9ef;border-radius:18px;background:linear-gradient(125deg,#edf3ff,#f6f8fc);box-shadow:0 12px 30px #17356206}
+html body .article-reading__intro h2{max-width:760px;margin:0 0 16px!important;font-size:clamp(28px,3vw,38px)!important;line-height:1.15!important}
+html body .article-reading__intro p{max-width:720px;margin:0!important;font:400 16px/1.7 Inter,system-ui,sans-serif;color:#586a83}
+html body .article-reading a.article-reading__browse,html body .article-reading a.article-reading__browse:is(:hover,:focus-visible,:visited){box-sizing:border-box;display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-height:48px;margin-top:24px;padding:13px 22px;border:1px solid #245ce0;border-radius:9px;background:#245ce0;color:#fff!important;text-decoration:none!important;font:600 14px/1.5 Inter,system-ui,sans-serif;transition:background .2s,border-color .2s}
+html body .article-reading a.article-reading__browse:hover{background:#194bbf;border-color:#194bbf}
+html body .article-reading__browse>span{font-size:20px;line-height:1}
+@media(max-width:700px){html body .article-reading__intro{padding:24px;margin-bottom:22px;border-radius:14px}html body .article-reading__intro h2{font-size:27px!important}html body .article-reading__intro p{font-size:14px;line-height:1.65}html body .article-reading a.article-reading__browse{display:flex;width:100%;margin-top:20px;padding:12px 16px}}
+@media(prefers-reduced-motion:reduce){html body .article-reading a.article-reading__browse{transition:none}}
