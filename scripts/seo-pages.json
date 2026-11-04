@@ -400,5 +400,19 @@
       "title": "Websites That Convert | TrendMakers Academy",
       "description": "Learn to structure websites and online stores that build trust, explain your offer and turn visits into inquiries, sales and leads."
     }
+  },
+  {
+    "file": "blog/cybermonday-historia-beneficios-empresas.html",
+    "type": "BlogPosting",
+    "image": "cybermonday-ecommerce.jpg",
+    "es": {
+      "title": "CyberMonday: historia y estrategias para empresas | TrendMakers",
+      "description": "Descubrí cómo nació el CyberMonday, por qué funciona y cómo preparar una estrategia para atraer clientes, mejorar ventas y medir la rentabilidad."
+    },
+    "relatedFiles": [
+      "servicios/marketing-automation.html",
+      "servicios/web-ecommerce.html",
+      "casos-exito/caso-prontoled.html"
+    ]
   }
 ]

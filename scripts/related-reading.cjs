@@ -1,5 +1,6 @@
 /* Editorial recommendations shared by static pages and the SEO generator. */
 const recommendations = {
+  'cybermonday-historia-beneficios-empresas':['blog-email-marketing-automatizacion','blog-websites1','blog-marketing-estrategico'],
   'blog-branding': ['blog-calificaciones-google','blog-websites1','blog-marketing-estrategico','blog-errores-marketing'],
   'blog-calificaciones-google': ['blog-branding','blog-email-marketing-automatizacion','blog-marketing-estrategico'],
   'blog-email-marketing-automatizacion': ['blog-errores-marketing','blog-marketing-estrategico','blog-ia-automatizacion'],

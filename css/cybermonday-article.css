@@ -1,0 +1,50 @@
+/* Additions to the shared blog layout; base article styles stay in blog_article_clean.css. */
+html body.blog-article.cybermonday-post .article-hero::before{content:"TrendMakers / E-commerce / 2026"!important}
+.cybermonday-post .article-image img{display:block;width:100%;height:auto}
+.cybermonday-post .article-section{line-height:1.75}
+.cybermonday-post .article-section h2{scroll-margin-top:100px}
+.cybermonday-post .article-section h3{color:#263a52;font-size:1.16rem;line-height:1.4;margin:26px 0 12px}
+.cybermonday-post .article-section p{margin:0 0 18px}
+.cybermonday-post .article-section li{margin-bottom:12px;color:#5f6d7c}
+.cybermonday-post .article-section a{color:#315b8b;text-underline-offset:3px}
+.cybermonday-post .lead strong{font-weight:750;color:#263a52}
+.cybermonday-post .impact{margin:28px 0;padding:24px;border:1px solid rgba(113,128,145,.22);border-radius:14px;background:#edf1f6}
+.cybermonday-post .impact .eyebrow{color:#52667e;display:block;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;font-weight:800}
+.cybermonday-post .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:20px 0}
+.cybermonday-post .stats>div{padding-right:18px;border-right:1px solid #cfd8e3}
+.cybermonday-post .stats>div:last-child{border-right:0}
+.cybermonday-post .stats strong{display:block;font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.15;letter-spacing:-.04em}
+.cybermonday-post .stats span{display:block;margin-top:8px;font-size:.85rem;color:#5f6d7c}
+html body.blog-article.cybermonday-post .impact .source{font-size:.76rem;margin:0;line-height:1.6}
+.cybermonday-post .table-wrap{overflow:auto;border:1px solid #dce2ea;border-radius:12px;margin:24px 0}
+.cybermonday-post table{width:100%;border-collapse:collapse;min-width:440px;font-size:.92rem;color:#5f6d7c}
+.cybermonday-post caption{text-align:left;background:#edf1f6;padding:16px 18px;color:#263a52;font-weight:700}
+.cybermonday-post th,.cybermonday-post td{padding:14px 18px;text-align:left;border-bottom:1px solid #e0e5ec;line-height:1.6}
+.cybermonday-post th{background:#f3f5f8;color:#263a52;font-size:.82rem}
+.cybermonday-post tr:last-child td{border:0}
+.cybermonday-post .cyber-sources ul{padding-left:20px;font-size:.85rem}
+html body.blog-article.cybermonday-post #section-conclusion strong{color:#fff!important}
+html body.blog-article.cybermonday-post #section-conclusion .article-cta{color:#0a1422!important}
+@media(max-width:640px){.cybermonday-post .stats{grid-template-columns:1fr;gap:16px}.cybermonday-post .stats>div{border-right:0;border-bottom:1px solid #cfd8e3;padding:0 0 16px}.cybermonday-post .stats>div:last-child{border-bottom:0;padding-bottom:0}.cybermonday-post .impact{padding:20px}.cybermonday-post .table-wrap{max-width:100%}}
+
+/* Compact editorial conclusion, scoped to this article. */
+html body.blog-article.cybermonday-post #section-conclusion.cyber-closing{display:grid!important;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(28px,4vw,48px);padding:clamp(26px,4vw,44px)!important;background:linear-gradient(135deg,#f5f3f9 0%,#efedf6 100%)!important;border:1px solid #ded8e9!important;box-shadow:0 14px 36px rgba(69,51,99,.06)!important;transform:none!important}
+.cybermonday-post .cyber-closing__label{display:block;color:#7a6c91;font-size:.65rem;line-height:1.5;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin:0 0 16px}
+html body.blog-article.cybermonday-post #section-conclusion.cyber-closing h2{font-size:clamp(1.55rem,2.6vw,2.1rem)!important;line-height:1.18!important;letter-spacing:-.025em!important;margin:0 0 20px!important;max-width:510px}
+.cybermonday-post .cyber-closing h2 span{display:block;color:#76618e}
+html body.blog-article.cybermonday-post #section-conclusion.cyber-closing p{font-size:.95rem!important;line-height:1.75!important;color:#666176!important;opacity:1!important;margin:0 0 16px!important;max-width:550px}
+.cybermonday-post .cyber-closing__pillars{display:flex;flex-wrap:wrap;gap:8px 18px;list-style:none;padding:18px 0 0!important;margin:24px 0 0!important;border-top:1px solid #dcd5e6}
+html body.blog-article.cybermonday-post #section-conclusion .cyber-closing__pillars li{color:#746b82!important;font-size:.73rem;line-height:1.5;margin:0;padding:0}
+.cybermonday-post .cyber-closing__action{border-left:1px solid #dcd5e6;padding-left:clamp(24px,3.5vw,40px);align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+html body.blog-article.cybermonday-post #section-conclusion .cyber-closing__action h3{color:#352c46!important;font-size:1.25rem;line-height:1.35;font-weight:700;letter-spacing:-.015em;margin:0 0 14px}
+html body.blog-article.cybermonday-post #section-conclusion .cyber-closing__button{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:48px;width:100%;padding:13px 17px;border:1px solid #d5cbe3;border-radius:8px;background:#e6dfef;color:#443451!important;font-size:.86rem;line-height:1.4;font-weight:700;text-decoration:none;box-shadow:none;margin:8px 0 14px;transition:background .15s ease}
+.cybermonday-post .cyber-closing__button:hover{background:#dcd2e8!important}
+.cybermonday-post .cyber-closing__button:focus-visible{outline:3px solid #a58cbe;outline-offset:4px}
+.cybermonday-post .cyber-closing__button>span:last-child{font-size:1.2rem}
+.cybermonday-post .cyber-closing__note{font-size:.72rem;line-height:1.65;color:#82768f;max-width:300px}
+@media(max-width:760px){html body.blog-article.cybermonday-post #section-conclusion.cyber-closing{grid-template-columns:minmax(0,1fr);gap:26px}.cybermonday-post .cyber-closing__action{border-left:0;border-top:1px solid #dcd5e6;padding:26px 0 0}.cybermonday-post .cyber-closing__pillars{margin-top:20px!important}}
+@media(max-width:640px){html body.blog-article.cybermonday-post #section-conclusion.cyber-closing{width:calc(100vw - 32px)!important;max-width:390px!important;margin-left:auto!important;margin-right:auto!important;padding:24px!important;box-sizing:border-box!important}.cybermonday-post .cyber-closing__button{box-sizing:border-box}}
+
+/* Keep the closing card close to the surrounding light article palette. */
+html body.blog-article.cybermonday-post #section-conclusion.cyber-closing h2{color:#352c46!important}
+html body.blog-article.cybermonday-post #section-conclusion.cyber-closing strong{color:#443451!important}
