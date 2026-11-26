@@ -50,10 +50,10 @@ function publish(root, input) {
   html = html.replace(/<title>[\s\S]*?<\/title>/, '<title>' + e(p.title) + ' | TrendMakers</title>');
   const indexPath = path.join(root, 'blog/index.html');
   let index = fs.readFileSync(indexPath, 'utf8');
-  const marker = /<div\b[^>]*class=["'][^"']*\bblog-grid\b[^"']*["'][^>]*>/;
+  const marker = /<(?:div|section)\b[^>]*class=["'][^"']*\bblog-grid\b[^"']*["'][^>]*>/;
   assert(marker.test(index), 'Blog grid not found; no changes written');
   assert(!index.includes('href="' + p.slug + '.html"'), 'Duplicate blog card');
-  const card = '<article class="blog-card"><h2><a href="' + p.slug + '.html">' + e(p.title) + '</a></h2><p>' + e(p.description) + '</p></article>';
+  const card = '<a class="blog-card" href="../blog/' + p.slug + '.html"><div class="blog-card__media"><img src="../img/og-trendmakers.png" alt="" loading="lazy"></div><div class="blog-card__content"><p class="blog-card__meta">' + e(p.category) + '</p><h2 class="blog-card__title">' + e(p.title) + '</h2><p class="blog-card__excerpt">' + e(p.description) + '</p><span class="blog-card__cta">Leer artículo</span></div></a>';
   index = index.replace(marker, m => m + '\n' + card);
   catalog.push({file, type:'BlogPosting', image:'og-trendmakers.png', es:{title:p.title + ' | TrendMakers',description:p.description}, en:null,
     relatedFiles:['servicios/marketing-automation.html','servicios/ia-hub.html']});
