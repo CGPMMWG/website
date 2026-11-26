@@ -179,6 +179,24 @@
     ]
   },
   {
+    "file": "blog/seguimiento-leads-pymes.html",
+    "type": "BlogPosting",
+    "image": "seguimiento-leads-pymes.png",
+    "es": {
+      "title": "Seguimiento de leads para pymes: de consulta a oportunidad | TrendMakers",
+      "description": "Cómo organizar la captura, asignación y seguimiento de leads para que las pymes respondan a tiempo, sostengan conversaciones útiles y aprendan del proceso."
+    },
+    "en": {
+      "title": "Lead Follow-Up for Small Businesses | TrendMakers",
+      "description": "Learn how small businesses can capture, assign, and follow up on leads to respond with context, sustain useful conversations, and improve the sales process."
+    },
+    "relatedFiles": [
+      "servicios/marketing-automation.html",
+      "blog/blog-email-marketing-automatizacion.html",
+      "casos-exito/caso-prontoled.html"
+    ]
+  },
+  {
     "file": "blog/blog-errores-marketing.html",
     "type": "BlogPosting",
     "image": "BLOG1.jpg",
