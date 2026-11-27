@@ -1,0 +1,56 @@
+name: Prepare approved editorial commit
+on:
+  workflow_dispatch:
+    inputs:
+      package_json:
+        description: Approved editorial package JSON (review content before dispatch)
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: trendmakers-editorial
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate and render package
+        env:
+          EDITORIAL_PACKAGE: ${{ inputs.package_json }}
+        run: |
+          node -e "require('node:fs').writeFileSync('/tmp/tm-editorial.json', process.env.EDITORIAL_PACKAGE)"
+          node --test scripts/editorial-publish.test.cjs
+          node scripts/editorial-publish.cjs /tmp/tm-editorial.json
+      - name: Install site validation dependencies
+        run: |
+          npm install --ignore-scripts --no-package-lock
+          npx playwright install --with-deps chromium
+      - name: Rebuild SEO and validate
+        run: |
+          npm run build:seo
+          npm run check:seo
+          npm run check:paths
+      - name: Commit to a review branch
+        run: |
+          SLUG=$(node -p "JSON.parse(require('node:fs').readFileSync('/tmp/tm-editorial.json','utf8')).slug")
+          BRANCH="editorial/${SLUG}-${GITHUB_RUN_ID}"
+          git switch -c "$BRANCH"
+          git config user.name "TrendMakers Editorial"
+          git config user.email "197407328+CGPMMWG@users.noreply.github.com"
+          git add blog en scripts/seo-pages.json sitemap.xml robots.txt img/optimized editorial/records
+          git diff --cached --check
+          git commit -m "content: prepare ${SLUG} for editorial review"
+          git push origin "$BRANCH"
+          echo "Review branch: $BRANCH" >> "$GITHUB_STEP_SUMMARY"
+          echo "This workflow does not merge, deploy, or publish to LinkedIn." >> "$GITHUB_STEP_SUMMARY"
